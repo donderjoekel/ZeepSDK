@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net472</TargetFramework>
+        <AssemblyName>ZeepSDK</AssemblyName>
+        <Description>ZeepSDK</Description>
+        <Authors>TNRD</Authors>
+        <Version>1.0.0</Version>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <LangVersion>latest</LangVersion>
+        <Title>ZeepSDK</Title>
+        <PackageProjectUrl>https://github.com/tnrd-org/ZeepSDK</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/tnrd-org/ZeepSDK/blob/main/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/tnrd-org/ZeepSDK</RepositoryUrl>
+        <PackageTags>Zeepkist;SDK</PackageTags>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+        <PackageReference Include="BepInEx.Core" Version="5.*" />
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
+        <PackageReference Include="Zeepkist.GameLibs" Version="1.0.0-alpha.15.26.345" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+    </ItemGroup>
+</Project>
