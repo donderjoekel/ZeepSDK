@@ -4,14 +4,35 @@ using ZeepkistClient;
 
 namespace ZeepSDK.Leaderboard.Pages;
 
+/// <summary>
+/// A base implementation that can be used for creating a custom tab for the leaderboard
+/// </summary>
 [PublicAPI]
 public abstract class BaseLeaderboardTab : ILeaderboardTab
 {
+    /// <summary>
+    /// A logger that can be used to log messages
+    /// </summary>
     protected ManualLogSource Logger { get; private set; }
+
+    /// <summary>
+    /// The instance of the leaderboard UI
+    /// </summary>
     protected OnlineTabLeaderboardUI Instance { get; private set; }
+
+    /// <summary>
+    /// The index of the current page
+    /// </summary>
     protected int CurrentPage { get; private set; }
+
+    /// <summary>
+    /// The maximum amount of pages
+    /// </summary>
     protected int MaxPages { get; set; }
 
+    /// <summary>
+    /// A boolean representing if the page is currently active
+    /// </summary>
     protected bool IsActive { get; private set; }
 
     protected BaseLeaderboardTab()
@@ -92,8 +113,23 @@ public abstract class BaseLeaderboardTab : ILeaderboardTab
         }
     }
 
+    /// <summary>
+    /// This should return the title of the leaderboard that gets displayed in the UI
+    /// </summary>
     protected abstract string GetLeaderboardTitle();
+
+    /// <summary>
+    /// Called when the tab gets enabled
+    /// </summary>
     protected abstract void OnEnable();
+
+    /// <summary>
+    /// Called when te tab gets disabled
+    /// </summary>
     protected abstract void OnDisable();
+
+    /// <summary>
+    /// Called when the tab needs to (re)draw
+    /// </summary>
     protected abstract void OnDraw();
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace ZeepSDK.LevelEditor.Builders;
 
-public class CustomFolderBuilder : ICustomFolderBuilder
+internal class CustomFolderBuilder : ICustomFolderBuilder
 {
     private readonly GameObject gameObject;
     private readonly List<CustomFolderBuilder> folders = new();
@@ -20,7 +20,7 @@ public class CustomFolderBuilder : ICustomFolderBuilder
         this.gameObject.transform.SetParent(gameObject.transform);
     }
 
-    public CustomFolderBuilder AddFolder(Action<ICustomFolderBuilder> builder)
+    public ICustomFolderBuilder AddFolder(Action<ICustomFolderBuilder> builder)
     {
         CustomFolderBuilder customFolderBuilder = new(gameObject);
         builder.Invoke(customFolderBuilder);
@@ -28,19 +28,19 @@ public class CustomFolderBuilder : ICustomFolderBuilder
         return this;
     }
 
-    public CustomFolderBuilder WithThumbnail(Sprite thumbnail)
+    public ICustomFolderBuilder WithThumbnail(Sprite thumbnail)
     {
         this.thumbnail = thumbnail;
         return this;
     }
 
-    public CustomFolderBuilder WithName(string name)
+    public ICustomFolderBuilder WithName(string name)
     {
         this.name = name;
         return this;
     }
 
-    public CustomFolderBuilder AddBlock(Action<ICustomBlockBuilder> builder)
+    public ICustomFolderBuilder AddBlock(Action<ICustomBlockBuilder> builder)
     {
         CustomBlockBuilder customBlockBuilder = new();
         builder.Invoke(customBlockBuilder);

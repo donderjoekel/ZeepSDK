@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ZeepSDK.LevelEditor.Builders;
 
-public class CustomBlockBuilder : ICustomBlockBuilder
+internal class CustomBlockBuilder : ICustomBlockBuilder
 {
     private static int customBlockIdCounter = -100;
 
@@ -19,25 +19,25 @@ public class CustomBlockBuilder : ICustomBlockBuilder
         blockId = customBlockIdCounter--;
     }
 
-    public CustomBlockBuilder WithName(string name)
+    public ICustomBlockBuilder WithName(string name)
     {
         this.name = name;
         return this;
     }
 
-    public CustomBlockBuilder WithThumbnail(Sprite thumbnail)
+    public ICustomBlockBuilder WithThumbnail(Sprite thumbnail)
     {
         this.thumbnail = thumbnail;
         return this;
     }
 
-    public CustomBlockBuilder WithCallback(Action callback)
+    public ICustomBlockBuilder WithCallback(Action callback)
     {
         this.callback = new CustomBlockCallbackWithoutData(callback);
         return this;
     }
 
-    public CustomBlockBuilder WithCallback(Action<object> callback, object userData)
+    public ICustomBlockBuilder WithCallback(Action<object> callback, object userData)
     {
         this.callback = new CustomBlockCallbackWithData(callback, userData);
         return this;

@@ -22,9 +22,14 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
         OnlineTabLeaderboardUI_Update.Update += OnUpdate;
     }
 
-    public void AddTab(ILeaderboardTab tab)
+    internal void AddTab(ILeaderboardTab tab)
     {
         tabs.Add(tab);
+    }
+
+    internal void RemoveTab(ILeaderboardTab tab)
+    {
+        tabs.Remove(tab);
     }
 
     private void OnOpen(OnlineTabLeaderboardUI sender)
