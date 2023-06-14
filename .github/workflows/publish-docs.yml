@@ -25,7 +25,7 @@ jobs:
             cd ZeepSDK
             dotnet add package docfx.console
             dotnet build
-            docfx .\docfx.json
+            docfx docfx.json
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
