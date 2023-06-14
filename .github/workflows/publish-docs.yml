@@ -21,9 +21,10 @@ jobs:
         dotnet-version: 7.x
 
     - run: dotnet tool update -g docfx
-    - run: cd ZeepSDK \
-            dotnet add package docfx.console \
-            dotnet build \
+    - run: |
+            cd ZeepSDK
+            dotnet add package docfx.console
+            dotnet build
             docfx .\docfx.json
 
     - name: Deploy
