@@ -1,0 +1,382 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/runner/work/ZeepSDK/ZeepSDK/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.ChatCommandApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.ChatCommandApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.IChatCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.IChatCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.ILocalChatCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.ILocalChatCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.IRemoteChatCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.IRemoteChatCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.ILeaderboardTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.ILeaderboardTab.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.LeaderboardApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.LeaderboardApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.Pages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.Pages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.EnteredLevelEditorDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.EnteredLevelEditorDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.EnteredTestModeDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.EnteredTestModeDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.ICustomBlockBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.ICustomBlockBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.ICustomFolderBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.ICustomFolderBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.LevelEditorApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.LevelEditorApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.MyPluginInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.MyPluginInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.CrashReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.CrashReason.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.CrashedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.CrashedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.CrossedFinishLineDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.CrossedFinishLineDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.EnteredFirstPersonDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.EnteredFirstPersonDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.EnteredThirdPersonDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.EnteredThirdPersonDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.PassedCheckpointDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.PassedCheckpointDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.PlayerSpawnedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.PlayerSpawnedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.RacingApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.RacingApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.RoundStartedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.RoundStartedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
