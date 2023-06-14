@@ -1,4 +1,5 @@
 ﻿using JetBrains.Annotations;
+#pragma warning disable CS1591
 
 namespace ZeepSDK.ChatCommands;
 

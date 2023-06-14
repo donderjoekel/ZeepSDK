@@ -35,6 +35,9 @@ public abstract class BaseLeaderboardTab : ILeaderboardTab
     /// </summary>
     protected bool IsActive { get; private set; }
 
+    /// <summary>
+    /// Constructor
+    /// </summary>
     protected BaseLeaderboardTab()
     {
         Logger = Plugin.CreateLogger(GetType().Name);
@@ -95,6 +98,9 @@ public abstract class BaseLeaderboardTab : ILeaderboardTab
         OnDraw();
     }
 
+    /// <summary>
+    /// This can be called to update the page number that is visible in the UI
+    /// </summary>
     protected void UpdatePageNumber()
     {
         Instance.Page.text = I2.Loc.LocalizationManager.GetTranslation("Online/Lobby/Page")
