@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using ZeepSDK.Chat;
 using ZeepSDK.ChatCommands;
 using ZeepSDK.Leaderboard;
 using ZeepSDK.LevelEditor;
@@ -27,6 +28,7 @@ namespace ZeepSDK
             harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
             harmony.PatchAll();
 
+            ChatApi.Initialize(gameObject);
             ChatCommandApi.Initialize(gameObject);
             LeaderboardApi.Initialize(gameObject);
             LevelEditorApi.Initialize(gameObject);
