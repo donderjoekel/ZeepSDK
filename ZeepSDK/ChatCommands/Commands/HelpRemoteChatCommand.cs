@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using ZeepkistClient;
-using ZeepkistNetworking;
+﻿using ZeepSDK.Chat;
 
 namespace ZeepSDK.ChatCommands.Commands;
 
@@ -12,19 +10,12 @@ internal class HelpRemoteChatCommand : IRemoteChatCommand
 
     public void Handle(ulong playerId, string arguments)
     {
-        ZeepkistNetwork.NetworkClient.SendPacket(new ChatMessagePacket()
-        {
-            Message = "Available commands:",
-            Badges = new List<string>()
-        });
-        
+        ChatApi.SendMessage("Available commands:");
+
         foreach (IRemoteChatCommand remoteChatCommand in ChatCommandRegistry.RemoteChatCommands)
         {
-            ZeepkistNetwork.NetworkClient.SendPacket(new ChatMessagePacket()
-            {
-                Message = $"{remoteChatCommand.Prefix}{remoteChatCommand.Command} - {remoteChatCommand.Description}",
-                Badges = new List<string>()
-            });
+            ChatApi.SendMessage(
+                $"- {remoteChatCommand.Prefix}{remoteChatCommand.Command} - {remoteChatCommand.Description}");
         }
     }
 }

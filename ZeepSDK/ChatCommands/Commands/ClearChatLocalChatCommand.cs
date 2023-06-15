@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿using ZeepSDK.Chat;
 
 namespace ZeepSDK.ChatCommands.Commands;
 
@@ -10,7 +10,6 @@ internal class ClearChatLocalChatCommand : ILocalChatCommand
 
     public void Handle(string arguments)
     {
-        OnlineChatUI onlineChatUi = Object.FindObjectOfType<OnlineChatUI>(true);
-        onlineChatUi.ClearChat();
+        ChatApi.ClearChat();
     }
 }

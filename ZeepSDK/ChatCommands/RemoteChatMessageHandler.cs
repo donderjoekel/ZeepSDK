@@ -1,4 +1,6 @@
-﻿using ZeepkistClient;
+﻿using System;
+using ZeepkistClient;
+using ZeepSDK.Chat;
 using ZeepSDK.Utilities;
 
 namespace ZeepSDK.ChatCommands;
@@ -7,43 +9,31 @@ internal class RemoteChatMessageHandler : MonoBehaviourWithLogging
 {
     private void Start()
     {
-        ZeepkistNetwork.ChatMessageReceived += OnChatMessageReceived;
+        ChatApi.ChatMessageReceived += OnChatMessageReceived;
     }
 
     private void OnDestroy()
     {
-        ZeepkistNetwork.ChatMessageReceived -= OnChatMessageReceived;
+        ChatApi.ChatMessageReceived -= OnChatMessageReceived;
     }
 
-    private static void OnChatMessageReceived(ZeepkistChatMessage zeepkistChatMessage)
+    private void OnChatMessageReceived(ulong playerId, string username, string message)
     {
         if (!ZeepkistNetwork.IsMasterClient)
             return;
-        
-        if (zeepkistChatMessage == null)
-        {
-            Logger.LogWarning("Received null chat message");
-            return;
-        }
 
-        if (string.IsNullOrEmpty(zeepkistChatMessage.Message))
+        if (string.IsNullOrEmpty(message))
         {
             Logger.LogWarning("Received chat message with empty message");
             return;
         }
 
-        if (zeepkistChatMessage.Player == null)
-        {
-            Logger.LogWarning("Received chat message with null player");
-            return;
-        }
-
-        string message = zeepkistChatMessage.Message
+        message = message
             .Replace("<noparse>", string.Empty)
             .Replace("</noparse>", string.Empty)
             .Trim();
 
-        if (zeepkistChatMessage.Player.IsLocal)
+        if (ZeepkistNetwork.LocalPlayer.SteamID == playerId)
             return;
 
         foreach (IRemoteChatCommand remoteChatCommand in ChatCommandRegistry.RemoteChatCommands)
@@ -58,7 +48,7 @@ internal class RemoteChatMessageHandler : MonoBehaviourWithLogging
 
             string arguments = messageWithoutPrefix[remoteChatCommand.Command.Length..].Trim();
 
-            remoteChatCommand.Handle(zeepkistChatMessage.Player.SteamID, arguments);
+            remoteChatCommand.Handle(playerId, arguments);
         }
     }
 }

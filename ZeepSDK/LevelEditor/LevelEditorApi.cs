@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using ZeepSDK.LevelEditor.Builders;
 using ZeepSDK.LevelEditor.Patches;
+using ZeepSDK.Utilities;
 using Object = UnityEngine.Object;
 
 namespace ZeepSDK.LevelEditor;
@@ -21,6 +22,8 @@ public static class LevelEditorApi
     private static readonly List<object> mouseInputBlockers = new();
     private static readonly List<object> keyboardInputBlockers = new();
     private static readonly List<CustomFolderBuilder> scheduledCustomFolderBuilders = new();
+
+    private static SetupGame SetupGame => ComponentCache.Get<SetupGame>();
 
     private static GameObject gameObject;
     private static LEV_Inspector inspector;
@@ -55,9 +58,7 @@ public static class LevelEditorApi
             if (scene.name != "GameScene")
                 return;
 
-            // Not particularly performant but I think this should be alright since this is a reaction to a scene change
-            SetupGame setupGame = Object.FindObjectOfType<SetupGame>();
-            if (setupGame.GlobalLevel.IsTestLevel)
+            if (SetupGame.GlobalLevel.IsTestLevel)
             {
                 EnteredTestMode?.Invoke();
             }

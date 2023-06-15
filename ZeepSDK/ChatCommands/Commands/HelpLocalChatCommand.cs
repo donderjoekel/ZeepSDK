@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿using ZeepSDK.Chat;
 
 namespace ZeepSDK.ChatCommands.Commands;
 
@@ -10,13 +10,11 @@ internal class HelpLocalChatCommand : ILocalChatCommand
 
     public void Handle(string arguments)
     {
-        OnlineChatUI onlineChatUi = Object.FindObjectOfType<OnlineChatUI>(true);
-        onlineChatUi.UpdateChatFields("Available commands:", 0);
+        ChatApi.AddLocalMessage("Available commands:");
         foreach (ILocalChatCommand localChatCommand in ChatCommandRegistry.LocalChatCommands)
         {
-            onlineChatUi.UpdateChatFields(
-                $"{localChatCommand.Prefix}{localChatCommand.Command} - {localChatCommand.Description}",
-                0);
+            ChatApi.AddLocalMessage(
+                $"- {localChatCommand.Prefix}{localChatCommand.Command} - {localChatCommand.Description}");
         }
     }
 }
