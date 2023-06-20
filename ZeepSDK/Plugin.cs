@@ -1,8 +1,10 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using UnityEngine.LowLevel;
 using ZeepSDK.Chat;
 using ZeepSDK.ChatCommands;
+using ZeepSDK.External.Cysharp.Threading.Tasks;
 using ZeepSDK.Leaderboard;
 using ZeepSDK.LevelEditor;
 using ZeepSDK.Racing;
@@ -33,6 +35,13 @@ namespace ZeepSDK
             LeaderboardApi.Initialize(gameObject);
             LevelEditorApi.Initialize(gameObject);
             RacingApi.Initialize(gameObject);
+            
+            // Initialize the player loop helper, this is to reduce issues with UniTask
+            if (!PlayerLoopHelper.IsInjectedUniTaskPlayerLoop())
+            {
+                PlayerLoopSystem loop = PlayerLoop.GetCurrentPlayerLoop();
+                PlayerLoopHelper.Initialize(ref loop);
+            }
 
             // Plugin startup logic
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
