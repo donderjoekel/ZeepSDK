@@ -1,6 +1,9 @@
 ﻿using BepInEx.Logging;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using ZeepSDK.External.Cysharp.Threading.Tasks;
+using ZeepSDK.External.FluentResults;
 using ZeepSDK.Racing.Patches;
 
 namespace ZeepSDK.Racing;
@@ -54,5 +57,28 @@ public static class RacingApi
         DamageCharacterScript_KillCharacter.CharacterKilled += reason => Crashed?.Invoke(reason);
         GameMaster_SpawnPlayers.SpawnPlayers += () => PlayerSpawned?.Invoke();
         GameMaster_ReleaseTheZeepkists.Released += () => RoundStarted?.Invoke();
+    }
+
+    /// <summary>
+    /// Attempts to load a track in free play mode
+    /// </summary>
+    /// <param name="uid">The UID of the track</param>
+    /// <returns>Ok if all went well, Fail if level was not found</returns>
+    public static async UniTask<Result> LoadTrackInFreePlayAsync(string uid)
+    {
+        if (!LevelManager.Instance.TryGetLevel(uid, out LevelScriptableObject level))
+            return Result.Fail("Level not found");
+
+        PlayerManager.Instance.amountOfPlayers = 1;
+        PlayerManager.Instance.singlePlayer = true;
+        PlayerManager.Instance.loader.GlobalLevel.Copy(level);
+
+        AnimateWhitePanel.AnimateTheCircle(true, 0.75f, 0.0f, true);
+        await UniTask.Delay(800);
+
+        SceneManager.LoadScene("GameScene");
+        await UniTask.Yield();
+
+        return Result.Ok();
     }
 }
