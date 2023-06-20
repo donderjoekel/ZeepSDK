@@ -105,6 +105,2876 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AsyncLazy-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AsyncLazy-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AsyncLazy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AsyncLazy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AsyncReactiveProperty-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AsyncReactiveProperty-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AsyncUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AsyncUnit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AsyncUnityEventHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AsyncUnityEventHandler-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AsyncUnityEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AsyncUnityEventHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CancellationTokenAwaitable.Awaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CancellationTokenAwaitable.Awaiter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CancellationTokenAwaitable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CancellationTokenAwaitable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CancellationTokenEqualityComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CancellationTokenEqualityComparer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CancellationTokenExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CancellationTokenExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CancellationTokenSourceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CancellationTokenSourceExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Channel-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Channel-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Channel-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Channel-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Channel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Channel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ChannelClosedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ChannelClosedException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ChannelReader-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ChannelReader-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ChannelWriter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ChannelWriter-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskVoidMethodBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskVoidMethodBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CompilerServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.CompilerServices.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.DelayType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.DelayType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.EnumerableAsyncExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.EnumerableAsyncExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.EnumeratorAsyncExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.EnumeratorAsyncExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ExceptionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ExceptionExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncClickEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncClickEventHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncDeselectEventHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncDeselectEventHandler-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncEndEditEventHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncEndEditEventHandler-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncEndTextSelectionEventHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncEndTextSelectionEventHandler-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncReactiveProperty-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncReactiveProperty-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncSelectEventHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncSelectEventHandler-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncSubmitEventHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncSubmitEventHandler-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncTextSelectionEventHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncTextSelectionEventHandler-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncValueChangedEventHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IAsyncValueChangedEventHandler-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ICancelPromise.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ICancelPromise.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IConnectableUniTaskAsyncEnumerable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IConnectableUniTaskAsyncEnumerable-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IPlayerLoopItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IPlayerLoopItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IPromise-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IPromise-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IPromise.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IPromise.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IReadOnlyAsyncReactiveProperty-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IReadOnlyAsyncReactiveProperty-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IRejectPromise.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IRejectPromise.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IResolvePromise-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IResolvePromise-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IResolvePromise.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IResolvePromise.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ITaskPoolNode-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ITaskPoolNode-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ITriggerHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ITriggerHandler-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IUniTaskAsyncDisposable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IUniTaskAsyncDisposable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IUniTaskAsyncEnumerable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IUniTaskAsyncEnumerable-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IUniTaskAsyncEnumerator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IUniTaskAsyncEnumerator-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IUniTaskOrderedAsyncEnumerable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IUniTaskOrderedAsyncEnumerable-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IUniTaskSource-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IUniTaskSource-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IUniTaskSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.IUniTaskSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.InjectPlayerLoopTimings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.InjectPlayerLoopTimings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Linq.IAsyncWriter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Linq.IAsyncWriter-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Linq.UniTaskAsyncEnumerable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Linq.UniTaskAsyncEnumerable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Linq.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Linq.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.MoveNextSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.MoveNextSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.PlayerLoopHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.PlayerLoopHelper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.PlayerLoopTimer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.PlayerLoopTimer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.PlayerLoopTiming.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.PlayerLoopTiming.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Progress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Progress.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ReadOnlyAsyncReactiveProperty-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ReadOnlyAsyncReactiveProperty-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ReturnToMainThread.Awaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ReturnToMainThread.Awaiter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ReturnToMainThread.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ReturnToMainThread.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ReturnToSynchronizationContext.Awaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ReturnToSynchronizationContext.Awaiter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ReturnToSynchronizationContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.ReturnToSynchronizationContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.StateExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.StateExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToMainThreadAwaitable.Awaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToMainThreadAwaitable.Awaiter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToMainThreadAwaitable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToMainThreadAwaitable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToSynchronizationContextAwaitable.Awaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToSynchronizationContextAwaitable.Awaiter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToSynchronizationContextAwaitable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToSynchronizationContextAwaitable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToTaskPoolAwaitable.Awaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToTaskPoolAwaitable.Awaiter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToTaskPoolAwaitable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToTaskPoolAwaitable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToThreadPoolAwaitable.Awaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToThreadPoolAwaitable.Awaiter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToThreadPoolAwaitable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.SwitchToThreadPoolAwaitable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.TaskPool-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.TaskPool-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.TaskPool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.TaskPool.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.TaskTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.TaskTracker.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.TimeoutController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.TimeoutController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.TriggerEvent-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.TriggerEvent-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncAnimatorIKTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncAnimatorIKTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncAnimatorMoveTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncAnimatorMoveTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncApplicationFocusTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncApplicationFocusTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncApplicationPauseTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncApplicationPauseTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncApplicationQuitTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncApplicationQuitTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncAudioFilterReadTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncAudioFilterReadTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncAwakeTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncAwakeTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncBecameInvisibleTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncBecameInvisibleTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncBecameVisibleTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncBecameVisibleTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncBeforeTransformParentChangedTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncBeforeTransformParentChangedTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncBeginDragTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncBeginDragTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncCancelTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncCancelTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncDeselectTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncDeselectTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncDestroyTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncDestroyTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncDisableTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncDisableTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncDragTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncDragTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncDrawGizmosSelectedTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncDrawGizmosSelectedTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncDrawGizmosTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncDrawGizmosTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncDropTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncDropTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncEnableTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncEnableTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncEndDragTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncEndDragTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncFixedUpdateTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncFixedUpdateTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncGUITrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncGUITrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncInitializePotentialDragTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncInitializePotentialDragTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncLateUpdateTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncLateUpdateTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMouseDownTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMouseDownTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMouseDragTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMouseDragTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMouseEnterTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMouseEnterTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMouseExitTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMouseExitTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMouseOverTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMouseOverTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMouseUpAsButtonTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMouseUpAsButtonTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMouseUpTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMouseUpTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMoveTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncMoveTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncOnCanvasGroupChangedTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncOnCanvasGroupChangedTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncParticleCollisionTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncParticleCollisionTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncParticleSystemStoppedTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncParticleSystemStoppedTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncParticleTriggerTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncParticleTriggerTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPointerClickTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPointerClickTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPointerDownTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPointerDownTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPointerEnterTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPointerEnterTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPointerExitTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPointerExitTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPointerUpTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPointerUpTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPostRenderTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPostRenderTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPreCullTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPreCullTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPreRenderTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncPreRenderTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncRectTransformDimensionsChangeTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncRectTransformDimensionsChangeTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncRectTransformRemovedTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncRectTransformRemovedTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncRenderImageTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncRenderImageTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncRenderObjectTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncRenderObjectTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncResetTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncResetTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncScrollTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncScrollTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncSelectTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncSelectTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncServerInitializedTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncServerInitializedTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncStartTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncStartTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncSubmitTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncSubmitTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncTransformChildrenChangedTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncTransformChildrenChangedTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncTransformParentChangedTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncTransformParentChangedTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncTriggerBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncTriggerBase-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncTriggerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncTriggerExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncTriggerHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncTriggerHandler-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncUpdateSelectedTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncUpdateSelectedTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncUpdateTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncUpdateTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncValidateTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncValidateTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncWillRenderObjectTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.AsyncWillRenderObjectTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncFixedUpdateHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncFixedUpdateHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncLateUpdateHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncLateUpdateHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnAnimatorIKHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnAnimatorIKHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnAnimatorMoveHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnAnimatorMoveHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnApplicationFocusHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnApplicationFocusHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnApplicationPauseHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnApplicationPauseHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnApplicationQuitHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnApplicationQuitHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnAudioFilterReadHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnAudioFilterReadHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnBecameInvisibleHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnBecameInvisibleHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnBecameVisibleHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnBecameVisibleHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnBeforeTransformParentChangedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnBeforeTransformParentChangedHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnBeginDragHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnBeginDragHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnCancelHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnCancelHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnCanvasGroupChangedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnCanvasGroupChangedHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnDeselectHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnDeselectHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnDisableHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnDisableHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnDragHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnDragHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnDrawGizmosHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnDrawGizmosHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnDrawGizmosSelectedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnDrawGizmosSelectedHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnDropHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnDropHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnEnableHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnEnableHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnEndDragHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnEndDragHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnGUIHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnGUIHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnInitializePotentialDragHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnInitializePotentialDragHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMouseDownHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMouseDownHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMouseDragHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMouseDragHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMouseEnterHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMouseEnterHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMouseExitHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMouseExitHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMouseOverHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMouseOverHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMouseUpAsButtonHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMouseUpAsButtonHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMouseUpHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMouseUpHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMoveHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnMoveHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnParticleCollisionHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnParticleCollisionHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnParticleSystemStoppedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnParticleSystemStoppedHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnParticleTriggerHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnParticleTriggerHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPointerClickHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPointerClickHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPointerDownHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPointerDownHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPointerEnterHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPointerEnterHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPointerExitHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPointerExitHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPointerUpHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPointerUpHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPostRenderHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPostRenderHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPreCullHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPreCullHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPreRenderHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnPreRenderHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnRectTransformDimensionsChangeHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnRectTransformDimensionsChangeHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnRectTransformRemovedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnRectTransformRemovedHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnRenderImageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnRenderImageHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnRenderObjectHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnRenderObjectHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnScrollHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnScrollHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnSelectHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnSelectHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnServerInitializedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnServerInitializedHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnSubmitHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnSubmitHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnTransformChildrenChangedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnTransformChildrenChangedHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnTransformParentChangedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnTransformParentChangedHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnUpdateSelectedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnUpdateSelectedHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnValidateHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnValidateHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnWillRenderObjectHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOnWillRenderObjectHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOneShotTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncOneShotTrigger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncResetHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncResetHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncUpdateHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.IAsyncUpdateHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.Triggers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTask-1.Awaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTask-1.Awaiter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTask-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTask-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTask.Awaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTask.Awaiter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTask.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskAsyncEnumerableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskAsyncEnumerableExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskCancelableAsyncEnumerable-1.Enumerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskCancelableAsyncEnumerable-1.Enumerator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskCancelableAsyncEnumerable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskCancelableAsyncEnumerable-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskCancellationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskCancellationExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskCompletionSource-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskCompletionSource-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskCompletionSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskCompletionSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskCompletionSourceCore-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskCompletionSourceCore-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerEarlyUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerEarlyUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerFixedUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerFixedUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerInitialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerInitialization.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastEarlyUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastEarlyUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastFixedUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastFixedUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastInitialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastInitialization.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastPostLateUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastPostLateUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastPreLateUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastPreLateUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastPreUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastPreUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastTimeUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastTimeUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldEarlyUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldEarlyUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldFixedUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldFixedUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldInitialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldInitialization.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldPostLateUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldPostLateUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldPreLateUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldPreLateUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldPreUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldPreUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldTimeUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldTimeUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerLastYieldUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerPostLateUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerPostLateUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerPreLateUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerPreLateUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerPreUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerPreUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerTimeUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerTimeUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldEarlyUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldEarlyUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldFixedUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldFixedUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldInitialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldInitialization.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldPostLateUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldPostLateUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldPreLateUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldPreLateUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldPreUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldPreUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldTimeUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldTimeUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.UniTaskLoopRunnerYieldUpdate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskLoopRunners.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskObservableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskObservableExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskScheduler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskStatusExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskStatusExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskSynchronizationContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskSynchronizationContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskVoid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskVoid.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UnityAsyncExtensions.AsyncOperationAwaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UnityAsyncExtensions.AsyncOperationAwaiter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UnityAsyncExtensions.ResourceRequestAwaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UnityAsyncExtensions.ResourceRequestAwaiter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UnityAsyncExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UnityAsyncExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UnityBindingExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UnityBindingExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UnityEventHandlerAsyncEnumerable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UnityEventHandlerAsyncEnumerable-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UnityEventHandlerAsyncEnumerable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.UnityEventHandlerAsyncEnumerable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.YieldAwaitable.Awaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.YieldAwaitable.Awaiter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.YieldAwaitable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.YieldAwaitable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.EnumerableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.EnumerableExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.Error.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.Error.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.ExceptionalError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.ExceptionalError.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.Extensions.ResultExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.Extensions.ResultExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.IError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.IError.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.IExceptionalError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.IExceptionalError.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.IReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.IReason.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.IResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.IResult-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.IResultBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.IResultBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.ISuccess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.ISuccess.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.ObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.ObjectExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.ReasonExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.ReasonExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.ReasonStringBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.ReasonStringBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.Result-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.Result-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.Result.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.Result.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.ResultBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.ResultBase-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.ResultBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.ResultBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.ResultSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.ResultSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.ResultSettingsBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.ResultSettingsBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.Success.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.Success.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.External.FluentResults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.External.FluentResults.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Leaderboard.ILeaderboardTab.yml",
       "output": {
         ".html": {
@@ -319,6 +3189,26 @@
       "output": {
         ".html": {
           "relative_path": "api/ZeepSDK.Racing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Workshop.WorkshopApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Workshop.WorkshopApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Workshop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Workshop.html"
         }
       },
       "version": ""

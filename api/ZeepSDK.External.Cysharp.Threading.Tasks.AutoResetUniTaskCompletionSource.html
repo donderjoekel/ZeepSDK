@@ -1,0 +1,632 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AutoResetUniTaskCompletionSource
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AutoResetUniTaskCompletionSource
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/tnrd-org/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource.md&amp;value=---%0Auid%3A%20ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource">
+
+
+
+  <h1 id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource" class="text-break">
+    Class AutoResetUniTaskCompletionSource
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ZeepSDK.html">ZeepSDK</a>.<a class="xref" href="ZeepSDK.External.html">External</a>.<a class="xref" href="ZeepSDK.External.Cysharp.html">Cysharp</a>.<a class="xref" href="ZeepSDK.External.Cysharp.Threading.html">Threading</a>.<a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.html">Tasks</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AutoResetUniTaskCompletionSource : IUniTaskSource, ITaskPoolNode&lt;AutoResetUniTaskCompletionSource&gt;, IPromise, IResolvePromise, IRejectPromise, ICancelPromise</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AutoResetUniTaskCompletionSource</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.IUniTaskSource.html">IUniTaskSource</a></div>
+      <div><a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.ITaskPoolNode-1.html">ITaskPoolNode</a>&lt;<a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.html">AutoResetUniTaskCompletionSource</a>&gt;</div>
+      <div><a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.IPromise.html">IPromise</a></div>
+      <div><a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.IResolvePromise.html">IResolvePromise</a></div>
+      <div><a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.IRejectPromise.html">IRejectPromise</a></div>
+      <div><a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.ICancelPromise.html">ICancelPromise</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="ZeepSDK.External.FluentResults.ObjectExtensions.html#ZeepSDK_External_FluentResults_ObjectExtensions_ToResult__1___0_">ObjectExtensions.ToResult&lt;TValue&gt;(TValue)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_NextNode_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.NextNode*"></a>
+
+  <h3 id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_NextNode" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.NextNode">
+  NextNode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ref AutoResetUniTaskCompletionSource NextNode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.html">AutoResetUniTaskCompletionSource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_Task_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.Task*"></a>
+
+  <h3 id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_Task" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.Task">
+  Task
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L374"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniTask Task { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.UniTask.html">UniTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_Create_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.Create*"></a>
+
+  <h3 id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_Create" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.Create">
+  Create()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AutoResetUniTaskCompletionSource Create()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.html">AutoResetUniTaskCompletionSource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_CreateCompleted_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.CreateCompleted*"></a>
+
+  <h3 id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_CreateCompleted_System_Int16__" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.CreateCompleted(System.Int16@)">
+  CreateCompleted(out short)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AutoResetUniTaskCompletionSource CreateCompleted(out short token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.html">AutoResetUniTaskCompletionSource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_CreateFromCanceled_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.CreateFromCanceled*"></a>
+
+  <h3 id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_CreateFromCanceled_System_Threading_CancellationToken_System_Int16__" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.CreateFromCanceled(System.Threading.CancellationToken,System.Int16@)">
+  CreateFromCanceled(CancellationToken, out short)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L347"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AutoResetUniTaskCompletionSource CreateFromCanceled(CancellationToken cancellationToken, out short token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.html">AutoResetUniTaskCompletionSource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_CreateFromException_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.CreateFromException*"></a>
+
+  <h3 id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_CreateFromException_System_Exception_System_Int16__" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.CreateFromException(System.Exception,System.Int16@)">
+  CreateFromException(Exception, out short)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L356"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AutoResetUniTaskCompletionSource CreateFromException(Exception exception, out short token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.html">AutoResetUniTaskCompletionSource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_GetResult_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.GetResult*"></a>
+
+  <h3 id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_GetResult_System_Int16_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.GetResult(System.Int16)">
+  GetResult(short)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L401"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetResult(short token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_GetStatus_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.GetStatus*"></a>
+
+  <h3 id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_GetStatus_System_Int16_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.GetStatus(System.Int16)">
+  GetStatus(short)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L415"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniTaskStatus GetStatus(short token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskStatus.html">UniTaskStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_OnCompleted_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.OnCompleted*"></a>
+
+  <h3 id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_OnCompleted_System_Action_System_Object__System_Object_System_Int16_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.OnCompleted(System.Action{System.Object},System.Object,System.Int16)">
+  OnCompleted(Action&lt;object&gt;, object, short)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L427"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnCompleted(Action&lt;object&gt; continuation, object state, short token)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>continuation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>state</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>token</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_TrySetCanceled_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.TrySetCanceled*"></a>
+
+  <h3 id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_TrySetCanceled_System_Threading_CancellationToken_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.TrySetCanceled(System.Threading.CancellationToken)">
+  TrySetCanceled(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L389"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrySetCanceled(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_TrySetException_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.TrySetException*"></a>
+
+  <h3 id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_TrySetException_System_Exception_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.TrySetException(System.Exception)">
+  TrySetException(Exception)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrySetException(Exception exception)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_TrySetResult_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.TrySetResult*"></a>
+
+  <h3 id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_TrySetResult" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.TrySetResult">
+  TrySetResult()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L383"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrySetResult()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_UnsafeGetStatus_" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.UnsafeGetStatus*"></a>
+
+  <h3 id="ZeepSDK_External_Cysharp_Threading_Tasks_AutoResetUniTaskCompletionSource_UnsafeGetStatus" data-uid="ZeepSDK.External.Cysharp.Threading.Tasks.AutoResetUniTaskCompletionSource.UnsafeGetStatus">
+  UnsafeGetStatus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L421"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniTaskStatus UnsafeGetStatus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ZeepSDK.External.Cysharp.Threading.Tasks.UniTaskStatus.html">UniTaskStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/UniTask/UniTaskCompletionSource.cs/#L319" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

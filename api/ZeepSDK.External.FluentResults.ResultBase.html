@@ -1,0 +1,1099 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ResultBase
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ResultBase
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/tnrd-org/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_External_FluentResults_ResultBase.md&amp;value=---%0Auid%3A%20ZeepSDK.External.FluentResults.ResultBase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ZeepSDK.External.FluentResults.ResultBase">
+
+
+
+  <h1 id="ZeepSDK_External_FluentResults_ResultBase" data-uid="ZeepSDK.External.FluentResults.ResultBase" class="text-break">
+    Class ResultBase
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ZeepSDK.html">ZeepSDK</a>.<a class="xref" href="ZeepSDK.External.html">External</a>.<a class="xref" href="ZeepSDK.External.FluentResults.html">FluentResults</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ResultBase : IResultBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ResultBase</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ZeepSDK.External.FluentResults.IResultBase.html">IResultBase</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="ZeepSDK.External.FluentResults.ResultBase-1.html">ResultBase&lt;TResult&gt;</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="ZeepSDK.External.FluentResults.ObjectExtensions.html#ZeepSDK_External_FluentResults_ObjectExtensions_ToResult__1___0_">ObjectExtensions.ToResult&lt;TValue&gt;(TValue)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase__ctor_" data-uid="ZeepSDK.External.FluentResults.ResultBase.#ctor*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase__ctor" data-uid="ZeepSDK.External.FluentResults.ResultBase.#ctor">
+  ResultBase()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ResultBase()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_Errors_" data-uid="ZeepSDK.External.FluentResults.ResultBase.Errors*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_Errors" data-uid="ZeepSDK.External.FluentResults.ResultBase.Errors">
+  Errors
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get all errors</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;IError&gt; Errors { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ZeepSDK.External.FluentResults.IError.html">IError</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_IsFailed_" data-uid="ZeepSDK.External.FluentResults.ResultBase.IsFailed*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_IsFailed" data-uid="ZeepSDK.External.FluentResults.ResultBase.IsFailed">
+  IsFailed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is true if Reasons contains at least one error</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFailed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_IsSuccess_" data-uid="ZeepSDK.External.FluentResults.ResultBase.IsSuccess*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_IsSuccess" data-uid="ZeepSDK.External.FluentResults.ResultBase.IsSuccess">
+  IsSuccess
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is true if Reasons contains no errors</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSuccess { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_Reasons_" data-uid="ZeepSDK.External.FluentResults.ResultBase.Reasons*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_Reasons" data-uid="ZeepSDK.External.FluentResults.ResultBase.Reasons">
+  Reasons
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get all reasons (errors and successes)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;IReason&gt; Reasons { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ZeepSDK.External.FluentResults.IReason.html">IReason</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_Successes_" data-uid="ZeepSDK.External.FluentResults.ResultBase.Successes*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_Successes" data-uid="ZeepSDK.External.FluentResults.ResultBase.Successes">
+  Successes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get all successes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ISuccess&gt; Successes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ZeepSDK.External.FluentResults.ISuccess.html">ISuccess</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_Deconstruct_" data-uid="ZeepSDK.External.FluentResults.ResultBase.Deconstruct*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_Deconstruct_System_Boolean__System_Boolean__" data-uid="ZeepSDK.External.FluentResults.ResultBase.Deconstruct(System.Boolean@,System.Boolean@)">
+  Deconstruct(out bool, out bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deconstruct Result</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out bool isSuccess, out bool isFailed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isSuccess</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>isFailed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_Deconstruct_" data-uid="ZeepSDK.External.FluentResults.ResultBase.Deconstruct*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_Deconstruct_System_Boolean__System_Boolean__System_Collections_Generic_List_ZeepSDK_External_FluentResults_IError___" data-uid="ZeepSDK.External.FluentResults.ResultBase.Deconstruct(System.Boolean@,System.Boolean@,System.Collections.Generic.List{ZeepSDK.External.FluentResults.IError}@)">
+  Deconstruct(out bool, out bool, out List&lt;IError&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deconstruct Result</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out bool isSuccess, out bool isFailed, out List&lt;IError&gt; errors)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isSuccess</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>isFailed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>errors</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ZeepSDK.External.FluentResults.IError.html">IError</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasError_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasError*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasError_System_Func_ZeepSDK_External_FluentResults_IError_System_Boolean__" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasError(System.Func{ZeepSDK.External.FluentResults.IError,System.Boolean})">
+  HasError(Func&lt;IError, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains an error with a specific condition</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasError(Func&lt;IError, bool&gt; predicate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="ZeepSDK.External.FluentResults.IError.html">IError</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasError_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasError*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasError_System_Func_ZeepSDK_External_FluentResults_IError_System_Boolean__System_Collections_Generic_IEnumerable_ZeepSDK_External_FluentResults_IError___" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasError(System.Func{ZeepSDK.External.FluentResults.IError,System.Boolean},System.Collections.Generic.IEnumerable{ZeepSDK.External.FluentResults.IError}@)">
+  HasError(Func&lt;IError, bool&gt;, out IEnumerable&lt;IError&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains an error with a specific condition</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasError(Func&lt;IError, bool&gt; predicate, out IEnumerable&lt;IError&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="ZeepSDK.External.FluentResults.IError.html">IError</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ZeepSDK.External.FluentResults.IError.html">IError</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasError_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasError*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasError__1" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasError``1">
+  HasError&lt;TError&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains an error from a specific type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasError&lt;TError&gt;() where TError : IError</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TError</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasError_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasError*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasError__1_System_Collections_Generic_IEnumerable___0___" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasError``1(System.Collections.Generic.IEnumerable{``0}@)">
+  HasError&lt;TError&gt;(out IEnumerable&lt;TError&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains an error from a specific type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasError&lt;TError&gt;(out IEnumerable&lt;TError&gt; result) where TError : IError</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TError&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TError</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasError_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasError*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasError__1_System_Func___0_System_Boolean__" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasError``1(System.Func{``0,System.Boolean})">
+  HasError&lt;TError&gt;(Func&lt;TError, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains an error from a specific type and with a specific condition</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasError&lt;TError&gt;(Func&lt;TError, bool&gt; predicate) where TError : IError</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TError, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TError</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasError_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasError*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasError__1_System_Func___0_System_Boolean__System_Collections_Generic_IEnumerable___0___" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasError``1(System.Func{``0,System.Boolean},System.Collections.Generic.IEnumerable{``0}@)">
+  HasError&lt;TError&gt;(Func&lt;TError, bool&gt;, out IEnumerable&lt;TError&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains an error from a specific type and with a specific condition</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasError&lt;TError&gt;(Func&lt;TError, bool&gt; predicate, out IEnumerable&lt;TError&gt; result) where TError : IError</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TError, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TError&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TError</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasException_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasException*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasException__1" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasException``1">
+  HasException&lt;TException&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains an exception from a specific type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasException&lt;TException&gt;() where TException : Exception</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TException</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasException_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasException*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasException__1_System_Collections_Generic_IEnumerable_ZeepSDK_External_FluentResults_IError___" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasException``1(System.Collections.Generic.IEnumerable{ZeepSDK.External.FluentResults.IError}@)">
+  HasException&lt;TException&gt;(out IEnumerable&lt;IError&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains an exception from a specific type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasException&lt;TException&gt;(out IEnumerable&lt;IError&gt; result) where TException : Exception</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ZeepSDK.External.FluentResults.IError.html">IError</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TException</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasException_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasException*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasException__1_System_Func___0_System_Boolean__" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasException``1(System.Func{``0,System.Boolean})">
+  HasException&lt;TException&gt;(Func&lt;TException, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains an exception from a specific type and with a specific condition</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasException&lt;TException&gt;(Func&lt;TException, bool&gt; predicate) where TException : Exception</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TException, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TException</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasException_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasException*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasException__1_System_Func___0_System_Boolean__System_Collections_Generic_IEnumerable_ZeepSDK_External_FluentResults_IError___" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasException``1(System.Func{``0,System.Boolean},System.Collections.Generic.IEnumerable{ZeepSDK.External.FluentResults.IError}@)">
+  HasException&lt;TException&gt;(Func&lt;TException, bool&gt;, out IEnumerable&lt;IError&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains an exception from a specific type and with a specific condition</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasException&lt;TException&gt;(Func&lt;TException, bool&gt; predicate, out IEnumerable&lt;IError&gt; result) where TException : Exception</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TException, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ZeepSDK.External.FluentResults.IError.html">IError</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TException</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasSuccess_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasSuccess*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasSuccess_System_Func_ZeepSDK_External_FluentResults_ISuccess_System_Boolean__" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasSuccess(System.Func{ZeepSDK.External.FluentResults.ISuccess,System.Boolean})">
+  HasSuccess(Func&lt;ISuccess, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains a success with a specific condition</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasSuccess(Func&lt;ISuccess, bool&gt; predicate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="ZeepSDK.External.FluentResults.ISuccess.html">ISuccess</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasSuccess_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasSuccess*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasSuccess_System_Func_ZeepSDK_External_FluentResults_ISuccess_System_Boolean__System_Collections_Generic_IEnumerable_ZeepSDK_External_FluentResults_ISuccess___" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasSuccess(System.Func{ZeepSDK.External.FluentResults.ISuccess,System.Boolean},System.Collections.Generic.IEnumerable{ZeepSDK.External.FluentResults.ISuccess}@)">
+  HasSuccess(Func&lt;ISuccess, bool&gt;, out IEnumerable&lt;ISuccess&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains a success with a specific condition</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasSuccess(Func&lt;ISuccess, bool&gt; predicate, out IEnumerable&lt;ISuccess&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="ZeepSDK.External.FluentResults.ISuccess.html">ISuccess</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ZeepSDK.External.FluentResults.ISuccess.html">ISuccess</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasSuccess_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasSuccess*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasSuccess__1" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasSuccess``1">
+  HasSuccess&lt;TSuccess&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains a success from a specific type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasSuccess&lt;TSuccess&gt;() where TSuccess : ISuccess</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSuccess</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasSuccess_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasSuccess*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasSuccess__1_System_Collections_Generic_IEnumerable___0___" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasSuccess``1(System.Collections.Generic.IEnumerable{``0}@)">
+  HasSuccess&lt;TSuccess&gt;(out IEnumerable&lt;TSuccess&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains a success from a specific type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasSuccess&lt;TSuccess&gt;(out IEnumerable&lt;TSuccess&gt; result) where TSuccess : ISuccess</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSuccess&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSuccess</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasSuccess_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasSuccess*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasSuccess__1_System_Func___0_System_Boolean__" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasSuccess``1(System.Func{``0,System.Boolean})">
+  HasSuccess&lt;TSuccess&gt;(Func&lt;TSuccess, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains a success from a specific type and with a specific condition</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasSuccess&lt;TSuccess&gt;(Func&lt;TSuccess, bool&gt; predicate) where TSuccess : ISuccess</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSuccess, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSuccess</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_External_FluentResults_ResultBase_HasSuccess_" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasSuccess*"></a>
+
+  <h3 id="ZeepSDK_External_FluentResults_ResultBase_HasSuccess__1_System_Func___0_System_Boolean__System_Collections_Generic_IEnumerable___0___" data-uid="ZeepSDK.External.FluentResults.ResultBase.HasSuccess``1(System.Func{``0,System.Boolean},System.Collections.Generic.IEnumerable{``0}@)">
+  HasSuccess&lt;TSuccess&gt;(Func&lt;TSuccess, bool&gt;, out IEnumerable&lt;TSuccess&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the result object contains a success from a specific type and with a specific condition</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasSuccess&lt;TSuccess&gt;(Func&lt;TSuccess, bool&gt; predicate, out IEnumerable&lt;TSuccess&gt; result) where TSuccess : ISuccess</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TSuccess, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSuccess&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TSuccess</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/External/FluentResults/Results/ResultBase.cs/#L36" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
