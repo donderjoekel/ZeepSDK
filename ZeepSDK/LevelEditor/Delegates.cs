@@ -8,3 +8,6 @@ public delegate void EnteredTestModeDelegate();
 
 [PublicAPI]
 public delegate void EnteredLevelEditorDelegate();
+
+[PublicAPI]
+public delegate void ExitedLevelEditorDelegate();

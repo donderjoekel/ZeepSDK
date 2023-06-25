@@ -40,6 +40,11 @@ public static class LevelEditorApi
     public static event EnteredLevelEditorDelegate EnteredLevelEditor;
 
     /// <summary>
+    /// An event that is fired when the user leaves the level editor
+    /// </summary>
+    public static event ExitedLevelEditorDelegate ExitedLevelEditor;
+
+    /// <summary>
     /// Boolean indicating whether or not the mouse input is currently being blocked
     /// </summary>
     public static bool IsMouseInputBlocked => mouseInputBlockers.Count > 0;
@@ -73,6 +78,11 @@ public static class LevelEditorApi
             }
 
             EnteredLevelEditor?.Invoke();
+        };
+        
+        LEV_LevelEditorCentral_OnDestroy.PostfixEvent += () =>
+        {
+            ExitedLevelEditor?.Invoke();
         };
     }
 
