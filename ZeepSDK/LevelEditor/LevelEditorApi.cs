@@ -40,6 +40,11 @@ public static class LevelEditorApi
     public static event EnteredLevelEditorDelegate EnteredLevelEditor;
 
     /// <summary>
+    /// An event that is fired when the user leaves the level editor
+    /// </summary>
+    public static event ExitedLevelEditorDelegate ExitedLevelEditor;
+
+    /// <summary>
     /// Boolean indicating whether or not the mouse input is currently being blocked
     /// </summary>
     public static bool IsMouseInputBlocked => mouseInputBlockers.Count > 0;
@@ -74,6 +79,11 @@ public static class LevelEditorApi
 
             EnteredLevelEditor?.Invoke();
         };
+        
+        LEV_LevelEditorCentral_OnDestroy.PostfixEvent += () =>
+        {
+            ExitedLevelEditor?.Invoke();
+        };
     }
 
     /// <summary>
@@ -104,7 +114,18 @@ public static class LevelEditorApi
     {
         if (keyboardInputBlockers.Contains(blocker))
             return;
+
+        int countBefore = keyboardInputBlockers.Count;
         keyboardInputBlockers.Add(blocker);
+
+        if (countBefore != 0)
+            return;
+
+        InputRegister inputRegister = ComponentCache.Get<InputRegister>();
+        foreach (InputPlayerScriptableObject input in inputRegister.Inputs)
+        {
+            input.DisableLevelEditorInput();
+        }
     }
 
     /// <summary>
@@ -113,7 +134,17 @@ public static class LevelEditorApi
     /// <param name="blocker">The blocker to use for identification</param>
     public static void UnblockKeyboardInput(object blocker)
     {
+        int countBefore = keyboardInputBlockers.Count;
         keyboardInputBlockers.Remove(blocker);
+
+        if (countBefore <= 0 || keyboardInputBlockers.Count != 0)
+            return;
+
+        InputRegister inputRegister = ComponentCache.Get<InputRegister>();
+        foreach (InputPlayerScriptableObject input in inputRegister.Inputs)
+        {
+            input.EnableLevelEditorInput();
+        }
     }
 
     /// <summary>
