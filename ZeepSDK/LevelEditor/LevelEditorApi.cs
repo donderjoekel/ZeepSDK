@@ -114,7 +114,18 @@ public static class LevelEditorApi
     {
         if (keyboardInputBlockers.Contains(blocker))
             return;
+
+        int countBefore = keyboardInputBlockers.Count;
         keyboardInputBlockers.Add(blocker);
+
+        if (countBefore != 0)
+            return;
+
+        InputRegister inputRegister = ComponentCache.Get<InputRegister>();
+        foreach (InputPlayerScriptableObject input in inputRegister.Inputs)
+        {
+            input.DisableLevelEditorInput();
+        }
     }
 
     /// <summary>
@@ -123,7 +134,17 @@ public static class LevelEditorApi
     /// <param name="blocker">The blocker to use for identification</param>
     public static void UnblockKeyboardInput(object blocker)
     {
+        int countBefore = keyboardInputBlockers.Count;
         keyboardInputBlockers.Remove(blocker);
+
+        if (countBefore <= 0 || keyboardInputBlockers.Count != 0)
+            return;
+
+        InputRegister inputRegister = ComponentCache.Get<InputRegister>();
+        foreach (InputPlayerScriptableObject input in inputRegister.Inputs)
+        {
+            input.EnableLevelEditorInput();
+        }
     }
 
     /// <summary>
