@@ -22149,6 +22149,12 @@ references:
   commentId: T:ZeepSDK.LevelEditor.EnteredTestModeDelegate
   fullName: ZeepSDK.LevelEditor.EnteredTestModeDelegate
   nameWithType: EnteredTestModeDelegate
+- uid: ZeepSDK.LevelEditor.ExitedLevelEditorDelegate
+  name: ExitedLevelEditorDelegate
+  href: api/ZeepSDK.LevelEditor.ExitedLevelEditorDelegate.html
+  commentId: T:ZeepSDK.LevelEditor.ExitedLevelEditorDelegate
+  fullName: ZeepSDK.LevelEditor.ExitedLevelEditorDelegate
+  nameWithType: ExitedLevelEditorDelegate
 - uid: ZeepSDK.LevelEditor.ICustomBlockBuilder
   name: ICustomBlockBuilder
   href: api/ZeepSDK.LevelEditor.ICustomBlockBuilder.html
@@ -22387,6 +22393,12 @@ references:
   commentId: E:ZeepSDK.LevelEditor.LevelEditorApi.EnteredTestMode
   fullName: ZeepSDK.LevelEditor.LevelEditorApi.EnteredTestMode
   nameWithType: LevelEditorApi.EnteredTestMode
+- uid: ZeepSDK.LevelEditor.LevelEditorApi.ExitedLevelEditor
+  name: ExitedLevelEditor
+  href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_ExitedLevelEditor
+  commentId: E:ZeepSDK.LevelEditor.LevelEditorApi.ExitedLevelEditor
+  fullName: ZeepSDK.LevelEditor.LevelEditorApi.ExitedLevelEditor
+  nameWithType: LevelEditorApi.ExitedLevelEditor
 - uid: ZeepSDK.LevelEditor.LevelEditorApi.IsKeyboardInputBlocked
   name: IsKeyboardInputBlocked
   href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_IsKeyboardInputBlocked
