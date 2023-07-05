@@ -39,6 +39,30 @@ public static class LeaderboardApi
     }
 
     /// <summary>
+    /// Allows you to insert a tab into the leaderboard at the given index
+    /// </summary>
+    /// <param name="index">The position where the tab should be inserted</param>
+    /// <typeparam name="TTab">The type of the tab to create an instance of and insert to the leaderboard</typeparam>
+    /// <returns>The tab that was inserted in to the leaderboard</returns>
+    public static TTab InsertTab<TTab>(int index)
+        where TTab : ILeaderboardTab, new()
+    {
+        TTab tab = new TTab();
+        leaderboardHandler.InsertTab(index, tab);
+        return tab;
+    }
+
+    /// <summary>
+    /// Allows you to insert the given tab into the leaderboard at the given index
+    /// </summary>
+    /// <param name="index">The position where the tab should be inserted</param>
+    /// <param name="tab">The tab to insert</param>
+    public static void InsertTab(int index, ILeaderboardTab tab)
+    {
+        leaderboardHandler.InsertTab(index, tab);
+    }
+
+    /// <summary>
     /// Allows you to remove a tab from the leaderboard
     /// </summary>
     /// <param name="tab">The tab to remove</param>

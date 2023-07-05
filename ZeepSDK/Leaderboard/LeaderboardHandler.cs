@@ -27,6 +27,11 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
         tabs.Add(tab);
     }
 
+    internal void InsertTab(int index, ILeaderboardTab tab)
+    {
+        tabs.Insert(index, tab);
+    }
+
     internal void RemoveTab(ILeaderboardTab tab)
     {
         tabs.Remove(tab);
