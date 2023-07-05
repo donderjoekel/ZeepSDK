@@ -239,6 +239,144 @@ references:
   commentId: T:ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate
   fullName: ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate
   nameWithType: RemoteChatCommandCallbackDelegate
+- uid: ZeepSDK.Cosmetics
+  name: ZeepSDK.Cosmetics
+  href: api/ZeepSDK.Cosmetics.html
+  commentId: N:ZeepSDK.Cosmetics
+  fullName: ZeepSDK.Cosmetics
+  nameWithType: ZeepSDK.Cosmetics
+- uid: ZeepSDK.Cosmetics.CosmeticsApi
+  name: CosmeticsApi
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html
+  commentId: T:ZeepSDK.Cosmetics.CosmeticsApi
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi
+  nameWithType: CosmeticsApi
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetAllColors
+  name: GetAllColors()
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetAllColors
+  commentId: M:ZeepSDK.Cosmetics.CosmeticsApi.GetAllColors
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetAllColors()
+  nameWithType: CosmeticsApi.GetAllColors()
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetAllColors*
+  name: GetAllColors
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetAllColors_
+  commentId: Overload:ZeepSDK.Cosmetics.CosmeticsApi.GetAllColors
+  isSpec: "True"
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetAllColors
+  nameWithType: CosmeticsApi.GetAllColors
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetAllHats
+  name: GetAllHats()
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetAllHats
+  commentId: M:ZeepSDK.Cosmetics.CosmeticsApi.GetAllHats
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetAllHats()
+  nameWithType: CosmeticsApi.GetAllHats()
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetAllHats*
+  name: GetAllHats
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetAllHats_
+  commentId: Overload:ZeepSDK.Cosmetics.CosmeticsApi.GetAllHats
+  isSpec: "True"
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetAllHats
+  nameWithType: CosmeticsApi.GetAllHats
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetAllZeepkists
+  name: GetAllZeepkists()
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetAllZeepkists
+  commentId: M:ZeepSDK.Cosmetics.CosmeticsApi.GetAllZeepkists
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetAllZeepkists()
+  nameWithType: CosmeticsApi.GetAllZeepkists()
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetAllZeepkists*
+  name: GetAllZeepkists
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetAllZeepkists_
+  commentId: Overload:ZeepSDK.Cosmetics.CosmeticsApi.GetAllZeepkists
+  isSpec: "True"
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetAllZeepkists
+  nameWithType: CosmeticsApi.GetAllZeepkists
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetColor(System.Int32,System.Boolean)
+  name: GetColor(int, bool)
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetColor_System_Int32_System_Boolean_
+  commentId: M:ZeepSDK.Cosmetics.CosmeticsApi.GetColor(System.Int32,System.Boolean)
+  name.vb: GetColor(Integer, Boolean)
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetColor(int, bool)
+  fullName.vb: ZeepSDK.Cosmetics.CosmeticsApi.GetColor(Integer, Boolean)
+  nameWithType: CosmeticsApi.GetColor(int, bool)
+  nameWithType.vb: CosmeticsApi.GetColor(Integer, Boolean)
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetColor*
+  name: GetColor
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetColor_
+  commentId: Overload:ZeepSDK.Cosmetics.CosmeticsApi.GetColor
+  isSpec: "True"
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetColor
+  nameWithType: CosmeticsApi.GetColor
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetHat(System.Int32,System.Boolean)
+  name: GetHat(int, bool)
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetHat_System_Int32_System_Boolean_
+  commentId: M:ZeepSDK.Cosmetics.CosmeticsApi.GetHat(System.Int32,System.Boolean)
+  name.vb: GetHat(Integer, Boolean)
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetHat(int, bool)
+  fullName.vb: ZeepSDK.Cosmetics.CosmeticsApi.GetHat(Integer, Boolean)
+  nameWithType: CosmeticsApi.GetHat(int, bool)
+  nameWithType.vb: CosmeticsApi.GetHat(Integer, Boolean)
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetHat*
+  name: GetHat
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetHat_
+  commentId: Overload:ZeepSDK.Cosmetics.CosmeticsApi.GetHat
+  isSpec: "True"
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetHat
+  nameWithType: CosmeticsApi.GetHat
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetSoapbox(System.Int32,System.Boolean)
+  name: GetSoapbox(int, bool)
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetSoapbox_System_Int32_System_Boolean_
+  commentId: M:ZeepSDK.Cosmetics.CosmeticsApi.GetSoapbox(System.Int32,System.Boolean)
+  name.vb: GetSoapbox(Integer, Boolean)
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetSoapbox(int, bool)
+  fullName.vb: ZeepSDK.Cosmetics.CosmeticsApi.GetSoapbox(Integer, Boolean)
+  nameWithType: CosmeticsApi.GetSoapbox(int, bool)
+  nameWithType.vb: CosmeticsApi.GetSoapbox(Integer, Boolean)
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetSoapbox*
+  name: GetSoapbox
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetSoapbox_
+  commentId: Overload:ZeepSDK.Cosmetics.CosmeticsApi.GetSoapbox
+  isSpec: "True"
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetSoapbox
+  nameWithType: CosmeticsApi.GetSoapbox
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedColors
+  name: GetUnlockedColors()
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetUnlockedColors
+  commentId: M:ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedColors
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedColors()
+  nameWithType: CosmeticsApi.GetUnlockedColors()
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedColors*
+  name: GetUnlockedColors
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetUnlockedColors_
+  commentId: Overload:ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedColors
+  isSpec: "True"
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedColors
+  nameWithType: CosmeticsApi.GetUnlockedColors
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedHats
+  name: GetUnlockedHats()
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetUnlockedHats
+  commentId: M:ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedHats
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedHats()
+  nameWithType: CosmeticsApi.GetUnlockedHats()
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedHats*
+  name: GetUnlockedHats
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetUnlockedHats_
+  commentId: Overload:ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedHats
+  isSpec: "True"
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedHats
+  nameWithType: CosmeticsApi.GetUnlockedHats
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedZeepkists
+  name: GetUnlockedZeepkists()
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetUnlockedZeepkists
+  commentId: M:ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedZeepkists
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedZeepkists()
+  nameWithType: CosmeticsApi.GetUnlockedZeepkists()
+- uid: ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedZeepkists*
+  name: GetUnlockedZeepkists
+  href: api/ZeepSDK.Cosmetics.CosmeticsApi.html#ZeepSDK_Cosmetics_CosmeticsApi_GetUnlockedZeepkists_
+  commentId: Overload:ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedZeepkists
+  isSpec: "True"
+  fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedZeepkists
+  nameWithType: CosmeticsApi.GetUnlockedZeepkists
 - uid: ZeepSDK.External.Cysharp.Threading.Tasks
   name: ZeepSDK.External.Cysharp.Threading.Tasks
   href: api/ZeepSDK.External.Cysharp.Threading.Tasks.html
