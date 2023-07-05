@@ -216,11 +216,92 @@ public static class LeaderboardApi</code></pre>
 
 
 
+  <a id="ZeepSDK_Leaderboard_LeaderboardApi_InsertTab_" data-uid="ZeepSDK.Leaderboard.LeaderboardApi.InsertTab*"></a>
+
+  <h3 id="ZeepSDK_Leaderboard_LeaderboardApi_InsertTab_System_Int32_ZeepSDK_Leaderboard_ILeaderboardTab_" data-uid="ZeepSDK.Leaderboard.LeaderboardApi.InsertTab(System.Int32,ZeepSDK.Leaderboard.ILeaderboardTab)">
+  InsertTab(int, ILeaderboardTab)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/LeaderboardApi.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows you to insert the given tab into the leaderboard at the given index</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void InsertTab(int index, ILeaderboardTab tab)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The position where the tab should be inserted</p>
+</dd>
+    <dt><code>tab</code> <a class="xref" href="ZeepSDK.Leaderboard.ILeaderboardTab.html">ILeaderboardTab</a></dt>
+    <dd><p>The tab to insert</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_Leaderboard_LeaderboardApi_InsertTab_" data-uid="ZeepSDK.Leaderboard.LeaderboardApi.InsertTab*"></a>
+
+  <h3 id="ZeepSDK_Leaderboard_LeaderboardApi_InsertTab__1_System_Int32_" data-uid="ZeepSDK.Leaderboard.LeaderboardApi.InsertTab``1(System.Int32)">
+  InsertTab&lt;TTab&gt;(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/LeaderboardApi.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows you to insert a tab into the leaderboard at the given index</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TTab InsertTab&lt;TTab&gt;(int index) where TTab : ILeaderboardTab, new()</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The position where the tab should be inserted</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TTab</span></dt>
+    <dd><p>The tab that was inserted in to the leaderboard</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TTab</code></dt>
+    <dd><p>The type of the tab to create an instance of and insert to the leaderboard</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="ZeepSDK_Leaderboard_LeaderboardApi_RemoveTab_" data-uid="ZeepSDK.Leaderboard.LeaderboardApi.RemoveTab*"></a>
 
   <h3 id="ZeepSDK_Leaderboard_LeaderboardApi_RemoveTab_ZeepSDK_Leaderboard_ILeaderboardTab_" data-uid="ZeepSDK.Leaderboard.LeaderboardApi.RemoveTab(ZeepSDK.Leaderboard.ILeaderboardTab)">
   RemoveTab(ILeaderboardTab)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/LeaderboardApi.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/LeaderboardApi.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Allows you to remove a tab from the leaderboard</p>
