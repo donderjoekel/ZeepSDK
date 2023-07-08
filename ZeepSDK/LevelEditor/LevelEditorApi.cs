@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 using ZeepSDK.LevelEditor.Builders;
 using ZeepSDK.LevelEditor.Patches;
 using ZeepSDK.Utilities;
-using Object = UnityEngine.Object;
 
 namespace ZeepSDK.LevelEditor;
 
@@ -27,7 +26,6 @@ public static class LevelEditorApi
 
     private static GameObject gameObject;
     private static LEV_Inspector inspector;
-    private static LEV_GizmoHandler gizmoHandler;
 
     /// <summary>
     /// An event that is fired when the user enters test mode
@@ -79,11 +77,8 @@ public static class LevelEditorApi
 
             EnteredLevelEditor?.Invoke();
         };
-        
-        LEV_LevelEditorCentral_OnDestroy.PostfixEvent += () =>
-        {
-            ExitedLevelEditor?.Invoke();
-        };
+
+        LEV_LevelEditorCentral_OnDestroy.PostfixEvent += () => { ExitedLevelEditor?.Invoke(); };
     }
 
     /// <summary>
@@ -180,20 +175,9 @@ public static class LevelEditorApi
         Vector3? scale = null
     )
     {
-        if (gizmoHandler == null)
-        {
-            gizmoHandler = Object.FindObjectOfType<LEV_GizmoHandler>(true);
-        }
+        inspector.central.gizmos.CreateNewBlock(blockId);
 
-        if (gizmoHandler == null)
-        {
-            logger.LogWarning("Unable to create new block because there's no GizmoHandler available");
-            return null;
-        }
-
-        gizmoHandler.CreateNewBlock(blockId);
-
-        BlockProperties createdBlock = gizmoHandler.central.selection.list.Last();
+        BlockProperties createdBlock = inspector.central.gizmos.central.selection.list.Last();
 
         if (position.HasValue)
             createdBlock.transform.position = position.Value;
@@ -227,6 +211,11 @@ public static class LevelEditorApi
             return;
 
         inspector.central.selection.RemoveBlockAt(index, false, false);
+
+        if (inspector.central.selection.list.Count == 0)
+        {
+            inspector.central.gizmos.GoOutOfGMode();
+        }
     }
 
     /// <summary>
@@ -235,6 +224,7 @@ public static class LevelEditorApi
     public static void ClearSelection()
     {
         inspector.central.selection.ClickNothing();
+        inspector.central.gizmos.GoOutOfGMode();
     }
 
     /// <summary>
