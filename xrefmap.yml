@@ -22522,12 +22522,30 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.LevelEditor.LevelEditorApi.ClearSelection
   nameWithType: LevelEditorApi.ClearSelection
+- uid: ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(BlockProperties,System.Nullable{UnityEngine.Vector3},System.Nullable{UnityEngine.Quaternion},System.Nullable{UnityEngine.Vector3},System.Boolean)
+  name: CreateNewBlock(BlockProperties, Vector3?, Quaternion?, Vector3?, bool)
+  href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_CreateNewBlock_BlockProperties_System_Nullable_UnityEngine_Vector3__System_Nullable_UnityEngine_Quaternion__System_Nullable_UnityEngine_Vector3__System_Boolean_
+  commentId: M:ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(BlockProperties,System.Nullable{UnityEngine.Vector3},System.Nullable{UnityEngine.Quaternion},System.Nullable{UnityEngine.Vector3},System.Boolean)
+  name.vb: CreateNewBlock(BlockProperties, Vector3?, Quaternion?, Vector3?, Boolean)
+  fullName: ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(BlockProperties, UnityEngine.Vector3?, UnityEngine.Quaternion?, UnityEngine.Vector3?, bool)
+  fullName.vb: ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(BlockProperties, UnityEngine.Vector3?, UnityEngine.Quaternion?, UnityEngine.Vector3?, Boolean)
+  nameWithType: LevelEditorApi.CreateNewBlock(BlockProperties, Vector3?, Quaternion?, Vector3?, bool)
+  nameWithType.vb: LevelEditorApi.CreateNewBlock(BlockProperties, Vector3?, Quaternion?, Vector3?, Boolean)
 - uid: ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(BlockProperties,System.Nullable{UnityEngine.Vector3},System.Nullable{UnityEngine.Quaternion},System.Nullable{UnityEngine.Vector3})
   name: CreateNewBlock(BlockProperties, Vector3?, Quaternion?, Vector3?)
   href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_CreateNewBlock_BlockProperties_System_Nullable_UnityEngine_Vector3__System_Nullable_UnityEngine_Quaternion__System_Nullable_UnityEngine_Vector3__
   commentId: M:ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(BlockProperties,System.Nullable{UnityEngine.Vector3},System.Nullable{UnityEngine.Quaternion},System.Nullable{UnityEngine.Vector3})
   fullName: ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(BlockProperties, UnityEngine.Vector3?, UnityEngine.Quaternion?, UnityEngine.Vector3?)
   nameWithType: LevelEditorApi.CreateNewBlock(BlockProperties, Vector3?, Quaternion?, Vector3?)
+- uid: ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(System.Int32,System.Nullable{UnityEngine.Vector3},System.Nullable{UnityEngine.Quaternion},System.Nullable{UnityEngine.Vector3},System.Boolean)
+  name: CreateNewBlock(int, Vector3?, Quaternion?, Vector3?, bool)
+  href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_CreateNewBlock_System_Int32_System_Nullable_UnityEngine_Vector3__System_Nullable_UnityEngine_Quaternion__System_Nullable_UnityEngine_Vector3__System_Boolean_
+  commentId: M:ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(System.Int32,System.Nullable{UnityEngine.Vector3},System.Nullable{UnityEngine.Quaternion},System.Nullable{UnityEngine.Vector3},System.Boolean)
+  name.vb: CreateNewBlock(Integer, Vector3?, Quaternion?, Vector3?, Boolean)
+  fullName: ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(int, UnityEngine.Vector3?, UnityEngine.Quaternion?, UnityEngine.Vector3?, bool)
+  fullName.vb: ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(Integer, UnityEngine.Vector3?, UnityEngine.Quaternion?, UnityEngine.Vector3?, Boolean)
+  nameWithType: LevelEditorApi.CreateNewBlock(int, Vector3?, Quaternion?, Vector3?, bool)
+  nameWithType.vb: LevelEditorApi.CreateNewBlock(Integer, Vector3?, Quaternion?, Vector3?, Boolean)
 - uid: ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(System.Int32,System.Nullable{UnityEngine.Vector3},System.Nullable{UnityEngine.Quaternion},System.Nullable{UnityEngine.Vector3})
   name: CreateNewBlock(int, Vector3?, Quaternion?, Vector3?)
   href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_CreateNewBlock_System_Int32_System_Nullable_UnityEngine_Vector3__System_Nullable_UnityEngine_Quaternion__System_Nullable_UnityEngine_Vector3__

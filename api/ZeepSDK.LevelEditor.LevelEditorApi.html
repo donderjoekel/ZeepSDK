@@ -216,7 +216,7 @@ public static class LevelEditorApi</code></pre>
 
   <h3 id="ZeepSDK_LevelEditor_LevelEditorApi_AddCustomFolder_System_Action_ZeepSDK_LevelEditor_ICustomFolderBuilder__" data-uid="ZeepSDK.LevelEditor.LevelEditorApi.AddCustomFolder(System.Action{ZeepSDK.LevelEditor.ICustomFolderBuilder})">
   AddCustomFolder(Action&lt;ICustomFolderBuilder&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/LevelEditor/LevelEditorApi.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/LevelEditor/LevelEditorApi.cs/#L280"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a custom folder to the block gui</p>
@@ -249,7 +249,7 @@ public static class LevelEditorApi</code></pre>
 
   <h3 id="ZeepSDK_LevelEditor_LevelEditorApi_AddToSelection_BlockProperties_" data-uid="ZeepSDK.LevelEditor.LevelEditorApi.AddToSelection(BlockProperties)">
   AddToSelection(BlockProperties)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/LevelEditor/LevelEditorApi.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/LevelEditor/LevelEditorApi.cs/#L242"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds the specified block to the selection in the level editor</p>
@@ -347,7 +347,7 @@ public static class LevelEditorApi</code></pre>
 
   <h3 id="ZeepSDK_LevelEditor_LevelEditorApi_ClearSelection" data-uid="ZeepSDK.LevelEditor.LevelEditorApi.ClearSelection">
   ClearSelection()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/LevelEditor/LevelEditorApi.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/LevelEditor/LevelEditorApi.cs/#L270"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Clears the selection in the level editor</p>
@@ -420,9 +420,60 @@ public static class LevelEditorApi</code></pre>
 
   <a id="ZeepSDK_LevelEditor_LevelEditorApi_CreateNewBlock_" data-uid="ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock*"></a>
 
+  <h3 id="ZeepSDK_LevelEditor_LevelEditorApi_CreateNewBlock_BlockProperties_System_Nullable_UnityEngine_Vector3__System_Nullable_UnityEngine_Quaternion__System_Nullable_UnityEngine_Vector3__System_Boolean_" data-uid="ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(BlockProperties,System.Nullable{UnityEngine.Vector3},System.Nullable{UnityEngine.Quaternion},System.Nullable{UnityEngine.Vector3},System.Boolean)">
+  CreateNewBlock(BlockProperties, Vector3?, Quaternion?, Vector3?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/LevelEditor/LevelEditorApi.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new block in the level editor with the specified properties</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BlockProperties CreateNewBlock(BlockProperties blockProperties, Vector3? position = null, Quaternion? rotation = null, Vector3? scale = null, bool removeFromSelection = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>blockProperties</code> <span class="xref">BlockProperties</span></dt>
+    <dd><p>The block to create</p>
+</dd>
+    <dt><code>position</code> <span class="xref">Vector3</span>?</dt>
+    <dd><p>The position to apply to the newly created block</p>
+</dd>
+    <dt><code>rotation</code> <span class="xref">Quaternion</span>?</dt>
+    <dd><p>The rotation to apply to the newly created block</p>
+</dd>
+    <dt><code>scale</code> <span class="xref">Vector3</span>?</dt>
+    <dd><p>The scale to apply to the newly created block</p>
+</dd>
+    <dt><code>removeFromSelection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Should the block be removed from selection</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">BlockProperties</span></dt>
+    <dd><p>The newly created block</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_LevelEditor_LevelEditorApi_CreateNewBlock_" data-uid="ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock*"></a>
+
   <h3 id="ZeepSDK_LevelEditor_LevelEditorApi_CreateNewBlock_System_Int32_System_Nullable_UnityEngine_Vector3__System_Nullable_UnityEngine_Quaternion__System_Nullable_UnityEngine_Vector3__" data-uid="ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(System.Int32,System.Nullable{UnityEngine.Vector3},System.Nullable{UnityEngine.Quaternion},System.Nullable{UnityEngine.Vector3})">
   CreateNewBlock(int, Vector3?, Quaternion?, Vector3?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/LevelEditor/LevelEditorApi.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/LevelEditor/LevelEditorApi.cs/#L191"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new block in the level editor with the specified properties</p>
@@ -466,11 +517,62 @@ public static class LevelEditorApi</code></pre>
 
 
 
+  <a id="ZeepSDK_LevelEditor_LevelEditorApi_CreateNewBlock_" data-uid="ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock*"></a>
+
+  <h3 id="ZeepSDK_LevelEditor_LevelEditorApi_CreateNewBlock_System_Int32_System_Nullable_UnityEngine_Vector3__System_Nullable_UnityEngine_Quaternion__System_Nullable_UnityEngine_Vector3__System_Boolean_" data-uid="ZeepSDK.LevelEditor.LevelEditorApi.CreateNewBlock(System.Int32,System.Nullable{UnityEngine.Vector3},System.Nullable{UnityEngine.Quaternion},System.Nullable{UnityEngine.Vector3},System.Boolean)">
+  CreateNewBlock(int, Vector3?, Quaternion?, Vector3?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/LevelEditor/LevelEditorApi.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new block in the level editor with the specified properties</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BlockProperties CreateNewBlock(int blockId, Vector3? position = null, Quaternion? rotation = null, Vector3? scale = null, bool removeFromSelection = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>blockId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The internal block id for the block you want to create</p>
+</dd>
+    <dt><code>position</code> <span class="xref">Vector3</span>?</dt>
+    <dd><p>The position to apply to the newly created block</p>
+</dd>
+    <dt><code>rotation</code> <span class="xref">Quaternion</span>?</dt>
+    <dd><p>The rotation to apply to the newly created block</p>
+</dd>
+    <dt><code>scale</code> <span class="xref">Vector3</span>?</dt>
+    <dd><p>The scale to apply to the newly created block</p>
+</dd>
+    <dt><code>removeFromSelection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Should the block be removed from selection</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">BlockProperties</span></dt>
+    <dd><p>The newly created block</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="ZeepSDK_LevelEditor_LevelEditorApi_RemoveFromSelection_" data-uid="ZeepSDK.LevelEditor.LevelEditorApi.RemoveFromSelection*"></a>
 
   <h3 id="ZeepSDK_LevelEditor_LevelEditorApi_RemoveFromSelection_BlockProperties_" data-uid="ZeepSDK.LevelEditor.LevelEditorApi.RemoveFromSelection(BlockProperties)">
   RemoveFromSelection(BlockProperties)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/LevelEditor/LevelEditorApi.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/LevelEditor/LevelEditorApi.cs/#L251"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes the specified block from the selection in the level editor</p>
