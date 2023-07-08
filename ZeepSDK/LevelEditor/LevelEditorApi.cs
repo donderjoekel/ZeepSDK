@@ -260,6 +260,8 @@ public static class LevelEditorApi
         {
             inspector.central.gizmos.GoOutOfGMode();
         }
+
+        inspector.central.selection.ThingsJustGotDeselected.Invoke();
     }
 
     /// <summary>
