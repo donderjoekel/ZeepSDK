@@ -163,6 +163,26 @@ public static class LevelEditorApi
     /// <summary>
     /// Creates a new block in the level editor with the specified properties
     /// </summary>
+    /// <param name="blockProperties">The block to create</param>
+    /// <param name="position">The position to apply to the newly created block</param>
+    /// <param name="rotation">The rotation to apply to the newly created block</param>
+    /// <param name="scale">The scale to apply to the newly created block</param>
+    /// <param name="removeFromSelection">Should the block be removed from selection</param>
+    /// <returns>The newly created block</returns>
+    public static BlockProperties CreateNewBlock(
+        BlockProperties blockProperties,
+        Vector3? position = null,
+        Quaternion? rotation = null,
+        Vector3? scale = null,
+        bool removeFromSelection = false
+    )
+    {
+        return CreateNewBlock(blockProperties.blockID, position, rotation, scale, removeFromSelection);
+    }
+
+    /// <summary>
+    /// Creates a new block in the level editor with the specified properties
+    /// </summary>
     /// <param name="blockId">The internal block id for the block you want to create</param>
     /// <param name="position">The position to apply to the newly created block</param>
     /// <param name="rotation">The rotation to apply to the newly created block</param>
@@ -192,6 +212,30 @@ public static class LevelEditorApi
     }
 
     /// <summary>
+    /// Creates a new block in the level editor with the specified properties
+    /// </summary>
+    /// <param name="blockId">The internal block id for the block you want to create</param>
+    /// <param name="position">The position to apply to the newly created block</param>
+    /// <param name="rotation">The rotation to apply to the newly created block</param>
+    /// <param name="scale">The scale to apply to the newly created block</param>
+    /// <param name="removeFromSelection">Should the block be removed from selection</param>
+    /// <returns>The newly created block</returns>
+    public static BlockProperties CreateNewBlock(
+        int blockId,
+        Vector3? position = null,
+        Quaternion? rotation = null,
+        Vector3? scale = null,
+        bool removeFromSelection = false
+    )
+    {
+        BlockProperties blockProperties = CreateNewBlock(blockId, position, rotation, scale);
+        if (removeFromSelection)
+            RemoveFromSelection(blockProperties);
+
+        return blockProperties;
+    }
+
+    /// <summary>
     /// Adds the specified block to the selection in the level editor
     /// </summary>
     /// <param name="blockProperties"></param>
@@ -216,6 +260,8 @@ public static class LevelEditorApi
         {
             inspector.central.gizmos.GoOutOfGMode();
         }
+
+        inspector.central.selection.ThingsJustGotDeselected.Invoke();
     }
 
     /// <summary>
