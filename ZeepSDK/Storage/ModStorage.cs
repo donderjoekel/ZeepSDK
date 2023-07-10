@@ -9,17 +9,22 @@ internal class ModStorage : IModStorage
 {
     private readonly BaseUnityPlugin plugin;
     private readonly JsonSerializerSettings settings;
+    private readonly string directoryPath;
 
     public ModStorage(BaseUnityPlugin plugin)
     {
         this.plugin = plugin;
         settings = new JsonSerializerSettings();
+
+        directoryPath = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+            plugin.Info.Metadata.GUID);
+        Directory.CreateDirectory(directoryPath);
     }
 
     private string CreatePath(string name, string extension = ".json")
     {
-        string appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        return Path.Combine(appData, plugin.Info.Metadata.GUID, name) + extension;
+        return Path.Combine(directoryPath, name) + extension;
     }
 
     public void AddConverter(JsonConverter converter)
