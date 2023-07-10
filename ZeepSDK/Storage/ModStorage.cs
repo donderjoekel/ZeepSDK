@@ -18,9 +18,9 @@ internal class ModStorage : IModStorage
 
         directoryPath = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-            plugin.Info.Metadata.GUID,
             "Zeepkist",
-            "Mods");
+            "Mods",
+            plugin.Info.Metadata.GUID);
 
         Directory.CreateDirectory(directoryPath);
     }
