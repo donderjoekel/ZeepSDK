@@ -22829,6 +22829,113 @@ references:
   commentId: T:ZeepSDK.Racing.RoundStartedDelegate
   fullName: ZeepSDK.Racing.RoundStartedDelegate
   nameWithType: RoundStartedDelegate
+- uid: ZeepSDK.Storage
+  name: ZeepSDK.Storage
+  href: api/ZeepSDK.Storage.html
+  commentId: N:ZeepSDK.Storage
+  fullName: ZeepSDK.Storage
+  nameWithType: ZeepSDK.Storage
+- uid: ZeepSDK.Storage.IModStorage
+  name: IModStorage
+  href: api/ZeepSDK.Storage.IModStorage.html
+  commentId: T:ZeepSDK.Storage.IModStorage
+  fullName: ZeepSDK.Storage.IModStorage
+  nameWithType: IModStorage
+- uid: ZeepSDK.Storage.IModStorage.AddConverter(Newtonsoft.Json.JsonConverter)
+  name: AddConverter(JsonConverter)
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_AddConverter_Newtonsoft_Json_JsonConverter_
+  commentId: M:ZeepSDK.Storage.IModStorage.AddConverter(Newtonsoft.Json.JsonConverter)
+  fullName: ZeepSDK.Storage.IModStorage.AddConverter(Newtonsoft.Json.JsonConverter)
+  nameWithType: IModStorage.AddConverter(JsonConverter)
+- uid: ZeepSDK.Storage.IModStorage.AddConverter*
+  name: AddConverter
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_AddConverter_
+  commentId: Overload:ZeepSDK.Storage.IModStorage.AddConverter
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.IModStorage.AddConverter
+  nameWithType: IModStorage.AddConverter
+- uid: ZeepSDK.Storage.IModStorage.LoadFromJson(System.String,System.Type)
+  name: LoadFromJson(string, Type)
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_LoadFromJson_System_String_System_Type_
+  commentId: M:ZeepSDK.Storage.IModStorage.LoadFromJson(System.String,System.Type)
+  name.vb: LoadFromJson(String, Type)
+  fullName: ZeepSDK.Storage.IModStorage.LoadFromJson(string, System.Type)
+  fullName.vb: ZeepSDK.Storage.IModStorage.LoadFromJson(String, System.Type)
+  nameWithType: IModStorage.LoadFromJson(string, Type)
+  nameWithType.vb: IModStorage.LoadFromJson(String, Type)
+- uid: ZeepSDK.Storage.IModStorage.LoadFromJson(System.String)
+  name: LoadFromJson(string)
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_LoadFromJson_System_String_
+  commentId: M:ZeepSDK.Storage.IModStorage.LoadFromJson(System.String)
+  name.vb: LoadFromJson(String)
+  fullName: ZeepSDK.Storage.IModStorage.LoadFromJson(string)
+  fullName.vb: ZeepSDK.Storage.IModStorage.LoadFromJson(String)
+  nameWithType: IModStorage.LoadFromJson(string)
+  nameWithType.vb: IModStorage.LoadFromJson(String)
+- uid: ZeepSDK.Storage.IModStorage.LoadFromJson*
+  name: LoadFromJson
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_LoadFromJson_
+  commentId: Overload:ZeepSDK.Storage.IModStorage.LoadFromJson
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.IModStorage.LoadFromJson
+  nameWithType: IModStorage.LoadFromJson
+- uid: ZeepSDK.Storage.IModStorage.LoadFromJson``1(System.String)
+  name: LoadFromJson<TData>(string)
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_LoadFromJson__1_System_String_
+  commentId: M:ZeepSDK.Storage.IModStorage.LoadFromJson``1(System.String)
+  name.vb: LoadFromJson(Of TData)(String)
+  fullName: ZeepSDK.Storage.IModStorage.LoadFromJson<TData>(string)
+  fullName.vb: ZeepSDK.Storage.IModStorage.LoadFromJson(Of TData)(String)
+  nameWithType: IModStorage.LoadFromJson<TData>(string)
+  nameWithType.vb: IModStorage.LoadFromJson(Of TData)(String)
+- uid: ZeepSDK.Storage.IModStorage.RemoveConverter(Newtonsoft.Json.JsonConverter)
+  name: RemoveConverter(JsonConverter)
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_RemoveConverter_Newtonsoft_Json_JsonConverter_
+  commentId: M:ZeepSDK.Storage.IModStorage.RemoveConverter(Newtonsoft.Json.JsonConverter)
+  fullName: ZeepSDK.Storage.IModStorage.RemoveConverter(Newtonsoft.Json.JsonConverter)
+  nameWithType: IModStorage.RemoveConverter(JsonConverter)
+- uid: ZeepSDK.Storage.IModStorage.RemoveConverter*
+  name: RemoveConverter
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_RemoveConverter_
+  commentId: Overload:ZeepSDK.Storage.IModStorage.RemoveConverter
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.IModStorage.RemoveConverter
+  nameWithType: IModStorage.RemoveConverter
+- uid: ZeepSDK.Storage.IModStorage.SaveToJson(System.String,System.Object)
+  name: SaveToJson(string, object)
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_SaveToJson_System_String_System_Object_
+  commentId: M:ZeepSDK.Storage.IModStorage.SaveToJson(System.String,System.Object)
+  name.vb: SaveToJson(String, Object)
+  fullName: ZeepSDK.Storage.IModStorage.SaveToJson(string, object)
+  fullName.vb: ZeepSDK.Storage.IModStorage.SaveToJson(String, Object)
+  nameWithType: IModStorage.SaveToJson(string, object)
+  nameWithType.vb: IModStorage.SaveToJson(String, Object)
+- uid: ZeepSDK.Storage.IModStorage.SaveToJson*
+  name: SaveToJson
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_SaveToJson_
+  commentId: Overload:ZeepSDK.Storage.IModStorage.SaveToJson
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.IModStorage.SaveToJson
+  nameWithType: IModStorage.SaveToJson
+- uid: ZeepSDK.Storage.StorageApi
+  name: StorageApi
+  href: api/ZeepSDK.Storage.StorageApi.html
+  commentId: T:ZeepSDK.Storage.StorageApi
+  fullName: ZeepSDK.Storage.StorageApi
+  nameWithType: StorageApi
+- uid: ZeepSDK.Storage.StorageApi.CreateModStorage(BepInEx.BaseUnityPlugin)
+  name: CreateModStorage(BaseUnityPlugin)
+  href: api/ZeepSDK.Storage.StorageApi.html#ZeepSDK_Storage_StorageApi_CreateModStorage_BepInEx_BaseUnityPlugin_
+  commentId: M:ZeepSDK.Storage.StorageApi.CreateModStorage(BepInEx.BaseUnityPlugin)
+  fullName: ZeepSDK.Storage.StorageApi.CreateModStorage(BepInEx.BaseUnityPlugin)
+  nameWithType: StorageApi.CreateModStorage(BaseUnityPlugin)
+- uid: ZeepSDK.Storage.StorageApi.CreateModStorage*
+  name: CreateModStorage
+  href: api/ZeepSDK.Storage.StorageApi.html#ZeepSDK_Storage_StorageApi_CreateModStorage_
+  commentId: Overload:ZeepSDK.Storage.StorageApi.CreateModStorage
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.StorageApi.CreateModStorage
+  nameWithType: StorageApi.CreateModStorage
 - uid: ZeepSDK.Workshop
   name: ZeepSDK.Workshop
   href: api/ZeepSDK.Workshop.html

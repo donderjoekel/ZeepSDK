@@ -3225,6 +3225,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Storage.IModStorage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Storage.IModStorage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Storage.StorageApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Storage.StorageApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Storage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Storage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Workshop.WorkshopApi.yml",
       "output": {
         ".html": {
