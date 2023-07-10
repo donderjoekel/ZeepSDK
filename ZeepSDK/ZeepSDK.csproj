@@ -33,7 +33,7 @@
         <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
         <PackageReference Include="BepInEx.Core" Version="5.*" />
         <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
-        <PackageReference Include="Zeepkist.GameLibs" Version="1.0.0-alpha.15.29.348" />
+        <PackageReference Include="Zeepkist.GameLibs" Version="1.0.0-alpha.15.31.351" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
