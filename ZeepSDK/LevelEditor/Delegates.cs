@@ -1,4 +1,5 @@
 ﻿using JetBrains.Annotations;
+
 #pragma warning disable CS1591
 
 namespace ZeepSDK.LevelEditor;
@@ -11,3 +12,9 @@ public delegate void EnteredLevelEditorDelegate();
 
 [PublicAPI]
 public delegate void ExitedLevelEditorDelegate();
+
+[PublicAPI]
+public delegate void LevelSavedDelegate();
+
+[PublicAPI]
+public delegate void LevelLoadedDelegate();
