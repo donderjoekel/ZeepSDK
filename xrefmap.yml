@@ -22606,6 +22606,18 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.LevelEditor.LevelEditorApi.IsMouseInputBlocked
   nameWithType: LevelEditorApi.IsMouseInputBlocked
+- uid: ZeepSDK.LevelEditor.LevelEditorApi.LevelLoaded
+  name: LevelLoaded
+  href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_LevelLoaded
+  commentId: E:ZeepSDK.LevelEditor.LevelEditorApi.LevelLoaded
+  fullName: ZeepSDK.LevelEditor.LevelEditorApi.LevelLoaded
+  nameWithType: LevelEditorApi.LevelLoaded
+- uid: ZeepSDK.LevelEditor.LevelEditorApi.LevelSaved
+  name: LevelSaved
+  href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_LevelSaved
+  commentId: E:ZeepSDK.LevelEditor.LevelEditorApi.LevelSaved
+  fullName: ZeepSDK.LevelEditor.LevelEditorApi.LevelSaved
+  nameWithType: LevelEditorApi.LevelSaved
 - uid: ZeepSDK.LevelEditor.LevelEditorApi.RemoveFromSelection(BlockProperties)
   name: RemoveFromSelection(BlockProperties)
   href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_RemoveFromSelection_BlockProperties_
@@ -22651,6 +22663,18 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.LevelEditor.LevelEditorApi.UnblockMouseInput
   nameWithType: LevelEditorApi.UnblockMouseInput
+- uid: ZeepSDK.LevelEditor.LevelLoadedDelegate
+  name: LevelLoadedDelegate
+  href: api/ZeepSDK.LevelEditor.LevelLoadedDelegate.html
+  commentId: T:ZeepSDK.LevelEditor.LevelLoadedDelegate
+  fullName: ZeepSDK.LevelEditor.LevelLoadedDelegate
+  nameWithType: LevelLoadedDelegate
+- uid: ZeepSDK.LevelEditor.LevelSavedDelegate
+  name: LevelSavedDelegate
+  href: api/ZeepSDK.LevelEditor.LevelSavedDelegate.html
+  commentId: T:ZeepSDK.LevelEditor.LevelSavedDelegate
+  fullName: ZeepSDK.LevelEditor.LevelSavedDelegate
+  nameWithType: LevelSavedDelegate
 - uid: ZeepSDK.MyPluginInfo
   name: MyPluginInfo
   href: api/ZeepSDK.MyPluginInfo.html

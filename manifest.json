@@ -3105,6 +3105,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.LevelLoadedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.LevelLoadedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.LevelSavedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.LevelSavedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.LevelEditor.yml",
       "output": {
         ".html": {
