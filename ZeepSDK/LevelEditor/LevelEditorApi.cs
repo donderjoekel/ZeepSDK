@@ -43,6 +43,16 @@ public static class LevelEditorApi
     public static event ExitedLevelEditorDelegate ExitedLevelEditor;
 
     /// <summary>
+    /// An event that is fired when the user loads an existing level from a file in the level editor 
+    /// </summary>
+    public static event LevelLoadedDelegate LevelLoaded;
+
+    /// <summary>
+    /// An event that is fired whenever the user saves a level in the level editor
+    /// </summary>
+    public static event LevelSavedDelegate LevelSaved;
+
+    /// <summary>
     /// Boolean indicating whether or not the mouse input is currently being blocked
     /// </summary>
     public static bool IsMouseInputBlocked => mouseInputBlockers.Count > 0;
@@ -79,6 +89,8 @@ public static class LevelEditorApi
         };
 
         LEV_LevelEditorCentral_OnDestroy.PostfixEvent += () => { ExitedLevelEditor?.Invoke(); };
+        LEV_SaveLoad_ExternalLoad.PostfixEvent += () => { LevelLoaded?.Invoke(); };
+        LEV_SaveLoad_ExternalSaveFile.PostfixEvent += () => { LevelSaved?.Invoke(); };
     }
 
     /// <summary>
