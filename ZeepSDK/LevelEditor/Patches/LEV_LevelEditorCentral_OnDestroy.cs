@@ -1,5 +1,6 @@
 ﻿using System;
 using HarmonyLib;
+using JetBrains.Annotations;
 
 namespace ZeepSDK.LevelEditor.Patches;
 
@@ -8,6 +9,7 @@ internal class LEV_LevelEditorCentral_OnDestroy
 {
     public static event Action PostfixEvent;
 
+    [UsedImplicitly]
     private static void Postfix()
     {
         PostfixEvent?.Invoke();
