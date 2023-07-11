@@ -79,25 +79,25 @@ internal class ModStorage : IModStorage
 
     public void SaveToJson(string name, object data)
     {
-        string json = JsonConvert.SerializeObject(data);
+        string json = JsonConvert.SerializeObject(data, settings);
         File.WriteAllText(CreatePath(name), json);
     }
 
     public object LoadFromJson(string name)
     {
         string json = File.ReadAllText(CreatePath(name));
-        return JsonConvert.DeserializeObject(json);
+        return JsonConvert.DeserializeObject(json, settings);
     }
 
     public object LoadFromJson(string name, Type type)
     {
         string json = File.ReadAllText(CreatePath(name));
-        return JsonConvert.DeserializeObject(json, type);
+        return JsonConvert.DeserializeObject(json, type, settings);
     }
 
     public TData LoadFromJson<TData>(string name)
     {
         string json = File.ReadAllText(CreatePath(name));
-        return JsonConvert.DeserializeObject<TData>(json);
+        return JsonConvert.DeserializeObject<TData>(json, settings);
     }
 }
