@@ -22878,6 +22878,22 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Storage.IModStorage.AddConverter
   nameWithType: IModStorage.AddConverter
+- uid: ZeepSDK.Storage.IModStorage.DeleteFile(System.String)
+  name: DeleteFile(string)
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_DeleteFile_System_String_
+  commentId: M:ZeepSDK.Storage.IModStorage.DeleteFile(System.String)
+  name.vb: DeleteFile(String)
+  fullName: ZeepSDK.Storage.IModStorage.DeleteFile(string)
+  fullName.vb: ZeepSDK.Storage.IModStorage.DeleteFile(String)
+  nameWithType: IModStorage.DeleteFile(string)
+  nameWithType.vb: IModStorage.DeleteFile(String)
+- uid: ZeepSDK.Storage.IModStorage.DeleteFile*
+  name: DeleteFile
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_DeleteFile_
+  commentId: Overload:ZeepSDK.Storage.IModStorage.DeleteFile
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.IModStorage.DeleteFile
+  nameWithType: IModStorage.DeleteFile
 - uid: ZeepSDK.Storage.IModStorage.LoadFromJson(System.String,System.Type)
   name: LoadFromJson(string, Type)
   href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_LoadFromJson_System_String_System_Type_
