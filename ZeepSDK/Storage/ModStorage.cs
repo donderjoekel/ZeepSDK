@@ -106,4 +106,11 @@ internal class ModStorage : IModStorage
         string json = File.ReadAllText(CreatePath(name));
         return JsonConvert.DeserializeObject<TData>(json, settings);
     }
+
+    public void DeleteFile(string name)
+    {
+        string path = CreatePath(name);
+        if (File.Exists(path))
+            File.Delete(path);
+    }
 }

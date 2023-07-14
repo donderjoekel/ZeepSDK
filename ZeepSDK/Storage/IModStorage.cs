@@ -49,4 +49,10 @@ public interface IModStorage
     /// <typeparam name="TData">The type the data should be</typeparam>
     /// <returns></returns>
     TData LoadFromJson<TData>(string name);
+
+    /// <summary>
+    /// Deletes a file
+    /// </summary>
+    /// <param name="name">The name of the file to delete without extension</param>
+    void DeleteFile(string name);
 }
