@@ -10,7 +10,7 @@ internal class LEV_SaveLoad_ExternalSaveFile
     public static event Action PostfixEvent;
 
     [UsedImplicitly]
-    private static void HandlePostfix(bool isTestMap)
+    private static void Postfix(bool isTestMap)
     {
         if (!isTestMap)
         {
