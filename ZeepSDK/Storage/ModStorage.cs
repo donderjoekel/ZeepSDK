@@ -58,13 +58,19 @@ internal class ModStorage : IModStorage
             "Zeepkist",
             "Mods",
             plugin.Info.Metadata.GUID);
-
-        Directory.CreateDirectory(directoryPath);
     }
 
     private string CreatePath(string name, string extension = ".json")
     {
-        return Path.Combine(directoryPath, name) + extension;
+        string filePath = Path.Combine(directoryPath, name) + extension;
+
+        string directoryName = Path.GetDirectoryName(filePath);
+        if (!string.IsNullOrEmpty(directoryName) && !Directory.Exists(directoryName))
+        {
+            Directory.CreateDirectory(directoryName);
+        }
+
+        return filePath;
     }
 
     public void AddConverter(JsonConverter converter)
@@ -99,5 +105,12 @@ internal class ModStorage : IModStorage
     {
         string json = File.ReadAllText(CreatePath(name));
         return JsonConvert.DeserializeObject<TData>(json, settings);
+    }
+
+    public void DeleteFile(string name)
+    {
+        string path = CreatePath(name);
+        if (File.Exists(path))
+            File.Delete(path);
     }
 }
