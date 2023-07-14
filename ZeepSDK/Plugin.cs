@@ -18,7 +18,7 @@ namespace ZeepSDK
 
         public static ManualLogSource CreateLogger(string sourceName)
         {
-            return BepInEx.Logging.Logger.CreateLogSource(Instance.Info.Metadata.Name + "." + sourceName);
+            return BepInEx.Logging.Logger.CreateLogSource(MyPluginInfo.PLUGIN_NAME + "." + sourceName);
         }
 
         private Harmony harmony;
@@ -35,7 +35,7 @@ namespace ZeepSDK
             LeaderboardApi.Initialize(gameObject);
             LevelEditorApi.Initialize(gameObject);
             RacingApi.Initialize(gameObject);
-            
+
             // Initialize the player loop helper, this is to reduce issues with UniTask
             if (!PlayerLoopHelper.IsInjectedUniTaskPlayerLoop())
             {
