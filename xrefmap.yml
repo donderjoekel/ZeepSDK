@@ -22976,6 +22976,202 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Storage.StorageApi.CreateModStorage
   nameWithType: StorageApi.CreateModStorage
+- uid: ZeepSDK.UnityFolders
+  name: ZeepSDK.UnityFolders
+  href: api/ZeepSDK.UnityFolders.html
+  commentId: N:ZeepSDK.UnityFolders
+  fullName: ZeepSDK.UnityFolders
+  nameWithType: ZeepSDK.UnityFolders
+- uid: ZeepSDK.UnityFolders.PluginsFolder
+  name: PluginsFolder
+  href: api/ZeepSDK.UnityFolders.PluginsFolder.html
+  commentId: T:ZeepSDK.UnityFolders.PluginsFolder
+  fullName: ZeepSDK.UnityFolders.PluginsFolder
+  nameWithType: PluginsFolder
+- uid: ZeepSDK.UnityFolders.PluginsFolder.CopyFile(System.String,System.String,System.Boolean)
+  name: CopyFile(string, string, bool)
+  href: api/ZeepSDK.UnityFolders.PluginsFolder.html#ZeepSDK_UnityFolders_PluginsFolder_CopyFile_System_String_System_String_System_Boolean_
+  commentId: M:ZeepSDK.UnityFolders.PluginsFolder.CopyFile(System.String,System.String,System.Boolean)
+  name.vb: CopyFile(String, String, Boolean)
+  fullName: ZeepSDK.UnityFolders.PluginsFolder.CopyFile(string, string, bool)
+  fullName.vb: ZeepSDK.UnityFolders.PluginsFolder.CopyFile(String, String, Boolean)
+  nameWithType: PluginsFolder.CopyFile(string, string, bool)
+  nameWithType.vb: PluginsFolder.CopyFile(String, String, Boolean)
+- uid: ZeepSDK.UnityFolders.PluginsFolder.CopyFile*
+  name: CopyFile
+  href: api/ZeepSDK.UnityFolders.PluginsFolder.html#ZeepSDK_UnityFolders_PluginsFolder_CopyFile_
+  commentId: Overload:ZeepSDK.UnityFolders.PluginsFolder.CopyFile
+  isSpec: "True"
+  fullName: ZeepSDK.UnityFolders.PluginsFolder.CopyFile
+  nameWithType: PluginsFolder.CopyFile
+- uid: ZeepSDK.UnityFolders.PluginsFolder.CreateFile(System.String,System.Byte[])
+  name: CreateFile(string, byte[])
+  href: api/ZeepSDK.UnityFolders.PluginsFolder.html#ZeepSDK_UnityFolders_PluginsFolder_CreateFile_System_String_System_Byte___
+  commentId: M:ZeepSDK.UnityFolders.PluginsFolder.CreateFile(System.String,System.Byte[])
+  name.vb: CreateFile(String, Byte())
+  fullName: ZeepSDK.UnityFolders.PluginsFolder.CreateFile(string, byte[])
+  fullName.vb: ZeepSDK.UnityFolders.PluginsFolder.CreateFile(String, Byte())
+  nameWithType: PluginsFolder.CreateFile(string, byte[])
+  nameWithType.vb: PluginsFolder.CreateFile(String, Byte())
+- uid: ZeepSDK.UnityFolders.PluginsFolder.CreateFile(System.String,System.String)
+  name: CreateFile(string, string)
+  href: api/ZeepSDK.UnityFolders.PluginsFolder.html#ZeepSDK_UnityFolders_PluginsFolder_CreateFile_System_String_System_String_
+  commentId: M:ZeepSDK.UnityFolders.PluginsFolder.CreateFile(System.String,System.String)
+  name.vb: CreateFile(String, String)
+  fullName: ZeepSDK.UnityFolders.PluginsFolder.CreateFile(string, string)
+  fullName.vb: ZeepSDK.UnityFolders.PluginsFolder.CreateFile(String, String)
+  nameWithType: PluginsFolder.CreateFile(string, string)
+  nameWithType.vb: PluginsFolder.CreateFile(String, String)
+- uid: ZeepSDK.UnityFolders.PluginsFolder.CreateFile*
+  name: CreateFile
+  href: api/ZeepSDK.UnityFolders.PluginsFolder.html#ZeepSDK_UnityFolders_PluginsFolder_CreateFile_
+  commentId: Overload:ZeepSDK.UnityFolders.PluginsFolder.CreateFile
+  isSpec: "True"
+  fullName: ZeepSDK.UnityFolders.PluginsFolder.CreateFile
+  nameWithType: PluginsFolder.CreateFile
+- uid: ZeepSDK.UnityFolders.PluginsFolder.DeleteFile(System.String)
+  name: DeleteFile(string)
+  href: api/ZeepSDK.UnityFolders.PluginsFolder.html#ZeepSDK_UnityFolders_PluginsFolder_DeleteFile_System_String_
+  commentId: M:ZeepSDK.UnityFolders.PluginsFolder.DeleteFile(System.String)
+  name.vb: DeleteFile(String)
+  fullName: ZeepSDK.UnityFolders.PluginsFolder.DeleteFile(string)
+  fullName.vb: ZeepSDK.UnityFolders.PluginsFolder.DeleteFile(String)
+  nameWithType: PluginsFolder.DeleteFile(string)
+  nameWithType.vb: PluginsFolder.DeleteFile(String)
+- uid: ZeepSDK.UnityFolders.PluginsFolder.DeleteFile*
+  name: DeleteFile
+  href: api/ZeepSDK.UnityFolders.PluginsFolder.html#ZeepSDK_UnityFolders_PluginsFolder_DeleteFile_
+  commentId: Overload:ZeepSDK.UnityFolders.PluginsFolder.DeleteFile
+  isSpec: "True"
+  fullName: ZeepSDK.UnityFolders.PluginsFolder.DeleteFile
+  nameWithType: PluginsFolder.DeleteFile
+- uid: ZeepSDK.UnityFolders.PluginsFolder.Exists(System.String)
+  name: Exists(string)
+  href: api/ZeepSDK.UnityFolders.PluginsFolder.html#ZeepSDK_UnityFolders_PluginsFolder_Exists_System_String_
+  commentId: M:ZeepSDK.UnityFolders.PluginsFolder.Exists(System.String)
+  name.vb: Exists(String)
+  fullName: ZeepSDK.UnityFolders.PluginsFolder.Exists(string)
+  fullName.vb: ZeepSDK.UnityFolders.PluginsFolder.Exists(String)
+  nameWithType: PluginsFolder.Exists(string)
+  nameWithType.vb: PluginsFolder.Exists(String)
+- uid: ZeepSDK.UnityFolders.PluginsFolder.Exists*
+  name: Exists
+  href: api/ZeepSDK.UnityFolders.PluginsFolder.html#ZeepSDK_UnityFolders_PluginsFolder_Exists_
+  commentId: Overload:ZeepSDK.UnityFolders.PluginsFolder.Exists
+  isSpec: "True"
+  fullName: ZeepSDK.UnityFolders.PluginsFolder.Exists
+  nameWithType: PluginsFolder.Exists
+- uid: ZeepSDK.UnityFolders.PluginsFolder.MoveFile(System.String,System.String,System.Boolean)
+  name: MoveFile(string, string, bool)
+  href: api/ZeepSDK.UnityFolders.PluginsFolder.html#ZeepSDK_UnityFolders_PluginsFolder_MoveFile_System_String_System_String_System_Boolean_
+  commentId: M:ZeepSDK.UnityFolders.PluginsFolder.MoveFile(System.String,System.String,System.Boolean)
+  name.vb: MoveFile(String, String, Boolean)
+  fullName: ZeepSDK.UnityFolders.PluginsFolder.MoveFile(string, string, bool)
+  fullName.vb: ZeepSDK.UnityFolders.PluginsFolder.MoveFile(String, String, Boolean)
+  nameWithType: PluginsFolder.MoveFile(string, string, bool)
+  nameWithType.vb: PluginsFolder.MoveFile(String, String, Boolean)
+- uid: ZeepSDK.UnityFolders.PluginsFolder.MoveFile*
+  name: MoveFile
+  href: api/ZeepSDK.UnityFolders.PluginsFolder.html#ZeepSDK_UnityFolders_PluginsFolder_MoveFile_
+  commentId: Overload:ZeepSDK.UnityFolders.PluginsFolder.MoveFile
+  isSpec: "True"
+  fullName: ZeepSDK.UnityFolders.PluginsFolder.MoveFile
+  nameWithType: PluginsFolder.MoveFile
+- uid: ZeepSDK.UnityFolders.SteamingAssetsFolder
+  name: SteamingAssetsFolder
+  href: api/ZeepSDK.UnityFolders.SteamingAssetsFolder.html
+  commentId: T:ZeepSDK.UnityFolders.SteamingAssetsFolder
+  fullName: ZeepSDK.UnityFolders.SteamingAssetsFolder
+  nameWithType: SteamingAssetsFolder
+- uid: ZeepSDK.UnityFolders.SteamingAssetsFolder.CopyFile(System.String,System.String,System.Boolean)
+  name: CopyFile(string, string, bool)
+  href: api/ZeepSDK.UnityFolders.SteamingAssetsFolder.html#ZeepSDK_UnityFolders_SteamingAssetsFolder_CopyFile_System_String_System_String_System_Boolean_
+  commentId: M:ZeepSDK.UnityFolders.SteamingAssetsFolder.CopyFile(System.String,System.String,System.Boolean)
+  name.vb: CopyFile(String, String, Boolean)
+  fullName: ZeepSDK.UnityFolders.SteamingAssetsFolder.CopyFile(string, string, bool)
+  fullName.vb: ZeepSDK.UnityFolders.SteamingAssetsFolder.CopyFile(String, String, Boolean)
+  nameWithType: SteamingAssetsFolder.CopyFile(string, string, bool)
+  nameWithType.vb: SteamingAssetsFolder.CopyFile(String, String, Boolean)
+- uid: ZeepSDK.UnityFolders.SteamingAssetsFolder.CopyFile*
+  name: CopyFile
+  href: api/ZeepSDK.UnityFolders.SteamingAssetsFolder.html#ZeepSDK_UnityFolders_SteamingAssetsFolder_CopyFile_
+  commentId: Overload:ZeepSDK.UnityFolders.SteamingAssetsFolder.CopyFile
+  isSpec: "True"
+  fullName: ZeepSDK.UnityFolders.SteamingAssetsFolder.CopyFile
+  nameWithType: SteamingAssetsFolder.CopyFile
+- uid: ZeepSDK.UnityFolders.SteamingAssetsFolder.CreateFile(System.String,System.Byte[])
+  name: CreateFile(string, byte[])
+  href: api/ZeepSDK.UnityFolders.SteamingAssetsFolder.html#ZeepSDK_UnityFolders_SteamingAssetsFolder_CreateFile_System_String_System_Byte___
+  commentId: M:ZeepSDK.UnityFolders.SteamingAssetsFolder.CreateFile(System.String,System.Byte[])
+  name.vb: CreateFile(String, Byte())
+  fullName: ZeepSDK.UnityFolders.SteamingAssetsFolder.CreateFile(string, byte[])
+  fullName.vb: ZeepSDK.UnityFolders.SteamingAssetsFolder.CreateFile(String, Byte())
+  nameWithType: SteamingAssetsFolder.CreateFile(string, byte[])
+  nameWithType.vb: SteamingAssetsFolder.CreateFile(String, Byte())
+- uid: ZeepSDK.UnityFolders.SteamingAssetsFolder.CreateFile(System.String,System.String)
+  name: CreateFile(string, string)
+  href: api/ZeepSDK.UnityFolders.SteamingAssetsFolder.html#ZeepSDK_UnityFolders_SteamingAssetsFolder_CreateFile_System_String_System_String_
+  commentId: M:ZeepSDK.UnityFolders.SteamingAssetsFolder.CreateFile(System.String,System.String)
+  name.vb: CreateFile(String, String)
+  fullName: ZeepSDK.UnityFolders.SteamingAssetsFolder.CreateFile(string, string)
+  fullName.vb: ZeepSDK.UnityFolders.SteamingAssetsFolder.CreateFile(String, String)
+  nameWithType: SteamingAssetsFolder.CreateFile(string, string)
+  nameWithType.vb: SteamingAssetsFolder.CreateFile(String, String)
+- uid: ZeepSDK.UnityFolders.SteamingAssetsFolder.CreateFile*
+  name: CreateFile
+  href: api/ZeepSDK.UnityFolders.SteamingAssetsFolder.html#ZeepSDK_UnityFolders_SteamingAssetsFolder_CreateFile_
+  commentId: Overload:ZeepSDK.UnityFolders.SteamingAssetsFolder.CreateFile
+  isSpec: "True"
+  fullName: ZeepSDK.UnityFolders.SteamingAssetsFolder.CreateFile
+  nameWithType: SteamingAssetsFolder.CreateFile
+- uid: ZeepSDK.UnityFolders.SteamingAssetsFolder.DeleteFile(System.String)
+  name: DeleteFile(string)
+  href: api/ZeepSDK.UnityFolders.SteamingAssetsFolder.html#ZeepSDK_UnityFolders_SteamingAssetsFolder_DeleteFile_System_String_
+  commentId: M:ZeepSDK.UnityFolders.SteamingAssetsFolder.DeleteFile(System.String)
+  name.vb: DeleteFile(String)
+  fullName: ZeepSDK.UnityFolders.SteamingAssetsFolder.DeleteFile(string)
+  fullName.vb: ZeepSDK.UnityFolders.SteamingAssetsFolder.DeleteFile(String)
+  nameWithType: SteamingAssetsFolder.DeleteFile(string)
+  nameWithType.vb: SteamingAssetsFolder.DeleteFile(String)
+- uid: ZeepSDK.UnityFolders.SteamingAssetsFolder.DeleteFile*
+  name: DeleteFile
+  href: api/ZeepSDK.UnityFolders.SteamingAssetsFolder.html#ZeepSDK_UnityFolders_SteamingAssetsFolder_DeleteFile_
+  commentId: Overload:ZeepSDK.UnityFolders.SteamingAssetsFolder.DeleteFile
+  isSpec: "True"
+  fullName: ZeepSDK.UnityFolders.SteamingAssetsFolder.DeleteFile
+  nameWithType: SteamingAssetsFolder.DeleteFile
+- uid: ZeepSDK.UnityFolders.SteamingAssetsFolder.Exists(System.String)
+  name: Exists(string)
+  href: api/ZeepSDK.UnityFolders.SteamingAssetsFolder.html#ZeepSDK_UnityFolders_SteamingAssetsFolder_Exists_System_String_
+  commentId: M:ZeepSDK.UnityFolders.SteamingAssetsFolder.Exists(System.String)
+  name.vb: Exists(String)
+  fullName: ZeepSDK.UnityFolders.SteamingAssetsFolder.Exists(string)
+  fullName.vb: ZeepSDK.UnityFolders.SteamingAssetsFolder.Exists(String)
+  nameWithType: SteamingAssetsFolder.Exists(string)
+  nameWithType.vb: SteamingAssetsFolder.Exists(String)
+- uid: ZeepSDK.UnityFolders.SteamingAssetsFolder.Exists*
+  name: Exists
+  href: api/ZeepSDK.UnityFolders.SteamingAssetsFolder.html#ZeepSDK_UnityFolders_SteamingAssetsFolder_Exists_
+  commentId: Overload:ZeepSDK.UnityFolders.SteamingAssetsFolder.Exists
+  isSpec: "True"
+  fullName: ZeepSDK.UnityFolders.SteamingAssetsFolder.Exists
+  nameWithType: SteamingAssetsFolder.Exists
+- uid: ZeepSDK.UnityFolders.SteamingAssetsFolder.MoveFile(System.String,System.String,System.Boolean)
+  name: MoveFile(string, string, bool)
+  href: api/ZeepSDK.UnityFolders.SteamingAssetsFolder.html#ZeepSDK_UnityFolders_SteamingAssetsFolder_MoveFile_System_String_System_String_System_Boolean_
+  commentId: M:ZeepSDK.UnityFolders.SteamingAssetsFolder.MoveFile(System.String,System.String,System.Boolean)
+  name.vb: MoveFile(String, String, Boolean)
+  fullName: ZeepSDK.UnityFolders.SteamingAssetsFolder.MoveFile(string, string, bool)
+  fullName.vb: ZeepSDK.UnityFolders.SteamingAssetsFolder.MoveFile(String, String, Boolean)
+  nameWithType: SteamingAssetsFolder.MoveFile(string, string, bool)
+  nameWithType.vb: SteamingAssetsFolder.MoveFile(String, String, Boolean)
+- uid: ZeepSDK.UnityFolders.SteamingAssetsFolder.MoveFile*
+  name: MoveFile
+  href: api/ZeepSDK.UnityFolders.SteamingAssetsFolder.html#ZeepSDK_UnityFolders_SteamingAssetsFolder_MoveFile_
+  commentId: Overload:ZeepSDK.UnityFolders.SteamingAssetsFolder.MoveFile
+  isSpec: "True"
+  fullName: ZeepSDK.UnityFolders.SteamingAssetsFolder.MoveFile
+  nameWithType: SteamingAssetsFolder.MoveFile
 - uid: ZeepSDK.Workshop
   name: ZeepSDK.Workshop
   href: api/ZeepSDK.Workshop.html
