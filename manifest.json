@@ -3275,30 +3275,30 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UnityFolders.PluginsFolder.yml",
+      "source_relative_path": "api/ZeepSDK.Utilities.UnityFolders.PluginsFolder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.UnityFolders.PluginsFolder.html"
+          "relative_path": "api/ZeepSDK.Utilities.UnityFolders.PluginsFolder.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UnityFolders.SteamingAssetsFolder.yml",
+      "source_relative_path": "api/ZeepSDK.Utilities.UnityFolders.StreamingAssetsFolder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.UnityFolders.SteamingAssetsFolder.html"
+          "relative_path": "api/ZeepSDK.Utilities.UnityFolders.StreamingAssetsFolder.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UnityFolders.yml",
+      "source_relative_path": "api/ZeepSDK.Utilities.UnityFolders.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.UnityFolders.html"
+          "relative_path": "api/ZeepSDK.Utilities.UnityFolders.html"
         }
       },
       "version": ""
