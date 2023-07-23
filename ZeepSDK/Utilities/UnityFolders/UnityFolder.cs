@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace ZeepSDK.UnityFolders;
+namespace ZeepSDK.Utilities.UnityFolders;
 
 internal class UnityFolder
 {

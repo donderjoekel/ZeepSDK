@@ -1,7 +1,7 @@
 ﻿using JetBrains.Annotations;
 using UnityEngine;
 
-namespace ZeepSDK.UnityFolders;
+namespace ZeepSDK.Utilities.UnityFolders;
 
 /// <summary>
 /// An interface for accessing the game's Plugins folder (not the BepInEx one).

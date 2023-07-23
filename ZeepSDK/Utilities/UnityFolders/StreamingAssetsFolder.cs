@@ -1,13 +1,13 @@
 ﻿using JetBrains.Annotations;
 using UnityEngine;
 
-namespace ZeepSDK.UnityFolders;
+namespace ZeepSDK.Utilities.UnityFolders;
 
 /// <summary>
 /// An interface for accessing the game's StreamingAssets folder.
 /// </summary>
 [PublicAPI]
-public static class SteamingAssetsFolder
+public static class StreamingAssetsFolder
 {
     private static readonly UnityFolder folder = new UnityFolder(Application.streamingAssetsPath);
 
