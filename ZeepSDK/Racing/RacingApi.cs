@@ -47,6 +47,11 @@ public static class RacingApi
     /// An event that is fired whenever the round starts
     /// </summary>
     public static event RoundStartedDelegate RoundStarted;
+    
+    /// <summary>
+    /// An even that is fired whenever a wheel breaks
+    /// </summary>
+    public static event WheelBrokenDelegate WheelBroken;
 
     internal static void Initialize(GameObject gameObject)
     {
@@ -57,6 +62,7 @@ public static class RacingApi
         DamageCharacterScript_KillCharacter.CharacterKilled += reason => Crashed?.Invoke(reason);
         GameMaster_SpawnPlayers.SpawnPlayers += () => PlayerSpawned?.Invoke();
         GameMaster_ReleaseTheZeepkists.Released += () => RoundStarted?.Invoke();
+        DamageWheel_KillWheel.KillWheel += () => WheelBroken?.Invoke();
     }
 
     /// <summary>
