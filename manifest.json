@@ -3155,6 +3155,86 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.ConnectedToGameDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.ConnectedToGameDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.CreatedRoomDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.CreatedRoomDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.DisconnectedFromGameDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.DisconnectedFromGameDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.JoinedRoomDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.JoinedRoomDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.MultiplayerApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.MultiplayerApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.PlayerJoinedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.PlayerJoinedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.PlayerLeftDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.PlayerLeftDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.MyPluginInfo.yml",
       "output": {
         ".html": {
