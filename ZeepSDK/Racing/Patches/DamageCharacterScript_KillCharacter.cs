@@ -10,8 +10,11 @@ internal class DamageCharacterScript_KillCharacter
     public static event Action<CrashReason> CharacterKilled;
 
     [UsedImplicitly]
-    private static void Postfix(DamageCharacterScript.DeathReasonEnum deathReason)
+    private static void Prefix(DamageCharacterScript __instance, DamageCharacterScript.DeathReasonEnum deathReason)
     {
+        if (__instance.IsDead())
+            return;
+        
         CrashReason reason = deathReason switch
         {
             DamageCharacterScript.DeathReasonEnum.Gameplay_Crashed => CrashReason.Crashed,
