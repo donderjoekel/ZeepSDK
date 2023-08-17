@@ -9,8 +9,8 @@ internal class PhotonZeepkist_OnPlayerLeftRoom
 {
     public static event Action<ZeepkistNetworkPlayer> PlayerLeftRoom;
 
-    private static void Postfix(ZeepkistNetworkPlayer player)
+    private static void Postfix(ZeepkistNetworkPlayer other)
     {
-        PlayerLeftRoom?.Invoke(player);
+        PlayerLeftRoom?.Invoke(other);
     }
 }

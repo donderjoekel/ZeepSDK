@@ -23,3 +23,6 @@ public delegate void PlayerSpawnedDelegate();
 
 [PublicAPI]
 public delegate void RoundStartedDelegate();
+
+[PublicAPI]
+public delegate void WheelBrokenDelegate();
