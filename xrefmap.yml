@@ -23029,12 +23029,24 @@ references:
   commentId: E:ZeepSDK.Racing.RacingApi.RoundStarted
   fullName: ZeepSDK.Racing.RacingApi.RoundStarted
   nameWithType: RacingApi.RoundStarted
+- uid: ZeepSDK.Racing.RacingApi.WheelBroken
+  name: WheelBroken
+  href: api/ZeepSDK.Racing.RacingApi.html#ZeepSDK_Racing_RacingApi_WheelBroken
+  commentId: E:ZeepSDK.Racing.RacingApi.WheelBroken
+  fullName: ZeepSDK.Racing.RacingApi.WheelBroken
+  nameWithType: RacingApi.WheelBroken
 - uid: ZeepSDK.Racing.RoundStartedDelegate
   name: RoundStartedDelegate
   href: api/ZeepSDK.Racing.RoundStartedDelegate.html
   commentId: T:ZeepSDK.Racing.RoundStartedDelegate
   fullName: ZeepSDK.Racing.RoundStartedDelegate
   nameWithType: RoundStartedDelegate
+- uid: ZeepSDK.Racing.WheelBrokenDelegate
+  name: WheelBrokenDelegate
+  href: api/ZeepSDK.Racing.WheelBrokenDelegate.html
+  commentId: T:ZeepSDK.Racing.WheelBrokenDelegate
+  fullName: ZeepSDK.Racing.WheelBrokenDelegate
+  nameWithType: WheelBrokenDelegate
 - uid: ZeepSDK.Storage
   name: ZeepSDK.Storage
   href: api/ZeepSDK.Storage.html
