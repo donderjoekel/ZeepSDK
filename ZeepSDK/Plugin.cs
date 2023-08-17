@@ -7,6 +7,7 @@ using ZeepSDK.ChatCommands;
 using ZeepSDK.External.Cysharp.Threading.Tasks;
 using ZeepSDK.Leaderboard;
 using ZeepSDK.LevelEditor;
+using ZeepSDK.Multiplayer;
 using ZeepSDK.Racing;
 
 namespace ZeepSDK
@@ -35,6 +36,7 @@ namespace ZeepSDK
             LeaderboardApi.Initialize(gameObject);
             LevelEditorApi.Initialize(gameObject);
             RacingApi.Initialize(gameObject);
+            MultiplayerApi.Initialize();
 
             // Initialize the player loop helper, this is to reduce issues with UniTask
             if (!PlayerLoopHelper.IsInjectedUniTaskPlayerLoop())
