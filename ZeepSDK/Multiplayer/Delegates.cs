@@ -1,33 +1,24 @@
-﻿using ZeepkistClient;
+﻿using JetBrains.Annotations;
+using ZeepkistClient;
+
+#pragma warning disable CS1591
 
 namespace ZeepSDK.Multiplayer;
 
-/// <summary>
-/// 
-/// </summary>
+[PublicAPI]
 public delegate void ConnectedToGameDelegate();
 
-/// <summary>
-/// 
-/// </summary>
+[PublicAPI]
 public delegate void DisconnectedFromGameDelegate();
 
-/// <summary>
-/// 
-/// </summary>
+[PublicAPI]
 public delegate void CreatedRoomDelegate();
 
-/// <summary>
-/// 
-/// </summary>
+[PublicAPI]
 public delegate void JoinedRoomDelegate();
 
-/// <summary>
-/// 
-/// </summary>
+[PublicAPI]
 public delegate void PlayerJoinedDelegate(ZeepkistNetworkPlayer player);
 
-/// <summary>
-/// 
-/// </summary>
+[PublicAPI]
 public delegate void PlayerLeftDelegate(ZeepkistNetworkPlayer player);
