@@ -3,7 +3,7 @@ using HarmonyLib;
 
 namespace ZeepSDK.Multiplayer.Patches;
 
-[HarmonyPatch(typeof(PhotonZeepkist), nameof(PhotonZeepkist_OnDisconnectedFromGame))]
+[HarmonyPatch(typeof(PhotonZeepkist), nameof(PhotonZeepkist.OnDisconnectedFromGame))]
 internal class PhotonZeepkist_OnDisconnectedFromGame
 {
     public static event Action DisconnectedFromGame;
