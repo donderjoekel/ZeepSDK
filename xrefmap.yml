@@ -22881,6 +22881,42 @@ references:
   commentId: F:ZeepSDK.MyPluginInfo.PLUGIN_VERSION
   fullName: ZeepSDK.MyPluginInfo.PLUGIN_VERSION
   nameWithType: MyPluginInfo.PLUGIN_VERSION
+- uid: ZeepSDK.PhotoMode
+  name: ZeepSDK.PhotoMode
+  href: api/ZeepSDK.PhotoMode.html
+  commentId: N:ZeepSDK.PhotoMode
+  fullName: ZeepSDK.PhotoMode
+  nameWithType: ZeepSDK.PhotoMode
+- uid: ZeepSDK.PhotoMode.PhotoModeApi
+  name: PhotoModeApi
+  href: api/ZeepSDK.PhotoMode.PhotoModeApi.html
+  commentId: T:ZeepSDK.PhotoMode.PhotoModeApi
+  fullName: ZeepSDK.PhotoMode.PhotoModeApi
+  nameWithType: PhotoModeApi
+- uid: ZeepSDK.PhotoMode.PhotoModeApi.PhotoModeEntered
+  name: PhotoModeEntered
+  href: api/ZeepSDK.PhotoMode.PhotoModeApi.html#ZeepSDK_PhotoMode_PhotoModeApi_PhotoModeEntered
+  commentId: E:ZeepSDK.PhotoMode.PhotoModeApi.PhotoModeEntered
+  fullName: ZeepSDK.PhotoMode.PhotoModeApi.PhotoModeEntered
+  nameWithType: PhotoModeApi.PhotoModeEntered
+- uid: ZeepSDK.PhotoMode.PhotoModeApi.PhotoModeExited
+  name: PhotoModeExited
+  href: api/ZeepSDK.PhotoMode.PhotoModeApi.html#ZeepSDK_PhotoMode_PhotoModeApi_PhotoModeExited
+  commentId: E:ZeepSDK.PhotoMode.PhotoModeApi.PhotoModeExited
+  fullName: ZeepSDK.PhotoMode.PhotoModeApi.PhotoModeExited
+  nameWithType: PhotoModeApi.PhotoModeExited
+- uid: ZeepSDK.PhotoMode.PhotoModeEnteredDelegate
+  name: PhotoModeEnteredDelegate
+  href: api/ZeepSDK.PhotoMode.PhotoModeEnteredDelegate.html
+  commentId: T:ZeepSDK.PhotoMode.PhotoModeEnteredDelegate
+  fullName: ZeepSDK.PhotoMode.PhotoModeEnteredDelegate
+  nameWithType: PhotoModeEnteredDelegate
+- uid: ZeepSDK.PhotoMode.PhotoModeExitedDelegate
+  name: PhotoModeExitedDelegate
+  href: api/ZeepSDK.PhotoMode.PhotoModeExitedDelegate.html
+  commentId: T:ZeepSDK.PhotoMode.PhotoModeExitedDelegate
+  fullName: ZeepSDK.PhotoMode.PhotoModeExitedDelegate
+  nameWithType: PhotoModeExitedDelegate
 - uid: ZeepSDK.Racing
   name: ZeepSDK.Racing
   href: api/ZeepSDK.Racing.html

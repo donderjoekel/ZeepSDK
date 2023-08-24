@@ -3245,6 +3245,46 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.PhotoMode.PhotoModeApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.PhotoMode.PhotoModeApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.PhotoMode.PhotoModeEnteredDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.PhotoMode.PhotoModeEnteredDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.PhotoMode.PhotoModeExitedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.PhotoMode.PhotoModeExitedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.PhotoMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.PhotoMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Racing.CrashReason.yml",
       "output": {
         ".html": {
