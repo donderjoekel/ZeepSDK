@@ -26,3 +26,6 @@ public delegate void RoundStartedDelegate();
 
 [PublicAPI]
 public delegate void WheelBrokenDelegate();
+
+[PublicAPI]
+public delegate void LevelLoaded();
