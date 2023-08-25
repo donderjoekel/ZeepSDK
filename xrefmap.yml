@@ -22681,12 +22681,127 @@ references:
   commentId: N:ZeepSDK.Messaging
   fullName: ZeepSDK.Messaging
   nameWithType: ZeepSDK.Messaging
+- uid: ZeepSDK.Messaging.ITaggedMessenger
+  name: ITaggedMessenger
+  href: api/ZeepSDK.Messaging.ITaggedMessenger.html
+  commentId: T:ZeepSDK.Messaging.ITaggedMessenger
+  fullName: ZeepSDK.Messaging.ITaggedMessenger
+  nameWithType: ITaggedMessenger
+- uid: ZeepSDK.Messaging.ITaggedMessenger.Log(System.String,System.Single)
+  name: Log(string, float)
+  href: api/ZeepSDK.Messaging.ITaggedMessenger.html#ZeepSDK_Messaging_ITaggedMessenger_Log_System_String_System_Single_
+  commentId: M:ZeepSDK.Messaging.ITaggedMessenger.Log(System.String,System.Single)
+  name.vb: Log(String, Single)
+  fullName: ZeepSDK.Messaging.ITaggedMessenger.Log(string, float)
+  fullName.vb: ZeepSDK.Messaging.ITaggedMessenger.Log(String, Single)
+  nameWithType: ITaggedMessenger.Log(string, float)
+  nameWithType.vb: ITaggedMessenger.Log(String, Single)
+- uid: ZeepSDK.Messaging.ITaggedMessenger.Log*
+  name: Log
+  href: api/ZeepSDK.Messaging.ITaggedMessenger.html#ZeepSDK_Messaging_ITaggedMessenger_Log_
+  commentId: Overload:ZeepSDK.Messaging.ITaggedMessenger.Log
+  isSpec: "True"
+  fullName: ZeepSDK.Messaging.ITaggedMessenger.Log
+  nameWithType: ITaggedMessenger.Log
+- uid: ZeepSDK.Messaging.ITaggedMessenger.LogCustomColors(System.String,UnityEngine.Color,UnityEngine.Color,System.Single)
+  name: LogCustomColors(string, Color, Color, float)
+  href: api/ZeepSDK.Messaging.ITaggedMessenger.html#ZeepSDK_Messaging_ITaggedMessenger_LogCustomColors_System_String_UnityEngine_Color_UnityEngine_Color_System_Single_
+  commentId: M:ZeepSDK.Messaging.ITaggedMessenger.LogCustomColors(System.String,UnityEngine.Color,UnityEngine.Color,System.Single)
+  name.vb: LogCustomColors(String, Color, Color, Single)
+  fullName: ZeepSDK.Messaging.ITaggedMessenger.LogCustomColors(string, UnityEngine.Color, UnityEngine.Color, float)
+  fullName.vb: ZeepSDK.Messaging.ITaggedMessenger.LogCustomColors(String, UnityEngine.Color, UnityEngine.Color, Single)
+  nameWithType: ITaggedMessenger.LogCustomColors(string, Color, Color, float)
+  nameWithType.vb: ITaggedMessenger.LogCustomColors(String, Color, Color, Single)
+- uid: ZeepSDK.Messaging.ITaggedMessenger.LogCustomColors*
+  name: LogCustomColors
+  href: api/ZeepSDK.Messaging.ITaggedMessenger.html#ZeepSDK_Messaging_ITaggedMessenger_LogCustomColors_
+  commentId: Overload:ZeepSDK.Messaging.ITaggedMessenger.LogCustomColors
+  isSpec: "True"
+  fullName: ZeepSDK.Messaging.ITaggedMessenger.LogCustomColors
+  nameWithType: ITaggedMessenger.LogCustomColors
+- uid: ZeepSDK.Messaging.ITaggedMessenger.LogError(System.String,System.Single)
+  name: LogError(string, float)
+  href: api/ZeepSDK.Messaging.ITaggedMessenger.html#ZeepSDK_Messaging_ITaggedMessenger_LogError_System_String_System_Single_
+  commentId: M:ZeepSDK.Messaging.ITaggedMessenger.LogError(System.String,System.Single)
+  name.vb: LogError(String, Single)
+  fullName: ZeepSDK.Messaging.ITaggedMessenger.LogError(string, float)
+  fullName.vb: ZeepSDK.Messaging.ITaggedMessenger.LogError(String, Single)
+  nameWithType: ITaggedMessenger.LogError(string, float)
+  nameWithType.vb: ITaggedMessenger.LogError(String, Single)
+- uid: ZeepSDK.Messaging.ITaggedMessenger.LogError*
+  name: LogError
+  href: api/ZeepSDK.Messaging.ITaggedMessenger.html#ZeepSDK_Messaging_ITaggedMessenger_LogError_
+  commentId: Overload:ZeepSDK.Messaging.ITaggedMessenger.LogError
+  isSpec: "True"
+  fullName: ZeepSDK.Messaging.ITaggedMessenger.LogError
+  nameWithType: ITaggedMessenger.LogError
+- uid: ZeepSDK.Messaging.ITaggedMessenger.LogSuccess(System.String,System.Single)
+  name: LogSuccess(string, float)
+  href: api/ZeepSDK.Messaging.ITaggedMessenger.html#ZeepSDK_Messaging_ITaggedMessenger_LogSuccess_System_String_System_Single_
+  commentId: M:ZeepSDK.Messaging.ITaggedMessenger.LogSuccess(System.String,System.Single)
+  name.vb: LogSuccess(String, Single)
+  fullName: ZeepSDK.Messaging.ITaggedMessenger.LogSuccess(string, float)
+  fullName.vb: ZeepSDK.Messaging.ITaggedMessenger.LogSuccess(String, Single)
+  nameWithType: ITaggedMessenger.LogSuccess(string, float)
+  nameWithType.vb: ITaggedMessenger.LogSuccess(String, Single)
+- uid: ZeepSDK.Messaging.ITaggedMessenger.LogSuccess*
+  name: LogSuccess
+  href: api/ZeepSDK.Messaging.ITaggedMessenger.html#ZeepSDK_Messaging_ITaggedMessenger_LogSuccess_
+  commentId: Overload:ZeepSDK.Messaging.ITaggedMessenger.LogSuccess
+  isSpec: "True"
+  fullName: ZeepSDK.Messaging.ITaggedMessenger.LogSuccess
+  nameWithType: ITaggedMessenger.LogSuccess
+- uid: ZeepSDK.Messaging.ITaggedMessenger.LogWarning(System.String,System.Single)
+  name: LogWarning(string, float)
+  href: api/ZeepSDK.Messaging.ITaggedMessenger.html#ZeepSDK_Messaging_ITaggedMessenger_LogWarning_System_String_System_Single_
+  commentId: M:ZeepSDK.Messaging.ITaggedMessenger.LogWarning(System.String,System.Single)
+  name.vb: LogWarning(String, Single)
+  fullName: ZeepSDK.Messaging.ITaggedMessenger.LogWarning(string, float)
+  fullName.vb: ZeepSDK.Messaging.ITaggedMessenger.LogWarning(String, Single)
+  nameWithType: ITaggedMessenger.LogWarning(string, float)
+  nameWithType.vb: ITaggedMessenger.LogWarning(String, Single)
+- uid: ZeepSDK.Messaging.ITaggedMessenger.LogWarning*
+  name: LogWarning
+  href: api/ZeepSDK.Messaging.ITaggedMessenger.html#ZeepSDK_Messaging_ITaggedMessenger_LogWarning_
+  commentId: Overload:ZeepSDK.Messaging.ITaggedMessenger.LogWarning
+  isSpec: "True"
+  fullName: ZeepSDK.Messaging.ITaggedMessenger.LogWarning
+  nameWithType: ITaggedMessenger.LogWarning
+- uid: ZeepSDK.Messaging.ITaggedMessenger.Tag
+  name: Tag
+  href: api/ZeepSDK.Messaging.ITaggedMessenger.html#ZeepSDK_Messaging_ITaggedMessenger_Tag
+  commentId: P:ZeepSDK.Messaging.ITaggedMessenger.Tag
+  fullName: ZeepSDK.Messaging.ITaggedMessenger.Tag
+  nameWithType: ITaggedMessenger.Tag
+- uid: ZeepSDK.Messaging.ITaggedMessenger.Tag*
+  name: Tag
+  href: api/ZeepSDK.Messaging.ITaggedMessenger.html#ZeepSDK_Messaging_ITaggedMessenger_Tag_
+  commentId: Overload:ZeepSDK.Messaging.ITaggedMessenger.Tag
+  isSpec: "True"
+  fullName: ZeepSDK.Messaging.ITaggedMessenger.Tag
+  nameWithType: ITaggedMessenger.Tag
 - uid: ZeepSDK.Messaging.MessengerApi
   name: MessengerApi
   href: api/ZeepSDK.Messaging.MessengerApi.html
   commentId: T:ZeepSDK.Messaging.MessengerApi
   fullName: ZeepSDK.Messaging.MessengerApi
   nameWithType: MessengerApi
+- uid: ZeepSDK.Messaging.MessengerApi.CreateTaggedMessenger(System.String)
+  name: CreateTaggedMessenger(string)
+  href: api/ZeepSDK.Messaging.MessengerApi.html#ZeepSDK_Messaging_MessengerApi_CreateTaggedMessenger_System_String_
+  commentId: M:ZeepSDK.Messaging.MessengerApi.CreateTaggedMessenger(System.String)
+  name.vb: CreateTaggedMessenger(String)
+  fullName: ZeepSDK.Messaging.MessengerApi.CreateTaggedMessenger(string)
+  fullName.vb: ZeepSDK.Messaging.MessengerApi.CreateTaggedMessenger(String)
+  nameWithType: MessengerApi.CreateTaggedMessenger(string)
+  nameWithType.vb: MessengerApi.CreateTaggedMessenger(String)
+- uid: ZeepSDK.Messaging.MessengerApi.CreateTaggedMessenger*
+  name: CreateTaggedMessenger
+  href: api/ZeepSDK.Messaging.MessengerApi.html#ZeepSDK_Messaging_MessengerApi_CreateTaggedMessenger_
+  commentId: Overload:ZeepSDK.Messaging.MessengerApi.CreateTaggedMessenger
+  isSpec: "True"
+  fullName: ZeepSDK.Messaging.MessengerApi.CreateTaggedMessenger
+  nameWithType: MessengerApi.CreateTaggedMessenger
 - uid: ZeepSDK.Messaging.MessengerApi.DEFAULT_DURATION
   name: DEFAULT_DURATION
   href: api/ZeepSDK.Messaging.MessengerApi.html#ZeepSDK_Messaging_MessengerApi_DEFAULT_DURATION
