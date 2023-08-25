@@ -23213,6 +23213,12 @@ references:
   commentId: T:ZeepSDK.Racing.EnteredThirdPersonDelegate
   fullName: ZeepSDK.Racing.EnteredThirdPersonDelegate
   nameWithType: EnteredThirdPersonDelegate
+- uid: ZeepSDK.Racing.LevelLoaded
+  name: LevelLoaded
+  href: api/ZeepSDK.Racing.LevelLoaded.html
+  commentId: T:ZeepSDK.Racing.LevelLoaded
+  fullName: ZeepSDK.Racing.LevelLoaded
+  nameWithType: LevelLoaded
 - uid: ZeepSDK.Racing.PassedCheckpointDelegate
   name: PassedCheckpointDelegate
   href: api/ZeepSDK.Racing.PassedCheckpointDelegate.html
@@ -23255,6 +23261,12 @@ references:
   commentId: E:ZeepSDK.Racing.RacingApi.EnteredThirdPerson
   fullName: ZeepSDK.Racing.RacingApi.EnteredThirdPerson
   nameWithType: RacingApi.EnteredThirdPerson
+- uid: ZeepSDK.Racing.RacingApi.LevelLoaded
+  name: LevelLoaded
+  href: api/ZeepSDK.Racing.RacingApi.html#ZeepSDK_Racing_RacingApi_LevelLoaded
+  commentId: E:ZeepSDK.Racing.RacingApi.LevelLoaded
+  fullName: ZeepSDK.Racing.RacingApi.LevelLoaded
+  nameWithType: RacingApi.LevelLoaded
 - uid: ZeepSDK.Racing.RacingApi.LoadTrackInFreePlayAsync(System.String)
   name: LoadTrackInFreePlayAsync(string)
   href: api/ZeepSDK.Racing.RacingApi.html#ZeepSDK_Racing_RacingApi_LoadTrackInFreePlayAsync_System_String_
