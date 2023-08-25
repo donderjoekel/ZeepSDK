@@ -1,4 +1,7 @@
-﻿using ZeepSDK.Multiplayer.Patches;
+﻿using JetBrains.Annotations;
+using ZeepkistClient;
+using ZeepkistNetworking;
+using ZeepSDK.Multiplayer.Patches;
 
 namespace ZeepSDK.Multiplayer;
 
@@ -45,5 +48,54 @@ public static class MultiplayerApi
         PhotonZeepkist_OnJoinedRoom.JoinedRoom += () => JoinedRoom?.Invoke();
         PhotonZeepkist_OnPlayerEnteredRoom.PlayerEnteredRoom += player => PlayerJoined?.Invoke(player);
         PhotonZeepkist_OnPlayerLeftRoom.PlayerLeftRoom += player => PlayerLeft?.Invoke(player);
+    }
+
+    /// <summary>
+    /// Adds a level to the playlist
+    /// </summary>
+    /// <param name="playlistItem">The item to add</param>
+    /// <param name="setAsPlayNext">Should this item be the next one that will be played?</param>
+    [PublicAPI]
+    public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNext)
+    {
+        if (ZeepkistNetwork.CurrentLobby == null)
+            return -1;
+
+        OnlineZeeplevel onlineZeepLevel = playlistItem.ToOnlineZeepLevel();
+        ZeepkistNetwork.CurrentLobby.Playlist.Add(onlineZeepLevel);
+        int index = ZeepkistNetwork.CurrentLobby.Playlist.Count - 1;
+
+        if (setAsPlayNext)
+        {
+            ZeepkistNetwork.CurrentLobby.NextPlaylistIndex = index;
+        }
+        
+        ZeepkistNetwork.NetworkClient?.SendPacket(new ChangeLobbyPlaylistPacket()
+        {
+            NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
+            IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
+            Playlist = ZeepkistNetwork.CurrentLobby.Playlist,
+            CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
+            NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
+        });
+
+        return index;
+    }
+
+    /// <summary>
+    /// Sets the level that should be played next
+    /// </summary>
+    /// <param name="index">The (zero-based) index of the level</param>
+    public static void SetNextLevelIndex(int index)
+    {
+        ZeepkistNetwork.CurrentLobby.NextPlaylistIndex = index;
+        ZeepkistNetwork.NetworkClient?.SendPacket(new ChangeLobbyPlaylistPacket()
+        {
+            NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
+            IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
+            Playlist = ZeepkistNetwork.CurrentLobby.Playlist,
+            CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
+            NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
+        });
     }
 }
