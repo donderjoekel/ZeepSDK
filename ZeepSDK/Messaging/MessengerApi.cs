@@ -15,6 +15,15 @@ public static class MessengerApi
     public const float DEFAULT_DURATION = 2.5f;
 
     /// <summary>
+    /// Creates a new tagged messenger
+    /// </summary>
+    /// <param name="tag">The tag to use for the messenger</param>
+    public static ITaggedMessenger CreateTaggedMessenger(string tag)
+    {
+        return new TaggedMessenger(tag);
+    }
+
+    /// <summary>
     /// Log an information level message to the user
     /// </summary>
     /// <param name="message">The message to display</param>
