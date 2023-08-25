@@ -52,6 +52,11 @@ public static class RacingApi
     /// An even that is fired whenever a wheel breaks
     /// </summary>
     public static event WheelBrokenDelegate WheelBroken;
+    
+    /// <summary>
+    /// An event that is fired when the level you are about to play has been loaded
+    /// </summary>
+    public static event LevelLoaded LevelLoaded;
 
     internal static void Initialize(GameObject gameObject)
     {
@@ -63,6 +68,7 @@ public static class RacingApi
         GameMaster_SpawnPlayers.SpawnPlayers += () => PlayerSpawned?.Invoke();
         GameMaster_ReleaseTheZeepkists.Released += () => RoundStarted?.Invoke();
         DamageWheel_KillWheel.KillWheel += () => WheelBroken?.Invoke();
+        GameMaster_StartLevelFirstTime.StartLevelFirstTime += () => LevelLoaded?.Invoke();
     }
 
     /// <summary>
