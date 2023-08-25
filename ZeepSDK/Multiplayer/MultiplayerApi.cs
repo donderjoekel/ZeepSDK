@@ -53,8 +53,8 @@ public static class MultiplayerApi
     /// <summary>
     /// Adds a level to the playlist
     /// </summary>
-    /// <param name="playlistItem"></param>
-    /// <param name="setAsPlayNext"></param>
+    /// <param name="playlistItem">The item to add</param>
+    /// <param name="setAsPlayNext">Should this item be the next one that will be played?</param>
     [PublicAPI]
     public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNext)
     {
