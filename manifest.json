@@ -3235,6 +3235,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.PlaylistItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.PlaylistItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Multiplayer.yml",
       "output": {
         ".html": {

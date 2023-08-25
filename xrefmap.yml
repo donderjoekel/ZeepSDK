@@ -22924,6 +22924,22 @@ references:
   commentId: T:ZeepSDK.Multiplayer.MultiplayerApi
   fullName: ZeepSDK.Multiplayer.MultiplayerApi
   nameWithType: MultiplayerApi
+- uid: ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem,System.Boolean)
+  name: AddLevelToPlaylist(PlaylistItem, bool)
+  href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_AddLevelToPlaylist_ZeepSDK_Multiplayer_PlaylistItem_System_Boolean_
+  commentId: M:ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem,System.Boolean)
+  name.vb: AddLevelToPlaylist(PlaylistItem, Boolean)
+  fullName: ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem, bool)
+  fullName.vb: ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem, Boolean)
+  nameWithType: MultiplayerApi.AddLevelToPlaylist(PlaylistItem, bool)
+  nameWithType.vb: MultiplayerApi.AddLevelToPlaylist(PlaylistItem, Boolean)
+- uid: ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist*
+  name: AddLevelToPlaylist
+  href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_AddLevelToPlaylist_
+  commentId: Overload:ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist
+  isSpec: "True"
+  fullName: ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist
+  nameWithType: MultiplayerApi.AddLevelToPlaylist
 - uid: ZeepSDK.Multiplayer.MultiplayerApi.ConnectedToGame
   name: ConnectedToGame
   href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_ConnectedToGame
@@ -22960,6 +22976,22 @@ references:
   commentId: E:ZeepSDK.Multiplayer.MultiplayerApi.PlayerLeft
   fullName: ZeepSDK.Multiplayer.MultiplayerApi.PlayerLeft
   nameWithType: MultiplayerApi.PlayerLeft
+- uid: ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex(System.Int32)
+  name: SetNextLevelIndex(int)
+  href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_SetNextLevelIndex_System_Int32_
+  commentId: M:ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex(System.Int32)
+  name.vb: SetNextLevelIndex(Integer)
+  fullName: ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex(int)
+  fullName.vb: ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex(Integer)
+  nameWithType: MultiplayerApi.SetNextLevelIndex(int)
+  nameWithType.vb: MultiplayerApi.SetNextLevelIndex(Integer)
+- uid: ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex*
+  name: SetNextLevelIndex
+  href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_SetNextLevelIndex_
+  commentId: Overload:ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex
+  isSpec: "True"
+  fullName: ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex
+  nameWithType: MultiplayerApi.SetNextLevelIndex
 - uid: ZeepSDK.Multiplayer.PlayerJoinedDelegate
   name: PlayerJoinedDelegate
   href: api/ZeepSDK.Multiplayer.PlayerJoinedDelegate.html
@@ -22972,6 +23004,83 @@ references:
   commentId: T:ZeepSDK.Multiplayer.PlayerLeftDelegate
   fullName: ZeepSDK.Multiplayer.PlayerLeftDelegate
   nameWithType: PlayerLeftDelegate
+- uid: ZeepSDK.Multiplayer.PlaylistItem
+  name: PlaylistItem
+  href: api/ZeepSDK.Multiplayer.PlaylistItem.html
+  commentId: T:ZeepSDK.Multiplayer.PlaylistItem
+  fullName: ZeepSDK.Multiplayer.PlaylistItem
+  nameWithType: PlaylistItem
+- uid: ZeepSDK.Multiplayer.PlaylistItem.#ctor(System.String,System.UInt64,System.String,System.String)
+  name: PlaylistItem(string, ulong, string, string)
+  href: api/ZeepSDK.Multiplayer.PlaylistItem.html#ZeepSDK_Multiplayer_PlaylistItem__ctor_System_String_System_UInt64_System_String_System_String_
+  commentId: M:ZeepSDK.Multiplayer.PlaylistItem.#ctor(System.String,System.UInt64,System.String,System.String)
+  name.vb: New(String, ULong, String, String)
+  fullName: ZeepSDK.Multiplayer.PlaylistItem.PlaylistItem(string, ulong, string, string)
+  fullName.vb: ZeepSDK.Multiplayer.PlaylistItem.New(String, ULong, String, String)
+  nameWithType: PlaylistItem.PlaylistItem(string, ulong, string, string)
+  nameWithType.vb: PlaylistItem.New(String, ULong, String, String)
+- uid: ZeepSDK.Multiplayer.PlaylistItem.#ctor*
+  name: PlaylistItem
+  href: api/ZeepSDK.Multiplayer.PlaylistItem.html#ZeepSDK_Multiplayer_PlaylistItem__ctor_
+  commentId: Overload:ZeepSDK.Multiplayer.PlaylistItem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ZeepSDK.Multiplayer.PlaylistItem.PlaylistItem
+  fullName.vb: ZeepSDK.Multiplayer.PlaylistItem.New
+  nameWithType: PlaylistItem.PlaylistItem
+  nameWithType.vb: PlaylistItem.New
+- uid: ZeepSDK.Multiplayer.PlaylistItem.Author
+  name: Author
+  href: api/ZeepSDK.Multiplayer.PlaylistItem.html#ZeepSDK_Multiplayer_PlaylistItem_Author
+  commentId: P:ZeepSDK.Multiplayer.PlaylistItem.Author
+  fullName: ZeepSDK.Multiplayer.PlaylistItem.Author
+  nameWithType: PlaylistItem.Author
+- uid: ZeepSDK.Multiplayer.PlaylistItem.Author*
+  name: Author
+  href: api/ZeepSDK.Multiplayer.PlaylistItem.html#ZeepSDK_Multiplayer_PlaylistItem_Author_
+  commentId: Overload:ZeepSDK.Multiplayer.PlaylistItem.Author
+  isSpec: "True"
+  fullName: ZeepSDK.Multiplayer.PlaylistItem.Author
+  nameWithType: PlaylistItem.Author
+- uid: ZeepSDK.Multiplayer.PlaylistItem.Name
+  name: Name
+  href: api/ZeepSDK.Multiplayer.PlaylistItem.html#ZeepSDK_Multiplayer_PlaylistItem_Name
+  commentId: P:ZeepSDK.Multiplayer.PlaylistItem.Name
+  fullName: ZeepSDK.Multiplayer.PlaylistItem.Name
+  nameWithType: PlaylistItem.Name
+- uid: ZeepSDK.Multiplayer.PlaylistItem.Name*
+  name: Name
+  href: api/ZeepSDK.Multiplayer.PlaylistItem.html#ZeepSDK_Multiplayer_PlaylistItem_Name_
+  commentId: Overload:ZeepSDK.Multiplayer.PlaylistItem.Name
+  isSpec: "True"
+  fullName: ZeepSDK.Multiplayer.PlaylistItem.Name
+  nameWithType: PlaylistItem.Name
+- uid: ZeepSDK.Multiplayer.PlaylistItem.Uid
+  name: Uid
+  href: api/ZeepSDK.Multiplayer.PlaylistItem.html#ZeepSDK_Multiplayer_PlaylistItem_Uid
+  commentId: P:ZeepSDK.Multiplayer.PlaylistItem.Uid
+  fullName: ZeepSDK.Multiplayer.PlaylistItem.Uid
+  nameWithType: PlaylistItem.Uid
+- uid: ZeepSDK.Multiplayer.PlaylistItem.Uid*
+  name: Uid
+  href: api/ZeepSDK.Multiplayer.PlaylistItem.html#ZeepSDK_Multiplayer_PlaylistItem_Uid_
+  commentId: Overload:ZeepSDK.Multiplayer.PlaylistItem.Uid
+  isSpec: "True"
+  fullName: ZeepSDK.Multiplayer.PlaylistItem.Uid
+  nameWithType: PlaylistItem.Uid
+- uid: ZeepSDK.Multiplayer.PlaylistItem.WorkshopId
+  name: WorkshopId
+  href: api/ZeepSDK.Multiplayer.PlaylistItem.html#ZeepSDK_Multiplayer_PlaylistItem_WorkshopId
+  commentId: P:ZeepSDK.Multiplayer.PlaylistItem.WorkshopId
+  fullName: ZeepSDK.Multiplayer.PlaylistItem.WorkshopId
+  nameWithType: PlaylistItem.WorkshopId
+- uid: ZeepSDK.Multiplayer.PlaylistItem.WorkshopId*
+  name: WorkshopId
+  href: api/ZeepSDK.Multiplayer.PlaylistItem.html#ZeepSDK_Multiplayer_PlaylistItem_WorkshopId_
+  commentId: Overload:ZeepSDK.Multiplayer.PlaylistItem.WorkshopId
+  isSpec: "True"
+  fullName: ZeepSDK.Multiplayer.PlaylistItem.WorkshopId
+  nameWithType: PlaylistItem.WorkshopId
 - uid: ZeepSDK.MyPluginInfo
   name: MyPluginInfo
   href: api/ZeepSDK.MyPluginInfo.html
