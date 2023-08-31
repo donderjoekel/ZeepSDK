@@ -32,7 +32,7 @@ public static class ChatApi
         if (zeepkistChatMessage.Player == null)
             return;
         ChatMessageReceived?.Invoke(zeepkistChatMessage.Player.SteamID,
-            zeepkistChatMessage.Player.Username,
+            zeepkistChatMessage.Player.GetTaggedUsername(),
             zeepkistChatMessage.Message);
     }
 
