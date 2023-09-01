@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using BepInEx.Logging;
 using JetBrains.Annotations;
 using UnityEngine;
 using ZeepkistClient;
@@ -13,6 +15,8 @@ namespace ZeepSDK.Chat;
 [PublicAPI]
 public static class ChatApi
 {
+    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(ChatApi));
+
     private static OnlineChatUI OnlineChatUI => ComponentCache.Get<OnlineChatUI>();
 
     /// <summary>
@@ -27,13 +31,20 @@ public static class ChatApi
 
     private static void OnChatMessageReceived(ZeepkistChatMessage zeepkistChatMessage)
     {
-        if (zeepkistChatMessage == null)
-            return;
-        if (zeepkistChatMessage.Player == null)
-            return;
-        ChatMessageReceived?.Invoke(zeepkistChatMessage.Player.SteamID,
-            zeepkistChatMessage.Player.GetTaggedUsername(),
-            zeepkistChatMessage.Message);
+        try
+        {
+            if (zeepkistChatMessage == null)
+                return;
+            if (zeepkistChatMessage.Player == null)
+                return;
+            ChatMessageReceived?.Invoke(zeepkistChatMessage.Player.SteamID,
+                zeepkistChatMessage.Player.GetTaggedUsername(),
+                zeepkistChatMessage.Message);
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(OnChatMessageReceived)}: " + e);
+        }
     }
 
     /// <summary>
@@ -42,10 +53,17 @@ public static class ChatApi
     /// <param name="message">The message you want to add</param>
     public static void AddLocalMessage(string message)
     {
-        OnlineChatUI onlineChatUi = OnlineChatUI;
-        if (onlineChatUi != null)
+        try
         {
-            onlineChatUi.UpdateChatFields(message, 0);
+            OnlineChatUI onlineChatUi = OnlineChatUI;
+            if (onlineChatUi != null)
+            {
+                onlineChatUi.UpdateChatFields(message, 0);
+            }
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(AddLocalMessage)}: " + e);
         }
     }
 
@@ -55,14 +73,21 @@ public static class ChatApi
     /// <param name="message">The message you wish to send</param>
     public static void SendMessage(string message)
     {
-        if (ZeepkistNetwork.NetworkClient == null)
-            return;
-
-        ZeepkistNetwork.NetworkClient.SendPacket(new ChatMessagePacket()
+        try
         {
-            Message = message,
-            Badges = new List<string>()
-        });
+            if (ZeepkistNetwork.NetworkClient == null)
+                return;
+
+            ZeepkistNetwork.NetworkClient.SendPacket(new ChatMessagePacket()
+            {
+                Message = message,
+                Badges = new List<string>()
+            });
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(SendMessage)}: " + e);
+        }
     }
 
     /// <summary>
@@ -70,10 +95,17 @@ public static class ChatApi
     /// </summary>
     public static void ClearChat()
     {
-        OnlineChatUI onlineChatUi = OnlineChatUI;
-        if (onlineChatUi != null)
+        try
         {
-            onlineChatUi.ClearChat();
+            OnlineChatUI onlineChatUi = OnlineChatUI;
+            if (onlineChatUi != null)
+            {
+                onlineChatUi.ClearChat();
+            }
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(ClearChat)}: " + e);
         }
     }
 }

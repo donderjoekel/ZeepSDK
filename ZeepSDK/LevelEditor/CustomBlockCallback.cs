@@ -1,4 +1,5 @@
 ﻿using System;
+using ZeepSDK.Extensions;
 
 namespace ZeepSDK.LevelEditor;
 
@@ -18,7 +19,7 @@ internal class CustomBlockCallbackWithoutData : CustomBlockCallback
 
     public override void Invoke()
     {
-        action?.Invoke();
+        action.InvokeSafe();
     }
 }
 
@@ -35,6 +36,6 @@ internal class CustomBlockCallbackWithData : CustomBlockCallback
 
     public override void Invoke()
     {
-        action?.Invoke(userData);
+        action.InvokeSafe(userData);
     }
 }

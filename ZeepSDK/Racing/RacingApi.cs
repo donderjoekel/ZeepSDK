@@ -1,17 +1,20 @@
-﻿using BepInEx.Logging;
+﻿using System;
+using BepInEx.Logging;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using ZeepSDK.Extensions;
 using ZeepSDK.External.Cysharp.Threading.Tasks;
 using ZeepSDK.External.FluentResults;
 using ZeepSDK.Racing.Patches;
+using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Racing;
 
 [PublicAPI]
 public static class RacingApi
 {
-    private static readonly ManualLogSource logger = Plugin.CreateLogger(nameof(RacingApi));
+    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(RacingApi));
 
     /// <summary>
     /// An event that is fired when the player crosses the finish line. The parameter is the time the player crossed the finish line
@@ -60,15 +63,15 @@ public static class RacingApi
 
     internal static void Initialize(GameObject gameObject)
     {
-        ReadyToReset_HeyYouHitATrigger.TriggerCheckpoint += time => PassedCheckpoint?.Invoke(time);
-        ReadyToReset_HeyYouHitATrigger.TriggerFinish += time => CrossedFinishLine?.Invoke(time);
-        SwitchCamera_GoToFirstPerson.EnteredFirstPerson += () => EnteredFirstPerson?.Invoke();
-        SwitchCamera_GoToThirdPerson.EnteredThirdPerson += () => EnteredThirdPerson?.Invoke();
-        DamageCharacterScript_KillCharacter.CharacterKilled += reason => Crashed?.Invoke(reason);
-        GameMaster_SpawnPlayers.SpawnPlayers += () => PlayerSpawned?.Invoke();
-        GameMaster_ReleaseTheZeepkists.Released += () => RoundStarted?.Invoke();
-        DamageWheel_KillWheel.KillWheel += () => WheelBroken?.Invoke();
-        GameMaster_StartLevelFirstTime.StartLevelFirstTime += () => LevelLoaded?.Invoke();
+        ReadyToReset_HeyYouHitATrigger.TriggerCheckpoint += time => PassedCheckpoint.InvokeSafe(time);
+        ReadyToReset_HeyYouHitATrigger.TriggerFinish += time => CrossedFinishLine.InvokeSafe(time);
+        SwitchCamera_GoToFirstPerson.EnteredFirstPerson += () => EnteredFirstPerson.InvokeSafe();
+        SwitchCamera_GoToThirdPerson.EnteredThirdPerson += () => EnteredThirdPerson.InvokeSafe();
+        DamageCharacterScript_KillCharacter.CharacterKilled += reason => Crashed.InvokeSafe(reason);
+        GameMaster_SpawnPlayers.SpawnPlayers += () => PlayerSpawned.InvokeSafe();
+        GameMaster_ReleaseTheZeepkists.Released += () => RoundStarted.InvokeSafe();
+        DamageWheel_KillWheel.KillWheel += () => WheelBroken.InvokeSafe();
+        GameMaster_StartLevelFirstTime.StartLevelFirstTime += () => RoundStarted.InvokeSafe();
     }
 
     /// <summary>
@@ -78,19 +81,27 @@ public static class RacingApi
     /// <returns>Ok if all went well, Fail if level was not found</returns>
     public static async UniTask<Result> LoadTrackInFreePlayAsync(string uid)
     {
-        if (!LevelManager.Instance.TryGetLevel(uid, out LevelScriptableObject level))
-            return Result.Fail("Level not found");
+        try
+        {
+            if (!LevelManager.Instance.TryGetLevel(uid, out LevelScriptableObject level))
+                return Result.Fail("Level not found");
 
-        PlayerManager.Instance.amountOfPlayers = 1;
-        PlayerManager.Instance.singlePlayer = true;
-        PlayerManager.Instance.loader.GlobalLevel.Copy(level);
+            PlayerManager.Instance.amountOfPlayers = 1;
+            PlayerManager.Instance.singlePlayer = true;
+            PlayerManager.Instance.loader.GlobalLevel.Copy(level);
 
-        AnimateWhitePanel.AnimateTheCircle(true, 0.75f, 0.0f, true);
-        await UniTask.Delay(800);
+            AnimateWhitePanel.AnimateTheCircle(true, 0.75f, 0.0f, true);
+            await UniTask.Delay(800);
 
-        SceneManager.LoadScene("GameScene");
-        await UniTask.Yield();
+            SceneManager.LoadScene("GameScene");
+            await UniTask.Yield();
 
-        return Result.Ok();
+            return Result.Ok();
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(LoadTrackInFreePlayAsync)}: " + e);
+            return Result.Fail(new ExceptionalError(e));
+        }
     }
 }

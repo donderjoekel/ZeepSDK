@@ -1,5 +1,4 @@
 ﻿using BepInEx;
-using BepInEx.Logging;
 using HarmonyLib;
 using UnityEngine.LowLevel;
 using ZeepSDK.Chat;
@@ -17,11 +16,6 @@ namespace ZeepSDK
     internal class Plugin : BaseUnityPlugin
     {
         public static Plugin Instance { get; private set; }
-
-        public static ManualLogSource CreateLogger(string sourceName)
-        {
-            return BepInEx.Logging.Logger.CreateLogSource(MyPluginInfo.PLUGIN_NAME + "." + sourceName);
-        }
 
         private Harmony harmony;
 

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using BepInEx.Logging;
 using ZeepkistClient;
 using ZeepSDK.Leaderboard.Pages;
 using ZeepSDK.Leaderboard.Patches;
@@ -8,6 +10,8 @@ namespace ZeepSDK.Leaderboard;
 
 internal class LeaderboardHandler : MonoBehaviourWithLogging
 {
+    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(LeaderboardHandler));
+    
     private readonly List<ILeaderboardTab> tabs = new();
     private int currentTabIndex;
     private ILeaderboardTab CurrentLeaderboardTab => tabs[currentTabIndex];
@@ -39,53 +43,74 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
 
     private void OnOpen(OnlineTabLeaderboardUI sender)
     {
-        sender.PauseHandler.Pause();
-        currentTabIndex = 0;
-        CurrentLeaderboardTab.Enable(sender);
-        CurrentLeaderboardTab.Draw();
+        try
+        {
+            sender.PauseHandler.Pause();
+            currentTabIndex = 0;
+            CurrentLeaderboardTab.Enable(sender);
+            CurrentLeaderboardTab.Draw();
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(OnOpen)}: " + e);
+        }
     }
 
     private void OnClose(OnlineTabLeaderboardUI sender)
     {
-        sender.PauseHandler.Unpause();
-        CurrentLeaderboardTab.Disable();
+        try
+        {
+            sender.PauseHandler.Unpause();
+            CurrentLeaderboardTab.Disable();
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(OnClose)}: " + e);
+        }
     }
 
     private void OnUpdate(OnlineTabLeaderboardUI sender)
     {
-        if (!ZeepkistNetwork.IsConnected || ZeepkistNetwork.CurrentLobby == null)
+        try
         {
-            return;
+            if (!ZeepkistNetwork.IsConnected || ZeepkistNetwork.CurrentLobby == null)
+            {
+                return;
+            }
+
+            if (sender.LeaderboardAction.buttonDown || sender.EscapeAction.buttonDown)
+            {
+                sender.Close(true);
+            }
+
+            if (sender.SwitchAction.buttonDown)
+            {
+                CurrentLeaderboardTab.Disable();
+                currentTabIndex = (currentTabIndex + 1) % tabs.Count;
+                CurrentLeaderboardTab.Enable(sender);
+                CurrentLeaderboardTab.Draw();
+            }
+
+            string timeNoMilliSeconds =
+                (ZeepkistNetwork.CurrentLobby.RoundTime -
+                 (ZeepkistNetwork.Time - ZeepkistNetwork.CurrentLobby.LevelLoadedAtTime)).GetFormattedTimeNoMilliSeconds();
+            sender.timeLeftLeaderboard.text = ZeepkistNetwork.CurrentLobby.GameState == 0 ? timeNoMilliSeconds : "";
+
+            if (sender.MenuLeftAction.buttonDown)
+            {
+                CurrentLeaderboardTab.GoToPreviousPage();
+                CurrentLeaderboardTab.Draw();
+            }
+
+            if (sender.MenuRightAction.buttonDown)
+            {
+                CurrentLeaderboardTab.GoToNextPage();
+                CurrentLeaderboardTab.Draw();
+            }
         }
-
-        if (sender.LeaderboardAction.buttonDown || sender.EscapeAction.buttonDown)
+        catch (Exception e)
         {
-            sender.Close(true);
-        }
-
-        if (sender.SwitchAction.buttonDown)
-        {
-            CurrentLeaderboardTab.Disable();
-            currentTabIndex = (currentTabIndex + 1) % tabs.Count;
-            CurrentLeaderboardTab.Enable(sender);
-            CurrentLeaderboardTab.Draw();
-        }
-
-        string timeNoMilliSeconds =
-            (ZeepkistNetwork.CurrentLobby.RoundTime -
-             (ZeepkistNetwork.Time - ZeepkistNetwork.CurrentLobby.LevelLoadedAtTime)).GetFormattedTimeNoMilliSeconds();
-        sender.timeLeftLeaderboard.text = ZeepkistNetwork.CurrentLobby.GameState == 0 ? timeNoMilliSeconds : "";
-
-        if (sender.MenuLeftAction.buttonDown)
-        {
-            CurrentLeaderboardTab.GoToPreviousPage();
-            CurrentLeaderboardTab.Draw();
-        }
-
-        if (sender.MenuRightAction.buttonDown)
-        {
-            CurrentLeaderboardTab.GoToNextPage();
-            CurrentLeaderboardTab.Draw();
+            logger.LogError($"Unhandled exception in {nameof(OnUpdate)}: " + e);
         }
     }
 }
