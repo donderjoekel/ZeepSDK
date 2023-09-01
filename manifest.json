@@ -3455,6 +3455,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.LoggerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.LoggerFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Utilities.UnityFolders.PluginsFolder.yml",
       "output": {
         ".html": {
@@ -3479,6 +3489,16 @@
       "output": {
         ".html": {
           "relative_path": "api/ZeepSDK.Utilities.UnityFolders.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.html"
         }
       },
       "version": ""

@@ -23442,6 +23442,49 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Storage.StorageApi.CreateModStorage
   nameWithType: StorageApi.CreateModStorage
+- uid: ZeepSDK.Utilities
+  name: ZeepSDK.Utilities
+  href: api/ZeepSDK.Utilities.html
+  commentId: N:ZeepSDK.Utilities
+  fullName: ZeepSDK.Utilities
+  nameWithType: ZeepSDK.Utilities
+- uid: ZeepSDK.Utilities.LoggerFactory
+  name: LoggerFactory
+  href: api/ZeepSDK.Utilities.LoggerFactory.html
+  commentId: T:ZeepSDK.Utilities.LoggerFactory
+  fullName: ZeepSDK.Utilities.LoggerFactory
+  nameWithType: LoggerFactory
+- uid: ZeepSDK.Utilities.LoggerFactory.GetLogger(System.Object)
+  name: GetLogger(object)
+  href: api/ZeepSDK.Utilities.LoggerFactory.html#ZeepSDK_Utilities_LoggerFactory_GetLogger_System_Object_
+  commentId: M:ZeepSDK.Utilities.LoggerFactory.GetLogger(System.Object)
+  name.vb: GetLogger(Object)
+  fullName: ZeepSDK.Utilities.LoggerFactory.GetLogger(object)
+  fullName.vb: ZeepSDK.Utilities.LoggerFactory.GetLogger(Object)
+  nameWithType: LoggerFactory.GetLogger(object)
+  nameWithType.vb: LoggerFactory.GetLogger(Object)
+- uid: ZeepSDK.Utilities.LoggerFactory.GetLogger(System.Type)
+  name: GetLogger(Type)
+  href: api/ZeepSDK.Utilities.LoggerFactory.html#ZeepSDK_Utilities_LoggerFactory_GetLogger_System_Type_
+  commentId: M:ZeepSDK.Utilities.LoggerFactory.GetLogger(System.Type)
+  fullName: ZeepSDK.Utilities.LoggerFactory.GetLogger(System.Type)
+  nameWithType: LoggerFactory.GetLogger(Type)
+- uid: ZeepSDK.Utilities.LoggerFactory.GetLogger*
+  name: GetLogger
+  href: api/ZeepSDK.Utilities.LoggerFactory.html#ZeepSDK_Utilities_LoggerFactory_GetLogger_
+  commentId: Overload:ZeepSDK.Utilities.LoggerFactory.GetLogger
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.LoggerFactory.GetLogger
+  nameWithType: LoggerFactory.GetLogger
+- uid: ZeepSDK.Utilities.LoggerFactory.GetLogger``1
+  name: GetLogger<T>()
+  href: api/ZeepSDK.Utilities.LoggerFactory.html#ZeepSDK_Utilities_LoggerFactory_GetLogger__1
+  commentId: M:ZeepSDK.Utilities.LoggerFactory.GetLogger``1
+  name.vb: GetLogger(Of T)()
+  fullName: ZeepSDK.Utilities.LoggerFactory.GetLogger<T>()
+  fullName.vb: ZeepSDK.Utilities.LoggerFactory.GetLogger(Of T)()
+  nameWithType: LoggerFactory.GetLogger<T>()
+  nameWithType.vb: LoggerFactory.GetLogger(Of T)()
 - uid: ZeepSDK.Utilities.UnityFolders
   name: ZeepSDK.Utilities.UnityFolders
   href: api/ZeepSDK.Utilities.UnityFolders.html
@@ -23666,3 +23709,19 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Workshop.WorkshopApi.SubscribeAsync
   nameWithType: WorkshopApi.SubscribeAsync
+- uid: ZeepSDK.Workshop.WorkshopApi.UnsubscribeAsync(System.UInt64)
+  name: UnsubscribeAsync(ulong)
+  href: api/ZeepSDK.Workshop.WorkshopApi.html#ZeepSDK_Workshop_WorkshopApi_UnsubscribeAsync_System_UInt64_
+  commentId: M:ZeepSDK.Workshop.WorkshopApi.UnsubscribeAsync(System.UInt64)
+  name.vb: UnsubscribeAsync(ULong)
+  fullName: ZeepSDK.Workshop.WorkshopApi.UnsubscribeAsync(ulong)
+  fullName.vb: ZeepSDK.Workshop.WorkshopApi.UnsubscribeAsync(ULong)
+  nameWithType: WorkshopApi.UnsubscribeAsync(ulong)
+  nameWithType.vb: WorkshopApi.UnsubscribeAsync(ULong)
+- uid: ZeepSDK.Workshop.WorkshopApi.UnsubscribeAsync*
+  name: UnsubscribeAsync
+  href: api/ZeepSDK.Workshop.WorkshopApi.html#ZeepSDK_Workshop_WorkshopApi_UnsubscribeAsync_
+  commentId: Overload:ZeepSDK.Workshop.WorkshopApi.UnsubscribeAsync
+  isSpec: "True"
+  fullName: ZeepSDK.Workshop.WorkshopApi.UnsubscribeAsync
+  nameWithType: WorkshopApi.UnsubscribeAsync
