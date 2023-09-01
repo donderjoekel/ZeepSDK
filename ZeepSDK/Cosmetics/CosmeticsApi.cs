@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using BepInEx.Logging;
 using JetBrains.Annotations;
 using ZeepkistNetworking;
+using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Cosmetics;
 
@@ -11,6 +14,8 @@ namespace ZeepSDK.Cosmetics;
 [PublicAPI]
 public static class CosmeticsApi
 {
+    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(CosmeticsApi));
+
     private static CosmeticWardrobe Wardrobe => PlayerManager.Instance.objectsList.wardrobe;
 
     /// <summary>
@@ -21,7 +26,15 @@ public static class CosmeticsApi
     /// <returns>A soapbox</returns>
     public static Object_Soapbox GetSoapbox(int id, bool checkForCheat = true)
     {
-        return (Object_Soapbox)Wardrobe.GetCosmetic(CosmeticItemType.zeepkist, id, checkForCheat);
+        try
+        {
+            return (Object_Soapbox)Wardrobe.GetCosmetic(CosmeticItemType.zeepkist, id, checkForCheat);
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(GetSoapbox)}: " + e);
+            return null;
+        }
     }
 
     /// <summary>
@@ -32,7 +45,15 @@ public static class CosmeticsApi
     /// <returns>A hat</returns>
     public static HatValues GetHat(int id, bool checkForCheat = true)
     {
-        return (HatValues)Wardrobe.GetCosmetic(CosmeticItemType.hat, id, checkForCheat);
+        try
+        {
+            return (HatValues)Wardrobe.GetCosmetic(CosmeticItemType.hat, id, checkForCheat);
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(GetHat)}: " + e);
+            return null;
+        }
     }
 
     /// <summary>
@@ -43,7 +64,15 @@ public static class CosmeticsApi
     /// <returns>A color</returns>
     public static CosmeticColor GetColor(int id, bool checkForCheat = true)
     {
-        return (CosmeticColor)Wardrobe.GetCosmetic(CosmeticItemType.skin, id, checkForCheat);
+        try
+        {
+            return (CosmeticColor)Wardrobe.GetCosmetic(CosmeticItemType.skin, id, checkForCheat);
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(GetColor)}: " + e);
+            return null;
+        }
     }
 
     /// <summary>
@@ -51,7 +80,15 @@ public static class CosmeticsApi
     /// </summary>
     public static IReadOnlyList<Object_Soapbox> GetAllZeepkists()
     {
-        return Wardrobe.everyZeepkist.Values.Cast<Object_Soapbox>().ToList();
+        try
+        {
+            return Wardrobe.everyZeepkist.Values.Cast<Object_Soapbox>().ToList();
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(GetAllZeepkists)}: " + e);
+            return Array.Empty<Object_Soapbox>();
+        }
     }
 
     /// <summary>
@@ -59,7 +96,15 @@ public static class CosmeticsApi
     /// </summary>
     public static IReadOnlyList<HatValues> GetAllHats()
     {
-        return Wardrobe.everyHat.Values.Cast<HatValues>().ToList();
+        try
+        {
+            return Wardrobe.everyHat.Values.Cast<HatValues>().ToList();
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(GetAllHats)}: " + e);
+            return Array.Empty<HatValues>();
+        }
     }
 
     /// <summary>
@@ -67,7 +112,15 @@ public static class CosmeticsApi
     /// </summary>
     public static IReadOnlyList<CosmeticColor> GetAllColors()
     {
-        return Wardrobe.everyColor.Values.Cast<CosmeticColor>().ToList();
+        try
+        {
+            return Wardrobe.everyColor.Values.Cast<CosmeticColor>().ToList();
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(GetAllColors)}: " + e);
+            return Array.Empty<CosmeticColor>();
+        }
     }
 
     /// <summary>
@@ -75,22 +128,46 @@ public static class CosmeticsApi
     /// </summary>
     public static IReadOnlyList<Object_Soapbox> GetUnlockedZeepkists()
     {
-        return Wardrobe.unlockedZeepkist.Values.Cast<Object_Soapbox>().ToList();
+        try
+        {
+            return Wardrobe.unlockedZeepkist.Values.Cast<Object_Soapbox>().ToList();
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(GetUnlockedZeepkists)}: " + e);
+            return Array.Empty<Object_Soapbox>();
+        }
     }
-    
+
     /// <summary>
     /// Gets all unlocked hats
     /// </summary>
     public static IReadOnlyList<HatValues> GetUnlockedHats()
     {
-        return Wardrobe.unlockedHat.Values.Cast<HatValues>().ToList();
+        try
+        {
+            return Wardrobe.unlockedHat.Values.Cast<HatValues>().ToList();
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(GetUnlockedHats)}: " + e);
+            return Array.Empty<HatValues>();
+        }
     }
-    
+
     /// <summary>
     /// Gets all unlocked colors
     /// </summary>
     public static IReadOnlyList<CosmeticColor> GetUnlockedColors()
     {
-        return Wardrobe.unlockedColor.Values.Cast<CosmeticColor>().ToList();
+        try
+        {
+            return Wardrobe.unlockedColor.Values.Cast<CosmeticColor>().ToList();
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(GetUnlockedColors)}: " + e);
+            return Array.Empty<CosmeticColor>();
+        }
     }
 }

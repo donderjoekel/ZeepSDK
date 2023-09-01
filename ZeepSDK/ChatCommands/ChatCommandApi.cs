@@ -1,6 +1,9 @@
-﻿using JetBrains.Annotations;
+﻿using System;
+using BepInEx.Logging;
+using JetBrains.Annotations;
 using UnityEngine;
 using ZeepSDK.ChatCommands.Commands;
+using ZeepSDK.Utilities;
 
 namespace ZeepSDK.ChatCommands;
 
@@ -10,6 +13,8 @@ namespace ZeepSDK.ChatCommands;
 [PublicAPI]
 public static class ChatCommandApi
 {
+    private static ManualLogSource logger = LoggerFactory.GetLogger(typeof(ChatCommandApi));
+
     internal static void Initialize(GameObject gameObject)
     {
         gameObject.AddComponent<RemoteChatMessageHandler>();
@@ -34,10 +39,17 @@ public static class ChatCommandApi
         LocalChatCommandCallbackDelegate callback
     )
     {
-        ChatCommandRegistry.RegisterLocalChatCommand(new LocalChatCommandWrapper(prefix,
-            command,
-            description,
-            callback));
+        try
+        {
+            ChatCommandRegistry.RegisterLocalChatCommand(new LocalChatCommandWrapper(prefix,
+                command,
+                description,
+                callback));
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(RegisterLocalChatCommand)}: " + e);
+        }
     }
 
     /// <summary>
@@ -47,7 +59,14 @@ public static class ChatCommandApi
     public static void RegisterLocalChatCommand<TChatCommand>()
         where TChatCommand : ILocalChatCommand, new()
     {
-        ChatCommandRegistry.RegisterLocalChatCommand(new TChatCommand());
+        try
+        {
+            ChatCommandRegistry.RegisterLocalChatCommand(new TChatCommand());
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(RegisterLocalChatCommand)}: " + e);
+        }
     }
 
     /// <summary>
@@ -64,10 +83,17 @@ public static class ChatCommandApi
         RemoteChatCommandCallbackDelegate callback
     )
     {
-        ChatCommandRegistry.RegisterRemoteChatCommand(new RemoteChatCommandWrapper(prefix,
-            command,
-            description,
-            callback));
+        try
+        {
+            ChatCommandRegistry.RegisterRemoteChatCommand(new RemoteChatCommandWrapper(prefix,
+                command,
+                description,
+                callback));
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(RegisterRemoteChatCommand)}: " + e);
+        }
     }
 
     /// <summary>
@@ -77,6 +103,13 @@ public static class ChatCommandApi
     public static void RegisterRemoteChatCommand<TChatCommand>()
         where TChatCommand : IRemoteChatCommand, new()
     {
-        ChatCommandRegistry.RegisterRemoteChatCommand(new TChatCommand());
+        try
+        {
+            ChatCommandRegistry.RegisterRemoteChatCommand(new TChatCommand());
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(RegisterRemoteChatCommand)}: " + e);
+        }
     }
 }

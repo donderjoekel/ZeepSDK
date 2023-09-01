@@ -1,7 +1,11 @@
-﻿using JetBrains.Annotations;
+﻿using System;
+using BepInEx.Logging;
+using JetBrains.Annotations;
 using ZeepkistClient;
 using ZeepkistNetworking;
+using ZeepSDK.Extensions;
 using ZeepSDK.Multiplayer.Patches;
+using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Multiplayer;
 
@@ -10,6 +14,8 @@ namespace ZeepSDK.Multiplayer;
 /// </summary>
 public static class MultiplayerApi
 {
+    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(MultiplayerApi));
+    
     /// <summary>
     /// An event that gets fired whenever you connect to a game
     /// </summary>
@@ -42,12 +48,12 @@ public static class MultiplayerApi
 
     internal static void Initialize()
     {
-        PhotonZeepkist_OnConnectedToGame.ConnectedToGame += () => ConnectedToGame?.Invoke();
-        PhotonZeepkist_OnDisconnectedFromGame.DisconnectedFromGame += () => DisconnectedFromGame?.Invoke();
-        PhotonZeepkist_OnCreatedRoom.CreatedRoom += () => CreatedRoom?.Invoke();
-        PhotonZeepkist_OnJoinedRoom.JoinedRoom += () => JoinedRoom?.Invoke();
-        PhotonZeepkist_OnPlayerEnteredRoom.PlayerEnteredRoom += player => PlayerJoined?.Invoke(player);
-        PhotonZeepkist_OnPlayerLeftRoom.PlayerLeftRoom += player => PlayerLeft?.Invoke(player);
+        PhotonZeepkist_OnConnectedToGame.ConnectedToGame += () => ConnectedToGame.InvokeSafe();
+        PhotonZeepkist_OnDisconnectedFromGame.DisconnectedFromGame += () => DisconnectedFromGame.InvokeSafe();
+        PhotonZeepkist_OnCreatedRoom.CreatedRoom += () => CreatedRoom.InvokeSafe();
+        PhotonZeepkist_OnJoinedRoom.JoinedRoom += () => JoinedRoom.InvokeSafe();
+        PhotonZeepkist_OnPlayerEnteredRoom.PlayerEnteredRoom += player => PlayerJoined.InvokeSafe(player);
+        PhotonZeepkist_OnPlayerLeftRoom.PlayerLeftRoom += player => PlayerLeft.InvokeSafe(player);
     }
 
     /// <summary>
@@ -58,28 +64,36 @@ public static class MultiplayerApi
     [PublicAPI]
     public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNext)
     {
-        if (ZeepkistNetwork.CurrentLobby == null)
-            return -1;
-
-        OnlineZeeplevel onlineZeepLevel = playlistItem.ToOnlineZeepLevel();
-        ZeepkistNetwork.CurrentLobby.Playlist.Add(onlineZeepLevel);
-        int index = ZeepkistNetwork.CurrentLobby.Playlist.Count - 1;
-
-        if (setAsPlayNext)
+        try
         {
-            ZeepkistNetwork.CurrentLobby.NextPlaylistIndex = index;
-        }
+            if (ZeepkistNetwork.CurrentLobby == null)
+                return -1;
+
+            OnlineZeeplevel onlineZeepLevel = playlistItem.ToOnlineZeepLevel();
+            ZeepkistNetwork.CurrentLobby.Playlist.Add(onlineZeepLevel);
+            int index = ZeepkistNetwork.CurrentLobby.Playlist.Count - 1;
+
+            if (setAsPlayNext)
+            {
+                ZeepkistNetwork.CurrentLobby.NextPlaylistIndex = index;
+            }
         
-        ZeepkistNetwork.NetworkClient?.SendPacket(new ChangeLobbyPlaylistPacket()
-        {
-            NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
-            IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
-            Playlist = ZeepkistNetwork.CurrentLobby.Playlist,
-            CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
-            NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
-        });
+            ZeepkistNetwork.NetworkClient?.SendPacket(new ChangeLobbyPlaylistPacket()
+            {
+                NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
+                IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
+                Playlist = ZeepkistNetwork.CurrentLobby.Playlist,
+                CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
+                NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
+            });
 
-        return index;
+            return index;
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(AddLevelToPlaylist)}: " + e);
+            return -1;
+        }
     }
 
     /// <summary>
@@ -88,14 +102,21 @@ public static class MultiplayerApi
     /// <param name="index">The (zero-based) index of the level</param>
     public static void SetNextLevelIndex(int index)
     {
-        ZeepkistNetwork.CurrentLobby.NextPlaylistIndex = index;
-        ZeepkistNetwork.NetworkClient?.SendPacket(new ChangeLobbyPlaylistPacket()
+        try
         {
-            NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
-            IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
-            Playlist = ZeepkistNetwork.CurrentLobby.Playlist,
-            CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
-            NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
-        });
+            ZeepkistNetwork.CurrentLobby.NextPlaylistIndex = index;
+            ZeepkistNetwork.NetworkClient?.SendPacket(new ChangeLobbyPlaylistPacket()
+            {
+                NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
+                IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
+                Playlist = ZeepkistNetwork.CurrentLobby.Playlist,
+                CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
+                NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
+            });
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(SetNextLevelIndex)}: " + e);
+        }
     }
 }

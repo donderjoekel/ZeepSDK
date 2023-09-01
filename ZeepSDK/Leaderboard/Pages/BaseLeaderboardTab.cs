@@ -1,6 +1,8 @@
-﻿using BepInEx.Logging;
+﻿using System;
+using BepInEx.Logging;
 using JetBrains.Annotations;
 using ZeepkistClient;
+using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Leaderboard.Pages;
 
@@ -40,31 +42,53 @@ public abstract class BaseLeaderboardTab : ILeaderboardTab
     /// </summary>
     protected BaseLeaderboardTab()
     {
-        Logger = Plugin.CreateLogger(GetType().Name);
+        Logger = LoggerFactory.GetLogger(this);
     }
 
     /// <inheritdoc />
     public void Enable(OnlineTabLeaderboardUI sender)
     {
-        IsActive = true;
-        Instance = sender;
+        try
+        {
+            IsActive = true;
+            Instance = sender;
 
-        Instance.playersLeaderboard.text = I2.Loc.LocalizationManager.GetTranslation("Online/Leaderboard/PlayerCount")
-            .Replace("{[PLAYERS]}", ZeepkistNetwork.PlayerList.Count.ToString())
-            .Replace("{[MAXPLAYERS]}", ZeepkistNetwork.CurrentLobby.MaxPlayerCount.ToString());
+            Instance.playersLeaderboard.text = I2.Loc.LocalizationManager.GetTranslation("Online/Leaderboard/PlayerCount")
+                .Replace("{[PLAYERS]}", ZeepkistNetwork.PlayerList.Count.ToString())
+                .Replace("{[MAXPLAYERS]}", ZeepkistNetwork.CurrentLobby.MaxPlayerCount.ToString());
 
-        Instance.leaderboardTitle.text = GetLeaderboardTitle();
+            Instance.leaderboardTitle.text = GetLeaderboardTitle();
 
-        CurrentPage = 0;
-        UpdatePageNumber();
+            CurrentPage = 0;
+            UpdatePageNumber();
+        }
+        catch (Exception e)
+        {
+            Logger.LogError($"Unhandled exception in {nameof(Enable)}: " + e);
+        }
 
-        OnEnable();
+        try
+        {
+            OnEnable();
+        }
+        catch (Exception e)
+        {
+            Logger.LogError($"Unhandled exception in {nameof(OnEnable)}: " + e);
+        }
     }
 
     /// <inheritdoc />
     public void Disable()
     {
-        OnDisable();
+        try
+        {
+            OnDisable();
+        }
+        catch (Exception e)
+        {
+            Logger.LogError($"Unhandled exception in {nameof(OnDisable)}: " + e);
+        }
+
         IsActive = false;
     }
 
@@ -95,7 +119,15 @@ public abstract class BaseLeaderboardTab : ILeaderboardTab
             return;
 
         ClearLeaderboard();
-        OnDraw();
+        
+        try
+        {
+            OnDraw();
+        }
+        catch (Exception e)
+        {
+            Logger.LogError($"Unhandled exception in {nameof(OnDraw)}: " + e);
+        }
     }
 
     /// <summary>
@@ -103,19 +135,33 @@ public abstract class BaseLeaderboardTab : ILeaderboardTab
     /// </summary>
     protected void UpdatePageNumber()
     {
-        Instance.Page.text = I2.Loc.LocalizationManager.GetTranslation("Online/Lobby/Page")
-            .Replace("{[PAGE]}", (CurrentPage + 1).ToString() + "/" + (MaxPages + 1).ToString());
+        try
+        {
+            Instance.Page.text = I2.Loc.LocalizationManager.GetTranslation("Online/Lobby/Page")
+                .Replace("{[PAGE]}", (CurrentPage + 1).ToString() + "/" + (MaxPages + 1).ToString());
+        }
+        catch (Exception e)
+        {
+            Logger.LogError($"Unhandled exception in {nameof(UpdatePageNumber)}: " + e);
+        }
     }
 
     private void ClearLeaderboard()
     {
-        foreach (GUI_OnlineLeaderboardPosition item in Instance.leaderboard_tab_positions)
+        try
         {
-            item.DrawLeaderboard(0, "");
-            item.time.text = "";
-            item.position.gameObject.SetActive(false);
-            item.pointsCurrent.text = "";
-            item.pointsWon.text = "";
+            foreach (GUI_OnlineLeaderboardPosition item in Instance.leaderboard_tab_positions)
+            {
+                item.DrawLeaderboard(0, "");
+                item.time.text = "";
+                item.position.gameObject.SetActive(false);
+                item.pointsCurrent.text = "";
+                item.pointsWon.text = "";
+            }
+        }
+        catch (Exception e)
+        {
+            Logger.LogError($"Unhandled exception in {nameof(ClearLeaderboard)}: " + e);
         }
     }
 

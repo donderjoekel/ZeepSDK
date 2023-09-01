@@ -5,6 +5,7 @@ using BepInEx.Logging;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using ZeepSDK.Extensions;
 using ZeepSDK.LevelEditor.Builders;
 using ZeepSDK.LevelEditor.Patches;
 using ZeepSDK.Utilities;
@@ -17,7 +18,7 @@ namespace ZeepSDK.LevelEditor;
 [PublicAPI]
 public static class LevelEditorApi
 {
-    private static readonly ManualLogSource logger = Plugin.CreateLogger(nameof(LevelEditorApi));
+    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(LevelEditorApi));
     private static readonly List<object> mouseInputBlockers = new();
     private static readonly List<object> keyboardInputBlockers = new();
     private static readonly List<CustomFolderBuilder> scheduledCustomFolderBuilders = new();
@@ -73,7 +74,7 @@ public static class LevelEditorApi
 
             if (SetupGame.GlobalLevel.IsTestLevel)
             {
-                EnteredTestMode?.Invoke();
+                EnteredTestMode.InvokeSafe();
             }
         };
 
@@ -85,12 +86,12 @@ public static class LevelEditorApi
                 AddScheduledCustomFolders();
             }
 
-            EnteredLevelEditor?.Invoke();
+            EnteredLevelEditor.InvokeSafe();
         };
 
-        LEV_LevelEditorCentral_OnDestroy.PostfixEvent += () => { ExitedLevelEditor?.Invoke(); };
-        LEV_SaveLoad_ExternalLoad.PostfixEvent += () => { LevelLoaded?.Invoke(); };
-        LEV_SaveLoad_ExternalSaveFile.PostfixEvent += () => { LevelSaved?.Invoke(); };
+        LEV_LevelEditorCentral_OnDestroy.PostfixEvent += () => ExitedLevelEditor.InvokeSafe();
+        LEV_SaveLoad_ExternalLoad.PostfixEvent += () => LevelLoaded.InvokeSafe();
+        LEV_SaveLoad_ExternalSaveFile.PostfixEvent += () => LevelSaved.InvokeSafe();
     }
 
     /// <summary>
@@ -119,19 +120,26 @@ public static class LevelEditorApi
     /// <param name="blocker">The blocker to use for identification</param>
     public static void BlockKeyboardInput(object blocker)
     {
-        if (keyboardInputBlockers.Contains(blocker))
-            return;
-
-        int countBefore = keyboardInputBlockers.Count;
-        keyboardInputBlockers.Add(blocker);
-
-        if (countBefore != 0)
-            return;
-
-        InputRegister inputRegister = ComponentCache.Get<InputRegister>();
-        foreach (InputPlayerScriptableObject input in inputRegister.Inputs)
+        try
         {
-            input.DisableLevelEditorInput();
+            if (keyboardInputBlockers.Contains(blocker))
+                return;
+
+            int countBefore = keyboardInputBlockers.Count;
+            keyboardInputBlockers.Add(blocker);
+
+            if (countBefore != 0)
+                return;
+
+            InputRegister inputRegister = ComponentCache.Get<InputRegister>();
+            foreach (InputPlayerScriptableObject input in inputRegister.Inputs)
+            {
+                input.DisableLevelEditorInput();
+            }
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(BlockKeyboardInput)}: " + e);
         }
     }
 
@@ -141,16 +149,23 @@ public static class LevelEditorApi
     /// <param name="blocker">The blocker to use for identification</param>
     public static void UnblockKeyboardInput(object blocker)
     {
-        int countBefore = keyboardInputBlockers.Count;
-        keyboardInputBlockers.Remove(blocker);
-
-        if (countBefore <= 0 || keyboardInputBlockers.Count != 0)
-            return;
-
-        InputRegister inputRegister = ComponentCache.Get<InputRegister>();
-        foreach (InputPlayerScriptableObject input in inputRegister.Inputs)
+        try
         {
-            input.EnableLevelEditorInput();
+            int countBefore = keyboardInputBlockers.Count;
+            keyboardInputBlockers.Remove(blocker);
+
+            if (countBefore <= 0 || keyboardInputBlockers.Count != 0)
+                return;
+
+            InputRegister inputRegister = ComponentCache.Get<InputRegister>();
+            foreach (InputPlayerScriptableObject input in inputRegister.Inputs)
+            {
+                input.EnableLevelEditorInput();
+            }
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(UnblockKeyboardInput)}: " + e);
         }
     }
 
@@ -207,20 +222,28 @@ public static class LevelEditorApi
         Vector3? scale = null
     )
     {
-        inspector.central.gizmos.CreateNewBlock(blockId);
+        try
+        {
+            inspector.central.gizmos.CreateNewBlock(blockId);
 
-        BlockProperties createdBlock = inspector.central.gizmos.central.selection.list.Last();
+            BlockProperties createdBlock = inspector.central.gizmos.central.selection.list.Last();
 
-        if (position.HasValue)
-            createdBlock.transform.position = position.Value;
+            if (position.HasValue)
+                createdBlock.transform.position = position.Value;
 
-        if (rotation.HasValue)
-            createdBlock.transform.rotation = rotation.Value;
+            if (rotation.HasValue)
+                createdBlock.transform.rotation = rotation.Value;
 
-        if (scale.HasValue)
-            createdBlock.transform.localScale = scale.Value;
+            if (scale.HasValue)
+                createdBlock.transform.localScale = scale.Value;
 
-        return createdBlock;
+            return createdBlock;
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(CreateNewBlock)}: " + e);
+            return null;
+        }
     }
 
     /// <summary>
@@ -240,11 +263,20 @@ public static class LevelEditorApi
         bool removeFromSelection = false
     )
     {
-        BlockProperties blockProperties = CreateNewBlock(blockId, position, rotation, scale);
-        if (removeFromSelection)
-            RemoveFromSelection(blockProperties);
+        try
+        {
+            BlockProperties blockProperties = CreateNewBlock(blockId, position, rotation, scale);
 
-        return blockProperties;
+            if (removeFromSelection)
+                RemoveFromSelection(blockProperties);
+
+            return blockProperties;
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(CreateNewBlock)}: " + e);
+            return null;
+        }
     }
 
     /// <summary>
@@ -253,7 +285,14 @@ public static class LevelEditorApi
     /// <param name="blockProperties"></param>
     public static void AddToSelection(BlockProperties blockProperties)
     {
-        inspector.central.selection.AddThisBlock(blockProperties);
+        try
+        {
+            inspector.central.selection.AddThisBlock(blockProperties);
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(AddToSelection)}: " + e);
+        }
     }
 
     /// <summary>
@@ -262,18 +301,25 @@ public static class LevelEditorApi
     /// <param name="blockProperties"></param>
     public static void RemoveFromSelection(BlockProperties blockProperties)
     {
-        int index = inspector.central.selection.list.IndexOf(blockProperties);
-        if (index == -1)
-            return;
-
-        inspector.central.selection.RemoveBlockAt(index, false, false);
-
-        if (inspector.central.selection.list.Count == 0)
+        try
         {
-            inspector.central.gizmos.GoOutOfGMode();
-        }
+            int index = inspector.central.selection.list.IndexOf(blockProperties);
+            if (index == -1)
+                return;
 
-        inspector.central.selection.ThingsJustGotDeselected.Invoke();
+            inspector.central.selection.RemoveBlockAt(index, false, false);
+
+            if (inspector.central.selection.list.Count == 0)
+            {
+                inspector.central.gizmos.GoOutOfGMode();
+            }
+
+            inspector.central.selection.ThingsJustGotDeselected.Invoke();
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(RemoveFromSelection)}: " + e);
+        }
     }
 
     /// <summary>
@@ -281,8 +327,15 @@ public static class LevelEditorApi
     /// </summary>
     public static void ClearSelection()
     {
-        inspector.central.selection.ClickNothing();
-        inspector.central.gizmos.GoOutOfGMode();
+        try
+        {
+            inspector.central.selection.ClickNothing();
+            inspector.central.gizmos.GoOutOfGMode();
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(ClearSelection)}: " + e);
+        }
     }
 
     /// <summary>
@@ -291,16 +344,23 @@ public static class LevelEditorApi
     /// <param name="builder">A callback that is used to create/customize the folder</param>
     public static void AddCustomFolder(Action<ICustomFolderBuilder> builder)
     {
-        CustomFolderBuilder customFolderBuilder = new(gameObject);
-        builder(customFolderBuilder);
+        try
+        {
+            CustomFolderBuilder customFolderBuilder = new(gameObject);
+            builder(customFolderBuilder);
 
-        if (inspector == null)
-        {
-            scheduledCustomFolderBuilders.Add(customFolderBuilder);
+            if (inspector == null)
+            {
+                scheduledCustomFolderBuilders.Add(customFolderBuilder);
+            }
+            else
+            {
+                AddCustomFolderBuilder(customFolderBuilder);
+            }
         }
-        else
+        catch (Exception e)
         {
-            AddCustomFolderBuilder(customFolderBuilder);
+            logger.LogError($"Unhandled exception in {nameof(AddCustomFolder)}: " + e);
         }
     }
 
@@ -314,9 +374,16 @@ public static class LevelEditorApi
 
     private static void AddCustomFolderBuilder(CustomFolderBuilder customFolderBuilder)
     {
-        BlocksFolder blocksFolder = customFolderBuilder.Build();
-        blocksFolder.hasParent = true;
-        blocksFolder.parent = inspector.globalBlockList.globalBlocksFolder;
-        inspector.globalBlockList.globalBlocksFolder.folders.Add(blocksFolder);
+        try
+        {
+            BlocksFolder blocksFolder = customFolderBuilder.Build();
+            blocksFolder.hasParent = true;
+            blocksFolder.parent = inspector.globalBlockList.globalBlocksFolder;
+            inspector.globalBlockList.globalBlocksFolder.folders.Add(blocksFolder);
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(AddCustomFolderBuilder)}: " + e);
+        }
     }
 }

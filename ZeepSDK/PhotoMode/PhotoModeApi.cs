@@ -1,4 +1,5 @@
 ﻿using JetBrains.Annotations;
+using ZeepSDK.Extensions;
 using ZeepSDK.PhotoMode.Patches;
 
 namespace ZeepSDK.PhotoMode;
@@ -21,7 +22,7 @@ public static class PhotoModeApi
 
     internal static void Initialize()
     {
-        EnableFlyingCamera2_ToggleFlyingCamera.PhotoModeEntered += () => PhotoModeEntered?.Invoke();
-        EnableFlyingCamera2_ToggleFlyingCamera.PhotoModeExited += () => PhotoModeExited?.Invoke();
+        EnableFlyingCamera2_ToggleFlyingCamera.PhotoModeEntered += () => PhotoModeEntered.InvokeSafe();
+        EnableFlyingCamera2_ToggleFlyingCamera.PhotoModeExited += () => PhotoModeExited.InvokeSafe();
     }
 }
