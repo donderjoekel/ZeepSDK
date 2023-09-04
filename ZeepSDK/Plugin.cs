@@ -9,6 +9,7 @@ using ZeepSDK.LevelEditor;
 using ZeepSDK.Multiplayer;
 using ZeepSDK.PhotoMode;
 using ZeepSDK.Racing;
+using ZeepSDK.Versioning;
 
 namespace ZeepSDK
 {
@@ -43,6 +44,8 @@ namespace ZeepSDK
 
             // Plugin startup logic
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
+
+            VersionChecker.CheckVersions().Forget();
         }
 
         private void OnDestroy()
