@@ -50,12 +50,12 @@ public static class RacingApi
     /// An event that is fired whenever the round starts
     /// </summary>
     public static event RoundStartedDelegate RoundStarted;
-    
+
     /// <summary>
     /// An even that is fired whenever a wheel breaks
     /// </summary>
     public static event WheelBrokenDelegate WheelBroken;
-    
+
     /// <summary>
     /// An event that is fired when the level you are about to play has been loaded
     /// </summary>
@@ -71,7 +71,7 @@ public static class RacingApi
         GameMaster_SpawnPlayers.SpawnPlayers += () => PlayerSpawned.InvokeSafe();
         GameMaster_ReleaseTheZeepkists.Released += () => RoundStarted.InvokeSafe();
         DamageWheel_KillWheel.KillWheel += () => WheelBroken.InvokeSafe();
-        GameMaster_StartLevelFirstTime.StartLevelFirstTime += () => RoundStarted.InvokeSafe();
+        GameMaster_StartLevelFirstTime.StartLevelFirstTime += () => LevelLoaded.InvokeSafe();
     }
 
     /// <summary>
