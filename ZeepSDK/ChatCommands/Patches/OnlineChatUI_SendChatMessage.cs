@@ -39,20 +39,10 @@ internal class OnlineChatUI_SendChatMessage
         if (localChatCommand == null)
             return false;
 
-        if (!message.StartsWith(localChatCommand.Prefix))
+        if (!ChatCommandUtilities.MatchesCommand(message, localChatCommand))
             return false;
 
-        string[] splits = message[localChatCommand.Prefix.Length..].Split(' ', StringSplitOptions.RemoveEmptyEntries);
-
-        if (splits.Length == 0)
-            return false; // This shouldn't really happen though
-
-        string command = splits[0];
-
-        if (!string.Equals(command, localChatCommand.Command, StringComparison.OrdinalIgnoreCase))
-            return false;
-
-        string arguments = string.Join(' ', splits.Skip(1));
+        string arguments = ChatCommandUtilities.GetArguments(message, localChatCommand);
 
         try
         {
