@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using BepInEx.Logging;
 using HarmonyLib;
 using JetBrains.Annotations;
@@ -41,12 +42,17 @@ internal class OnlineChatUI_SendChatMessage
         if (!message.StartsWith(localChatCommand.Prefix))
             return false;
 
-        string messageWithoutPrefix = message[1..];
+        string[] splits = message[1..].Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-        if (!messageWithoutPrefix.StartsWith(localChatCommand.Command))
+        if (splits.Length == 0)
+            return false; // This shouldn't really happen though
+
+        string command = splits[0];
+
+        if (!string.Equals(command, localChatCommand.Command, StringComparison.OrdinalIgnoreCase))
             return false;
 
-        string arguments = messageWithoutPrefix[localChatCommand.Command.Length..].Trim();
+        string arguments = string.Join(' ', splits.Skip(1));
 
         try
         {
