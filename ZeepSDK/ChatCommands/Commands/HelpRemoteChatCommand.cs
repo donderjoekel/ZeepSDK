@@ -5,7 +5,7 @@ namespace ZeepSDK.ChatCommands.Commands;
 internal class HelpRemoteChatCommand : IRemoteChatCommand
 {
     public string Prefix => "!";
-    public string Command => "Help";
+    public string Command => "help";
     public string Description => "Shows all remotely available commands";
 
     public void Handle(ulong playerId, string arguments)
