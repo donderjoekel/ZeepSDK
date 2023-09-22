@@ -42,7 +42,7 @@ internal class OnlineChatUI_SendChatMessage
         if (!message.StartsWith(localChatCommand.Prefix))
             return false;
 
-        string[] splits = message[1..].Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        string[] splits = message[localChatCommand.Prefix.Length..].Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
         if (splits.Length == 0)
             return false; // This shouldn't really happen though

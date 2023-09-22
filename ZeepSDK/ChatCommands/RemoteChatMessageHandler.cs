@@ -61,7 +61,7 @@ internal class RemoteChatMessageHandler : MonoBehaviourWithLogging
         if (!message.StartsWith(remoteChatCommand.Prefix))
             return;
 
-        string[] splits = message[1..].Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        string[] splits = message[remoteChatCommand.Prefix.Length..].Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
         if (splits.Length == 0)
             return; // This shouldn't really happen though
