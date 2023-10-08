@@ -1,4 +1,5 @@
 ﻿using JetBrains.Annotations;
+
 #pragma warning disable CS1591
 
 namespace ZeepSDK.Racing;
@@ -23,6 +24,9 @@ public delegate void PlayerSpawnedDelegate();
 
 [PublicAPI]
 public delegate void RoundStartedDelegate();
+
+[PublicAPI]
+public delegate void RoundEndedDelegate();
 
 [PublicAPI]
 public delegate void WheelBrokenDelegate();

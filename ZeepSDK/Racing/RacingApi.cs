@@ -3,6 +3,7 @@ using BepInEx.Logging;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using ZeepkistClient;
 using ZeepSDK.Extensions;
 using ZeepSDK.External.Cysharp.Threading.Tasks;
 using ZeepSDK.External.FluentResults;
@@ -52,6 +53,11 @@ public static class RacingApi
     public static event RoundStartedDelegate RoundStarted;
 
     /// <summary>
+    /// An event that is fired whenever the round ends
+    /// </summary>
+    public static event RoundStartedDelegate RoundEnded;
+
+    /// <summary>
     /// An even that is fired whenever a wheel breaks
     /// </summary>
     public static event WheelBrokenDelegate WheelBroken;
@@ -72,6 +78,13 @@ public static class RacingApi
         GameMaster_ReleaseTheZeepkists.Released += () => RoundStarted.InvokeSafe();
         DamageWheel_KillWheel.KillWheel += () => WheelBroken.InvokeSafe();
         GameMaster_StartLevelFirstTime.StartLevelFirstTime += () => LevelLoaded.InvokeSafe();
+        ZeepkistNetwork.LobbyGameStateChanged += () =>
+        {
+            if (ZeepkistNetwork.CurrentLobby != null && ZeepkistNetwork.CurrentLobby.GameState == 1)
+            {
+                RoundEnded.InvokeSafe();
+            }
+        };
     }
 
     /// <summary>
