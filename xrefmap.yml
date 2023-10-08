@@ -23295,6 +23295,12 @@ references:
   commentId: E:ZeepSDK.Racing.RacingApi.PlayerSpawned
   fullName: ZeepSDK.Racing.RacingApi.PlayerSpawned
   nameWithType: RacingApi.PlayerSpawned
+- uid: ZeepSDK.Racing.RacingApi.RoundEnded
+  name: RoundEnded
+  href: api/ZeepSDK.Racing.RacingApi.html#ZeepSDK_Racing_RacingApi_RoundEnded
+  commentId: E:ZeepSDK.Racing.RacingApi.RoundEnded
+  fullName: ZeepSDK.Racing.RacingApi.RoundEnded
+  nameWithType: RacingApi.RoundEnded
 - uid: ZeepSDK.Racing.RacingApi.RoundStarted
   name: RoundStarted
   href: api/ZeepSDK.Racing.RacingApi.html#ZeepSDK_Racing_RacingApi_RoundStarted
@@ -23307,6 +23313,12 @@ references:
   commentId: E:ZeepSDK.Racing.RacingApi.WheelBroken
   fullName: ZeepSDK.Racing.RacingApi.WheelBroken
   nameWithType: RacingApi.WheelBroken
+- uid: ZeepSDK.Racing.RoundEndedDelegate
+  name: RoundEndedDelegate
+  href: api/ZeepSDK.Racing.RoundEndedDelegate.html
+  commentId: T:ZeepSDK.Racing.RoundEndedDelegate
+  fullName: ZeepSDK.Racing.RoundEndedDelegate
+  nameWithType: RoundEndedDelegate
 - uid: ZeepSDK.Racing.RoundStartedDelegate
   name: RoundStartedDelegate
   href: api/ZeepSDK.Racing.RoundStartedDelegate.html
