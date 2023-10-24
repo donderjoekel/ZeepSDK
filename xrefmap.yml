@@ -22958,6 +22958,19 @@ references:
   commentId: E:ZeepSDK.Multiplayer.MultiplayerApi.DisconnectedFromGame
   fullName: ZeepSDK.Multiplayer.MultiplayerApi.DisconnectedFromGame
   nameWithType: MultiplayerApi.DisconnectedFromGame
+- uid: ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel
+  name: GetCurrentLevel()
+  href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_GetCurrentLevel
+  commentId: M:ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel
+  fullName: ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel()
+  nameWithType: MultiplayerApi.GetCurrentLevel()
+- uid: ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel*
+  name: GetCurrentLevel
+  href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_GetCurrentLevel_
+  commentId: Overload:ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel
+  isSpec: "True"
+  fullName: ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel
+  nameWithType: MultiplayerApi.GetCurrentLevel
 - uid: ZeepSDK.Multiplayer.MultiplayerApi.JoinedRoom
   name: JoinedRoom
   href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_JoinedRoom
