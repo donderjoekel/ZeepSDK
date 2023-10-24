@@ -37,19 +37,22 @@ public interface IPlaylistEditor
     /// <param name="author">The author of the level</param>
     /// <param name="name">The name of the level</param>
     /// <param name="workshopId">The workshop id of the level</param>
-    void AddLevel(string uid, string author, string name, ulong workshopId);
+    /// <param name="allowDuplicate">Can the level be added as a duplicate</param>
+    void AddLevel(string uid, string author, string name, ulong workshopId, bool allowDuplicate = false);
 
     /// <summary>
     /// Adds a level to the playlist
     /// </summary>
     /// <param name="level">A LevelScriptableObject that represents a level</param>
-    void AddLevel(LevelScriptableObject level);
+    /// <param name="allowDuplicate">Can the level be added as a duplicate</param>
+    void AddLevel(LevelScriptableObject level, bool allowDuplicate = false);
 
     /// <summary>
     /// Adds a level to the playlist
     /// </summary>
     /// <param name="level">An OnlineZeepLevel instance</param>
-    void AddLevel(OnlineZeeplevel level);
+    /// <param name="allowDuplicate">Can the level be added as a duplicate</param>
+    void AddLevel(OnlineZeeplevel level, bool allowDuplicate = false);
 
     /// <summary>
     /// Saves the playlist to disk

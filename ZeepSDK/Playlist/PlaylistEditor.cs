@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using BepInEx.Logging;
 using Newtonsoft.Json;
 using ZeepkistNetworking;
@@ -39,30 +40,35 @@ internal class PlaylistEditor : IPlaylistEditor
         this.playlist = playlist;
     }
 
-    public void AddLevel(string uid, string author, string name, ulong workshopId)
+    public void AddLevel(string uid, string author, string name, ulong workshopId, bool allowDuplicate = false)
     {
         AddLevel(new OnlineZeeplevel
-        {
-            Author = author,
-            UID = uid,
-            Name = name,
-            WorkshopID = workshopId
-        });
+            {
+                Author = author,
+                UID = uid,
+                Name = name,
+                WorkshopID = workshopId
+            },
+            allowDuplicate);
     }
 
-    public void AddLevel(LevelScriptableObject level)
+    public void AddLevel(LevelScriptableObject level, bool allowDuplicate = false)
     {
         AddLevel(new OnlineZeeplevel
-        {
-            Author = level.Author,
-            Name = level.Name,
-            UID = level.UID,
-            WorkshopID = level.WorkshopID
-        });
+            {
+                Author = level.Author,
+                Name = level.Name,
+                UID = level.UID,
+                WorkshopID = level.WorkshopID
+            },
+            allowDuplicate);
     }
 
-    public void AddLevel(OnlineZeeplevel level)
+    public void AddLevel(OnlineZeeplevel level, bool allowDuplicate = false)
     {
+        if (playlist.levels.Any(x => x.UID == level.UID) && !allowDuplicate)
+            return;
+
         playlist.levels.Add(level);
         playlist.amountOfLevels = playlist.levels.Count;
     }
