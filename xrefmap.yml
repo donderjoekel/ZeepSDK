@@ -23166,27 +23166,33 @@ references:
   commentId: T:ZeepSDK.Playlist.IPlaylistEditor
   fullName: ZeepSDK.Playlist.IPlaylistEditor
   nameWithType: IPlaylistEditor
-- uid: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(LevelScriptableObject)
-  name: AddLevel(LevelScriptableObject)
-  href: api/ZeepSDK.Playlist.IPlaylistEditor.html#ZeepSDK_Playlist_IPlaylistEditor_AddLevel_LevelScriptableObject_
-  commentId: M:ZeepSDK.Playlist.IPlaylistEditor.AddLevel(LevelScriptableObject)
-  fullName: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(LevelScriptableObject)
-  nameWithType: IPlaylistEditor.AddLevel(LevelScriptableObject)
-- uid: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(System.String,System.String,System.String,System.UInt64)
-  name: AddLevel(string, string, string, ulong)
-  href: api/ZeepSDK.Playlist.IPlaylistEditor.html#ZeepSDK_Playlist_IPlaylistEditor_AddLevel_System_String_System_String_System_String_System_UInt64_
-  commentId: M:ZeepSDK.Playlist.IPlaylistEditor.AddLevel(System.String,System.String,System.String,System.UInt64)
-  name.vb: AddLevel(String, String, String, ULong)
-  fullName: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(string, string, string, ulong)
-  fullName.vb: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(String, String, String, ULong)
-  nameWithType: IPlaylistEditor.AddLevel(string, string, string, ulong)
-  nameWithType.vb: IPlaylistEditor.AddLevel(String, String, String, ULong)
-- uid: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(ZeepkistNetworking.OnlineZeeplevel)
-  name: AddLevel(OnlineZeeplevel)
-  href: api/ZeepSDK.Playlist.IPlaylistEditor.html#ZeepSDK_Playlist_IPlaylistEditor_AddLevel_ZeepkistNetworking_OnlineZeeplevel_
-  commentId: M:ZeepSDK.Playlist.IPlaylistEditor.AddLevel(ZeepkistNetworking.OnlineZeeplevel)
-  fullName: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(ZeepkistNetworking.OnlineZeeplevel)
-  nameWithType: IPlaylistEditor.AddLevel(OnlineZeeplevel)
+- uid: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(LevelScriptableObject,System.Boolean)
+  name: AddLevel(LevelScriptableObject, bool)
+  href: api/ZeepSDK.Playlist.IPlaylistEditor.html#ZeepSDK_Playlist_IPlaylistEditor_AddLevel_LevelScriptableObject_System_Boolean_
+  commentId: M:ZeepSDK.Playlist.IPlaylistEditor.AddLevel(LevelScriptableObject,System.Boolean)
+  name.vb: AddLevel(LevelScriptableObject, Boolean)
+  fullName: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(LevelScriptableObject, bool)
+  fullName.vb: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(LevelScriptableObject, Boolean)
+  nameWithType: IPlaylistEditor.AddLevel(LevelScriptableObject, bool)
+  nameWithType.vb: IPlaylistEditor.AddLevel(LevelScriptableObject, Boolean)
+- uid: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(System.String,System.String,System.String,System.UInt64,System.Boolean)
+  name: AddLevel(string, string, string, ulong, bool)
+  href: api/ZeepSDK.Playlist.IPlaylistEditor.html#ZeepSDK_Playlist_IPlaylistEditor_AddLevel_System_String_System_String_System_String_System_UInt64_System_Boolean_
+  commentId: M:ZeepSDK.Playlist.IPlaylistEditor.AddLevel(System.String,System.String,System.String,System.UInt64,System.Boolean)
+  name.vb: AddLevel(String, String, String, ULong, Boolean)
+  fullName: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(string, string, string, ulong, bool)
+  fullName.vb: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(String, String, String, ULong, Boolean)
+  nameWithType: IPlaylistEditor.AddLevel(string, string, string, ulong, bool)
+  nameWithType.vb: IPlaylistEditor.AddLevel(String, String, String, ULong, Boolean)
+- uid: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(ZeepkistNetworking.OnlineZeeplevel,System.Boolean)
+  name: AddLevel(OnlineZeeplevel, bool)
+  href: api/ZeepSDK.Playlist.IPlaylistEditor.html#ZeepSDK_Playlist_IPlaylistEditor_AddLevel_ZeepkistNetworking_OnlineZeeplevel_System_Boolean_
+  commentId: M:ZeepSDK.Playlist.IPlaylistEditor.AddLevel(ZeepkistNetworking.OnlineZeeplevel,System.Boolean)
+  name.vb: AddLevel(OnlineZeeplevel, Boolean)
+  fullName: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(ZeepkistNetworking.OnlineZeeplevel, bool)
+  fullName.vb: ZeepSDK.Playlist.IPlaylistEditor.AddLevel(ZeepkistNetworking.OnlineZeeplevel, Boolean)
+  nameWithType: IPlaylistEditor.AddLevel(OnlineZeeplevel, bool)
+  nameWithType.vb: IPlaylistEditor.AddLevel(OnlineZeeplevel, Boolean)
 - uid: ZeepSDK.Playlist.IPlaylistEditor.AddLevel*
   name: AddLevel
   href: api/ZeepSDK.Playlist.IPlaylistEditor.html#ZeepSDK_Playlist_IPlaylistEditor_AddLevel_
