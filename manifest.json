@@ -3304,6 +3304,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Playlist.IPlaylistEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Playlist.IPlaylistEditor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Playlist.PlaylistApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Playlist.PlaylistApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Playlist.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Playlist.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Racing.CrashReason.yml",
       "output": {
         ".html": {
