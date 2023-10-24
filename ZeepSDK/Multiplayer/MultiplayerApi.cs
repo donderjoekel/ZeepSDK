@@ -12,10 +12,11 @@ namespace ZeepSDK.Multiplayer;
 /// <summary>
 /// An API for interacting with the multiplayer side of Zeepkist
 /// </summary>
+[PublicAPI]
 public static class MultiplayerApi
 {
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(MultiplayerApi));
-    
+
     /// <summary>
     /// An event that gets fired whenever you connect to a game
     /// </summary>
@@ -77,7 +78,7 @@ public static class MultiplayerApi
             {
                 ZeepkistNetwork.CurrentLobby.NextPlaylistIndex = index;
             }
-        
+
             ZeepkistNetwork.NetworkClient?.SendPacket(new ChangeLobbyPlaylistPacket()
             {
                 NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
@@ -118,5 +119,40 @@ public static class MultiplayerApi
         {
             logger.LogError($"Unhandled exception in {nameof(SetNextLevelIndex)}: " + e);
         }
+    }
+
+    /// <summary>
+    /// Gets the level that is currently being played
+    /// </summary>
+    /// <returns>
+    /// The level or null if the level cannot be found
+    /// <br/><br/>
+    /// The level can be null due to not being connected, not playing an online match, or issues with downloading the level from the workshop
+    /// </returns>
+    public static LevelScriptableObject GetCurrentLevel()
+    {
+        if (!ZeepkistNetwork.IsConnected || !ZeepkistNetwork.IsConnectedToGame)
+            return null;
+
+        if (ZeepkistNetwork.CurrentLobby == null)
+            return null;
+
+        if (string.IsNullOrEmpty(ZeepkistNetwork.CurrentLobby.LevelUID))
+            return null;
+
+        if (LevelManager.Instance == null)
+            return null;
+
+        if (LevelManager.Instance.TryGetLevel(ZeepkistNetwork.CurrentLobby.LevelUID, out LevelScriptableObject level))
+            return level;
+
+        if (PlayerManager.Instance != null && PlayerManager.Instance.instellingen != null &&
+            PlayerManager.Instance.instellingen.Settings != null &&
+            PlayerManager.Instance.instellingen.Settings.online_auto_subscribe)
+        {
+            logger.LogError("Unable to get current level even though auto subscribe is enabled");
+        }
+
+        return null;
     }
 }
