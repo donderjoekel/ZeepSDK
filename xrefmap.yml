@@ -113,6 +113,31 @@ references:
   fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand(Of TChatCommand)()
   nameWithType: ChatCommandApi.RegisterLocalChatCommand<TChatCommand>()
   nameWithType.vb: ChatCommandApi.RegisterLocalChatCommand(Of TChatCommand)()
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate)
+  name: RegisterMixedChatCommand(string, string, string, MixedChatCommandCallbackDelegate)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterMixedChatCommand_System_String_System_String_System_String_ZeepSDK_ChatCommands_MixedChatCommandCallbackDelegate_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate)
+  name.vb: RegisterMixedChatCommand(String, String, String, MixedChatCommandCallbackDelegate)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(string, string, string, ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate)
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(String, String, String, ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate)
+  nameWithType: ChatCommandApi.RegisterMixedChatCommand(string, string, string, MixedChatCommandCallbackDelegate)
+  nameWithType.vb: ChatCommandApi.RegisterMixedChatCommand(String, String, String, MixedChatCommandCallbackDelegate)
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand*
+  name: RegisterMixedChatCommand
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterMixedChatCommand_
+  commentId: Overload:ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand
+  nameWithType: ChatCommandApi.RegisterMixedChatCommand
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand``1
+  name: RegisterMixedChatCommand<TChatCommand>()
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterMixedChatCommand__1
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand``1
+  name.vb: RegisterMixedChatCommand(Of TChatCommand)()
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand<TChatCommand>()
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(Of TChatCommand)()
+  nameWithType: ChatCommandApi.RegisterMixedChatCommand<TChatCommand>()
+  nameWithType.vb: ChatCommandApi.RegisterMixedChatCommand(Of TChatCommand)()
 - uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate)
   name: RegisterRemoteChatCommand(string, string, string, RemoteChatCommandCallbackDelegate)
   href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterRemoteChatCommand_System_String_System_String_System_String_ZeepSDK_ChatCommands_RemoteChatCommandCallbackDelegate_
@@ -205,6 +230,12 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.ChatCommands.ILocalChatCommand.Handle
   nameWithType: ILocalChatCommand.Handle
+- uid: ZeepSDK.ChatCommands.IMixedChatCommand
+  name: IMixedChatCommand
+  href: api/ZeepSDK.ChatCommands.IMixedChatCommand.html
+  commentId: T:ZeepSDK.ChatCommands.IMixedChatCommand
+  fullName: ZeepSDK.ChatCommands.IMixedChatCommand
+  nameWithType: IMixedChatCommand
 - uid: ZeepSDK.ChatCommands.IRemoteChatCommand
   name: IRemoteChatCommand
   href: api/ZeepSDK.ChatCommands.IRemoteChatCommand.html
@@ -233,6 +264,73 @@ references:
   commentId: T:ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate
   fullName: ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate
   nameWithType: LocalChatCommandCallbackDelegate
+- uid: ZeepSDK.ChatCommands.MixedChatCommandBase
+  name: MixedChatCommandBase
+  href: api/ZeepSDK.ChatCommands.MixedChatCommandBase.html
+  commentId: T:ZeepSDK.ChatCommands.MixedChatCommandBase
+  fullName: ZeepSDK.ChatCommands.MixedChatCommandBase
+  nameWithType: MixedChatCommandBase
+- uid: ZeepSDK.ChatCommands.MixedChatCommandBase.Command
+  name: Command
+  href: api/ZeepSDK.ChatCommands.MixedChatCommandBase.html#ZeepSDK_ChatCommands_MixedChatCommandBase_Command
+  commentId: P:ZeepSDK.ChatCommands.MixedChatCommandBase.Command
+  fullName: ZeepSDK.ChatCommands.MixedChatCommandBase.Command
+  nameWithType: MixedChatCommandBase.Command
+- uid: ZeepSDK.ChatCommands.MixedChatCommandBase.Command*
+  name: Command
+  href: api/ZeepSDK.ChatCommands.MixedChatCommandBase.html#ZeepSDK_ChatCommands_MixedChatCommandBase_Command_
+  commentId: Overload:ZeepSDK.ChatCommands.MixedChatCommandBase.Command
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.MixedChatCommandBase.Command
+  nameWithType: MixedChatCommandBase.Command
+- uid: ZeepSDK.ChatCommands.MixedChatCommandBase.Description
+  name: Description
+  href: api/ZeepSDK.ChatCommands.MixedChatCommandBase.html#ZeepSDK_ChatCommands_MixedChatCommandBase_Description
+  commentId: P:ZeepSDK.ChatCommands.MixedChatCommandBase.Description
+  fullName: ZeepSDK.ChatCommands.MixedChatCommandBase.Description
+  nameWithType: MixedChatCommandBase.Description
+- uid: ZeepSDK.ChatCommands.MixedChatCommandBase.Description*
+  name: Description
+  href: api/ZeepSDK.ChatCommands.MixedChatCommandBase.html#ZeepSDK_ChatCommands_MixedChatCommandBase_Description_
+  commentId: Overload:ZeepSDK.ChatCommands.MixedChatCommandBase.Description
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.MixedChatCommandBase.Description
+  nameWithType: MixedChatCommandBase.Description
+- uid: ZeepSDK.ChatCommands.MixedChatCommandBase.Handle(System.Boolean,System.UInt64,System.String)
+  name: Handle(bool, ulong, string)
+  href: api/ZeepSDK.ChatCommands.MixedChatCommandBase.html#ZeepSDK_ChatCommands_MixedChatCommandBase_Handle_System_Boolean_System_UInt64_System_String_
+  commentId: M:ZeepSDK.ChatCommands.MixedChatCommandBase.Handle(System.Boolean,System.UInt64,System.String)
+  name.vb: Handle(Boolean, ULong, String)
+  fullName: ZeepSDK.ChatCommands.MixedChatCommandBase.Handle(bool, ulong, string)
+  fullName.vb: ZeepSDK.ChatCommands.MixedChatCommandBase.Handle(Boolean, ULong, String)
+  nameWithType: MixedChatCommandBase.Handle(bool, ulong, string)
+  nameWithType.vb: MixedChatCommandBase.Handle(Boolean, ULong, String)
+- uid: ZeepSDK.ChatCommands.MixedChatCommandBase.Handle*
+  name: Handle
+  href: api/ZeepSDK.ChatCommands.MixedChatCommandBase.html#ZeepSDK_ChatCommands_MixedChatCommandBase_Handle_
+  commentId: Overload:ZeepSDK.ChatCommands.MixedChatCommandBase.Handle
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.MixedChatCommandBase.Handle
+  nameWithType: MixedChatCommandBase.Handle
+- uid: ZeepSDK.ChatCommands.MixedChatCommandBase.Prefix
+  name: Prefix
+  href: api/ZeepSDK.ChatCommands.MixedChatCommandBase.html#ZeepSDK_ChatCommands_MixedChatCommandBase_Prefix
+  commentId: P:ZeepSDK.ChatCommands.MixedChatCommandBase.Prefix
+  fullName: ZeepSDK.ChatCommands.MixedChatCommandBase.Prefix
+  nameWithType: MixedChatCommandBase.Prefix
+- uid: ZeepSDK.ChatCommands.MixedChatCommandBase.Prefix*
+  name: Prefix
+  href: api/ZeepSDK.ChatCommands.MixedChatCommandBase.html#ZeepSDK_ChatCommands_MixedChatCommandBase_Prefix_
+  commentId: Overload:ZeepSDK.ChatCommands.MixedChatCommandBase.Prefix
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.MixedChatCommandBase.Prefix
+  nameWithType: MixedChatCommandBase.Prefix
+- uid: ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate
+  name: MixedChatCommandCallbackDelegate
+  href: api/ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate.html
+  commentId: T:ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate
+  fullName: ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate
+  nameWithType: MixedChatCommandCallbackDelegate
 - uid: ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate
   name: RemoteChatCommandCallbackDelegate
   href: api/ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate.html

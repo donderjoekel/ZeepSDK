@@ -64,6 +64,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.IMixedChatCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.IMixedChatCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.ChatCommands.IRemoteChatCommand.yml",
       "output": {
         ".html": {
@@ -78,6 +88,26 @@
       "output": {
         ".html": {
           "relative_path": "api/ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.MixedChatCommandBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.MixedChatCommandBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate.html"
         }
       },
       "version": ""
