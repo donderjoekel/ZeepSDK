@@ -19,4 +19,10 @@ internal static class ChatCommandRegistry
     {
         remoteChatCommands.Add(chatCommand);
     }
+
+    public static void RegisterMixedChatCommand(IMixedChatCommand chatCommand)
+    {
+        localChatCommands.Add(chatCommand);
+        remoteChatCommands.Add(chatCommand);
+    }
 }
