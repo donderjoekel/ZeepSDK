@@ -22392,6 +22392,31 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.UpdatePageNumber
   nameWithType: BaseLeaderboardTab.UpdatePageNumber
+- uid: ZeepSDK.Level
+  name: ZeepSDK.Level
+  href: api/ZeepSDK.Level.html
+  commentId: N:ZeepSDK.Level
+  fullName: ZeepSDK.Level
+  nameWithType: ZeepSDK.Level
+- uid: ZeepSDK.Level.LevelApi
+  name: LevelApi
+  href: api/ZeepSDK.Level.LevelApi.html
+  commentId: T:ZeepSDK.Level.LevelApi
+  fullName: ZeepSDK.Level.LevelApi
+  nameWithType: LevelApi
+- uid: ZeepSDK.Level.LevelApi.GetLevelHash(LevelScriptableObject)
+  name: GetLevelHash(LevelScriptableObject)
+  href: api/ZeepSDK.Level.LevelApi.html#ZeepSDK_Level_LevelApi_GetLevelHash_LevelScriptableObject_
+  commentId: M:ZeepSDK.Level.LevelApi.GetLevelHash(LevelScriptableObject)
+  fullName: ZeepSDK.Level.LevelApi.GetLevelHash(LevelScriptableObject)
+  nameWithType: LevelApi.GetLevelHash(LevelScriptableObject)
+- uid: ZeepSDK.Level.LevelApi.GetLevelHash*
+  name: GetLevelHash
+  href: api/ZeepSDK.Level.LevelApi.html#ZeepSDK_Level_LevelApi_GetLevelHash_
+  commentId: Overload:ZeepSDK.Level.LevelApi.GetLevelHash
+  isSpec: "True"
+  fullName: ZeepSDK.Level.LevelApi.GetLevelHash
+  nameWithType: LevelApi.GetLevelHash
 - uid: ZeepSDK.LevelEditor
   name: ZeepSDK.LevelEditor
   href: api/ZeepSDK.LevelEditor.html

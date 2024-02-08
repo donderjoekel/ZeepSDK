@@ -3074,6 +3074,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Level.LevelApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Level.LevelApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Level.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Level.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.LevelEditor.EnteredLevelEditorDelegate.yml",
       "output": {
         ".html": {
