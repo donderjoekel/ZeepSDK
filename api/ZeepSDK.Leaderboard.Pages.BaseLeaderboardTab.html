@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class BaseLeaderboardTab ">
       
-      <meta name="description" content="A base implementation that can be used for creating a custom tab for the leaderboard">
+      <meta name="description" content="[Obsolete] A base implementation that can be used for creating a custom tab for the leaderboard">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab" class="text-break">
-Class BaseLeaderboardTab  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class BaseLeaderboardTab  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,13 +93,13 @@ Class BaseLeaderboardTab  <a class="header-action link-secondary" title="View so
   <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>A base implementation that can be used for creating a custom tab for the leaderboard</p>
+  <div class="markdown summary"><p>[Obsolete] A base implementation that can be used for creating a custom tab for the leaderboard</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[PublicAPI]
-public abstract class BaseLeaderboardTab : ILeaderboardTab</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This class is obsolete and will be removed in a future version. Use BaseSingleplayerLeaderboardTab or BaseMultiplayerLeaderboardTab instead.&quot;)]
+public abstract class BaseLeaderboardTab : BaseMultiplayerLeaderboardTab, IMultiplayerLeaderboardTab, ILeaderboardTab</code></pre>
   </div>
 
 
@@ -109,6 +109,8 @@ public abstract class BaseLeaderboardTab : ILeaderboardTab</code></pre>
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html">BaseCoreLeaderboardTab</a></div>
+      <div><a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseMultiplayerLeaderboardTab.html">BaseMultiplayerLeaderboardTab</a></div>
       <div><span class="xref">BaseLeaderboardTab</span></div>
     </dd>
   </dl>
@@ -116,6 +118,7 @@ public abstract class BaseLeaderboardTab : ILeaderboardTab</code></pre>
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="ZeepSDK.Leaderboard.IMultiplayerLeaderboardTab.html">IMultiplayerLeaderboardTab</a></div>
       <div><a class="xref" href="ZeepSDK.Leaderboard.ILeaderboardTab.html">ILeaderboardTab</a></div>
     </dd>
   </dl>
@@ -124,6 +127,51 @@ public abstract class BaseLeaderboardTab : ILeaderboardTab</code></pre>
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Logger">BaseCoreLeaderboardTab.Logger</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Instance">BaseCoreLeaderboardTab.Instance</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_CurrentPage">BaseCoreLeaderboardTab.CurrentPage</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_MaxPages">BaseCoreLeaderboardTab.MaxPages</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_IsActive">BaseCoreLeaderboardTab.IsActive</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Enable_OnlineTabLeaderboardUI_">BaseCoreLeaderboardTab.Enable(OnlineTabLeaderboardUI)</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Disable">BaseCoreLeaderboardTab.Disable()</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GoToPreviousPage">BaseCoreLeaderboardTab.GoToPreviousPage()</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GoToNextPage">BaseCoreLeaderboardTab.GoToNextPage()</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Draw">BaseCoreLeaderboardTab.Draw()</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_UpdatePageNumber">BaseCoreLeaderboardTab.UpdatePageNumber()</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GetLeaderboardTitle">BaseCoreLeaderboardTab.GetLeaderboardTitle()</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnEnable">BaseCoreLeaderboardTab.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnDisable">BaseCoreLeaderboardTab.OnDisable()</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnDraw">BaseCoreLeaderboardTab.OnDraw()</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -159,490 +207,11 @@ public abstract class BaseLeaderboardTab : ILeaderboardTab</code></pre>
 
 
 
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab__ctor_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.#ctor*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab__ctor" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.#ctor">
-  BaseLeaderboardTab()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L43"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Constructor</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected BaseLeaderboardTab()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_CurrentPage_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.CurrentPage*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_CurrentPage" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.CurrentPage">
-  CurrentPage
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L28"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The index of the current page</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected int CurrentPage { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_Instance_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.Instance*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_Instance" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.Instance">
-  Instance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L23"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The instance of the leaderboard UI</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected OnlineTabLeaderboardUI Instance { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">OnlineTabLeaderboardUI</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_IsActive_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.IsActive*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_IsActive" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.IsActive">
-  IsActive
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L38"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>A boolean representing if the page is currently active</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool IsActive { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_Logger_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.Logger*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_Logger" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.Logger">
-  Logger
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L18"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>A logger that can be used to log messages</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected ManualLogSource Logger { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">ManualLogSource</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_MaxPages_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.MaxPages*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_MaxPages" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.MaxPages">
-  MaxPages
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L33"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The maximum amount of pages</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected int MaxPages { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_Disable_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.Disable*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_Disable" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.Disable">
-  Disable()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L81"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Called when the tab is disabled</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Disable()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_Draw_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.Draw*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_Draw" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.Draw">
-  Draw()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L116"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Called whenever the tab needs to (re)draw</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Draw()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_Enable_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.Enable*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_Enable_OnlineTabLeaderboardUI_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.Enable(OnlineTabLeaderboardUI)">
-  Enable(OnlineTabLeaderboardUI)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L49"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Called when the tab is enabled</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Enable(OnlineTabLeaderboardUI sender)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>sender</code> <span class="xref">OnlineTabLeaderboardUI</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_GetLeaderboardTitle_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.GetLeaderboardTitle*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_GetLeaderboardTitle" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.GetLeaderboardTitle">
-  GetLeaderboardTitle()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L171"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>This should return the title of the leaderboard that gets displayed in the UI</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract string GetLeaderboardTitle()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_GoToNextPage_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.GoToNextPage*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_GoToNextPage" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.GoToNextPage">
-  GoToNextPage()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L106"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Called when the user wants to go to the next page</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void GoToNextPage()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_GoToPreviousPage_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.GoToPreviousPage*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_GoToPreviousPage" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.GoToPreviousPage">
-  GoToPreviousPage()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L96"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Called when the user wants to go to the previous page</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void GoToPreviousPage()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_OnDisable_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.OnDisable*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_OnDisable" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.OnDisable">
-  OnDisable()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L181"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Called when te tab gets disabled</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void OnDisable()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_OnDraw_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.OnDraw*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_OnDraw" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.OnDraw">
-  OnDraw()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L186"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Called when the tab needs to (re)draw</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void OnDraw()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_OnEnable_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.OnEnable*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_OnEnable" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.OnEnable">
-  OnEnable()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L176"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Called when the tab gets enabled</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void OnEnable()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_UpdatePageNumber_" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.UpdatePageNumber*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseLeaderboardTab_UpdatePageNumber" data-uid="ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.UpdatePageNumber">
-  UpdatePageNumber()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L136"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>This can be called to update the page number that is visible in the UI</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void UpdatePageNumber()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseLeaderboardTab.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -3034,6 +3034,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.IMultiplayerLeaderboardTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.IMultiplayerLeaderboardTab.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.ISingleplayerLeaderboardTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.ISingleplayerLeaderboardTab.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Leaderboard.LeaderboardApi.yml",
       "output": {
         ".html": {
@@ -3044,10 +3064,40 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.yml",
       "output": {
         ".html": {
           "relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseMultiplayerLeaderboardTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseMultiplayerLeaderboardTab.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseSingleplayerLeaderboardTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseSingleplayerLeaderboardTab.html"
         }
       },
       "version": ""
