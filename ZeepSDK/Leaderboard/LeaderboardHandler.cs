@@ -11,15 +11,21 @@ namespace ZeepSDK.Leaderboard;
 internal class LeaderboardHandler : MonoBehaviourWithLogging
 {
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(LeaderboardHandler));
-    
-    private readonly List<ILeaderboardTab> tabs = new();
+
+    private readonly List<IMultiplayerLeaderboardTab> multiplayerTabs = new();
+    private readonly List<ISingleplayerLeaderboardTab> singleplayerTabs = new();
     private int currentTabIndex;
-    private ILeaderboardTab CurrentLeaderboardTab => tabs[currentTabIndex];
+
+    private int CurrentTabCount => ZeepkistNetwork.IsConnectedToGame ? multiplayerTabs.Count : singleplayerTabs.Count;
+
+    private ILeaderboardTab CurrentLeaderboardTab => ZeepkistNetwork.IsConnectedToGame
+        ? multiplayerTabs[currentTabIndex]
+        : singleplayerTabs[currentTabIndex];
 
     private void Start()
     {
-        tabs.Add(new RoundLeaderboardTab());
-        tabs.Add(new ChampionshipLeaderboardTab());
+        AddTab(new RoundLeaderboardTab());
+        AddTab(new ChampionshipLeaderboardTab());
 
         OnlineTabLeaderboardUI_OnOpen.OnOpen += OnOpen;
         OnlineTabLeaderboardUI_OnClose.OnClose += OnClose;
@@ -28,17 +34,35 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
 
     internal void AddTab(ILeaderboardTab tab)
     {
-        tabs.Add(tab);
+        if (tab is IMultiplayerLeaderboardTab multiplayerLeaderboardTab)
+            multiplayerTabs.Add(multiplayerLeaderboardTab);
+
+        if (tab is ISingleplayerLeaderboardTab singleplayerLeaderboardTab)
+            singleplayerTabs.Add(singleplayerLeaderboardTab);
     }
 
     internal void InsertTab(int index, ILeaderboardTab tab)
     {
-        tabs.Insert(index, tab);
+        if (tab is IMultiplayerLeaderboardTab multiplayerLeaderboardTab)
+            multiplayerTabs.Insert(index, multiplayerLeaderboardTab);
+
+        if (tab is ISingleplayerLeaderboardTab singleplayerLeaderboardTab)
+            singleplayerTabs.Insert(index, singleplayerLeaderboardTab);
     }
 
     internal void RemoveTab(ILeaderboardTab tab)
     {
-        tabs.Remove(tab);
+        switch (tab)
+        {
+            case IMultiplayerLeaderboardTab multiplayerLeaderboardTab:
+                multiplayerTabs.Remove(multiplayerLeaderboardTab);
+                break;
+            case ISingleplayerLeaderboardTab singleplayerLeaderboardTab:
+                singleplayerTabs.Remove(singleplayerLeaderboardTab);
+                break;
+            default:
+                throw new ArgumentException("Tab must be either a multiplayer or singleplayer tab");
+        }
     }
 
     private void OnOpen(OnlineTabLeaderboardUI sender)
@@ -73,11 +97,6 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
     {
         try
         {
-            if (!ZeepkistNetwork.IsConnected || ZeepkistNetwork.CurrentLobby == null)
-            {
-                return;
-            }
-
             if (sender.LeaderboardAction.buttonDown || sender.EscapeAction.buttonDown)
             {
                 sender.Close(true);
@@ -86,15 +105,10 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
             if (sender.SwitchAction.buttonDown)
             {
                 CurrentLeaderboardTab.Disable();
-                currentTabIndex = (currentTabIndex + 1) % tabs.Count;
+                currentTabIndex = (currentTabIndex + 1) % CurrentTabCount;
                 CurrentLeaderboardTab.Enable(sender);
                 CurrentLeaderboardTab.Draw();
             }
-
-            string timeNoMilliSeconds =
-                (ZeepkistNetwork.CurrentLobby.RoundTime -
-                 (ZeepkistNetwork.Time - ZeepkistNetwork.CurrentLobby.LevelLoadedAtTime)).GetFormattedTimeNoMilliSeconds();
-            sender.timeLeftLeaderboard.text = ZeepkistNetwork.CurrentLobby.GameState == 0 ? timeNoMilliSeconds : "";
 
             if (sender.MenuLeftAction.buttonDown)
             {
@@ -107,6 +121,14 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
                 CurrentLeaderboardTab.GoToNextPage();
                 CurrentLeaderboardTab.Draw();
             }
+
+            if (!ZeepkistNetwork.IsConnectedToGame)
+                return;
+
+            string timeNoMilliSeconds = (ZeepkistNetwork.CurrentLobby.RoundTime -
+                                         (ZeepkistNetwork.Time - ZeepkistNetwork.CurrentLobby.LevelLoadedAtTime))
+                .GetFormattedTimeNoMilliSeconds();
+            sender.timeLeftLeaderboard.text = ZeepkistNetwork.CurrentLobby.GameState == 0 ? timeNoMilliSeconds : "";
         }
         catch (Exception e)
         {

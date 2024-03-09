@@ -3,7 +3,7 @@
 namespace ZeepSDK.Leaderboard;
 
 /// <summary>
-/// The interface to implement if you want to create a custom tab for the leaderboard
+/// Either <see cref="IMultiplayerLeaderboardTab"/> or <see cref="ISingleplayerLeaderboardTab"/> should be implemented
 /// </summary>
 [PublicAPI]
 public interface ILeaderboardTab
