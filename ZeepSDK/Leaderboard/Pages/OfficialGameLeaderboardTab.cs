@@ -5,7 +5,7 @@ using ZeepkistClient;
 
 namespace ZeepSDK.Leaderboard.Pages;
 
-internal abstract class OfficialGameLeaderboardTab : BaseLeaderboardTab
+internal abstract class OfficialGameLeaderboardTab : BaseMultiplayerLeaderboardTab
 {
     /// <inheritdoc />
     protected sealed override void OnEnable()
