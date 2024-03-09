@@ -134,6 +134,56 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Communication.CommunicationApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Communication.CommunicationApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Communication.IComReceiver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Communication.IComReceiver.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Communication.IComSender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Communication.IComSender.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Communication.MessageReceivedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Communication.MessageReceivedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Communication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Communication.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Cosmetics.CosmeticsApi.yml",
       "output": {
         ".html": {
