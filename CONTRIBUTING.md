@@ -14,16 +14,17 @@ Okay good, so we've established that this is something to go into ZeepSDK, from 
 
 Make sure to fork the ZeepSDK repository and create a new branch that starts with `feature/` and replace spaces with underscores. Something like `feature/my_awesome_new_feature`.
 
-1. Outward facing functionality should be contained within `Api` classes (think `ChatApi`, `CosmeticsApi`).
+1. Make sure to adhere to the code style dictated by the [`.editorconfig`](https://editorconfig.org) file!
+2. Outward facing functionality should be contained within `Api` classes (think `ChatApi`, `CosmeticsApi`).
     - If there is already a class like that, feel free to put your new functionality in there.
     - If not you're free to make a new one! Keep in mind that it should be a `public static` class that ends with `Api`.
-2. Inward facing functionality should be hidden with the `internal` or `private` keyword.
+3. Inward facing functionality should be hidden with the `internal` or `private` keyword.
     - Think of utility classes or methods that should not be touched by a mod directly.  
-3. Don't return concrete implementations, return interfaces instead.
+4. Don't return concrete implementations, return interfaces instead.
     - Returning an `interface` allows us to easily maintain and fix functionality without having to update depending mods.
-4. Don't forget to describe your new outward facing code in the `/// <summary>` block!
-5. Test. test. test. Test your code thoroughly!
-6. Catch as many exceptions as you can, and appropriately. If something goes wrong in the ZeepSDK it is essential that the depending mods will be able to continue functioning.
+5. Don't forget to describe your new outward facing code in the `/// <summary>` block!
+6. Test. test. test. Test your code thoroughly!
+7. Catch as many exceptions as you can, and appropriately. If something goes wrong in the ZeepSDK it is essential that the depending mods will be able to continue functioning.
     - There are cases where this won't work e.g. where Zeepkist has removed something that your functionality relies on, it's unfortunate but impossible to avoid.
 
  Once you've wrapped everything up, tested it, and it seems all good you're almost ready to open a Pull Request!
