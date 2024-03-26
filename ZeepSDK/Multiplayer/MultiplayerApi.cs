@@ -137,13 +137,13 @@ public static class MultiplayerApi
         if (ZeepkistNetwork.CurrentLobby == null)
             return null;
 
-        if (string.IsNullOrEmpty(ZeepkistNetwork.CurrentLobby.LevelUID))
+        if (!TryGetCurrentLevelUid(out string levelUid))
             return null;
 
         if (LevelManager.Instance == null)
             return null;
 
-        if (LevelManager.Instance.TryGetLevel(ZeepkistNetwork.CurrentLobby.LevelUID, out LevelScriptableObject level))
+        if (LevelManager.Instance.TryGetLevel(levelUid, out LevelScriptableObject level))
             return level;
 
         if (PlayerManager.Instance != null && PlayerManager.Instance.instellingen != null &&
@@ -154,5 +154,23 @@ public static class MultiplayerApi
         }
 
         return null;
+    }
+
+    private static bool TryGetCurrentLevelUid(out string levelUid)
+    {
+        if (!string.IsNullOrEmpty(ZeepkistNetwork.CurrentLobby.LevelUID))
+        {
+            levelUid = ZeepkistNetwork.CurrentLobby.LevelUID;
+            return true;
+        }
+
+        if (PlayerManager.Instance.loader != null && PlayerManager.Instance.loader.GlobalLevel != null)
+        {
+            levelUid = PlayerManager.Instance.loader.GlobalLevel.UID;
+            return true;
+        }
+
+        levelUid = null;
+        return false;
     }
 }
