@@ -137,40 +137,12 @@ public static class MultiplayerApi
         if (ZeepkistNetwork.CurrentLobby == null)
             return null;
 
-        if (!TryGetCurrentLevelUid(out string levelUid))
+        if (PlayerManager.Instance == null)
             return null;
 
-        if (LevelManager.Instance == null)
+        if (PlayerManager.Instance.loader == null)
             return null;
 
-        if (LevelManager.Instance.TryGetLevel(levelUid, out LevelScriptableObject level))
-            return level;
-
-        if (PlayerManager.Instance != null && PlayerManager.Instance.instellingen != null &&
-            PlayerManager.Instance.instellingen.Settings != null &&
-            PlayerManager.Instance.instellingen.Settings.online_auto_subscribe)
-        {
-            logger.LogError("Unable to get current level even though auto subscribe is enabled");
-        }
-
-        return null;
-    }
-
-    private static bool TryGetCurrentLevelUid(out string levelUid)
-    {
-        if (!string.IsNullOrEmpty(ZeepkistNetwork.CurrentLobby.LevelUID))
-        {
-            levelUid = ZeepkistNetwork.CurrentLobby.LevelUID;
-            return true;
-        }
-
-        if (PlayerManager.Instance.loader != null && PlayerManager.Instance.loader.GlobalLevel != null)
-        {
-            levelUid = PlayerManager.Instance.loader.GlobalLevel.UID;
-            return true;
-        }
-
-        levelUid = null;
-        return false;
+        return PlayerManager.Instance.loader.GlobalLevel;
     }
 }
