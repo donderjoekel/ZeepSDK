@@ -87,6 +87,32 @@ public static class ChatApi
         SendChatMessagePacket($"/servermessage {color.ToValidString()} {duration} {message}");
     }
 
+    /// <summary>
+    /// Sets the join message
+    /// </summary>
+    /// <param name="message">The contents of the message</param>
+    /// <param name="color">The color of the message</param>
+    public static void SetJoinMessage(string message, MessageColor color)
+    {
+        SendChatMessagePacket($"/joinmessage {color.ToValidString()} {message}");
+    }
+
+    /// <summary>
+    /// Enables the join message
+    /// </summary>
+    public static void EnableJoinMessage()
+    {
+        SendChatMessagePacket("/joinmessage on");
+    }
+
+    /// <summary>
+    /// Disables the join message
+    /// </summary>
+    public static void DisableJoinMessage()
+    {
+        SendChatMessagePacket("/joinmessage off");
+    }
+
     private static void SendChatMessagePacket(string content)
     {
         try
@@ -102,7 +128,7 @@ public static class ChatApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(SendServerMessage)}: " + e);
+            logger.LogError($"Unhandled exception in {nameof(SendChatMessagePacket)}: " + e);
         }
     }
 
