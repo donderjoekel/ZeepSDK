@@ -73,6 +73,22 @@ public static class ChatApi
     /// <param name="message">The message you wish to send</param>
     public static void SendMessage(string message)
     {
+        SendChatMessagePacket(message);
+    }
+
+    /// <summary>
+    /// Sends a server message
+    /// </summary>
+    /// <param name="message">The contents of the message</param>
+    /// <param name="duration">The duration of the message in seconds</param>
+    /// <param name="color">The color of the message</param>
+    public static void SendServerMessage(string message, int duration, MessageColor color)
+    {
+        SendChatMessagePacket($"/servermessage {color.ToValidString()} {duration} {message}");
+    }
+
+    private static void SendChatMessagePacket(string content)
+    {
         try
         {
             if (ZeepkistNetwork.NetworkClient == null)
@@ -80,13 +96,13 @@ public static class ChatApi
 
             ZeepkistNetwork.NetworkClient.SendPacket(new ChatMessagePacket()
             {
-                Message = message,
+                Message = content,
                 Badges = new List<string>()
             });
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(SendMessage)}: " + e);
+            logger.LogError($"Unhandled exception in {nameof(SendServerMessage)}: " + e);
         }
     }
 
