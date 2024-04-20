@@ -16,13 +16,11 @@ namespace ZeepSDK.Storage;
 
 internal class ModStorage : IModStorage
 {
-    private readonly BaseUnityPlugin _plugin;
     private readonly JsonSerializerSettings _settings;
     private readonly string _directoryPath;
 
     public ModStorage(BaseUnityPlugin plugin)
     {
-        _plugin = plugin;
         _settings = new JsonSerializerSettings
         {
             ContractResolver = new UnityTypeContractResolver(),

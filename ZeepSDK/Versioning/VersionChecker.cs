@@ -18,7 +18,7 @@ namespace ZeepSDK.Versioning;
 
 internal class VersionChecker
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(VersionChecker));
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(VersionChecker));
 
     public static async UniTaskVoid CheckVersions()
     {
@@ -26,7 +26,7 @@ internal class VersionChecker
 
         if (result.IsFailed)
         {
-            logger.LogError("Failed to calculate outdated mods! " + result.ToString());
+            _logger.LogError("Failed to calculate outdated mods! " + result.ToString());
             return;
         }
 
@@ -120,7 +120,7 @@ internal class VersionChecker
 
             if (!string.Equals(directoryName, versionedModId, StringComparison.Ordinal))
             {
-                logger.LogInfo($"Mismatch found; Expected: {versionedModId} but got {directoryName}");
+                _logger.LogInfo($"Mismatch found; Expected: {versionedModId} but got {directoryName}");
                 outdatedMods++;
             }
         }

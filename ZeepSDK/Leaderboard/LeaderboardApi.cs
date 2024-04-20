@@ -9,11 +9,11 @@ namespace ZeepSDK.Leaderboard;
 [PublicAPI]
 public static class LeaderboardApi
 {
-    private static LeaderboardHandler leaderboardHandler;
+    private static LeaderboardHandler _leaderboardHandler;
 
     internal static void Initialize(GameObject gameObject)
     {
-        leaderboardHandler = gameObject.AddComponent<LeaderboardHandler>();
+        _leaderboardHandler = gameObject.AddComponent<LeaderboardHandler>();
     }
 
     /// <summary>
@@ -25,7 +25,7 @@ public static class LeaderboardApi
         where TTab : ILeaderboardTab, new()
     {
         TTab tab = new();
-        leaderboardHandler.AddTab(tab);
+        _leaderboardHandler.AddTab(tab);
         return tab;
     }
 
@@ -35,7 +35,7 @@ public static class LeaderboardApi
     /// <param name="tab">The tab to add</param>
     public static void AddTab(ILeaderboardTab tab)
     {
-        leaderboardHandler.AddTab(tab);
+        _leaderboardHandler.AddTab(tab);
     }
 
     /// <summary>
@@ -48,7 +48,7 @@ public static class LeaderboardApi
         where TTab : ILeaderboardTab, new()
     {
         TTab tab = new();
-        leaderboardHandler.InsertTab(index, tab);
+        _leaderboardHandler.InsertTab(index, tab);
         return tab;
     }
 
@@ -59,7 +59,7 @@ public static class LeaderboardApi
     /// <param name="tab">The tab to insert</param>
     public static void InsertTab(int index, ILeaderboardTab tab)
     {
-        leaderboardHandler.InsertTab(index, tab);
+        _leaderboardHandler.InsertTab(index, tab);
     }
 
     /// <summary>
@@ -68,6 +68,6 @@ public static class LeaderboardApi
     /// <param name="tab">The tab to remove</param>
     public static void RemoveTab(ILeaderboardTab tab)
     {
-        leaderboardHandler.RemoveTab(tab);
+        _leaderboardHandler.RemoveTab(tab);
     }
 }

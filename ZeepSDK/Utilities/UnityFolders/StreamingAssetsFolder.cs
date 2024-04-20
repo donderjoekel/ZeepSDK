@@ -9,7 +9,7 @@ namespace ZeepSDK.Utilities.UnityFolders;
 [PublicAPI]
 public static class StreamingAssetsFolder
 {
-    private static readonly UnityFolder folder = new(Application.streamingAssetsPath);
+    private static readonly UnityFolder _folder = new(Application.streamingAssetsPath);
 
     /// <summary>
     /// Creates a file with the given contents
@@ -18,7 +18,7 @@ public static class StreamingAssetsFolder
     /// <param name="contents">The contents to write</param>
     public static void CreateFile(string filename, byte[] contents)
     {
-        folder.CreateFile(filename, contents);
+        _folder.CreateFile(filename, contents);
     }
 
     /// <summary>
@@ -28,7 +28,7 @@ public static class StreamingAssetsFolder
     /// <param name="contents">The contents to write</param>
     public static void CreateFile(string filename, string contents)
     {
-        folder.CreateFile(filename, contents);
+        _folder.CreateFile(filename, contents);
     }
 
     /// <summary>
@@ -37,7 +37,7 @@ public static class StreamingAssetsFolder
     /// <param name="filename">The filename, including extension, to delete</param>
     public static void DeleteFile(string filename)
     {
-        folder.DeleteFile(filename);
+        _folder.DeleteFile(filename);
     }
 
     /// <summary>
@@ -48,7 +48,7 @@ public static class StreamingAssetsFolder
     /// <param name="overwrite">If a file with the name already exists, should it be overwritten</param>
     public static void CopyFile(string sourcePath, string destinationFilename, bool overwrite)
     {
-        folder.CopyFile(sourcePath, destinationFilename, overwrite);
+        _folder.CopyFile(sourcePath, destinationFilename, overwrite);
     }
 
     /// <summary>
@@ -59,7 +59,7 @@ public static class StreamingAssetsFolder
     /// <param name="overwrite">If a file with the name already exists, should it be overwritten</param>
     public static void MoveFile(string sourcePath, string destinationFilename, bool overwrite)
     {
-        folder.MoveFile(sourcePath, destinationFilename, overwrite);
+        _folder.MoveFile(sourcePath, destinationFilename, overwrite);
     }
 
     /// <summary>
@@ -69,6 +69,6 @@ public static class StreamingAssetsFolder
     /// <returns>True if it exists, false if it doesn't</returns>
     public static bool Exists(string filename)
     {
-        return folder.Exists(filename);
+        return _folder.Exists(filename);
     }
 }

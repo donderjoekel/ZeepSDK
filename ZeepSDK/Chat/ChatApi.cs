@@ -1,7 +1,6 @@
 ﻿using System;
 using BepInEx.Logging;
 using JetBrains.Annotations;
-using UnityEngine;
 using ZeepkistClient;
 using ZeepkistNetworking;
 using ZeepSDK.Utilities;
@@ -14,7 +13,7 @@ namespace ZeepSDK.Chat;
 [PublicAPI]
 public static class ChatApi
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(ChatApi));
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(ChatApi));
 
     private static OnlineChatUI OnlineChatUI => ComponentCache.Get<OnlineChatUI>();
 
@@ -23,7 +22,7 @@ public static class ChatApi
     /// </summary>
     public static event EventHandler<ChatMessageReceivedEventArgs> ChatMessageReceived;
 
-    internal static void Initialize(GameObject gameObject)
+    internal static void Initialize()
     {
         ZeepkistNetwork.ChatMessageReceived += OnChatMessageReceived;
     }
@@ -44,7 +43,7 @@ public static class ChatApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(OnChatMessageReceived)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(OnChatMessageReceived)}: " + e);
         }
     }
 
@@ -61,7 +60,7 @@ public static class ChatApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(AddLocalMessage)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(AddLocalMessage)}: " + e);
         }
     }
 
@@ -124,7 +123,7 @@ public static class ChatApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(SendChatMessagePacket)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(SendChatMessagePacket)}: " + e);
         }
     }
 
@@ -140,7 +139,7 @@ public static class ChatApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(ClearChat)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(ClearChat)}: " + e);
         }
     }
 }

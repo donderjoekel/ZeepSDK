@@ -34,11 +34,11 @@ internal class Plugin : BaseUnityPlugin
         _harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
         _harmony.PatchAll();
 
-        ChatApi.Initialize(gameObject);
+        ChatApi.Initialize();
         ChatCommandApi.Initialize(gameObject);
         LeaderboardApi.Initialize(gameObject);
         LevelEditorApi.Initialize(gameObject);
-        RacingApi.Initialize(gameObject);
+        RacingApi.Initialize();
         MultiplayerApi.Initialize();
         PhotoModeApi.Initialize();
 

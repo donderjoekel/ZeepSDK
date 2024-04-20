@@ -4,16 +4,16 @@ namespace ZeepSDK.LevelEditor;
 
 internal static class CustomBlockCallbackRegistry
 {
-    private static readonly Dictionary<int, CustomBlockCallback> blockIdToCallback = [];
+    private static readonly Dictionary<int, CustomBlockCallback> _blockIdToCallback = [];
 
     public static void Register(int blockId, CustomBlockCallback callback)
     {
-        blockIdToCallback.Add(blockId, callback);
+        _blockIdToCallback.Add(blockId, callback);
     }
 
     public static bool TryInvoke(int blockId)
     {
-        if (blockIdToCallback.TryGetValue(blockId, out CustomBlockCallback callback))
+        if (_blockIdToCallback.TryGetValue(blockId, out CustomBlockCallback callback))
         {
             callback?.Invoke();
             return true;

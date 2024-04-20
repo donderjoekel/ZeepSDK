@@ -5,7 +5,7 @@ namespace ZeepSDK.Utilities.UnityFolders;
 
 internal class UnityFolder
 {
-    private readonly string path;
+    private readonly string _path;
 
     public UnityFolder(string path)
     {
@@ -14,7 +14,7 @@ internal class UnityFolder
             throw new ArgumentNullException(path);
         }
 
-        this.path = path;
+        _path = path;
     }
 
     private static void EnsureDirectory(string destinationPath)
@@ -33,21 +33,21 @@ internal class UnityFolder
 
     public void CreateFile(string filename, byte[] contents)
     {
-        string destinationPath = Path.Combine(path, filename);
+        string destinationPath = Path.Combine(_path, filename);
         EnsureDirectory(destinationPath);
         File.WriteAllBytes(destinationPath, contents);
     }
 
     public void CreateFile(string filename, string contents)
     {
-        string destinationPath = Path.Combine(path, filename);
+        string destinationPath = Path.Combine(_path, filename);
         EnsureDirectory(destinationPath);
         File.WriteAllText(destinationPath, contents);
     }
 
     public void DeleteFile(string filename)
     {
-        string destinationPath = Path.Combine(path, filename);
+        string destinationPath = Path.Combine(_path, filename);
         if (File.Exists(destinationPath))
         {
             File.Delete(destinationPath);
@@ -56,14 +56,14 @@ internal class UnityFolder
 
     public void CopyFile(string sourcePath, string destinationFilename, bool overwrite)
     {
-        string destinationPath = Path.Combine(path, destinationFilename);
+        string destinationPath = Path.Combine(_path, destinationFilename);
         EnsureDirectory(destinationPath);
         File.Copy(sourcePath, destinationPath, overwrite);
     }
 
     public void MoveFile(string sourcePath, string destinationFilename, bool overwrite)
     {
-        string destinationPath = Path.Combine(path, destinationFilename);
+        string destinationPath = Path.Combine(_path, destinationFilename);
         EnsureDirectory(destinationPath);
         if (File.Exists(destinationFilename) && overwrite)
         {
@@ -75,6 +75,6 @@ internal class UnityFolder
 
     public bool Exists(string filename)
     {
-        return File.Exists(Path.Combine(path, filename));
+        return File.Exists(Path.Combine(_path, filename));
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using BepInEx.Logging;
 using JetBrains.Annotations;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 using ZeepkistClient;
 using ZeepSDK.Extensions;
@@ -70,7 +69,7 @@ public static class RacingApi
     /// </summary>
     public static event EventHandler LevelLoaded;
 
-    internal static void Initialize(GameObject gameObject)
+    internal static void Initialize()
     {
         ReadyToReset_HeyYouHitATrigger.TriggerCheckpoint += time => PassedCheckpoint.InvokeSafe(time);
         ReadyToReset_HeyYouHitATrigger.TriggerFinish += time => CrossedFinishLine.InvokeSafe(time);

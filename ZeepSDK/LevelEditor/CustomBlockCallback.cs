@@ -10,32 +10,32 @@ internal abstract class CustomBlockCallback
 
 internal class CustomBlockCallbackWithoutData : CustomBlockCallback
 {
-    private readonly Action action;
+    private readonly Action _action;
 
     public CustomBlockCallbackWithoutData(Action action)
     {
-        this.action = action;
+        _action = action;
     }
 
     public override void Invoke()
     {
-        action.InvokeSafe();
+        _action.InvokeSafe();
     }
 }
 
 internal class CustomBlockCallbackWithData : CustomBlockCallback
 {
-    private readonly Action<object> action;
-    private readonly object userData;
+    private readonly Action<object> _action;
+    private readonly object _userData;
 
     public CustomBlockCallbackWithData(Action<object> action, object userData)
     {
-        this.action = action;
-        this.userData = userData;
+        _action = action;
+        _userData = userData;
     }
 
     public override void Invoke()
     {
-        action.InvokeSafe(userData);
+        _action.InvokeSafe(_userData);
     }
 }
