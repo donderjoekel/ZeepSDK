@@ -10,18 +10,25 @@ internal class UnityFolder
     public UnityFolder(string path)
     {
         if (string.IsNullOrEmpty(path))
+        {
             throw new ArgumentNullException(path);
+        }
 
         this.path = path;
     }
 
-    private void EnsureDirectory(string destinationPath)
+    private static void EnsureDirectory(string destinationPath)
     {
         string directoryName = Path.GetDirectoryName(destinationPath);
         if (string.IsNullOrEmpty(directoryName))
+        {
             throw new InvalidOperationException("Directory name is null or empty.");
+        }
+
         if (!Directory.Exists(directoryName))
+        {
             Directory.CreateDirectory(directoryName);
+        }
     }
 
     public void CreateFile(string filename, byte[] contents)
@@ -42,7 +49,9 @@ internal class UnityFolder
     {
         string destinationPath = Path.Combine(path, filename);
         if (File.Exists(destinationPath))
+        {
             File.Delete(destinationPath);
+        }
     }
 
     public void CopyFile(string sourcePath, string destinationFilename, bool overwrite)
@@ -57,7 +66,10 @@ internal class UnityFolder
         string destinationPath = Path.Combine(path, destinationFilename);
         EnsureDirectory(destinationPath);
         if (File.Exists(destinationFilename) && overwrite)
+        {
             File.Delete(destinationFilename);
+        }
+
         File.Move(sourcePath, destinationPath);
     }
 

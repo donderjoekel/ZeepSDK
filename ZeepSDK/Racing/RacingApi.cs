@@ -12,60 +12,63 @@ using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Racing;
 
+/// <summary>
+/// 
+/// </summary>
 [PublicAPI]
 public static class RacingApi
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(RacingApi));
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(RacingApi));
 
     /// <summary>
     /// An event that is fired when the player crosses the finish line. The parameter is the time the player crossed the finish line
     /// </summary>
-    public static event CrossedFinishLineDelegate CrossedFinishLine;
+    public static event EventHandler<CrossedFinishLineEventArgs> CrossedFinishLine;
 
     /// <summary>
     /// An event that is fired whenever the player passes any checkpoint. The parameter is the time the player passed the checkpoint
     /// </summary>
-    public static event PassedCheckpointDelegate PassedCheckpoint;
+    public static event EventHandler<PassedCheckpointEventArgs> PassedCheckpoint;
 
     /// <summary>
     /// An event that is fired whenever the player crashes. The parameter is the reason that the player crashed
     /// </summary>
-    public static event CrashedDelegate Crashed;
+    public static event EventHandler<CrashedEventArgs> Crashed;
 
     /// <summary>
     /// An event that is fired whenever the player enters first person mode
     /// </summary>
-    public static event EnteredFirstPersonDelegate EnteredFirstPerson;
+    public static event EventHandler EnteredFirstPerson;
 
     /// <summary>
     /// An event that is fired whenever the player enters third person mode
     /// </summary>
-    public static event EnteredThirdPersonDelegate EnteredThirdPerson;
+    public static event EventHandler EnteredThirdPerson;
 
     /// <summary>
     /// An event that is fired whenever the player spawns
     /// </summary>
-    public static event PlayerSpawnedDelegate PlayerSpawned;
+    public static event EventHandler PlayerSpawned;
 
     /// <summary>
     /// An event that is fired whenever the round starts
     /// </summary>
-    public static event RoundStartedDelegate RoundStarted;
+    public static event EventHandler RoundStarted;
 
     /// <summary>
     /// An event that is fired whenever the round ends
     /// </summary>
-    public static event RoundStartedDelegate RoundEnded;
+    public static event EventHandler RoundEnded;
 
     /// <summary>
     /// An even that is fired whenever a wheel breaks
     /// </summary>
-    public static event WheelBrokenDelegate WheelBroken;
+    public static event EventHandler WheelBroken;
 
     /// <summary>
     /// An event that is fired when the level you are about to play has been loaded
     /// </summary>
-    public static event LevelLoaded LevelLoaded;
+    public static event EventHandler LevelLoaded;
 
     internal static void Initialize(GameObject gameObject)
     {
@@ -97,7 +100,9 @@ public static class RacingApi
         try
         {
             if (!LevelManager.Instance.TryGetLevel(uid, out LevelScriptableObject level))
+            {
                 return Result.Fail("Level not found");
+            }
 
             PlayerManager.Instance.amountOfPlayers = 1;
             PlayerManager.Instance.singlePlayer = true;
@@ -113,7 +118,7 @@ public static class RacingApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(LoadTrackInFreePlayAsync)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(LoadTrackInFreePlayAsync)}: " + e);
             return Result.Fail(new ExceptionalError(e));
         }
     }

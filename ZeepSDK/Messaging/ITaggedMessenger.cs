@@ -10,7 +10,10 @@ public interface ITaggedMessenger
     /// <summary>
     /// The tag that is shown
     /// </summary>
-    public string Tag { get; }
+    public string Tag
+    {
+        get;
+    }
 
     /// <summary>
     /// <see cref="MessengerApi.Log"/>

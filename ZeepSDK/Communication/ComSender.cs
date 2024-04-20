@@ -9,18 +9,18 @@ namespace ZeepSDK.Communication;
 
 internal class ComSender : IComSender
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger<ComSender>();
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger<ComSender>();
 
-    private readonly BaseUnityPlugin plugin;
+    private readonly BaseUnityPlugin _plugin;
 
     public ComSender(BaseUnityPlugin plugin)
     {
-        this.plugin = plugin;
+        _plugin = plugin;
     }
 
     public void SendMessage(string message)
     {
-        List<IComReceiver> comReceivers = ReceiverRepository.GetReceivers(plugin.Info.Metadata.GUID);
+        List<IComReceiver> comReceivers = ReceiverRepository.GetReceivers(_plugin.Info.Metadata.GUID);
 
         foreach (IComReceiver comReceiver in comReceivers)
         {
@@ -28,7 +28,7 @@ internal class ComSender : IComSender
             {
                 if (comReceiver == null)
                 {
-                    logger.LogWarning("Skipping null receiver");
+                    _logger.LogWarning("Skipping null receiver");
                     continue;
                 }
 
@@ -36,7 +36,7 @@ internal class ComSender : IComSender
             }
             catch (Exception e)
             {
-                logger.LogError("Error while sending message: " + e);
+                _logger.LogError("Error while sending message: " + e);
             }
         }
     }

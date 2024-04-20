@@ -16,14 +16,14 @@ namespace ZeepSDK.Storage;
 
 internal class ModStorage : IModStorage
 {
-    private readonly BaseUnityPlugin plugin;
-    private readonly JsonSerializerSettings settings;
-    private readonly string directoryPath;
+    private readonly BaseUnityPlugin _plugin;
+    private readonly JsonSerializerSettings _settings;
+    private readonly string _directoryPath;
 
     public ModStorage(BaseUnityPlugin plugin)
     {
-        this.plugin = plugin;
-        settings = new JsonSerializerSettings
+        _plugin = plugin;
+        _settings = new JsonSerializerSettings
         {
             ContractResolver = new UnityTypeContractResolver(),
             Converters = new List<JsonConverter>()
@@ -53,7 +53,7 @@ internal class ModStorage : IModStorage
             }
         };
 
-        directoryPath = Path.Combine(
+        _directoryPath = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
             "Zeepkist",
             "Mods",
@@ -62,7 +62,7 @@ internal class ModStorage : IModStorage
 
     private string CreatePath(string name, string extension = ".json")
     {
-        string filePath = Path.Combine(directoryPath, name) + extension;
+        string filePath = Path.Combine(_directoryPath, name) + extension;
 
         string directoryName = Path.GetDirectoryName(filePath);
         if (!string.IsNullOrEmpty(directoryName) && !Directory.Exists(directoryName))
@@ -75,42 +75,44 @@ internal class ModStorage : IModStorage
 
     public void AddConverter(JsonConverter converter)
     {
-        settings.Converters.Add(converter);
+        _settings.Converters.Add(converter);
     }
 
     public void RemoveConverter(JsonConverter converter)
     {
-        settings.Converters.Remove(converter);
+        _settings.Converters.Remove(converter);
     }
 
     public void SaveToJson(string name, object data)
     {
-        string json = JsonConvert.SerializeObject(data, settings);
+        string json = JsonConvert.SerializeObject(data, _settings);
         File.WriteAllText(CreatePath(name), json);
     }
 
     public object LoadFromJson(string name)
     {
         string json = File.ReadAllText(CreatePath(name));
-        return JsonConvert.DeserializeObject(json, settings);
+        return JsonConvert.DeserializeObject(json, _settings);
     }
 
     public object LoadFromJson(string name, Type type)
     {
         string json = File.ReadAllText(CreatePath(name));
-        return JsonConvert.DeserializeObject(json, type, settings);
+        return JsonConvert.DeserializeObject(json, type, _settings);
     }
 
     public TData LoadFromJson<TData>(string name)
     {
         string json = File.ReadAllText(CreatePath(name));
-        return JsonConvert.DeserializeObject<TData>(json, settings);
+        return JsonConvert.DeserializeObject<TData>(json, _settings);
     }
 
     public void DeleteFile(string name)
     {
         string path = CreatePath(name);
         if (File.Exists(path))
+        {
             File.Delete(path);
+        }
     }
 }

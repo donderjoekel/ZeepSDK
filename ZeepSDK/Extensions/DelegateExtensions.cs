@@ -9,14 +9,18 @@ internal static class DelegateExtensions
     public static void InvokeSafe(this Delegate d, params object[] args)
     {
         if (d == null)
+        {
             return;
+        }
 
         Delegate[] invocationList = d.GetInvocationList();
         foreach (Delegate invocation in invocationList)
         {
             if (invocation == null)
+            {
                 continue;
-            
+            }
+
             try
             {
                 invocation.DynamicInvoke(args);

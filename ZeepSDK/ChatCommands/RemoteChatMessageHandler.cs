@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using BepInEx.Logging;
 using ZeepkistClient;
 using ZeepSDK.Chat;
@@ -9,7 +8,7 @@ namespace ZeepSDK.ChatCommands;
 
 internal class RemoteChatMessageHandler : MonoBehaviourWithLogging
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger<RemoteChatMessageHandler>();
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger<RemoteChatMessageHandler>();
 
     private void Start()
     {
@@ -21,45 +20,53 @@ internal class RemoteChatMessageHandler : MonoBehaviourWithLogging
         ChatApi.ChatMessageReceived -= OnChatMessageReceived;
     }
 
-    private void OnChatMessageReceived(ulong playerId, string username, string message)
+    private void OnChatMessageReceived(object sender, ChatMessageReceivedEventArgs args)
     {
         try
         {
             if (!ZeepkistNetwork.IsMasterClient)
+            {
                 return;
+            }
 
-            if (string.IsNullOrEmpty(message))
+            if (string.IsNullOrEmpty(args.Message))
             {
                 Logger.LogWarning("Received chat message with empty message");
                 return;
             }
 
-            message = message
-                .Replace("<noparse>", string.Empty)
-                .Replace("</noparse>", string.Empty)
+            string message = args.Message
+                .Replace("<noparse>", string.Empty, StringComparison.OrdinalIgnoreCase)
+                .Replace("</noparse>", string.Empty, StringComparison.OrdinalIgnoreCase)
                 .Trim();
 
-            if (ZeepkistNetwork.LocalPlayer.SteamID == playerId)
+            if (ZeepkistNetwork.LocalPlayer.SteamID == args.PlayerId)
+            {
                 return;
+            }
 
             foreach (IRemoteChatCommand remoteChatCommand in ChatCommandRegistry.RemoteChatCommands)
             {
-                ProcessRemoteChatCommand(remoteChatCommand, playerId, message);
+                ProcessRemoteChatCommand(remoteChatCommand, args.PlayerId, message);
             }
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(OnChatMessageReceived)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(OnChatMessageReceived)}: " + e);
         }
     }
 
     private static void ProcessRemoteChatCommand(IRemoteChatCommand remoteChatCommand, ulong playerId, string message)
     {
         if (remoteChatCommand == null)
+        {
             return;
+        }
 
         if (!ChatCommandUtilities.MatchesCommand(message, remoteChatCommand))
+        {
             return;
+        }
 
         string arguments = ChatCommandUtilities.GetArguments(message, remoteChatCommand);
 

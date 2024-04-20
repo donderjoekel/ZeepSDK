@@ -1,0 +1,10 @@
+﻿root = true
+
+[*.cs]
+generated_code = true
+dotnet_analyzer_diagnostic.severity = none
+dotnet_diagnostic.CS1570.severity = none
+dotnet_diagnostic.CS1573.severity = none
+dotnet_diagnostic.CS1574.severity = none
+dotnet_diagnostic.CS1735.severity = none
+dotnet_diagnostic.CS1591.severity = none

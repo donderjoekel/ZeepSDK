@@ -1,30 +1,39 @@
-using ZeepSDK.ChatCommands.Commands;
-
 namespace ZeepSDK.ChatCommands;
 
 internal class MixedChatCommandWrapper : MixedChatCommandBase
 {
-    private readonly MixedChatCommandCallbackDelegate callback;
+    private readonly MixedChatCommandCallback _callback;
 
-    public override string Prefix { get; }
-    public override string Command { get; }
-    public override string Description { get; }
+    public override string Prefix
+    {
+        get;
+    }
+
+    public override string Command
+    {
+        get;
+    }
+
+    public override string Description
+    {
+        get;
+    }
 
     public MixedChatCommandWrapper(
         string prefix,
         string command,
         string description,
-        MixedChatCommandCallbackDelegate callback
+        MixedChatCommandCallback callback
     )
     {
         Prefix = prefix;
         Command = command;
         Description = description;
-        this.callback = callback;
+        _callback = callback;
     }
 
     protected override void Handle(bool isLocal, ulong playerId, string arguments)
     {
-        callback?.Invoke(isLocal, playerId, arguments);
+        _callback?.Invoke(isLocal, playerId, arguments);
     }
 }

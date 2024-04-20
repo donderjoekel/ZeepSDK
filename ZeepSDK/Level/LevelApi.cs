@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -15,9 +16,7 @@ namespace ZeepSDK.Level;
 [PublicAPI]
 public static class LevelApi
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(LevelApi));
-
-    private static readonly Dictionary<string, string> uidToHash = new();
+    private static readonly Dictionary<string, string> _uidToHash = new();
 
     /// <summary>
     /// Creates a unique hash for the level based on the actual contents
@@ -27,15 +26,19 @@ public static class LevelApi
     public static string GetLevelHash(LevelScriptableObject levelScriptableObject)
     {
         if (levelScriptableObject == null)
+        {
             throw new ArgumentNullException(nameof(levelScriptableObject));
+        }
 
-        if (uidToHash.TryGetValue(levelScriptableObject.UID, out string hash))
+        if (_uidToHash.TryGetValue(levelScriptableObject.UID, out string hash))
+        {
             return hash;
+        }
 
         string textToHash = GetTextToHash(levelScriptableObject.LevelData);
         hash = Hash(textToHash);
 
-        uidToHash[levelScriptableObject.UID] = hash;
+        _uidToHash[levelScriptableObject.UID] = hash;
         return hash;
     }
 
@@ -52,17 +55,18 @@ public static class LevelApi
 
     private static string Hash(string input)
     {
-        using (SHA1 sha1 = SHA1.Create())
+#pragma warning disable CA5350 // Ignoring because this isn't used for security purposes
+        using SHA1 sha1 = SHA1.Create();
+#pragma warning restore CA5350
+
+        byte[] hash = sha1.ComputeHash(Encoding.UTF8.GetBytes(input));
+        StringBuilder sb = new(hash.Length * 2);
+
+        foreach (byte b in hash)
         {
-            byte[] hash = sha1.ComputeHash(Encoding.UTF8.GetBytes(input));
-            StringBuilder sb = new(hash.Length * 2);
-
-            foreach (byte b in hash)
-            {
-                sb.Append(b.ToString("X2"));
-            }
-
-            return sb.ToString();
+            sb.Append(b.ToString("X2", CultureInfo.InvariantCulture));
         }
+
+        return sb.ToString();
     }
 }

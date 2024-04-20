@@ -10,17 +10,17 @@ namespace ZeepSDK.Leaderboard;
 
 internal class LeaderboardHandler : MonoBehaviourWithLogging
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(LeaderboardHandler));
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(LeaderboardHandler));
 
-    private readonly List<IMultiplayerLeaderboardTab> multiplayerTabs = new();
-    private readonly List<ISingleplayerLeaderboardTab> singleplayerTabs = new();
-    private int currentTabIndex;
+    private readonly List<IMultiplayerLeaderboardTab> _multiplayerTabs = [];
+    private readonly List<ISingleplayerLeaderboardTab> _singleplayerTabs = [];
+    private int _currentTabIndex;
 
-    private int CurrentTabCount => ZeepkistNetwork.IsConnectedToGame ? multiplayerTabs.Count : singleplayerTabs.Count;
+    private int CurrentTabCount => ZeepkistNetwork.IsConnectedToGame ? _multiplayerTabs.Count : _singleplayerTabs.Count;
 
     private ILeaderboardTab CurrentLeaderboardTab => ZeepkistNetwork.IsConnectedToGame
-        ? multiplayerTabs[currentTabIndex]
-        : singleplayerTabs[currentTabIndex];
+        ? _multiplayerTabs[_currentTabIndex]
+        : _singleplayerTabs[_currentTabIndex];
 
     private void Start()
     {
@@ -35,19 +35,27 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
     internal void AddTab(ILeaderboardTab tab)
     {
         if (tab is IMultiplayerLeaderboardTab multiplayerLeaderboardTab)
-            multiplayerTabs.Add(multiplayerLeaderboardTab);
+        {
+            _multiplayerTabs.Add(multiplayerLeaderboardTab);
+        }
 
         if (tab is ISingleplayerLeaderboardTab singleplayerLeaderboardTab)
-            singleplayerTabs.Add(singleplayerLeaderboardTab);
+        {
+            _singleplayerTabs.Add(singleplayerLeaderboardTab);
+        }
     }
 
     internal void InsertTab(int index, ILeaderboardTab tab)
     {
         if (tab is IMultiplayerLeaderboardTab multiplayerLeaderboardTab)
-            multiplayerTabs.Insert(index, multiplayerLeaderboardTab);
+        {
+            _multiplayerTabs.Insert(index, multiplayerLeaderboardTab);
+        }
 
         if (tab is ISingleplayerLeaderboardTab singleplayerLeaderboardTab)
-            singleplayerTabs.Insert(index, singleplayerLeaderboardTab);
+        {
+            _singleplayerTabs.Insert(index, singleplayerLeaderboardTab);
+        }
     }
 
     internal void RemoveTab(ILeaderboardTab tab)
@@ -55,10 +63,10 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
         switch (tab)
         {
             case IMultiplayerLeaderboardTab multiplayerLeaderboardTab:
-                multiplayerTabs.Remove(multiplayerLeaderboardTab);
+                _multiplayerTabs.Remove(multiplayerLeaderboardTab);
                 break;
             case ISingleplayerLeaderboardTab singleplayerLeaderboardTab:
-                singleplayerTabs.Remove(singleplayerLeaderboardTab);
+                _singleplayerTabs.Remove(singleplayerLeaderboardTab);
                 break;
             default:
                 throw new ArgumentException("Tab must be either a multiplayer or singleplayer tab");
@@ -70,13 +78,13 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
         try
         {
             sender.PauseHandler.Pause();
-            currentTabIndex = 0;
+            _currentTabIndex = 0;
             CurrentLeaderboardTab.Enable(sender);
             CurrentLeaderboardTab.Draw();
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(OnOpen)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(OnOpen)}: " + e);
         }
     }
 
@@ -89,7 +97,7 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(OnClose)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(OnClose)}: " + e);
         }
     }
 
@@ -105,7 +113,7 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
             if (sender.SwitchAction.buttonDown)
             {
                 CurrentLeaderboardTab.Disable();
-                currentTabIndex = (currentTabIndex + 1) % CurrentTabCount;
+                _currentTabIndex = (_currentTabIndex + 1) % CurrentTabCount;
                 CurrentLeaderboardTab.Enable(sender);
                 CurrentLeaderboardTab.Draw();
             }
@@ -123,7 +131,9 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
             }
 
             if (!ZeepkistNetwork.IsConnectedToGame)
+            {
                 return;
+            }
 
             string timeNoMilliSeconds = (ZeepkistNetwork.CurrentLobby.RoundTime -
                                          (ZeepkistNetwork.Time - ZeepkistNetwork.CurrentLobby.LevelLoadedAtTime))
@@ -132,7 +142,7 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(OnUpdate)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(OnUpdate)}: " + e);
         }
     }
 }

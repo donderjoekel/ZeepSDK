@@ -5,7 +5,10 @@ namespace ZeepSDK.Messaging;
 
 internal class TaggedMessenger : ITaggedMessenger
 {
-    public string Tag { get; }
+    public string Tag
+    {
+        get;
+    }
 
     public TaggedMessenger(string tag)
     {

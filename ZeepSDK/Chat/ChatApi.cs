@@ -22,7 +22,7 @@ public static class ChatApi
     /// <summary>
     /// Event that is fired when a chat message is received
     /// </summary>
-    public static event ChatMessageReceivedDelegate ChatMessageReceived;
+    public static event EventHandler<ChatMessageReceivedEventArgs> ChatMessageReceived;
 
     internal static void Initialize(GameObject gameObject)
     {
@@ -33,13 +33,15 @@ public static class ChatApi
     {
         try
         {
-            if (zeepkistChatMessage == null)
+            if (zeepkistChatMessage?.Player == null)
+            {
                 return;
-            if (zeepkistChatMessage.Player == null)
-                return;
-            ChatMessageReceived?.Invoke(zeepkistChatMessage.Player.SteamID,
-                zeepkistChatMessage.Player.GetTaggedUsername(),
-                zeepkistChatMessage.Message);
+            }
+
+            ChatMessageReceived?.Invoke(null,
+                new ChatMessageReceivedEventArgs(zeepkistChatMessage.Player?.SteamID ?? 0,
+                    zeepkistChatMessage.Player?.GetTaggedUsername() ?? string.Empty,
+                    zeepkistChatMessage.Message));
         }
         catch (Exception e)
         {
@@ -118,13 +120,11 @@ public static class ChatApi
         try
         {
             if (ZeepkistNetwork.NetworkClient == null)
-                return;
-
-            ZeepkistNetwork.NetworkClient.SendPacket(new ChatMessagePacket()
             {
-                Message = content,
-                Badges = new List<string>()
-            });
+                return;
+            }
+
+            ZeepkistNetwork.NetworkClient.SendPacket(new ChatMessagePacket() { Message = content, Badges = [] });
         }
         catch (Exception e)
         {
