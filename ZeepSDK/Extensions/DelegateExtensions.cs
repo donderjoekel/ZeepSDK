@@ -23,7 +23,7 @@ internal static class DelegateExtensions
 
             try
             {
-                invocation.DynamicInvoke(args);
+                _ = invocation.DynamicInvoke(args);
             }
             catch (Exception e)
             {

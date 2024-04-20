@@ -6,13 +6,22 @@ namespace ZeepSDK.ChatCommands;
 public abstract class MixedChatCommandBase : IMixedChatCommand
 {
     /// <inheritdoc />
-    public abstract string Prefix { get; }
+    public abstract string Prefix
+    {
+        get;
+    }
 
     /// <inheritdoc />
-    public abstract string Command { get; }
+    public abstract string Command
+    {
+        get;
+    }
 
     /// <inheritdoc />
-    public abstract string Description { get; }
+    public abstract string Description
+    {
+        get;
+    }
 
     void IRemoteChatCommand.Handle(ulong playerId, string arguments)
     {

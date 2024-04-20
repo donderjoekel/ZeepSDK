@@ -4,9 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using BepInEx.Logging;
 using JetBrains.Annotations;
-using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Level;
 
@@ -16,7 +14,7 @@ namespace ZeepSDK.Level;
 [PublicAPI]
 public static class LevelApi
 {
-    private static readonly Dictionary<string, string> _uidToHash = new();
+    private static readonly Dictionary<string, string> _uidToHash = [];
 
     /// <summary>
     /// Creates a unique hash for the level based on the actual contents
@@ -64,7 +62,7 @@ public static class LevelApi
 
         foreach (byte b in hash)
         {
-            sb.Append(b.ToString("X2", CultureInfo.InvariantCulture));
+            _ = sb.Append(b.ToString("X2", CultureInfo.InvariantCulture));
         }
 
         return sb.ToString();

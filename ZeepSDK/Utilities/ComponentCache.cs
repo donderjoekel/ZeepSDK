@@ -6,7 +6,7 @@ namespace ZeepSDK.Utilities;
 
 internal static class ComponentCache
 {
-    private static readonly Dictionary<Type, Object> _cache = new Dictionary<Type, Object>();
+    private static readonly Dictionary<Type, Object> _cache = [];
 
     public static T Get<T>(bool includeInactive = false) where T : Object
     {
@@ -26,7 +26,7 @@ internal static class ComponentCache
             return instance;
         }
 
-        _cache.Remove(type);
+        _ = _cache.Remove(type);
         return null;
     }
 }

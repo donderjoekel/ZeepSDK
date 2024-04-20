@@ -51,7 +51,10 @@ internal class PlaylistEditor : IPlaylistEditor
         AddLevel(
             new OnlineZeeplevel
             {
-                Author = level.Author, Name = level.Name, UID = level.UID, WorkshopID = level.WorkshopID
+                Author = level.Author,
+                Name = level.Name,
+                UID = level.UID,
+                WorkshopID = level.WorkshopID
             },
             allowDuplicate);
     }

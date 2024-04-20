@@ -38,12 +38,9 @@ public static class WorkshopApi
 
             bool subscribed = await item.Value.Subscribe().ConfigureAwait(true);
 
-            if (!subscribed)
-            {
-                return Result.Fail("Unable to subscribe to workshop item");
-            }
-
-            return Result.OkIf(
+            return !subscribed
+                ? Result.Fail("Unable to subscribe to workshop item")
+                : Result.OkIf(
                 await WorkshopManager.Instance.DownloadWorkshopLevel(item.Value.Id).ConfigureAwait(true),
                 "Unable to download workshop level");
         }

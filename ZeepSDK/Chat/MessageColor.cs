@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace ZeepSDK.Chat;
+﻿namespace ZeepSDK.Chat;
 
 /// <summary>
 /// The available colors for messages

@@ -9,7 +9,7 @@ namespace ZeepSDK.Utilities.UnityFolders;
 [PublicAPI]
 public static class StreamingAssetsFolder
 {
-    private static readonly UnityFolder folder = new UnityFolder(Application.streamingAssetsPath);
+    private static readonly UnityFolder folder = new(Application.streamingAssetsPath);
 
     /// <summary>
     /// Creates a file with the given contents

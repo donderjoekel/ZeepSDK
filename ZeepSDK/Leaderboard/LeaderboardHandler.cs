@@ -60,17 +60,12 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
 
     internal void RemoveTab(ILeaderboardTab tab)
     {
-        switch (tab)
+        _ = tab switch
         {
-            case IMultiplayerLeaderboardTab multiplayerLeaderboardTab:
-                _multiplayerTabs.Remove(multiplayerLeaderboardTab);
-                break;
-            case ISingleplayerLeaderboardTab singleplayerLeaderboardTab:
-                _singleplayerTabs.Remove(singleplayerLeaderboardTab);
-                break;
-            default:
-                throw new ArgumentException("Tab must be either a multiplayer or singleplayer tab");
-        }
+            IMultiplayerLeaderboardTab multiplayerLeaderboardTab => _multiplayerTabs.Remove(multiplayerLeaderboardTab),
+            ISingleplayerLeaderboardTab singleplayerLeaderboardTab => _singleplayerTabs.Remove(singleplayerLeaderboardTab),
+            _ => throw new ArgumentException("Tab must be either a multiplayer or singleplayer tab"),
+        };
     }
 
     private void OnOpen(OnlineTabLeaderboardUI sender)

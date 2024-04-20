@@ -9,7 +9,7 @@ namespace ZeepSDK.Utilities.UnityFolders;
 [PublicAPI]
 public static class PluginsFolder
 {
-    private static readonly UnityFolder folder = new UnityFolder(Application.dataPath + "/Plugins");
+    private static readonly UnityFolder folder = new(Application.dataPath + "/Plugins");
 
     /// <summary>
     /// Creates a file with the given contents

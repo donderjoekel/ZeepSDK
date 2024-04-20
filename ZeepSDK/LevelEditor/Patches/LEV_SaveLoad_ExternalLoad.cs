@@ -8,7 +8,7 @@ namespace ZeepSDK.LevelEditor.Patches;
 internal class LEV_SaveLoad_ExternalLoad
 {
     public static event Action PostfixEvent;
-    
+
     [UsedImplicitly]
     private static void Postfix(bool useV15loading, bool retainUndoList)
     {

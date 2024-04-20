@@ -13,22 +13,34 @@ public interface IPlaylistEditor
     /// <summary>
     /// The name of the playlist
     /// </summary>
-    string Name { get; set; }
+    string Name
+    {
+        get; set;
+    }
 
     /// <summary>
     /// The levels in the playlist
     /// </summary>
-    IReadOnlyList<OnlineZeeplevel> Levels { get; }
+    IReadOnlyList<OnlineZeeplevel> Levels
+    {
+        get;
+    }
 
     /// <summary>
     /// Should the playlist be shuffled?
     /// </summary>
-    bool Shuffle { get; set; }
+    bool Shuffle
+    {
+        get; set;
+    }
 
     /// <summary>
     /// The length of each round
     /// </summary>
-    double RoundLength { get; set; }
+    double RoundLength
+    {
+        get; set;
+    }
 
     /// <summary>
     /// Adds a level to the playlist

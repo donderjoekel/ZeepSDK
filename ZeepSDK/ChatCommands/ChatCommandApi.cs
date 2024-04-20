@@ -13,11 +13,11 @@ namespace ZeepSDK.ChatCommands;
 [PublicAPI]
 public static class ChatCommandApi
 {
-    private static ManualLogSource _logger = LoggerFactory.GetLogger(typeof(ChatCommandApi));
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(ChatCommandApi));
 
     internal static void Initialize(GameObject gameObject)
     {
-        gameObject.AddComponent<RemoteChatMessageHandler>();
+        _ = gameObject.AddComponent<RemoteChatMessageHandler>();
         RegisterLocalChatCommand<HelpLocalChatCommand>();
         RegisterLocalChatCommand<ClearChatLocalChatCommand>();
         RegisterRemoteChatCommand<HelpRemoteChatCommand>();

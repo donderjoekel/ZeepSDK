@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
 
 namespace ZeepSDK.LevelEditor.Builders;
@@ -8,8 +7,8 @@ namespace ZeepSDK.LevelEditor.Builders;
 internal class CustomFolderBuilder : ICustomFolderBuilder
 {
     private readonly GameObject gameObject;
-    private readonly List<CustomFolderBuilder> folders = new();
-    private readonly List<CustomBlockBuilder> blocks = new();
+    private readonly List<CustomFolderBuilder> folders = [];
+    private readonly List<CustomBlockBuilder> blocks = [];
 
     private Sprite thumbnail;
     private string name;
@@ -54,7 +53,7 @@ internal class CustomFolderBuilder : ICustomFolderBuilder
 
         blocksFolder.name = name;
         blocksFolder.folderThumb = thumbnail;
-        blocksFolder.folders = new List<BlocksFolder>();
+        blocksFolder.folders = [];
         foreach (CustomFolderBuilder customFolderBuilder in folders)
         {
             BlocksFolder folder = customFolderBuilder.Build();
@@ -63,7 +62,7 @@ internal class CustomFolderBuilder : ICustomFolderBuilder
             blocksFolder.folders.Add(folder);
         }
 
-        blocksFolder.blocks = new List<BlockProperties>();
+        blocksFolder.blocks = [];
         foreach (CustomBlockBuilder customBlockBuilder in blocks)
         {
             BlockProperties blockProperties = customBlockBuilder.Build(gameObject);

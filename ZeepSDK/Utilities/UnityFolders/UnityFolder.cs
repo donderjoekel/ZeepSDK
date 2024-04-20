@@ -27,7 +27,7 @@ internal class UnityFolder
 
         if (!Directory.Exists(directoryName))
         {
-            Directory.CreateDirectory(directoryName);
+            _ = Directory.CreateDirectory(directoryName);
         }
     }
 

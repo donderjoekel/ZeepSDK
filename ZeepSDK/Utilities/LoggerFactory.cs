@@ -10,7 +10,7 @@ namespace ZeepSDK.Utilities;
 public static class LoggerFactory
 {
     private static readonly ManualLogSource _unknownLogger = Logger.CreateLogSource("Unknown");
-    private static readonly Dictionary<Type, ManualLogSource> _loggers = new();
+    private static readonly Dictionary<Type, ManualLogSource> _loggers = [];
 
     /// <summary>
     /// 

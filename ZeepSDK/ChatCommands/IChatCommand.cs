@@ -11,15 +11,24 @@ public interface IChatCommand
     /// <summary>
     /// The prefix of this chat command
     /// </summary>
-    string Prefix { get; }
+    string Prefix
+    {
+        get;
+    }
 
     /// <summary>
     /// The keyword of this chat command
     /// </summary>
-    string Command { get; }
+    string Command
+    {
+        get;
+    }
 
     /// <summary>
     /// The description of this chat command
     /// </summary>
-    string Description { get; }
+    string Description
+    {
+        get;
+    }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using BepInEx.Logging;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -58,10 +57,7 @@ public static class ChatApi
         try
         {
             OnlineChatUI onlineChatUi = OnlineChatUI;
-            if (onlineChatUi != null)
-            {
-                onlineChatUi.UpdateChatFields(message, 0);
-            }
+            onlineChatUi?.UpdateChatFields(message, 0);
         }
         catch (Exception e)
         {
@@ -140,10 +136,7 @@ public static class ChatApi
         try
         {
             OnlineChatUI onlineChatUi = OnlineChatUI;
-            if (onlineChatUi != null)
-            {
-                onlineChatUi.ClearChat();
-            }
+            onlineChatUi?.ClearChat();
         }
         catch (Exception e)
         {

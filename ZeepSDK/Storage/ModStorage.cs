@@ -67,7 +67,7 @@ internal class ModStorage : IModStorage
         string directoryName = Path.GetDirectoryName(filePath);
         if (!string.IsNullOrEmpty(directoryName) && !Directory.Exists(directoryName))
         {
-            Directory.CreateDirectory(directoryName);
+            _ = Directory.CreateDirectory(directoryName);
         }
 
         return filePath;
@@ -80,7 +80,7 @@ internal class ModStorage : IModStorage
 
     public void RemoveConverter(JsonConverter converter)
     {
-        _settings.Converters.Remove(converter);
+        _ = _settings.Converters.Remove(converter);
     }
 
     public void SaveToJson(string name, object data)

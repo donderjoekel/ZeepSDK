@@ -45,22 +45,8 @@ internal class ComReceiver : IComReceiver
 
     public override bool Equals(object obj)
     {
-        if (ReferenceEquals(null, obj))
-        {
-            return false;
-        }
-
-        if (ReferenceEquals(this, obj))
-        {
-            return true;
-        }
-
-        if (obj.GetType() != typeof(IComReceiver))
-        {
-            return false;
-        }
-
-        return Equals((IComReceiver)obj);
+        return obj is not null && (ReferenceEquals(this, obj) ||
+                                   (obj.GetType() == typeof(IComReceiver) && Equals((IComReceiver)obj)));
     }
 
     public override int GetHashCode()

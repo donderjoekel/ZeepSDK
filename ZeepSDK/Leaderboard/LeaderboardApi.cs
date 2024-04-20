@@ -24,7 +24,7 @@ public static class LeaderboardApi
     public static TTab AddTab<TTab>()
         where TTab : ILeaderboardTab, new()
     {
-        TTab tab = new TTab();
+        TTab tab = new();
         leaderboardHandler.AddTab(tab);
         return tab;
     }
@@ -47,7 +47,7 @@ public static class LeaderboardApi
     public static TTab InsertTab<TTab>(int index)
         where TTab : ILeaderboardTab, new()
     {
-        TTab tab = new TTab();
+        TTab tab = new();
         leaderboardHandler.InsertTab(index, tab);
         return tab;
     }

@@ -55,33 +55,11 @@ public static class MultiplayerApi
     /// <br/><br/>
     /// The level can be null due to not being connected, not playing an online match, or issues with downloading the level from the workshop
     /// </returns>
-    public static LevelScriptableObject CurrentLevel
-    {
-        get
-        {
-            if (!ZeepkistNetwork.IsConnected || !ZeepkistNetwork.IsConnectedToGame)
-            {
-                return null;
-            }
-
-            if (ZeepkistNetwork.CurrentLobby == null)
-            {
-                return null;
-            }
-
-            if (PlayerManager.Instance == null)
-            {
-                return null;
-            }
-
-            if (PlayerManager.Instance.loader == null)
-            {
-                return null;
-            }
-
-            return PlayerManager.Instance.loader.GlobalLevel;
-        }
-    }
+    public static LevelScriptableObject CurrentLevel => !ZeepkistNetwork.IsConnected || !ZeepkistNetwork.IsConnectedToGame
+                ? null
+                : ZeepkistNetwork.CurrentLobby == null
+                ? null
+                : PlayerManager.Instance?.loader?.GlobalLevel;
 
     internal static void Initialize()
     {

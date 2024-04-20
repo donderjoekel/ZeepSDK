@@ -77,21 +77,16 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab
 
         try
         {
-            if (ZeepkistNetwork.IsConnectedToGame)
-            {
-                Instance.playersLeaderboard.text = I2.Loc.LocalizationManager
+            Instance.playersLeaderboard.text = ZeepkistNetwork.IsConnectedToGame
+                ? I2.Loc.LocalizationManager
                     .GetTranslation("Online/Leaderboard/PlayerCount")
                     .Replace("{[PLAYERS]}",
                         ZeepkistNetwork.PlayerList.Count.ToString(CultureInfo.InvariantCulture),
                         StringComparison.Ordinal)
                     .Replace("{[MAXPLAYERS]}",
                         ZeepkistNetwork.CurrentLobby.MaxPlayerCount.ToString(CultureInfo.InvariantCulture),
-                        StringComparison.Ordinal);
-            }
-            else
-            {
-                Instance.playersLeaderboard.text = string.Empty;
-            }
+                        StringComparison.Ordinal)
+                : string.Empty;
 
             Instance.leaderboardTitle.text = GetLeaderboardTitle();
 

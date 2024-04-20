@@ -94,7 +94,10 @@ public static class PlaylistApi
             return existingPlaylist;
         }
 
-        PlaylistSaveJSON playlist = new() { name = name };
+        PlaylistSaveJSON playlist = new()
+        {
+            name = name
+        };
 
         CreateEditor(playlist).Save();
 

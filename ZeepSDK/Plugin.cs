@@ -24,14 +24,15 @@ internal class Plugin : BaseUnityPlugin
         private set;
     }
 
-    private Harmony harmony;
+#pragma warning disable IDE0051
+    private Harmony _harmony;
 
     private void Awake()
     {
         Instance = this;
 
-        harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
-        harmony.PatchAll();
+        _harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
+        _harmony.PatchAll();
 
         ChatApi.Initialize(gameObject);
         ChatCommandApi.Initialize(gameObject);
@@ -56,7 +57,8 @@ internal class Plugin : BaseUnityPlugin
 
     private void OnDestroy()
     {
-        harmony?.UnpatchSelf();
-        harmony = null;
+        _harmony?.UnpatchSelf();
+        _harmony = null;
     }
+#pragma warning restore IDE0051
 }

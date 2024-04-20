@@ -137,7 +137,7 @@ internal class VersionChecker
 
         try
         {
-            result.EnsureSuccessStatusCode();
+            _ = result.EnsureSuccessStatusCode();
         }
         catch (Exception e)
         {

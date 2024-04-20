@@ -9,7 +9,6 @@ using ZeepSDK.Extensions;
 using ZeepSDK.LevelEditor.Builders;
 using ZeepSDK.LevelEditor.Patches;
 using ZeepSDK.Utilities;
-using Debug = System.Diagnostics.Debug;
 
 namespace ZeepSDK.LevelEditor;
 
@@ -20,9 +19,9 @@ namespace ZeepSDK.LevelEditor;
 public static class LevelEditorApi
 {
     private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(LevelEditorApi));
-    private static readonly List<object> _mouseInputBlockers = new();
-    private static readonly List<object> _keyboardInputBlockers = new();
-    private static readonly List<CustomFolderBuilder> _scheduledCustomFolderBuilders = new();
+    private static readonly List<object> _mouseInputBlockers = [];
+    private static readonly List<object> _keyboardInputBlockers = [];
+    private static readonly List<CustomFolderBuilder> _scheduledCustomFolderBuilders = [];
 
     private static SetupGame SetupGame => ComponentCache.Get<SetupGame>();
 
@@ -117,7 +116,7 @@ public static class LevelEditorApi
     /// <param name="blocker">The blocker to use for identification</param>
     public static void UnblockMouseInput(object blocker)
     {
-        _mouseInputBlockers.Remove(blocker);
+        _ = _mouseInputBlockers.Remove(blocker);
     }
 
     /// <summary>
@@ -162,7 +161,7 @@ public static class LevelEditorApi
         try
         {
             int countBefore = _keyboardInputBlockers.Count;
-            _keyboardInputBlockers.Remove(blocker);
+            _ = _keyboardInputBlockers.Remove(blocker);
 
             if (countBefore <= 0 || _keyboardInputBlockers.Count != 0)
             {
