@@ -5,11 +5,6 @@ using JetBrains.Annotations;
 namespace ZeepSDK.Communication;
 
 /// <summary>
-/// The delegate for when a message is received
-/// </summary>
-public delegate void MessageReceivedDelegate(IComReceiver receiver, string message);
-
-/// <summary>
 /// An api that enables communication between mods
 /// </summary>
 [PublicAPI]
@@ -43,6 +38,11 @@ public static class CommunicationApi
     /// <param name="receiver">The receiver to remove</param>
     public static void RemoveReceiver(IComReceiver receiver)
     {
+        if (receiver == null)
+        {
+            return;
+        }
+
         ReceiverRepository.RemoveReceiver(receiver);
     }
 }

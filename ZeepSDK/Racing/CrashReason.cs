@@ -17,7 +17,7 @@ public enum CrashReason
     /// A generic crash
     /// </summary>
     Crashed,
-    
+
     /// <summary>
     /// When you drive into an eye
     /// </summary>
@@ -32,7 +32,7 @@ public enum CrashReason
     /// When you get stuck in a spider web
     /// </summary>
     Sticky,
-    
+
     /// <summary>
     /// ???
     /// </summary>

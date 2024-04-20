@@ -9,8 +9,8 @@ namespace ZeepSDK.Utilities;
 /// </summary>
 public static class LoggerFactory
 {
-    private static ManualLogSource unknownLogger = Logger.CreateLogSource("Unknown");
-    private static readonly Dictionary<Type, ManualLogSource> loggers = new();
+    private static readonly ManualLogSource _unknownLogger = Logger.CreateLogSource("Unknown");
+    private static readonly Dictionary<Type, ManualLogSource> _loggers = [];
 
     /// <summary>
     /// 
@@ -29,11 +29,19 @@ public static class LoggerFactory
     /// <returns></returns>
     public static ManualLogSource GetLogger(Type type)
     {
-        if (loggers.TryGetValue(type, out ManualLogSource logger))
+        if (type == null)
+        {
+            _unknownLogger.LogError("LoggerFactory.GetLogger requires a non-null type parameter.");
+            return null;
+        }
+
+        if (_loggers.TryGetValue(type, out ManualLogSource logger))
+        {
             return logger;
+        }
 
         logger = Logger.CreateLogSource(type.Name);
-        loggers[type] = logger;
+        _loggers[type] = logger;
         return logger;
     }
 
@@ -44,6 +52,6 @@ public static class LoggerFactory
     /// <returns></returns>
     public static ManualLogSource GetLogger(object obj)
     {
-        return obj == null ? unknownLogger : GetLogger(obj.GetType());
+        return obj == null ? _unknownLogger : GetLogger(obj.GetType());
     }
 }

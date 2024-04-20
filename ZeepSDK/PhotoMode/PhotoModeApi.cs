@@ -1,4 +1,5 @@
-﻿using JetBrains.Annotations;
+﻿using System;
+using JetBrains.Annotations;
 using ZeepSDK.Extensions;
 using ZeepSDK.PhotoMode.Patches;
 
@@ -13,12 +14,12 @@ public static class PhotoModeApi
     /// <summary>
     /// An event that fires whenever you enter Photo Mode
     /// </summary>
-    public static event PhotoModeEnteredDelegate PhotoModeEntered;
+    public static event EventHandler PhotoModeEntered;
 
     /// <summary>
     /// An event that fires whenever you exit Photo Mode
     /// </summary>
-    public static event PhotoModeExitedDelegate PhotoModeExited;
+    public static event EventHandler PhotoModeExited;
 
     internal static void Initialize()
     {

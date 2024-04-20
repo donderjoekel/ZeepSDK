@@ -13,15 +13,13 @@ namespace ZeepSDK.ChatCommands;
 [PublicAPI]
 public static class ChatCommandApi
 {
-    private static ManualLogSource logger = LoggerFactory.GetLogger(typeof(ChatCommandApi));
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(ChatCommandApi));
 
     internal static void Initialize(GameObject gameObject)
     {
-        gameObject.AddComponent<RemoteChatMessageHandler>();
-
+        _ = gameObject.AddComponent<RemoteChatMessageHandler>();
         RegisterLocalChatCommand<HelpLocalChatCommand>();
         RegisterLocalChatCommand<ClearChatLocalChatCommand>();
-
         RegisterRemoteChatCommand<HelpRemoteChatCommand>();
     }
 
@@ -36,7 +34,7 @@ public static class ChatCommandApi
         string prefix,
         string command,
         string description,
-        LocalChatCommandCallbackDelegate callback
+        LocalChatCommandCallback callback
     )
     {
         try
@@ -48,7 +46,7 @@ public static class ChatCommandApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(RegisterLocalChatCommand)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(RegisterLocalChatCommand)}: " + e);
         }
     }
 
@@ -65,7 +63,7 @@ public static class ChatCommandApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(RegisterLocalChatCommand)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(RegisterLocalChatCommand)}: " + e);
         }
     }
 
@@ -80,7 +78,7 @@ public static class ChatCommandApi
         string prefix,
         string command,
         string description,
-        RemoteChatCommandCallbackDelegate callback
+        RemoteChatCommandCallback callback
     )
     {
         try
@@ -92,7 +90,7 @@ public static class ChatCommandApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(RegisterRemoteChatCommand)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(RegisterRemoteChatCommand)}: " + e);
         }
     }
 
@@ -109,7 +107,7 @@ public static class ChatCommandApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(RegisterRemoteChatCommand)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(RegisterRemoteChatCommand)}: " + e);
         }
     }
 
@@ -124,7 +122,7 @@ public static class ChatCommandApi
         string prefix,
         string command,
         string description,
-        MixedChatCommandCallbackDelegate callback
+        MixedChatCommandCallback callback
     )
     {
         try
@@ -136,7 +134,7 @@ public static class ChatCommandApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(RegisterMixedChatCommand)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(RegisterMixedChatCommand)}: " + e);
         }
     }
 
@@ -153,7 +151,7 @@ public static class ChatCommandApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(RegisterMixedChatCommand)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(RegisterMixedChatCommand)}: " + e);
         }
     }
 }

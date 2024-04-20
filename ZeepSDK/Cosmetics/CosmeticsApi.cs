@@ -14,7 +14,7 @@ namespace ZeepSDK.Cosmetics;
 [PublicAPI]
 public static class CosmeticsApi
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(CosmeticsApi));
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(CosmeticsApi));
 
     private static CosmeticWardrobe Wardrobe => PlayerManager.Instance.objectsList.wardrobe;
 
@@ -32,7 +32,7 @@ public static class CosmeticsApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(GetSoapbox)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(GetSoapbox)}: " + e);
             return null;
         }
     }
@@ -51,7 +51,7 @@ public static class CosmeticsApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(GetHat)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(GetHat)}: " + e);
             return null;
         }
     }
@@ -70,7 +70,7 @@ public static class CosmeticsApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(GetColor)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(GetColor)}: " + e);
             return null;
         }
     }
@@ -86,7 +86,7 @@ public static class CosmeticsApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(GetAllZeepkists)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(GetAllZeepkists)}: " + e);
             return Array.Empty<Object_Soapbox>();
         }
     }
@@ -102,7 +102,7 @@ public static class CosmeticsApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(GetAllHats)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(GetAllHats)}: " + e);
             return Array.Empty<HatValues>();
         }
     }
@@ -118,7 +118,7 @@ public static class CosmeticsApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(GetAllColors)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(GetAllColors)}: " + e);
             return Array.Empty<CosmeticColor>();
         }
     }
@@ -134,7 +134,7 @@ public static class CosmeticsApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(GetUnlockedZeepkists)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(GetUnlockedZeepkists)}: " + e);
             return Array.Empty<Object_Soapbox>();
         }
     }
@@ -150,7 +150,7 @@ public static class CosmeticsApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(GetUnlockedHats)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(GetUnlockedHats)}: " + e);
             return Array.Empty<HatValues>();
         }
     }
@@ -166,7 +166,7 @@ public static class CosmeticsApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(GetUnlockedColors)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(GetUnlockedColors)}: " + e);
             return Array.Empty<CosmeticColor>();
         }
     }

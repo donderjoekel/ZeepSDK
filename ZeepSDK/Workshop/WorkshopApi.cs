@@ -14,7 +14,7 @@ namespace ZeepSDK.Workshop;
 [PublicAPI]
 public static class WorkshopApi
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(WorkshopApi));
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(WorkshopApi));
 
     /// <summary>
     /// Attempts to subscribe to a workshop item
@@ -25,25 +25,28 @@ public static class WorkshopApi
     {
         try
         {
-            Item? item = await Item.GetAsync(workshopId);
+            Item? item = await Item.GetAsync(workshopId).ConfigureAwait(true);
             if (!item.HasValue)
+            {
                 return Result.Fail("Unable to get workshop item");
+            }
 
             if (item.Value.IsSubscribed)
+            {
                 return Result.Ok();
+            }
 
-            bool subscribed = await item.Value.Subscribe();
+            bool subscribed = await item.Value.Subscribe().ConfigureAwait(true);
 
-            if (!subscribed)
-                return Result.Fail("Unable to subscribe to workshop item");
-
-            return Result.OkIf(
-                await WorkshopManager.Instance.DownloadWorkshopLevel(item.Value.Id),
+            return !subscribed
+                ? Result.Fail("Unable to subscribe to workshop item")
+                : Result.OkIf(
+                await WorkshopManager.Instance.DownloadWorkshopLevel(item.Value.Id).ConfigureAwait(true),
                 "Unable to download workshop level");
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(SubscribeAsync)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(SubscribeAsync)}: " + e);
             return Result.Fail(new ExceptionalError(e));
         }
     }
@@ -57,20 +60,24 @@ public static class WorkshopApi
     {
         try
         {
-            Item? item = await Item.GetAsync(workshopId);
+            Item? item = await Item.GetAsync(workshopId).ConfigureAwait(true);
             if (!item.HasValue)
+            {
                 return Result.Fail("Unable to get workshop item");
+            }
 
             if (!item.Value.IsSubscribed)
+            {
                 return Result.Ok();
+            }
 
-            bool subscribed = await item.Value.Unsubscribe();
+            bool subscribed = await item.Value.Unsubscribe().ConfigureAwait(true);
 
             return Result.FailIf(!subscribed, "Unable to unsubscribe from workshop item");
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(UnsubscribeAsync)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(UnsubscribeAsync)}: " + e);
             return Result.Fail(new ExceptionalError(e));
         }
     }

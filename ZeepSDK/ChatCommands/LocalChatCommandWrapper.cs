@@ -2,27 +2,38 @@
 
 internal class LocalChatCommandWrapper : ILocalChatCommand
 {
-    private readonly LocalChatCommandCallbackDelegate callback;
+    private readonly LocalChatCommandCallback _callback;
 
-    public string Prefix { get; }
-    public string Command { get; }
-    public string Description { get; }
+    public string Prefix
+    {
+        get;
+    }
+
+    public string Command
+    {
+        get;
+    }
+
+    public string Description
+    {
+        get;
+    }
 
     public LocalChatCommandWrapper(
         string prefix,
         string command,
         string description,
-        LocalChatCommandCallbackDelegate callback
+        LocalChatCommandCallback callback
     )
     {
         Prefix = prefix;
         Command = command;
         Description = description;
-        this.callback = callback;
+        _callback = callback;
     }
 
     public void Handle(string arguments)
     {
-        callback?.Invoke(arguments);
+        _callback?.Invoke(arguments);
     }
 }

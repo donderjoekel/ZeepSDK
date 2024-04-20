@@ -18,7 +18,7 @@ namespace ZeepSDK.Versioning;
 
 internal class VersionChecker
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(VersionChecker));
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(VersionChecker));
 
     public static async UniTaskVoid CheckVersions()
     {
@@ -26,16 +26,18 @@ internal class VersionChecker
 
         if (result.IsFailed)
         {
-            logger.LogError("Failed to calculate outdated mods! " + result.ToString());
+            _logger.LogError("Failed to calculate outdated mods! " + result.ToString());
             return;
         }
 
         if (result.Value <= 0)
+        {
             return;
+        }
 
         int outdatedMods = result.Value;
 
-        void LogOutdatedModsToChat()
+        void LogOutdatedModsToChat(object sender, EventArgs args)
         {
             const string workSprite = "<sprite=\"moremojis\" name=\"Work\">";
             ChatApi.AddLocalMessage(outdatedMods == 1
@@ -58,7 +60,7 @@ internal class VersionChecker
 
         bool hasLoadedScene = false;
 
-        if (!string.Equals(sceneName, SceneManager.GetActiveScene().name))
+        if (!string.Equals(sceneName, SceneManager.GetActiveScene().name, StringComparison.Ordinal))
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
 
@@ -81,7 +83,9 @@ internal class VersionChecker
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             if (scene.name == sceneName)
+            {
                 hasLoadedScene = true;
+            }
         }
     }
 
@@ -91,7 +95,9 @@ internal class VersionChecker
             "https://g-3213.modapi.io/v1/games/3213/mods?api_key=188efbb7446e6d527b0991c3672b3e31&tags-in=Plugin");
 
         if (result.IsFailed)
+        {
             return result.ToResult();
+        }
 
         string[] directories = Directory.GetDirectories(Paths.PluginPath, "*", SearchOption.TopDirectoryOnly);
 
@@ -100,17 +106,21 @@ internal class VersionChecker
         foreach (ModResponseData modResponseData in result.Value.Data)
         {
             string existingModPath = directories
-                .FirstOrDefault(x => Path.GetFileNameWithoutExtension(x)!.StartsWith(modResponseData.Id + "_"));
+                .FirstOrDefault(x =>
+                    Path.GetFileNameWithoutExtension(x)!.StartsWith(modResponseData.Id + "_",
+                        StringComparison.Ordinal));
 
             if (string.IsNullOrEmpty(existingModPath))
+            {
                 continue;
+            }
 
             string directoryName = Path.GetFileNameWithoutExtension(existingModPath);
             string versionedModId = $"{modResponseData.Id}_{modResponseData.ModFile.Id}";
 
-            if (!string.Equals(directoryName, versionedModId))
+            if (!string.Equals(directoryName, versionedModId, StringComparison.Ordinal))
             {
-                logger.LogInfo($"Mismatch found; Expected: {versionedModId} but got {directoryName}");
+                _logger.LogInfo($"Mismatch found; Expected: {versionedModId} but got {directoryName}");
                 outdatedMods++;
             }
         }
@@ -120,13 +130,14 @@ internal class VersionChecker
 
     private static async UniTask<Result<TData>> GetData<TData>(string url)
     {
-        HttpClient httpClient = new();
+        using HttpClient httpClient = new();
 
-        HttpResponseMessage result = await httpClient.GetAsync(url);
+        Uri uri = new(url);
+        HttpResponseMessage result = await httpClient.GetAsync(uri).ConfigureAwait(true);
 
         try
         {
-            result.EnsureSuccessStatusCode();
+            _ = result.EnsureSuccessStatusCode();
         }
         catch (Exception e)
         {
@@ -137,7 +148,7 @@ internal class VersionChecker
 
         try
         {
-            json = await result.Content.ReadAsStringAsync();
+            json = await result.Content.ReadAsStringAsync().ConfigureAwait(true);
         }
         catch (Exception e)
         {

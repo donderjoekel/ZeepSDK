@@ -1,14 +1,21 @@
 ﻿using JetBrains.Annotations;
 
-#pragma warning disable CS1591
-
 namespace ZeepSDK.ChatCommands;
 
+/// <summary>
+/// The callback definition for local chat commands
+/// </summary>
 [PublicAPI]
-public delegate void LocalChatCommandCallbackDelegate(string arguments);
+public delegate void LocalChatCommandCallback(string arguments);
 
+/// <summary>
+/// The callback definition for remote chat commands
+/// </summary>
 [PublicAPI]
-public delegate void RemoteChatCommandCallbackDelegate(ulong playerId, string arguments);
+public delegate void RemoteChatCommandCallback(ulong playerId, string arguments);
 
+/// <summary>
+/// The callback definition for mixed chat commands
+/// </summary>
 [PublicAPI]
-public delegate void MixedChatCommandCallbackDelegate(bool isLocal, ulong playerId, string arguments);
+public delegate void MixedChatCommandCallback(bool isLocal, ulong playerId, string arguments);

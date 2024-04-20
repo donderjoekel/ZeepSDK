@@ -13,9 +13,9 @@ namespace ZeepSDK.Playlist;
 /// An API for interacting with playlists
 /// </summary>
 [PublicAPI]
-public class PlaylistApi
+public static class PlaylistApi
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(PlaylistApi));
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(PlaylistApi));
 
     /// <summary>
     /// Gets a list of all playlists that have been saved to disk
@@ -27,9 +27,11 @@ public class PlaylistApi
             "Playlists");
 
         if (!Directory.Exists(playlistsPath))
+        {
             return Array.Empty<PlaylistSaveJSON>();
+        }
 
-        List<PlaylistSaveJSON> playlists = new();
+        List<PlaylistSaveJSON> playlists = [];
         string[] paths = Directory.GetFiles(playlistsPath, "*.zeeplist");
 
         foreach (string path in paths)
@@ -41,7 +43,7 @@ public class PlaylistApi
             }
             catch (Exception e)
             {
-                logger.LogError($"Failed to read playlist at {path}: {e}");
+                _logger.LogError($"Failed to read playlist at {path}: {e}");
                 continue;
             }
 
@@ -52,7 +54,7 @@ public class PlaylistApi
             }
             catch (Exception e)
             {
-                logger.LogError($"Failed to deserialize playlist at {path}: {e}");
+                _logger.LogError($"Failed to deserialize playlist at {path}: {e}");
             }
         }
 
@@ -88,7 +90,9 @@ public class PlaylistApi
         PlaylistSaveJSON existingPlaylist = GetPlaylist(name);
 
         if (existingPlaylist != null)
+        {
             return existingPlaylist;
+        }
 
         PlaylistSaveJSON playlist = new()
         {

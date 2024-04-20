@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using BepInEx.Logging;
 using JetBrains.Annotations;
-using UnityEngine;
 using ZeepkistClient;
 using ZeepkistNetworking;
 using ZeepSDK.Utilities;
@@ -15,16 +13,16 @@ namespace ZeepSDK.Chat;
 [PublicAPI]
 public static class ChatApi
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(ChatApi));
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(ChatApi));
 
     private static OnlineChatUI OnlineChatUI => ComponentCache.Get<OnlineChatUI>();
 
     /// <summary>
     /// Event that is fired when a chat message is received
     /// </summary>
-    public static event ChatMessageReceivedDelegate ChatMessageReceived;
+    public static event EventHandler<ChatMessageReceivedEventArgs> ChatMessageReceived;
 
-    internal static void Initialize(GameObject gameObject)
+    internal static void Initialize()
     {
         ZeepkistNetwork.ChatMessageReceived += OnChatMessageReceived;
     }
@@ -33,17 +31,19 @@ public static class ChatApi
     {
         try
         {
-            if (zeepkistChatMessage == null)
+            if (zeepkistChatMessage?.Player == null)
+            {
                 return;
-            if (zeepkistChatMessage.Player == null)
-                return;
-            ChatMessageReceived?.Invoke(zeepkistChatMessage.Player.SteamID,
-                zeepkistChatMessage.Player.GetTaggedUsername(),
-                zeepkistChatMessage.Message);
+            }
+
+            ChatMessageReceived?.Invoke(null,
+                new ChatMessageReceivedEventArgs(zeepkistChatMessage.Player?.SteamID ?? 0,
+                    zeepkistChatMessage.Player?.GetTaggedUsername() ?? string.Empty,
+                    zeepkistChatMessage.Message));
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(OnChatMessageReceived)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(OnChatMessageReceived)}: " + e);
         }
     }
 
@@ -56,14 +56,11 @@ public static class ChatApi
         try
         {
             OnlineChatUI onlineChatUi = OnlineChatUI;
-            if (onlineChatUi != null)
-            {
-                onlineChatUi.UpdateChatFields(message, 0);
-            }
+            onlineChatUi?.UpdateChatFields(message, 0);
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(AddLocalMessage)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(AddLocalMessage)}: " + e);
         }
     }
 
@@ -73,20 +70,60 @@ public static class ChatApi
     /// <param name="message">The message you wish to send</param>
     public static void SendMessage(string message)
     {
+        SendChatMessagePacket(message);
+    }
+
+    /// <summary>
+    /// Sends a server message
+    /// </summary>
+    /// <param name="message">The contents of the message</param>
+    /// <param name="duration">The duration of the message in seconds</param>
+    /// <param name="color">The color of the message</param>
+    public static void SendServerMessage(string message, int duration, MessageColor color)
+    {
+        SendChatMessagePacket($"/servermessage {color.ToValidString()} {duration} {message}");
+    }
+
+    /// <summary>
+    /// Sets the join message
+    /// </summary>
+    /// <param name="message">The contents of the message</param>
+    /// <param name="color">The color of the message</param>
+    public static void SetJoinMessage(string message, MessageColor color)
+    {
+        SendChatMessagePacket($"/joinmessage {color.ToValidString()} {message}");
+    }
+
+    /// <summary>
+    /// Enables the join message
+    /// </summary>
+    public static void EnableJoinMessage()
+    {
+        SendChatMessagePacket("/joinmessage on");
+    }
+
+    /// <summary>
+    /// Disables the join message
+    /// </summary>
+    public static void DisableJoinMessage()
+    {
+        SendChatMessagePacket("/joinmessage off");
+    }
+
+    private static void SendChatMessagePacket(string content)
+    {
         try
         {
             if (ZeepkistNetwork.NetworkClient == null)
-                return;
-
-            ZeepkistNetwork.NetworkClient.SendPacket(new ChatMessagePacket()
             {
-                Message = message,
-                Badges = new List<string>()
-            });
+                return;
+            }
+
+            ZeepkistNetwork.NetworkClient.SendPacket(new ChatMessagePacket() { Message = content, Badges = [] });
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(SendMessage)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(SendChatMessagePacket)}: " + e);
         }
     }
 
@@ -98,14 +135,11 @@ public static class ChatApi
         try
         {
             OnlineChatUI onlineChatUi = OnlineChatUI;
-            if (onlineChatUi != null)
-            {
-                onlineChatUi.ClearChat();
-            }
+            onlineChatUi?.ClearChat();
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(ClearChat)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(ClearChat)}: " + e);
         }
     }
 }

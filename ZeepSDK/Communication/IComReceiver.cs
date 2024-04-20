@@ -12,17 +12,23 @@ public interface IComReceiver : IEquatable<IComReceiver>
     /// <summary>
     /// The identifier of this receiver
     /// </summary>
-    Guid Guid { get; }
+    Guid Identifier
+    {
+        get;
+    }
 
     /// <summary>
     /// The identifier of the mod that is sending the message
     /// </summary>
-    string ModIdentifier { get; }
+    string ModIdentifier
+    {
+        get;
+    }
 
     /// <summary>
     /// The event that is triggered when a message is received
     /// </summary>
-    event MessageReceivedDelegate MessageReceived;
+    event EventHandler<MessageReceivedEventArgs> MessageReceived;
 
     /// <summary>
     /// The method that will be invoked to process, and in turn dispatch, the message

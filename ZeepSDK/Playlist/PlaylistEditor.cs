@@ -11,50 +11,45 @@ namespace ZeepSDK.Playlist;
 
 internal class PlaylistEditor : IPlaylistEditor
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(PlaylistEditor));
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(PlaylistEditor));
 
-    private readonly PlaylistSaveJSON playlist;
+    private readonly PlaylistSaveJSON _playlist;
 
     public string Name
     {
-        get => playlist.name;
-        set => playlist.name = value;
+        get => _playlist.name;
+        set => _playlist.name = value;
     }
 
     public bool Shuffle
     {
-        get => playlist.shufflePlaylist;
-        set => playlist.shufflePlaylist = value;
+        get => _playlist.shufflePlaylist;
+        set => _playlist.shufflePlaylist = value;
     }
 
     public double RoundLength
     {
-        get => playlist.roundLength;
-        set => playlist.roundLength = value;
+        get => _playlist.roundLength;
+        set => _playlist.roundLength = value;
     }
 
-    public IReadOnlyList<OnlineZeeplevel> Levels => playlist.levels;
+    public IReadOnlyList<OnlineZeeplevel> Levels => _playlist.levels;
 
     public PlaylistEditor(PlaylistSaveJSON playlist)
     {
-        this.playlist = playlist;
+        _playlist = playlist;
     }
 
     public void AddLevel(string uid, string author, string name, ulong workshopId, bool allowDuplicate = false)
     {
-        AddLevel(new OnlineZeeplevel
-            {
-                Author = author,
-                UID = uid,
-                Name = name,
-                WorkshopID = workshopId
-            },
+        AddLevel(new OnlineZeeplevel { Author = author, UID = uid, Name = name, WorkshopID = workshopId },
             allowDuplicate);
     }
 
     public void AddLevel(LevelScriptableObject level, bool allowDuplicate = false)
     {
-        AddLevel(new OnlineZeeplevel
+        AddLevel(
+            new OnlineZeeplevel
             {
                 Author = level.Author,
                 Name = level.Name,
@@ -66,11 +61,13 @@ internal class PlaylistEditor : IPlaylistEditor
 
     public void AddLevel(OnlineZeeplevel level, bool allowDuplicate = false)
     {
-        if (playlist.levels.Any(x => x.UID == level.UID) && !allowDuplicate)
+        if (_playlist.levels.Any(x => x.UID == level.UID) && !allowDuplicate)
+        {
             return;
+        }
 
-        playlist.levels.Add(level);
-        playlist.amountOfLevels = playlist.levels.Count;
+        _playlist.levels.Add(level);
+        _playlist.amountOfLevels = _playlist.levels.Count;
     }
 
     public void Save()
@@ -79,11 +76,11 @@ internal class PlaylistEditor : IPlaylistEditor
 
         try
         {
-            json = JsonConvert.SerializeObject(playlist);
+            json = JsonConvert.SerializeObject(_playlist);
         }
         catch (Exception e)
         {
-            logger.LogError("Failed to serialize playlist: " + e);
+            _logger.LogError("Failed to serialize playlist: " + e);
             return;
         }
 
@@ -92,13 +89,13 @@ internal class PlaylistEditor : IPlaylistEditor
             string playlistPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
                 "Zeepkist",
                 "Playlists",
-                playlist.name + ".zeeplist");
+                _playlist.name + ".zeeplist");
 
             File.WriteAllText(playlistPath, json);
         }
         catch (Exception e)
         {
-            logger.LogError("Failed to save playlist: " + e);
+            _logger.LogError("Failed to save playlist: " + e);
         }
     }
 }

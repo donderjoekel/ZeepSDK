@@ -4,25 +4,25 @@ namespace ZeepSDK.ChatCommands;
 
 internal static class ChatCommandRegistry
 {
-    private static readonly List<ILocalChatCommand> localChatCommands = new();
-    private static readonly List<IRemoteChatCommand> remoteChatCommands = new();
+    private static readonly List<ILocalChatCommand> _localChatCommands = [];
+    private static readonly List<IRemoteChatCommand> _remoteChatCommands = [];
 
-    public static IReadOnlyList<ILocalChatCommand> LocalChatCommands => localChatCommands;
-    public static IReadOnlyList<IRemoteChatCommand> RemoteChatCommands => remoteChatCommands;
+    public static IEnumerable<ILocalChatCommand> LocalChatCommands => _localChatCommands;
+    public static IEnumerable<IRemoteChatCommand> RemoteChatCommands => _remoteChatCommands;
 
     public static void RegisterLocalChatCommand(ILocalChatCommand chatCommand)
     {
-        localChatCommands.Add(chatCommand);
+        _localChatCommands.Add(chatCommand);
     }
 
     public static void RegisterRemoteChatCommand(IRemoteChatCommand chatCommand)
     {
-        remoteChatCommands.Add(chatCommand);
+        _remoteChatCommands.Add(chatCommand);
     }
 
     public static void RegisterMixedChatCommand(IMixedChatCommand chatCommand)
     {
-        localChatCommands.Add(chatCommand);
-        remoteChatCommands.Add(chatCommand);
+        _localChatCommands.Add(chatCommand);
+        _remoteChatCommands.Add(chatCommand);
     }
 }

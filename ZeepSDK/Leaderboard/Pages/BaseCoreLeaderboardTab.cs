@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using BepInEx.Logging;
 using JetBrains.Annotations;
 using ZeepkistClient;
@@ -16,27 +17,47 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab
     /// <summary>
     /// A logger that can be used to log messages
     /// </summary>
-    protected ManualLogSource Logger { get; private set; }
+    protected ManualLogSource Logger
+    {
+        get;
+        private set;
+    }
 
     /// <summary>
     /// The instance of the leaderboard UI
     /// </summary>
-    protected OnlineTabLeaderboardUI Instance { get; private set; }
+    protected OnlineTabLeaderboardUI Instance
+    {
+        get;
+        private set;
+    }
 
     /// <summary>
     /// The index of the current page
     /// </summary>
-    protected int CurrentPage { get; private set; }
+    protected int CurrentPage
+    {
+        get;
+        private set;
+    }
 
     /// <summary>
     /// The maximum amount of pages
     /// </summary>
-    protected int MaxPages { get; set; }
+    protected int MaxPages
+    {
+        get;
+        set;
+    }
 
     /// <summary>
     /// A boolean representing if the page is currently active
     /// </summary>
-    protected bool IsActive { get; private set; }
+    protected bool IsActive
+    {
+        get;
+        private set;
+    }
 
     /// <summary>
     /// Constructor
@@ -56,17 +77,16 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab
 
         try
         {
-            if (ZeepkistNetwork.IsConnectedToGame)
-            {
-                Instance.playersLeaderboard.text = I2.Loc.LocalizationManager
+            Instance.playersLeaderboard.text = ZeepkistNetwork.IsConnectedToGame
+                ? I2.Loc.LocalizationManager
                     .GetTranslation("Online/Leaderboard/PlayerCount")
-                    .Replace("{[PLAYERS]}", ZeepkistNetwork.PlayerList.Count.ToString())
-                    .Replace("{[MAXPLAYERS]}", ZeepkistNetwork.CurrentLobby.MaxPlayerCount.ToString());
-            }
-            else
-            {
-                Instance.playersLeaderboard.text = string.Empty;
-            }
+                    .Replace("{[PLAYERS]}",
+                        ZeepkistNetwork.PlayerList.Count.ToString(CultureInfo.InvariantCulture),
+                        StringComparison.Ordinal)
+                    .Replace("{[MAXPLAYERS]}",
+                        ZeepkistNetwork.CurrentLobby.MaxPlayerCount.ToString(CultureInfo.InvariantCulture),
+                        StringComparison.Ordinal)
+                : string.Empty;
 
             Instance.leaderboardTitle.text = GetLeaderboardTitle();
 
@@ -109,7 +129,9 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab
     public void GoToPreviousPage()
     {
         if (!IsActive)
+        {
             return;
+        }
 
         CurrentPage = CurrentPage - 1 < 0 ? MaxPages : CurrentPage - 1;
         UpdatePageNumber();
@@ -119,7 +141,9 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab
     public void GoToNextPage()
     {
         if (!IsActive)
+        {
             return;
+        }
 
         CurrentPage = CurrentPage + 1 > MaxPages ? 0 : CurrentPage + 1;
         UpdatePageNumber();
@@ -129,7 +153,9 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab
     public void Draw()
     {
         if (!IsActive)
+        {
             return;
+        }
 
         ClearLeaderboard();
 
@@ -151,7 +177,7 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab
         try
         {
             Instance.Page.text = I2.Loc.LocalizationManager.GetTranslation("Online/Lobby/Page")
-                .Replace("{[PAGE]}", (CurrentPage + 1).ToString() + "/" + (MaxPages + 1).ToString());
+                .Replace("{[PAGE]}", CurrentPage + 1 + "/" + (MaxPages + 1), StringComparison.Ordinal);
         }
         catch (Exception e)
         {

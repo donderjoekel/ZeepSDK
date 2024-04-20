@@ -12,22 +12,34 @@ public class PlaylistItem
     /// <summary>
     /// The UID of the track
     /// </summary>
-    public string Uid { get; }
+    public string Uid
+    {
+        get;
+    }
 
     /// <summary>
     /// The workshop ID of the track
     /// </summary>
-    public ulong WorkshopId { get; }
+    public ulong WorkshopId
+    {
+        get;
+    }
 
     /// <summary>
     /// The name of the track
     /// </summary>
-    public string Name { get; }
+    public string Name
+    {
+        get;
+    }
 
     /// <summary>
     /// The author of the track
     /// </summary>
-    public string Author { get; }
+    public string Author
+    {
+        get;
+    }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="PlaylistItem"/> class
@@ -43,7 +55,7 @@ public class PlaylistItem
         Name = name;
         Author = author;
     }
-    
+
     internal OnlineZeeplevel ToOnlineZeepLevel()
     {
         return new OnlineZeeplevel

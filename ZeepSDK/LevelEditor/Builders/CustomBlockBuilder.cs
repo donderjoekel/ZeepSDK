@@ -1,56 +1,55 @@
 ﻿using System;
-using JetBrains.Annotations;
 using UnityEngine;
 
 namespace ZeepSDK.LevelEditor.Builders;
 
 internal class CustomBlockBuilder : ICustomBlockBuilder
 {
-    private static int customBlockIdCounter = -100;
+    private static int _customBlockIdCounter = -100;
 
-    private readonly int blockId;
-    private string name;
-    private Sprite thumbnail;
-    private CustomBlockCallback callback;
+    private readonly int _blockId;
+    private string _name;
+    private Sprite _thumbnail;
+    private CustomBlockCallback _callback;
 
     internal CustomBlockBuilder()
     {
         // We're doing negative IDs here because I noticed Zeepkist only checks for positive ones.
-        blockId = customBlockIdCounter--;
+        _blockId = _customBlockIdCounter--;
     }
 
     public ICustomBlockBuilder WithName(string name)
     {
-        this.name = name;
+        _name = name;
         return this;
     }
 
     public ICustomBlockBuilder WithThumbnail(Sprite thumbnail)
     {
-        this.thumbnail = thumbnail;
+        _thumbnail = thumbnail;
         return this;
     }
 
     public ICustomBlockBuilder WithCallback(Action callback)
     {
-        this.callback = new CustomBlockCallbackWithoutData(callback);
+        _callback = new CustomBlockCallbackWithoutData(callback);
         return this;
     }
 
     public ICustomBlockBuilder WithCallback(Action<object> callback, object userData)
     {
-        this.callback = new CustomBlockCallbackWithData(callback, userData);
+        _callback = new CustomBlockCallbackWithData(callback, userData);
         return this;
     }
 
     internal BlockProperties Build(GameObject gameObject)
     {
         BlockProperties blockProperties = gameObject.AddComponent<BlockProperties>();
-        blockProperties.name = name;
-        blockProperties.thumbnail = thumbnail;
-        blockProperties.blockID = blockId;
+        blockProperties.name = _name;
+        blockProperties.thumbnail = _thumbnail;
+        blockProperties.blockID = _blockId;
 
-        CustomBlockCallbackRegistry.Register(blockId, callback);
+        CustomBlockCallbackRegistry.Register(_blockId, _callback);
 
         return blockProperties;
     }

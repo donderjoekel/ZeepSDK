@@ -15,37 +15,51 @@ namespace ZeepSDK.Multiplayer;
 [PublicAPI]
 public static class MultiplayerApi
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(MultiplayerApi));
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(MultiplayerApi));
 
     /// <summary>
     /// An event that gets fired whenever you connect to a game
     /// </summary>
-    public static event ConnectedToGameDelegate ConnectedToGame;
+    public static event EventHandler ConnectedToGame;
 
     /// <summary>
     /// An event that gets fired whenever you disconnect from a game
     /// </summary>
-    public static event DisconnectedFromGameDelegate DisconnectedFromGame;
+    public static event EventHandler DisconnectedFromGame;
 
     /// <summary>
     /// An event that gets fired whenever you have created a room/game
     /// </summary>
-    public static event CreatedRoomDelegate CreatedRoom;
+    public static event EventHandler CreatedRoom;
 
     /// <summary>
     /// An even that gets fired whenever you have joined a room/game
     /// </summary>
-    public static event JoinedRoomDelegate JoinedRoom;
+    public static event EventHandler JoinedRoom;
 
     /// <summary>
     /// An even that gets fired whenever a player joins the room/game
     /// </summary>
-    public static event PlayerJoinedDelegate PlayerJoined;
+    public static event EventHandler<PlayerJoinedEventArgs> PlayerJoined;
 
     /// <summary>
     /// An even that gets fired whenever a player leaves the room/game
     /// </summary>
-    public static event PlayerLeftDelegate PlayerLeft;
+    public static event EventHandler<PlayerLeftEventArgs> PlayerLeft;
+
+    /// <summary>
+    /// Gets the level that is currently being played
+    /// </summary>
+    /// <returns>
+    /// The level or null if the level cannot be found
+    /// <br/><br/>
+    /// The level can be null due to not being connected, not playing an online match, or issues with downloading the level from the workshop
+    /// </returns>
+    public static LevelScriptableObject CurrentLevel => !ZeepkistNetwork.IsConnected || !ZeepkistNetwork.IsConnectedToGame
+                ? null
+                : ZeepkistNetwork.CurrentLobby == null
+                ? null
+                : PlayerManager.Instance?.loader?.GlobalLevel;
 
     internal static void Initialize()
     {
@@ -65,10 +79,18 @@ public static class MultiplayerApi
     [PublicAPI]
     public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNext)
     {
+        if (playlistItem == null)
+        {
+            _logger.LogError("AddLevelToPlaylist expects a non-null playlistItem");
+            return -1;
+        }
+
         try
         {
             if (ZeepkistNetwork.CurrentLobby == null)
+            {
                 return -1;
+            }
 
             OnlineZeeplevel onlineZeepLevel = playlistItem.ToOnlineZeepLevel();
             ZeepkistNetwork.CurrentLobby.Playlist.Add(onlineZeepLevel);
@@ -92,7 +114,7 @@ public static class MultiplayerApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(AddLevelToPlaylist)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(AddLevelToPlaylist)}: " + e);
             return -1;
         }
     }
@@ -117,32 +139,7 @@ public static class MultiplayerApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(SetNextLevelIndex)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(SetNextLevelIndex)}: " + e);
         }
-    }
-
-    /// <summary>
-    /// Gets the level that is currently being played
-    /// </summary>
-    /// <returns>
-    /// The level or null if the level cannot be found
-    /// <br/><br/>
-    /// The level can be null due to not being connected, not playing an online match, or issues with downloading the level from the workshop
-    /// </returns>
-    public static LevelScriptableObject GetCurrentLevel()
-    {
-        if (!ZeepkistNetwork.IsConnected || !ZeepkistNetwork.IsConnectedToGame)
-            return null;
-
-        if (ZeepkistNetwork.CurrentLobby == null)
-            return null;
-
-        if (PlayerManager.Instance == null)
-            return null;
-
-        if (PlayerManager.Instance.loader == null)
-            return null;
-
-        return PlayerManager.Instance.loader.GlobalLevel;
     }
 }

@@ -11,47 +11,52 @@ using ZeepSDK.PhotoMode;
 using ZeepSDK.Racing;
 using ZeepSDK.Versioning;
 
-namespace ZeepSDK
+namespace ZeepSDK;
+
+#pragma warning disable CA2243
+[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+#pragma warning restore CA2243
+internal class Plugin : BaseUnityPlugin
 {
-    [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
-    internal class Plugin : BaseUnityPlugin
+    public static Plugin Instance
     {
-        public static Plugin Instance { get; private set; }
+        get;
+        private set;
+    }
 
-        private Harmony harmony;
+    private Harmony _harmony;
 
-        private void Awake()
+    public void Awake()
+    {
+        Instance = this;
+
+        _harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
+        _harmony.PatchAll();
+
+        ChatApi.Initialize();
+        ChatCommandApi.Initialize(gameObject);
+        LeaderboardApi.Initialize(gameObject);
+        LevelEditorApi.Initialize(gameObject);
+        RacingApi.Initialize();
+        MultiplayerApi.Initialize();
+        PhotoModeApi.Initialize();
+
+        // Initialize the player loop helper, this is to reduce issues with UniTask
+        if (!PlayerLoopHelper.IsInjectedUniTaskPlayerLoop())
         {
-            Instance = this;
-
-            harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
-            harmony.PatchAll();
-
-            ChatApi.Initialize(gameObject);
-            ChatCommandApi.Initialize(gameObject);
-            LeaderboardApi.Initialize(gameObject);
-            LevelEditorApi.Initialize(gameObject);
-            RacingApi.Initialize(gameObject);
-            MultiplayerApi.Initialize();
-            PhotoModeApi.Initialize();
-
-            // Initialize the player loop helper, this is to reduce issues with UniTask
-            if (!PlayerLoopHelper.IsInjectedUniTaskPlayerLoop())
-            {
-                PlayerLoopSystem loop = PlayerLoop.GetCurrentPlayerLoop();
-                PlayerLoopHelper.Initialize(ref loop);
-            }
-
-            // Plugin startup logic
-            Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
-
-            VersionChecker.CheckVersions().Forget();
+            PlayerLoopSystem loop = PlayerLoop.GetCurrentPlayerLoop();
+            PlayerLoopHelper.Initialize(ref loop);
         }
 
-        private void OnDestroy()
-        {
-            harmony?.UnpatchSelf();
-            harmony = null;
-        }
+        // Plugin startup logic
+        Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
+
+        VersionChecker.CheckVersions().Forget();
+    }
+
+    public void OnDestroy()
+    {
+        _harmony?.UnpatchSelf();
+        _harmony = null;
     }
 }

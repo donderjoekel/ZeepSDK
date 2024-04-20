@@ -66,9 +66,11 @@ internal abstract class OfficialGameLeaderboardTab : BaseMultiplayerLeaderboardT
         {
             for (int i = 0; i < Instance.leaderboard_tab_positions.Count; ++i)
             {
-                int index = CurrentPage * 16 + i;
+                int index = (CurrentPage * 16) + i;
                 if (index >= players.Length)
+                {
                     continue;
+                }
 
                 ZeepkistNetworkPlayer player = players[index];
                 GUI_OnlineLeaderboardPosition item = Instance.leaderboard_tab_positions[i];
@@ -84,7 +86,8 @@ internal abstract class OfficialGameLeaderboardTab : BaseMultiplayerLeaderboardT
                     Vector2Int championshipPoints = player.ChampionshipPoints;
                     item.pointsCurrent.text = I2.Loc.LocalizationManager.GetTranslation("Online/Leaderboard/Points")
                         .Replace("{[POINTS]}",
-                            Mathf.Round(championshipPoints.x).ToString(CultureInfo.InvariantCulture));
+                            Mathf.Round(championshipPoints.x).ToString(CultureInfo.InvariantCulture),
+                            StringComparison.Ordinal);
 
                     if (championshipPoints.y != 0)
                     {
@@ -97,6 +100,7 @@ internal abstract class OfficialGameLeaderboardTab : BaseMultiplayerLeaderboardT
                 {
                     item.DrawLeaderboard(player.SteamID,
                         string.Format(
+                            CultureInfo.InvariantCulture,
                             "<link=\"{0}\"><sprite=\"achievement 2\" name=\"host_client\"><#FFC980>{1}</color></link>",
                             player.SteamID,
                             Instance.Filter(player.GetTaggedUsername().NoParse(),
@@ -105,7 +109,9 @@ internal abstract class OfficialGameLeaderboardTab : BaseMultiplayerLeaderboardT
                 else
                 {
                     item.DrawLeaderboard(player.SteamID,
-                        string.Format("<link=\"{0}\">{1}</link>",
+                        string.Format(
+                            CultureInfo.InvariantCulture,
+                            "<link=\"{0}\">{1}</link>",
                             player.SteamID,
                             Instance.Filter(player.GetTaggedUsername().NoParse(),
                                 Steam_TheAchiever.FilterPurpose.player)));

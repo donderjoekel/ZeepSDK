@@ -4,5 +4,9 @@ namespace ZeepSDK.Versioning.Data;
 
 internal class ModFileResponseData
 {
-    [JsonProperty("id")] public int Id { get; set; }
+    [JsonProperty("id")]
+    public int Id
+    {
+        get; set;
+    }
 }

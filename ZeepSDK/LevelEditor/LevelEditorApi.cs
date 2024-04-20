@@ -18,59 +18,61 @@ namespace ZeepSDK.LevelEditor;
 [PublicAPI]
 public static class LevelEditorApi
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(LevelEditorApi));
-    private static readonly List<object> mouseInputBlockers = new();
-    private static readonly List<object> keyboardInputBlockers = new();
-    private static readonly List<CustomFolderBuilder> scheduledCustomFolderBuilders = new();
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(LevelEditorApi));
+    private static readonly List<object> _mouseInputBlockers = [];
+    private static readonly List<object> _keyboardInputBlockers = [];
+    private static readonly List<CustomFolderBuilder> _scheduledCustomFolderBuilders = [];
 
     private static SetupGame SetupGame => ComponentCache.Get<SetupGame>();
 
-    private static GameObject gameObject;
-    private static LEV_Inspector inspector;
+    private static GameObject _gameObject;
+    private static LEV_Inspector _inspector;
 
     /// <summary>
     /// An event that is fired when the user enters test mode
     /// </summary>
-    public static event EnteredTestModeDelegate EnteredTestMode;
+    public static event EventHandler EnteredTestMode;
 
     /// <summary>
     /// An event that is fired when the user enters the level editor
     /// </summary>
-    public static event EnteredLevelEditorDelegate EnteredLevelEditor;
+    public static event EventHandler EnteredLevelEditor;
 
     /// <summary>
     /// An event that is fired when the user leaves the level editor
     /// </summary>
-    public static event ExitedLevelEditorDelegate ExitedLevelEditor;
+    public static event EventHandler ExitedLevelEditor;
 
     /// <summary>
     /// An event that is fired when the user loads an existing level from a file in the level editor 
     /// </summary>
-    public static event LevelLoadedDelegate LevelLoaded;
+    public static event EventHandler LevelLoaded;
 
     /// <summary>
     /// An event that is fired whenever the user saves a level in the level editor
     /// </summary>
-    public static event LevelSavedDelegate LevelSaved;
+    public static event EventHandler LevelSaved;
 
     /// <summary>
     /// Boolean indicating whether or not the mouse input is currently being blocked
     /// </summary>
-    public static bool IsMouseInputBlocked => mouseInputBlockers.Count > 0;
+    public static bool IsMouseInputBlocked => _mouseInputBlockers.Count > 0;
 
     /// <summary>
     /// Boolean indicating whether or not the keyboard input is currently being blocked
     /// </summary>
-    public static bool IsKeyboardInputBlocked => keyboardInputBlockers.Count > 0;
+    public static bool IsKeyboardInputBlocked => _keyboardInputBlockers.Count > 0;
 
     internal static void Initialize(GameObject gameObject)
     {
-        LevelEditorApi.gameObject = gameObject;
+        _gameObject = gameObject;
 
         SceneManager.sceneLoaded += (scene, mode) =>
         {
             if (scene.name != "GameScene")
+            {
                 return;
+            }
 
             if (SetupGame.GlobalLevel.IsTestLevel)
             {
@@ -80,9 +82,9 @@ public static class LevelEditorApi
 
         LEV_Inspector_Awake.Awake += inspector =>
         {
-            if (LevelEditorApi.inspector != inspector)
+            if (_inspector != inspector)
             {
-                LevelEditorApi.inspector = inspector;
+                _inspector = inspector;
                 AddScheduledCustomFolders();
             }
 
@@ -100,9 +102,12 @@ public static class LevelEditorApi
     /// <param name="blocker">The blocker to use for identification</param>
     public static void BlockMouseInput(object blocker)
     {
-        if (mouseInputBlockers.Contains(blocker))
+        if (_mouseInputBlockers.Contains(blocker))
+        {
             return;
-        mouseInputBlockers.Add(blocker);
+        }
+
+        _mouseInputBlockers.Add(blocker);
     }
 
     /// <summary>
@@ -111,7 +116,7 @@ public static class LevelEditorApi
     /// <param name="blocker">The blocker to use for identification</param>
     public static void UnblockMouseInput(object blocker)
     {
-        mouseInputBlockers.Remove(blocker);
+        _ = _mouseInputBlockers.Remove(blocker);
     }
 
     /// <summary>
@@ -122,14 +127,18 @@ public static class LevelEditorApi
     {
         try
         {
-            if (keyboardInputBlockers.Contains(blocker))
+            if (_keyboardInputBlockers.Contains(blocker))
+            {
                 return;
+            }
 
-            int countBefore = keyboardInputBlockers.Count;
-            keyboardInputBlockers.Add(blocker);
+            int countBefore = _keyboardInputBlockers.Count;
+            _keyboardInputBlockers.Add(blocker);
 
             if (countBefore != 0)
+            {
                 return;
+            }
 
             InputRegister inputRegister = ComponentCache.Get<InputRegister>();
             foreach (InputPlayerScriptableObject input in inputRegister.Inputs)
@@ -139,7 +148,7 @@ public static class LevelEditorApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(BlockKeyboardInput)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(BlockKeyboardInput)}: " + e);
         }
     }
 
@@ -151,11 +160,13 @@ public static class LevelEditorApi
     {
         try
         {
-            int countBefore = keyboardInputBlockers.Count;
-            keyboardInputBlockers.Remove(blocker);
+            int countBefore = _keyboardInputBlockers.Count;
+            _ = _keyboardInputBlockers.Remove(blocker);
 
-            if (countBefore <= 0 || keyboardInputBlockers.Count != 0)
+            if (countBefore <= 0 || _keyboardInputBlockers.Count != 0)
+            {
                 return;
+            }
 
             InputRegister inputRegister = ComponentCache.Get<InputRegister>();
             foreach (InputPlayerScriptableObject input in inputRegister.Inputs)
@@ -165,7 +176,7 @@ public static class LevelEditorApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(UnblockKeyboardInput)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(UnblockKeyboardInput)}: " + e);
         }
     }
 
@@ -184,7 +195,13 @@ public static class LevelEditorApi
         Vector3? scale = null
     )
     {
-        return CreateNewBlock(blockProperties.blockID, position, rotation, scale);
+        if (blockProperties != null)
+        {
+            return CreateNewBlock(blockProperties.blockID, position, rotation, scale);
+        }
+
+        _logger.LogError("CreateNewBlock requires a non null blockProperties parameter");
+        return null;
     }
 
     /// <summary>
@@ -204,7 +221,13 @@ public static class LevelEditorApi
         bool removeFromSelection = false
     )
     {
-        return CreateNewBlock(blockProperties.blockID, position, rotation, scale, removeFromSelection);
+        if (blockProperties != null)
+        {
+            return CreateNewBlock(blockProperties.blockID, position, rotation, scale, removeFromSelection);
+        }
+
+        _logger.LogError("CreateNewBlock requires a non null blockProperties parameter");
+        return null;
     }
 
     /// <summary>
@@ -224,24 +247,30 @@ public static class LevelEditorApi
     {
         try
         {
-            inspector.central.gizmos.CreateNewBlock(blockId);
+            _inspector.central.gizmos.CreateNewBlock(blockId);
 
-            BlockProperties createdBlock = inspector.central.gizmos.central.selection.list.Last();
+            BlockProperties createdBlock = _inspector.central.gizmos.central.selection.list.Last();
 
             if (position.HasValue)
+            {
                 createdBlock.transform.position = position.Value;
+            }
 
             if (rotation.HasValue)
+            {
                 createdBlock.transform.rotation = rotation.Value;
+            }
 
             if (scale.HasValue)
+            {
                 createdBlock.transform.localScale = scale.Value;
+            }
 
             return createdBlock;
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(CreateNewBlock)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(CreateNewBlock)}: " + e);
             return null;
         }
     }
@@ -268,13 +297,15 @@ public static class LevelEditorApi
             BlockProperties blockProperties = CreateNewBlock(blockId, position, rotation, scale);
 
             if (removeFromSelection)
+            {
                 RemoveFromSelection(blockProperties);
+            }
 
             return blockProperties;
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(CreateNewBlock)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(CreateNewBlock)}: " + e);
             return null;
         }
     }
@@ -287,11 +318,11 @@ public static class LevelEditorApi
     {
         try
         {
-            inspector.central.selection.AddThisBlock(blockProperties);
+            _inspector.central.selection.AddThisBlock(blockProperties);
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(AddToSelection)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(AddToSelection)}: " + e);
         }
     }
 
@@ -303,22 +334,24 @@ public static class LevelEditorApi
     {
         try
         {
-            int index = inspector.central.selection.list.IndexOf(blockProperties);
+            int index = _inspector.central.selection.list.IndexOf(blockProperties);
             if (index == -1)
-                return;
-
-            inspector.central.selection.RemoveBlockAt(index, false, false);
-
-            if (inspector.central.selection.list.Count == 0)
             {
-                inspector.central.gizmos.GoOutOfGMode();
+                return;
             }
 
-            inspector.central.selection.ThingsJustGotDeselected.Invoke();
+            _inspector.central.selection.RemoveBlockAt(index, false, false);
+
+            if (_inspector.central.selection.list.Count == 0)
+            {
+                _inspector.central.gizmos.GoOutOfGMode();
+            }
+
+            _inspector.central.selection.ThingsJustGotDeselected.Invoke();
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(RemoveFromSelection)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(RemoveFromSelection)}: " + e);
         }
     }
 
@@ -329,12 +362,12 @@ public static class LevelEditorApi
     {
         try
         {
-            inspector.central.selection.ClickNothing();
-            inspector.central.gizmos.GoOutOfGMode();
+            _inspector.central.selection.ClickNothing();
+            _inspector.central.gizmos.GoOutOfGMode();
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(ClearSelection)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(ClearSelection)}: " + e);
         }
     }
 
@@ -346,12 +379,12 @@ public static class LevelEditorApi
     {
         try
         {
-            CustomFolderBuilder customFolderBuilder = new(gameObject);
-            builder(customFolderBuilder);
+            CustomFolderBuilder customFolderBuilder = new(_gameObject);
+            builder?.Invoke(customFolderBuilder);
 
-            if (inspector == null)
+            if (_inspector == null)
             {
-                scheduledCustomFolderBuilders.Add(customFolderBuilder);
+                _scheduledCustomFolderBuilders.Add(customFolderBuilder);
             }
             else
             {
@@ -360,13 +393,13 @@ public static class LevelEditorApi
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(AddCustomFolder)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(AddCustomFolder)}: " + e);
         }
     }
 
     private static void AddScheduledCustomFolders()
     {
-        foreach (CustomFolderBuilder scheduledCustomFolderBuilder in scheduledCustomFolderBuilders)
+        foreach (CustomFolderBuilder scheduledCustomFolderBuilder in _scheduledCustomFolderBuilders)
         {
             AddCustomFolderBuilder(scheduledCustomFolderBuilder);
         }
@@ -378,12 +411,12 @@ public static class LevelEditorApi
         {
             BlocksFolder blocksFolder = customFolderBuilder.Build();
             blocksFolder.hasParent = true;
-            blocksFolder.parent = inspector.globalBlockList.globalBlocksFolder;
-            inspector.globalBlockList.globalBlocksFolder.folders.Add(blocksFolder);
+            blocksFolder.parent = _inspector.globalBlockList.globalBlocksFolder;
+            _inspector.globalBlockList.globalBlocksFolder.folders.Add(blocksFolder);
         }
         catch (Exception e)
         {
-            logger.LogError($"Unhandled exception in {nameof(AddCustomFolderBuilder)}: " + e);
+            _logger.LogError($"Unhandled exception in {nameof(AddCustomFolderBuilder)}: " + e);
         }
     }
 }
