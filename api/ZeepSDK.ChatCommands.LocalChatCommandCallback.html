@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Delegate MessageReceivedDelegate </title>
+      <title>Delegate LocalChatCommandCallback </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Delegate MessageReceivedDelegate ">
+      <meta name="title" content="Delegate LocalChatCommandCallback ">
       
-      <meta name="description" content="The delegate for when a message is received">
+      <meta name="description" content="The callback definition for local chat commands">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/tnrd-org/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Communication_MessageReceivedDelegate.md&amp;value=---%0Auid%3A%20ZeepSDK.Communication.MessageReceivedDelegate%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/tnrd-org/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_ChatCommands_LocalChatCommandCallback.md&amp;value=---%0Auid%3A%20ZeepSDK.ChatCommands.LocalChatCommandCallback%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -80,33 +80,32 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ZeepSDK.Communication.MessageReceivedDelegate">
+        <article data-uid="ZeepSDK.ChatCommands.LocalChatCommandCallback">
 
 
 
-  <h1 id="ZeepSDK_Communication_MessageReceivedDelegate" data-uid="ZeepSDK.Communication.MessageReceivedDelegate" class="text-break">
-Delegate MessageReceivedDelegate  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Communication/CommunicationApi.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ZeepSDK_ChatCommands_LocalChatCommandCallback" data-uid="ZeepSDK.ChatCommands.LocalChatCommandCallback" class="text-break">
+Delegate LocalChatCommandCallback  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/ChatCommands/Delegates.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ZeepSDK.html">ZeepSDK</a>.<a class="xref" href="ZeepSDK.Communication.html">Communication</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ZeepSDK.html">ZeepSDK</a>.<a class="xref" href="ZeepSDK.ChatCommands.html">ChatCommands</a></dd></dl>
   <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The delegate for when a message is received</p>
+  <div class="markdown summary"><p>The callback definition for local chat commands</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate void MessageReceivedDelegate(IComReceiver receiver, string message)</code></pre>
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public delegate void LocalChatCommandCallback(string arguments)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>receiver</code> <a class="xref" href="ZeepSDK.Communication.IComReceiver.html">IComReceiver</a></dt>
-    <dd>The delegate for when a message is received</dd>
-    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd>The delegate for when a message is received</dd>
+    <dt><code>arguments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd>The callback definition for local chat commands</dd>
   </dl>
 
 
@@ -131,7 +130,7 @@ Delegate MessageReceivedDelegate  <a class="header-action link-secondary" title=
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Communication/CommunicationApi.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/ChatCommands/Delegates.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

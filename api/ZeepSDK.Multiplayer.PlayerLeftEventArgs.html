@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class PhotoModeApi </title>
+      <title>Class PlayerLeftEventArgs </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class PhotoModeApi ">
+      <meta name="title" content="Class PlayerLeftEventArgs ">
       
-      <meta name="description" content="An API for interacting with Photo Mode">
+      <meta name="description" content="The arguments for when a player leaves the room/game">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/tnrd-org/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_PhotoMode_PhotoModeApi.md&amp;value=---%0Auid%3A%20ZeepSDK.PhotoMode.PhotoModeApi%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/tnrd-org/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_PlayerLeftEventArgs.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.PlayerLeftEventArgs%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -80,26 +80,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ZeepSDK.PhotoMode.PhotoModeApi">
+        <article data-uid="ZeepSDK.Multiplayer.PlayerLeftEventArgs">
 
 
 
-  <h1 id="ZeepSDK_PhotoMode_PhotoModeApi" data-uid="ZeepSDK.PhotoMode.PhotoModeApi" class="text-break">
-Class PhotoModeApi  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/PhotoMode/PhotoModeApi.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ZeepSDK_Multiplayer_PlayerLeftEventArgs" data-uid="ZeepSDK.Multiplayer.PlayerLeftEventArgs" class="text-break">
+Class PlayerLeftEventArgs  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/PlayerLeftEventArgs.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ZeepSDK.html">ZeepSDK</a>.<a class="xref" href="ZeepSDK.PhotoMode.html">PhotoMode</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ZeepSDK.html">ZeepSDK</a>.<a class="xref" href="ZeepSDK.Multiplayer.html">Multiplayer</a></dd></dl>
   <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>An API for interacting with Photo Mode</p>
+  <div class="markdown summary"><p>The arguments for when a player leaves the room/game</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[PublicAPI]
-public static class PhotoModeApi</code></pre>
+    <pre><code class="lang-csharp hljs">public class PlayerLeftEventArgs : EventArgs</code></pre>
   </div>
 
 
@@ -109,7 +108,8 @@ public static class PhotoModeApi</code></pre>
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">PhotoModeApi</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></div>
+      <div><span class="xref">PlayerLeftEventArgs</span></div>
     </dd>
   </dl>
 
@@ -118,6 +118,9 @@ public static class PhotoModeApi</code></pre>
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs.empty">EventArgs.Empty</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -141,37 +144,39 @@ public static class PhotoModeApi</code></pre>
     </div>
   </dd></dl>
 
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="ZeepSDK.External.FluentResults.ObjectExtensions.html#ZeepSDK_External_FluentResults_ObjectExtensions_ToResult__1___0_">ObjectExtensions.ToResult&lt;TValue&gt;(TValue)</a>
+  </div>
+  </dd></dl>
 
 
 
 
 
-  <h2 class="section" id="events">Events
+  <h2 class="section" id="constructors">Constructors
 </h2>
 
 
+  <a id="ZeepSDK_Multiplayer_PlayerLeftEventArgs__ctor_" data-uid="ZeepSDK.Multiplayer.PlayerLeftEventArgs.#ctor*"></a>
 
-  <h3 id="ZeepSDK_PhotoMode_PhotoModeApi_PhotoModeEntered" data-uid="ZeepSDK.PhotoMode.PhotoModeApi.PhotoModeEntered">
-  PhotoModeEntered
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/PhotoMode/PhotoModeApi.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_Multiplayer_PlayerLeftEventArgs__ctor_ZeepkistClient_ZeepkistNetworkPlayer_" data-uid="ZeepSDK.Multiplayer.PlayerLeftEventArgs.#ctor(ZeepkistClient.ZeepkistNetworkPlayer)">
+  PlayerLeftEventArgs(ZeepkistNetworkPlayer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/PlayerLeftEventArgs.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>An event that fires whenever you enter Photo Mode</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler PhotoModeEntered</code></pre>
+    <pre><code class="lang-csharp hljs">public PlayerLeftEventArgs(ZeepkistNetworkPlayer player)</code></pre>
   </div>
 
-
-
-
-
-
-  <h4 class="section">Event Type</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dt><code>player</code> <span class="xref">ZeepkistNetworkPlayer</span></dt>
     <dd></dd>
   </dl>
 
@@ -182,29 +187,39 @@ public static class PhotoModeApi</code></pre>
 
 
 
-  <h3 id="ZeepSDK_PhotoMode_PhotoModeApi_PhotoModeExited" data-uid="ZeepSDK.PhotoMode.PhotoModeApi.PhotoModeExited">
-  PhotoModeExited
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/PhotoMode/PhotoModeApi.cs/#L22"><i class="bi bi-code-slash"></i></a>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ZeepSDK_Multiplayer_PlayerLeftEventArgs_Player_" data-uid="ZeepSDK.Multiplayer.PlayerLeftEventArgs.Player*"></a>
+
+  <h3 id="ZeepSDK_Multiplayer_PlayerLeftEventArgs_Player" data-uid="ZeepSDK.Multiplayer.PlayerLeftEventArgs.Player">
+  Player
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/PlayerLeftEventArgs.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>An event that fires whenever you exit Photo Mode</p>
+  <div class="markdown level1 summary"><p>The player in question</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler PhotoModeExited</code></pre>
+    <pre><code class="lang-csharp hljs">public ZeepkistNetworkPlayer Player { get; }</code></pre>
   </div>
 
 
 
 
 
-
-  <h4 class="section">Event Type</h4>
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dt><span class="xref">ZeepkistNetworkPlayer</span></dt>
     <dd></dd>
   </dl>
+
 
 
 
@@ -216,7 +231,7 @@ public static class PhotoModeApi</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/PhotoMode/PhotoModeApi.cs/#L11" class="edit-link">Edit this page</a>
+          <a href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/PlayerLeftEventArgs.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

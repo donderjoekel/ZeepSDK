@@ -132,10 +132,10 @@ public interface IComReceiver : IEquatable&lt;IComReceiver&gt;</code></pre>
 </h2>
 
 
-  <a id="ZeepSDK_Communication_IComReceiver_Guid_" data-uid="ZeepSDK.Communication.IComReceiver.Guid*"></a>
+  <a id="ZeepSDK_Communication_IComReceiver_Identifier_" data-uid="ZeepSDK.Communication.IComReceiver.Identifier*"></a>
 
-  <h3 id="ZeepSDK_Communication_IComReceiver_Guid" data-uid="ZeepSDK.Communication.IComReceiver.Guid">
-  Guid
+  <h3 id="ZeepSDK_Communication_IComReceiver_Identifier" data-uid="ZeepSDK.Communication.IComReceiver.Identifier">
+  Identifier
   <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Communication/IComReceiver.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -144,7 +144,7 @@ public interface IComReceiver : IEquatable&lt;IComReceiver&gt;</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Guid Guid { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">Guid Identifier { get; }</code></pre>
   </div>
 
 
@@ -168,7 +168,7 @@ public interface IComReceiver : IEquatable&lt;IComReceiver&gt;</code></pre>
 
   <h3 id="ZeepSDK_Communication_IComReceiver_ModIdentifier" data-uid="ZeepSDK.Communication.IComReceiver.ModIdentifier">
   ModIdentifier
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Communication/IComReceiver.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Communication/IComReceiver.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The identifier of the mod that is sending the message</p>
@@ -204,7 +204,7 @@ public interface IComReceiver : IEquatable&lt;IComReceiver&gt;</code></pre>
 
   <h3 id="ZeepSDK_Communication_IComReceiver_ProcessMessage_System_String_" data-uid="ZeepSDK.Communication.IComReceiver.ProcessMessage(System.String)">
   ProcessMessage(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Communication/IComReceiver.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Communication/IComReceiver.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The method that will be invoked to process, and in turn dispatch, the message</p>
@@ -240,7 +240,7 @@ public interface IComReceiver : IEquatable&lt;IComReceiver&gt;</code></pre>
 
   <h3 id="ZeepSDK_Communication_IComReceiver_MessageReceived" data-uid="ZeepSDK.Communication.IComReceiver.MessageReceived">
   MessageReceived
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Communication/IComReceiver.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Communication/IComReceiver.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The event that is triggered when a message is received</p>
@@ -248,7 +248,7 @@ public interface IComReceiver : IEquatable&lt;IComReceiver&gt;</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event MessageReceivedDelegate MessageReceived</code></pre>
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;MessageReceivedEventArgs&gt; MessageReceived</code></pre>
   </div>
 
 
@@ -258,7 +258,7 @@ public interface IComReceiver : IEquatable&lt;IComReceiver&gt;</code></pre>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ZeepSDK.Communication.MessageReceivedDelegate.html">MessageReceivedDelegate</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="ZeepSDK.Communication.MessageReceivedEventArgs.html">MessageReceivedEventArgs</a>&gt;</dt>
     <dd></dd>
   </dl>
 
