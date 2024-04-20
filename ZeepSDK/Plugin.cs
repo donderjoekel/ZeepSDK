@@ -24,10 +24,9 @@ internal class Plugin : BaseUnityPlugin
         private set;
     }
 
-#pragma warning disable IDE0051
     private Harmony _harmony;
 
-    private void Awake()
+    public void Awake()
     {
         Instance = this;
 
@@ -55,10 +54,9 @@ internal class Plugin : BaseUnityPlugin
         VersionChecker.CheckVersions().Forget();
     }
 
-    private void OnDestroy()
+    public void OnDestroy()
     {
         _harmony?.UnpatchSelf();
         _harmony = null;
     }
-#pragma warning restore IDE0051
 }
