@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/tnrd-org/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,7 +85,7 @@
 
 
   <h1 id="ZeepSDK_Multiplayer_MultiplayerApi" data-uid="ZeepSDK.Multiplayer.MultiplayerApi" class="text-break">
-Class MultiplayerApi  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L15"><i class="bi bi-code-slash"></i></a>
+Class MultiplayerApi  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -146,45 +146,6 @@ public static class MultiplayerApi</code></pre>
 
 
 
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="ZeepSDK_Multiplayer_MultiplayerApi_CurrentLevel_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.CurrentLevel*"></a>
-
-  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_CurrentLevel" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.CurrentLevel">
-  CurrentLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L58"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the level that is currently being played</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static LevelScriptableObject CurrentLevel { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">LevelScriptableObject</span></dt>
-    <dd><p>The level or null if the level cannot be found
-<br><br>
-The level can be null due to not being connected, not playing an online match, or issues with downloading the level from the workshop</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -193,7 +154,7 @@ The level can be null due to not being connected, not playing an online match, o
 
   <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_AddLevelToPlaylist_ZeepSDK_Multiplayer_PlaylistItem_System_Boolean_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem,System.Boolean)">
   AddLevelToPlaylist(PlaylistItem, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a level to the playlist</p>
@@ -231,11 +192,46 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
 
 
+  <a id="ZeepSDK_Multiplayer_MultiplayerApi_GetCurrentLevel_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel*"></a>
+
+  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_GetCurrentLevel" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel">
+  GetCurrentLevel()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the level that is currently being played</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LevelScriptableObject GetCurrentLevel()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">LevelScriptableObject</span></dt>
+    <dd><p>The level or null if the level cannot be found
+<br><br>
+The level can be null due to not being connected, not playing an online match, or issues with downloading the level from the workshop</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="ZeepSDK_Multiplayer_MultiplayerApi_SetNextLevelIndex_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex*"></a>
 
   <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_SetNextLevelIndex_System_Int32_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex(System.Int32)">
   SetNextLevelIndex(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the level that should be played next</p>
@@ -271,7 +267,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
   <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_ConnectedToGame" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.ConnectedToGame">
   ConnectedToGame
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An event that gets fired whenever you connect to a game</p>
@@ -279,7 +275,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler ConnectedToGame</code></pre>
+    <pre><code class="lang-csharp hljs">public static event ConnectedToGameDelegate ConnectedToGame</code></pre>
   </div>
 
 
@@ -289,7 +285,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dt><a class="xref" href="ZeepSDK.Multiplayer.ConnectedToGameDelegate.html">ConnectedToGameDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -302,7 +298,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
   <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_CreatedRoom" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.CreatedRoom">
   CreatedRoom
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An event that gets fired whenever you have created a room/game</p>
@@ -310,7 +306,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler CreatedRoom</code></pre>
+    <pre><code class="lang-csharp hljs">public static event CreatedRoomDelegate CreatedRoom</code></pre>
   </div>
 
 
@@ -320,7 +316,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dt><a class="xref" href="ZeepSDK.Multiplayer.CreatedRoomDelegate.html">CreatedRoomDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -333,7 +329,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
   <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_DisconnectedFromGame" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.DisconnectedFromGame">
   DisconnectedFromGame
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An event that gets fired whenever you disconnect from a game</p>
@@ -341,7 +337,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler DisconnectedFromGame</code></pre>
+    <pre><code class="lang-csharp hljs">public static event DisconnectedFromGameDelegate DisconnectedFromGame</code></pre>
   </div>
 
 
@@ -351,7 +347,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dt><a class="xref" href="ZeepSDK.Multiplayer.DisconnectedFromGameDelegate.html">DisconnectedFromGameDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -364,7 +360,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
   <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_JoinedRoom" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.JoinedRoom">
   JoinedRoom
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An even that gets fired whenever you have joined a room/game</p>
@@ -372,7 +368,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler JoinedRoom</code></pre>
+    <pre><code class="lang-csharp hljs">public static event JoinedRoomDelegate JoinedRoom</code></pre>
   </div>
 
 
@@ -382,7 +378,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dt><a class="xref" href="ZeepSDK.Multiplayer.JoinedRoomDelegate.html">JoinedRoomDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -395,7 +391,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
   <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_PlayerJoined" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.PlayerJoined">
   PlayerJoined
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An even that gets fired whenever a player joins the room/game</p>
@@ -403,7 +399,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler&lt;PlayerJoinedEventArgs&gt; PlayerJoined</code></pre>
+    <pre><code class="lang-csharp hljs">public static event PlayerJoinedDelegate PlayerJoined</code></pre>
   </div>
 
 
@@ -413,7 +409,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="ZeepSDK.Multiplayer.PlayerJoinedEventArgs.html">PlayerJoinedEventArgs</a>&gt;</dt>
+    <dt><a class="xref" href="ZeepSDK.Multiplayer.PlayerJoinedDelegate.html">PlayerJoinedDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -426,7 +422,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
   <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_PlayerLeft" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.PlayerLeft">
   PlayerLeft
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An even that gets fired whenever a player leaves the room/game</p>
@@ -434,7 +430,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler&lt;PlayerLeftEventArgs&gt; PlayerLeft</code></pre>
+    <pre><code class="lang-csharp hljs">public static event PlayerLeftDelegate PlayerLeft</code></pre>
   </div>
 
 
@@ -444,7 +440,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="ZeepSDK.Multiplayer.PlayerLeftEventArgs.html">PlayerLeftEventArgs</a>&gt;</dt>
+    <dt><a class="xref" href="ZeepSDK.Multiplayer.PlayerLeftDelegate.html">PlayerLeftDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -458,7 +454,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L15" class="edit-link">Edit this page</a>
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L15" class="edit-link">Edit this page</a>
         </div>
 
 

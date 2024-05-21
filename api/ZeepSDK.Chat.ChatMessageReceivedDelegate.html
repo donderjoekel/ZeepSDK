@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum MessageColor </title>
+      <title>Delegate ChatMessageReceivedDelegate </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum MessageColor ">
+      <meta name="title" content="Delegate ChatMessageReceivedDelegate ">
       
-      <meta name="description" content="The available colors for messages">
+      
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/tnrd-org/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Chat_MessageColor.md&amp;value=---%0Auid%3A%20ZeepSDK.Chat.MessageColor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Chat_ChatMessageReceivedDelegate.md&amp;value=---%0Auid%3A%20ZeepSDK.Chat.ChatMessageReceivedDelegate%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -80,13 +80,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ZeepSDK.Chat.MessageColor">
+        <article data-uid="ZeepSDK.Chat.ChatMessageReceivedDelegate">
 
 
 
-
-  <h1 id="ZeepSDK_Chat_MessageColor" data-uid="ZeepSDK.Chat.MessageColor" class="text-break">
-Enum MessageColor  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Chat/MessageColor.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ZeepSDK_Chat_ChatMessageReceivedDelegate" data-uid="ZeepSDK.Chat.ChatMessageReceivedDelegate" class="text-break">
+Delegate ChatMessageReceivedDelegate  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Chat/Delegates.cs/#L4"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -94,14 +93,22 @@ Enum MessageColor  <a class="header-action link-secondary" title="View source" h
   <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The available colors for messages</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum MessageColor</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate void ChatMessageReceivedDelegate(ulong playerId, string username, string message)</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>playerId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+    <dt><code>username</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -113,42 +120,19 @@ Enum MessageColor  <a class="header-action link-secondary" title="View source" h
     <dt>Extension Methods</dt>
     <dd>
   <div>
-      <a class="xref" href="ZeepSDK.Chat.MessageColorExtensions.html#ZeepSDK_Chat_MessageColorExtensions_ToValidString_ZeepSDK_Chat_MessageColor_">MessageColorExtensions.ToValidString(MessageColor)</a>
-  </div>
-  <div>
       <a class="xref" href="ZeepSDK.External.FluentResults.ObjectExtensions.html#ZeepSDK_External_FluentResults_ObjectExtensions_ToResult__1___0_">ObjectExtensions.ToResult&lt;TValue&gt;(TValue)</a>
   </div>
   </dd></dl>
 
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="ZeepSDK_Chat_MessageColor_Black"><code>Black = 7</code></dt>
-    <dd></dd>
-    <dt id="ZeepSDK_Chat_MessageColor_Blue"><code>Blue = 3</code></dt>
-    <dd></dd>
-    <dt id="ZeepSDK_Chat_MessageColor_Green"><code>Green = 4</code></dt>
-    <dd></dd>
-    <dt id="ZeepSDK_Chat_MessageColor_Orange"><code>Orange = 1</code></dt>
-    <dd></dd>
-    <dt id="ZeepSDK_Chat_MessageColor_Pink"><code>Pink = 5</code></dt>
-    <dd></dd>
-    <dt id="ZeepSDK_Chat_MessageColor_Purple"><code>Purple = 6</code></dt>
-    <dd></dd>
-    <dt id="ZeepSDK_Chat_MessageColor_Red"><code>Red = 0</code></dt>
-    <dd></dd>
-    <dt id="ZeepSDK_Chat_MessageColor_White"><code>White = 8</code></dt>
-    <dd></dd>
-    <dt id="ZeepSDK_Chat_MessageColor_Yellow"><code>Yellow = 2</code></dt>
-    <dd></dd>
-  </dl>
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Chat/MessageColor.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Chat/Delegates.cs/#L4" class="edit-link">Edit this page</a>
         </div>
 
 

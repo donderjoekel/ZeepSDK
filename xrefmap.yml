@@ -54,32 +54,6 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Chat.ChatApi.ClearChat
   nameWithType: ChatApi.ClearChat
-- uid: ZeepSDK.Chat.ChatApi.DisableJoinMessage
-  name: DisableJoinMessage()
-  href: api/ZeepSDK.Chat.ChatApi.html#ZeepSDK_Chat_ChatApi_DisableJoinMessage
-  commentId: M:ZeepSDK.Chat.ChatApi.DisableJoinMessage
-  fullName: ZeepSDK.Chat.ChatApi.DisableJoinMessage()
-  nameWithType: ChatApi.DisableJoinMessage()
-- uid: ZeepSDK.Chat.ChatApi.DisableJoinMessage*
-  name: DisableJoinMessage
-  href: api/ZeepSDK.Chat.ChatApi.html#ZeepSDK_Chat_ChatApi_DisableJoinMessage_
-  commentId: Overload:ZeepSDK.Chat.ChatApi.DisableJoinMessage
-  isSpec: "True"
-  fullName: ZeepSDK.Chat.ChatApi.DisableJoinMessage
-  nameWithType: ChatApi.DisableJoinMessage
-- uid: ZeepSDK.Chat.ChatApi.EnableJoinMessage
-  name: EnableJoinMessage()
-  href: api/ZeepSDK.Chat.ChatApi.html#ZeepSDK_Chat_ChatApi_EnableJoinMessage
-  commentId: M:ZeepSDK.Chat.ChatApi.EnableJoinMessage
-  fullName: ZeepSDK.Chat.ChatApi.EnableJoinMessage()
-  nameWithType: ChatApi.EnableJoinMessage()
-- uid: ZeepSDK.Chat.ChatApi.EnableJoinMessage*
-  name: EnableJoinMessage
-  href: api/ZeepSDK.Chat.ChatApi.html#ZeepSDK_Chat_ChatApi_EnableJoinMessage_
-  commentId: Overload:ZeepSDK.Chat.ChatApi.EnableJoinMessage
-  isSpec: "True"
-  fullName: ZeepSDK.Chat.ChatApi.EnableJoinMessage
-  nameWithType: ChatApi.EnableJoinMessage
 - uid: ZeepSDK.Chat.ChatApi.SendMessage(System.String)
   name: SendMessage(string)
   href: api/ZeepSDK.Chat.ChatApi.html#ZeepSDK_Chat_ChatApi_SendMessage_System_String_
@@ -96,181 +70,12 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Chat.ChatApi.SendMessage
   nameWithType: ChatApi.SendMessage
-- uid: ZeepSDK.Chat.ChatApi.SendServerMessage(System.String,System.Int32,ZeepSDK.Chat.MessageColor)
-  name: SendServerMessage(string, int, MessageColor)
-  href: api/ZeepSDK.Chat.ChatApi.html#ZeepSDK_Chat_ChatApi_SendServerMessage_System_String_System_Int32_ZeepSDK_Chat_MessageColor_
-  commentId: M:ZeepSDK.Chat.ChatApi.SendServerMessage(System.String,System.Int32,ZeepSDK.Chat.MessageColor)
-  name.vb: SendServerMessage(String, Integer, MessageColor)
-  fullName: ZeepSDK.Chat.ChatApi.SendServerMessage(string, int, ZeepSDK.Chat.MessageColor)
-  fullName.vb: ZeepSDK.Chat.ChatApi.SendServerMessage(String, Integer, ZeepSDK.Chat.MessageColor)
-  nameWithType: ChatApi.SendServerMessage(string, int, MessageColor)
-  nameWithType.vb: ChatApi.SendServerMessage(String, Integer, MessageColor)
-- uid: ZeepSDK.Chat.ChatApi.SendServerMessage*
-  name: SendServerMessage
-  href: api/ZeepSDK.Chat.ChatApi.html#ZeepSDK_Chat_ChatApi_SendServerMessage_
-  commentId: Overload:ZeepSDK.Chat.ChatApi.SendServerMessage
-  isSpec: "True"
-  fullName: ZeepSDK.Chat.ChatApi.SendServerMessage
-  nameWithType: ChatApi.SendServerMessage
-- uid: ZeepSDK.Chat.ChatApi.SetJoinMessage(System.String,ZeepSDK.Chat.MessageColor)
-  name: SetJoinMessage(string, MessageColor)
-  href: api/ZeepSDK.Chat.ChatApi.html#ZeepSDK_Chat_ChatApi_SetJoinMessage_System_String_ZeepSDK_Chat_MessageColor_
-  commentId: M:ZeepSDK.Chat.ChatApi.SetJoinMessage(System.String,ZeepSDK.Chat.MessageColor)
-  name.vb: SetJoinMessage(String, MessageColor)
-  fullName: ZeepSDK.Chat.ChatApi.SetJoinMessage(string, ZeepSDK.Chat.MessageColor)
-  fullName.vb: ZeepSDK.Chat.ChatApi.SetJoinMessage(String, ZeepSDK.Chat.MessageColor)
-  nameWithType: ChatApi.SetJoinMessage(string, MessageColor)
-  nameWithType.vb: ChatApi.SetJoinMessage(String, MessageColor)
-- uid: ZeepSDK.Chat.ChatApi.SetJoinMessage*
-  name: SetJoinMessage
-  href: api/ZeepSDK.Chat.ChatApi.html#ZeepSDK_Chat_ChatApi_SetJoinMessage_
-  commentId: Overload:ZeepSDK.Chat.ChatApi.SetJoinMessage
-  isSpec: "True"
-  fullName: ZeepSDK.Chat.ChatApi.SetJoinMessage
-  nameWithType: ChatApi.SetJoinMessage
-- uid: ZeepSDK.Chat.ChatMessageReceivedEventArgs
-  name: ChatMessageReceivedEventArgs
-  href: api/ZeepSDK.Chat.ChatMessageReceivedEventArgs.html
-  commentId: T:ZeepSDK.Chat.ChatMessageReceivedEventArgs
-  fullName: ZeepSDK.Chat.ChatMessageReceivedEventArgs
-  nameWithType: ChatMessageReceivedEventArgs
-- uid: ZeepSDK.Chat.ChatMessageReceivedEventArgs.#ctor(System.UInt64,System.String,System.String)
-  name: ChatMessageReceivedEventArgs(ulong, string, string)
-  href: api/ZeepSDK.Chat.ChatMessageReceivedEventArgs.html#ZeepSDK_Chat_ChatMessageReceivedEventArgs__ctor_System_UInt64_System_String_System_String_
-  commentId: M:ZeepSDK.Chat.ChatMessageReceivedEventArgs.#ctor(System.UInt64,System.String,System.String)
-  name.vb: New(ULong, String, String)
-  fullName: ZeepSDK.Chat.ChatMessageReceivedEventArgs.ChatMessageReceivedEventArgs(ulong, string, string)
-  fullName.vb: ZeepSDK.Chat.ChatMessageReceivedEventArgs.New(ULong, String, String)
-  nameWithType: ChatMessageReceivedEventArgs.ChatMessageReceivedEventArgs(ulong, string, string)
-  nameWithType.vb: ChatMessageReceivedEventArgs.New(ULong, String, String)
-- uid: ZeepSDK.Chat.ChatMessageReceivedEventArgs.#ctor*
-  name: ChatMessageReceivedEventArgs
-  href: api/ZeepSDK.Chat.ChatMessageReceivedEventArgs.html#ZeepSDK_Chat_ChatMessageReceivedEventArgs__ctor_
-  commentId: Overload:ZeepSDK.Chat.ChatMessageReceivedEventArgs.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: ZeepSDK.Chat.ChatMessageReceivedEventArgs.ChatMessageReceivedEventArgs
-  fullName.vb: ZeepSDK.Chat.ChatMessageReceivedEventArgs.New
-  nameWithType: ChatMessageReceivedEventArgs.ChatMessageReceivedEventArgs
-  nameWithType.vb: ChatMessageReceivedEventArgs.New
-- uid: ZeepSDK.Chat.ChatMessageReceivedEventArgs.Message
-  name: Message
-  href: api/ZeepSDK.Chat.ChatMessageReceivedEventArgs.html#ZeepSDK_Chat_ChatMessageReceivedEventArgs_Message
-  commentId: P:ZeepSDK.Chat.ChatMessageReceivedEventArgs.Message
-  fullName: ZeepSDK.Chat.ChatMessageReceivedEventArgs.Message
-  nameWithType: ChatMessageReceivedEventArgs.Message
-- uid: ZeepSDK.Chat.ChatMessageReceivedEventArgs.Message*
-  name: Message
-  href: api/ZeepSDK.Chat.ChatMessageReceivedEventArgs.html#ZeepSDK_Chat_ChatMessageReceivedEventArgs_Message_
-  commentId: Overload:ZeepSDK.Chat.ChatMessageReceivedEventArgs.Message
-  isSpec: "True"
-  fullName: ZeepSDK.Chat.ChatMessageReceivedEventArgs.Message
-  nameWithType: ChatMessageReceivedEventArgs.Message
-- uid: ZeepSDK.Chat.ChatMessageReceivedEventArgs.PlayerId
-  name: PlayerId
-  href: api/ZeepSDK.Chat.ChatMessageReceivedEventArgs.html#ZeepSDK_Chat_ChatMessageReceivedEventArgs_PlayerId
-  commentId: P:ZeepSDK.Chat.ChatMessageReceivedEventArgs.PlayerId
-  fullName: ZeepSDK.Chat.ChatMessageReceivedEventArgs.PlayerId
-  nameWithType: ChatMessageReceivedEventArgs.PlayerId
-- uid: ZeepSDK.Chat.ChatMessageReceivedEventArgs.PlayerId*
-  name: PlayerId
-  href: api/ZeepSDK.Chat.ChatMessageReceivedEventArgs.html#ZeepSDK_Chat_ChatMessageReceivedEventArgs_PlayerId_
-  commentId: Overload:ZeepSDK.Chat.ChatMessageReceivedEventArgs.PlayerId
-  isSpec: "True"
-  fullName: ZeepSDK.Chat.ChatMessageReceivedEventArgs.PlayerId
-  nameWithType: ChatMessageReceivedEventArgs.PlayerId
-- uid: ZeepSDK.Chat.ChatMessageReceivedEventArgs.Username
-  name: Username
-  href: api/ZeepSDK.Chat.ChatMessageReceivedEventArgs.html#ZeepSDK_Chat_ChatMessageReceivedEventArgs_Username
-  commentId: P:ZeepSDK.Chat.ChatMessageReceivedEventArgs.Username
-  fullName: ZeepSDK.Chat.ChatMessageReceivedEventArgs.Username
-  nameWithType: ChatMessageReceivedEventArgs.Username
-- uid: ZeepSDK.Chat.ChatMessageReceivedEventArgs.Username*
-  name: Username
-  href: api/ZeepSDK.Chat.ChatMessageReceivedEventArgs.html#ZeepSDK_Chat_ChatMessageReceivedEventArgs_Username_
-  commentId: Overload:ZeepSDK.Chat.ChatMessageReceivedEventArgs.Username
-  isSpec: "True"
-  fullName: ZeepSDK.Chat.ChatMessageReceivedEventArgs.Username
-  nameWithType: ChatMessageReceivedEventArgs.Username
-- uid: ZeepSDK.Chat.MessageColor
-  name: MessageColor
-  href: api/ZeepSDK.Chat.MessageColor.html
-  commentId: T:ZeepSDK.Chat.MessageColor
-  fullName: ZeepSDK.Chat.MessageColor
-  nameWithType: MessageColor
-- uid: ZeepSDK.Chat.MessageColor.Black
-  name: Black
-  href: api/ZeepSDK.Chat.MessageColor.html#ZeepSDK_Chat_MessageColor_Black
-  commentId: F:ZeepSDK.Chat.MessageColor.Black
-  fullName: ZeepSDK.Chat.MessageColor.Black
-  nameWithType: MessageColor.Black
-- uid: ZeepSDK.Chat.MessageColor.Blue
-  name: Blue
-  href: api/ZeepSDK.Chat.MessageColor.html#ZeepSDK_Chat_MessageColor_Blue
-  commentId: F:ZeepSDK.Chat.MessageColor.Blue
-  fullName: ZeepSDK.Chat.MessageColor.Blue
-  nameWithType: MessageColor.Blue
-- uid: ZeepSDK.Chat.MessageColor.Green
-  name: Green
-  href: api/ZeepSDK.Chat.MessageColor.html#ZeepSDK_Chat_MessageColor_Green
-  commentId: F:ZeepSDK.Chat.MessageColor.Green
-  fullName: ZeepSDK.Chat.MessageColor.Green
-  nameWithType: MessageColor.Green
-- uid: ZeepSDK.Chat.MessageColor.Orange
-  name: Orange
-  href: api/ZeepSDK.Chat.MessageColor.html#ZeepSDK_Chat_MessageColor_Orange
-  commentId: F:ZeepSDK.Chat.MessageColor.Orange
-  fullName: ZeepSDK.Chat.MessageColor.Orange
-  nameWithType: MessageColor.Orange
-- uid: ZeepSDK.Chat.MessageColor.Pink
-  name: Pink
-  href: api/ZeepSDK.Chat.MessageColor.html#ZeepSDK_Chat_MessageColor_Pink
-  commentId: F:ZeepSDK.Chat.MessageColor.Pink
-  fullName: ZeepSDK.Chat.MessageColor.Pink
-  nameWithType: MessageColor.Pink
-- uid: ZeepSDK.Chat.MessageColor.Purple
-  name: Purple
-  href: api/ZeepSDK.Chat.MessageColor.html#ZeepSDK_Chat_MessageColor_Purple
-  commentId: F:ZeepSDK.Chat.MessageColor.Purple
-  fullName: ZeepSDK.Chat.MessageColor.Purple
-  nameWithType: MessageColor.Purple
-- uid: ZeepSDK.Chat.MessageColor.Red
-  name: Red
-  href: api/ZeepSDK.Chat.MessageColor.html#ZeepSDK_Chat_MessageColor_Red
-  commentId: F:ZeepSDK.Chat.MessageColor.Red
-  fullName: ZeepSDK.Chat.MessageColor.Red
-  nameWithType: MessageColor.Red
-- uid: ZeepSDK.Chat.MessageColor.White
-  name: White
-  href: api/ZeepSDK.Chat.MessageColor.html#ZeepSDK_Chat_MessageColor_White
-  commentId: F:ZeepSDK.Chat.MessageColor.White
-  fullName: ZeepSDK.Chat.MessageColor.White
-  nameWithType: MessageColor.White
-- uid: ZeepSDK.Chat.MessageColor.Yellow
-  name: Yellow
-  href: api/ZeepSDK.Chat.MessageColor.html#ZeepSDK_Chat_MessageColor_Yellow
-  commentId: F:ZeepSDK.Chat.MessageColor.Yellow
-  fullName: ZeepSDK.Chat.MessageColor.Yellow
-  nameWithType: MessageColor.Yellow
-- uid: ZeepSDK.Chat.MessageColorExtensions
-  name: MessageColorExtensions
-  href: api/ZeepSDK.Chat.MessageColorExtensions.html
-  commentId: T:ZeepSDK.Chat.MessageColorExtensions
-  fullName: ZeepSDK.Chat.MessageColorExtensions
-  nameWithType: MessageColorExtensions
-- uid: ZeepSDK.Chat.MessageColorExtensions.ToValidString(ZeepSDK.Chat.MessageColor)
-  name: ToValidString(MessageColor)
-  href: api/ZeepSDK.Chat.MessageColorExtensions.html#ZeepSDK_Chat_MessageColorExtensions_ToValidString_ZeepSDK_Chat_MessageColor_
-  commentId: M:ZeepSDK.Chat.MessageColorExtensions.ToValidString(ZeepSDK.Chat.MessageColor)
-  fullName: ZeepSDK.Chat.MessageColorExtensions.ToValidString(ZeepSDK.Chat.MessageColor)
-  nameWithType: MessageColorExtensions.ToValidString(MessageColor)
-- uid: ZeepSDK.Chat.MessageColorExtensions.ToValidString*
-  name: ToValidString
-  href: api/ZeepSDK.Chat.MessageColorExtensions.html#ZeepSDK_Chat_MessageColorExtensions_ToValidString_
-  commentId: Overload:ZeepSDK.Chat.MessageColorExtensions.ToValidString
-  isSpec: "True"
-  fullName: ZeepSDK.Chat.MessageColorExtensions.ToValidString
-  nameWithType: MessageColorExtensions.ToValidString
+- uid: ZeepSDK.Chat.ChatMessageReceivedDelegate
+  name: ChatMessageReceivedDelegate
+  href: api/ZeepSDK.Chat.ChatMessageReceivedDelegate.html
+  commentId: T:ZeepSDK.Chat.ChatMessageReceivedDelegate
+  fullName: ZeepSDK.Chat.ChatMessageReceivedDelegate
+  nameWithType: ChatMessageReceivedDelegate
 - uid: ZeepSDK.ChatCommands
   name: ZeepSDK.ChatCommands
   href: api/ZeepSDK.ChatCommands.html
@@ -283,15 +88,15 @@ references:
   commentId: T:ZeepSDK.ChatCommands.ChatCommandApi
   fullName: ZeepSDK.ChatCommands.ChatCommandApi
   nameWithType: ChatCommandApi
-- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.LocalChatCommandCallback)
-  name: RegisterLocalChatCommand(string, string, string, LocalChatCommandCallback)
-  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterLocalChatCommand_System_String_System_String_System_String_ZeepSDK_ChatCommands_LocalChatCommandCallback_
-  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.LocalChatCommandCallback)
-  name.vb: RegisterLocalChatCommand(String, String, String, LocalChatCommandCallback)
-  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand(string, string, string, ZeepSDK.ChatCommands.LocalChatCommandCallback)
-  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand(String, String, String, ZeepSDK.ChatCommands.LocalChatCommandCallback)
-  nameWithType: ChatCommandApi.RegisterLocalChatCommand(string, string, string, LocalChatCommandCallback)
-  nameWithType.vb: ChatCommandApi.RegisterLocalChatCommand(String, String, String, LocalChatCommandCallback)
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate)
+  name: RegisterLocalChatCommand(string, string, string, LocalChatCommandCallbackDelegate)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterLocalChatCommand_System_String_System_String_System_String_ZeepSDK_ChatCommands_LocalChatCommandCallbackDelegate_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate)
+  name.vb: RegisterLocalChatCommand(String, String, String, LocalChatCommandCallbackDelegate)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand(string, string, string, ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate)
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand(String, String, String, ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate)
+  nameWithType: ChatCommandApi.RegisterLocalChatCommand(string, string, string, LocalChatCommandCallbackDelegate)
+  nameWithType.vb: ChatCommandApi.RegisterLocalChatCommand(String, String, String, LocalChatCommandCallbackDelegate)
 - uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand*
   name: RegisterLocalChatCommand
   href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterLocalChatCommand_
@@ -308,15 +113,15 @@ references:
   fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand(Of TChatCommand)()
   nameWithType: ChatCommandApi.RegisterLocalChatCommand<TChatCommand>()
   nameWithType.vb: ChatCommandApi.RegisterLocalChatCommand(Of TChatCommand)()
-- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.MixedChatCommandCallback)
-  name: RegisterMixedChatCommand(string, string, string, MixedChatCommandCallback)
-  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterMixedChatCommand_System_String_System_String_System_String_ZeepSDK_ChatCommands_MixedChatCommandCallback_
-  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.MixedChatCommandCallback)
-  name.vb: RegisterMixedChatCommand(String, String, String, MixedChatCommandCallback)
-  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(string, string, string, ZeepSDK.ChatCommands.MixedChatCommandCallback)
-  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(String, String, String, ZeepSDK.ChatCommands.MixedChatCommandCallback)
-  nameWithType: ChatCommandApi.RegisterMixedChatCommand(string, string, string, MixedChatCommandCallback)
-  nameWithType.vb: ChatCommandApi.RegisterMixedChatCommand(String, String, String, MixedChatCommandCallback)
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate)
+  name: RegisterMixedChatCommand(string, string, string, MixedChatCommandCallbackDelegate)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterMixedChatCommand_System_String_System_String_System_String_ZeepSDK_ChatCommands_MixedChatCommandCallbackDelegate_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate)
+  name.vb: RegisterMixedChatCommand(String, String, String, MixedChatCommandCallbackDelegate)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(string, string, string, ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate)
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(String, String, String, ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate)
+  nameWithType: ChatCommandApi.RegisterMixedChatCommand(string, string, string, MixedChatCommandCallbackDelegate)
+  nameWithType.vb: ChatCommandApi.RegisterMixedChatCommand(String, String, String, MixedChatCommandCallbackDelegate)
 - uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand*
   name: RegisterMixedChatCommand
   href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterMixedChatCommand_
@@ -333,15 +138,15 @@ references:
   fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(Of TChatCommand)()
   nameWithType: ChatCommandApi.RegisterMixedChatCommand<TChatCommand>()
   nameWithType.vb: ChatCommandApi.RegisterMixedChatCommand(Of TChatCommand)()
-- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.RemoteChatCommandCallback)
-  name: RegisterRemoteChatCommand(string, string, string, RemoteChatCommandCallback)
-  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterRemoteChatCommand_System_String_System_String_System_String_ZeepSDK_ChatCommands_RemoteChatCommandCallback_
-  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.RemoteChatCommandCallback)
-  name.vb: RegisterRemoteChatCommand(String, String, String, RemoteChatCommandCallback)
-  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand(string, string, string, ZeepSDK.ChatCommands.RemoteChatCommandCallback)
-  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand(String, String, String, ZeepSDK.ChatCommands.RemoteChatCommandCallback)
-  nameWithType: ChatCommandApi.RegisterRemoteChatCommand(string, string, string, RemoteChatCommandCallback)
-  nameWithType.vb: ChatCommandApi.RegisterRemoteChatCommand(String, String, String, RemoteChatCommandCallback)
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate)
+  name: RegisterRemoteChatCommand(string, string, string, RemoteChatCommandCallbackDelegate)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterRemoteChatCommand_System_String_System_String_System_String_ZeepSDK_ChatCommands_RemoteChatCommandCallbackDelegate_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate)
+  name.vb: RegisterRemoteChatCommand(String, String, String, RemoteChatCommandCallbackDelegate)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand(string, string, string, ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate)
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand(String, String, String, ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate)
+  nameWithType: ChatCommandApi.RegisterRemoteChatCommand(string, string, string, RemoteChatCommandCallbackDelegate)
+  nameWithType.vb: ChatCommandApi.RegisterRemoteChatCommand(String, String, String, RemoteChatCommandCallbackDelegate)
 - uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand*
   name: RegisterRemoteChatCommand
   href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterRemoteChatCommand_
@@ -453,12 +258,12 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.ChatCommands.IRemoteChatCommand.Handle
   nameWithType: IRemoteChatCommand.Handle
-- uid: ZeepSDK.ChatCommands.LocalChatCommandCallback
-  name: LocalChatCommandCallback
-  href: api/ZeepSDK.ChatCommands.LocalChatCommandCallback.html
-  commentId: T:ZeepSDK.ChatCommands.LocalChatCommandCallback
-  fullName: ZeepSDK.ChatCommands.LocalChatCommandCallback
-  nameWithType: LocalChatCommandCallback
+- uid: ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate
+  name: LocalChatCommandCallbackDelegate
+  href: api/ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate.html
+  commentId: T:ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate
+  fullName: ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate
+  nameWithType: LocalChatCommandCallbackDelegate
 - uid: ZeepSDK.ChatCommands.MixedChatCommandBase
   name: MixedChatCommandBase
   href: api/ZeepSDK.ChatCommands.MixedChatCommandBase.html
@@ -520,18 +325,18 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.ChatCommands.MixedChatCommandBase.Prefix
   nameWithType: MixedChatCommandBase.Prefix
-- uid: ZeepSDK.ChatCommands.MixedChatCommandCallback
-  name: MixedChatCommandCallback
-  href: api/ZeepSDK.ChatCommands.MixedChatCommandCallback.html
-  commentId: T:ZeepSDK.ChatCommands.MixedChatCommandCallback
-  fullName: ZeepSDK.ChatCommands.MixedChatCommandCallback
-  nameWithType: MixedChatCommandCallback
-- uid: ZeepSDK.ChatCommands.RemoteChatCommandCallback
-  name: RemoteChatCommandCallback
-  href: api/ZeepSDK.ChatCommands.RemoteChatCommandCallback.html
-  commentId: T:ZeepSDK.ChatCommands.RemoteChatCommandCallback
-  fullName: ZeepSDK.ChatCommands.RemoteChatCommandCallback
-  nameWithType: RemoteChatCommandCallback
+- uid: ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate
+  name: MixedChatCommandCallbackDelegate
+  href: api/ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate.html
+  commentId: T:ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate
+  fullName: ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate
+  nameWithType: MixedChatCommandCallbackDelegate
+- uid: ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate
+  name: RemoteChatCommandCallbackDelegate
+  href: api/ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate.html
+  commentId: T:ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate
+  fullName: ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate
+  nameWithType: RemoteChatCommandCallbackDelegate
 - uid: ZeepSDK.Communication
   name: ZeepSDK.Communication
   href: api/ZeepSDK.Communication.html
@@ -592,19 +397,19 @@ references:
   commentId: T:ZeepSDK.Communication.IComReceiver
   fullName: ZeepSDK.Communication.IComReceiver
   nameWithType: IComReceiver
-- uid: ZeepSDK.Communication.IComReceiver.Identifier
-  name: Identifier
-  href: api/ZeepSDK.Communication.IComReceiver.html#ZeepSDK_Communication_IComReceiver_Identifier
-  commentId: P:ZeepSDK.Communication.IComReceiver.Identifier
-  fullName: ZeepSDK.Communication.IComReceiver.Identifier
-  nameWithType: IComReceiver.Identifier
-- uid: ZeepSDK.Communication.IComReceiver.Identifier*
-  name: Identifier
-  href: api/ZeepSDK.Communication.IComReceiver.html#ZeepSDK_Communication_IComReceiver_Identifier_
-  commentId: Overload:ZeepSDK.Communication.IComReceiver.Identifier
+- uid: ZeepSDK.Communication.IComReceiver.Guid
+  name: Guid
+  href: api/ZeepSDK.Communication.IComReceiver.html#ZeepSDK_Communication_IComReceiver_Guid
+  commentId: P:ZeepSDK.Communication.IComReceiver.Guid
+  fullName: ZeepSDK.Communication.IComReceiver.Guid
+  nameWithType: IComReceiver.Guid
+- uid: ZeepSDK.Communication.IComReceiver.Guid*
+  name: Guid
+  href: api/ZeepSDK.Communication.IComReceiver.html#ZeepSDK_Communication_IComReceiver_Guid_
+  commentId: Overload:ZeepSDK.Communication.IComReceiver.Guid
   isSpec: "True"
-  fullName: ZeepSDK.Communication.IComReceiver.Identifier
-  nameWithType: IComReceiver.Identifier
+  fullName: ZeepSDK.Communication.IComReceiver.Guid
+  nameWithType: IComReceiver.Guid
 - uid: ZeepSDK.Communication.IComReceiver.MessageReceived
   name: MessageReceived
   href: api/ZeepSDK.Communication.IComReceiver.html#ZeepSDK_Communication_IComReceiver_MessageReceived
@@ -678,57 +483,12 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Communication.IComSender.SendMessage
   nameWithType: IComSender.SendMessage
-- uid: ZeepSDK.Communication.MessageReceivedEventArgs
-  name: MessageReceivedEventArgs
-  href: api/ZeepSDK.Communication.MessageReceivedEventArgs.html
-  commentId: T:ZeepSDK.Communication.MessageReceivedEventArgs
-  fullName: ZeepSDK.Communication.MessageReceivedEventArgs
-  nameWithType: MessageReceivedEventArgs
-- uid: ZeepSDK.Communication.MessageReceivedEventArgs.#ctor(ZeepSDK.Communication.IComReceiver,System.String)
-  name: MessageReceivedEventArgs(IComReceiver, string)
-  href: api/ZeepSDK.Communication.MessageReceivedEventArgs.html#ZeepSDK_Communication_MessageReceivedEventArgs__ctor_ZeepSDK_Communication_IComReceiver_System_String_
-  commentId: M:ZeepSDK.Communication.MessageReceivedEventArgs.#ctor(ZeepSDK.Communication.IComReceiver,System.String)
-  name.vb: New(IComReceiver, String)
-  fullName: ZeepSDK.Communication.MessageReceivedEventArgs.MessageReceivedEventArgs(ZeepSDK.Communication.IComReceiver, string)
-  fullName.vb: ZeepSDK.Communication.MessageReceivedEventArgs.New(ZeepSDK.Communication.IComReceiver, String)
-  nameWithType: MessageReceivedEventArgs.MessageReceivedEventArgs(IComReceiver, string)
-  nameWithType.vb: MessageReceivedEventArgs.New(IComReceiver, String)
-- uid: ZeepSDK.Communication.MessageReceivedEventArgs.#ctor*
-  name: MessageReceivedEventArgs
-  href: api/ZeepSDK.Communication.MessageReceivedEventArgs.html#ZeepSDK_Communication_MessageReceivedEventArgs__ctor_
-  commentId: Overload:ZeepSDK.Communication.MessageReceivedEventArgs.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: ZeepSDK.Communication.MessageReceivedEventArgs.MessageReceivedEventArgs
-  fullName.vb: ZeepSDK.Communication.MessageReceivedEventArgs.New
-  nameWithType: MessageReceivedEventArgs.MessageReceivedEventArgs
-  nameWithType.vb: MessageReceivedEventArgs.New
-- uid: ZeepSDK.Communication.MessageReceivedEventArgs.Message
-  name: Message
-  href: api/ZeepSDK.Communication.MessageReceivedEventArgs.html#ZeepSDK_Communication_MessageReceivedEventArgs_Message
-  commentId: P:ZeepSDK.Communication.MessageReceivedEventArgs.Message
-  fullName: ZeepSDK.Communication.MessageReceivedEventArgs.Message
-  nameWithType: MessageReceivedEventArgs.Message
-- uid: ZeepSDK.Communication.MessageReceivedEventArgs.Message*
-  name: Message
-  href: api/ZeepSDK.Communication.MessageReceivedEventArgs.html#ZeepSDK_Communication_MessageReceivedEventArgs_Message_
-  commentId: Overload:ZeepSDK.Communication.MessageReceivedEventArgs.Message
-  isSpec: "True"
-  fullName: ZeepSDK.Communication.MessageReceivedEventArgs.Message
-  nameWithType: MessageReceivedEventArgs.Message
-- uid: ZeepSDK.Communication.MessageReceivedEventArgs.Receiver
-  name: Receiver
-  href: api/ZeepSDK.Communication.MessageReceivedEventArgs.html#ZeepSDK_Communication_MessageReceivedEventArgs_Receiver
-  commentId: P:ZeepSDK.Communication.MessageReceivedEventArgs.Receiver
-  fullName: ZeepSDK.Communication.MessageReceivedEventArgs.Receiver
-  nameWithType: MessageReceivedEventArgs.Receiver
-- uid: ZeepSDK.Communication.MessageReceivedEventArgs.Receiver*
-  name: Receiver
-  href: api/ZeepSDK.Communication.MessageReceivedEventArgs.html#ZeepSDK_Communication_MessageReceivedEventArgs_Receiver_
-  commentId: Overload:ZeepSDK.Communication.MessageReceivedEventArgs.Receiver
-  isSpec: "True"
-  fullName: ZeepSDK.Communication.MessageReceivedEventArgs.Receiver
-  nameWithType: MessageReceivedEventArgs.Receiver
+- uid: ZeepSDK.Communication.MessageReceivedDelegate
+  name: MessageReceivedDelegate
+  href: api/ZeepSDK.Communication.MessageReceivedDelegate.html
+  commentId: T:ZeepSDK.Communication.MessageReceivedDelegate
+  fullName: ZeepSDK.Communication.MessageReceivedDelegate
+  nameWithType: MessageReceivedDelegate
 - uid: ZeepSDK.Cosmetics
   name: ZeepSDK.Cosmetics
   href: api/ZeepSDK.Cosmetics.html
@@ -22845,6 +22605,24 @@ references:
   commentId: N:ZeepSDK.LevelEditor
   fullName: ZeepSDK.LevelEditor
   nameWithType: ZeepSDK.LevelEditor
+- uid: ZeepSDK.LevelEditor.EnteredLevelEditorDelegate
+  name: EnteredLevelEditorDelegate
+  href: api/ZeepSDK.LevelEditor.EnteredLevelEditorDelegate.html
+  commentId: T:ZeepSDK.LevelEditor.EnteredLevelEditorDelegate
+  fullName: ZeepSDK.LevelEditor.EnteredLevelEditorDelegate
+  nameWithType: EnteredLevelEditorDelegate
+- uid: ZeepSDK.LevelEditor.EnteredTestModeDelegate
+  name: EnteredTestModeDelegate
+  href: api/ZeepSDK.LevelEditor.EnteredTestModeDelegate.html
+  commentId: T:ZeepSDK.LevelEditor.EnteredTestModeDelegate
+  fullName: ZeepSDK.LevelEditor.EnteredTestModeDelegate
+  nameWithType: EnteredTestModeDelegate
+- uid: ZeepSDK.LevelEditor.ExitedLevelEditorDelegate
+  name: ExitedLevelEditorDelegate
+  href: api/ZeepSDK.LevelEditor.ExitedLevelEditorDelegate.html
+  commentId: T:ZeepSDK.LevelEditor.ExitedLevelEditorDelegate
+  fullName: ZeepSDK.LevelEditor.ExitedLevelEditorDelegate
+  nameWithType: ExitedLevelEditorDelegate
 - uid: ZeepSDK.LevelEditor.ICustomBlockBuilder
   name: ICustomBlockBuilder
   href: api/ZeepSDK.LevelEditor.ICustomBlockBuilder.html
@@ -23190,6 +22968,18 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.LevelEditor.LevelEditorApi.UnblockMouseInput
   nameWithType: LevelEditorApi.UnblockMouseInput
+- uid: ZeepSDK.LevelEditor.LevelLoadedDelegate
+  name: LevelLoadedDelegate
+  href: api/ZeepSDK.LevelEditor.LevelLoadedDelegate.html
+  commentId: T:ZeepSDK.LevelEditor.LevelLoadedDelegate
+  fullName: ZeepSDK.LevelEditor.LevelLoadedDelegate
+  nameWithType: LevelLoadedDelegate
+- uid: ZeepSDK.LevelEditor.LevelSavedDelegate
+  name: LevelSavedDelegate
+  href: api/ZeepSDK.LevelEditor.LevelSavedDelegate.html
+  commentId: T:ZeepSDK.LevelEditor.LevelSavedDelegate
+  fullName: ZeepSDK.LevelEditor.LevelSavedDelegate
+  nameWithType: LevelSavedDelegate
 - uid: ZeepSDK.Messaging
   name: ZeepSDK.Messaging
   href: api/ZeepSDK.Messaging.html
@@ -23409,6 +23199,30 @@ references:
   commentId: N:ZeepSDK.Multiplayer
   fullName: ZeepSDK.Multiplayer
   nameWithType: ZeepSDK.Multiplayer
+- uid: ZeepSDK.Multiplayer.ConnectedToGameDelegate
+  name: ConnectedToGameDelegate
+  href: api/ZeepSDK.Multiplayer.ConnectedToGameDelegate.html
+  commentId: T:ZeepSDK.Multiplayer.ConnectedToGameDelegate
+  fullName: ZeepSDK.Multiplayer.ConnectedToGameDelegate
+  nameWithType: ConnectedToGameDelegate
+- uid: ZeepSDK.Multiplayer.CreatedRoomDelegate
+  name: CreatedRoomDelegate
+  href: api/ZeepSDK.Multiplayer.CreatedRoomDelegate.html
+  commentId: T:ZeepSDK.Multiplayer.CreatedRoomDelegate
+  fullName: ZeepSDK.Multiplayer.CreatedRoomDelegate
+  nameWithType: CreatedRoomDelegate
+- uid: ZeepSDK.Multiplayer.DisconnectedFromGameDelegate
+  name: DisconnectedFromGameDelegate
+  href: api/ZeepSDK.Multiplayer.DisconnectedFromGameDelegate.html
+  commentId: T:ZeepSDK.Multiplayer.DisconnectedFromGameDelegate
+  fullName: ZeepSDK.Multiplayer.DisconnectedFromGameDelegate
+  nameWithType: DisconnectedFromGameDelegate
+- uid: ZeepSDK.Multiplayer.JoinedRoomDelegate
+  name: JoinedRoomDelegate
+  href: api/ZeepSDK.Multiplayer.JoinedRoomDelegate.html
+  commentId: T:ZeepSDK.Multiplayer.JoinedRoomDelegate
+  fullName: ZeepSDK.Multiplayer.JoinedRoomDelegate
+  nameWithType: JoinedRoomDelegate
 - uid: ZeepSDK.Multiplayer.MultiplayerApi
   name: MultiplayerApi
   href: api/ZeepSDK.Multiplayer.MultiplayerApi.html
@@ -23443,25 +23257,25 @@ references:
   commentId: E:ZeepSDK.Multiplayer.MultiplayerApi.CreatedRoom
   fullName: ZeepSDK.Multiplayer.MultiplayerApi.CreatedRoom
   nameWithType: MultiplayerApi.CreatedRoom
-- uid: ZeepSDK.Multiplayer.MultiplayerApi.CurrentLevel
-  name: CurrentLevel
-  href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_CurrentLevel
-  commentId: P:ZeepSDK.Multiplayer.MultiplayerApi.CurrentLevel
-  fullName: ZeepSDK.Multiplayer.MultiplayerApi.CurrentLevel
-  nameWithType: MultiplayerApi.CurrentLevel
-- uid: ZeepSDK.Multiplayer.MultiplayerApi.CurrentLevel*
-  name: CurrentLevel
-  href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_CurrentLevel_
-  commentId: Overload:ZeepSDK.Multiplayer.MultiplayerApi.CurrentLevel
-  isSpec: "True"
-  fullName: ZeepSDK.Multiplayer.MultiplayerApi.CurrentLevel
-  nameWithType: MultiplayerApi.CurrentLevel
 - uid: ZeepSDK.Multiplayer.MultiplayerApi.DisconnectedFromGame
   name: DisconnectedFromGame
   href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_DisconnectedFromGame
   commentId: E:ZeepSDK.Multiplayer.MultiplayerApi.DisconnectedFromGame
   fullName: ZeepSDK.Multiplayer.MultiplayerApi.DisconnectedFromGame
   nameWithType: MultiplayerApi.DisconnectedFromGame
+- uid: ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel
+  name: GetCurrentLevel()
+  href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_GetCurrentLevel
+  commentId: M:ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel
+  fullName: ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel()
+  nameWithType: MultiplayerApi.GetCurrentLevel()
+- uid: ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel*
+  name: GetCurrentLevel
+  href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_GetCurrentLevel_
+  commentId: Overload:ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel
+  isSpec: "True"
+  fullName: ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel
+  nameWithType: MultiplayerApi.GetCurrentLevel
 - uid: ZeepSDK.Multiplayer.MultiplayerApi.JoinedRoom
   name: JoinedRoom
   href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_JoinedRoom
@@ -23496,82 +23310,18 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex
   nameWithType: MultiplayerApi.SetNextLevelIndex
-- uid: ZeepSDK.Multiplayer.PlayerJoinedEventArgs
-  name: PlayerJoinedEventArgs
-  href: api/ZeepSDK.Multiplayer.PlayerJoinedEventArgs.html
-  commentId: T:ZeepSDK.Multiplayer.PlayerJoinedEventArgs
-  fullName: ZeepSDK.Multiplayer.PlayerJoinedEventArgs
-  nameWithType: PlayerJoinedEventArgs
-- uid: ZeepSDK.Multiplayer.PlayerJoinedEventArgs.#ctor(ZeepkistClient.ZeepkistNetworkPlayer)
-  name: PlayerJoinedEventArgs(ZeepkistNetworkPlayer)
-  href: api/ZeepSDK.Multiplayer.PlayerJoinedEventArgs.html#ZeepSDK_Multiplayer_PlayerJoinedEventArgs__ctor_ZeepkistClient_ZeepkistNetworkPlayer_
-  commentId: M:ZeepSDK.Multiplayer.PlayerJoinedEventArgs.#ctor(ZeepkistClient.ZeepkistNetworkPlayer)
-  name.vb: New(ZeepkistNetworkPlayer)
-  fullName: ZeepSDK.Multiplayer.PlayerJoinedEventArgs.PlayerJoinedEventArgs(ZeepkistClient.ZeepkistNetworkPlayer)
-  fullName.vb: ZeepSDK.Multiplayer.PlayerJoinedEventArgs.New(ZeepkistClient.ZeepkistNetworkPlayer)
-  nameWithType: PlayerJoinedEventArgs.PlayerJoinedEventArgs(ZeepkistNetworkPlayer)
-  nameWithType.vb: PlayerJoinedEventArgs.New(ZeepkistNetworkPlayer)
-- uid: ZeepSDK.Multiplayer.PlayerJoinedEventArgs.#ctor*
-  name: PlayerJoinedEventArgs
-  href: api/ZeepSDK.Multiplayer.PlayerJoinedEventArgs.html#ZeepSDK_Multiplayer_PlayerJoinedEventArgs__ctor_
-  commentId: Overload:ZeepSDK.Multiplayer.PlayerJoinedEventArgs.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: ZeepSDK.Multiplayer.PlayerJoinedEventArgs.PlayerJoinedEventArgs
-  fullName.vb: ZeepSDK.Multiplayer.PlayerJoinedEventArgs.New
-  nameWithType: PlayerJoinedEventArgs.PlayerJoinedEventArgs
-  nameWithType.vb: PlayerJoinedEventArgs.New
-- uid: ZeepSDK.Multiplayer.PlayerJoinedEventArgs.Player
-  name: Player
-  href: api/ZeepSDK.Multiplayer.PlayerJoinedEventArgs.html#ZeepSDK_Multiplayer_PlayerJoinedEventArgs_Player
-  commentId: P:ZeepSDK.Multiplayer.PlayerJoinedEventArgs.Player
-  fullName: ZeepSDK.Multiplayer.PlayerJoinedEventArgs.Player
-  nameWithType: PlayerJoinedEventArgs.Player
-- uid: ZeepSDK.Multiplayer.PlayerJoinedEventArgs.Player*
-  name: Player
-  href: api/ZeepSDK.Multiplayer.PlayerJoinedEventArgs.html#ZeepSDK_Multiplayer_PlayerJoinedEventArgs_Player_
-  commentId: Overload:ZeepSDK.Multiplayer.PlayerJoinedEventArgs.Player
-  isSpec: "True"
-  fullName: ZeepSDK.Multiplayer.PlayerJoinedEventArgs.Player
-  nameWithType: PlayerJoinedEventArgs.Player
-- uid: ZeepSDK.Multiplayer.PlayerLeftEventArgs
-  name: PlayerLeftEventArgs
-  href: api/ZeepSDK.Multiplayer.PlayerLeftEventArgs.html
-  commentId: T:ZeepSDK.Multiplayer.PlayerLeftEventArgs
-  fullName: ZeepSDK.Multiplayer.PlayerLeftEventArgs
-  nameWithType: PlayerLeftEventArgs
-- uid: ZeepSDK.Multiplayer.PlayerLeftEventArgs.#ctor(ZeepkistClient.ZeepkistNetworkPlayer)
-  name: PlayerLeftEventArgs(ZeepkistNetworkPlayer)
-  href: api/ZeepSDK.Multiplayer.PlayerLeftEventArgs.html#ZeepSDK_Multiplayer_PlayerLeftEventArgs__ctor_ZeepkistClient_ZeepkistNetworkPlayer_
-  commentId: M:ZeepSDK.Multiplayer.PlayerLeftEventArgs.#ctor(ZeepkistClient.ZeepkistNetworkPlayer)
-  name.vb: New(ZeepkistNetworkPlayer)
-  fullName: ZeepSDK.Multiplayer.PlayerLeftEventArgs.PlayerLeftEventArgs(ZeepkistClient.ZeepkistNetworkPlayer)
-  fullName.vb: ZeepSDK.Multiplayer.PlayerLeftEventArgs.New(ZeepkistClient.ZeepkistNetworkPlayer)
-  nameWithType: PlayerLeftEventArgs.PlayerLeftEventArgs(ZeepkistNetworkPlayer)
-  nameWithType.vb: PlayerLeftEventArgs.New(ZeepkistNetworkPlayer)
-- uid: ZeepSDK.Multiplayer.PlayerLeftEventArgs.#ctor*
-  name: PlayerLeftEventArgs
-  href: api/ZeepSDK.Multiplayer.PlayerLeftEventArgs.html#ZeepSDK_Multiplayer_PlayerLeftEventArgs__ctor_
-  commentId: Overload:ZeepSDK.Multiplayer.PlayerLeftEventArgs.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: ZeepSDK.Multiplayer.PlayerLeftEventArgs.PlayerLeftEventArgs
-  fullName.vb: ZeepSDK.Multiplayer.PlayerLeftEventArgs.New
-  nameWithType: PlayerLeftEventArgs.PlayerLeftEventArgs
-  nameWithType.vb: PlayerLeftEventArgs.New
-- uid: ZeepSDK.Multiplayer.PlayerLeftEventArgs.Player
-  name: Player
-  href: api/ZeepSDK.Multiplayer.PlayerLeftEventArgs.html#ZeepSDK_Multiplayer_PlayerLeftEventArgs_Player
-  commentId: P:ZeepSDK.Multiplayer.PlayerLeftEventArgs.Player
-  fullName: ZeepSDK.Multiplayer.PlayerLeftEventArgs.Player
-  nameWithType: PlayerLeftEventArgs.Player
-- uid: ZeepSDK.Multiplayer.PlayerLeftEventArgs.Player*
-  name: Player
-  href: api/ZeepSDK.Multiplayer.PlayerLeftEventArgs.html#ZeepSDK_Multiplayer_PlayerLeftEventArgs_Player_
-  commentId: Overload:ZeepSDK.Multiplayer.PlayerLeftEventArgs.Player
-  isSpec: "True"
-  fullName: ZeepSDK.Multiplayer.PlayerLeftEventArgs.Player
-  nameWithType: PlayerLeftEventArgs.Player
+- uid: ZeepSDK.Multiplayer.PlayerJoinedDelegate
+  name: PlayerJoinedDelegate
+  href: api/ZeepSDK.Multiplayer.PlayerJoinedDelegate.html
+  commentId: T:ZeepSDK.Multiplayer.PlayerJoinedDelegate
+  fullName: ZeepSDK.Multiplayer.PlayerJoinedDelegate
+  nameWithType: PlayerJoinedDelegate
+- uid: ZeepSDK.Multiplayer.PlayerLeftDelegate
+  name: PlayerLeftDelegate
+  href: api/ZeepSDK.Multiplayer.PlayerLeftDelegate.html
+  commentId: T:ZeepSDK.Multiplayer.PlayerLeftDelegate
+  fullName: ZeepSDK.Multiplayer.PlayerLeftDelegate
+  nameWithType: PlayerLeftDelegate
 - uid: ZeepSDK.Multiplayer.PlaylistItem
   name: PlaylistItem
   href: api/ZeepSDK.Multiplayer.PlaylistItem.html
@@ -23697,6 +23447,18 @@ references:
   commentId: E:ZeepSDK.PhotoMode.PhotoModeApi.PhotoModeExited
   fullName: ZeepSDK.PhotoMode.PhotoModeApi.PhotoModeExited
   nameWithType: PhotoModeApi.PhotoModeExited
+- uid: ZeepSDK.PhotoMode.PhotoModeEnteredDelegate
+  name: PhotoModeEnteredDelegate
+  href: api/ZeepSDK.PhotoMode.PhotoModeEnteredDelegate.html
+  commentId: T:ZeepSDK.PhotoMode.PhotoModeEnteredDelegate
+  fullName: ZeepSDK.PhotoMode.PhotoModeEnteredDelegate
+  nameWithType: PhotoModeEnteredDelegate
+- uid: ZeepSDK.PhotoMode.PhotoModeExitedDelegate
+  name: PhotoModeExitedDelegate
+  href: api/ZeepSDK.PhotoMode.PhotoModeExitedDelegate.html
+  commentId: T:ZeepSDK.PhotoMode.PhotoModeExitedDelegate
+  fullName: ZeepSDK.PhotoMode.PhotoModeExitedDelegate
+  nameWithType: PhotoModeExitedDelegate
 - uid: ZeepSDK.Playlist
   name: ZeepSDK.Playlist
   href: api/ZeepSDK.Playlist.html
@@ -23888,25 +23650,6 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Playlist.PlaylistApi.GetPlaylists
   nameWithType: PlaylistApi.GetPlaylists
-- uid: ZeepSDK.Playlist.PlaylistExtensions
-  name: PlaylistExtensions
-  href: api/ZeepSDK.Playlist.PlaylistExtensions.html
-  commentId: T:ZeepSDK.Playlist.PlaylistExtensions
-  fullName: ZeepSDK.Playlist.PlaylistExtensions
-  nameWithType: PlaylistExtensions
-- uid: ZeepSDK.Playlist.PlaylistExtensions.CreateEditor(PlaylistSaveJSON)
-  name: CreateEditor(PlaylistSaveJSON)
-  href: api/ZeepSDK.Playlist.PlaylistExtensions.html#ZeepSDK_Playlist_PlaylistExtensions_CreateEditor_PlaylistSaveJSON_
-  commentId: M:ZeepSDK.Playlist.PlaylistExtensions.CreateEditor(PlaylistSaveJSON)
-  fullName: ZeepSDK.Playlist.PlaylistExtensions.CreateEditor(PlaylistSaveJSON)
-  nameWithType: PlaylistExtensions.CreateEditor(PlaylistSaveJSON)
-- uid: ZeepSDK.Playlist.PlaylistExtensions.CreateEditor*
-  name: CreateEditor
-  href: api/ZeepSDK.Playlist.PlaylistExtensions.html#ZeepSDK_Playlist_PlaylistExtensions_CreateEditor_
-  commentId: Overload:ZeepSDK.Playlist.PlaylistExtensions.CreateEditor
-  isSpec: "True"
-  fullName: ZeepSDK.Playlist.PlaylistExtensions.CreateEditor
-  nameWithType: PlaylistExtensions.CreateEditor
 - uid: ZeepSDK.Racing
   name: ZeepSDK.Racing
   href: api/ZeepSDK.Racing.html
@@ -23955,120 +23698,48 @@ references:
   commentId: F:ZeepSDK.Racing.CrashReason.Unknown
   fullName: ZeepSDK.Racing.CrashReason.Unknown
   nameWithType: CrashReason.Unknown
-- uid: ZeepSDK.Racing.CrashedEventArgs
-  name: CrashedEventArgs
-  href: api/ZeepSDK.Racing.CrashedEventArgs.html
-  commentId: T:ZeepSDK.Racing.CrashedEventArgs
-  fullName: ZeepSDK.Racing.CrashedEventArgs
-  nameWithType: CrashedEventArgs
-- uid: ZeepSDK.Racing.CrashedEventArgs.#ctor(ZeepSDK.Racing.CrashReason)
-  name: CrashedEventArgs(CrashReason)
-  href: api/ZeepSDK.Racing.CrashedEventArgs.html#ZeepSDK_Racing_CrashedEventArgs__ctor_ZeepSDK_Racing_CrashReason_
-  commentId: M:ZeepSDK.Racing.CrashedEventArgs.#ctor(ZeepSDK.Racing.CrashReason)
-  name.vb: New(CrashReason)
-  fullName: ZeepSDK.Racing.CrashedEventArgs.CrashedEventArgs(ZeepSDK.Racing.CrashReason)
-  fullName.vb: ZeepSDK.Racing.CrashedEventArgs.New(ZeepSDK.Racing.CrashReason)
-  nameWithType: CrashedEventArgs.CrashedEventArgs(CrashReason)
-  nameWithType.vb: CrashedEventArgs.New(CrashReason)
-- uid: ZeepSDK.Racing.CrashedEventArgs.#ctor*
-  name: CrashedEventArgs
-  href: api/ZeepSDK.Racing.CrashedEventArgs.html#ZeepSDK_Racing_CrashedEventArgs__ctor_
-  commentId: Overload:ZeepSDK.Racing.CrashedEventArgs.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: ZeepSDK.Racing.CrashedEventArgs.CrashedEventArgs
-  fullName.vb: ZeepSDK.Racing.CrashedEventArgs.New
-  nameWithType: CrashedEventArgs.CrashedEventArgs
-  nameWithType.vb: CrashedEventArgs.New
-- uid: ZeepSDK.Racing.CrashedEventArgs.Reason
-  name: Reason
-  href: api/ZeepSDK.Racing.CrashedEventArgs.html#ZeepSDK_Racing_CrashedEventArgs_Reason
-  commentId: P:ZeepSDK.Racing.CrashedEventArgs.Reason
-  fullName: ZeepSDK.Racing.CrashedEventArgs.Reason
-  nameWithType: CrashedEventArgs.Reason
-- uid: ZeepSDK.Racing.CrashedEventArgs.Reason*
-  name: Reason
-  href: api/ZeepSDK.Racing.CrashedEventArgs.html#ZeepSDK_Racing_CrashedEventArgs_Reason_
-  commentId: Overload:ZeepSDK.Racing.CrashedEventArgs.Reason
-  isSpec: "True"
-  fullName: ZeepSDK.Racing.CrashedEventArgs.Reason
-  nameWithType: CrashedEventArgs.Reason
-- uid: ZeepSDK.Racing.CrossedFinishLineEventArgs
-  name: CrossedFinishLineEventArgs
-  href: api/ZeepSDK.Racing.CrossedFinishLineEventArgs.html
-  commentId: T:ZeepSDK.Racing.CrossedFinishLineEventArgs
-  fullName: ZeepSDK.Racing.CrossedFinishLineEventArgs
-  nameWithType: CrossedFinishLineEventArgs
-- uid: ZeepSDK.Racing.CrossedFinishLineEventArgs.#ctor(System.Single)
-  name: CrossedFinishLineEventArgs(float)
-  href: api/ZeepSDK.Racing.CrossedFinishLineEventArgs.html#ZeepSDK_Racing_CrossedFinishLineEventArgs__ctor_System_Single_
-  commentId: M:ZeepSDK.Racing.CrossedFinishLineEventArgs.#ctor(System.Single)
-  name.vb: New(Single)
-  fullName: ZeepSDK.Racing.CrossedFinishLineEventArgs.CrossedFinishLineEventArgs(float)
-  fullName.vb: ZeepSDK.Racing.CrossedFinishLineEventArgs.New(Single)
-  nameWithType: CrossedFinishLineEventArgs.CrossedFinishLineEventArgs(float)
-  nameWithType.vb: CrossedFinishLineEventArgs.New(Single)
-- uid: ZeepSDK.Racing.CrossedFinishLineEventArgs.#ctor*
-  name: CrossedFinishLineEventArgs
-  href: api/ZeepSDK.Racing.CrossedFinishLineEventArgs.html#ZeepSDK_Racing_CrossedFinishLineEventArgs__ctor_
-  commentId: Overload:ZeepSDK.Racing.CrossedFinishLineEventArgs.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: ZeepSDK.Racing.CrossedFinishLineEventArgs.CrossedFinishLineEventArgs
-  fullName.vb: ZeepSDK.Racing.CrossedFinishLineEventArgs.New
-  nameWithType: CrossedFinishLineEventArgs.CrossedFinishLineEventArgs
-  nameWithType.vb: CrossedFinishLineEventArgs.New
-- uid: ZeepSDK.Racing.CrossedFinishLineEventArgs.Time
-  name: Time
-  href: api/ZeepSDK.Racing.CrossedFinishLineEventArgs.html#ZeepSDK_Racing_CrossedFinishLineEventArgs_Time
-  commentId: P:ZeepSDK.Racing.CrossedFinishLineEventArgs.Time
-  fullName: ZeepSDK.Racing.CrossedFinishLineEventArgs.Time
-  nameWithType: CrossedFinishLineEventArgs.Time
-- uid: ZeepSDK.Racing.CrossedFinishLineEventArgs.Time*
-  name: Time
-  href: api/ZeepSDK.Racing.CrossedFinishLineEventArgs.html#ZeepSDK_Racing_CrossedFinishLineEventArgs_Time_
-  commentId: Overload:ZeepSDK.Racing.CrossedFinishLineEventArgs.Time
-  isSpec: "True"
-  fullName: ZeepSDK.Racing.CrossedFinishLineEventArgs.Time
-  nameWithType: CrossedFinishLineEventArgs.Time
-- uid: ZeepSDK.Racing.PassedCheckpointEventArgs
-  name: PassedCheckpointEventArgs
-  href: api/ZeepSDK.Racing.PassedCheckpointEventArgs.html
-  commentId: T:ZeepSDK.Racing.PassedCheckpointEventArgs
-  fullName: ZeepSDK.Racing.PassedCheckpointEventArgs
-  nameWithType: PassedCheckpointEventArgs
-- uid: ZeepSDK.Racing.PassedCheckpointEventArgs.#ctor(System.Single)
-  name: PassedCheckpointEventArgs(float)
-  href: api/ZeepSDK.Racing.PassedCheckpointEventArgs.html#ZeepSDK_Racing_PassedCheckpointEventArgs__ctor_System_Single_
-  commentId: M:ZeepSDK.Racing.PassedCheckpointEventArgs.#ctor(System.Single)
-  name.vb: New(Single)
-  fullName: ZeepSDK.Racing.PassedCheckpointEventArgs.PassedCheckpointEventArgs(float)
-  fullName.vb: ZeepSDK.Racing.PassedCheckpointEventArgs.New(Single)
-  nameWithType: PassedCheckpointEventArgs.PassedCheckpointEventArgs(float)
-  nameWithType.vb: PassedCheckpointEventArgs.New(Single)
-- uid: ZeepSDK.Racing.PassedCheckpointEventArgs.#ctor*
-  name: PassedCheckpointEventArgs
-  href: api/ZeepSDK.Racing.PassedCheckpointEventArgs.html#ZeepSDK_Racing_PassedCheckpointEventArgs__ctor_
-  commentId: Overload:ZeepSDK.Racing.PassedCheckpointEventArgs.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: ZeepSDK.Racing.PassedCheckpointEventArgs.PassedCheckpointEventArgs
-  fullName.vb: ZeepSDK.Racing.PassedCheckpointEventArgs.New
-  nameWithType: PassedCheckpointEventArgs.PassedCheckpointEventArgs
-  nameWithType.vb: PassedCheckpointEventArgs.New
-- uid: ZeepSDK.Racing.PassedCheckpointEventArgs.Time
-  name: Time
-  href: api/ZeepSDK.Racing.PassedCheckpointEventArgs.html#ZeepSDK_Racing_PassedCheckpointEventArgs_Time
-  commentId: P:ZeepSDK.Racing.PassedCheckpointEventArgs.Time
-  fullName: ZeepSDK.Racing.PassedCheckpointEventArgs.Time
-  nameWithType: PassedCheckpointEventArgs.Time
-- uid: ZeepSDK.Racing.PassedCheckpointEventArgs.Time*
-  name: Time
-  href: api/ZeepSDK.Racing.PassedCheckpointEventArgs.html#ZeepSDK_Racing_PassedCheckpointEventArgs_Time_
-  commentId: Overload:ZeepSDK.Racing.PassedCheckpointEventArgs.Time
-  isSpec: "True"
-  fullName: ZeepSDK.Racing.PassedCheckpointEventArgs.Time
-  nameWithType: PassedCheckpointEventArgs.Time
+- uid: ZeepSDK.Racing.CrashedDelegate
+  name: CrashedDelegate
+  href: api/ZeepSDK.Racing.CrashedDelegate.html
+  commentId: T:ZeepSDK.Racing.CrashedDelegate
+  fullName: ZeepSDK.Racing.CrashedDelegate
+  nameWithType: CrashedDelegate
+- uid: ZeepSDK.Racing.CrossedFinishLineDelegate
+  name: CrossedFinishLineDelegate
+  href: api/ZeepSDK.Racing.CrossedFinishLineDelegate.html
+  commentId: T:ZeepSDK.Racing.CrossedFinishLineDelegate
+  fullName: ZeepSDK.Racing.CrossedFinishLineDelegate
+  nameWithType: CrossedFinishLineDelegate
+- uid: ZeepSDK.Racing.EnteredFirstPersonDelegate
+  name: EnteredFirstPersonDelegate
+  href: api/ZeepSDK.Racing.EnteredFirstPersonDelegate.html
+  commentId: T:ZeepSDK.Racing.EnteredFirstPersonDelegate
+  fullName: ZeepSDK.Racing.EnteredFirstPersonDelegate
+  nameWithType: EnteredFirstPersonDelegate
+- uid: ZeepSDK.Racing.EnteredThirdPersonDelegate
+  name: EnteredThirdPersonDelegate
+  href: api/ZeepSDK.Racing.EnteredThirdPersonDelegate.html
+  commentId: T:ZeepSDK.Racing.EnteredThirdPersonDelegate
+  fullName: ZeepSDK.Racing.EnteredThirdPersonDelegate
+  nameWithType: EnteredThirdPersonDelegate
+- uid: ZeepSDK.Racing.LevelLoaded
+  name: LevelLoaded
+  href: api/ZeepSDK.Racing.LevelLoaded.html
+  commentId: T:ZeepSDK.Racing.LevelLoaded
+  fullName: ZeepSDK.Racing.LevelLoaded
+  nameWithType: LevelLoaded
+- uid: ZeepSDK.Racing.PassedCheckpointDelegate
+  name: PassedCheckpointDelegate
+  href: api/ZeepSDK.Racing.PassedCheckpointDelegate.html
+  commentId: T:ZeepSDK.Racing.PassedCheckpointDelegate
+  fullName: ZeepSDK.Racing.PassedCheckpointDelegate
+  nameWithType: PassedCheckpointDelegate
+- uid: ZeepSDK.Racing.PlayerSpawnedDelegate
+  name: PlayerSpawnedDelegate
+  href: api/ZeepSDK.Racing.PlayerSpawnedDelegate.html
+  commentId: T:ZeepSDK.Racing.PlayerSpawnedDelegate
+  fullName: ZeepSDK.Racing.PlayerSpawnedDelegate
+  nameWithType: PlayerSpawnedDelegate
 - uid: ZeepSDK.Racing.RacingApi
   name: RacingApi
   href: api/ZeepSDK.Racing.RacingApi.html
@@ -24151,6 +23822,24 @@ references:
   commentId: E:ZeepSDK.Racing.RacingApi.WheelBroken
   fullName: ZeepSDK.Racing.RacingApi.WheelBroken
   nameWithType: RacingApi.WheelBroken
+- uid: ZeepSDK.Racing.RoundEndedDelegate
+  name: RoundEndedDelegate
+  href: api/ZeepSDK.Racing.RoundEndedDelegate.html
+  commentId: T:ZeepSDK.Racing.RoundEndedDelegate
+  fullName: ZeepSDK.Racing.RoundEndedDelegate
+  nameWithType: RoundEndedDelegate
+- uid: ZeepSDK.Racing.RoundStartedDelegate
+  name: RoundStartedDelegate
+  href: api/ZeepSDK.Racing.RoundStartedDelegate.html
+  commentId: T:ZeepSDK.Racing.RoundStartedDelegate
+  fullName: ZeepSDK.Racing.RoundStartedDelegate
+  nameWithType: RoundStartedDelegate
+- uid: ZeepSDK.Racing.WheelBrokenDelegate
+  name: WheelBrokenDelegate
+  href: api/ZeepSDK.Racing.WheelBrokenDelegate.html
+  commentId: T:ZeepSDK.Racing.WheelBrokenDelegate
+  fullName: ZeepSDK.Racing.WheelBrokenDelegate
+  nameWithType: WheelBrokenDelegate
 - uid: ZeepSDK.Storage
   name: ZeepSDK.Storage
   href: api/ZeepSDK.Storage.html

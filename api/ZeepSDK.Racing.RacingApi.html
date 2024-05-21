@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/tnrd-org/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Racing_RacingApi.md&amp;value=---%0Auid%3A%20ZeepSDK.Racing.RacingApi%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Racing_RacingApi.md&amp;value=---%0Auid%3A%20ZeepSDK.Racing.RacingApi%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,7 +85,7 @@
 
 
   <h1 id="ZeepSDK_Racing_RacingApi" data-uid="ZeepSDK.Racing.RacingApi" class="text-break">
-Class RacingApi  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L17"><i class="bi bi-code-slash"></i></a>
+Class RacingApi  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -153,7 +153,7 @@ public static class RacingApi</code></pre>
 
   <h3 id="ZeepSDK_Racing_RacingApi_LoadTrackInFreePlayAsync_System_String_" data-uid="ZeepSDK.Racing.RacingApi.LoadTrackInFreePlayAsync(System.String)">
   LoadTrackInFreePlayAsync(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Attempts to load a track in free play mode</p>
@@ -195,7 +195,7 @@ public static class RacingApi</code></pre>
 
   <h3 id="ZeepSDK_Racing_RacingApi_Crashed" data-uid="ZeepSDK.Racing.RacingApi.Crashed">
   Crashed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An event that is fired whenever the player crashes. The parameter is the reason that the player crashed</p>
@@ -203,7 +203,7 @@ public static class RacingApi</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler&lt;CrashedEventArgs&gt; Crashed</code></pre>
+    <pre><code class="lang-csharp hljs">public static event CrashedDelegate Crashed</code></pre>
   </div>
 
 
@@ -213,7 +213,7 @@ public static class RacingApi</code></pre>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="ZeepSDK.Racing.CrashedEventArgs.html">CrashedEventArgs</a>&gt;</dt>
+    <dt><a class="xref" href="ZeepSDK.Racing.CrashedDelegate.html">CrashedDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -226,7 +226,7 @@ public static class RacingApi</code></pre>
 
   <h3 id="ZeepSDK_Racing_RacingApi_CrossedFinishLine" data-uid="ZeepSDK.Racing.RacingApi.CrossedFinishLine">
   CrossedFinishLine
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An event that is fired when the player crosses the finish line. The parameter is the time the player crossed the finish line</p>
@@ -234,7 +234,7 @@ public static class RacingApi</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler&lt;CrossedFinishLineEventArgs&gt; CrossedFinishLine</code></pre>
+    <pre><code class="lang-csharp hljs">public static event CrossedFinishLineDelegate CrossedFinishLine</code></pre>
   </div>
 
 
@@ -244,7 +244,7 @@ public static class RacingApi</code></pre>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="ZeepSDK.Racing.CrossedFinishLineEventArgs.html">CrossedFinishLineEventArgs</a>&gt;</dt>
+    <dt><a class="xref" href="ZeepSDK.Racing.CrossedFinishLineDelegate.html">CrossedFinishLineDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -257,7 +257,7 @@ public static class RacingApi</code></pre>
 
   <h3 id="ZeepSDK_Racing_RacingApi_EnteredFirstPerson" data-uid="ZeepSDK.Racing.RacingApi.EnteredFirstPerson">
   EnteredFirstPerson
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An event that is fired whenever the player enters first person mode</p>
@@ -265,7 +265,7 @@ public static class RacingApi</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler EnteredFirstPerson</code></pre>
+    <pre><code class="lang-csharp hljs">public static event EnteredFirstPersonDelegate EnteredFirstPerson</code></pre>
   </div>
 
 
@@ -275,7 +275,7 @@ public static class RacingApi</code></pre>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dt><a class="xref" href="ZeepSDK.Racing.EnteredFirstPersonDelegate.html">EnteredFirstPersonDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -288,7 +288,7 @@ public static class RacingApi</code></pre>
 
   <h3 id="ZeepSDK_Racing_RacingApi_EnteredThirdPerson" data-uid="ZeepSDK.Racing.RacingApi.EnteredThirdPerson">
   EnteredThirdPerson
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An event that is fired whenever the player enters third person mode</p>
@@ -296,7 +296,7 @@ public static class RacingApi</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler EnteredThirdPerson</code></pre>
+    <pre><code class="lang-csharp hljs">public static event EnteredThirdPersonDelegate EnteredThirdPerson</code></pre>
   </div>
 
 
@@ -306,7 +306,7 @@ public static class RacingApi</code></pre>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dt><a class="xref" href="ZeepSDK.Racing.EnteredThirdPersonDelegate.html">EnteredThirdPersonDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -319,7 +319,7 @@ public static class RacingApi</code></pre>
 
   <h3 id="ZeepSDK_Racing_RacingApi_LevelLoaded" data-uid="ZeepSDK.Racing.RacingApi.LevelLoaded">
   LevelLoaded
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An event that is fired when the level you are about to play has been loaded</p>
@@ -327,7 +327,7 @@ public static class RacingApi</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler LevelLoaded</code></pre>
+    <pre><code class="lang-csharp hljs">public static event LevelLoaded LevelLoaded</code></pre>
   </div>
 
 
@@ -337,7 +337,7 @@ public static class RacingApi</code></pre>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dt><a class="xref" href="ZeepSDK.Racing.LevelLoaded.html">LevelLoaded</a></dt>
     <dd></dd>
   </dl>
 
@@ -350,7 +350,7 @@ public static class RacingApi</code></pre>
 
   <h3 id="ZeepSDK_Racing_RacingApi_PassedCheckpoint" data-uid="ZeepSDK.Racing.RacingApi.PassedCheckpoint">
   PassedCheckpoint
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An event that is fired whenever the player passes any checkpoint. The parameter is the time the player passed the checkpoint</p>
@@ -358,7 +358,7 @@ public static class RacingApi</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler&lt;PassedCheckpointEventArgs&gt; PassedCheckpoint</code></pre>
+    <pre><code class="lang-csharp hljs">public static event PassedCheckpointDelegate PassedCheckpoint</code></pre>
   </div>
 
 
@@ -368,7 +368,7 @@ public static class RacingApi</code></pre>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="ZeepSDK.Racing.PassedCheckpointEventArgs.html">PassedCheckpointEventArgs</a>&gt;</dt>
+    <dt><a class="xref" href="ZeepSDK.Racing.PassedCheckpointDelegate.html">PassedCheckpointDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -381,7 +381,7 @@ public static class RacingApi</code></pre>
 
   <h3 id="ZeepSDK_Racing_RacingApi_PlayerSpawned" data-uid="ZeepSDK.Racing.RacingApi.PlayerSpawned">
   PlayerSpawned
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An event that is fired whenever the player spawns</p>
@@ -389,7 +389,7 @@ public static class RacingApi</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler PlayerSpawned</code></pre>
+    <pre><code class="lang-csharp hljs">public static event PlayerSpawnedDelegate PlayerSpawned</code></pre>
   </div>
 
 
@@ -399,7 +399,7 @@ public static class RacingApi</code></pre>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dt><a class="xref" href="ZeepSDK.Racing.PlayerSpawnedDelegate.html">PlayerSpawnedDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -412,7 +412,7 @@ public static class RacingApi</code></pre>
 
   <h3 id="ZeepSDK_Racing_RacingApi_RoundEnded" data-uid="ZeepSDK.Racing.RacingApi.RoundEnded">
   RoundEnded
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An event that is fired whenever the round ends</p>
@@ -420,7 +420,7 @@ public static class RacingApi</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler RoundEnded</code></pre>
+    <pre><code class="lang-csharp hljs">public static event RoundStartedDelegate RoundEnded</code></pre>
   </div>
 
 
@@ -430,7 +430,7 @@ public static class RacingApi</code></pre>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dt><a class="xref" href="ZeepSDK.Racing.RoundStartedDelegate.html">RoundStartedDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -443,7 +443,7 @@ public static class RacingApi</code></pre>
 
   <h3 id="ZeepSDK_Racing_RacingApi_RoundStarted" data-uid="ZeepSDK.Racing.RacingApi.RoundStarted">
   RoundStarted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An event that is fired whenever the round starts</p>
@@ -451,7 +451,7 @@ public static class RacingApi</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler RoundStarted</code></pre>
+    <pre><code class="lang-csharp hljs">public static event RoundStartedDelegate RoundStarted</code></pre>
   </div>
 
 
@@ -461,7 +461,7 @@ public static class RacingApi</code></pre>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dt><a class="xref" href="ZeepSDK.Racing.RoundStartedDelegate.html">RoundStartedDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -474,7 +474,7 @@ public static class RacingApi</code></pre>
 
   <h3 id="ZeepSDK_Racing_RacingApi_WheelBroken" data-uid="ZeepSDK.Racing.RacingApi.WheelBroken">
   WheelBroken
-  <a class="header-action link-secondary" title="View source" href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>An even that is fired whenever a wheel breaks</p>
@@ -482,7 +482,7 @@ public static class RacingApi</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event EventHandler WheelBroken</code></pre>
+    <pre><code class="lang-csharp hljs">public static event WheelBrokenDelegate WheelBroken</code></pre>
   </div>
 
 
@@ -492,7 +492,7 @@ public static class RacingApi</code></pre>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dt><a class="xref" href="ZeepSDK.Racing.WheelBrokenDelegate.html">WheelBrokenDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -506,7 +506,7 @@ public static class RacingApi</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/tnrd-org/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L17" class="edit-link">Edit this page</a>
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L15" class="edit-link">Edit this page</a>
         </div>
 
 

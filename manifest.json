@@ -14,30 +14,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Chat.ChatMessageReceivedEventArgs.yml",
+      "source_relative_path": "api/ZeepSDK.Chat.ChatMessageReceivedDelegate.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.Chat.ChatMessageReceivedEventArgs.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Chat.MessageColor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.Chat.MessageColor.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Chat.MessageColorExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.Chat.MessageColorExtensions.html"
+          "relative_path": "api/ZeepSDK.Chat.ChatMessageReceivedDelegate.html"
         }
       },
       "version": ""
@@ -104,10 +84,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.ChatCommands.LocalChatCommandCallback.yml",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.ChatCommands.LocalChatCommandCallback.html"
+          "relative_path": "api/ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate.html"
         }
       },
       "version": ""
@@ -124,20 +104,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.ChatCommands.MixedChatCommandCallback.yml",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.ChatCommands.MixedChatCommandCallback.html"
+          "relative_path": "api/ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.ChatCommands.RemoteChatCommandCallback.yml",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.ChatCommands.RemoteChatCommandCallback.html"
+          "relative_path": "api/ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate.html"
         }
       },
       "version": ""
@@ -184,10 +164,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Communication.MessageReceivedEventArgs.yml",
+      "source_relative_path": "api/ZeepSDK.Communication.MessageReceivedDelegate.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.Communication.MessageReceivedEventArgs.html"
+          "relative_path": "api/ZeepSDK.Communication.MessageReceivedDelegate.html"
         }
       },
       "version": ""
@@ -3214,6 +3194,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.EnteredLevelEditorDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.EnteredLevelEditorDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.EnteredTestModeDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.EnteredTestModeDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.ExitedLevelEditorDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.ExitedLevelEditorDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.LevelEditor.ICustomBlockBuilder.yml",
       "output": {
         ".html": {
@@ -3238,6 +3248,26 @@
       "output": {
         ".html": {
           "relative_path": "api/ZeepSDK.LevelEditor.LevelEditorApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.LevelLoadedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.LevelLoadedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.LevelSavedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.LevelSavedDelegate.html"
         }
       },
       "version": ""
@@ -3284,6 +3314,46 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.ConnectedToGameDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.ConnectedToGameDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.CreatedRoomDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.CreatedRoomDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.DisconnectedFromGameDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.DisconnectedFromGameDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.JoinedRoomDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.JoinedRoomDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Multiplayer.MultiplayerApi.yml",
       "output": {
         ".html": {
@@ -3294,20 +3364,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Multiplayer.PlayerJoinedEventArgs.yml",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.PlayerJoinedDelegate.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.Multiplayer.PlayerJoinedEventArgs.html"
+          "relative_path": "api/ZeepSDK.Multiplayer.PlayerJoinedDelegate.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Multiplayer.PlayerLeftEventArgs.yml",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.PlayerLeftDelegate.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.Multiplayer.PlayerLeftEventArgs.html"
+          "relative_path": "api/ZeepSDK.Multiplayer.PlayerLeftDelegate.html"
         }
       },
       "version": ""
@@ -3354,6 +3424,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.PhotoMode.PhotoModeEnteredDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.PhotoMode.PhotoModeEnteredDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.PhotoMode.PhotoModeExitedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.PhotoMode.PhotoModeExitedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.PhotoMode.yml",
       "output": {
         ".html": {
@@ -3384,16 +3474,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Playlist.PlaylistExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.Playlist.PlaylistExtensions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Playlist.yml",
       "output": {
         ".html": {
@@ -3414,30 +3494,70 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Racing.CrashedEventArgs.yml",
+      "source_relative_path": "api/ZeepSDK.Racing.CrashedDelegate.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.Racing.CrashedEventArgs.html"
+          "relative_path": "api/ZeepSDK.Racing.CrashedDelegate.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Racing.CrossedFinishLineEventArgs.yml",
+      "source_relative_path": "api/ZeepSDK.Racing.CrossedFinishLineDelegate.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.Racing.CrossedFinishLineEventArgs.html"
+          "relative_path": "api/ZeepSDK.Racing.CrossedFinishLineDelegate.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Racing.PassedCheckpointEventArgs.yml",
+      "source_relative_path": "api/ZeepSDK.Racing.EnteredFirstPersonDelegate.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.Racing.PassedCheckpointEventArgs.html"
+          "relative_path": "api/ZeepSDK.Racing.EnteredFirstPersonDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.EnteredThirdPersonDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.EnteredThirdPersonDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.LevelLoaded.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.LevelLoaded.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.PassedCheckpointDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.PassedCheckpointDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.PlayerSpawnedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.PlayerSpawnedDelegate.html"
         }
       },
       "version": ""
@@ -3448,6 +3568,36 @@
       "output": {
         ".html": {
           "relative_path": "api/ZeepSDK.Racing.RacingApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.RoundEndedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.RoundEndedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.RoundStartedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.RoundStartedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.WheelBrokenDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.WheelBrokenDelegate.html"
         }
       },
       "version": ""
