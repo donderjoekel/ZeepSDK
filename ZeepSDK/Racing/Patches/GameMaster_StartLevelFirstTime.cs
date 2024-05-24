@@ -7,7 +7,7 @@ namespace ZeepSDK.Racing.Patches;
 internal class GameMaster_StartLevelFirstTime
 {
     public static event Action StartLevelFirstTime;
-    
+
     private static void Postfix()
     {
         StartLevelFirstTime?.Invoke();

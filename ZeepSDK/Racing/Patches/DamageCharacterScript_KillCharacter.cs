@@ -14,7 +14,7 @@ internal class DamageCharacterScript_KillCharacter
     {
         if (__instance.IsDead())
             return;
-        
+
         CrashReason reason = deathReason switch
         {
             DamageCharacterScript.DeathReasonEnum.Gameplay_Crashed => CrashReason.Crashed,

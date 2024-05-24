@@ -8,7 +8,7 @@ internal class EnableFlyingCamera2_ToggleFlyingCamera
 {
     public static event Action PhotoModeEntered;
     public static event Action PhotoModeExited;
-    
+
     private static void Prefix(EnableFlyingCamera2 __instance, out bool __state)
     {
         __state = __instance.isPhotoMode;

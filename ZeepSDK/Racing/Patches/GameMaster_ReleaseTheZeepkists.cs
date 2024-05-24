@@ -8,7 +8,7 @@ namespace ZeepSDK.Racing.Patches;
 internal class GameMaster_ReleaseTheZeepkists
 {
     public static event Action Released;
-    
+
     [UsedImplicitly]
     private static void Postfix()
     {
