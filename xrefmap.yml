@@ -627,6 +627,34 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedZeepkists
   nameWithType: CosmeticsApi.GetUnlockedZeepkists
+- uid: ZeepSDK.Extensions
+  name: ZeepSDK.Extensions
+  href: api/ZeepSDK.Extensions.html
+  commentId: N:ZeepSDK.Extensions
+  fullName: ZeepSDK.Extensions
+  nameWithType: ZeepSDK.Extensions
+- uid: ZeepSDK.Extensions.TransformExtensions
+  name: TransformExtensions
+  href: api/ZeepSDK.Extensions.TransformExtensions.html
+  commentId: T:ZeepSDK.Extensions.TransformExtensions
+  fullName: ZeepSDK.Extensions.TransformExtensions
+  nameWithType: TransformExtensions
+- uid: ZeepSDK.Extensions.TransformExtensions.GetComponentsInDirectDescendants*
+  name: GetComponentsInDirectDescendants
+  href: api/ZeepSDK.Extensions.TransformExtensions.html#ZeepSDK_Extensions_TransformExtensions_GetComponentsInDirectDescendants_
+  commentId: Overload:ZeepSDK.Extensions.TransformExtensions.GetComponentsInDirectDescendants
+  isSpec: "True"
+  fullName: ZeepSDK.Extensions.TransformExtensions.GetComponentsInDirectDescendants
+  nameWithType: TransformExtensions.GetComponentsInDirectDescendants
+- uid: ZeepSDK.Extensions.TransformExtensions.GetComponentsInDirectDescendants``1(UnityEngine.Transform)
+  name: GetComponentsInDirectDescendants<TComponent>(Transform)
+  href: api/ZeepSDK.Extensions.TransformExtensions.html#ZeepSDK_Extensions_TransformExtensions_GetComponentsInDirectDescendants__1_UnityEngine_Transform_
+  commentId: M:ZeepSDK.Extensions.TransformExtensions.GetComponentsInDirectDescendants``1(UnityEngine.Transform)
+  name.vb: GetComponentsInDirectDescendants(Of TComponent)(Transform)
+  fullName: ZeepSDK.Extensions.TransformExtensions.GetComponentsInDirectDescendants<TComponent>(UnityEngine.Transform)
+  fullName.vb: ZeepSDK.Extensions.TransformExtensions.GetComponentsInDirectDescendants(Of TComponent)(UnityEngine.Transform)
+  nameWithType: TransformExtensions.GetComponentsInDirectDescendants<TComponent>(Transform)
+  nameWithType.vb: TransformExtensions.GetComponentsInDirectDescendants(Of TComponent)(Transform)
 - uid: ZeepSDK.External.Cysharp.Threading.Tasks
   name: ZeepSDK.External.Cysharp.Threading.Tasks
   href: api/ZeepSDK.External.Cysharp.Threading.Tasks.html
@@ -23963,12 +23991,183 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Storage.StorageApi.CreateModStorage
   nameWithType: StorageApi.CreateModStorage
+- uid: ZeepSDK.UI
+  name: ZeepSDK.UI
+  href: api/ZeepSDK.UI.html
+  commentId: N:ZeepSDK.UI
+  fullName: ZeepSDK.UI
+  nameWithType: ZeepSDK.UI
+- uid: ZeepSDK.UI.UIApi
+  name: UIApi
+  href: api/ZeepSDK.UI.UIApi.html
+  commentId: T:ZeepSDK.UI.UIApi
+  fullName: ZeepSDK.UI.UIApi
+  nameWithType: UIApi
+- uid: ZeepSDK.UI.UIApi.AddToConfigurator(System.Collections.Generic.IEnumerable{UnityEngine.RectTransform})
+  name: AddToConfigurator(IEnumerable<RectTransform>)
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_AddToConfigurator_System_Collections_Generic_IEnumerable_UnityEngine_RectTransform__
+  commentId: M:ZeepSDK.UI.UIApi.AddToConfigurator(System.Collections.Generic.IEnumerable{UnityEngine.RectTransform})
+  name.vb: AddToConfigurator(IEnumerable(Of RectTransform))
+  fullName: ZeepSDK.UI.UIApi.AddToConfigurator(System.Collections.Generic.IEnumerable<UnityEngine.RectTransform>)
+  fullName.vb: ZeepSDK.UI.UIApi.AddToConfigurator(System.Collections.Generic.IEnumerable(Of UnityEngine.RectTransform))
+  nameWithType: UIApi.AddToConfigurator(IEnumerable<RectTransform>)
+  nameWithType.vb: UIApi.AddToConfigurator(IEnumerable(Of RectTransform))
+- uid: ZeepSDK.UI.UIApi.AddToConfigurator(UnityEngine.RectTransform)
+  name: AddToConfigurator(RectTransform)
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_AddToConfigurator_UnityEngine_RectTransform_
+  commentId: M:ZeepSDK.UI.UIApi.AddToConfigurator(UnityEngine.RectTransform)
+  fullName: ZeepSDK.UI.UIApi.AddToConfigurator(UnityEngine.RectTransform)
+  nameWithType: UIApi.AddToConfigurator(RectTransform)
+- uid: ZeepSDK.UI.UIApi.AddToConfigurator*
+  name: AddToConfigurator
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_AddToConfigurator_
+  commentId: Overload:ZeepSDK.UI.UIApi.AddToConfigurator
+  isSpec: "True"
+  fullName: ZeepSDK.UI.UIApi.AddToConfigurator
+  nameWithType: UIApi.AddToConfigurator
+- uid: ZeepSDK.UI.UIApi.RemoveFromConfigurator(UnityEngine.RectTransform)
+  name: RemoveFromConfigurator(RectTransform)
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_RemoveFromConfigurator_UnityEngine_RectTransform_
+  commentId: M:ZeepSDK.UI.UIApi.RemoveFromConfigurator(UnityEngine.RectTransform)
+  fullName: ZeepSDK.UI.UIApi.RemoveFromConfigurator(UnityEngine.RectTransform)
+  nameWithType: UIApi.RemoveFromConfigurator(RectTransform)
+- uid: ZeepSDK.UI.UIApi.RemoveFromConfigurator*
+  name: RemoveFromConfigurator
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_RemoveFromConfigurator_
+  commentId: Overload:ZeepSDK.UI.UIApi.RemoveFromConfigurator
+  isSpec: "True"
+  fullName: ZeepSDK.UI.UIApi.RemoveFromConfigurator
+  nameWithType: UIApi.RemoveFromConfigurator
 - uid: ZeepSDK.Utilities
   name: ZeepSDK.Utilities
   href: api/ZeepSDK.Utilities.html
   commentId: N:ZeepSDK.Utilities
   fullName: ZeepSDK.Utilities
   nameWithType: ZeepSDK.Utilities
+- uid: ZeepSDK.Utilities.ColorDefinition
+  name: ColorDefinition
+  href: api/ZeepSDK.Utilities.ColorDefinition.html
+  commentId: T:ZeepSDK.Utilities.ColorDefinition
+  fullName: ZeepSDK.Utilities.ColorDefinition
+  nameWithType: ColorDefinition
+- uid: ZeepSDK.Utilities.ColorDefinition.#ctor(System.String,UnityEngine.Color)
+  name: ColorDefinition(string, Color)
+  href: api/ZeepSDK.Utilities.ColorDefinition.html#ZeepSDK_Utilities_ColorDefinition__ctor_System_String_UnityEngine_Color_
+  commentId: M:ZeepSDK.Utilities.ColorDefinition.#ctor(System.String,UnityEngine.Color)
+  name.vb: New(String, Color)
+  fullName: ZeepSDK.Utilities.ColorDefinition.ColorDefinition(string, UnityEngine.Color)
+  fullName.vb: ZeepSDK.Utilities.ColorDefinition.New(String, UnityEngine.Color)
+  nameWithType: ColorDefinition.ColorDefinition(string, Color)
+  nameWithType.vb: ColorDefinition.New(String, Color)
+- uid: ZeepSDK.Utilities.ColorDefinition.#ctor*
+  name: ColorDefinition
+  href: api/ZeepSDK.Utilities.ColorDefinition.html#ZeepSDK_Utilities_ColorDefinition__ctor_
+  commentId: Overload:ZeepSDK.Utilities.ColorDefinition.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ZeepSDK.Utilities.ColorDefinition.ColorDefinition
+  fullName.vb: ZeepSDK.Utilities.ColorDefinition.New
+  nameWithType: ColorDefinition.ColorDefinition
+  nameWithType.vb: ColorDefinition.New
+- uid: ZeepSDK.Utilities.ColorDefinition.Color
+  name: Color
+  href: api/ZeepSDK.Utilities.ColorDefinition.html#ZeepSDK_Utilities_ColorDefinition_Color
+  commentId: P:ZeepSDK.Utilities.ColorDefinition.Color
+  fullName: ZeepSDK.Utilities.ColorDefinition.Color
+  nameWithType: ColorDefinition.Color
+- uid: ZeepSDK.Utilities.ColorDefinition.Color*
+  name: Color
+  href: api/ZeepSDK.Utilities.ColorDefinition.html#ZeepSDK_Utilities_ColorDefinition_Color_
+  commentId: Overload:ZeepSDK.Utilities.ColorDefinition.Color
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.ColorDefinition.Color
+  nameWithType: ColorDefinition.Color
+- uid: ZeepSDK.Utilities.ColorDefinition.Name
+  name: Name
+  href: api/ZeepSDK.Utilities.ColorDefinition.html#ZeepSDK_Utilities_ColorDefinition_Name
+  commentId: P:ZeepSDK.Utilities.ColorDefinition.Name
+  fullName: ZeepSDK.Utilities.ColorDefinition.Name
+  nameWithType: ColorDefinition.Name
+- uid: ZeepSDK.Utilities.ColorDefinition.Name*
+  name: Name
+  href: api/ZeepSDK.Utilities.ColorDefinition.html#ZeepSDK_Utilities_ColorDefinition_Name_
+  commentId: Overload:ZeepSDK.Utilities.ColorDefinition.Name
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.ColorDefinition.Name
+  nameWithType: ColorDefinition.Name
+- uid: ZeepSDK.Utilities.ColorUtility
+  name: ColorUtility
+  href: api/ZeepSDK.Utilities.ColorUtility.html
+  commentId: T:ZeepSDK.Utilities.ColorUtility
+  fullName: ZeepSDK.Utilities.ColorUtility
+  nameWithType: ColorUtility
+- uid: ZeepSDK.Utilities.ColorUtility.ColorDefinitions
+  name: ColorDefinitions
+  href: api/ZeepSDK.Utilities.ColorUtility.html#ZeepSDK_Utilities_ColorUtility_ColorDefinitions
+  commentId: P:ZeepSDK.Utilities.ColorUtility.ColorDefinitions
+  fullName: ZeepSDK.Utilities.ColorUtility.ColorDefinitions
+  nameWithType: ColorUtility.ColorDefinitions
+- uid: ZeepSDK.Utilities.ColorUtility.ColorDefinitions*
+  name: ColorDefinitions
+  href: api/ZeepSDK.Utilities.ColorUtility.html#ZeepSDK_Utilities_ColorUtility_ColorDefinitions_
+  commentId: Overload:ZeepSDK.Utilities.ColorUtility.ColorDefinitions
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.ColorUtility.ColorDefinitions
+  nameWithType: ColorUtility.ColorDefinitions
+- uid: ZeepSDK.Utilities.ColorUtility.FromName(System.String)
+  name: FromName(string)
+  href: api/ZeepSDK.Utilities.ColorUtility.html#ZeepSDK_Utilities_ColorUtility_FromName_System_String_
+  commentId: M:ZeepSDK.Utilities.ColorUtility.FromName(System.String)
+  name.vb: FromName(String)
+  fullName: ZeepSDK.Utilities.ColorUtility.FromName(string)
+  fullName.vb: ZeepSDK.Utilities.ColorUtility.FromName(String)
+  nameWithType: ColorUtility.FromName(string)
+  nameWithType.vb: ColorUtility.FromName(String)
+- uid: ZeepSDK.Utilities.ColorUtility.FromName*
+  name: FromName
+  href: api/ZeepSDK.Utilities.ColorUtility.html#ZeepSDK_Utilities_ColorUtility_FromName_
+  commentId: Overload:ZeepSDK.Utilities.ColorUtility.FromName
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.ColorUtility.FromName
+  nameWithType: ColorUtility.FromName
+- uid: ZeepSDK.Utilities.ListUtility
+  name: ListUtility
+  href: api/ZeepSDK.Utilities.ListUtility.html
+  commentId: T:ZeepSDK.Utilities.ListUtility
+  fullName: ZeepSDK.Utilities.ListUtility
+  nameWithType: ListUtility
+- uid: ZeepSDK.Utilities.ListUtility.FindFirst*
+  name: FindFirst
+  href: api/ZeepSDK.Utilities.ListUtility.html#ZeepSDK_Utilities_ListUtility_FindFirst_
+  commentId: Overload:ZeepSDK.Utilities.ListUtility.FindFirst
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.ListUtility.FindFirst
+  nameWithType: ListUtility.FindFirst
+- uid: ZeepSDK.Utilities.ListUtility.FindFirstReverse*
+  name: FindFirstReverse
+  href: api/ZeepSDK.Utilities.ListUtility.html#ZeepSDK_Utilities_ListUtility_FindFirstReverse_
+  commentId: Overload:ZeepSDK.Utilities.ListUtility.FindFirstReverse
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.ListUtility.FindFirstReverse
+  nameWithType: ListUtility.FindFirstReverse
+- uid: ZeepSDK.Utilities.ListUtility.FindFirstReverse``1(System.Collections.Generic.IList{``0},System.Int32,System.Func{``0,System.Boolean})
+  name: FindFirstReverse<T>(IList<T>, int, Func<T, bool>)
+  href: api/ZeepSDK.Utilities.ListUtility.html#ZeepSDK_Utilities_ListUtility_FindFirstReverse__1_System_Collections_Generic_IList___0__System_Int32_System_Func___0_System_Boolean__
+  commentId: M:ZeepSDK.Utilities.ListUtility.FindFirstReverse``1(System.Collections.Generic.IList{``0},System.Int32,System.Func{``0,System.Boolean})
+  name.vb: FindFirstReverse(Of T)(IList(Of T), Integer, Func(Of T, Boolean))
+  fullName: ZeepSDK.Utilities.ListUtility.FindFirstReverse<T>(System.Collections.Generic.IList<T>, int, System.Func<T, bool>)
+  fullName.vb: ZeepSDK.Utilities.ListUtility.FindFirstReverse(Of T)(System.Collections.Generic.IList(Of T), Integer, System.Func(Of T, Boolean))
+  nameWithType: ListUtility.FindFirstReverse<T>(IList<T>, int, Func<T, bool>)
+  nameWithType.vb: ListUtility.FindFirstReverse(Of T)(IList(Of T), Integer, Func(Of T, Boolean))
+- uid: ZeepSDK.Utilities.ListUtility.FindFirst``1(System.Collections.Generic.IList{``0},System.Int32,System.Func{``0,System.Boolean})
+  name: FindFirst<T>(IList<T>, int, Func<T, bool>)
+  href: api/ZeepSDK.Utilities.ListUtility.html#ZeepSDK_Utilities_ListUtility_FindFirst__1_System_Collections_Generic_IList___0__System_Int32_System_Func___0_System_Boolean__
+  commentId: M:ZeepSDK.Utilities.ListUtility.FindFirst``1(System.Collections.Generic.IList{``0},System.Int32,System.Func{``0,System.Boolean})
+  name.vb: FindFirst(Of T)(IList(Of T), Integer, Func(Of T, Boolean))
+  fullName: ZeepSDK.Utilities.ListUtility.FindFirst<T>(System.Collections.Generic.IList<T>, int, System.Func<T, bool>)
+  fullName.vb: ZeepSDK.Utilities.ListUtility.FindFirst(Of T)(System.Collections.Generic.IList(Of T), Integer, System.Func(Of T, Boolean))
+  nameWithType: ListUtility.FindFirst<T>(IList<T>, int, Func<T, bool>)
+  nameWithType.vb: ListUtility.FindFirst(Of T)(IList(Of T), Integer, Func(Of T, Boolean))
 - uid: ZeepSDK.Utilities.LoggerFactory
   name: LoggerFactory
   href: api/ZeepSDK.Utilities.LoggerFactory.html
@@ -24006,6 +24205,28 @@ references:
   fullName.vb: ZeepSDK.Utilities.LoggerFactory.GetLogger(Of T)()
   nameWithType: LoggerFactory.GetLogger<T>()
   nameWithType.vb: LoggerFactory.GetLogger(Of T)()
+- uid: ZeepSDK.Utilities.SpriteUtility
+  name: SpriteUtility
+  href: api/ZeepSDK.Utilities.SpriteUtility.html
+  commentId: T:ZeepSDK.Utilities.SpriteUtility
+  fullName: ZeepSDK.Utilities.SpriteUtility
+  nameWithType: SpriteUtility
+- uid: ZeepSDK.Utilities.SpriteUtility.FromBase64(System.String)
+  name: FromBase64(string)
+  href: api/ZeepSDK.Utilities.SpriteUtility.html#ZeepSDK_Utilities_SpriteUtility_FromBase64_System_String_
+  commentId: M:ZeepSDK.Utilities.SpriteUtility.FromBase64(System.String)
+  name.vb: FromBase64(String)
+  fullName: ZeepSDK.Utilities.SpriteUtility.FromBase64(string)
+  fullName.vb: ZeepSDK.Utilities.SpriteUtility.FromBase64(String)
+  nameWithType: SpriteUtility.FromBase64(string)
+  nameWithType.vb: SpriteUtility.FromBase64(String)
+- uid: ZeepSDK.Utilities.SpriteUtility.FromBase64*
+  name: FromBase64
+  href: api/ZeepSDK.Utilities.SpriteUtility.html#ZeepSDK_Utilities_SpriteUtility_FromBase64_
+  commentId: Overload:ZeepSDK.Utilities.SpriteUtility.FromBase64
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.SpriteUtility.FromBase64
+  nameWithType: SpriteUtility.FromBase64
 - uid: ZeepSDK.Utilities.UnityFolders
   name: ZeepSDK.Utilities.UnityFolders
   href: api/ZeepSDK.Utilities.UnityFolders.html

@@ -204,6 +204,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Extensions.TransformExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Extensions.TransformExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.External.Cysharp.Threading.Tasks.AsyncLazy-1.yml",
       "output": {
         ".html": {
@@ -3644,10 +3664,70 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.UIApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.UIApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.ColorDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.ColorDefinition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.ColorUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.ColorUtility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.ListUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.ListUtility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Utilities.LoggerFactory.yml",
       "output": {
         ".html": {
           "relative_path": "api/ZeepSDK.Utilities.LoggerFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.SpriteUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.SpriteUtility.html"
         }
       },
       "version": ""
