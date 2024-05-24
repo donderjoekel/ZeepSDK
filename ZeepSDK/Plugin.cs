@@ -9,6 +9,8 @@ using ZeepSDK.LevelEditor;
 using ZeepSDK.Multiplayer;
 using ZeepSDK.PhotoMode;
 using ZeepSDK.Racing;
+using ZeepSDK.Storage;
+using ZeepSDK.UI;
 using ZeepSDK.Versioning;
 
 namespace ZeepSDK
@@ -17,6 +19,7 @@ namespace ZeepSDK
     internal class Plugin : BaseUnityPlugin
     {
         public static Plugin Instance { get; private set; }
+        public static IModStorage Storage { get; private set; }
 
         private Harmony harmony;
 
@@ -27,6 +30,8 @@ namespace ZeepSDK
             harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
             harmony.PatchAll();
 
+            Storage = StorageApi.CreateModStorage(Instance);
+
             ChatApi.Initialize(gameObject);
             ChatCommandApi.Initialize(gameObject);
             LeaderboardApi.Initialize(gameObject);
@@ -34,6 +39,7 @@ namespace ZeepSDK
             RacingApi.Initialize(gameObject);
             MultiplayerApi.Initialize();
             PhotoModeApi.Initialize();
+            UIApi.Initialize(gameObject);
 
             // Initialize the player loop helper, this is to reduce issues with UniTask
             if (!PlayerLoopHelper.IsInjectedUniTaskPlayerLoop())
