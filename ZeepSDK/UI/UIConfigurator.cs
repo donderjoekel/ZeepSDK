@@ -77,23 +77,23 @@ internal class UIConfigurator : MonoBehaviour
     private void RegisterConfig()
     {
         configEditModeKey = Plugin.Instance.Config.Bind("UI",
-            "ConfiguratorEditModeKey",
+            "Toggle Edit Mode Key",
             KeyCode.Keypad8,
             "The key to toggle UI edit mode");
         configNextCycleKey = Plugin.Instance.Config.Bind("UI",
-            "ConfiguratorNextCycleKey",
+            "Cycle Next Key",
             KeyCode.Keypad6,
             "The key to cycle to the next UI element");
         configPreviousCycleKey = Plugin.Instance.Config.Bind("UI",
-            "ConfiguratorPreviousCycleKey",
+            "Cycle Previous Key",
             KeyCode.Keypad4,
             "The key to cycle to the previous UI element");
         configResetAllButton = Plugin.Instance.Config.Bind("UI",
-            "ConfiguratorResetAllButton",
+            "Reset All",
             true,
             "[Button] Reset All UI");
         configBorderColor = Plugin.Instance.Config.Bind("UI",
-            "ConfiguratorBorderColor",
+            "Border Color",
             "Red",
             new ConfigDescription("Selected UI element color",
                 new AcceptableValueList<string>(ColorUtility.ColorDefinitions.Select(x => x.Name).ToArray())));
@@ -575,6 +575,7 @@ internal class UIConfigurator : MonoBehaviour
         }
 
         SaveToDisk();
+        MessengerApi.Log("All UI elements have been reset!");
     }
 
     private void ResetToOriginal(RectTransform rect)
