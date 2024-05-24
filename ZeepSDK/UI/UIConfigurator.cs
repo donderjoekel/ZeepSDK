@@ -62,6 +62,11 @@ internal class UIConfigurator : MonoBehaviour
     private GameObject scaleHandle;
     private GameObject resetHandle;
 
+    private RectTransform moveHandleRect;
+    private RectTransform scaleHandleRect;
+    private RectTransform resetHandleRect;
+    private Vector3[] corners = new Vector3[4];
+
     private int currentRectIndex;
     private RectTransform currentRect;
 
@@ -289,7 +294,24 @@ internal class UIConfigurator : MonoBehaviour
             SetAnchorMax(currentRect);
         }
 
+        currentRect.GetWorldCorners(corners);
+        moveHandleRect.anchoredPosition = ConvertPosition(corners[0]);
+        scaleHandleRect.anchoredPosition = ConvertPosition(corners[2]);
+        resetHandleRect.anchoredPosition = ConvertPosition(corners[1]);
+
         previousMousePosition = currentMousePosition;
+    }
+
+    private Vector2 ConvertPosition(Vector2 position)
+    {
+        var screenPoint = RectTransformUtility.WorldToScreenPoint(null, position);
+        return RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            currentRect.GetComponentInParent<Canvas>().GetComponent<RectTransform>(),
+            screenPoint,
+            null,
+            out Vector2 localPoint)
+            ? localPoint
+            : Vector2.zero;
     }
 
     /// <summary>
@@ -458,16 +480,19 @@ internal class UIConfigurator : MonoBehaviour
         if (moveHandle == null)
         {
             moveHandle = CreateHandle("MoveHandle", StartMove);
+            moveHandleRect = moveHandle.GetComponent<RectTransform>();
         }
 
         if (scaleHandle == null)
         {
             scaleHandle = CreateHandle("ScaleHandle", StartScale);
+            scaleHandleRect = scaleHandle.GetComponent<RectTransform>();
         }
 
         if (resetHandle == null)
         {
             resetHandle = CreateHandle("ResetHandle", ResetToOriginal);
+            resetHandleRect = resetHandle.GetComponent<RectTransform>();
         }
 
         PositionHandle(moveHandle, rect, new Vector2(0, 0));
@@ -595,13 +620,11 @@ internal class UIConfigurator : MonoBehaviour
         Plugin.Storage.SaveToJson("UIConfigurator", transformSaveData);
     }
 
-    private static void PositionHandle(GameObject handle, RectTransform parent, Vector2 anchor)
+    private void PositionHandle(GameObject handle, RectTransform parent, Vector2 anchor)
     {
-        handle.transform.SetParent(parent, false);
+        handle.transform.SetParent(PlayerManager.Instance.gameObject.transform.Find("Canvas"), false);
         RectTransform handleRect = handle.GetComponent<RectTransform>();
-        handleRect.anchorMin = anchor;
-        handleRect.anchorMax = anchor;
-        handleRect.pivot = anchor;
+        handleRect.anchorMin = handleRect.anchorMax = handleRect.pivot = new Vector2(0.5f, 0.5f);
         handleRect.anchoredPosition = Vector2.zero;
         handle.SetActive(true);
     }
