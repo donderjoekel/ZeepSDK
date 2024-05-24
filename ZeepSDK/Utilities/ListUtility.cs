@@ -22,14 +22,14 @@ public static class ListUtility
         {
             int index = (start + i) % list.Count;
             T item = list[index];
-            
+
             if (predicate(item))
                 return item;
         }
-        
+
         return default;
     }
-    
+
     /// <summary>
     /// Finds the first item in the list that satisfies the predicate, starting from the specified index in reverse
     /// </summary>
@@ -44,11 +44,11 @@ public static class ListUtility
         {
             int index = (start - i + list.Count) % list.Count;
             T item = list[index];
-            
+
             if (predicate(item))
                 return item;
         }
-        
+
         return default;
     }
 }

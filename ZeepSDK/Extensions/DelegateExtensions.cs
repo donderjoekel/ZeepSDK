@@ -16,7 +16,7 @@ internal static class DelegateExtensions
         {
             if (invocation == null)
                 continue;
-            
+
             try
             {
                 invocation.DynamicInvoke(args);

@@ -8,7 +8,7 @@ namespace ZeepSDK.UI.Patches;
 internal class SceneManager_LoadScene
 {
     public static Action BeforeLoadScene;
-    
+
     public static void Prefix(string sceneName)
     {
         BeforeLoadScene?.Invoke();

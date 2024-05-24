@@ -22,12 +22,12 @@ public static class ColorUtility
         new ColorDefinition("White", Color.white),
         new ColorDefinition("Yellow", Color.yellow)
     ];
-    
+
     /// <summary>
     /// All supported color definitions
     /// </summary>
     public static IEnumerable<ColorDefinition> ColorDefinitions => colorDefinitions;
-    
+
     /// <summary>
     /// Tries to get a color from a name
     /// </summary>

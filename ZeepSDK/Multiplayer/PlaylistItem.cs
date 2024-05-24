@@ -43,7 +43,7 @@ public class PlaylistItem
         Name = name;
         Author = author;
     }
-    
+
     internal OnlineZeeplevel ToOnlineZeepLevel()
     {
         return new OnlineZeeplevel

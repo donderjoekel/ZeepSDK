@@ -7,7 +7,7 @@ namespace ZeepSDK.UI.Patches;
 internal class OnlineChatUI_Awake
 {
     public static event Action<OnlineChatUI> Awake;
-    
+
     private static void Postfix(OnlineChatUI __instance)
     {
         Awake?.Invoke(__instance);

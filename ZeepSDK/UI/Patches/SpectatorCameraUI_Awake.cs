@@ -7,7 +7,7 @@ namespace ZeepSDK.UI.Patches;
 internal class SpectatorCameraUI_Awake
 {
     public static event Action<SpectatorCameraUI> Awake;
-    
+
     private static void Postfix(SpectatorCameraUI __instance)
     {
         Awake?.Invoke(__instance);

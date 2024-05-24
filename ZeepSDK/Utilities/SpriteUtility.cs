@@ -10,7 +10,7 @@ namespace ZeepSDK.Utilities;
 public static class SpriteUtility
 {
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(SpriteUtility));
-    
+
     /// <summary>
     /// Creates a <see cref="Sprite"/> from a base64 string
     /// </summary>
@@ -20,10 +20,10 @@ public static class SpriteUtility
         try
         {
             byte[] buffer = Convert.FromBase64String(b64);
-            
+
             Texture2D texture = new(1, 1);
             texture.LoadImage(buffer);
-            
+
             return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.one * 0.5f);
         }
         catch (Exception e)

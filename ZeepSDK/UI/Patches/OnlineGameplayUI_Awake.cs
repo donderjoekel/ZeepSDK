@@ -7,7 +7,7 @@ namespace ZeepSDK.UI.Patches;
 internal class OnlineGameplayUI_Awake
 {
     public static event Action<OnlineGameplayUI> Awake;
-    
+
     private static void Postfix(OnlineGameplayUI __instance)
     {
         Awake?.Invoke(__instance);

@@ -17,12 +17,12 @@ public class ColorDefinition
         Name = name;
         Color = color;
     }
-    
+
     /// <summary>
     /// The display name of the color
     /// </summary>
     public string Name { get; }
-    
+
     /// <summary>
     /// The value representing the color
     /// </summary>

@@ -27,7 +27,7 @@ internal class CustomBlockCallbackWithData : CustomBlockCallback
 {
     private readonly Action<object> action;
     private readonly object userData;
-    
+
     public CustomBlockCallbackWithData(Action<object> action, object userData)
     {
         this.action = action;

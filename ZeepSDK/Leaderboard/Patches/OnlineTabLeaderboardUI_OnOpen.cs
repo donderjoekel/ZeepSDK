@@ -8,7 +8,7 @@ namespace ZeepSDK.Leaderboard.Patches;
 internal class OnlineTabLeaderboardUI_OnOpen
 {
     public static event Action<OnlineTabLeaderboardUI> OnOpen;
-    
+
     [UsedImplicitly]
     private static bool Prefix(OnlineTabLeaderboardUI __instance)
     {

@@ -20,60 +20,60 @@ namespace ZeepSDK.UI;
 internal class UIConfigurator : MonoBehaviour
 {
     private const float AnimatedBorderFadeDuration = 1.0f;
-    
+
     private const string MoveHandle =
         "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADfSURBVEhL3ZVBEoMgDEVtj9JTwVU4LByFxoZRCRR+EBbtW8kI7w8k6CPGuK1kDwghpNFsnHPP9Ijx+pAGGIqAQ63KQAOEFM+AAqo6MKMf0BAhGbouYqP3nodd1F00wF8GgO1RUl0oA4btTLk8C7hpZ4TkDJhiZzIV3QO8r1WQ1hizvIvOm3zd17c98Zz2W4bnZDd54kFdVdkRTckQElmDmxnl8kqRhzOqC5d30e8H9P9o7U9Iu2DQH62hQNoBOqKqCLETaA2EDrQTiiIfUtxO6LqI1Co7sXeRtTaNprNtb4jdcZdwHID6AAAAAElFTkSuQmCC";
-    
+
     private const string ScaleHandle =
         "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVEhL3ZZBEsIgEATRp/ArvsJj4Sk4FpRGxAV2Nh7ShxRcumG55FZKcWfyDOSc286aGOO9LU+DvYH3vq0+SSnh+48bsIF6UgGDG8gNg8CvZ6iwAdkOqEBnH85KHxjavxvKgHB2rI9bTWBlMi+2A1t2sBfYtYONgMIOVgM6O1gKqO1gHmDsYBIg7UAK8HbwDkB3NJrYQX+D6rWyg8GIDO1g8sikHUgB3g6kQDcrHZMR8Y1JgOca/6YhhLYzx7kHwO9hWRWBT8gAAAAASUVORK5CYII=";
-    
+
     private const string ResetHandle =
         "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADZSURBVEhL7ZbhDYQgDEbxRmErVmFYGAWrNoZAKf2I5nLJvV8UaZ8FTdhKKe5NDkHOmaOniTF+ePgasMB7zyMbmACtTgCCheqEVbBWnTAJmuoUXnCsAh9yjUVjEqSUeHRCYT2jO6wdNA6i1igOYIt6BzF1YGew4IAPWXf0CILph6HQ57aC5eqjJuAtQvkLpnxJsPAtjVJagfLLWOjTh1sENaEsFgT3Wxgd9zKxe7kDu0OvTgy3qHaImnp+VJ2Y3OzE0g1K9fnNjpKVfP3pxe/fTY8OQggcPY5zO9a7a/F3f5AmAAAAAElFTkSuQmCC";
-    
+
     private static readonly Texture2D WhiteTexture = Texture2D.whiteTexture;
-    
+
     private static ManualLogSource logger = LoggerFactory.GetLogger(typeof(UIConfigurator));
-    
+
     private readonly List<RectTransform> transforms = new();
     private readonly Dictionary<string, TransformSaveData> transformSaveData = new();
-    
+
     private ConfigEntry<KeyCode> configEditModeKey;
     private ConfigEntry<KeyCode> configNextCycleKey;
     private ConfigEntry<KeyCode> configPreviousCycleKey;
     private ConfigEntry<bool> configResetAllButton;
     private ConfigEntry<string> configBorderColor;
-    
+
     private bool previousCursorVisible;
     private CursorLockMode previousCursorLockMode;
     private bool previousGameObjectActive;
     private Vector2 previousMousePosition;
-    
+
     private bool isEditing;
     private bool isRectEditing;
     private bool isMoving;
     private bool isScaling;
-    
+
     private Color borderColor = Color.red;
     private Color animatedBorderColor;
-    
+
     private bool hasSetPlaceholderText;
-    
+
     private GameObject moveHandle;
     private GameObject scaleHandle;
     private GameObject resetHandle;
-    
+
     private int currentRectIndex;
     private RectTransform currentRect;
-    
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
         RegisterConfig();
         LoadSaveData();
-        
+
         SceneManager_LoadScene.BeforeLoadScene += () => DisableEditMode();
     }
-    
+
     private void RegisterConfig()
     {
         configEditModeKey = Plugin.Instance.Config.Bind("UI",
@@ -97,25 +97,25 @@ internal class UIConfigurator : MonoBehaviour
             "Red",
             new ConfigDescription("Selected UI element color",
                 new AcceptableValueList<string>(ColorUtility.ColorDefinitions.Select(x => x.Name).ToArray())));
-        
+
         configResetAllButton.SettingChanged += (sender, args) => ResetAll();
         configBorderColor.SettingChanged += (sender, args) => SetColor(configBorderColor.Value);
         SetColor(configBorderColor.Value);
     }
-    
+
     private void SetColor(string colorName)
     {
         borderColor = ColorUtility.FromName(colorName);
         animatedBorderColor = borderColor;
     }
-    
+
     private void LoadSaveData()
     {
         try
         {
             Dictionary<string, TransformSaveData> loadedSaveData =
                 Plugin.Storage.LoadFromJson<Dictionary<string, TransformSaveData>>("UIConfigurator");
-            
+
             if (loadedSaveData != null)
             {
                 transformSaveData.AddRange(loadedSaveData);
@@ -126,52 +126,52 @@ internal class UIConfigurator : MonoBehaviour
             // Can be ignored
         }
     }
-    
+
     private void CleanDeadTransforms()
     {
         transforms.RemoveAll(x => x == null);
     }
-    
+
     public void Add(RectTransform rectTransform)
     {
         if (transforms.Contains(rectTransform))
             return;
-        
+
         CleanDeadTransforms();
         transforms.Add(rectTransform);
         ApplyOrSaveOriginal(rectTransform);
     }
-    
+
     public void Remove(RectTransform rectTransform)
     {
         transforms.Remove(rectTransform);
         CleanDeadTransforms();
     }
-    
+
     private void OnGUI()
     {
         if (!isEditing)
             return;
-        
+
         DrawOuterBorder();
-        
+
         if (currentRect == null)
             return;
-        
+
         DrawCurrentRectBorder();
     }
-    
+
     private void DrawOuterBorder()
     {
         Rect screenborderRect = new Rect(0, 0, Screen.width, Screen.height);
         DrawScreenRectBorder(screenborderRect, 8, animatedBorderColor);
     }
-    
+
     private void DrawCurrentRectBorder()
     {
         Vector3[] corners = new Vector3[4];
         currentRect.GetWorldCorners(corners);
-        
+
         Canvas canvas = currentRect.GetComponentInParent<Canvas>();
         if (canvas.renderMode == RenderMode.ScreenSpaceOverlay)
         {
@@ -188,56 +188,56 @@ internal class UIConfigurator : MonoBehaviour
                 corners[i] = RectTransformUtility.WorldToScreenPoint(camera, corners[i]);
             }
         }
-        
+
         Rect screenRect = GetScreenRect(corners[0], corners[2]);
         DrawScreenRectBorder(screenRect, 2, borderColor);
     }
-    
+
     private void Update()
     {
         if (Input.GetKeyDown(configEditModeKey.Value))
         {
             ToggleEditMode();
         }
-        
+
         if (!isEditing)
             return;
-        
+
         if (isRectEditing)
         {
             if (Input.GetKeyDown(configNextCycleKey.Value))
             {
                 CycleToNext();
             }
-            
+
             if (Input.GetKeyDown(configPreviousCycleKey.Value))
             {
                 CycleToPrevious();
             }
-            
+
             HandleRectEditing();
         }
-        
+
         if (Input.GetMouseButtonUp(0))
         {
             isMoving = false;
             isScaling = false;
         }
-        
+
         PulseAnimatedBorder();
     }
-    
+
     private void CycleToNext()
     {
         if (!transforms.Any())
             return;
-        
+
         ExitRectEditMode();
         CleanDeadTransforms();
-        
+
         RectTransform rectTransform =
             ListUtility.FindFirst(transforms, currentRectIndex + 1, x => x.gameObject.activeInHierarchy);
-        
+
         if (rectTransform != null)
         {
             EnterRectEditMode(rectTransform);
@@ -247,18 +247,18 @@ internal class UIConfigurator : MonoBehaviour
             MessengerApi.Log("No configurable UI available");
         }
     }
-    
+
     private void CycleToPrevious()
     {
         if (!transforms.Any())
             return;
-        
+
         ExitRectEditMode();
         CleanDeadTransforms();
-        
+
         RectTransform rectTransform =
             ListUtility.FindFirstReverse(transforms, currentRectIndex - 1, x => x.gameObject.activeInHierarchy);
-        
+
         if (rectTransform != null)
         {
             EnterRectEditMode(rectTransform);
@@ -268,15 +268,15 @@ internal class UIConfigurator : MonoBehaviour
             MessengerApi.Log("No configurable UI available");
         }
     }
-    
+
     private void HandleRectEditing()
     {
         if (currentRect == null)
             return;
-        
+
         Vector2 currentMousePosition = Input.mousePosition;
         Vector2 delta = (currentMousePosition - previousMousePosition) / new Vector2(Screen.width, Screen.height);
-        
+
         if (isMoving)
         {
             currentRect.anchorMin += delta;
@@ -288,10 +288,10 @@ internal class UIConfigurator : MonoBehaviour
             currentRect.anchorMax += delta;
             SetAnchorMax(currentRect);
         }
-        
+
         previousMousePosition = currentMousePosition;
     }
-    
+
     /// <summary>
     /// Converts a mouse position relative to the screen (0,0 to 1,1) to a position relative to a given panel.
     /// </summary>
@@ -307,13 +307,13 @@ internal class UIConfigurator : MonoBehaviour
     {
         // Calculate the size of the panel in screen coordinates
         Vector2 panelSize = panelEndAnchor - panelStartAnchor;
-        
+
         // Calculate the position relative to the panel
         Vector2 relativePosition = (mousePosition - panelStartAnchor) / panelSize;
-        
+
         return relativePosition;
     }
-    
+
     private void SetAnchors(RectTransform rectTransform)
     {
         string path = GetPath(rectTransform);
@@ -323,7 +323,7 @@ internal class UIConfigurator : MonoBehaviour
             data.currentAnchorMax = rectTransform.anchorMax;
         }
     }
-    
+
     private void SetAnchorMax(RectTransform rectTransform)
     {
         string path = GetPath(rectTransform);
@@ -332,7 +332,7 @@ internal class UIConfigurator : MonoBehaviour
             data.currentAnchorMax = rectTransform.anchorMax;
         }
     }
-    
+
     private void ToggleEditMode()
     {
         if (isEditing)
@@ -344,21 +344,21 @@ internal class UIConfigurator : MonoBehaviour
             EnableEditMode();
         }
     }
-    
+
     private void EnableEditMode()
     {
         if (isEditing)
             return;
-        
+
         CleanDeadTransforms();
         isEditing = true;
-        
+
         previousCursorVisible = Cursor.visible;
         previousCursorLockMode = Cursor.lockState;
-        
+
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        
+
         RectTransform rectTransform = GetFirstActiveRectTransform();
         if (rectTransform != null)
         {
@@ -370,111 +370,111 @@ internal class UIConfigurator : MonoBehaviour
             DisableEditMode(false);
         }
     }
-    
+
     private void DisableEditMode(bool saveAndLog = true)
     {
         if (!isEditing)
             return;
-        
+
         ExitRectEditMode();
-        
+
         isEditing = false;
-        
+
         Cursor.visible = previousCursorVisible;
         Cursor.lockState = previousCursorLockMode;
-        
+
         if (saveAndLog)
         {
             MessengerApi.Log("Saving UIConfig!");
             SaveToDisk();
         }
-        
+
         DeactivateHandles();
-        
+
         if (currentRect != null)
         {
             currentRect.gameObject.SetActive(previousGameObjectActive);
         }
-        
+
         isRectEditing = false;
         currentRect = null;
         currentRectIndex = -1;
     }
-    
+
     private void EnterRectEditMode(RectTransform rectTransform)
     {
         currentRect = rectTransform;
         currentRectIndex = transforms.IndexOf(currentRect);
-        
+
         previousGameObjectActive = currentRect.gameObject.activeSelf;
         SetPlaceholderTextIfNecessary();
         currentRect.gameObject.SetActive(true);
-        
+
         isRectEditing = true;
         ActivateHandles(currentRect);
         MessengerApi.Log(currentRect.gameObject.name);
     }
-    
+
     private void ExitRectEditMode()
     {
         if (!isRectEditing)
             return;
-        
+
         if (hasSetPlaceholderText)
         {
             if (currentRect != null)
             {
                 currentRect.GetComponentInChildren<TextMeshProUGUI>().text = "";
             }
-            
+
             hasSetPlaceholderText = false;
         }
-        
+
         if (currentRect != null)
         {
             currentRect.gameObject.SetActive(previousGameObjectActive);
         }
-        
+
         isRectEditing = false;
         DeactivateHandles();
         currentRect = null;
     }
-    
+
     private void SetPlaceholderTextIfNecessary()
     {
         TextMeshProUGUI text = currentRect.GetComponentInChildren<TextMeshProUGUI>();
         if (text == null)
             return;
-        
+
         if (!string.IsNullOrEmpty(text.text))
             return;
-        
+
         text.text = GetPlaceholderText(currentRect);
         hasSetPlaceholderText = true;
     }
-    
+
     private void ActivateHandles(RectTransform rect)
     {
         if (moveHandle == null)
         {
             moveHandle = CreateHandle("MoveHandle", StartMove);
         }
-        
+
         if (scaleHandle == null)
         {
             scaleHandle = CreateHandle("ScaleHandle", StartScale);
         }
-        
+
         if (resetHandle == null)
         {
             resetHandle = CreateHandle("ResetHandle", ResetToOriginal);
         }
-        
+
         PositionHandle(moveHandle, rect, new Vector2(0, 0));
         PositionHandle(scaleHandle, rect, new Vector2(1, 1));
         PositionHandle(resetHandle, rect, new Vector2(0, 1));
     }
-    
+
     private void DeactivateHandles()
     {
         if (moveHandle != null)
@@ -484,32 +484,32 @@ internal class UIConfigurator : MonoBehaviour
         if (resetHandle != null)
             resetHandle.SetActive(false);
     }
-    
+
     private GameObject CreateHandle(string name, UnityAction<RectTransform> callback)
     {
         GameObject handle = new GameObject(name);
         RectTransform handleRect = handle.AddComponent<RectTransform>();
         handleRect.sizeDelta = new Vector2(32, 32);
-        
+
         Image image = handle.AddComponent<Image>();
         image.color = Color.white;
-        
+
         Sprite s = SpriteUtility.FromBase64(GetBase64ForName(name));
         if (s != null)
         {
             image.sprite = s;
         }
-        
+
         EventTrigger trigger = handle.AddComponent<EventTrigger>();
         EventTrigger.Entry entry = new EventTrigger.Entry();
         entry.eventID = EventTriggerType.PointerDown;
         entry.callback.AddListener((data) => callback(currentRect));
         trigger.triggers.Add(entry);
-        
+
         handle.SetActive(false);
         return handle;
     }
-    
+
     private static string GetBase64ForName(string name)
     {
         return name switch
@@ -520,21 +520,21 @@ internal class UIConfigurator : MonoBehaviour
             _ => null
         };
     }
-    
+
     private void StartMove(RectTransform rect)
     {
         currentRect = rect;
         isMoving = true;
         isScaling = false;
     }
-    
+
     private void StartScale(RectTransform rect)
     {
         currentRect = rect;
         isScaling = true;
         isMoving = false;
     }
-    
+
     private void ApplyOrSaveOriginal(RectTransform rectTransform)
     {
         string path = GetPath(rectTransform);
@@ -547,13 +547,13 @@ internal class UIConfigurator : MonoBehaviour
             SaveOriginal(rectTransform);
         }
     }
-    
+
     private void Apply(RectTransform rect, TransformSaveData data)
     {
         rect.anchorMin = data.currentAnchorMin;
         rect.anchorMax = data.currentAnchorMax;
     }
-    
+
     private void SaveOriginal(RectTransform rect)
     {
         string path = GetPath(rect);
@@ -566,17 +566,17 @@ internal class UIConfigurator : MonoBehaviour
         };
         transformSaveData[path] = data;
     }
-    
+
     private void ResetAll()
     {
         foreach (RectTransform rectTransform in transforms)
         {
             ResetToOriginal(rectTransform);
         }
-        
+
         SaveToDisk();
     }
-    
+
     private void ResetToOriginal(RectTransform rect)
     {
         string path = GetPath(rect);
@@ -588,12 +588,12 @@ internal class UIConfigurator : MonoBehaviour
             data.currentAnchorMax = rect.anchorMax;
         }
     }
-    
+
     private void SaveToDisk()
     {
         Plugin.Storage.SaveToJson("UIConfigurator", transformSaveData);
     }
-    
+
     private static void PositionHandle(GameObject handle, RectTransform parent, Vector2 anchor)
     {
         handle.transform.SetParent(parent, false);
@@ -604,18 +604,18 @@ internal class UIConfigurator : MonoBehaviour
         handleRect.anchoredPosition = Vector2.zero;
         handle.SetActive(true);
     }
-    
+
     private RectTransform GetFirstActiveRectTransform()
     {
         return transforms.FirstOrDefault(x => x.gameObject.activeInHierarchy);
     }
-    
+
     private void PulseAnimatedBorder()
     {
         float alpha = Mathf.PingPong(Time.time / AnimatedBorderFadeDuration, 1.0f);
         animatedBorderColor = new Color(animatedBorderColor.r, animatedBorderColor.g, animatedBorderColor.b, alpha);
     }
-    
+
     private string GetPlaceholderText(RectTransform rect)
     {
         string rectName = rect.name.ToLower();
@@ -640,7 +640,7 @@ internal class UIConfigurator : MonoBehaviour
                 return "X/X";
             case "time":
                 return "XX:XX.XXX";
-            
+
             //Photomode
             case "target":
                 return "Target: Player 1";
@@ -660,7 +660,7 @@ internal class UIConfigurator : MonoBehaviour
                 return "Steam ID: XXXXXXXXXXXXXXXXXX";
             case "draw players indicator":
                 return "Show Player: state (V)";
-            
+
             //Online
             case "voteskip text":
             case "voteskip text alternate position":
@@ -669,17 +669,17 @@ internal class UIConfigurator : MonoBehaviour
             case "servermessage alternate position":
                 return "Placeholder text for server message.";
         }
-        
+
         return "";
     }
-    
+
     private static string GetPath(Transform transform)
     {
         if (transform == null) return null;
         string path = GetPath(transform.parent);
         return string.IsNullOrEmpty(path) ? transform.name : $"{path}/{transform.name}";
     }
-    
+
     private static void DrawScreenRect(Rect rect, Color color)
     {
         Color previousColor = GUI.color;
@@ -687,7 +687,7 @@ internal class UIConfigurator : MonoBehaviour
         GUI.DrawTexture(rect, WhiteTexture);
         GUI.color = previousColor;
     }
-    
+
     private static void DrawScreenRectBorder(Rect rect, float thickness, Color color)
     {
         // Top
@@ -699,7 +699,7 @@ internal class UIConfigurator : MonoBehaviour
         // Bottom
         DrawScreenRect(new Rect(rect.xMin, rect.yMax - thickness, rect.width, thickness), color);
     }
-    
+
     private static Rect GetScreenRect(Vector3 screenPosition1, Vector3 screenPosition2)
     {
         // Move origin from bottom left to top left
@@ -711,7 +711,7 @@ internal class UIConfigurator : MonoBehaviour
         // Create Rect
         return Rect.MinMaxRect(topLeft.x, topLeft.y, bottomRight.x, bottomRight.y);
     }
-    
+
     [Serializable]
     private class TransformSaveData
     {

@@ -7,7 +7,7 @@ namespace ZeepSDK.UI.Patches;
 internal class PlayerScreensUI_Awake
 {
     public static event Action<PlayerScreensUI> Awake;
-    
+
     private static void Postfix(PlayerScreensUI __instance)
     {
         Awake?.Invoke(__instance);
