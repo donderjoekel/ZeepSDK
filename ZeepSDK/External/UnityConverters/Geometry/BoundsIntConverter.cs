@@ -29,7 +29,6 @@ using ZeepSDK.External.Newtonsoft.Json.UnityConverters.Helpers;
 namespace ZeepSDK.External.Newtonsoft.Json.UnityConverters.Geometry
 {
     /// <summary>
-
     /// Custom Newtonsoft.Json converter <see cref="JsonConverter"/> for the Unity integer Bounds type <see cref="BoundsInt"/>.
     /// </summary>
     internal class BoundsIntConverter : PartialConverter<BoundsInt>

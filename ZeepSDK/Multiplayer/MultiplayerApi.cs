@@ -79,14 +79,15 @@ public static class MultiplayerApi
                 ZeepkistNetwork.CurrentLobby.NextPlaylistIndex = index;
             }
 
-            ZeepkistNetwork.NetworkClient?.SendPacket(new ChangeLobbyPlaylistPacket()
-            {
-                NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
-                IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
-                Playlist = ZeepkistNetwork.CurrentLobby.Playlist,
-                CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
-                NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
-            });
+            ZeepkistNetwork.NetworkClient?.SendPacket(
+                new ChangeLobbyPlaylistPacket()
+                {
+                    NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
+                    IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
+                    playlist_all = ZeepkistNetwork.CurrentLobby.Playlist,
+                    CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
+                    NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
+                });
 
             return index;
         }
@@ -106,14 +107,15 @@ public static class MultiplayerApi
         try
         {
             ZeepkistNetwork.CurrentLobby.NextPlaylistIndex = index;
-            ZeepkistNetwork.NetworkClient?.SendPacket(new ChangeLobbyPlaylistPacket()
-            {
-                NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
-                IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
-                Playlist = ZeepkistNetwork.CurrentLobby.Playlist,
-                CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
-                NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
-            });
+            ZeepkistNetwork.NetworkClient?.SendPacket(
+                new ChangeLobbyPlaylistPacket()
+                {
+                    NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
+                    IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
+                    playlist_all = ZeepkistNetwork.CurrentLobby.Playlist,
+                    CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
+                    NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
+                });
         }
         catch (Exception e)
         {
