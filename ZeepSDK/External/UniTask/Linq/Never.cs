@@ -36,11 +36,11 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             public UniTask<bool> MoveNextAsync()
             {
-                var tcs = new UniTaskCompletionSource<bool>();
+                UniTaskCompletionSource<bool> tcs = new UniTaskCompletionSource<bool>();
 
                 cancellationToken.Register(state =>
                 {
-                    var task = (UniTaskCompletionSource<bool>)state;
+                    UniTaskCompletionSource<bool> task = (UniTaskCompletionSource<bool>)state;
                     task.TrySetCanceled(cancellationToken);
                 }, tcs);
 

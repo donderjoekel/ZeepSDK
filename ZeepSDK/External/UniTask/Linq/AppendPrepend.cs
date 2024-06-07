@@ -110,9 +110,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void MoveNextCore(object state)
             {
-                var self = (_AppendPrepend)state;
+                _AppendPrepend self = (_AppendPrepend)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out bool result))
                 {
                     if (result)
                     {

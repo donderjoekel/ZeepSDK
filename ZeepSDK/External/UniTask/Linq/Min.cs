@@ -44,9 +44,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         public static async UniTask<TSource> MinAsync<TSource>(IUniTaskAsyncEnumerable<TSource> source, CancellationToken cancellationToken)
         {
             TSource value = default;
-            var comparer = Comparer<TSource>.Default;
+            Comparer<TSource> comparer = Comparer<TSource>.Default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -62,7 +62,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
                 while (await e.MoveNextAsync())
                 {
-                    var x = e.Current;
+                    TSource x = e.Current;
                     if (comparer.Compare(value, x) > 0)
                     {
                         value = x;
@@ -83,9 +83,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         public static async UniTask<TResult> MinAsync<TSource, TResult>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, TResult> selector, CancellationToken cancellationToken)
         {
             TResult value = default;
-            var comparer = Comparer<TResult>.Default;
+            Comparer<TResult> comparer = Comparer<TResult>.Default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -101,7 +101,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
                 while (await e.MoveNextAsync())
                 {
-                    var x = selector(e.Current);
+                    TResult x = selector(e.Current);
                     if (comparer.Compare(value, x) > 0)
                     {
                         value = x;
@@ -122,9 +122,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         public static async UniTask<TResult> MinAwaitAsync<TSource, TResult>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTask<TResult>> selector, CancellationToken cancellationToken)
         {
             TResult value = default;
-            var comparer = Comparer<TResult>.Default;
+            Comparer<TResult> comparer = Comparer<TResult>.Default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -140,7 +140,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
                 while (await e.MoveNextAsync())
                 {
-                    var x = await selector(e.Current);
+                    TResult x = await selector(e.Current);
                     if (comparer.Compare(value, x) > 0)
                     {
                         value = x;
@@ -161,9 +161,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         public static async UniTask<TResult> MinAwaitWithCancellationAsync<TSource, TResult>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, UniTask<TResult>> selector, CancellationToken cancellationToken)
         {
             TResult value = default;
-            var comparer = Comparer<TResult>.Default;
+            Comparer<TResult> comparer = Comparer<TResult>.Default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -179,7 +179,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
                 while (await e.MoveNextAsync())
                 {
-                    var x = await selector(e.Current, cancellationToken);
+                    TResult x = await selector(e.Current, cancellationToken);
                     if (comparer.Compare(value, x) > 0)
                     {
                         value = x;

@@ -187,15 +187,15 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void MoveNextCore(object state)
             {
-                var self = (_GroupJoin)state;
+                _GroupJoin self = (_GroupJoin)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out bool result))
                 {
                     if (result)
                     {
-                        var outer = self.enumerator.Current;
-                        var key = self.outerKeySelector(outer);
-                        var values = self.lookup[key];
+                        TOuter outer = self.enumerator.Current;
+                        TKey key = self.outerKeySelector(outer);
+                        IEnumerable<TInner> values = self.lookup[key];
 
                         self.Current = self.resultSelector(outer, values);
                         self.completionSource.TrySetResult(true);
@@ -333,9 +333,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void MoveNextCore(object state)
             {
-                var self = (_GroupJoinAwait)state;
+                _GroupJoinAwait self = (_GroupJoinAwait)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out bool result))
                 {
                     if (result)
                     {
@@ -367,13 +367,13 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void OuterKeySelectCore(object state)
             {
-                var self = (_GroupJoinAwait)state;
+                _GroupJoinAwait self = (_GroupJoinAwait)state;
 
-                if (self.TryGetResult(self.outerKeyAwaiter, out var result))
+                if (self.TryGetResult(self.outerKeyAwaiter, out TKey result))
                 {
                     try
                     {
-                        var values = self.lookup[result];
+                        IEnumerable<TInner> values = self.lookup[result];
                         self.resultAwaiter = self.resultSelector(self.outerValue, values).GetAwaiter();
                         if (self.resultAwaiter.IsCompleted)
                         {
@@ -393,9 +393,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void ResultSelectCore(object state)
             {
-                var self = (_GroupJoinAwait)state;
+                _GroupJoinAwait self = (_GroupJoinAwait)state;
 
-                if (self.TryGetResult(self.resultAwaiter, out var result))
+                if (self.TryGetResult(self.resultAwaiter, out TResult result))
                 {
                     self.Current = result;
                     self.completionSource.TrySetResult(true);
@@ -528,9 +528,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void MoveNextCore(object state)
             {
-                var self = (_GroupJoinAwaitWithCancellation)state;
+                _GroupJoinAwaitWithCancellation self = (_GroupJoinAwaitWithCancellation)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out bool result))
                 {
                     if (result)
                     {
@@ -562,13 +562,13 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void OuterKeySelectCore(object state)
             {
-                var self = (_GroupJoinAwaitWithCancellation)state;
+                _GroupJoinAwaitWithCancellation self = (_GroupJoinAwaitWithCancellation)state;
 
-                if (self.TryGetResult(self.outerKeyAwaiter, out var result))
+                if (self.TryGetResult(self.outerKeyAwaiter, out TKey result))
                 {
                     try
                     {
-                        var values = self.lookup[result];
+                        IEnumerable<TInner> values = self.lookup[result];
                         self.resultAwaiter = self.resultSelector(self.outerValue, values, self.cancellationToken).GetAwaiter();
                         if (self.resultAwaiter.IsCompleted)
                         {
@@ -588,9 +588,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void ResultSelectCore(object state)
             {
-                var self = (_GroupJoinAwaitWithCancellation)state;
+                _GroupJoinAwaitWithCancellation self = (_GroupJoinAwaitWithCancellation)state;
 
-                if (self.TryGetResult(self.resultAwaiter, out var result))
+                if (self.TryGetResult(self.resultAwaiter, out TResult result))
                 {
                     self.Current = result;
                     self.completionSource.TrySetResult(true);

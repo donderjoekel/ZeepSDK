@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using ZeepSDK.External.Cysharp.Threading.Tasks.Internal;
+using Object = UnityEngine.Object;
 
 namespace ZeepSDK.External.Cysharp.Threading.Tasks
 {
@@ -11,27 +12,27 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
     {
         public static UniTask WaitUntil(Func<bool> predicate, PlayerLoopTiming timing = PlayerLoopTiming.Update, CancellationToken cancellationToken = default(CancellationToken))
         {
-            return new UniTask(WaitUntilPromise.Create(predicate, timing, cancellationToken, out var token), token);
+            return new UniTask(WaitUntilPromise.Create(predicate, timing, cancellationToken, out short token), token);
         }
 
         public static UniTask WaitWhile(Func<bool> predicate, PlayerLoopTiming timing = PlayerLoopTiming.Update, CancellationToken cancellationToken = default(CancellationToken))
         {
-            return new UniTask(WaitWhilePromise.Create(predicate, timing, cancellationToken, out var token), token);
+            return new UniTask(WaitWhilePromise.Create(predicate, timing, cancellationToken, out short token), token);
         }
 
         public static UniTask WaitUntilCanceled(CancellationToken cancellationToken, PlayerLoopTiming timing = PlayerLoopTiming.Update)
         {
-            return new UniTask(WaitUntilCanceledPromise.Create(cancellationToken, timing, out var token), token);
+            return new UniTask(WaitUntilCanceledPromise.Create(cancellationToken, timing, out short token), token);
         }
 
         public static UniTask<U> WaitUntilValueChanged<T, U>(T target, Func<T, U> monitorFunction, PlayerLoopTiming monitorTiming = PlayerLoopTiming.Update, IEqualityComparer<U> equalityComparer = null, CancellationToken cancellationToken = default(CancellationToken))
           where T : class
         {
-            var unityObject = target as UnityEngine.Object;
-            var isUnityObject = target is UnityEngine.Object; // don't use (unityObject == null)
+            Object unityObject = target as UnityEngine.Object;
+            bool isUnityObject = target is UnityEngine.Object; // don't use (unityObject == null)
 
             return new UniTask<U>(isUnityObject
-                ? WaitUntilValueChangedUnityObjectPromise<T, U>.Create(target, monitorFunction, equalityComparer, monitorTiming, cancellationToken, out var token)
+                ? WaitUntilValueChangedUnityObjectPromise<T, U>.Create(target, monitorFunction, equalityComparer, monitorTiming, cancellationToken, out short token)
                 : WaitUntilValueChangedStandardObjectPromise<T, U>.Create(target, monitorFunction, equalityComparer, monitorTiming, cancellationToken, out token), token);
         }
 
@@ -62,7 +63,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out WaitUntilPromise result))
                 {
                     result = new WaitUntilPromise();
                 }
@@ -167,7 +168,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out WaitWhilePromise result))
                 {
                     result = new WaitWhilePromise();
                 }
@@ -271,7 +272,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out WaitUntilCanceledPromise result))
                 {
                     result = new WaitUntilCanceledPromise();
                 }
@@ -365,7 +366,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource<U>.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out WaitUntilValueChangedUnityObjectPromise<T, U> result))
                 {
                     result = new WaitUntilValueChangedUnityObjectPromise<T, U>();
                 }
@@ -488,7 +489,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource<U>.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out WaitUntilValueChangedStandardObjectPromise<T, U> result))
                 {
                     result = new WaitUntilValueChangedStandardObjectPromise<T, U>();
                 }
@@ -541,7 +542,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             public bool MoveNext()
             {
-                if (cancellationToken.IsCancellationRequested || !target.TryGetTarget(out var t)) // doesn't find = cancel.
+                if (cancellationToken.IsCancellationRequested || !target.TryGetTarget(out T t)) // doesn't find = cancel.
                 {
                     core.TrySetCanceled(cancellationToken);
                     return false;

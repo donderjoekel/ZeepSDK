@@ -21,8 +21,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
         [MethodImpl(MethodImplOptions.NoInlining)]
         static void EnsureCore<T>(ref T[] array, int index)
         {
-            var newSize = array.Length * 2;
-            var newArray = new T[(index < newSize) ? newSize : (index * 2)];
+            int newSize = array.Length * 2;
+            T[] newArray = new T[(index < newSize) ? newSize : (index * 2)];
             Array.Copy(array, 0, newArray, 0, array.Length);
 
             array = newArray;
@@ -38,11 +38,11 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
                 return (array, array.Length);
             }
 
-            var defaultCount = 4;
+            int defaultCount = 4;
             if (source is ICollection<T> coll)
             {
                 defaultCount = coll.Count;
-                var buffer = new T[defaultCount];
+                T[] buffer = new T[defaultCount];
                 coll.CopyTo(buffer, 0);
                 return (buffer, defaultCount);
             }
@@ -57,9 +57,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
             }
 
             {
-                var index = 0;
-                var buffer = new T[defaultCount];
-                foreach (var item in source)
+                int index = 0;
+                T[] buffer = new T[defaultCount];
+                foreach (T item in source)
                 {
                     EnsureCapacity(ref buffer, index);
                     buffer[index++] = item;

@@ -216,14 +216,14 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void MoveNextCore(object state)
             {
-                var self = (_Join)state;
+                _Join self = (_Join)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out bool result))
                 {
                     if (result)
                     {
                         self.currentOuterValue = self.enumerator.Current;
-                        var key = self.outerKeySelector(self.currentOuterValue);
+                        TKey key = self.outerKeySelector(self.currentOuterValue);
                         self.valueEnumerator = self.lookup[key].GetEnumerator();
 
                         if (self.continueNext)
@@ -411,9 +411,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void MoveNextCore(object state)
             {
-                var self = (_JoinAwait)state;
+                _JoinAwait self = (_JoinAwait)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out bool result))
                 {
                     if (result)
                     {
@@ -445,9 +445,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void OuterSelectCore(object state)
             {
-                var self = (_JoinAwait)state;
+                _JoinAwait self = (_JoinAwait)state;
 
-                if (self.TryGetResult(self.outerKeyAwaiter, out var key))
+                if (self.TryGetResult(self.outerKeyAwaiter, out TKey key))
                 {
                     self.valueEnumerator = self.lookup[key].GetEnumerator();
 
@@ -468,9 +468,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void ResultSelectCore(object state)
             {
-                var self = (_JoinAwait)state;
+                _JoinAwait self = (_JoinAwait)state;
 
-                if (self.TryGetResult(self.resultAwaiter, out var result))
+                if (self.TryGetResult(self.resultAwaiter, out TResult result))
                 {
                     self.Current = result;
                     self.completionSource.TrySetResult(true);
@@ -641,9 +641,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void MoveNextCore(object state)
             {
-                var self = (_JoinAwaitWithCancellation)state;
+                _JoinAwaitWithCancellation self = (_JoinAwaitWithCancellation)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out bool result))
                 {
                     if (result)
                     {
@@ -675,9 +675,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void OuterSelectCore(object state)
             {
-                var self = (_JoinAwaitWithCancellation)state;
+                _JoinAwaitWithCancellation self = (_JoinAwaitWithCancellation)state;
 
-                if (self.TryGetResult(self.outerKeyAwaiter, out var key))
+                if (self.TryGetResult(self.outerKeyAwaiter, out TKey key))
                 {
                     self.valueEnumerator = self.lookup[key].GetEnumerator();
 
@@ -698,9 +698,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void ResultSelectCore(object state)
             {
-                var self = (_JoinAwaitWithCancellation)state;
+                _JoinAwaitWithCancellation self = (_JoinAwaitWithCancellation)state;
 
-                if (self.TryGetResult(self.resultAwaiter, out var result))
+                if (self.TryGetResult(self.resultAwaiter, out TResult result))
                 {
                     self.Current = result;
                     self.completionSource.TrySetResult(true);

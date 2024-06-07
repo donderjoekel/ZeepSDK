@@ -93,7 +93,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         static void MoveNextCallBack(object state)
         {
-            var self = (AsyncEnumeratorBase<TSource, TResult>)state;
+            AsyncEnumeratorBase<TSource, TResult> self = (AsyncEnumeratorBase<TSource, TResult>)state;
             bool result;
             try
             {
@@ -234,10 +234,10 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             if (sourceHasCurrent)
             {
                 SourceCurrent = enumerator.Current;
-                var task = TransformAsync(SourceCurrent);
-                if (UnwarapTask(task, out var taskResult))
+                UniTask<TAwait> task = TransformAsync(SourceCurrent);
+                if (UnwarapTask(task, out TAwait taskResult))
                 {
-                    var currentResult = TrySetCurrentCore(taskResult, out var terminateIteration);
+                    bool currentResult = TrySetCurrentCore(taskResult, out bool terminateIteration);
                     if (terminateIteration)
                     {
                         return IterateFinished(out result);
@@ -273,7 +273,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         static void MoveNextCallBack(object state)
         {
-            var self = (AsyncEnumeratorAwaitSelectorBase<TSource, TResult, TAwait>)state;
+            AsyncEnumeratorAwaitSelectorBase<TSource, TResult, TAwait> self = (AsyncEnumeratorAwaitSelectorBase<TSource, TResult, TAwait>)state;
             bool result = false;
             try
             {
@@ -303,13 +303,13 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         static void SetCurrentCallBack(object state)
         {
-            var self = (AsyncEnumeratorAwaitSelectorBase<TSource, TResult, TAwait>)state;
+            AsyncEnumeratorAwaitSelectorBase<TSource, TResult, TAwait> self = (AsyncEnumeratorAwaitSelectorBase<TSource, TResult, TAwait>)state;
 
             bool doneSetCurrent;
             bool terminateIteration;
             try
             {
-                var result = self.resultAwaiter.GetResult();
+                TAwait result = self.resultAwaiter.GetResult();
                 doneSetCurrent = self.TrySetCurrentCore(result, out terminateIteration);
             }
             catch (Exception ex)

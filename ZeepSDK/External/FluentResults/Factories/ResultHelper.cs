@@ -15,9 +15,9 @@ namespace ZeepSDK.External.FluentResults
         public static Result<IEnumerable<TValue>> MergeWithValue<TValue>(
             IEnumerable<Result<TValue>> results)
         {
-            var resultList = results.ToList();
+            List<Result<TValue>> resultList = results.ToList();
 
-            var finalResult = Result.Ok<IEnumerable<TValue>>(new List<TValue>())
+            Result<IEnumerable<TValue>> finalResult = Result.Ok<IEnumerable<TValue>>(new List<TValue>())
                                     .WithReasons(resultList.SelectMany(result => result.Reasons));
 
             if (finalResult.IsSuccess)
@@ -32,16 +32,16 @@ namespace ZeepSDK.External.FluentResults
             out IEnumerable<TError> result)
             where TError : IError
         {
-            var foundErrors = errors.OfType<TError>().Where(predicate).ToList();
+            List<TError> foundErrors = errors.OfType<TError>().Where(predicate).ToList();
             if (foundErrors.Any())
             {
                 result = foundErrors;
                 return true;
             }
 
-            foreach (var error in errors)
+            foreach (IError error in errors)
             {
-                if (HasError(error.Reasons, predicate, out var fErrors))
+                if (HasError(error.Reasons, predicate, out IEnumerable<TError> fErrors))
                 {
                     result = fErrors;
                     return true;
@@ -58,7 +58,7 @@ namespace ZeepSDK.External.FluentResults
             out IEnumerable<IError> result)
             where TException : Exception
         {
-            var foundErrors = errors.OfType<ExceptionalError>()
+            List<ExceptionalError> foundErrors = errors.OfType<ExceptionalError>()
                                     .Where(e => e.Exception is TException rootExceptionOfTException
                                                 && predicate(rootExceptionOfTException))
                                     .ToList();
@@ -69,9 +69,9 @@ namespace ZeepSDK.External.FluentResults
                 return true;
             }
 
-            foreach (var error in errors)
+            foreach (IError error in errors)
             {
-                if (HasException(error.Reasons, predicate, out var fErrors))
+                if (HasException(error.Reasons, predicate, out IEnumerable<IError> fErrors))
                 {
                     result = fErrors;
                     return true;
@@ -87,7 +87,7 @@ namespace ZeepSDK.External.FluentResults
             Func<TSuccess, bool> predicate,
             out IEnumerable<TSuccess> result) where TSuccess : ISuccess
         {
-            var foundSuccesses = successes.OfType<TSuccess>()
+            List<TSuccess> foundSuccesses = successes.OfType<TSuccess>()
                                           .Where(predicate)
                                           .ToList();
             if (foundSuccesses.Any())

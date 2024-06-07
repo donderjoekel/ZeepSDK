@@ -21,7 +21,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static UniTask<(int winArgumentIndex, T result)> WhenAny<T>(IEnumerable<UniTask<T>> tasks)
         {
-            using (var span = ArrayPoolUtil.Materialize(tasks))
+            using (ArrayPoolUtil.RentArray<UniTask<T>> span = ArrayPoolUtil.Materialize(tasks))
             {
                 return new UniTask<(int, T)>(new WhenAnyPromise<T>(span.Array, span.Length), 0);
             }
@@ -36,7 +36,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         /// <summary>Return value is winArgumentIndex</summary>
         public static UniTask<int> WhenAny(IEnumerable<UniTask> tasks)
         {
-            using (var span = ArrayPoolUtil.Materialize(tasks))
+            using (ArrayPoolUtil.RentArray<UniTask> span = ArrayPoolUtil.Materialize(tasks))
             {
                 return new UniTask<int>(new WhenAnyPromise(span.Array, span.Length), 0);
             }
@@ -71,7 +71,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     {
                         awaiter.SourceOnCompleted(state =>
                         {
-                            using (var t = (StateTuple<WhenAnyLRPromise<T>, UniTask<T>.Awaiter>)state)
+                            using (StateTuple<WhenAnyLRPromise<T>, UniTask<T>.Awaiter> t = (StateTuple<WhenAnyLRPromise<T>, UniTask<T>.Awaiter>)state)
                             {
                                 TryLeftInvokeContinuation(t.Item1, t.Item2);
                             }
@@ -99,7 +99,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     {
                         awaiter.SourceOnCompleted(state =>
                         {
-                            using (var t = (StateTuple<WhenAnyLRPromise<T>, UniTask.Awaiter>)state)
+                            using (StateTuple<WhenAnyLRPromise<T>, Awaiter> t = (StateTuple<WhenAnyLRPromise<T>, UniTask.Awaiter>)state)
                             {
                                 TryRightInvokeContinuation(t.Item1, t.Item2);
                             }
@@ -209,7 +209,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     {
                         awaiter.SourceOnCompleted(state =>
                         {
-                            using (var t = (StateTuple<WhenAnyPromise<T>, UniTask<T>.Awaiter, int>)state)
+                            using (StateTuple<WhenAnyPromise<T>, UniTask<T>.Awaiter, int> t = (StateTuple<WhenAnyPromise<T>, UniTask<T>.Awaiter, int>)state)
                             {
                                 TryInvokeContinuation(t.Item1, t.Item2, t.Item3);
                             }
@@ -300,7 +300,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     {
                         awaiter.SourceOnCompleted(state =>
                         {
-                            using (var t = (StateTuple<WhenAnyPromise, UniTask.Awaiter, int>)state)
+                            using (StateTuple<WhenAnyPromise, Awaiter, int> t = (StateTuple<WhenAnyPromise, UniTask.Awaiter, int>)state)
                             {
                                 TryInvokeContinuation(t.Item1, t.Item2, t.Item3);
                             }

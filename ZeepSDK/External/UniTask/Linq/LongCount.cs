@@ -44,7 +44,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             long count = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -67,7 +67,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             long count = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -93,7 +93,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             long count = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -119,7 +119,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             long count = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())

@@ -5,9 +5,9 @@
 <#@ import namespace="System.Collections.Generic" #>
 <#@ output extension=".cs" #>
 <#
-    var empty = new (string, string)[0];
+    (string, string)[] empty = new (string, string)[0];
 
-    var triggers = new (string triggerName, string methodName, string returnType, string handlerInterface, (string argType, string argName)[] arguments)[]
+    (string triggerName, string methodName, string returnType, string handlerInterface, (string argType, string argName)[] arguments)[] triggers = new (string triggerName, string methodName, string returnType, string handlerInterface, (string argType, string argName)[] arguments)[]
     {
         ("AnimatorIK", "OnAnimatorIK", "int", null, new []{ ("int", "layerIndex") }),
         ("AnimatorMove", "OnAnimatorMove", "AsyncUnit", null, empty),
@@ -123,7 +123,7 @@ using UnityEngine.EventSystems;
 
 namespace ZeepSDK.External.Cysharp.Threading.Tasks.Triggers
 {
-<# foreach(var t in triggers) { #>
+<# foreach((string triggerName, string methodName, string returnType, string handlerInterface, (string argType, string argName)[] arguments) t in triggers) { #>
 #region <#= t.triggerName #>
 <# if(IsUguiSystem(t.handlerInterface)) { #>
 #if !UNITY_2019_1_OR_NEWER || UNITASK_UGUI_SUPPORT

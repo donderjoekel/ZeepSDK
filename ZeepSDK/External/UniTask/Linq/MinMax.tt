@@ -5,7 +5,7 @@
 <#@ import namespace="System.Collections.Generic" #>
 <#@ output extension=".cs" #>
 <#
-    var types = new[]
+    Type[] types = new[]
     {
         typeof(int),
         typeof(long),
@@ -30,10 +30,10 @@ using ZeepSDK.External.Cysharp.Threading.Tasks.Internal;
 
 namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 {
-<# foreach(var (minMax, op) in new[]{("Min",">"), ("Max", "<")}) { #>
+<# foreach((string minMax, string op) in new[]{("Min",">"), ("Max", "<")}) { #>
     public static partial class UniTaskAsyncEnumerable
     {
-<# foreach(var t in types) { #>
+<# foreach(Type t in types) { #>
         public static UniTask<<#= TypeName(t) #>> <#= minMax #>Async(this IUniTaskAsyncEnumerable<<#= TypeName(t) #>> source, CancellationToken cancellationToken = default)
         {
             Error.ThrowArgumentNullException(source, nameof(source));
@@ -70,7 +70,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
     internal static partial class <#= minMax #>
     {
-<# foreach(var t in types) { #>
+<# foreach(Type t in types) { #>
         public static async UniTask<<#= TypeName(t) #>> <#= minMax #>Async(IUniTaskAsyncEnumerable<<#= TypeName(t) #>> source, CancellationToken cancellationToken)
         {
             <#= TypeName(t) #> value = default;

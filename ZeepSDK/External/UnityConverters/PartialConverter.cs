@@ -134,7 +134,7 @@ namespace ZeepSDK.External.Newtonsoft.Json.UnityConverters
 
             writer.WriteStartObject();
 
-            var typed = (T)value;
+            T typed = (T)value;
             WriteJsonProperties(writer, typed, serializer);
 
             writer.WriteEndObject();

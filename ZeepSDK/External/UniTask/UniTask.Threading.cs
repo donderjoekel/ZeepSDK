@@ -114,7 +114,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             {
                 get
                 {
-                    var currentThreadId = System.Threading.Thread.CurrentThread.ManagedThreadId;
+                    int currentThreadId = System.Threading.Thread.CurrentThread.ManagedThreadId;
                     if (PlayerLoopHelper.MainThreadId == currentThreadId)
                     {
                         return true; // run immediate.
@@ -214,7 +214,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void Callback(object state)
             {
-                var continuation = (Action)state;
+                Action continuation = (Action)state;
                 continuation();
             }
         }
@@ -285,7 +285,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void Callback(object state)
             {
-                var continuation = (Action)state;
+                Action continuation = (Action)state;
                 continuation();
             }
         }
@@ -331,7 +331,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void Callback(object state)
             {
-                var continuation = (Action)state;
+                Action continuation = (Action)state;
                 continuation();
             }
         }
@@ -378,7 +378,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 {
                     if (!dontPostWhenSameContext) return false;
 
-                    var current = SynchronizationContext.Current;
+                    SynchronizationContext current = SynchronizationContext.Current;
                     if (current == synchronizationContext)
                     {
                         return true;
@@ -404,7 +404,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void Callback(object state)
             {
-                var continuation = (Action)state;
+                Action continuation = (Action)state;
                 continuation();
             }
         }

@@ -54,7 +54,7 @@ namespace ZeepSDK.External.Newtonsoft.Json.UnityConverters.Scripting
             }
             else
             {
-                var layerMask = (LayerMask)value;
+                LayerMask layerMask = (LayerMask)value;
                 writer.WriteValue(layerMask.value);
             }
         }

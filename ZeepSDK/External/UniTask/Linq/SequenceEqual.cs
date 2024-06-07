@@ -26,10 +26,10 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
     {
         internal static async UniTask<bool> SequenceEqualAsync<TSource>(IUniTaskAsyncEnumerable<TSource> first, IUniTaskAsyncEnumerable<TSource> second, IEqualityComparer<TSource> comparer, CancellationToken cancellationToken)
         {
-            var e1 = first.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e1 = first.GetAsyncEnumerator(cancellationToken);
             try
             {
-                var e2 = second.GetAsyncEnumerator(cancellationToken);
+                IUniTaskAsyncEnumerator<TSource> e2 = second.GetAsyncEnumerator(cancellationToken);
                 try
                 {
                     while (true)

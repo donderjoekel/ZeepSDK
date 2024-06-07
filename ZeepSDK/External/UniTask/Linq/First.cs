@@ -73,7 +73,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
     {
         public static async UniTask<TSource> FirstAsync<TSource>(IUniTaskAsyncEnumerable<TSource> source, CancellationToken cancellationToken, bool defaultIfEmpty)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 if (await e.MoveNextAsync())
@@ -103,12 +103,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         public static async UniTask<TSource> FirstAsync<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, Boolean> predicate, CancellationToken cancellationToken, bool defaultIfEmpty)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
+                    TSource v = e.Current;
                     if (predicate(v))
                     {
                         return v;
@@ -135,12 +135,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         public static async UniTask<TSource> FirstAwaitAsync<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTask<Boolean>> predicate, CancellationToken cancellationToken, bool defaultIfEmpty)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
+                    TSource v = e.Current;
                     if (await predicate(v))
                     {
                         return v;
@@ -167,12 +167,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         public static async UniTask<TSource> FirstAwaitWithCancellationAsync<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, UniTask<Boolean>> predicate, CancellationToken cancellationToken, bool defaultIfEmpty)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
+                    TSource v = e.Current;
                     if (await predicate(v, cancellationToken))
                     {
                         return v;

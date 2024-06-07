@@ -222,7 +222,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             }
             else
             {
-                var result = await func();
+                T result = await func();
                 cancellationToken.ThrowIfCancellationRequested();
                 return result;
             }
@@ -279,7 +279,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             }
             else
             {
-                var result = await func(state);
+                T result = await func(state);
                 cancellationToken.ThrowIfCancellationRequested();
                 return result;
             }

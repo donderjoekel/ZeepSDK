@@ -319,7 +319,7 @@ namespace ZeepSDK.External.FluentResults
 
         public TResult WithSuccesses(IEnumerable<ISuccess> successes)
         {
-            foreach (var success in successes)
+            foreach (ISuccess success in successes)
             {
                 WithSuccess(success);
             }
@@ -329,7 +329,7 @@ namespace ZeepSDK.External.FluentResults
 
         public override string ToString()
         {
-            var reasonsString = Reasons.Any()
+            string reasonsString = Reasons.Any()
                                     ? $", Reasons='{ReasonFormat.ReasonsToString(Reasons)}'"
                                     : string.Empty;
 

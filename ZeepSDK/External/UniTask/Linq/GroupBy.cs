@@ -280,7 +280,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             {
                 try
                 {
-                    var lookup = await source.ToLookupAsync(keySelector, elementSelector, comparer, cancellationToken);
+                    ILookup<TKey, TElement> lookup = await source.ToLookupAsync(keySelector, elementSelector, comparer, cancellationToken);
                     groupEnumerator = lookup.GetEnumerator();
                 }
                 catch (Exception ex)
@@ -391,7 +391,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             {
                 try
                 {
-                    var lookup = await source.ToLookupAsync(keySelector, elementSelector, comparer, cancellationToken);
+                    ILookup<TKey, TElement> lookup = await source.ToLookupAsync(keySelector, elementSelector, comparer, cancellationToken);
                     groupEnumerator = lookup.GetEnumerator();
                 }
                 catch (Exception ex)
@@ -408,7 +408,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
                 {
                     if (groupEnumerator.MoveNext())
                     {
-                        var current = groupEnumerator.Current;
+                        IGrouping<TKey, TElement> current = groupEnumerator.Current;
                         Current = resultSelector(current.Key, current);
                         completionSource.TrySetResult(true);
                     }
@@ -499,7 +499,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             {
                 try
                 {
-                    var lookup = await source.ToLookupAwaitAsync(keySelector, elementSelector, comparer, cancellationToken);
+                    ILookup<TKey, TElement> lookup = await source.ToLookupAwaitAsync(keySelector, elementSelector, comparer, cancellationToken);
                     groupEnumerator = lookup.GetEnumerator();
                 }
                 catch (Exception ex)
@@ -613,7 +613,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             {
                 try
                 {
-                    var lookup = await source.ToLookupAwaitAsync(keySelector, elementSelector, comparer, cancellationToken);
+                    ILookup<TKey, TElement> lookup = await source.ToLookupAwaitAsync(keySelector, elementSelector, comparer, cancellationToken);
                     groupEnumerator = lookup.GetEnumerator();
                 }
                 catch (Exception ex)
@@ -630,7 +630,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
                 {
                     if (groupEnumerator.MoveNext())
                     {
-                        var current = groupEnumerator.Current;
+                        IGrouping<TKey, TElement> current = groupEnumerator.Current;
 
                         awaiter = resultSelector(current.Key, current).GetAwaiter();
                         if (awaiter.IsCompleted)
@@ -657,9 +657,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void ResultSelectCore(object state)
             {
-                var self = (_GroupByAwait)state;
+                _GroupByAwait self = (_GroupByAwait)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out TResult result))
                 {
                     self.Current = result;
                     self.completionSource.TrySetResult(true);
@@ -741,7 +741,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             {
                 try
                 {
-                    var lookup = await source.ToLookupAwaitWithCancellationAsync(keySelector, elementSelector, comparer, cancellationToken);
+                    ILookup<TKey, TElement> lookup = await source.ToLookupAwaitWithCancellationAsync(keySelector, elementSelector, comparer, cancellationToken);
                     groupEnumerator = lookup.GetEnumerator();
                 }
                 catch (Exception ex)
@@ -855,7 +855,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             {
                 try
                 {
-                    var lookup = await source.ToLookupAwaitWithCancellationAsync(keySelector, elementSelector, comparer, cancellationToken);
+                    ILookup<TKey, TElement> lookup = await source.ToLookupAwaitWithCancellationAsync(keySelector, elementSelector, comparer, cancellationToken);
                     groupEnumerator = lookup.GetEnumerator();
                 }
                 catch (Exception ex)
@@ -872,7 +872,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
                 {
                     if (groupEnumerator.MoveNext())
                     {
-                        var current = groupEnumerator.Current;
+                        IGrouping<TKey, TElement> current = groupEnumerator.Current;
 
                         awaiter = resultSelector(current.Key, current, cancellationToken).GetAwaiter();
                         if (awaiter.IsCompleted)
@@ -899,9 +899,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void ResultSelectCore(object state)
             {
-                var self = (_GroupByAwaitWithCancellation)state;
+                _GroupByAwaitWithCancellation self = (_GroupByAwaitWithCancellation)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out TResult result))
                 {
                     self.Current = result;
                     self.completionSource.TrySetResult(true);

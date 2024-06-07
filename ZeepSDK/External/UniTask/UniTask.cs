@@ -63,7 +63,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         /// </summary>
         public UniTask<bool> SuppressCancellationThrow()
         {
-            var status = Status;
+            UniTaskStatus status = Status;
             if (status == UniTaskStatus.Succeeded) return CompletedTasks.False;
             if (status == UniTaskStatus.Canceled) return CompletedTasks.True;
             return new UniTask<bool>(new IsCanceledSource(source), token);
@@ -112,7 +112,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         {
             if (this.source == null) return CompletedTasks.AsyncUnit;
 
-            var status = this.source.GetStatus(this.token);
+            UniTaskStatus status = this.source.GetStatus(this.token);
             if (status.IsCompletedSuccessfully())
             {
                 this.source.GetResult(this.token);
@@ -424,7 +424,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         {
             if (this.source == null) return UniTask.CompletedTask;
 
-            var status = this.source.GetStatus(this.token);
+            UniTaskStatus status = this.source.GetStatus(this.token);
             if (status.IsCompletedSuccessfully())
             {
                 this.source.GetResult(this.token);
@@ -497,7 +497,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return (true, default);
                 }
 
-                var result = source.GetResult(token);
+                T result = source.GetResult(token);
                 return (false, result);
             }
 
@@ -643,7 +643,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public T GetResult()
             {
-                var s = task.source;
+                IUniTaskSource<T> s = task.source;
                 if (s == null)
                 {
                     return task.result;
@@ -658,7 +658,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public void OnCompleted(Action continuation)
             {
-                var s = task.source;
+                IUniTaskSource<T> s = task.source;
                 if (s == null)
                 {
                     continuation();
@@ -673,7 +673,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public void UnsafeOnCompleted(Action continuation)
             {
-                var s = task.source;
+                IUniTaskSource<T> s = task.source;
                 if (s == null)
                 {
                     continuation();
@@ -691,7 +691,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public void SourceOnCompleted(Action<object> continuation, object state)
             {
-                var s = task.source;
+                IUniTaskSource<T> s = task.source;
                 if (s == null)
                 {
                     continuation(state);

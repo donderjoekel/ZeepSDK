@@ -49,7 +49,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Triggers
             where T : Component
         {
 #if UNITY_2019_2_OR_NEWER
-            if (!gameObject.TryGetComponent<T>(out var component))
+            if (!gameObject.TryGetComponent<T>(out T component))
             {
                 component = gameObject.AddComponent<T>();
             }

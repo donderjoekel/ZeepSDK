@@ -52,7 +52,7 @@ namespace ZeepSDK.External.Newtonsoft.Json.UnityConverters.Math
         // Reusing the same strings here instead of creating new ones. Tiny bit lower memory footprint
         private static Dictionary<string, int> GetNamesToIndex(string[] names)
         {
-            var dict = new Dictionary<string, int>();
+            Dictionary<string, int> dict = new Dictionary<string, int>();
             for (int i = 0; i < names.Length; i++)
             {
                 dict[names[i]] = i;
@@ -62,7 +62,7 @@ namespace ZeepSDK.External.Newtonsoft.Json.UnityConverters.Math
 
         protected override void ReadValue(ref Matrix4x4 value, string name, JsonReader reader, JsonSerializer serializer)
         {
-            if (_namesToIndex.TryGetValue(name, out var index))
+            if (_namesToIndex.TryGetValue(name, out int index))
             {
                 value[index] = reader.ReadAsFloat() ?? 0;
             }

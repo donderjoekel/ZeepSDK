@@ -16,7 +16,7 @@ namespace ZeepSDK.External.FluentResults
                 return string.Empty;
             }
 
-            var valueText = value.ToString();
+            string valueText = value.ToString();
 
             if (valueText == string.Empty)
             {

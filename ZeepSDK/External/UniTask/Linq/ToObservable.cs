@@ -25,7 +25,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         public IDisposable Subscribe(IObserver<T> observer)
         {
-            var ctd = new CancellationTokenDisposable();
+            CancellationTokenDisposable ctd = new CancellationTokenDisposable();
 
             RunAsync(source, observer, ctd.Token).Forget();
 
@@ -37,7 +37,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             // cancellationToken.IsCancellationRequested is called when Rx's Disposed.
             // when disposed, finish silently.
 
-            var e = src.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<T> e = src.GetAsyncEnumerator(cancellationToken);
             try
             {
                 bool hasNext;

@@ -5,7 +5,7 @@
 <#@ import namespace="System.Collections.Generic" #>
 <#@ output extension=".cs" #>
 <#
-    var types = new[]
+    (Type, string)[] types = new[]
     {
         (typeof(int), "double"),
         (typeof(long), "double"),
@@ -34,7 +34,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 {
     public static partial class UniTaskAsyncEnumerable
     {
-<# foreach(var (t, ret) in types) { #>
+<# foreach((Type t, string ret) in types) { #>
         public static UniTask<<#= ret #>> AverageAsync(this IUniTaskAsyncEnumerable<<#= TypeName(t) #>> source, CancellationToken cancellationToken = default)
         {
             Error.ThrowArgumentNullException(source, nameof(source));
@@ -71,7 +71,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
     internal static class Average
     {
-<# foreach(var (t, ret) in types) { #>
+<# foreach((Type t, string ret) in types) { #>
         public static async UniTask<<#= ret #>> AverageAsync(IUniTaskAsyncEnumerable<<#= TypeName(t) #>> source, CancellationToken cancellationToken)
         {
             long count = 0;

@@ -19,15 +19,15 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
     {
         internal static async UniTask<TSource[]> ToArrayAsync<TSource>(IUniTaskAsyncEnumerable<TSource> source, CancellationToken cancellationToken)
         {
-            var pool = ArrayPool<TSource>.Shared;
-            var array = pool.Rent(16);
+            ArrayPool<TSource> pool = ArrayPool<TSource>.Shared;
+            TSource[] array = pool.Rent(16);
 
             TSource[] result = default;
             IUniTaskAsyncEnumerator<TSource> e = default;
             try
             {
                 e = source.GetAsyncEnumerator(cancellationToken);
-                var i = 0;
+                int i = 0;
                 while (await e.MoveNextAsync())
                 {
                     ArrayPoolUtil.EnsureCapacity(ref array, i, pool);

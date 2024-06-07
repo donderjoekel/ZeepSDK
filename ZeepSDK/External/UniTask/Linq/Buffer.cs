@@ -88,7 +88,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
                 {
                     if (buffer != null && buffer.Count > 0)
                     {
-                        var ret = buffer;
+                        List<TSource> ret = buffer;
                         buffer = null;
                         Current = ret;
                         completionSource.TrySetResult(true);
@@ -130,9 +130,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void MoveNextCore(object state)
             {
-                var self = (_Buffer)state;
+                _Buffer self = (_Buffer)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out bool result))
                 {
                     if (result)
                     {
@@ -286,9 +286,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void MoveNextCore(object state)
             {
-                var self = (_BufferSkip)state;
+                _BufferSkip self = (_BufferSkip)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out bool result))
                 {
                     if (result)
                     {
@@ -297,8 +297,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
                             self.buffers.Enqueue(new List<TSource>(self.count));
                         }
 
-                        var item = self.enumerator.Current;
-                        foreach (var buffer in self.buffers)
+                        TSource item = self.enumerator.Current;
+                        foreach (List<TSource> buffer in self.buffers)
                         {
                             buffer.Add(item);
                         }

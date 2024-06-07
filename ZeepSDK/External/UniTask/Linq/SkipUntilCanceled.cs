@@ -111,9 +111,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void MoveNextCore(object state)
             {
-                var self = (_SkipUntilCanceled)state;
+                _SkipUntilCanceled self = (_SkipUntilCanceled)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out bool result))
                 {
                     if (result)
                     {
@@ -133,7 +133,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void OnCanceled1(object state)
             {
-                var self = (_SkipUntilCanceled)state;
+                _SkipUntilCanceled self = (_SkipUntilCanceled)state;
                 if (self.isCanceled == 0)
                 {
                     if (Interlocked.Increment(ref self.isCanceled) == 1)
@@ -146,7 +146,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void OnCanceled2(object state)
             {
-                var self = (_SkipUntilCanceled)state;
+                _SkipUntilCanceled self = (_SkipUntilCanceled)state;
                 if (self.isCanceled == 0)
                 {
                     if (Interlocked.Increment(ref self.isCanceled) == 1)

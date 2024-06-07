@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using Object = UnityEngine.Object;
 
 namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 {
@@ -10,8 +11,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         public static IUniTaskAsyncEnumerable<TProperty> EveryValueChanged<TTarget, TProperty>(TTarget target, Func<TTarget, TProperty> propertySelector, PlayerLoopTiming monitorTiming = PlayerLoopTiming.Update, IEqualityComparer<TProperty> equalityComparer = null)
             where TTarget : class
         {
-            var unityObject = target as UnityEngine.Object;
-            var isUnityObject = target is UnityEngine.Object; // don't use (unityObject == null)
+            Object unityObject = target as UnityEngine.Object;
+            bool isUnityObject = target is UnityEngine.Object; // don't use (unityObject == null)
 
             if (isUnityObject)
             {
@@ -184,7 +185,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
                 if (first)
                 {
                     first = false;
-                    if (!target.TryGetTarget(out var t))
+                    if (!target.TryGetTarget(out TTarget t))
                     {
                         return CompletedTasks.False;
                     }
@@ -208,7 +209,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             public bool MoveNext()
             {
-                if (disposed || cancellationToken.IsCancellationRequested || !target.TryGetTarget(out var t))
+                if (disposed || cancellationToken.IsCancellationRequested || !target.TryGetTarget(out TTarget t))
                 {
                     completionSource.TrySetResult(false);
                     DisposeAsync().Forget();

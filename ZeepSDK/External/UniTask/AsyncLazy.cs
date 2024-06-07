@@ -31,7 +31,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             this.syncLock = null;
             this.initialized = true;
 
-            var awaiter = task.GetAwaiter();
+            UniTask.Awaiter awaiter = task.GetAwaiter();
             if (awaiter.IsCompleted)
             {
                 SetCompletionSource(awaiter);
@@ -71,11 +71,11 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             {
                 if (!Volatile.Read(ref initialized))
                 {
-                    var f = Interlocked.Exchange(ref taskFactory, null);
+                    Func<UniTask> f = Interlocked.Exchange(ref taskFactory, null);
                     if (f != null)
                     {
-                        var task = f();
-                        var awaiter = task.GetAwaiter();
+                        UniTask task = f();
+                        UniTask.Awaiter awaiter = task.GetAwaiter();
                         if (awaiter.IsCompleted)
                         {
                             SetCompletionSource(awaiter);
@@ -107,7 +107,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         static void SetCompletionSource(object state)
         {
-            var self = (AsyncLazy)state;
+            AsyncLazy self = (AsyncLazy)state;
             try
             {
                 self.awaiter.GetResult();
@@ -150,7 +150,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             this.syncLock = null;
             this.initialized = true;
 
-            var awaiter = task.GetAwaiter();
+            UniTask<T>.Awaiter awaiter = task.GetAwaiter();
             if (awaiter.IsCompleted)
             {
                 SetCompletionSource(awaiter);
@@ -190,11 +190,11 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             {
                 if (!Volatile.Read(ref initialized))
                 {
-                    var f = Interlocked.Exchange(ref taskFactory, null);
+                    Func<UniTask<T>> f = Interlocked.Exchange(ref taskFactory, null);
                     if (f != null)
                     {
-                        var task = f();
-                        var awaiter = task.GetAwaiter();
+                        UniTask<T> task = f();
+                        UniTask<T>.Awaiter awaiter = task.GetAwaiter();
                         if (awaiter.IsCompleted)
                         {
                             SetCompletionSource(awaiter);
@@ -215,7 +215,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         {
             try
             {
-                var result = awaiter.GetResult();
+                T result = awaiter.GetResult();
                 completionSource.TrySetResult(result);
             }
             catch (Exception ex)
@@ -226,10 +226,10 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         static void SetCompletionSource(object state)
         {
-            var self = (AsyncLazy<T>)state;
+            AsyncLazy<T> self = (AsyncLazy<T>)state;
             try
             {
-                var result = self.awaiter.GetResult();
+                T result = self.awaiter.GetResult();
                 self.completionSource.TrySetResult(result);
             }
             catch (Exception ex)

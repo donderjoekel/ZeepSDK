@@ -11,10 +11,10 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
     {
         public static UniTask<T> ToUniTask<T>(this IObservable<T> source, bool useFirstValue = false, CancellationToken cancellationToken = default)
         {
-            var promise = new UniTaskCompletionSource<T>();
-            var disposable = new SingleAssignmentDisposable();
+            UniTaskCompletionSource<T> promise = new UniTaskCompletionSource<T>();
+            SingleAssignmentDisposable disposable = new SingleAssignmentDisposable();
 
-            var observer = useFirstValue
+            IObserver<T> observer = useFirstValue
                 ? (IObserver<T>)new FirstValueToUniTaskObserver<T>(promise, disposable, cancellationToken)
                 : (IObserver<T>)new ToUniTaskObserver<T>(promise, disposable, cancellationToken);
 
@@ -44,7 +44,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 }
             }
 
-            var subject = new AsyncSubject<T>();
+            AsyncSubject<T> subject = new AsyncSubject<T>();
             Fire(subject, task).Forget();
             return subject;
         }
@@ -67,7 +67,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 }
             }
 
-            var subject = new AsyncSubject<AsyncUnit>();
+            AsyncSubject<AsyncUnit> subject = new AsyncSubject<AsyncUnit>();
             Fire(subject, task).Forget();
             return subject;
         }
@@ -131,7 +131,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void OnCanceled(object state)
             {
-                var self = (ToUniTaskObserver<T>)state;
+                ToUniTaskObserver<T> self = (ToUniTaskObserver<T>)state;
                 self.disposable.Dispose();
                 self.promise.TrySetCanceled(self.cancellationToken);
             }
@@ -201,7 +201,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void OnCanceled(object state)
             {
-                var self = (FirstValueToUniTaskObserver<T>)state;
+                FirstValueToUniTaskObserver<T> self = (FirstValueToUniTaskObserver<T>)state;
                 self.disposable.Dispose();
                 self.promise.TrySetCanceled(self.cancellationToken);
             }
@@ -319,7 +319,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
             }
             set
             {
-                var old = default(IDisposable);
+                IDisposable old = default(IDisposable);
                 bool alreadyDisposed;
                 lock (gate)
                 {
@@ -456,23 +456,23 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
         {
             if (observer == null) throw new ArgumentNullException("observer");
 
-            var ex = default(Exception);
-            var v = default(T);
-            var hv = false;
+            Exception ex = default(Exception);
+            T v = default(T);
+            bool hv = false;
 
             lock (observerLock)
             {
                 ThrowIfDisposed();
                 if (!isStopped)
                 {
-                    var listObserver = outObserver as ListObserver<T>;
+                    ListObserver<T> listObserver = outObserver as ListObserver<T>;
                     if (listObserver != null)
                     {
                         outObserver = listObserver.Add(observer);
                     }
                     else
                     {
-                        var current = outObserver;
+                        IObserver<T> current = outObserver;
                         if (current is EmptyObserver<T>)
                         {
                             outObserver = observer;
@@ -544,7 +544,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
                     {
                         lock (parent.observerLock)
                         {
-                            var listObserver = parent.outObserver as ListObserver<T>;
+                            ListObserver<T> listObserver = parent.outObserver as ListObserver<T>;
                             if (listObserver != null)
                             {
                                 parent.outObserver = listObserver.Remove(unsubscribeTarget);
@@ -574,7 +574,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
         public void OnCompleted()
         {
-            var targetObservers = _observers.Data;
+            IObserver<T>[] targetObservers = _observers.Data;
             for (int i = 0; i < targetObservers.Length; i++)
             {
                 targetObservers[i].OnCompleted();
@@ -583,7 +583,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
         public void OnError(Exception error)
         {
-            var targetObservers = _observers.Data;
+            IObserver<T>[] targetObservers = _observers.Data;
             for (int i = 0; i < targetObservers.Length; i++)
             {
                 targetObservers[i].OnError(error);
@@ -592,7 +592,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
         public void OnNext(T value)
         {
-            var targetObservers = _observers.Data;
+            IObserver<T>[] targetObservers = _observers.Data;
             for (int i = 0; i < targetObservers.Length; i++)
             {
                 targetObservers[i].OnNext(value);
@@ -606,7 +606,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
         internal IObserver<T> Remove(IObserver<T> observer)
         {
-            var i = Array.IndexOf(_observers.Data, observer);
+            int i = Array.IndexOf(_observers.Data, observer);
             if (i < 0)
                 return this;
 
@@ -714,7 +714,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
         public ImmutableList<T> Add(T value)
         {
-            var newData = new T[data.Length + 1];
+            T[] newData = new T[data.Length + 1];
             Array.Copy(data, newData, data.Length);
             newData[data.Length] = value;
             return new ImmutableList<T>(newData);
@@ -722,13 +722,13 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
         public ImmutableList<T> Remove(T value)
         {
-            var i = IndexOf(value);
+            int i = IndexOf(value);
             if (i < 0) return this;
 
-            var length = data.Length;
+            int length = data.Length;
             if (length == 1) return Empty;
 
-            var newData = new T[length - 1];
+            T[] newData = new T[length - 1];
 
             Array.Copy(data, 0, newData, 0, i);
             Array.Copy(data, i + 1, newData, i, length - i - 1);
@@ -738,7 +738,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
         public int IndexOf(T value)
         {
-            for (var i = 0; i < data.Length; ++i)
+            for (int i = 0; i < data.Length; ++i)
             {
                 // ImmutableList only use for IObserver(no worry for boxed)
                 if (object.Equals(data[i], value)) return i;

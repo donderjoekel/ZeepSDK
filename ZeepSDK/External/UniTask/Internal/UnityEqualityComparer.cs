@@ -46,7 +46,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
             static Cache()
             {
-                var comparer = GetDefaultHelper(typeof(T));
+                object comparer = GetDefaultHelper(typeof(T));
                 if (comparer == null)
                 {
                     Comparer = EqualityComparer<T>.Default;
@@ -65,7 +65,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
         static object GetDefaultHelper(Type type)
         {
-            var t = type.TypeHandle;
+            RuntimeTypeHandle t = type.TypeHandle;
 
             if (t.Equals(vector2Type)) return (object)UnityEqualityComparer.Vector2;
             if (t.Equals(vector3Type)) return (object)UnityEqualityComparer.Vector3;

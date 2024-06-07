@@ -402,7 +402,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         static void CancellationCallback(object state)
         {
-            var self = (AsyncUnityEventHandler)state;
+            AsyncUnityEventHandler self = (AsyncUnityEventHandler)state;
             self.Dispose();
         }
 
@@ -512,7 +512,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         static void CancellationCallback(object state)
         {
-            var self = (AsyncUnityEventHandler<T>)state;
+            AsyncUnityEventHandler<T> self = (AsyncUnityEventHandler<T>)state;
             self.Dispose();
         }
 
@@ -687,7 +687,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void OnCanceled1(object state)
             {
-                var self = (UnityEventHandlerAsyncEnumerator)state;
+                UnityEventHandlerAsyncEnumerator self = (UnityEventHandlerAsyncEnumerator)state;
                 try
                 {
                     self.completionSource.TrySetCanceled(self.cancellationToken1);
@@ -700,7 +700,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void OnCanceled2(object state)
             {
-                var self = (UnityEventHandlerAsyncEnumerator)state;
+                UnityEventHandlerAsyncEnumerator self = (UnityEventHandlerAsyncEnumerator)state;
                 try
                 {
                     self.completionSource.TrySetCanceled(self.cancellationToken2);
@@ -808,7 +808,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void OnCanceled1(object state)
             {
-                var self = (UnityEventHandlerAsyncEnumerator)state;
+                UnityEventHandlerAsyncEnumerator self = (UnityEventHandlerAsyncEnumerator)state;
                 try
                 {
                     self.completionSource.TrySetCanceled(self.cancellationToken1);
@@ -821,7 +821,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void OnCanceled2(object state)
             {
-                var self = (UnityEventHandlerAsyncEnumerator)state;
+                UnityEventHandlerAsyncEnumerator self = (UnityEventHandlerAsyncEnumerator)state;
                 try
                 {
                     self.completionSource.TrySetCanceled(self.cancellationToken2);

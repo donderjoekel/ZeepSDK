@@ -325,7 +325,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int32 sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<int> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -353,7 +353,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int32 sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -381,7 +381,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int32 sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -409,7 +409,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int32 sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -437,7 +437,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int64 sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<long> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -465,7 +465,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int64 sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -493,7 +493,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int64 sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -521,7 +521,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int64 sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -549,7 +549,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Single sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<float> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -577,7 +577,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Single sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -605,7 +605,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Single sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -633,7 +633,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Single sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -661,7 +661,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Double sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<double> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -689,7 +689,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Double sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -717,7 +717,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Double sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -745,7 +745,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Double sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -773,7 +773,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Decimal sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<decimal> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -801,7 +801,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Decimal sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -829,7 +829,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Decimal sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -857,7 +857,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Decimal sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -885,12 +885,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int32? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<int?> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
+                    int? v = e.Current;
                     if (v.HasValue)
                     {
                         checked    
@@ -917,12 +917,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int32? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = selector(e.Current);
+                    int? v = selector(e.Current);
                     if (v.HasValue)
                     {
                         checked    
@@ -949,12 +949,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int32? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = await selector(e.Current);
+                    int? v = await selector(e.Current);
                     if (v.HasValue)
                     {
                         checked    
@@ -981,12 +981,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int32? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = await selector(e.Current, cancellationToken);
+                    int? v = await selector(e.Current, cancellationToken);
                     if (v.HasValue)
                     {
                         checked    
@@ -1013,12 +1013,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int64? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<long?> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
+                    long? v = e.Current;
                     if (v.HasValue)
                     {
                         checked    
@@ -1045,12 +1045,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int64? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = selector(e.Current);
+                    long? v = selector(e.Current);
                     if (v.HasValue)
                     {
                         checked    
@@ -1077,12 +1077,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int64? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = await selector(e.Current);
+                    long? v = await selector(e.Current);
                     if (v.HasValue)
                     {
                         checked    
@@ -1109,12 +1109,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Int64? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = await selector(e.Current, cancellationToken);
+                    long? v = await selector(e.Current, cancellationToken);
                     if (v.HasValue)
                     {
                         checked    
@@ -1141,12 +1141,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Single? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<float?> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
+                    float? v = e.Current;
                     if (v.HasValue)
                     {
                         checked    
@@ -1173,12 +1173,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Single? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = selector(e.Current);
+                    float? v = selector(e.Current);
                     if (v.HasValue)
                     {
                         checked    
@@ -1205,12 +1205,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Single? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = await selector(e.Current);
+                    float? v = await selector(e.Current);
                     if (v.HasValue)
                     {
                         checked    
@@ -1237,12 +1237,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Single? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = await selector(e.Current, cancellationToken);
+                    float? v = await selector(e.Current, cancellationToken);
                     if (v.HasValue)
                     {
                         checked    
@@ -1269,12 +1269,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Double? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<double?> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
+                    double? v = e.Current;
                     if (v.HasValue)
                     {
                         checked    
@@ -1301,12 +1301,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Double? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = selector(e.Current);
+                    double? v = selector(e.Current);
                     if (v.HasValue)
                     {
                         checked    
@@ -1333,12 +1333,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Double? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = await selector(e.Current);
+                    double? v = await selector(e.Current);
                     if (v.HasValue)
                     {
                         checked    
@@ -1365,12 +1365,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Double? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = await selector(e.Current, cancellationToken);
+                    double? v = await selector(e.Current, cancellationToken);
                     if (v.HasValue)
                     {
                         checked    
@@ -1397,12 +1397,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Decimal? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<decimal?> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
+                    decimal? v = e.Current;
                     if (v.HasValue)
                     {
                         checked    
@@ -1429,12 +1429,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Decimal? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = selector(e.Current);
+                    decimal? v = selector(e.Current);
                     if (v.HasValue)
                     {
                         checked    
@@ -1461,12 +1461,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Decimal? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = await selector(e.Current);
+                    decimal? v = await selector(e.Current);
                     if (v.HasValue)
                     {
                         checked    
@@ -1493,12 +1493,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             long count = 0;
             Decimal? sum = 0;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = await selector(e.Current, cancellationToken);
+                    decimal? v = await selector(e.Current, cancellationToken);
                     if (v.HasValue)
                     {
                         checked    

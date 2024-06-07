@@ -20,10 +20,10 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         {
             try
             {
-                var value = Environment.GetEnvironmentVariable("UNITASK_MAX_POOLSIZE");
+                string value = Environment.GetEnvironmentVariable("UNITASK_MAX_POOLSIZE");
                 if (value != null)
                 {
-                    if (int.TryParse(value, out var size))
+                    if (int.TryParse(value, out int size))
                     {
                         MaxPoolSize = size;
                         return;
@@ -44,7 +44,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         {
             lock (sizes)
             {
-                foreach (var item in sizes)
+                foreach (KeyValuePair<Type, Func<int>> item in sizes)
                 {
                     yield return (item.Key, item.Value());
                 }
@@ -81,10 +81,10 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         {
             if (Interlocked.CompareExchange(ref gate, 1, 0) == 0)
             {
-                var v = root;
+                T v = root;
                 if (!(v is null))
                 {
-                    ref var nextNode = ref v.NextNode;
+                    ref T nextNode = ref v.NextNode;
                     root = nextNode;
                     nextNode = null;
                     size--;

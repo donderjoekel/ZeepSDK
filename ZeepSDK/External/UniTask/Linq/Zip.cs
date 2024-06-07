@@ -115,9 +115,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void FirstMoveNextCore(object state)
             {
-                var self = (_Zip)state;
+                _Zip self = (_Zip)state;
 
-                if (self.TryGetResult(self.firstAwaiter, out var result))
+                if (self.TryGetResult(self.firstAwaiter, out bool result))
                 {
                     if (result)
                     {
@@ -149,9 +149,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void SecondMoveNextCore(object state)
             {
-                var self = (_Zip)state;
+                _Zip self = (_Zip)state;
 
-                if (self.TryGetResult(self.secondAwaiter, out var result))
+                if (self.TryGetResult(self.secondAwaiter, out bool result))
                 {
                     if (result)
                     {
@@ -269,9 +269,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void FirstMoveNextCore(object state)
             {
-                var self = (_ZipAwait)state;
+                _ZipAwait self = (_ZipAwait)state;
 
-                if (self.TryGetResult(self.firstAwaiter, out var result))
+                if (self.TryGetResult(self.firstAwaiter, out bool result))
                 {
                     if (result)
                     {
@@ -303,9 +303,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void SecondMoveNextCore(object state)
             {
-                var self = (_ZipAwait)state;
+                _ZipAwait self = (_ZipAwait)state;
 
-                if (self.TryGetResult(self.secondAwaiter, out var result))
+                if (self.TryGetResult(self.secondAwaiter, out bool result))
                 {
                     if (result)
                     {
@@ -335,9 +335,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void ResultAwaitCore(object state)
             {
-                var self = (_ZipAwait)state;
+                _ZipAwait self = (_ZipAwait)state;
 
-                if (self.TryGetResult(self.resultAwaiter, out var result))
+                if (self.TryGetResult(self.resultAwaiter, out TResult result))
                 {
                     self.Current = result;
 
@@ -441,9 +441,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void FirstMoveNextCore(object state)
             {
-                var self = (_ZipAwaitWithCancellation)state;
+                _ZipAwaitWithCancellation self = (_ZipAwaitWithCancellation)state;
 
-                if (self.TryGetResult(self.firstAwaiter, out var result))
+                if (self.TryGetResult(self.firstAwaiter, out bool result))
                 {
                     if (result)
                     {
@@ -475,9 +475,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void SecondMoveNextCore(object state)
             {
-                var self = (_ZipAwaitWithCancellation)state;
+                _ZipAwaitWithCancellation self = (_ZipAwaitWithCancellation)state;
 
-                if (self.TryGetResult(self.secondAwaiter, out var result))
+                if (self.TryGetResult(self.secondAwaiter, out bool result))
                 {
                     if (result)
                     {
@@ -507,9 +507,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void ResultAwaitCore(object state)
             {
-                var self = (_ZipAwaitWithCancellation)state;
+                _ZipAwaitWithCancellation self = (_ZipAwaitWithCancellation)state;
 
-                if (self.TryGetResult(self.resultAwaiter, out var result))
+                if (self.TryGetResult(self.resultAwaiter, out TResult result))
                 {
                     self.Current = result;
 

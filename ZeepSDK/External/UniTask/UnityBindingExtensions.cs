@@ -24,9 +24,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         static async UniTaskVoid BindToCore(IUniTaskAsyncEnumerable<string> source, UnityEngine.UI.Text text, CancellationToken cancellationToken, bool rebindOnError)
         {
-            var repeat = false;
+            bool repeat = false;
             BIND_AGAIN:
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<string> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (true)
@@ -85,9 +85,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         static async UniTaskVoid BindToCore<T>(IUniTaskAsyncEnumerable<T> source, UnityEngine.UI.Text text, CancellationToken cancellationToken, bool rebindOnError)
         {
-            var repeat = false;
+            bool repeat = false;
             BIND_AGAIN:
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<T> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (true)
@@ -141,9 +141,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         static async UniTaskVoid BindToCore(IUniTaskAsyncEnumerable<bool> source, Selectable selectable, CancellationToken cancellationToken, bool rebindOnError)
         {
-            var repeat = false;
+            bool repeat = false;
             BIND_AGAIN:
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<bool> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (true)
@@ -200,9 +200,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         static async UniTaskVoid BindToCore<TSource, TObject>(IUniTaskAsyncEnumerable<TSource> source, TObject bindTarget, Action<TObject, TSource> bindAction, CancellationToken cancellationToken, bool rebindOnError)
         {
-            var repeat = false;
+            bool repeat = false;
             BIND_AGAIN:
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (true)

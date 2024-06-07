@@ -5,7 +5,7 @@
 <#@ import namespace="System.Collections.Generic" #>
 <#@ output extension=".cs" #>
 <#
-    var types = new[]
+    Type[] types = new[]
     {
         typeof(int),
         typeof(long),
@@ -32,7 +32,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 {
     public static partial class UniTaskAsyncEnumerable
     {
-<# foreach(var t in types) { #>
+<# foreach(Type t in types) { #>
         public static UniTask<<#= TypeName(t) #>> SumAsync(this IUniTaskAsyncEnumerable<<#= TypeName(t) #>> source, CancellationToken cancellationToken = default)
         {
             Error.ThrowArgumentNullException(source, nameof(source));
@@ -69,7 +69,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
     internal static class Sum
     {
-<# foreach(var t in types) { #>
+<# foreach(Type t in types) { #>
         public static async UniTask<<#= TypeName(t) #>> SumAsync(IUniTaskAsyncEnumerable<<#= TypeName(t) #>> source, CancellationToken cancellationToken)
         {
             <#= TypeName(t) #> sum = default;

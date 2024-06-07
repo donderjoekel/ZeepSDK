@@ -17,7 +17,7 @@ namespace ZeepSDK.External.Newtonsoft.Json.UnityConverters.Math
 
         private static (string name, int rgb, int coefficient)[] GetMemberNames()
         {
-            var array = new (string name, int rgb, int coefficient)[ARRAY_SIZE];
+            (string name, int rgb, int coefficient)[] array = new (string name, int rgb, int coefficient)[ARRAY_SIZE];
 
             for (int i = 0; i < COEFFICIENT_COUNT; i++)
             {
@@ -40,7 +40,7 @@ namespace ZeepSDK.External.Newtonsoft.Json.UnityConverters.Math
         // Reusing the same strings here instead of creating new ones. Tiny bit lower memory footprint
         private static Dictionary<string, (int color, int coefficient)> GetNamesToIndexDictionary((string name, int rgb, int coefficient)[] indices)
         {
-            var dict = new Dictionary<string, (int color, int coefficient)>();
+            Dictionary<string, (int color, int coefficient)> dict = new Dictionary<string, (int color, int coefficient)>();
             for (int i = 0; i < indices.Length; i++)
             {
                 (string name, int rgb, int coefficient) = indices[i];
@@ -51,7 +51,7 @@ namespace ZeepSDK.External.Newtonsoft.Json.UnityConverters.Math
 
         protected override void ReadValue(ref SphericalHarmonicsL2 value, string name, JsonReader reader, JsonSerializer serializer)
         {
-            if (_nameToIndex.TryGetValue(name, out var index))
+            if (_nameToIndex.TryGetValue(name, out (int color, int coefficient) index))
             {
                 value[index.color, index.coefficient] = reader.ReadAsFloat() ?? 0f;
             }
@@ -59,7 +59,7 @@ namespace ZeepSDK.External.Newtonsoft.Json.UnityConverters.Math
 
         protected override void WriteJsonProperties(JsonWriter writer, SphericalHarmonicsL2 value, JsonSerializer serializer)
         {
-            foreach (var (name, rgb, coefficient) in _indices) 
+            foreach ((string name, int rgb, int coefficient) in _indices) 
             {
                 writer.WritePropertyName(name);
                 writer.WriteValue(value[rgb, coefficient]);

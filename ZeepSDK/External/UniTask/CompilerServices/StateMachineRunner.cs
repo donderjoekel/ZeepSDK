@@ -4,6 +4,7 @@ using ZeepSDK.External.Cysharp.Threading.Tasks.Internal;
 using System;
 using System.Linq;
 using System.Diagnostics;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 
 namespace ZeepSDK.External.Cysharp.Threading.Tasks.CompilerServices
@@ -43,7 +44,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.CompilerServices
         // Get AsyncStateMachine internal state to check IL2CPP bug
         public static int GetState(IAsyncStateMachine stateMachine)
         {
-            var info = stateMachine.GetType().GetFields(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+            FieldInfo info = stateMachine.GetType().GetFields(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
                 .First(x => x.Name.EndsWith("__state"));
             return (int)info.GetValue(stateMachine);
         }
@@ -72,7 +73,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.CompilerServices
 
         public static void SetStateMachine(ref TStateMachine stateMachine, ref IStateMachineRunner runnerFieldRef)
         {
-            if (!pool.TryPop(out var result))
+            if (!pool.TryPop(out AsyncUniTaskVoid<TStateMachine> result))
             {
                 result = new AsyncUniTaskVoid<TStateMachine>();
             }
@@ -148,7 +149,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.CompilerServices
 
         public static void SetStateMachine(ref TStateMachine stateMachine, ref IStateMachineRunnerPromise runnerPromiseFieldRef)
         {
-            if (!pool.TryPop(out var result))
+            if (!pool.TryPop(out AsyncUniTask<TStateMachine> result))
             {
                 result = new AsyncUniTask<TStateMachine>();
             }
@@ -271,7 +272,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.CompilerServices
 
         public static void SetStateMachine(ref TStateMachine stateMachine, ref IStateMachineRunnerPromise<T> runnerPromiseFieldRef)
         {
-            if (!pool.TryPop(out var result))
+            if (!pool.TryPop(out AsyncUniTask<TStateMachine, T> result))
             {
                 result = new AsyncUniTask<TStateMachine, T>();
             }

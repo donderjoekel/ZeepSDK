@@ -13,7 +13,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static CancellationToken ToCancellationToken(this UniTask task)
         {
-            var cts = new CancellationTokenSource();
+            CancellationTokenSource cts = new CancellationTokenSource();
             ToCancellationTokenCore(task, cts).Forget();
             return cts.Token;
         }
@@ -30,7 +30,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 return ToCancellationToken(task);
             }
 
-            var cts = CancellationTokenSource.CreateLinkedTokenSource(linkToken);
+            CancellationTokenSource cts = CancellationTokenSource.CreateLinkedTokenSource(linkToken);
             ToCancellationTokenCore(task, cts).Forget();
 
             return cts.Token;
@@ -67,13 +67,13 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 return (UniTask.FromCanceled(cancellationToken), default(CancellationTokenRegistration));
             }
 
-            var promise = new UniTaskCompletionSource();
+            UniTaskCompletionSource promise = new UniTaskCompletionSource();
             return (promise.Task, cancellationToken.RegisterWithoutCaptureExecutionContext(cancellationTokenCallback, promise));
         }
 
         static void Callback(object state)
         {
-            var promise = (UniTaskCompletionSource)state;
+            UniTaskCompletionSource promise = (UniTaskCompletionSource)state;
             promise.TrySetResult();
         }
 
@@ -84,7 +84,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static CancellationTokenRegistration RegisterWithoutCaptureExecutionContext(this CancellationToken cancellationToken, Action callback)
         {
-            var restoreFlow = false;
+            bool restoreFlow = false;
             if (!ExecutionContext.IsFlowSuppressed())
             {
                 ExecutionContext.SuppressFlow();
@@ -106,7 +106,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static CancellationTokenRegistration RegisterWithoutCaptureExecutionContext(this CancellationToken cancellationToken, Action<object> callback, object state)
         {
-            var restoreFlow = false;
+            bool restoreFlow = false;
             if (!ExecutionContext.IsFlowSuppressed())
             {
                 ExecutionContext.SuppressFlow();
@@ -133,7 +133,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         static void DisposeCallback(object state)
         {
-            var d = (IDisposable)state;
+            IDisposable d = (IDisposable)state;
             d.Dispose();
         }
     }

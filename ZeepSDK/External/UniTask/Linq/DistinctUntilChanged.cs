@@ -154,7 +154,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
                         case 1:
                             if (awaiter.GetResult())
                             {
-                                var v = enumerator.Current;
+                                TSource v = enumerator.Current;
                                 if (!comparer.Equals(Current, v))
                                 {
                                     Current = v;
@@ -296,8 +296,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
                         case 1:
                             if (awaiter.GetResult())
                             {
-                                var v = enumerator.Current;
-                                var key = keySelector(v);
+                                TSource v = enumerator.Current;
+                                TKey key = keySelector(v);
                                 if (!comparer.Equals(prev, key))
                                 {
                                     prev = key;
@@ -460,7 +460,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
                                 goto DONE;
                             }
                         case 2:
-                            var key = awaiter2.GetResult();
+                            TKey key = awaiter2.GetResult();
                             if (!comparer.Equals(prev, key))
                             {
                                 prev = key;
@@ -618,7 +618,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
                                 goto DONE;
                             }
                         case 2:
-                            var key = awaiter2.GetResult();
+                            TKey key = awaiter2.GetResult();
                             if (!comparer.Equals(prev, key))
                             {
                                 prev = key;

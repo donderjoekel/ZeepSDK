@@ -73,12 +73,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
     {
         public static async UniTask<TSource> SingleAsync<TSource>(IUniTaskAsyncEnumerable<TSource> source, CancellationToken cancellationToken, bool defaultIfEmpty)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 if (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
+                    TSource v = e.Current;
                     if (!await e.MoveNextAsync())
                     {
                         return v;
@@ -109,14 +109,14 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         public static async UniTask<TSource> SingleAsync<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, Boolean> predicate, CancellationToken cancellationToken, bool defaultIfEmpty)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 TSource value = default;
                 bool found = false;
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
+                    TSource v = e.Current;
                     if (predicate(v))
                     {
                         if (found)
@@ -149,14 +149,14 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         public static async UniTask<TSource> SingleAwaitAsync<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTask<Boolean>> predicate, CancellationToken cancellationToken, bool defaultIfEmpty)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 TSource value = default;
                 bool found = false;
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
+                    TSource v = e.Current;
                     if (await predicate(v))
                     {
                         if (found)
@@ -189,14 +189,14 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         public static async UniTask<TSource> SingleAwaitWithCancellationAsync<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, UniTask<Boolean>> predicate, CancellationToken cancellationToken, bool defaultIfEmpty)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 TSource value = default;
                 bool found = false;
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
+                    TSource v = e.Current;
                     if (await predicate(v, cancellationToken))
                     {
                         if (found)

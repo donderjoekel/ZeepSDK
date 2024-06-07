@@ -101,7 +101,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static bool CheckAndResetDirty()
         {
-            var current = dirty;
+            bool current = dirty;
             dirty = false;
             return current;
         }
@@ -111,7 +111,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         {
             lock (listPool)
             {
-                var count = tracking.ToList(ref listPool, clear: false);
+                int count = tracking.ToList(ref listPool, clear: false);
                 try
                 {
                     for (int i = 0; i < count; i++)
@@ -139,7 +139,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             if (type.IsGenericType)
             {
-                var genericsStart = type.Name.IndexOf("`");
+                int genericsStart = type.Name.IndexOf("`");
                 if (genericsStart != -1)
                 {
                     sb.Append(type.Name.Substring(0, genericsStart));
@@ -149,8 +149,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     sb.Append(type.Name);
                 }
                 sb.Append("<");
-                var first = true;
-                foreach (var item in type.GetGenericArguments())
+                bool first = true;
+                foreach (Type item in type.GetGenericArguments())
                 {
                     if (!first)
                     {

@@ -122,13 +122,13 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
     {
         internal static async UniTask<ILookup<TKey, TSource>> ToLookupAsync<TSource, TKey>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, TKey> keySelector, IEqualityComparer<TKey> comparer, CancellationToken cancellationToken)
         {
-            var pool = ArrayPool<TSource>.Shared;
-            var array = pool.Rent(16);
+            ArrayPool<TSource> pool = ArrayPool<TSource>.Shared;
+            TSource[] array = pool.Rent(16);
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
-                var i = 0;
+                int i = 0;
                 while (await e.MoveNextAsync())
                 {
                     ArrayPoolUtil.EnsureCapacity(ref array, i, pool);
@@ -157,14 +157,14 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         internal static async UniTask<ILookup<TKey, TElement>> ToLookupAsync<TSource, TKey, TElement>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector, IEqualityComparer<TKey> comparer, CancellationToken cancellationToken)
         {
-            var pool = ArrayPool<TSource>.Shared;
-            var array = pool.Rent(16);
+            ArrayPool<TSource> pool = ArrayPool<TSource>.Shared;
+            TSource[] array = pool.Rent(16);
 
             IUniTaskAsyncEnumerator<TSource> e = default;
             try
             {
                 e = source.GetAsyncEnumerator(cancellationToken);
-                var i = 0;
+                int i = 0;
                 while (await e.MoveNextAsync())
                 {
                     ArrayPoolUtil.EnsureCapacity(ref array, i, pool);
@@ -196,14 +196,14 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         internal static async UniTask<ILookup<TKey, TSource>> ToLookupAwaitAsync<TSource, TKey>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTask<TKey>> keySelector, IEqualityComparer<TKey> comparer, CancellationToken cancellationToken)
         {
-            var pool = ArrayPool<TSource>.Shared;
-            var array = pool.Rent(16);
+            ArrayPool<TSource> pool = ArrayPool<TSource>.Shared;
+            TSource[] array = pool.Rent(16);
 
             IUniTaskAsyncEnumerator<TSource> e = default;
             try
             {
                 e = source.GetAsyncEnumerator(cancellationToken);
-                var i = 0;
+                int i = 0;
                 while (await e.MoveNextAsync())
                 {
                     ArrayPoolUtil.EnsureCapacity(ref array, i, pool);
@@ -232,14 +232,14 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         internal static async UniTask<ILookup<TKey, TElement>> ToLookupAwaitAsync<TSource, TKey, TElement>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTask<TKey>> keySelector, Func<TSource, UniTask<TElement>> elementSelector, IEqualityComparer<TKey> comparer, CancellationToken cancellationToken)
         {
-            var pool = ArrayPool<TSource>.Shared;
-            var array = pool.Rent(16);
+            ArrayPool<TSource> pool = ArrayPool<TSource>.Shared;
+            TSource[] array = pool.Rent(16);
 
             IUniTaskAsyncEnumerator<TSource> e = default;
             try
             {
                 e = source.GetAsyncEnumerator(cancellationToken);
-                var i = 0;
+                int i = 0;
                 while (await e.MoveNextAsync())
                 {
                     ArrayPoolUtil.EnsureCapacity(ref array, i, pool);
@@ -270,14 +270,14 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         internal static async UniTask<ILookup<TKey, TSource>> ToLookupAwaitWithCancellationAsync<TSource, TKey>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, UniTask<TKey>> keySelector, IEqualityComparer<TKey> comparer, CancellationToken cancellationToken)
         {
-            var pool = ArrayPool<TSource>.Shared;
-            var array = pool.Rent(16);
+            ArrayPool<TSource> pool = ArrayPool<TSource>.Shared;
+            TSource[] array = pool.Rent(16);
 
             IUniTaskAsyncEnumerator<TSource> e = default;
             try
             {
                 e = source.GetAsyncEnumerator(cancellationToken);
-                var i = 0;
+                int i = 0;
                 while (await e.MoveNextAsync())
                 {
                     ArrayPoolUtil.EnsureCapacity(ref array, i, pool);
@@ -306,14 +306,14 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         internal static async UniTask<ILookup<TKey, TElement>> ToLookupAwaitWithCancellationAsync<TSource, TKey, TElement>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, UniTask<TKey>> keySelector, Func<TSource, CancellationToken, UniTask<TElement>> elementSelector, IEqualityComparer<TKey> comparer, CancellationToken cancellationToken)
         {
-            var pool = ArrayPool<TSource>.Shared;
-            var array = pool.Rent(16);
+            ArrayPool<TSource> pool = ArrayPool<TSource>.Shared;
+            TSource[] array = pool.Rent(16);
 
             IUniTaskAsyncEnumerator<TSource> e = default;
             try
             {
                 e = source.GetAsyncEnumerator(cancellationToken);
-                var i = 0;
+                int i = 0;
                 while (await e.MoveNextAsync())
                 {
                     ArrayPoolUtil.EnsureCapacity(ref array, i, pool);
@@ -361,15 +361,15 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             public static Lookup<TKey, TElement> Create(ArraySegment<TElement> source, Func<TElement, TKey> keySelector, IEqualityComparer<TKey> comparer)
             {
-                var dict = new Dictionary<TKey, Grouping<TKey, TElement>>(comparer);
+                Dictionary<TKey, Grouping<TKey, TElement>> dict = new Dictionary<TKey, Grouping<TKey, TElement>>(comparer);
 
-                var arr = source.Array;
-                var c = source.Count;
+                TElement[] arr = source.Array;
+                int c = source.Count;
                 for (int i = source.Offset; i < c; i++)
                 {
-                    var key = keySelector(arr[i]);
+                    TKey key = keySelector(arr[i]);
 
-                    if (!dict.TryGetValue(key, out var list))
+                    if (!dict.TryGetValue(key, out Grouping<TKey, TElement> list))
                     {
                         list = new Grouping<TKey, TElement>(key);
                         dict[key] = list;
@@ -383,16 +383,16 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             public static Lookup<TKey, TElement> Create<TSource>(ArraySegment<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector, IEqualityComparer<TKey> comparer)
             {
-                var dict = new Dictionary<TKey, Grouping<TKey, TElement>>(comparer);
+                Dictionary<TKey, Grouping<TKey, TElement>> dict = new Dictionary<TKey, Grouping<TKey, TElement>>(comparer);
 
-                var arr = source.Array;
-                var c = source.Count;
+                TSource[] arr = source.Array;
+                int c = source.Count;
                 for (int i = source.Offset; i < c; i++)
                 {
-                    var key = keySelector(arr[i]);
-                    var elem = elementSelector(arr[i]);
+                    TKey key = keySelector(arr[i]);
+                    TElement elem = elementSelector(arr[i]);
 
-                    if (!dict.TryGetValue(key, out var list))
+                    if (!dict.TryGetValue(key, out Grouping<TKey, TElement> list))
                     {
                         list = new Grouping<TKey, TElement>(key);
                         dict[key] = list;
@@ -406,15 +406,15 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             public static async UniTask<Lookup<TKey, TElement>> CreateAsync(ArraySegment<TElement> source, Func<TElement, UniTask<TKey>> keySelector, IEqualityComparer<TKey> comparer)
             {
-                var dict = new Dictionary<TKey, Grouping<TKey, TElement>>(comparer);
+                Dictionary<TKey, Grouping<TKey, TElement>> dict = new Dictionary<TKey, Grouping<TKey, TElement>>(comparer);
 
-                var arr = source.Array;
-                var c = source.Count;
+                TElement[] arr = source.Array;
+                int c = source.Count;
                 for (int i = source.Offset; i < c; i++)
                 {
-                    var key = await keySelector(arr[i]);
+                    TKey key = await keySelector(arr[i]);
 
-                    if (!dict.TryGetValue(key, out var list))
+                    if (!dict.TryGetValue(key, out Grouping<TKey, TElement> list))
                     {
                         list = new Grouping<TKey, TElement>(key);
                         dict[key] = list;
@@ -428,16 +428,16 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             public static async UniTask<Lookup<TKey, TElement>> CreateAsync<TSource>(ArraySegment<TSource> source, Func<TSource, UniTask<TKey>> keySelector, Func<TSource, UniTask<TElement>> elementSelector, IEqualityComparer<TKey> comparer)
             {
-                var dict = new Dictionary<TKey, Grouping<TKey, TElement>>(comparer);
+                Dictionary<TKey, Grouping<TKey, TElement>> dict = new Dictionary<TKey, Grouping<TKey, TElement>>(comparer);
 
-                var arr = source.Array;
-                var c = source.Count;
+                TSource[] arr = source.Array;
+                int c = source.Count;
                 for (int i = source.Offset; i < c; i++)
                 {
-                    var key = await keySelector(arr[i]);
-                    var elem = await elementSelector(arr[i]);
+                    TKey key = await keySelector(arr[i]);
+                    TElement elem = await elementSelector(arr[i]);
 
-                    if (!dict.TryGetValue(key, out var list))
+                    if (!dict.TryGetValue(key, out Grouping<TKey, TElement> list))
                     {
                         list = new Grouping<TKey, TElement>(key);
                         dict[key] = list;
@@ -451,15 +451,15 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             public static async UniTask<Lookup<TKey, TElement>> CreateAsync(ArraySegment<TElement> source, Func<TElement, CancellationToken, UniTask<TKey>> keySelector, IEqualityComparer<TKey> comparer, CancellationToken cancellationToken)
             {
-                var dict = new Dictionary<TKey, Grouping<TKey, TElement>>(comparer);
+                Dictionary<TKey, Grouping<TKey, TElement>> dict = new Dictionary<TKey, Grouping<TKey, TElement>>(comparer);
 
-                var arr = source.Array;
-                var c = source.Count;
+                TElement[] arr = source.Array;
+                int c = source.Count;
                 for (int i = source.Offset; i < c; i++)
                 {
-                    var key = await keySelector(arr[i], cancellationToken);
+                    TKey key = await keySelector(arr[i], cancellationToken);
 
-                    if (!dict.TryGetValue(key, out var list))
+                    if (!dict.TryGetValue(key, out Grouping<TKey, TElement> list))
                     {
                         list = new Grouping<TKey, TElement>(key);
                         dict[key] = list;
@@ -473,16 +473,16 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             public static async UniTask<Lookup<TKey, TElement>> CreateAsync<TSource>(ArraySegment<TSource> source, Func<TSource, CancellationToken, UniTask<TKey>> keySelector, Func<TSource, CancellationToken, UniTask<TElement>> elementSelector, IEqualityComparer<TKey> comparer, CancellationToken cancellationToken)
             {
-                var dict = new Dictionary<TKey, Grouping<TKey, TElement>>(comparer);
+                Dictionary<TKey, Grouping<TKey, TElement>> dict = new Dictionary<TKey, Grouping<TKey, TElement>>(comparer);
 
-                var arr = source.Array;
-                var c = source.Count;
+                TSource[] arr = source.Array;
+                int c = source.Count;
                 for (int i = source.Offset; i < c; i++)
                 {
-                    var key = await keySelector(arr[i], cancellationToken);
-                    var elem = await elementSelector(arr[i], cancellationToken);
+                    TKey key = await keySelector(arr[i], cancellationToken);
+                    TElement elem = await elementSelector(arr[i], cancellationToken);
 
-                    if (!dict.TryGetValue(key, out var list))
+                    if (!dict.TryGetValue(key, out Grouping<TKey, TElement> list))
                     {
                         list = new Grouping<TKey, TElement>(key);
                         dict[key] = list;
@@ -494,7 +494,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
                 return new Lookup<TKey, TElement>(dict);
             }
 
-            public IEnumerable<TElement> this[TKey key] => dict.TryGetValue(key, out var g) ? g : Enumerable.Empty<TElement>();
+            public IEnumerable<TElement> this[TKey key] => dict.TryGetValue(key, out Grouping<TKey, TElement> g) ? g : Enumerable.Empty<TElement>();
 
             public int Count => dict.Count;
 

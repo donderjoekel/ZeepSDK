@@ -81,9 +81,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void HashSetAsyncCore(object state)
             {
-                var self = (_Except)state;
+                _Except self = (_Except)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out HashSet<TSource> result))
                 {
                     self.set = result;
                     self.SourceMoveNext();
@@ -94,7 +94,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             {
                 if (sourceHasCurrent)
                 {
-                    var v = SourceCurrent;
+                    TSource v = SourceCurrent;
                     if (set.Add(v))
                     {
                         Current = v;

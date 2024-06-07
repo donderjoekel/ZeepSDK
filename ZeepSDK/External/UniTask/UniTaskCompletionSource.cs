@@ -336,7 +336,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         [DebuggerHidden]
         public static AutoResetUniTaskCompletionSource Create()
         {
-            if (!pool.TryPop(out var result))
+            if (!pool.TryPop(out AutoResetUniTaskCompletionSource result))
             {
                 result = new AutoResetUniTaskCompletionSource();
             }
@@ -347,7 +347,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         [DebuggerHidden]
         public static AutoResetUniTaskCompletionSource CreateFromCanceled(CancellationToken cancellationToken, out short token)
         {
-            var source = Create();
+            AutoResetUniTaskCompletionSource source = Create();
             source.TrySetCanceled(cancellationToken);
             token = source.core.Version;
             return source;
@@ -356,7 +356,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         [DebuggerHidden]
         public static AutoResetUniTaskCompletionSource CreateFromException(Exception exception, out short token)
         {
-            var source = Create();
+            AutoResetUniTaskCompletionSource source = Create();
             source.TrySetException(exception);
             token = source.core.Version;
             return source;
@@ -365,7 +365,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         [DebuggerHidden]
         public static AutoResetUniTaskCompletionSource CreateCompleted(out short token)
         {
-            var source = Create();
+            AutoResetUniTaskCompletionSource source = Create();
             source.TrySetResult();
             token = source.core.Version;
             return source;
@@ -459,7 +459,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         [DebuggerHidden]
         public static AutoResetUniTaskCompletionSource<T> Create()
         {
-            if (!pool.TryPop(out var result))
+            if (!pool.TryPop(out AutoResetUniTaskCompletionSource<T> result))
             {
                 result = new AutoResetUniTaskCompletionSource<T>();
             }
@@ -470,7 +470,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         [DebuggerHidden]
         public static AutoResetUniTaskCompletionSource<T> CreateFromCanceled(CancellationToken cancellationToken, out short token)
         {
-            var source = Create();
+            AutoResetUniTaskCompletionSource<T> source = Create();
             source.TrySetCanceled(cancellationToken);
             token = source.core.Version;
             return source;
@@ -479,7 +479,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         [DebuggerHidden]
         public static AutoResetUniTaskCompletionSource<T> CreateFromException(Exception exception, out short token)
         {
-            var source = Create();
+            AutoResetUniTaskCompletionSource<T> source = Create();
             source.TrySetException(exception);
             token = source.core.Version;
             return source;
@@ -488,7 +488,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         [DebuggerHidden]
         public static AutoResetUniTaskCompletionSource<T> CreateFromResult(T result, out short token)
         {
-            var source = Create();
+            AutoResetUniTaskCompletionSource<T> source = Create();
             source.TrySetResult(result);
             token = source.core.Version;
             return source;
@@ -637,7 +637,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         {
             MarkHandled();
 
-            var status = (UniTaskStatus)intStatus;
+            UniTaskStatus status = (UniTaskStatus)intStatus;
             switch (status)
             {
                 case UniTaskStatus.Succeeded:
@@ -673,7 +673,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 Interlocked.CompareExchange(ref gate, new object(), null);
             }
 
-            var lockGate = Thread.VolatileRead(ref gate);
+            object lockGate = Thread.VolatileRead(ref gate);
             lock (lockGate) // wait TrySignalCompletion, after status is not pending.
             {
                 if ((UniTaskStatus)intStatus != UniTaskStatus.Pending)
@@ -708,7 +708,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     Interlocked.CompareExchange(ref gate, new object(), null);
                 }
 
-                var lockGate = Thread.VolatileRead(ref gate);
+                object lockGate = Thread.VolatileRead(ref gate);
                 lock (lockGate) // wait OnCompleted.
                 {
                     if (singleContinuation != null)
@@ -725,7 +725,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
                     if (secondaryContinuationList != null)
                     {
-                        foreach (var (c, state) in secondaryContinuationList)
+                        foreach ((Action<object> c, object state) in secondaryContinuationList)
                         {
                             try
                             {
@@ -822,7 +822,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         {
             MarkHandled();
 
-            var status = (UniTaskStatus)intStatus;
+            UniTaskStatus status = (UniTaskStatus)intStatus;
             switch (status)
             {
                 case UniTaskStatus.Succeeded:
@@ -864,7 +864,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 Interlocked.CompareExchange(ref gate, new object(), null);
             }
 
-            var lockGate = Thread.VolatileRead(ref gate);
+            object lockGate = Thread.VolatileRead(ref gate);
             lock (lockGate) // wait TrySignalCompletion, after status is not pending.
             {
                 if ((UniTaskStatus)intStatus != UniTaskStatus.Pending)
@@ -899,7 +899,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     Interlocked.CompareExchange(ref gate, new object(), null);
                 }
 
-                var lockGate = Thread.VolatileRead(ref gate);
+                object lockGate = Thread.VolatileRead(ref gate);
                 lock (lockGate) // wait OnCompleted.
                 {
                     if (singleContinuation != null)
@@ -916,7 +916,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
                     if (secondaryContinuationList != null)
                     {
-                        foreach (var (c, state) in secondaryContinuationList)
+                        foreach ((Action<object> c, object state) in secondaryContinuationList)
                         {
                             try
                             {

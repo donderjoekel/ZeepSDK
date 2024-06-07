@@ -1,7 +1,9 @@
 ﻿#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using UnityEngine;
 using ZeepSDK.External.Cysharp.Threading.Tasks.Internal;
 using System.Threading;
@@ -221,21 +223,21 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             };
 #endif
 
-            var yieldLoop = new PlayerLoopSystem
+            PlayerLoopSystem yieldLoop = new PlayerLoopSystem
             {
                 type = loopRunnerYieldType,
                 updateDelegate = cq.Run
             };
 
-            var runnerLoop = new PlayerLoopSystem
+            PlayerLoopSystem runnerLoop = new PlayerLoopSystem
             {
                 type = loopRunnerType,
                 updateDelegate = runner.Run
             };
 
             // Remove items from previous initializations.
-            var source = RemoveRunner(loopSystem, loopRunnerYieldType, loopRunnerType);
-            var dest = new PlayerLoopSystem[source.Length + 2];
+            PlayerLoopSystem[] source = RemoveRunner(loopSystem, loopRunnerYieldType, loopRunnerType);
+            PlayerLoopSystem[] dest = new PlayerLoopSystem[source.Length + 2];
 
             Array.Copy(source, 0, dest, injectOnFirst ? 2 : 0, source.Length);
             if (injectOnFirst)
@@ -261,20 +263,20 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         static PlayerLoopSystem[] InsertUniTaskSynchronizationContext(PlayerLoopSystem loopSystem)
         {
-            var loop = new PlayerLoopSystem
+            PlayerLoopSystem loop = new PlayerLoopSystem
             {
                 type = typeof(UniTaskSynchronizationContext),
                 updateDelegate = UniTaskSynchronizationContext.Run
             };
 
             // Remove items from previous initializations.
-            var source = loopSystem.subSystemList
+            PlayerLoopSystem[] source = loopSystem.subSystemList
                 .Where(ls => ls.type != typeof(UniTaskSynchronizationContext))
                 .ToArray();
 
-            var dest = new System.Collections.Generic.List<PlayerLoopSystem>(source);
+            List<PlayerLoopSystem> dest = new System.Collections.Generic.List<PlayerLoopSystem>(source);
 
-            var index = dest.FindIndex(x => x.type.Name == "ScriptRunDelayedTasks");
+            int index = dest.FindIndex(x => x.type.Name == "ScriptRunDelayedTasks");
             if (index == -1)
             {
                 index = dest.FindIndex(x => x.type.Name == "UniTaskLoopRunnerUpdate");
@@ -307,7 +309,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             if (runners != null) return; // already initialized
 #endif
 
-            var playerLoop =
+            PlayerLoopSystem playerLoop =
 #if UNITY_2019_3_OR_NEWER
                 PlayerLoop.GetCurrentPlayerLoop();
 #else
@@ -378,7 +380,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         static void InsertLoop(PlayerLoopSystem[] copyList, InjectPlayerLoopTimings injectTimings, Type loopType, InjectPlayerLoopTimings targetTimings,
             int index, bool injectOnFirst, Type loopRunnerYieldType, Type loopRunnerType, PlayerLoopTiming playerLoopTiming)
         {
-            var i = FindLoopSystemIndex(copyList, loopType);
+            int i = FindLoopSystemIndex(copyList, loopType);
             if ((injectTimings & targetTimings) == targetTimings)
             {
                 copyList[i].subSystemList = InsertRunner(copyList[i], injectOnFirst,
@@ -401,7 +403,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             runners = new PlayerLoopRunner[14];
 #endif
 
-            var copyList = playerLoop.subSystemList.ToArray();
+            PlayerLoopSystem[] copyList = playerLoop.subSystemList.ToArray();
 
             // Initialization
             InsertLoop(copyList, injectTimings, typeof(PlayerLoopType.Initialization),
@@ -478,7 +480,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 #endif
 
             // Insert UniTaskSynchronizationContext to Update loop
-            var i = FindLoopSystemIndex(copyList, typeof(PlayerLoopType.Update));
+            int i = FindLoopSystemIndex(copyList, typeof(PlayerLoopType.Update));
             copyList[i].subSystemList = InsertUniTaskSynchronizationContext(copyList[i]);
 
             playerLoop.subSystemList = copyList;
@@ -487,7 +489,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static void AddAction(PlayerLoopTiming timing, IPlayerLoopItem action)
         {
-            var runner = runners[(int)timing];
+            PlayerLoopRunner runner = runners[(int)timing];
             if (runner == null)
             {
                 ThrowInvalidLoopTiming(timing);
@@ -502,7 +504,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static void AddContinuation(PlayerLoopTiming timing, Action continuation)
         {
-            var q = yielders[(int)timing];
+            ContinuationQueue q = yielders[(int)timing];
             if (q == null)
             {
                 ThrowInvalidLoopTiming(timing);
@@ -516,11 +518,11 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static void DumpCurrentPlayerLoop()
         {
-            var playerLoop = UnityEngine.LowLevel.PlayerLoop.GetCurrentPlayerLoop();
+            PlayerLoopSystem playerLoop = UnityEngine.LowLevel.PlayerLoop.GetCurrentPlayerLoop();
 
-            var sb = new System.Text.StringBuilder();
+            StringBuilder sb = new System.Text.StringBuilder();
             sb.AppendLine($"PlayerLoop List");
-            foreach (var header in playerLoop.subSystemList)
+            foreach (PlayerLoopSystem header in playerLoop.subSystemList)
             {
                 sb.AppendFormat("------{0}------", header.type.Name);
                 sb.AppendLine();
@@ -532,7 +534,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     continue;
                 }
 
-                foreach (var subSystem in header.subSystemList)
+                foreach (PlayerLoopSystem subSystem in header.subSystemList)
                 {
                     sb.AppendFormat("{0}", subSystem.type.Name);
                     sb.AppendLine();
@@ -549,16 +551,16 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static bool IsInjectedUniTaskPlayerLoop()
         {
-            var playerLoop = UnityEngine.LowLevel.PlayerLoop.GetCurrentPlayerLoop();
+            PlayerLoopSystem playerLoop = UnityEngine.LowLevel.PlayerLoop.GetCurrentPlayerLoop();
 
-            foreach (var header in playerLoop.subSystemList)
+            foreach (PlayerLoopSystem header in playerLoop.subSystemList)
             {
                 if (header.subSystemList is null) 
                 { 
                     continue;
                 }
                 
-                foreach (var subSystem in header.subSystemList)
+                foreach (PlayerLoopSystem subSystem in header.subSystemList)
                 {
                     if (subSystem.type == typeof(UniTaskLoopRunners.UniTaskLoopRunnerInitialization))
                     {

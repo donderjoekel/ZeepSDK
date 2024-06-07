@@ -40,7 +40,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 throw new InvalidOperationException("Can not trigger itself in iterating.");
             }
 
-            var h = head;
+            ITriggerHandler<T> h = head;
             while (h != null)
             {
                 iteratingNode = h;
@@ -59,7 +59,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 {
                     preserveRemoveSelf = false;
                     iteratingNode = null;
-                    var next = h.Next;
+                    ITriggerHandler<T> next = h.Next;
                     Remove(h);
                     h = next;
                 }
@@ -84,7 +84,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 throw new InvalidOperationException("Can not trigger itself in iterating.");
             }
 
-            var h = head;
+            ITriggerHandler<T> h = head;
             while (h != null)
             {
                 iteratingNode = h;
@@ -99,7 +99,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
                 preserveRemoveSelf = false;
                 iteratingNode = null;
-                var next = h.Next;
+                ITriggerHandler<T> next = h.Next;
                 Remove(h);
                 h = next;
             }
@@ -119,7 +119,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 throw new InvalidOperationException("Can not trigger itself in iterating.");
             }
 
-            var h = head;
+            ITriggerHandler<T> h = head;
             while (h != null)
             {
                 iteratingNode = h;
@@ -134,7 +134,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
                 preserveRemoveSelf = false;
                 iteratingNode = null;
-                var next = h.Next;
+                ITriggerHandler<T> next = h.Next;
                 Remove(h);
                 h = next;
             }
@@ -154,7 +154,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 throw new InvalidOperationException("Can not trigger itself in iterating.");
             }
 
-            var h = head;
+            ITriggerHandler<T> h = head;
             while (h != null)
             {
                 iteratingNode = h;
@@ -169,7 +169,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
                 preserveRemoveSelf = false;
                 iteratingNode = null;
-                var next = h.Next;
+                ITriggerHandler<T> next = h.Next;
                 Remove(h);
                 h = next;
             }
@@ -201,7 +201,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return;
                 }
 
-                var last = iteratingHead.Prev;
+                ITriggerHandler<T> last = iteratingHead.Prev;
                 if (last == null)
                 {
                     // single node.
@@ -219,7 +219,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             }
             else
             {
-                var last = head.Prev;
+                ITriggerHandler<T> last = head.Prev;
                 if (last == null)
                 {
                     // single node.
@@ -248,8 +248,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             }
             else
             {
-                var prev = handler.Prev;
-                var next = handler.Next;
+                ITriggerHandler<T> prev = handler.Prev;
+                ITriggerHandler<T> next = handler.Next;
 
                 if (next != null)
                 {
