@@ -47,6 +47,11 @@ public static class MultiplayerApi
     /// </summary>
     public static event PlayerLeftDelegate PlayerLeft;
 
+    /// <summary>
+    /// Is the player currently in an online game or not
+    /// </summary>
+    public static bool IsPlayingOnline => ZeepkistNetwork.IsConnectedToGame;
+
     internal static void Initialize()
     {
         PhotonZeepkist_OnConnectedToGame.ConnectedToGame += () => ConnectedToGame.InvokeSafe();
