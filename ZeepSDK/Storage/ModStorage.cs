@@ -60,7 +60,7 @@ internal class ModStorage : IModStorage
             plugin.Info.Metadata.GUID);
     }
 
-    private string CreatePath(string name, string extension = ".json")
+    private string CreatePath(string name, string extension)
     {
         string filePath = Path.Combine(directoryPath, name) + extension;
 
@@ -86,30 +86,54 @@ internal class ModStorage : IModStorage
     public void SaveToJson(string name, object data)
     {
         string json = JsonConvert.SerializeObject(data, settings);
-        File.WriteAllText(CreatePath(name), json);
+        File.WriteAllText(CreatePath(name, ".json"), json);
     }
 
     public object LoadFromJson(string name)
     {
-        string json = File.ReadAllText(CreatePath(name));
+        string json = File.ReadAllText(CreatePath(name, ".json"));
         return JsonConvert.DeserializeObject(json, settings);
     }
 
     public object LoadFromJson(string name, Type type)
     {
-        string json = File.ReadAllText(CreatePath(name));
+        string json = File.ReadAllText(CreatePath(name, ".json"));
         return JsonConvert.DeserializeObject(json, type, settings);
     }
 
     public TData LoadFromJson<TData>(string name)
     {
-        string json = File.ReadAllText(CreatePath(name));
+        string json = File.ReadAllText(CreatePath(name, ".json"));
         return JsonConvert.DeserializeObject<TData>(json, settings);
     }
 
     public void DeleteFile(string name)
     {
-        string path = CreatePath(name);
+        string path = CreatePath(name, ".json");
+        if (File.Exists(path))
+            File.Delete(path);
+    }
+
+    public void DeleteJsonFile(string name)
+    {
+        string path = CreatePath(name, ".json");
+        if (File.Exists(path))
+            File.Delete(path);
+    }
+
+    public void WriteBlob(string name, byte[] data)
+    {
+        File.WriteAllBytes(CreatePath(name, ".blob"), data);
+    }
+
+    public byte[] ReadBlob(string name)
+    {
+        return File.ReadAllBytes(CreatePath(name, ".blob"));
+    }
+
+    public void DeleteBlob(string name)
+    {
+        string path = CreatePath(name, ".blob");
         if (File.Exists(path))
             File.Delete(path);
     }

@@ -54,5 +54,32 @@ public interface IModStorage
     /// Deletes a file
     /// </summary>
     /// <param name="name">The name of the file to delete without extension</param>
+    [Obsolete("use DeleteJsonFile or DeleteBlob instead.")]
     void DeleteFile(string name);
+
+    /// <summary>
+    /// Deletes a json file
+    /// </summary>
+    /// <param name="name">The name of the file to delete without extension</param>
+    void DeleteJsonFile(string name);
+
+    /// <summary>
+    /// Saves data to a binary file
+    /// </summary>
+    /// <param name="name">The name of the file without extension</param>
+    /// <param name="data">The data to save</param>
+    void WriteBlob(string name, byte[] data);
+
+    /// <summary>
+    /// Loads data from a binary file
+    /// </summary>
+    /// <param name="name">The name of the file without extension</param>
+    /// <returns></returns>
+    byte[] ReadBlob(string name);
+
+    /// <summary>
+    /// Deletes a binary file
+    /// </summary>
+    /// <param name="name">The name of the file without extension</param>
+    void DeleteBlob(string name);
 }
