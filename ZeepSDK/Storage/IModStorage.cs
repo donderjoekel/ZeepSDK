@@ -21,6 +21,13 @@ public interface IModStorage
     void RemoveConverter(JsonConverter converter);
 
     /// <summary>
+    /// Does a json file exist or not
+    /// </summary>
+    /// <param name="name">The name of the file without extension</param>
+    /// <returns></returns>
+    bool JsonFileExists(string name);
+
+    /// <summary>
     /// Saves data to a json file
     /// </summary>
     /// <param name="name">The name of the file without extension</param>
@@ -62,6 +69,13 @@ public interface IModStorage
     /// </summary>
     /// <param name="name">The name of the file to delete without extension</param>
     void DeleteJsonFile(string name);
+
+    /// <summary>
+    /// Does a binary file exist or not
+    /// </summary>
+    /// <param name="name">The name of the file without extension</param>
+    /// <returns></returns>
+    bool BlobFileExists(string name);
 
     /// <summary>
     /// Saves data to a binary file

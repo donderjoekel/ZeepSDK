@@ -83,6 +83,11 @@ internal class ModStorage : IModStorage
         settings.Converters.Remove(converter);
     }
 
+    public bool JsonFileExists(string name)
+    {
+        return File.Exists(CreatePath(name, ".json"));
+    }
+
     public void SaveToJson(string name, object data)
     {
         string json = JsonConvert.SerializeObject(data, settings);
@@ -119,6 +124,11 @@ internal class ModStorage : IModStorage
         string path = CreatePath(name, ".json");
         if (File.Exists(path))
             File.Delete(path);
+    }
+
+    public bool BlobFileExists(string name)
+    {
+        return File.Exists(CreatePath(name, ".blob"));
     }
 
     public void WriteBlob(string name, byte[] data)
