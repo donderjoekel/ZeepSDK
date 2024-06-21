@@ -1,5 +1,6 @@
 ﻿using JetBrains.Annotations;
 using UnityEngine;
+using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Messaging;
 
@@ -9,6 +10,46 @@ namespace ZeepSDK.Messaging;
 [PublicAPI]
 public static class MessengerApi
 {
+    private static Sprite _cachedErrorSprite;
+    private static Sprite _cachedSuccessSprite;
+    private static Sprite _cachedNeutralSprite;
+
+    private static Sprite ErrorSprite
+    {
+        get
+        {
+            if (_cachedErrorSprite != null)
+                return _cachedErrorSprite;
+
+            _cachedErrorSprite = SpriteUtility.FromBase64(MessengerImages.ERROR);
+            return _cachedErrorSprite;
+        }
+    }
+
+    private static Sprite SuccessSprite
+    {
+        get
+        {
+            if (_cachedSuccessSprite != null)
+                return _cachedSuccessSprite;
+
+            _cachedSuccessSprite = SpriteUtility.FromBase64(MessengerImages.SUCCESS);
+            return _cachedSuccessSprite;
+        }
+    }
+
+    private static Sprite NeutralSprite
+    {
+        get
+        {
+            if (_cachedNeutralSprite != null)
+                return _cachedNeutralSprite;
+
+            _cachedNeutralSprite = SpriteUtility.FromBase64(MessengerImages.NEUTRAL);
+            return _cachedNeutralSprite;
+        }
+    }
+
     /// <summary>
     /// The default duration for a log message
     /// </summary>
@@ -40,10 +81,12 @@ public static class MessengerApi
     /// <param name="duration">The duration to display the message</param>
     public static void LogSuccess(string message, float duration = DEFAULT_DURATION)
     {
-        PlayerManager.Instance.messenger.LogCustomColor(message,
+        PlayerManager.Instance.messenger.LogCustomColor(
+            message,
             duration,
             Color.white,
             new Color32(40, 167, 69, 255));
+        PlayerManager.Instance.messenger.frog.sprite = SuccessSprite;
     }
 
     /// <summary>
@@ -53,10 +96,12 @@ public static class MessengerApi
     /// <param name="duration">The duration to display the message</param>
     public static void LogWarning(string message, float duration = DEFAULT_DURATION)
     {
-        PlayerManager.Instance.messenger.LogCustomColor(message,
+        PlayerManager.Instance.messenger.LogCustomColor(
+            message,
             duration,
             new Color32(52, 58, 64, 255),
             new Color32(255, 193, 7, 255));
+        PlayerManager.Instance.messenger.frog.sprite = NeutralSprite;
     }
 
     /// <summary>
@@ -67,6 +112,7 @@ public static class MessengerApi
     public static void LogError(string message, float duration = DEFAULT_DURATION)
     {
         PlayerManager.Instance.messenger.LogError(message, duration);
+        PlayerManager.Instance.messenger.frog.sprite = ErrorSprite;
     }
 
     /// <summary>
