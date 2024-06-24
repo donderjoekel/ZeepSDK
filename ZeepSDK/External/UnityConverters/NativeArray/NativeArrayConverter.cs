@@ -17,7 +17,7 @@ namespace ZeepSDK.External.Newtonsoft.Json.UnityConverters.NativeArray
                 return;
             }
 
-            var enumerable = (IEnumerable)value;
+            IEnumerable enumerable = (IEnumerable)value;
             writer.WriteStartArray();
             foreach (object item in enumerable)
             {

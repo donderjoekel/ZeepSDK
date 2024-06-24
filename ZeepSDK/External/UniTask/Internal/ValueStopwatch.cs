@@ -29,7 +29,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
                     throw new InvalidOperationException("Detected invalid initialization(use 'default'), only to create from StartNew().");
                 }
 
-                var delta = Stopwatch.GetTimestamp() - startTimestamp;
+                long delta = Stopwatch.GetTimestamp() - startTimestamp;
                 return (long)(delta * TimestampToTicks);
             }
         }

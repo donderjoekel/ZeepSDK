@@ -233,9 +233,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void SourceMoveNextCore(object state)
             {
-                var self = (_SelectMany)state;
+                _SelectMany self = (_SelectMany)state;
 
-                if (self.TryGetResult(self.sourceAwaiter, out var result))
+                if (self.TryGetResult(self.sourceAwaiter, out bool result))
                 {
                     if (result)
                     {
@@ -268,9 +268,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void SeletedSourceMoveNextCore(object state)
             {
-                var self = (_SelectMany)state;
+                _SelectMany self = (_SelectMany)state;
 
-                if (self.TryGetResult(self.selectedAwaiter, out var result))
+                if (self.TryGetResult(self.selectedAwaiter, out bool result))
                 {
                     if (result)
                     {
@@ -312,7 +312,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void SelectedEnumeratorDisposeAsyncCore(object state)
             {
-                var self = (_SelectMany)state;
+                _SelectMany self = (_SelectMany)state;
 
                 if (self.TryGetResult(self.selectedDisposeAsyncAwaiter))
                 {
@@ -473,9 +473,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void SourceMoveNextCore(object state)
             {
-                var self = (_SelectManyAwait)state;
+                _SelectManyAwait self = (_SelectManyAwait)state;
 
-                if (self.TryGetResult(self.sourceAwaiter, out var result))
+                if (self.TryGetResult(self.sourceAwaiter, out bool result))
                 {
                     if (result)
                     {
@@ -516,9 +516,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void SeletedSourceMoveNextCore(object state)
             {
-                var self = (_SelectManyAwait)state;
+                _SelectManyAwait self = (_SelectManyAwait)state;
 
-                if (self.TryGetResult(self.selectedAwaiter, out var result))
+                if (self.TryGetResult(self.selectedAwaiter, out bool result))
                 {
                     if (result)
                     {
@@ -566,7 +566,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void SelectedEnumeratorDisposeAsyncCore(object state)
             {
-                var self = (_SelectManyAwait)state;
+                _SelectManyAwait self = (_SelectManyAwait)state;
 
                 if (self.TryGetResult(self.selectedDisposeAsyncAwaiter))
                 {
@@ -579,9 +579,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void SelectorAwaitCore(object state)
             {
-                var self = (_SelectManyAwait)state;
+                _SelectManyAwait self = (_SelectManyAwait)state;
 
-                if (self.TryGetResult(self.collectionSelectorAwaiter, out var result))
+                if (self.TryGetResult(self.collectionSelectorAwaiter, out IUniTaskAsyncEnumerable<TCollection> result))
                 {
                     self.selectedEnumerator = result.GetAsyncEnumerator(self.cancellationToken);
                     self.MoveNextSelected(); // iterated selected source.
@@ -590,9 +590,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void ResultSelectorAwaitCore(object state)
             {
-                var self = (_SelectManyAwait)state;
+                _SelectManyAwait self = (_SelectManyAwait)state;
 
-                if (self.TryGetResult(self.resultSelectorAwaiter, out var result))
+                if (self.TryGetResult(self.resultSelectorAwaiter, out TResult result))
                 {
                     self.Current = result;
                     self.completionSource.TrySetResult(true);
@@ -749,9 +749,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void SourceMoveNextCore(object state)
             {
-                var self = (_SelectManyAwaitWithCancellation)state;
+                _SelectManyAwaitWithCancellation self = (_SelectManyAwaitWithCancellation)state;
 
-                if (self.TryGetResult(self.sourceAwaiter, out var result))
+                if (self.TryGetResult(self.sourceAwaiter, out bool result))
                 {
                     if (result)
                     {
@@ -792,9 +792,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void SeletedSourceMoveNextCore(object state)
             {
-                var self = (_SelectManyAwaitWithCancellation)state;
+                _SelectManyAwaitWithCancellation self = (_SelectManyAwaitWithCancellation)state;
 
-                if (self.TryGetResult(self.selectedAwaiter, out var result))
+                if (self.TryGetResult(self.selectedAwaiter, out bool result))
                 {
                     if (result)
                     {
@@ -842,7 +842,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void SelectedEnumeratorDisposeAsyncCore(object state)
             {
-                var self = (_SelectManyAwaitWithCancellation)state;
+                _SelectManyAwaitWithCancellation self = (_SelectManyAwaitWithCancellation)state;
 
                 if (self.TryGetResult(self.selectedDisposeAsyncAwaiter))
                 {
@@ -855,9 +855,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void SelectorAwaitCore(object state)
             {
-                var self = (_SelectManyAwaitWithCancellation)state;
+                _SelectManyAwaitWithCancellation self = (_SelectManyAwaitWithCancellation)state;
 
-                if (self.TryGetResult(self.collectionSelectorAwaiter, out var result))
+                if (self.TryGetResult(self.collectionSelectorAwaiter, out IUniTaskAsyncEnumerable<TCollection> result))
                 {
                     self.selectedEnumerator = result.GetAsyncEnumerator(self.cancellationToken);
                     self.MoveNextSelected(); // iterated selected source.
@@ -866,9 +866,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void ResultSelectorAwaitCore(object state)
             {
-                var self = (_SelectManyAwaitWithCancellation)state;
+                _SelectManyAwaitWithCancellation self = (_SelectManyAwaitWithCancellation)state;
 
-                if (self.TryGetResult(self.resultSelectorAwaiter, out var result))
+                if (self.TryGetResult(self.resultSelectorAwaiter, out TResult result))
                 {
                     self.Current = result;
                     self.completionSource.TrySetResult(true);

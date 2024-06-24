@@ -337,7 +337,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void OnCanceled(object state)
             {
-                var self = (_ToUniTaskAsyncEnumerableObservable)state;
+                _ToUniTaskAsyncEnumerableObservable self = (_ToUniTaskAsyncEnumerableObservable)state;
                 lock (self.queuedResult)
                 {
                     self.completionSource.TrySetCanceled(self.cancellationToken);

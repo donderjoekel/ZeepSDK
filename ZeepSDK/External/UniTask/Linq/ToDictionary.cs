@@ -120,15 +120,15 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
     {
         internal static async UniTask<Dictionary<TKey, TSource>> ToDictionaryAsync<TSource, TKey>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, TKey> keySelector, IEqualityComparer<TKey> comparer, CancellationToken cancellationToken)
         {
-            var dict = new Dictionary<TKey, TSource>(comparer);
+            Dictionary<TKey, TSource> dict = new Dictionary<TKey, TSource>(comparer);
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
-                    var key = keySelector(v);
+                    TSource v = e.Current;
+                    TKey key = keySelector(v);
                     dict.Add(key, v);
                 }
             }
@@ -145,16 +145,16 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         internal static async UniTask<Dictionary<TKey, TElement>> ToDictionaryAsync<TSource, TKey, TElement>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector, IEqualityComparer<TKey> comparer, CancellationToken cancellationToken)
         {
-            var dict = new Dictionary<TKey, TElement>(comparer);
+            Dictionary<TKey, TElement> dict = new Dictionary<TKey, TElement>(comparer);
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
-                    var key = keySelector(v);
-                    var value = elementSelector(v);
+                    TSource v = e.Current;
+                    TKey key = keySelector(v);
+                    TElement value = elementSelector(v);
                     dict.Add(key, value);
                 }
             }
@@ -173,15 +173,15 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         internal static async UniTask<Dictionary<TKey, TSource>> ToDictionaryAwaitAsync<TSource, TKey>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTask<TKey>> keySelector, IEqualityComparer<TKey> comparer, CancellationToken cancellationToken)
         {
-            var dict = new Dictionary<TKey, TSource>(comparer);
+            Dictionary<TKey, TSource> dict = new Dictionary<TKey, TSource>(comparer);
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
-                    var key = await keySelector(v);
+                    TSource v = e.Current;
+                    TKey key = await keySelector(v);
                     dict.Add(key, v);
                 }
             }
@@ -198,16 +198,16 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         internal static async UniTask<Dictionary<TKey, TElement>> ToDictionaryAwaitAsync<TSource, TKey, TElement>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTask<TKey>> keySelector, Func<TSource, UniTask<TElement>> elementSelector, IEqualityComparer<TKey> comparer, CancellationToken cancellationToken)
         {
-            var dict = new Dictionary<TKey, TElement>(comparer);
+            Dictionary<TKey, TElement> dict = new Dictionary<TKey, TElement>(comparer);
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
-                    var key = await keySelector(v);
-                    var value = await elementSelector(v);
+                    TSource v = e.Current;
+                    TKey key = await keySelector(v);
+                    TElement value = await elementSelector(v);
                     dict.Add(key, value);
                 }
             }
@@ -226,15 +226,15 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         internal static async UniTask<Dictionary<TKey, TSource>> ToDictionaryAwaitWithCancellationAsync<TSource, TKey>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, UniTask<TKey>> keySelector, IEqualityComparer<TKey> comparer, CancellationToken cancellationToken)
         {
-            var dict = new Dictionary<TKey, TSource>(comparer);
+            Dictionary<TKey, TSource> dict = new Dictionary<TKey, TSource>(comparer);
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
-                    var key = await keySelector(v, cancellationToken);
+                    TSource v = e.Current;
+                    TKey key = await keySelector(v, cancellationToken);
                     dict.Add(key, v);
                 }
             }
@@ -251,16 +251,16 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         internal static async UniTask<Dictionary<TKey, TElement>> ToDictionaryAwaitWithCancellationAsync<TSource, TKey, TElement>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, UniTask<TKey>> keySelector, Func<TSource, CancellationToken, UniTask<TElement>> elementSelector, IEqualityComparer<TKey> comparer, CancellationToken cancellationToken)
         {
-            var dict = new Dictionary<TKey, TElement>(comparer);
+            Dictionary<TKey, TElement> dict = new Dictionary<TKey, TElement>(comparer);
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
                 {
-                    var v = e.Current;
-                    var key = await keySelector(v, cancellationToken);
-                    var value = await elementSelector(v, cancellationToken);
+                    TSource v = e.Current;
+                    TKey key = await keySelector(v, cancellationToken);
+                    TElement value = await elementSelector(v, cancellationToken);
                     dict.Add(key, value);
                 }
             }

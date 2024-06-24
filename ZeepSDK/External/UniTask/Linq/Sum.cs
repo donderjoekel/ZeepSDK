@@ -324,7 +324,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int32 sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<int> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -347,7 +347,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int32 sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -370,7 +370,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int32 sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -393,7 +393,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int32 sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -416,7 +416,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int64 sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<long> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -439,7 +439,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int64 sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -462,7 +462,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int64 sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -485,7 +485,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int64 sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -508,7 +508,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Single sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<float> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -531,7 +531,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Single sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -554,7 +554,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Single sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -577,7 +577,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Single sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -600,7 +600,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Double sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<double> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -623,7 +623,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Double sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -646,7 +646,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Double sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -669,7 +669,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Double sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -692,7 +692,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Decimal sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<decimal> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -715,7 +715,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Decimal sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -738,7 +738,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Decimal sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -761,7 +761,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Decimal sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -784,7 +784,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int32? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<int?> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -807,7 +807,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int32? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -830,7 +830,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int32? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -853,7 +853,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int32? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -876,7 +876,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int64? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<long?> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -899,7 +899,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int64? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -922,7 +922,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int64? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -945,7 +945,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Int64? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -968,7 +968,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Single? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<float?> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -991,7 +991,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Single? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -1014,7 +1014,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Single? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -1037,7 +1037,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Single? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -1060,7 +1060,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Double? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<double?> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -1083,7 +1083,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Double? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -1106,7 +1106,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Double? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -1129,7 +1129,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Double? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -1152,7 +1152,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Decimal? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<decimal?> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -1175,7 +1175,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Decimal? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -1198,7 +1198,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Decimal? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -1221,7 +1221,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             Decimal? sum = default;
 
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())

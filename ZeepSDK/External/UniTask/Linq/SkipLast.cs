@@ -107,9 +107,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void MoveNextCore(object state)
             {
-                var self = (_SkipLast)state;
+                _SkipLast self = (_SkipLast)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out bool result))
                 {
                     if (result)
                     {
@@ -117,7 +117,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
                         {
                             self.continueNext = false;
 
-                            var deq = self.queue.Dequeue();
+                            TSource deq = self.queue.Dequeue();
                             self.Current = deq;
                             self.queue.Enqueue(self.enumerator.Current);
 

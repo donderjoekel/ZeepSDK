@@ -35,12 +35,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static UniTask Yield(CancellationToken cancellationToken)
         {
-            return new UniTask(YieldPromise.Create(PlayerLoopTiming.Update, cancellationToken, out var token), token);
+            return new UniTask(YieldPromise.Create(PlayerLoopTiming.Update, cancellationToken, out short token), token);
         }
 
         public static UniTask Yield(PlayerLoopTiming timing, CancellationToken cancellationToken)
         {
-            return new UniTask(YieldPromise.Create(timing, cancellationToken, out var token), token);
+            return new UniTask(YieldPromise.Create(timing, cancellationToken, out short token), token);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         /// </summary>
         public static UniTask NextFrame()
         {
-            return new UniTask(NextFramePromise.Create(PlayerLoopTiming.Update, CancellationToken.None, out var token), token);
+            return new UniTask(NextFramePromise.Create(PlayerLoopTiming.Update, CancellationToken.None, out short token), token);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         /// </summary>
         public static UniTask NextFrame(PlayerLoopTiming timing)
         {
-            return new UniTask(NextFramePromise.Create(timing, CancellationToken.None, out var token), token);
+            return new UniTask(NextFramePromise.Create(timing, CancellationToken.None, out short token), token);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         /// </summary>
         public static UniTask NextFrame(CancellationToken cancellationToken)
         {
-            return new UniTask(NextFramePromise.Create(PlayerLoopTiming.Update, cancellationToken, out var token), token);
+            return new UniTask(NextFramePromise.Create(PlayerLoopTiming.Update, cancellationToken, out short token), token);
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         /// </summary>
         public static UniTask NextFrame(PlayerLoopTiming timing, CancellationToken cancellationToken)
         {
-            return new UniTask(NextFramePromise.Create(timing, cancellationToken, out var token), token);
+            return new UniTask(NextFramePromise.Create(timing, cancellationToken, out short token), token);
         }
 
         [Obsolete("Use WaitForEndOfFrame(MonoBehaviour) instead or UniTask.Yield(PlayerLoopTiming.LastPostLateUpdate). Equivalent for coroutine's WaitForEndOfFrame requires MonoBehaviour(runner of Coroutine).")]
@@ -89,7 +89,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static UniTask WaitForEndOfFrame(MonoBehaviour coroutineRunner, CancellationToken cancellationToken = default)
         {
-            var source = WaitForEndOfFramePromise.Create(coroutineRunner, cancellationToken, out var token);
+            IUniTaskSource source = WaitForEndOfFramePromise.Create(coroutineRunner, cancellationToken, out short token);
             return new UniTask(source, token);
         }
 
@@ -118,24 +118,24 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 throw new ArgumentOutOfRangeException("Delay does not allow minus delayFrameCount. delayFrameCount:" + delayFrameCount);
             }
 
-            return new UniTask(DelayFramePromise.Create(delayFrameCount, delayTiming, cancellationToken, out var token), token);
+            return new UniTask(DelayFramePromise.Create(delayFrameCount, delayTiming, cancellationToken, out short token), token);
         }
 
         public static UniTask Delay(int millisecondsDelay, bool ignoreTimeScale = false, PlayerLoopTiming delayTiming = PlayerLoopTiming.Update, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var delayTimeSpan = TimeSpan.FromMilliseconds(millisecondsDelay);
+            TimeSpan delayTimeSpan = TimeSpan.FromMilliseconds(millisecondsDelay);
             return Delay(delayTimeSpan, ignoreTimeScale, delayTiming, cancellationToken);
         }
 
         public static UniTask Delay(TimeSpan delayTimeSpan, bool ignoreTimeScale = false, PlayerLoopTiming delayTiming = PlayerLoopTiming.Update, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var delayType = ignoreTimeScale ? DelayType.UnscaledDeltaTime : DelayType.DeltaTime;
+            DelayType delayType = ignoreTimeScale ? DelayType.UnscaledDeltaTime : DelayType.DeltaTime;
             return Delay(delayTimeSpan, delayType, delayTiming, cancellationToken);
         }
 
         public static UniTask Delay(int millisecondsDelay, DelayType delayType, PlayerLoopTiming delayTiming = PlayerLoopTiming.Update, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var delayTimeSpan = TimeSpan.FromMilliseconds(millisecondsDelay);
+            TimeSpan delayTimeSpan = TimeSpan.FromMilliseconds(millisecondsDelay);
             return Delay(delayTimeSpan, delayType, delayTiming, cancellationToken);
         }
 
@@ -158,16 +158,16 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             {
                 case DelayType.UnscaledDeltaTime:
                     {
-                        return new UniTask(DelayIgnoreTimeScalePromise.Create(delayTimeSpan, delayTiming, cancellationToken, out var token), token);
+                        return new UniTask(DelayIgnoreTimeScalePromise.Create(delayTimeSpan, delayTiming, cancellationToken, out short token), token);
                     }
                 case DelayType.Realtime:
                     {
-                        return new UniTask(DelayRealtimePromise.Create(delayTimeSpan, delayTiming, cancellationToken, out var token), token);
+                        return new UniTask(DelayRealtimePromise.Create(delayTimeSpan, delayTiming, cancellationToken, out short token), token);
                     }
                 case DelayType.DeltaTime:
                 default:
                     {
-                        return new UniTask(DelayPromise.Create(delayTimeSpan, delayTiming, cancellationToken, out var token), token);
+                        return new UniTask(DelayPromise.Create(delayTimeSpan, delayTiming, cancellationToken, out short token), token);
                     }
             }
         }
@@ -197,7 +197,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out YieldPromise result))
                 {
                     result = new YieldPromise();
                 }
@@ -287,7 +287,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out NextFramePromise result))
                 {
                     result = new NextFramePromise();
                 }
@@ -381,7 +381,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out WaitForEndOfFramePromise result))
                 {
                     result = new WaitForEndOfFramePromise();
                 }
@@ -492,7 +492,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out DelayFramePromise result))
                 {
                     result = new DelayFramePromise();
                 }
@@ -620,7 +620,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out DelayPromise result))
                 {
                     result = new DelayPromise();
                 }
@@ -731,7 +731,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out DelayIgnoreTimeScalePromise result))
                 {
                     result = new DelayIgnoreTimeScalePromise();
                 }
@@ -841,7 +841,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out DelayRealtimePromise result))
                 {
                     result = new DelayRealtimePromise();
                 }

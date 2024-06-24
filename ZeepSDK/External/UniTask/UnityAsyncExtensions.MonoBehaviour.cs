@@ -7,7 +7,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
     {
         public static UniTask StartAsyncCoroutine(this UnityEngine.MonoBehaviour monoBehaviour, Func<CancellationToken, UniTask> asyncCoroutine)
         {
-            var token = monoBehaviour.GetCancellationTokenOnDestroy();
+            CancellationToken token = monoBehaviour.GetCancellationTokenOnDestroy();
             return asyncCoroutine(token);
         }
     }

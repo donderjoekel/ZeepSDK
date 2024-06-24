@@ -47,6 +47,11 @@ public static class MultiplayerApi
     /// </summary>
     public static event PlayerLeftDelegate PlayerLeft;
 
+    /// <summary>
+    /// Is the player currently in an online game or not
+    /// </summary>
+    public static bool IsPlayingOnline => ZeepkistNetwork.IsConnectedToGame;
+
     internal static void Initialize()
     {
         PhotonZeepkist_OnConnectedToGame.ConnectedToGame += () => ConnectedToGame.InvokeSafe();
@@ -79,14 +84,15 @@ public static class MultiplayerApi
                 ZeepkistNetwork.CurrentLobby.NextPlaylistIndex = index;
             }
 
-            ZeepkistNetwork.NetworkClient?.SendPacket(new ChangeLobbyPlaylistPacket()
-            {
-                NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
-                IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
-                Playlist = ZeepkistNetwork.CurrentLobby.Playlist,
-                CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
-                NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
-            });
+            ZeepkistNetwork.NetworkClient?.SendPacket(
+                new ChangeLobbyPlaylistPacket()
+                {
+                    NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
+                    IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
+                    playlist_all = ZeepkistNetwork.CurrentLobby.Playlist,
+                    CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
+                    NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
+                });
 
             return index;
         }
@@ -106,14 +112,15 @@ public static class MultiplayerApi
         try
         {
             ZeepkistNetwork.CurrentLobby.NextPlaylistIndex = index;
-            ZeepkistNetwork.NetworkClient?.SendPacket(new ChangeLobbyPlaylistPacket()
-            {
-                NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
-                IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
-                Playlist = ZeepkistNetwork.CurrentLobby.Playlist,
-                CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
-                NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
-            });
+            ZeepkistNetwork.NetworkClient?.SendPacket(
+                new ChangeLobbyPlaylistPacket()
+                {
+                    NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
+                    IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
+                    playlist_all = ZeepkistNetwork.CurrentLobby.Playlist,
+                    CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
+                    NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
+                });
         }
         catch (Exception e)
         {
@@ -129,6 +136,7 @@ public static class MultiplayerApi
     /// <br/><br/>
     /// The level can be null due to not being connected, not playing an online match, or issues with downloading the level from the workshop
     /// </returns>
+    [Obsolete("Use LevelApi.CurrentLevel instead")]
     public static LevelScriptableObject GetCurrentLevel()
     {
         if (!ZeepkistNetwork.IsConnected || !ZeepkistNetwork.IsConnectedToGame)

@@ -40,7 +40,7 @@ namespace ZeepSDK.External.Newtonsoft.Json.UnityConverters.Helpers
 
             builder.AppendFormat(CultureInfo.InvariantCulture, "Path '{0}'", reader.Path);
 
-            var lineInfo = reader as IJsonLineInfo;
+            IJsonLineInfo lineInfo = reader as IJsonLineInfo;
             int lineNumber = default;
             int linePosition = default;
 
@@ -59,7 +59,7 @@ namespace ZeepSDK.External.Newtonsoft.Json.UnityConverters.Helpers
 
         private static StringBuilder CreateStringBuilderWithSpaceAfter(string message)
         {
-            var builder = new StringBuilder(message);
+            StringBuilder builder = new StringBuilder(message);
 
             if (message.EndsWith("."))
             {
@@ -84,13 +84,13 @@ namespace ZeepSDK.External.Newtonsoft.Json.UnityConverters.Helpers
         {
             // https://github.com/jilleJr/Newtonsoft.Json-for-Unity.Converters/issues/46
 
-            var str = reader.ReadAsString();
+            string str = reader.ReadAsString();
 
             if (string.IsNullOrEmpty(str))
             {
                 return null;
             }
-            else if (float.TryParse(str, NumberStyles.Any, CultureInfo.InvariantCulture, out var valueParsed))
+            else if (float.TryParse(str, NumberStyles.Any, CultureInfo.InvariantCulture, out float valueParsed))
             {
                 return valueParsed;
             }

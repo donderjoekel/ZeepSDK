@@ -14,7 +14,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(action, nameof(action));
 
-            var cts = new CancellationTokenDisposable();
+            CancellationTokenDisposable cts = new CancellationTokenDisposable();
             Subscribes.SubscribeCore(source, action, Subscribes.NopError, Subscribes.NopCompleted, cts.Token).Forget();
             return cts;
         }
@@ -24,7 +24,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(action, nameof(action));
 
-            var cts = new CancellationTokenDisposable();
+            CancellationTokenDisposable cts = new CancellationTokenDisposable();
             Subscribes.SubscribeCore(source, action, Subscribes.NopError, Subscribes.NopCompleted, cts.Token).Forget();
             return cts;
         }
@@ -34,7 +34,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(action, nameof(action));
 
-            var cts = new CancellationTokenDisposable();
+            CancellationTokenDisposable cts = new CancellationTokenDisposable();
             Subscribes.SubscribeCore(source, action, Subscribes.NopError, Subscribes.NopCompleted, cts.Token).Forget();
             return cts;
         }
@@ -68,7 +68,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(onNext, nameof(onNext));
 
-            var cts = new CancellationTokenDisposable();
+            CancellationTokenDisposable cts = new CancellationTokenDisposable();
             Subscribes.SubscribeAwaitCore(source, onNext, Subscribes.NopError, Subscribes.NopCompleted, cts.Token).Forget();
             return cts;
         }
@@ -86,7 +86,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(onNext, nameof(onNext));
 
-            var cts = new CancellationTokenDisposable();
+            CancellationTokenDisposable cts = new CancellationTokenDisposable();
             Subscribes.SubscribeAwaitCore(source, onNext, Subscribes.NopError, Subscribes.NopCompleted, cts.Token).Forget();
             return cts;
         }
@@ -107,7 +107,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(onNext, nameof(onNext));
             Error.ThrowArgumentNullException(onError, nameof(onError));
 
-            var cts = new CancellationTokenDisposable();
+            CancellationTokenDisposable cts = new CancellationTokenDisposable();
             Subscribes.SubscribeCore(source, onNext, onError, Subscribes.NopCompleted, cts.Token).Forget();
             return cts;
         }
@@ -118,7 +118,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(onNext, nameof(onNext));
             Error.ThrowArgumentNullException(onError, nameof(onError));
 
-            var cts = new CancellationTokenDisposable();
+            CancellationTokenDisposable cts = new CancellationTokenDisposable();
             Subscribes.SubscribeCore(source, onNext, onError, Subscribes.NopCompleted, cts.Token).Forget();
             return cts;
         }
@@ -147,7 +147,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(onNext, nameof(onNext));
             Error.ThrowArgumentNullException(onError, nameof(onError));
 
-            var cts = new CancellationTokenDisposable();
+            CancellationTokenDisposable cts = new CancellationTokenDisposable();
             Subscribes.SubscribeAwaitCore(source, onNext, onError, Subscribes.NopCompleted, cts.Token).Forget();
             return cts;
         }
@@ -167,7 +167,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(onNext, nameof(onNext));
             Error.ThrowArgumentNullException(onError, nameof(onError));
 
-            var cts = new CancellationTokenDisposable();
+            CancellationTokenDisposable cts = new CancellationTokenDisposable();
             Subscribes.SubscribeAwaitCore(source, onNext, onError, Subscribes.NopCompleted, cts.Token).Forget();
             return cts;
         }
@@ -189,7 +189,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(onNext, nameof(onNext));
             Error.ThrowArgumentNullException(onCompleted, nameof(onCompleted));
 
-            var cts = new CancellationTokenDisposable();
+            CancellationTokenDisposable cts = new CancellationTokenDisposable();
             Subscribes.SubscribeCore(source, onNext, Subscribes.NopError, onCompleted, cts.Token).Forget();
             return cts;
         }
@@ -200,7 +200,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(onNext, nameof(onNext));
             Error.ThrowArgumentNullException(onCompleted, nameof(onCompleted));
 
-            var cts = new CancellationTokenDisposable();
+            CancellationTokenDisposable cts = new CancellationTokenDisposable();
             Subscribes.SubscribeCore(source, onNext, Subscribes.NopError, onCompleted, cts.Token).Forget();
             return cts;
         }
@@ -229,7 +229,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(onNext, nameof(onNext));
             Error.ThrowArgumentNullException(onCompleted, nameof(onCompleted));
 
-            var cts = new CancellationTokenDisposable();
+            CancellationTokenDisposable cts = new CancellationTokenDisposable();
             Subscribes.SubscribeAwaitCore(source, onNext, Subscribes.NopError, onCompleted, cts.Token).Forget();
             return cts;
         }
@@ -249,7 +249,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(onNext, nameof(onNext));
             Error.ThrowArgumentNullException(onCompleted, nameof(onCompleted));
 
-            var cts = new CancellationTokenDisposable();
+            CancellationTokenDisposable cts = new CancellationTokenDisposable();
             Subscribes.SubscribeAwaitCore(source, onNext, Subscribes.NopError, onCompleted, cts.Token).Forget();
             return cts;
         }
@@ -270,7 +270,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(observer, nameof(observer));
 
-            var cts = new CancellationTokenDisposable();
+            CancellationTokenDisposable cts = new CancellationTokenDisposable();
             Subscribes.SubscribeCore(source, observer, cts.Token).Forget();
             return cts;
         }
@@ -306,7 +306,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         public static async UniTaskVoid SubscribeCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Action<TSource> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -345,7 +345,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         public static async UniTaskVoid SubscribeCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTaskVoid> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -384,7 +384,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         public static async UniTaskVoid SubscribeCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, UniTaskVoid> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -423,7 +423,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         public static async UniTaskVoid SubscribeCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, IObserver<TSource> observer, CancellationToken cancellationToken)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -456,7 +456,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         public static async UniTaskVoid SubscribeAwaitCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTask> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())
@@ -495,7 +495,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
         public static async UniTaskVoid SubscribeAwaitCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, UniTask> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())

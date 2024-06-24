@@ -15,14 +15,14 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 {
     public partial struct UniTask
     {
-<# for(var i = 2; i <= 15; i++ ) {
-    var range = Enumerable.Range(1, i);
-    var t = string.Join(", ", range.Select(x => "T" + x));
-    var args = string.Join(", ", range.Select(x => $"UniTask<T{x}> task{x}"));
-    var targs = string.Join(", ", range.Select(x => $"task{x}"));
-    var tresult = string.Join(", ", range.Select(x => $"task{x}.GetAwaiter().GetResult()"));
-    var tBool = string.Join(", ", range.Select(x => $"T{x} result{x}"));
-    var tfield = string.Join(", ", range.Select(x => $"self.t{x}"));
+<# for(int i = 2; i <= 15; i++ ) {
+    IEnumerable<int> range = Enumerable.Range(1, i);
+    string t = string.Join(", ", range.Select(x => "T" + x));
+    string args = string.Join(", ", range.Select(x => $"UniTask<T{x}> task{x}"));
+    string targs = string.Join(", ", range.Select(x => $"task{x}"));
+    string tresult = string.Join(", ", range.Select(x => $"task{x}.GetAwaiter().GetResult()"));
+    string tBool = string.Join(", ", range.Select(x => $"T{x} result{x}"));
+    string tfield = string.Join(", ", range.Select(x => $"self.t{x}"));
     Func<int, string> getResult = j => string.Join(", ", range.Select(x => (x == j) ? "result" : "default"));
 #>
         public static UniTask<(int winArgumentIndex, <#= tBool #>)> WhenAny<<#= t #>>(<#= args #>)
@@ -40,7 +40,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 TaskTracker.TrackActiveTask(this, 3);
 
                 this.completedCount = 0;
-<# for(var j = 1; j <= i; j++) { #>
+<# for(int j = 1; j <= i; j++) { #>
                 {
                     var awaiter = task<#= j #>.GetAwaiter();
 
@@ -62,7 +62,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 <# } #>
             }
 
-<# for(var j = 1; j <= i; j++) { #>
+<# for(int j = 1; j <= i; j++) { #>
             static void TryInvokeContinuationT<#= j #>(WhenAnyPromise<<#= t #>> self, in UniTask<T<#= j #>>.Awaiter awaiter)
             {
                 T<#= j #> result;

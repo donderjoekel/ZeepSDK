@@ -131,9 +131,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void MoveNextCore(object state)
             {
-                var self = (_SkipUntil)state;
+                _SkipUntil self = (_SkipUntil)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out bool result))
                 {
                     if (result)
                     {
@@ -168,7 +168,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void OnCanceled1(object state)
             {
-                var self = (_SkipUntil)state;
+                _SkipUntil self = (_SkipUntil)state;
                 self.completionSource.TrySetCanceled(self.cancellationToken1);
             }
 

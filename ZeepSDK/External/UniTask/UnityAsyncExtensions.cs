@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Threading;
 using UnityEngine;
 using ZeepSDK.External.Cysharp.Threading.Tasks.Internal;
+using Object = UnityEngine.Object;
 #if ENABLE_UNITYWEBREQUEST && (!UNITY_2019_1_OR_NEWER || UNITASK_WEBREQUEST_SUPPORT)
 using UnityEngine.Networking;
 #endif
@@ -35,7 +36,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             Error.ThrowArgumentNullException(asyncOperation, nameof(asyncOperation));
             if (cancellationToken.IsCancellationRequested) return UniTask.FromCanceled(cancellationToken);
             if (asyncOperation.isDone) return UniTask.CompletedTask;
-            return new UniTask(AsyncOperationConfiguredSource.Create(asyncOperation, timing, progress, cancellationToken, out var token), token);
+            return new UniTask(AsyncOperationConfiguredSource.Create(asyncOperation, timing, progress, cancellationToken, out short token), token);
         }
 
         public struct AsyncOperationAwaiter : ICriticalNotifyCompletion
@@ -107,7 +108,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out AsyncOperationConfiguredSource result))
                 {
                     result = new AsyncOperationConfiguredSource();
                 }
@@ -205,7 +206,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             Error.ThrowArgumentNullException(asyncOperation, nameof(asyncOperation));
             if (cancellationToken.IsCancellationRequested) return UniTask.FromCanceled<UnityEngine.Object>(cancellationToken);
             if (asyncOperation.isDone) return UniTask.FromResult(asyncOperation.asset);
-            return new UniTask<UnityEngine.Object>(ResourceRequestConfiguredSource.Create(asyncOperation, timing, progress, cancellationToken, out var token), token);
+            return new UniTask<UnityEngine.Object>(ResourceRequestConfiguredSource.Create(asyncOperation, timing, progress, cancellationToken, out short token), token);
         }
 
         public struct ResourceRequestAwaiter : ICriticalNotifyCompletion
@@ -227,13 +228,13 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 {
                     asyncOperation.completed -= continuationAction;
                     continuationAction = null;
-                    var result = asyncOperation.asset;
+                    Object result = asyncOperation.asset;
                     asyncOperation = null;
                     return result;
                 }
                 else
                 {
-                    var result = asyncOperation.asset;
+                    Object result = asyncOperation.asset;
                     asyncOperation = null;
                     return result;
                 }
@@ -281,7 +282,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource<UnityEngine.Object>.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out ResourceRequestConfiguredSource result))
                 {
                     result = new ResourceRequestConfiguredSource();
                 }

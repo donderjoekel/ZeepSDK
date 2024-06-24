@@ -38,10 +38,10 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
                     // Ensure Capacity
                     if (waitingList.Length == waitingListCount)
                     {
-                        var newLength = waitingListCount * 2;
+                        int newLength = waitingListCount * 2;
                         if ((uint)newLength > MaxArrayLength) newLength = MaxArrayLength;
 
-                        var newArray = new Action[newLength];
+                        Action[] newArray = new Action[newLength];
                         Array.Copy(waitingList, newArray, waitingListCount);
                         waitingList = newArray;
                     }
@@ -53,10 +53,10 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
                     // Ensure Capacity
                     if (actionList.Length == actionListCount)
                     {
-                        var newLength = actionListCount * 2;
+                        int newLength = actionListCount * 2;
                         if ((uint)newLength > MaxArrayLength) newLength = MaxArrayLength;
 
-                        var newArray = new Action[newLength];
+                        Action[] newArray = new Action[newLength];
                         Array.Copy(actionList, newArray, actionListCount);
                         actionList = newArray;
                     }
@@ -72,7 +72,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
         public int Clear()
         {
-            var rest = actionListCount + waitingListCount;
+            int rest = actionListCount + waitingListCount;
 
             actionListCount = 0;
             actionList = new Action[InitialSize];
@@ -187,7 +187,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
             for (int i = 0; i < actionListCount; i++)
             {
 
-                var action = actionList[i];
+                Action action = actionList[i];
                 actionList[i] = null;
                 try
                 {
@@ -206,7 +206,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
                     gate.Enter(ref lockTaken);
                     dequing = false;
 
-                    var swapTempActionList = actionList;
+                    Action[] swapTempActionList = actionList;
 
                     actionListCount = waitingListCount;
                     actionList = waitingList;

@@ -338,7 +338,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed1(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running1 = false;
 
                 try
@@ -393,7 +393,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed2(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running2 = false;
 
                 try
@@ -613,7 +613,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed1(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running1 = false;
 
                 try
@@ -668,7 +668,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed2(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running2 = false;
 
                 try
@@ -723,7 +723,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed3(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running3 = false;
 
                 try
@@ -972,7 +972,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed1(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running1 = false;
 
                 try
@@ -1027,7 +1027,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed2(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running2 = false;
 
                 try
@@ -1082,7 +1082,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed3(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running3 = false;
 
                 try
@@ -1137,7 +1137,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed4(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running4 = false;
 
                 try
@@ -1415,7 +1415,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed1(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running1 = false;
 
                 try
@@ -1470,7 +1470,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed2(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running2 = false;
 
                 try
@@ -1525,7 +1525,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed3(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running3 = false;
 
                 try
@@ -1580,7 +1580,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed4(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running4 = false;
 
                 try
@@ -1635,7 +1635,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed5(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running5 = false;
 
                 try
@@ -1942,7 +1942,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed1(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running1 = false;
 
                 try
@@ -1997,7 +1997,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed2(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running2 = false;
 
                 try
@@ -2052,7 +2052,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed3(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running3 = false;
 
                 try
@@ -2107,7 +2107,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed4(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running4 = false;
 
                 try
@@ -2162,7 +2162,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed5(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running5 = false;
 
                 try
@@ -2217,7 +2217,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed6(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running6 = false;
 
                 try
@@ -2553,7 +2553,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed1(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running1 = false;
 
                 try
@@ -2608,7 +2608,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed2(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running2 = false;
 
                 try
@@ -2663,7 +2663,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed3(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running3 = false;
 
                 try
@@ -2718,7 +2718,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed4(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running4 = false;
 
                 try
@@ -2773,7 +2773,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed5(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running5 = false;
 
                 try
@@ -2828,7 +2828,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed6(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running6 = false;
 
                 try
@@ -2883,7 +2883,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed7(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running7 = false;
 
                 try
@@ -3248,7 +3248,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed1(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running1 = false;
 
                 try
@@ -3303,7 +3303,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed2(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running2 = false;
 
                 try
@@ -3358,7 +3358,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed3(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running3 = false;
 
                 try
@@ -3413,7 +3413,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed4(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running4 = false;
 
                 try
@@ -3468,7 +3468,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed5(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running5 = false;
 
                 try
@@ -3523,7 +3523,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed6(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running6 = false;
 
                 try
@@ -3578,7 +3578,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed7(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running7 = false;
 
                 try
@@ -3633,7 +3633,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed8(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running8 = false;
 
                 try
@@ -4027,7 +4027,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed1(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running1 = false;
 
                 try
@@ -4082,7 +4082,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed2(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running2 = false;
 
                 try
@@ -4137,7 +4137,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed3(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running3 = false;
 
                 try
@@ -4192,7 +4192,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed4(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running4 = false;
 
                 try
@@ -4247,7 +4247,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed5(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running5 = false;
 
                 try
@@ -4302,7 +4302,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed6(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running6 = false;
 
                 try
@@ -4357,7 +4357,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed7(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running7 = false;
 
                 try
@@ -4412,7 +4412,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed8(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running8 = false;
 
                 try
@@ -4467,7 +4467,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed9(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running9 = false;
 
                 try
@@ -4890,7 +4890,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed1(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running1 = false;
 
                 try
@@ -4945,7 +4945,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed2(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running2 = false;
 
                 try
@@ -5000,7 +5000,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed3(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running3 = false;
 
                 try
@@ -5055,7 +5055,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed4(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running4 = false;
 
                 try
@@ -5110,7 +5110,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed5(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running5 = false;
 
                 try
@@ -5165,7 +5165,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed6(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running6 = false;
 
                 try
@@ -5220,7 +5220,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed7(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running7 = false;
 
                 try
@@ -5275,7 +5275,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed8(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running8 = false;
 
                 try
@@ -5330,7 +5330,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed9(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running9 = false;
 
                 try
@@ -5385,7 +5385,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed10(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running10 = false;
 
                 try
@@ -5837,7 +5837,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed1(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running1 = false;
 
                 try
@@ -5892,7 +5892,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed2(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running2 = false;
 
                 try
@@ -5947,7 +5947,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed3(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running3 = false;
 
                 try
@@ -6002,7 +6002,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed4(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running4 = false;
 
                 try
@@ -6057,7 +6057,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed5(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running5 = false;
 
                 try
@@ -6112,7 +6112,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed6(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running6 = false;
 
                 try
@@ -6167,7 +6167,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed7(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running7 = false;
 
                 try
@@ -6222,7 +6222,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed8(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running8 = false;
 
                 try
@@ -6277,7 +6277,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed9(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running9 = false;
 
                 try
@@ -6332,7 +6332,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed10(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running10 = false;
 
                 try
@@ -6387,7 +6387,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed11(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running11 = false;
 
                 try
@@ -6868,7 +6868,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed1(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running1 = false;
 
                 try
@@ -6923,7 +6923,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed2(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running2 = false;
 
                 try
@@ -6978,7 +6978,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed3(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running3 = false;
 
                 try
@@ -7033,7 +7033,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed4(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running4 = false;
 
                 try
@@ -7088,7 +7088,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed5(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running5 = false;
 
                 try
@@ -7143,7 +7143,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed6(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running6 = false;
 
                 try
@@ -7198,7 +7198,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed7(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running7 = false;
 
                 try
@@ -7253,7 +7253,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed8(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running8 = false;
 
                 try
@@ -7308,7 +7308,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed9(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running9 = false;
 
                 try
@@ -7363,7 +7363,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed10(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running10 = false;
 
                 try
@@ -7418,7 +7418,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed11(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running11 = false;
 
                 try
@@ -7473,7 +7473,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed12(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running12 = false;
 
                 try
@@ -7983,7 +7983,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed1(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running1 = false;
 
                 try
@@ -8038,7 +8038,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed2(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running2 = false;
 
                 try
@@ -8093,7 +8093,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed3(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running3 = false;
 
                 try
@@ -8148,7 +8148,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed4(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running4 = false;
 
                 try
@@ -8203,7 +8203,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed5(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running5 = false;
 
                 try
@@ -8258,7 +8258,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed6(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running6 = false;
 
                 try
@@ -8313,7 +8313,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed7(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running7 = false;
 
                 try
@@ -8368,7 +8368,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed8(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running8 = false;
 
                 try
@@ -8423,7 +8423,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed9(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running9 = false;
 
                 try
@@ -8478,7 +8478,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed10(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running10 = false;
 
                 try
@@ -8533,7 +8533,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed11(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running11 = false;
 
                 try
@@ -8588,7 +8588,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed12(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running12 = false;
 
                 try
@@ -8643,7 +8643,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed13(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running13 = false;
 
                 try
@@ -9182,7 +9182,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed1(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running1 = false;
 
                 try
@@ -9237,7 +9237,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed2(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running2 = false;
 
                 try
@@ -9292,7 +9292,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed3(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running3 = false;
 
                 try
@@ -9347,7 +9347,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed4(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running4 = false;
 
                 try
@@ -9402,7 +9402,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed5(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running5 = false;
 
                 try
@@ -9457,7 +9457,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed6(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running6 = false;
 
                 try
@@ -9512,7 +9512,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed7(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running7 = false;
 
                 try
@@ -9567,7 +9567,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed8(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running8 = false;
 
                 try
@@ -9622,7 +9622,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed9(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running9 = false;
 
                 try
@@ -9677,7 +9677,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed10(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running10 = false;
 
                 try
@@ -9732,7 +9732,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed11(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running11 = false;
 
                 try
@@ -9787,7 +9787,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed12(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running12 = false;
 
                 try
@@ -9842,7 +9842,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed13(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running13 = false;
 
                 try
@@ -9897,7 +9897,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed14(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running14 = false;
 
                 try
@@ -10465,7 +10465,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed1(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running1 = false;
 
                 try
@@ -10520,7 +10520,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed2(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running2 = false;
 
                 try
@@ -10575,7 +10575,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed3(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running3 = false;
 
                 try
@@ -10630,7 +10630,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed4(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running4 = false;
 
                 try
@@ -10685,7 +10685,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed5(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running5 = false;
 
                 try
@@ -10740,7 +10740,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed6(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running6 = false;
 
                 try
@@ -10795,7 +10795,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed7(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running7 = false;
 
                 try
@@ -10850,7 +10850,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed8(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running8 = false;
 
                 try
@@ -10905,7 +10905,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed9(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running9 = false;
 
                 try
@@ -10960,7 +10960,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed10(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running10 = false;
 
                 try
@@ -11015,7 +11015,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed11(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running11 = false;
 
                 try
@@ -11070,7 +11070,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed12(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running12 = false;
 
                 try
@@ -11125,7 +11125,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed13(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running13 = false;
 
                 try
@@ -11180,7 +11180,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed14(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running14 = false;
 
                 try
@@ -11235,7 +11235,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void Completed15(object state)
             {
-                var self = (_CombineLatest)state;
+                _CombineLatest self = (_CombineLatest)state;
                 self.running15 = false;
 
                 try

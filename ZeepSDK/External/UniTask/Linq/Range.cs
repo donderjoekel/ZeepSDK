@@ -9,7 +9,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
         {
             if (count < 0) throw Error.ArgumentOutOfRange(nameof(count));
 
-            var end = (long)start + count - 1L;
+            long end = (long)start + count - 1L;
             if (end > int.MaxValue) throw Error.ArgumentOutOfRange(nameof(count));
 
             if (count == 0) UniTaskAsyncEnumerable.Empty<int>();

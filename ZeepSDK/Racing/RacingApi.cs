@@ -12,6 +12,9 @@ using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Racing;
 
+/// <summary>
+/// 
+/// </summary>
 [PublicAPI]
 public static class RacingApi
 {

@@ -25,7 +25,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
     {
         internal static async UniTask<bool> ContainsAsync<TSource>(IUniTaskAsyncEnumerable<TSource> source, TSource value, IEqualityComparer<TSource> comparer, CancellationToken cancellationToken)
         {
-            var e = source.GetAsyncEnumerator(cancellationToken);
+            IUniTaskAsyncEnumerator<TSource> e = source.GetAsyncEnumerator(cancellationToken);
             try
             {
                 while (await e.MoveNextAsync())

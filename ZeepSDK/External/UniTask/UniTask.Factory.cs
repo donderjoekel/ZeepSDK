@@ -373,7 +373,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             public UniTaskStatus GetStatus(short token)
             {
-                var f = Interlocked.Exchange(ref factory, null);
+                Func<UniTask> f = Interlocked.Exchange(ref factory, null);
                 if (f != null)
                 {
                     task = f();
@@ -417,7 +417,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             public UniTaskStatus GetStatus(short token)
             {
-                var f = Interlocked.Exchange(ref factory, null);
+                Func<UniTask<T>> f = Interlocked.Exchange(ref factory, null);
                 if (f != null)
                 {
                     task = f();
@@ -456,7 +456,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void CancellationCallback(object state)
             {
-                var self = (NeverPromise<T>)state;
+                NeverPromise<T> self = (NeverPromise<T>)state;
                 self.core.TrySetCanceled(self.cancellationToken);
             }
 

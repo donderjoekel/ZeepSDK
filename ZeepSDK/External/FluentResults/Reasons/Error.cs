@@ -138,7 +138,7 @@ namespace ZeepSDK.External.FluentResults
         /// </summary>
         public Error WithMetadata(Dictionary<string, object> metadata)
         {
-            foreach (var metadataItem in metadata)
+            foreach (KeyValuePair<string, object> metadataItem in metadata)
             {
                 Metadata.Add(metadataItem.Key, metadataItem.Value);
             }

@@ -18,7 +18,7 @@ namespace ZeepSDK.External.FluentResults
 
         public ReasonStringBuilder WithInfo(string label, string value)
         {
-            var infoString = value.ToLabelValueStringOrEmpty(label);
+            string infoString = value.ToLabelValueStringOrEmpty(label);
 
             if(!string.IsNullOrEmpty(infoString))
             {
@@ -30,7 +30,7 @@ namespace ZeepSDK.External.FluentResults
 
         public string Build()
         {
-            var reasonInfoText = _infos.Any()
+            string reasonInfoText = _infos.Any()
                 ? " with " + ReasonInfosToString(_infos)
                 : string.Empty;
 

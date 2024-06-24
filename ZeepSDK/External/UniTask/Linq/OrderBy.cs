@@ -460,7 +460,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
                         return;
                     }
 
-                    var sorter = parent.GetAsyncEnumerableSorter(null, cancellationToken);
+                    AsyncEnumerableSorter<TElement> sorter = parent.GetAsyncEnumerableSorter(null, cancellationToken);
                     map = await sorter.SortAsync(buffer, buffer.Length);
                     sorter = null;
 

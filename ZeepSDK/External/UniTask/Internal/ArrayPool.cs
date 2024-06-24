@@ -42,12 +42,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
                 return EmptyArray;
             }
 
-            var size = CalculateSize(minimumLength);
-            var index = GetQueueIndex(size);
+            int size = CalculateSize(minimumLength);
+            int index = GetQueueIndex(size);
             if (index != -1)
             {
-                var q = buckets[index];
-                var lockTaken = false;
+                MinimumQueue<T[]> q = buckets[index];
+                bool lockTaken = false;
                 try
                 {
                     locks[index].Enter(ref lockTaken);
@@ -73,7 +73,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
                 return;
             }
 
-            var index = GetQueueIndex(array.Length);
+            int index = GetQueueIndex(array.Length);
             if (index != -1)
             {
                 if (clearArray)
@@ -81,8 +81,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
                     Array.Clear(array, 0, array.Length);
                 }
 
-                var q = buckets[index];
-                var lockTaken = false;
+                MinimumQueue<T[]> q = buckets[index];
+                bool lockTaken = false;
 
                 try
                 {

@@ -15,7 +15,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         static void CancelCancellationTokenSourceState(object state)
         {
-            var cts = (CancellationTokenSource)state;
+            CancellationTokenSource cts = (CancellationTokenSource)state;
             cts.Cancel();
         }
 
@@ -36,7 +36,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static void RegisterRaiseCancelOnDestroy(this CancellationTokenSource cts, GameObject gameObject)
         {
-            var trigger = gameObject.GetAsyncDestroyTrigger();
+            AsyncDestroyTrigger trigger = gameObject.GetAsyncDestroyTrigger();
             trigger.CancellationToken.RegisterWithoutCaptureExecutionContext(CancelCancellationTokenSourceStateDelegate, cts);
         }
     }

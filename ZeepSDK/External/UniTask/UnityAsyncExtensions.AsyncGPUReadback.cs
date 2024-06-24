@@ -23,7 +23,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         public static UniTask<AsyncGPUReadbackRequest> ToUniTask(this AsyncGPUReadbackRequest asyncOperation, PlayerLoopTiming timing = PlayerLoopTiming.Update, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (asyncOperation.done) return UniTask.FromResult(asyncOperation);
-            return new UniTask<AsyncGPUReadbackRequest>(AsyncGPUReadbackRequestAwaiterConfiguredSource.Create(asyncOperation, timing, cancellationToken, out var token), token);
+            return new UniTask<AsyncGPUReadbackRequest>(AsyncGPUReadbackRequestAwaiterConfiguredSource.Create(asyncOperation, timing, cancellationToken, out short token), token);
         }
 
         sealed class AsyncGPUReadbackRequestAwaiterConfiguredSource : IUniTaskSource<AsyncGPUReadbackRequest>, IPlayerLoopItem, ITaskPoolNode<AsyncGPUReadbackRequestAwaiterConfiguredSource>
@@ -54,7 +54,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource<AsyncGPUReadbackRequest>.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out AsyncGPUReadbackRequestAwaiterConfiguredSource result))
                 {
                     result = new AsyncGPUReadbackRequestAwaiterConfiguredSource();
                 }

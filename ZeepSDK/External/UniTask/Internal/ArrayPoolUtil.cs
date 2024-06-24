@@ -22,8 +22,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
         {
             if (array.Length <= index)
             {
-                var newSize = array.Length * 2;
-                var newArray = pool.Rent((index < newSize) ? newSize : (index * 2));
+                int newSize = array.Length * 2;
+                T[] newArray = pool.Rent((index < newSize) ? newSize : (index * 2));
                 Array.Copy(array, 0, newArray, 0, array.Length);
 
                 pool.Return(array, clearArray: !RuntimeHelpersAbstraction.IsWellKnownNoReferenceContainsType<T>());
@@ -39,7 +39,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
                 return new RentArray<T>(array, array.Length, null);
             }
 
-            var defaultCount = 32;
+            int defaultCount = 32;
             if (source is ICollection<T> coll)
             {
                 if (coll.Count == 0)
@@ -48,8 +48,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
                 }
 
                 defaultCount = coll.Count;
-                var pool = ArrayPool<T>.Shared;
-                var buffer = pool.Rent(defaultCount);
+                ArrayPool<T> pool = ArrayPool<T>.Shared;
+                T[] buffer = pool.Rent(defaultCount);
                 coll.CopyTo(buffer, 0);
                 return new RentArray<T>(buffer, coll.Count, pool);
             }
@@ -64,11 +64,11 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
             }
 
             {
-                var pool = ArrayPool<T>.Shared;
+                ArrayPool<T> pool = ArrayPool<T>.Shared;
 
-                var index = 0;
-                var buffer = pool.Rent(defaultCount);
-                foreach (var item in source)
+                int index = 0;
+                T[] buffer = pool.Rent(defaultCount);
+                foreach (T item in source)
                 {
                     EnsureCapacity(ref buffer, index, pool);
                     buffer[index++] = item;

@@ -16,11 +16,11 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         /// </summary>
         public static UniTask<T> AsUniTask<T>(this Task<T> task, bool useCurrentSynchronizationContext = true)
         {
-            var promise = new UniTaskCompletionSource<T>();
+            UniTaskCompletionSource<T> promise = new UniTaskCompletionSource<T>();
 
             task.ContinueWith((x, state) =>
             {
-                var p = (UniTaskCompletionSource<T>)state;
+                UniTaskCompletionSource<T> p = (UniTaskCompletionSource<T>)state;
 
                 switch (x.Status)
                 {
@@ -46,11 +46,11 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         /// </summary>
         public static UniTask AsUniTask(this Task task, bool useCurrentSynchronizationContext = true)
         {
-            var promise = new UniTaskCompletionSource();
+            UniTaskCompletionSource promise = new UniTaskCompletionSource();
 
             task.ContinueWith((x, state) =>
             {
-                var p = (UniTaskCompletionSource)state;
+                UniTaskCompletionSource p = (UniTaskCompletionSource)state;
 
                 switch (x.Status)
                 {
@@ -89,7 +89,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 {
                     try
                     {
-                        var result = awaiter.GetResult();
+                        T result = awaiter.GetResult();
                         return Task.FromResult(result);
                     }
                     catch (Exception ex)
@@ -98,16 +98,16 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     }
                 }
 
-                var tcs = new TaskCompletionSource<T>();
+                TaskCompletionSource<T> tcs = new TaskCompletionSource<T>();
 
                 awaiter.SourceOnCompleted(state =>
                 {
-                    using (var tuple = (StateTuple<TaskCompletionSource<T>, UniTask<T>.Awaiter>)state)
+                    using (StateTuple<TaskCompletionSource<T>, UniTask<T>.Awaiter> tuple = (StateTuple<TaskCompletionSource<T>, UniTask<T>.Awaiter>)state)
                     {
-                        var (inTcs, inAwaiter) = tuple;
+                        (TaskCompletionSource<T> inTcs, UniTask<T>.Awaiter inAwaiter) = tuple;
                         try
                         {
-                            var result = inAwaiter.GetResult();
+                            T result = inAwaiter.GetResult();
                             inTcs.SetResult(result);
                         }
                         catch (Exception ex)
@@ -152,13 +152,13 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     }
                 }
 
-                var tcs = new TaskCompletionSource<object>();
+                TaskCompletionSource<object> tcs = new TaskCompletionSource<object>();
 
                 awaiter.SourceOnCompleted(state =>
                 {
-                    using (var tuple = (StateTuple<TaskCompletionSource<object>, UniTask.Awaiter>)state)
+                    using (StateTuple<TaskCompletionSource<object>, UniTask.Awaiter> tuple = (StateTuple<TaskCompletionSource<object>, UniTask.Awaiter>)state)
                     {
-                        var (inTcs, inAwaiter) = tuple;
+                        (TaskCompletionSource<object> inTcs, UniTask.Awaiter inAwaiter) = tuple;
                         try
                         {
                             inAwaiter.GetResult();
@@ -269,7 +269,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void CancellationCallback(object state)
             {
-                var self = (AttachExternalCancellationSource)state;
+                AttachExternalCancellationSource self = (AttachExternalCancellationSource)state;
                 self.core.TrySetCanceled(self.cancellationToken);
             }
 
@@ -327,7 +327,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void CancellationCallback(object state)
             {
-                var self = (AttachExternalCancellationSource<T>)state;
+                AttachExternalCancellationSource<T> self = (AttachExternalCancellationSource<T>)state;
                 self.core.TrySetCanceled(self.cancellationToken);
             }
 
@@ -371,8 +371,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static async UniTask Timeout(this UniTask task, TimeSpan timeout, DelayType delayType = DelayType.DeltaTime, PlayerLoopTiming timeoutCheckTiming = PlayerLoopTiming.Update, CancellationTokenSource taskCancellationTokenSource = null)
         {
-            var delayCancellationTokenSource = new CancellationTokenSource();
-            var timeoutTask = UniTask.Delay(timeout, delayType, timeoutCheckTiming, delayCancellationTokenSource.Token).SuppressCancellationThrow();
+            CancellationTokenSource delayCancellationTokenSource = new CancellationTokenSource();
+            UniTask<bool> timeoutTask = UniTask.Delay(timeout, delayType, timeoutCheckTiming, delayCancellationTokenSource.Token).SuppressCancellationThrow();
 
             int winArgIndex;
             bool taskResultIsCanceled;
@@ -412,8 +412,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static async UniTask<T> Timeout<T>(this UniTask<T> task, TimeSpan timeout, DelayType delayType = DelayType.DeltaTime, PlayerLoopTiming timeoutCheckTiming = PlayerLoopTiming.Update, CancellationTokenSource taskCancellationTokenSource = null)
         {
-            var delayCancellationTokenSource = new CancellationTokenSource();
-            var timeoutTask = UniTask.Delay(timeout, delayType, timeoutCheckTiming, delayCancellationTokenSource.Token).SuppressCancellationThrow();
+            CancellationTokenSource delayCancellationTokenSource = new CancellationTokenSource();
+            UniTask<bool> timeoutTask = UniTask.Delay(timeout, delayType, timeoutCheckTiming, delayCancellationTokenSource.Token).SuppressCancellationThrow();
 
             int winArgIndex;
             (bool IsCanceled, T Result) taskResult;
@@ -458,8 +458,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         /// </summary>
         public static async UniTask<bool> TimeoutWithoutException(this UniTask task, TimeSpan timeout, DelayType delayType = DelayType.DeltaTime, PlayerLoopTiming timeoutCheckTiming = PlayerLoopTiming.Update, CancellationTokenSource taskCancellationTokenSource = null)
         {
-            var delayCancellationTokenSource = new CancellationTokenSource();
-            var timeoutTask = UniTask.Delay(timeout, delayType, timeoutCheckTiming, delayCancellationTokenSource.Token).SuppressCancellationThrow();
+            CancellationTokenSource delayCancellationTokenSource = new CancellationTokenSource();
+            UniTask<bool> timeoutTask = UniTask.Delay(timeout, delayType, timeoutCheckTiming, delayCancellationTokenSource.Token).SuppressCancellationThrow();
 
             int winArgIndex;
             bool taskResultIsCanceled;
@@ -504,8 +504,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         /// </summary>
         public static async UniTask<(bool IsTimeout, T Result)> TimeoutWithoutException<T>(this UniTask<T> task, TimeSpan timeout, DelayType delayType = DelayType.DeltaTime, PlayerLoopTiming timeoutCheckTiming = PlayerLoopTiming.Update, CancellationTokenSource taskCancellationTokenSource = null)
         {
-            var delayCancellationTokenSource = new CancellationTokenSource();
-            var timeoutTask = UniTask.Delay(timeout, delayType, timeoutCheckTiming, delayCancellationTokenSource.Token).SuppressCancellationThrow();
+            CancellationTokenSource delayCancellationTokenSource = new CancellationTokenSource();
+            UniTask<bool> timeoutTask = UniTask.Delay(timeout, delayType, timeoutCheckTiming, delayCancellationTokenSource.Token).SuppressCancellationThrow();
 
             int winArgIndex;
             (bool IsCanceled, T Result) taskResult;
@@ -549,7 +549,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static void Forget(this UniTask task)
         {
-            var awaiter = task.GetAwaiter();
+            UniTask.Awaiter awaiter = task.GetAwaiter();
             if (awaiter.IsCompleted)
             {
                 try
@@ -565,7 +565,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             {
                 awaiter.SourceOnCompleted(state =>
                 {
-                    using (var t = (StateTuple<UniTask.Awaiter>)state)
+                    using (StateTuple<UniTask.Awaiter> t = (StateTuple<UniTask.Awaiter>)state)
                     {
                         try
                         {
@@ -619,7 +619,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static void Forget<T>(this UniTask<T> task)
         {
-            var awaiter = task.GetAwaiter();
+            UniTask<T>.Awaiter awaiter = task.GetAwaiter();
             if (awaiter.IsCompleted)
             {
                 try
@@ -635,7 +635,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             {
                 awaiter.SourceOnCompleted(state =>
                 {
-                    using (var t = (StateTuple<UniTask<T>.Awaiter>)state)
+                    using (StateTuple<UniTask<T>.Awaiter> t = (StateTuple<UniTask<T>.Awaiter>)state)
                     {
                         try
                         {
@@ -867,7 +867,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             {
                 try
                 {
-                    var value = await task;
+                    T value = await task;
                     current = value; // boxed if T is struct...
                     if (resultHandler != null)
                     {

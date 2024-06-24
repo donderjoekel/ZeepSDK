@@ -60,12 +60,12 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Triggers
         {
             if (called) return UniTask.CompletedTask;
 
-            var tcs = new UniTaskCompletionSource();
+            UniTaskCompletionSource tcs = new UniTaskCompletionSource();
 
             // OnDestroy = Called Cancel.
             CancellationToken.RegisterWithoutCaptureExecutionContext(state =>
             {
-                var tcs2 = (UniTaskCompletionSource)state;
+                UniTaskCompletionSource tcs2 = (UniTaskCompletionSource)state;
                 tcs2.TrySetResult();
             }, tcs);
 

@@ -130,7 +130,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void OnCanceled(object state)
             {
-                var self = (_Publish)state;
+                _Publish self = (_Publish)state;
                 self.completionSource.TrySetCanceled(self.cancellationToken);
                 self.DisposeAsync().Forget();
             }

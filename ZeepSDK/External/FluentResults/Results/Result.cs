@@ -56,12 +56,12 @@ namespace ZeepSDK.External.FluentResults
         /// <param name="bind">Transformation that may fail.</param>
         public Result<TNewValue> Bind<TNewValue>(Func<Result<TNewValue>> bind)
         {
-            var result = new Result<TNewValue>();
+            Result<TNewValue> result = new Result<TNewValue>();
             result.WithReasons(Reasons);
             
             if (IsSuccess)
             {
-                var converted = bind();
+                Result<TNewValue> converted = bind();
                 result.WithValue(converted.ValueOrDefault);
                 result.WithReasons(converted.Reasons);
             }
@@ -80,12 +80,12 @@ namespace ZeepSDK.External.FluentResults
         /// <param name="bind">Transformation that may fail.</param>
         public async Task<Result<TNewValue>> Bind<TNewValue>(Func<Task<Result<TNewValue>>> bind)
         {
-            var result = new Result<TNewValue>();
+            Result<TNewValue> result = new Result<TNewValue>();
             result.WithReasons(Reasons);
             
             if (IsSuccess)
             {
-                var converted = await bind();
+                Result<TNewValue> converted = await bind();
                 result.WithValue(converted.ValueOrDefault);
                 result.WithReasons(converted.Reasons);
             }
@@ -104,12 +104,12 @@ namespace ZeepSDK.External.FluentResults
         /// <param name="bind">Transformation that may fail.</param>
         public async ValueTask<Result<TNewValue>> Bind<TNewValue>(Func<ValueTask<Result<TNewValue>>> bind)
         {
-            var result = new Result<TNewValue>();
+            Result<TNewValue> result = new Result<TNewValue>();
             result.WithReasons(Reasons);
             
             if (IsSuccess)
             {
-                var converted = await bind();
+                Result<TNewValue> converted = await bind();
                 result.WithValue(converted.ValueOrDefault);
                 result.WithReasons(converted.Reasons);
             }
@@ -128,12 +128,12 @@ namespace ZeepSDK.External.FluentResults
         /// <param name="action">Action that may fail.</param>
         public Result Bind(Func<Result> action)
         {
-            var result = new Result();
+            Result result = new Result();
             result.WithReasons(Reasons);
             
             if (IsSuccess)
             {
-                var converted = action();
+                Result converted = action();
                 result.WithReasons(converted.Reasons);
             }
 
@@ -151,12 +151,12 @@ namespace ZeepSDK.External.FluentResults
         /// <param name="action">Action that may fail.</param>
         public async Task<Result> Bind(Func<Task<Result>> action)
         {
-            var result = new Result();
+            Result result = new Result();
             result.WithReasons(Reasons);
             
             if (IsSuccess)
             {
-                var converted = await action();
+                Result converted = await action();
                 result.WithReasons(converted.Reasons);
             }
 
@@ -174,12 +174,12 @@ namespace ZeepSDK.External.FluentResults
         /// <param name="action">Action that may fail.</param>
         public async ValueTask<Result> Bind(Func<ValueTask<Result>> action)
         {
-            var result = new Result();
+            Result result = new Result();
             result.WithReasons(Reasons);
             
             if (IsSuccess)
             {
-                var converted = await action();
+                Result converted = await action();
                 result.WithReasons(converted.Reasons);
             }
 
@@ -322,12 +322,12 @@ namespace ZeepSDK.External.FluentResults
         /// <param name="bind">Transformation that may fail.</param>
         public Result<TNewValue> Bind<TNewValue>(Func<TValue, Result<TNewValue>> bind)
         {
-            var result = new Result<TNewValue>();
+            Result<TNewValue> result = new Result<TNewValue>();
             result.WithReasons(Reasons);
             
             if (IsSuccess)
             {
-                var converted = bind(Value);
+                Result<TNewValue> converted = bind(Value);
                 result.WithValue(converted.ValueOrDefault);
                 result.WithReasons(converted.Reasons);
             }
@@ -346,12 +346,12 @@ namespace ZeepSDK.External.FluentResults
         /// <param name="bind">Transformation that may fail.</param>
         public async Task<Result<TNewValue>> Bind<TNewValue>(Func<TValue, Task<Result<TNewValue>>> bind)
         {
-            var result = new Result<TNewValue>();
+            Result<TNewValue> result = new Result<TNewValue>();
             result.WithReasons(Reasons);
             
             if (IsSuccess)
             {
-                var converted = await bind(Value);
+                Result<TNewValue> converted = await bind(Value);
                 result.WithValue(converted.ValueOrDefault);
                 result.WithReasons(converted.Reasons);
             }
@@ -370,12 +370,12 @@ namespace ZeepSDK.External.FluentResults
         /// <param name="bind">Transformation that may fail.</param>
         public async ValueTask<Result<TNewValue>> Bind<TNewValue>(Func<TValue, ValueTask<Result<TNewValue>>> bind)
         {
-            var result = new Result<TNewValue>();
+            Result<TNewValue> result = new Result<TNewValue>();
             result.WithReasons(Reasons);
             
             if (IsSuccess)
             {
-                var converted = await bind(Value);
+                Result<TNewValue> converted = await bind(Value);
                 result.WithValue(converted.ValueOrDefault);
                 result.WithReasons(converted.Reasons);
             }
@@ -394,12 +394,12 @@ namespace ZeepSDK.External.FluentResults
         /// <param name="action">Action that may fail.</param>
         public Result Bind(Func<TValue, Result> action)
         {
-            var result = new Result();
+            Result result = new Result();
             result.WithReasons(Reasons);
 
             if (IsSuccess)
             {
-                var converted = action(Value);
+                Result converted = action(Value);
                 result.WithReasons(converted.Reasons);
             }
 
@@ -417,12 +417,12 @@ namespace ZeepSDK.External.FluentResults
         /// <param name="action">Action that may fail.</param>
         public async Task<Result> Bind(Func<TValue, Task<Result>> action)
         {
-            var result = new Result();
+            Result result = new Result();
             result.WithReasons(Reasons);
 
             if (IsSuccess)
             {
-                var converted = await action(Value);
+                Result converted = await action(Value);
                 result.WithReasons(converted.Reasons);
             }
 
@@ -440,12 +440,12 @@ namespace ZeepSDK.External.FluentResults
         /// <param name="action">Action that may fail.</param>
         public async ValueTask<Result> Bind(Func<TValue, ValueTask<Result>> action)
         {
-            var result = new Result();
+            Result result = new Result();
             result.WithReasons(Reasons);
 
             if (IsSuccess)
             {
-                var converted = await action(Value);
+                Result converted = await action(Value);
                 result.WithReasons(converted.Reasons);
             }
 
@@ -454,8 +454,8 @@ namespace ZeepSDK.External.FluentResults
 
         public override string ToString()
         {
-            var baseString = base.ToString();
-            var valueString = ValueOrDefault.ToLabelValueStringOrEmpty(nameof(Value));
+            string baseString = base.ToString();
+            string valueString = ValueOrDefault.ToLabelValueStringOrEmpty(nameof(Value));
             return $"{baseString}, {valueString}";
         }
 

@@ -15,26 +15,26 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         public static UniTask.Awaiter GetAwaiter<T>(this T enumerator)
             where T : IEnumerator
         {
-            var e = (IEnumerator)enumerator;
+            IEnumerator e = (IEnumerator)enumerator;
             Error.ThrowArgumentNullException(e, nameof(enumerator));
-            return new UniTask(EnumeratorPromise.Create(e, PlayerLoopTiming.Update, CancellationToken.None, out var token), token).GetAwaiter();
+            return new UniTask(EnumeratorPromise.Create(e, PlayerLoopTiming.Update, CancellationToken.None, out short token), token).GetAwaiter();
         }
 
         public static UniTask WithCancellation(this IEnumerator enumerator, CancellationToken cancellationToken)
         {
             Error.ThrowArgumentNullException(enumerator, nameof(enumerator));
-            return new UniTask(EnumeratorPromise.Create(enumerator, PlayerLoopTiming.Update, cancellationToken, out var token), token);
+            return new UniTask(EnumeratorPromise.Create(enumerator, PlayerLoopTiming.Update, cancellationToken, out short token), token);
         }
 
         public static UniTask ToUniTask(this IEnumerator enumerator, PlayerLoopTiming timing = PlayerLoopTiming.Update, CancellationToken cancellationToken = default(CancellationToken))
         {
             Error.ThrowArgumentNullException(enumerator, nameof(enumerator));
-            return new UniTask(EnumeratorPromise.Create(enumerator, timing, cancellationToken, out var token), token);
+            return new UniTask(EnumeratorPromise.Create(enumerator, timing, cancellationToken, out short token), token);
         }
 
         public static UniTask ToUniTask(this IEnumerator enumerator, MonoBehaviour coroutineRunner)
         {
-            var source = AutoResetUniTaskCompletionSource.Create();
+            AutoResetUniTaskCompletionSource source = AutoResetUniTaskCompletionSource.Create();
             coroutineRunner.StartCoroutine(Core(enumerator, coroutineRunner, source));
             return source.Task;
         }
@@ -75,7 +75,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out EnumeratorPromise result))
                 {
                     result = new EnumeratorPromise();
                 }
@@ -198,7 +198,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             {
                 while (enumerator.MoveNext())
                 {
-                    var current = enumerator.Current;
+                    object current = enumerator.Current;
                     if (current == null)
                     {
                         yield return null;
@@ -237,7 +237,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     }
                     else if (current is IEnumerator e3)
                     {
-                        var e4 = ConsumeEnumerator(e3);
+                        IEnumerator e4 = ConsumeEnumerator(e3);
                         while (e4.MoveNext())
                         {
                             yield return null;
@@ -261,8 +261,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static IEnumerator UnwrapWaitForSeconds(WaitForSeconds waitForSeconds)
             {
-                var second = (float)waitForSeconds_Seconds.GetValue(waitForSeconds);
-                var elapsed = 0.0f;
+                float second = (float)waitForSeconds_Seconds.GetValue(waitForSeconds);
+                float elapsed = 0.0f;
                 while (true)
                 {
                     yield return null;

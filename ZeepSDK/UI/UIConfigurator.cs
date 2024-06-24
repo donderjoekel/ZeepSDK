@@ -30,7 +30,7 @@ internal class UIConfigurator : MonoBehaviour
     private const string ResetHandle =
         "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADZSURBVEhL7ZbhDYQgDEbxRmErVmFYGAWrNoZAKf2I5nLJvV8UaZ8FTdhKKe5NDkHOmaOniTF+ePgasMB7zyMbmACtTgCCheqEVbBWnTAJmuoUXnCsAh9yjUVjEqSUeHRCYT2jO6wdNA6i1igOYIt6BzF1YGew4IAPWXf0CILph6HQ57aC5eqjJuAtQvkLpnxJsPAtjVJagfLLWOjTh1sENaEsFgT3Wxgd9zKxe7kDu0OvTgy3qHaImnp+VJ2Y3OzE0g1K9fnNjpKVfP3pxe/fTY8OQggcPY5zO9a7a/F3f5AmAAAAAElFTkSuQmCC";
 
-    private static readonly Texture2D WhiteTexture = Texture2D.whiteTexture;
+    private static Texture2D WhiteTexture;
 
     private static ManualLogSource logger = LoggerFactory.GetLogger(typeof(UIConfigurator));
 
@@ -72,6 +72,8 @@ internal class UIConfigurator : MonoBehaviour
 
     private void Awake()
     {
+        WhiteTexture = Texture2D.whiteTexture;
+        
         DontDestroyOnLoad(gameObject);
         RegisterConfig();
         LoadSaveData();
@@ -81,26 +83,32 @@ internal class UIConfigurator : MonoBehaviour
 
     private void RegisterConfig()
     {
-        configEditModeKey = Plugin.Instance.Config.Bind("UI",
+        configEditModeKey = Plugin.Instance.Config.Bind(
+            "UI",
             "Toggle Edit Mode Key",
             KeyCode.Keypad8,
             "The key to toggle UI edit mode");
-        configNextCycleKey = Plugin.Instance.Config.Bind("UI",
+        configNextCycleKey = Plugin.Instance.Config.Bind(
+            "UI",
             "Cycle Next Key",
             KeyCode.Keypad6,
             "The key to cycle to the next UI element");
-        configPreviousCycleKey = Plugin.Instance.Config.Bind("UI",
+        configPreviousCycleKey = Plugin.Instance.Config.Bind(
+            "UI",
             "Cycle Previous Key",
             KeyCode.Keypad4,
             "The key to cycle to the previous UI element");
-        configResetAllButton = Plugin.Instance.Config.Bind("UI",
+        configResetAllButton = Plugin.Instance.Config.Bind(
+            "UI",
             "Reset All",
             true,
             "[Button] Reset All UI");
-        configBorderColor = Plugin.Instance.Config.Bind("UI",
+        configBorderColor = Plugin.Instance.Config.Bind(
+            "UI",
             "Border Color",
             "Red",
-            new ConfigDescription("Selected UI element color",
+            new ConfigDescription(
+                "Selected UI element color",
                 new AcceptableValueList<string>(ColorUtility.ColorDefinitions.Select(x => x.Name).ToArray())));
 
         configResetAllButton.SettingChanged += (sender, args) => ResetAll();
@@ -304,7 +312,7 @@ internal class UIConfigurator : MonoBehaviour
 
     private Vector2 ConvertPosition(Vector2 position)
     {
-        var screenPoint = RectTransformUtility.WorldToScreenPoint(null, position);
+        Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(null, position);
         return RectTransformUtility.ScreenPointToLocalPointInRectangle(
             currentRect.GetComponentInParent<Canvas>().GetComponent<RectTransform>(),
             screenPoint,

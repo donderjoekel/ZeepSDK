@@ -87,9 +87,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void MoveNextCore(object state)
             {
-                var self = (_Pairwise)state;
+                _Pairwise self = (_Pairwise)state;
 
-                if (self.TryGetResult(self.awaiter, out var result))
+                if (self.TryGetResult(self.awaiter, out bool result))
                 {
                     if (result)
                     {
@@ -101,7 +101,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
                         }
                         else
                         {
-                            var p = self.prev;
+                            TSource p = self.prev;
                             self.prev = self.enumerator.Current;
                             self.Current = (p, self.prev);
                             self.completionSource.TrySetResult(true);

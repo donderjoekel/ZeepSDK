@@ -52,9 +52,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
         {
             lock (arrayLock)
             {
-                var rest = 0;
+                int rest = 0;
 
-                for (var index = 0; index < loopItems.Length; index++)
+                for (int index = 0; index < loopItems.Length; index++)
                 {
                     if (loopItems[index] != null)
                     {
@@ -163,11 +163,11 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
             lock (arrayLock)
             {
-                var j = tail - 1;
+                int j = tail - 1;
 
                 for (int i = 0; i < loopItems.Length; i++)
                 {
-                    var action = loopItems[i];
+                    IPlayerLoopItem action = loopItems[i];
                     if (action != null)
                     {
                         try
@@ -195,7 +195,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
                     // find null, loop from tail
                     while (i < j)
                     {
-                        var fromTail = loopItems[j];
+                        IPlayerLoopItem fromTail = loopItems[j];
                         if (fromTail != null)
                         {
                             try

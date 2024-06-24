@@ -20,7 +20,7 @@ namespace ZeepSDK.External.FluentResults
         /// </summary>
         public static void Setup(Action<ResultSettingsBuilder> setupFunc)
         {
-            var settingsBuilder = new ResultSettingsBuilder();
+            ResultSettingsBuilder settingsBuilder = new ResultSettingsBuilder();
             setupFunc(settingsBuilder);
 
             Settings = settingsBuilder.Build();
@@ -39,7 +39,7 @@ namespace ZeepSDK.External.FluentResults
         /// </summary>
         public static Result Fail(IError error)
         {
-            var result = new Result();
+            Result result = new Result();
             result.WithError(error);
             return result;
         }
@@ -49,7 +49,7 @@ namespace ZeepSDK.External.FluentResults
         /// </summary>
         public static Result Fail(string errorMessage)
         {
-            var result = new Result();
+            Result result = new Result();
             result.WithError(Settings.ErrorFactory(errorMessage));
             return result;
         }
@@ -62,7 +62,7 @@ namespace ZeepSDK.External.FluentResults
             if (errorMessages == null)
                 throw new ArgumentNullException(nameof(errorMessages), "The list of error messages cannot be null");
             
-            var result = new Result();
+            Result result = new Result();
             result.WithErrors(errorMessages.Select(Settings.ErrorFactory));
             return result;
         }
@@ -75,7 +75,7 @@ namespace ZeepSDK.External.FluentResults
             if (errors == null)
                 throw new ArgumentNullException(nameof(errors), "The list of errors cannot be null");
 
-            var result = new Result();
+            Result result = new Result();
             result.WithErrors(errors);
             return result;
         }
@@ -85,7 +85,7 @@ namespace ZeepSDK.External.FluentResults
         /// </summary>
         public static Result<TValue> Ok<TValue>(TValue value)
         {
-            var result = new Result<TValue>();
+            Result<TValue> result = new Result<TValue>();
             result.WithValue(value);
             return result;
         }
@@ -95,7 +95,7 @@ namespace ZeepSDK.External.FluentResults
         /// </summary>
         public static Result<TValue> Fail<TValue>(IError error)
         {
-            var result = new Result<TValue>();
+            Result<TValue> result = new Result<TValue>();
             result.WithError(error);
             return result;
         }
@@ -105,7 +105,7 @@ namespace ZeepSDK.External.FluentResults
         /// </summary>
         public static Result<TValue> Fail<TValue>(string errorMessage)
         {
-            var result = new Result<TValue>();
+            Result<TValue> result = new Result<TValue>();
             result.WithError(Settings.ErrorFactory(errorMessage));
             return result;
         }
@@ -118,7 +118,7 @@ namespace ZeepSDK.External.FluentResults
             if (errorMessages == null)
                 throw new ArgumentNullException(nameof(errorMessages), "The list of error messages cannot be null");
             
-            var result = new Result<TValue>();
+            Result<TValue> result = new Result<TValue>();
             result.WithErrors(errorMessages.Select(Settings.ErrorFactory));
             return result;
         }
@@ -131,7 +131,7 @@ namespace ZeepSDK.External.FluentResults
             if (errors == null)
                 throw new ArgumentNullException(nameof(errors), "The list of errors cannot be null");
 
-            var result = new Result<TValue>();
+            Result<TValue> result = new Result<TValue>();
             result.WithErrors(errors);
             return result;
         }

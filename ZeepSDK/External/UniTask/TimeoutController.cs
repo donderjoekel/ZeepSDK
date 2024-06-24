@@ -17,7 +17,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         static void CancelCancellationTokenSourceState(object state)
         {
-            var cts = (CancellationTokenSource)state;
+            CancellationTokenSource cts = (CancellationTokenSource)state;
             cts.Cancel();
         }
 
@@ -76,8 +76,8 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                 timer = null;
             }
 
-            var useSource = (linkedSource != null) ? linkedSource : timeoutSource;
-            var token = useSource.Token;
+            CancellationTokenSource useSource = (linkedSource != null) ? linkedSource : timeoutSource;
+            CancellationToken token = useSource.Token;
             if (timer == null)
             {
                 // Timer complete => timeoutSource.Cancel() -> linkedSource will be canceled.

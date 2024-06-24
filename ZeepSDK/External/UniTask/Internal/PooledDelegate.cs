@@ -26,7 +26,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Action<T> Create(Action continuation)
         {
-            if (!pool.TryPop(out var item))
+            if (!pool.TryPop(out PooledDelegate<T> item))
             {
                 item = new PooledDelegate<T>();
             }
@@ -38,7 +38,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         void Run(T _)
         {
-            var call = continuation;
+            Action call = continuation;
             continuation = null;
             if (call != null)
             {

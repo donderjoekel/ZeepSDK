@@ -72,7 +72,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public UniTask<T> WaitAsync(CancellationToken cancellationToken = default)
         {
-            return new UniTask<T>(WaitAsyncSource.Create(this, cancellationToken, out var token), token);
+            return new UniTask<T>(WaitAsyncSource.Create(this, cancellationToken, out short token), token);
         }
 
         static bool isValueType;
@@ -111,7 +111,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource<T>.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out WaitAsyncSource result))
                 {
                     result = new WaitAsyncSource();
                 }
@@ -146,7 +146,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void CancellationCallback(object state)
             {
-                var self = (WaitAsyncSource)state;
+                WaitAsyncSource self = (WaitAsyncSource)state;
                 self.OnCanceled(self.cancellationToken);
             }
 
@@ -306,7 +306,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void CancellationCallback(object state)
             {
-                var self = (Enumerator)state;
+                Enumerator self = (Enumerator)state;
                 self.DisposeAsync().Forget();
             }
         }
@@ -345,7 +345,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
             {
                 while (await enumerator.MoveNextAsync())
                 {
-                    var value = enumerator.Current;
+                    T value = enumerator.Current;
                     this.latestValue = value;
                     triggerEvent.SetResult(value);
                 }
@@ -390,7 +390,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public UniTask<T> WaitAsync(CancellationToken cancellationToken = default)
         {
-            return new UniTask<T>(WaitAsyncSource.Create(this, cancellationToken, out var token), token);
+            return new UniTask<T>(WaitAsyncSource.Create(this, cancellationToken, out short token), token);
         }
 
         static bool isValueType;
@@ -429,7 +429,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     return AutoResetUniTaskCompletionSource<T>.CreateFromCanceled(cancellationToken, out token);
                 }
 
-                if (!pool.TryPop(out var result))
+                if (!pool.TryPop(out WaitAsyncSource result))
                 {
                     result = new WaitAsyncSource();
                 }
@@ -464,7 +464,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void CancellationCallback(object state)
             {
-                var self = (WaitAsyncSource)state;
+                WaitAsyncSource self = (WaitAsyncSource)state;
                 self.OnCanceled(self.cancellationToken);
             }
 
@@ -623,7 +623,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void CancellationCallback(object state)
             {
-                var self = (Enumerator)state;
+                Enumerator self = (Enumerator)state;
                 self.DisposeAsync().Forget();
             }
         }

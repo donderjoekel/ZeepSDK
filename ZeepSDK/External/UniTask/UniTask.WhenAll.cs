@@ -21,9 +21,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static UniTask<T[]> WhenAll<T>(IEnumerable<UniTask<T>> tasks)
         {
-            using (var span = ArrayPoolUtil.Materialize(tasks))
+            using (ArrayPoolUtil.RentArray<UniTask<T>> span = ArrayPoolUtil.Materialize(tasks))
             {
-                var promise = new WhenAllPromise<T>(span.Array, span.Length); // consumed array in constructor.
+                WhenAllPromise<T> promise = new WhenAllPromise<T>(span.Array, span.Length); // consumed array in constructor.
                 return new UniTask<T[]>(promise, 0);
             }
         }
@@ -40,9 +40,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static UniTask WhenAll(IEnumerable<UniTask> tasks)
         {
-            using (var span = ArrayPoolUtil.Materialize(tasks))
+            using (ArrayPoolUtil.RentArray<UniTask> span = ArrayPoolUtil.Materialize(tasks))
             {
-                var promise = new WhenAllPromise(span.Array, span.Length); // consumed array in constructor.
+                WhenAllPromise promise = new WhenAllPromise(span.Array, span.Length); // consumed array in constructor.
                 return new UniTask(promise, 0);
             }
         }
@@ -89,7 +89,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     {
                         awaiter.SourceOnCompleted(state =>
                         {
-                            using (var t = (StateTuple<WhenAllPromise<T>, UniTask<T>.Awaiter, int>)state)
+                            using (StateTuple<WhenAllPromise<T>, UniTask<T>.Awaiter, int> t = (StateTuple<WhenAllPromise<T>, UniTask<T>.Awaiter, int>)state)
                             {
                                 TryInvokeContinuation(t.Item1, t.Item2, t.Item3);
                             }
@@ -184,7 +184,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     {
                         awaiter.SourceOnCompleted(state =>
                         {
-                            using (var t = (StateTuple<WhenAllPromise, UniTask.Awaiter>)state)
+                            using (StateTuple<WhenAllPromise, Awaiter> t = (StateTuple<WhenAllPromise, UniTask.Awaiter>)state)
                             {
                                 TryInvokeContinuation(t.Item1, t.Item2);
                             }

@@ -49,18 +49,18 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
         {
             if (stackTrace == null) return "";
 
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             for (int i = 0; i < stackTrace.FrameCount; i++)
             {
-                var sf = stackTrace.GetFrame(i);
+                StackFrame sf = stackTrace.GetFrame(i);
 
-                var mb = sf.GetMethod();
+                MethodBase mb = sf.GetMethod();
 
                 if (IgnoreLine(mb)) continue;
                 if (IsAsync(mb))
                 {
                     sb.Append("async ");
-                    TryResolveStateMachineMethod(ref mb, out var decType);
+                    TryResolveStateMachineMethod(ref mb, out Type decType);
                 }
 
                 // return type
@@ -80,7 +80,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
                 if (mb.IsGenericMethod)
                 {
                     sb.Append("<");
-                    foreach (var item in mb.GetGenericArguments())
+                    foreach (Type item in mb.GetGenericArguments())
                     {
                         sb.Append(BeautifyType(item, true));
                     }
@@ -125,7 +125,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
         static bool IsAsync(MethodBase methodInfo)
         {
-            var declareType = methodInfo.DeclaringType;
+            Type declareType = methodInfo.DeclaringType;
             return typeof(IAsyncStateMachine).IsAssignableFrom(declareType);
         }
 
@@ -134,27 +134,27 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
         {
             declaringType = method.DeclaringType;
 
-            var parentType = declaringType.DeclaringType;
+            Type parentType = declaringType.DeclaringType;
             if (parentType == null)
             {
                 return false;
             }
 
-            var methods = parentType.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+            MethodInfo[] methods = parentType.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance | BindingFlags.DeclaredOnly);
             if (methods == null)
             {
                 return false;
             }
 
-            foreach (var candidateMethod in methods)
+            foreach (MethodInfo candidateMethod in methods)
             {
-                var attributes = candidateMethod.GetCustomAttributes<StateMachineAttribute>(false);
+                IEnumerable<StateMachineAttribute> attributes = candidateMethod.GetCustomAttributes<StateMachineAttribute>(false);
                 if (attributes == null)
                 {
                     continue;
                 }
 
-                foreach (var asma in attributes)
+                foreach (StateMachineAttribute asma in attributes)
                 {
                     if (asma.StateMachineType == declaringType)
                     {
@@ -172,7 +172,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
         static string BeautifyType(Type t, bool shortName)
         {
-            if (builtInTypeNames.TryGetValue(t, out var builtin))
+            if (builtInTypeNames.TryGetValue(t, out string builtin))
             {
                 return builtin;
             }
@@ -184,9 +184,9 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
             }
             if (!t.IsGenericType) return shortName ? t.Name : t.FullName.Replace("Cysharp.Threading.Tasks.Triggers.", "").Replace("Cysharp.Threading.Tasks.Internal.", "").Replace("Cysharp.Threading.Tasks.", "") ?? t.Name;
 
-            var innerFormat = string.Join(", ", t.GetGenericArguments().Select(x => BeautifyType(x, true)));
+            string innerFormat = string.Join(", ", t.GetGenericArguments().Select(x => BeautifyType(x, true)));
 
-            var genericType = t.GetGenericTypeDefinition().FullName;
+            string genericType = t.GetGenericTypeDefinition().FullName;
             if (genericType == "System.Threading.Tasks.Task`1")
             {
                 genericType = "Task";
@@ -197,7 +197,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
         static bool IgnoreLine(MethodBase methodInfo)
         {
-            var declareType = methodInfo.DeclaringType.FullName;
+            string declareType = methodInfo.DeclaringType.FullName;
             if (declareType == "System.Threading.ExecutionContext")
             {
                 return true;
@@ -232,15 +232,15 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
 
         static string AppendHyperLink(string path, string line)
         {
-            var fi = new FileInfo(path);
+            FileInfo fi = new FileInfo(path);
             if (fi.Directory == null)
             {
                 return fi.Name;
             }
             else
             {
-                var fname = fi.FullName.Replace(Path.DirectorySeparatorChar, '/').Replace(PlayerLoopHelper.ApplicationDataPath, "");
-                var withAssetsPath = "Assets/" + fname;
+                string fname = fi.FullName.Replace(Path.DirectorySeparatorChar, '/').Replace(PlayerLoopHelper.ApplicationDataPath, "");
+                string withAssetsPath = "Assets/" + fname;
                 return "<a href=\"" + withAssetsPath + "\" line=\"" + line + "\">" + withAssetsPath + ":" + line + "</a>";
             }
         }

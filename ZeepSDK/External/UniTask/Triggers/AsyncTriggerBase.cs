@@ -95,7 +95,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Triggers
 
             static void CancellationCallback(object state)
             {
-                var self = (AsyncTriggerEnumerator)state;
+                AsyncTriggerEnumerator self = (AsyncTriggerEnumerator)state;
                 self.DisposeAsync().Forget(); // sync
 
                 self.completionSource.TrySetCanceled(self.cancellationToken);
@@ -235,7 +235,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Triggers
 
         static void CancellationCallback(object state)
         {
-            var self = (AsyncTriggerHandler<T>)state;
+            AsyncTriggerHandler<T> self = (AsyncTriggerHandler<T>)state;
             self.Dispose();
 
             self.core.TrySetCanceled(self.cancellationToken);

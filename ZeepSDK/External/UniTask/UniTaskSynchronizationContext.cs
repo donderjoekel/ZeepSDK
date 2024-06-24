@@ -37,10 +37,10 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     // Ensure Capacity
                     if (waitingList.Length == waitingListCount)
                     {
-                        var newLength = waitingListCount * 2;
+                        int newLength = waitingListCount * 2;
                         if ((uint)newLength > MaxArrayLength) newLength = MaxArrayLength;
 
-                        var newArray = new Callback[newLength];
+                        Callback[] newArray = new Callback[newLength];
                         Array.Copy(waitingList, newArray, waitingListCount);
                         waitingList = newArray;
                     }
@@ -52,10 +52,10 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     // Ensure Capacity
                     if (actionList.Length == actionListCount)
                     {
-                        var newLength = actionListCount * 2;
+                        int newLength = actionListCount * 2;
                         if ((uint)newLength > MaxArrayLength) newLength = MaxArrayLength;
 
-                        var newArray = new Callback[newLength];
+                        Callback[] newArray = new Callback[newLength];
                         Array.Copy(actionList, newArray, actionListCount);
                         actionList = newArray;
                     }
@@ -103,7 +103,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             for (int i = 0; i < actionListCount; i++)
             {
-                var action = actionList[i];
+                Callback action = actionList[i];
                 actionList[i] = default;
                 action.Invoke();
             }
@@ -115,7 +115,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
                     gate.Enter(ref lockTaken);
                     dequing = false;
 
-                    var swapTempActionList = actionList;
+                    Callback[] swapTempActionList = actionList;
 
                     actionListCount = waitingListCount;
                     actionList = waitingList;

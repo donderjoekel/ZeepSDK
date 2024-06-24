@@ -200,13 +200,13 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
 
             static void MoveNextCore(object state)
             {
-                var self = (_Do)state;
+                _Do self = (_Do)state;
 
-                if (self.TryGetResultWithNotification(self.awaiter, out var result))
+                if (self.TryGetResultWithNotification(self.awaiter, out bool result))
                 {
                     if (result)
                     {
-                        var v = self.enumerator.Current;
+                        TSource v = self.enumerator.Current;
 
                         if (self.onNext != null)
                         {

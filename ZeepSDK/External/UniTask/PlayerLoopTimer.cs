@@ -52,7 +52,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public static PlayerLoopTimer StartNew(TimeSpan interval, bool periodic, DelayType delayType, PlayerLoopTiming playerLoopTiming, CancellationToken cancellationToken, Action<object> timerCallback, object state)
         {
-            var timer = Create(interval, periodic, delayType, playerLoopTiming, cancellationToken, timerCallback, state);
+            PlayerLoopTimer timer = Create(interval, periodic, delayType, playerLoopTiming, cancellationToken, timerCallback, state);
             timer.Restart();
             return timer;
         }

@@ -94,7 +94,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             {
                 if (sourceHasCurrent)
                 {
-                    var v = SourceCurrent;
+                    TSource v = SourceCurrent;
                     if (set.Add(v))
                     {
                         Current = v;
@@ -149,7 +149,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Linq
             {
                 if (sourceHasCurrent)
                 {
-                    var v = SourceCurrent;
+                    TSource v = SourceCurrent;
                     if (set.Add(keySelector(v)))
                     {
                         Current = v;

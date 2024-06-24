@@ -34,7 +34,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
         public virtual UniTask<T> ReadAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
-            if (this.TryRead(out var item))
+            if (this.TryRead(out T item))
             {
                 return UniTask.FromResult(item);
             }
@@ -46,7 +46,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
         {
             if (await WaitToReadAsync(cancellationToken))
             {
-                if (TryRead(out var item))
+                if (TryRead(out T item))
                 {
                     return item;
                 }
@@ -356,7 +356,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
             static void CancellationCallback(object state)
             {
-                var self = (SingleConsumerUnboundedChannelReader)state;
+                SingleConsumerUnboundedChannelReader self = (SingleConsumerUnboundedChannelReader)state;
                 self.SingalCancellation(self.cancellationToken);
             }
 
@@ -435,13 +435,13 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks
 
                 static void CancellationCallback1(object state)
                 {
-                    var self = (ReadAllAsyncEnumerable)state;
+                    ReadAllAsyncEnumerable self = (ReadAllAsyncEnumerable)state;
                     self.parent.SingalCancellation(self.cancellationToken1);
                 }
 
                 static void CancellationCallback2(object state)
                 {
-                    var self = (ReadAllAsyncEnumerable)state;
+                    ReadAllAsyncEnumerable self = (ReadAllAsyncEnumerable)state;
                     self.parent.SingalCancellation(self.cancellationToken2);
                 }
             }

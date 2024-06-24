@@ -44,7 +44,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static StateTuple<T1> Create(T1 item1)
         {
-            if (queue.TryDequeue(out var value))
+            if (queue.TryDequeue(out StateTuple<T1> value))
             {
                 value.Item1 = item1;
                 return value;
@@ -85,7 +85,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static StateTuple<T1, T2> Create(T1 item1, T2 item2)
         {
-            if (queue.TryDequeue(out var value))
+            if (queue.TryDequeue(out StateTuple<T1, T2> value))
             {
                 value.Item1 = item1;
                 value.Item2 = item2;
@@ -130,7 +130,7 @@ namespace ZeepSDK.External.Cysharp.Threading.Tasks.Internal
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static StateTuple<T1, T2, T3> Create(T1 item1, T2 item2, T3 item3)
         {
-            if (queue.TryDequeue(out var value))
+            if (queue.TryDequeue(out StateTuple<T1, T2, T3> value))
             {
                 value.Item1 = item1;
                 value.Item2 = item2;
