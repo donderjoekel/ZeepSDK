@@ -146,6 +146,42 @@ public static class MultiplayerApi</code></pre>
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ZeepSDK_Multiplayer_MultiplayerApi_IsPlayingOnline_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.IsPlayingOnline*"></a>
+
+  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_IsPlayingOnline" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.IsPlayingOnline">
+  IsPlayingOnline
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the player currently in an online game or not</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsPlayingOnline { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -154,7 +190,7 @@ public static class MultiplayerApi</code></pre>
 
   <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_AddLevelToPlaylist_ZeepSDK_Multiplayer_PlaylistItem_System_Boolean_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem,System.Boolean)">
   AddLevelToPlaylist(PlaylistItem, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a level to the playlist</p>
@@ -196,7 +232,7 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
   <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_GetCurrentLevel" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel">
   GetCurrentLevel()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the level that is currently being played</p>
@@ -204,7 +240,8 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static LevelScriptableObject GetCurrentLevel()</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use LevelApi.CurrentLevel instead&quot;)]
+public static LevelScriptableObject GetCurrentLevel()</code></pre>
   </div>
 
 
@@ -231,7 +268,7 @@ The level can be null due to not being connected, not playing an online match, o
 
   <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_SetNextLevelIndex_System_Int32_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex(System.Int32)">
   SetNextLevelIndex(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the level that should be played next</p>
