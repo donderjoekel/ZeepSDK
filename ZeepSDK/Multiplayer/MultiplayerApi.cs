@@ -136,6 +136,7 @@ public static class MultiplayerApi
     /// <br/><br/>
     /// The level can be null due to not being connected, not playing an online match, or issues with downloading the level from the workshop
     /// </returns>
+    [Obsolete("Use LevelApi.CurrentLevel instead")]
     public static LevelScriptableObject GetCurrentLevel()
     {
         if (!ZeepkistNetwork.IsConnected || !ZeepkistNetwork.IsConnectedToGame)
