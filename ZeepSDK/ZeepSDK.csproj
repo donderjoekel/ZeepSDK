@@ -5,7 +5,7 @@
         <AssemblyName>ZeepSDK</AssemblyName>
         <Description>ZeepSDK</Description>
         <Authors>TNRD</Authors>
-        <Version>1.31.3-alpha</Version>
+        <Version>1.31.0</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
         <Title>ZeepSDK</Title>
@@ -34,7 +34,7 @@
         <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all"/>
         <PackageReference Include="BepInEx.Core" Version="5.*"/>
         <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*"/>
-        <PackageReference Include="Zeepkist.GameLibs" Version="16.999.397-alpha"/>
+        <PackageReference Include="Zeepkist.GameLibs" Version="16.0.1392"/>
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
