@@ -24252,6 +24252,28 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Utilities.ColorUtility.FromName
   nameWithType: ColorUtility.FromName
+- uid: ZeepSDK.Utilities.ComponentCache
+  name: ComponentCache
+  href: api/ZeepSDK.Utilities.ComponentCache.html
+  commentId: T:ZeepSDK.Utilities.ComponentCache
+  fullName: ZeepSDK.Utilities.ComponentCache
+  nameWithType: ComponentCache
+- uid: ZeepSDK.Utilities.ComponentCache.Get*
+  name: Get
+  href: api/ZeepSDK.Utilities.ComponentCache.html#ZeepSDK_Utilities_ComponentCache_Get_
+  commentId: Overload:ZeepSDK.Utilities.ComponentCache.Get
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.ComponentCache.Get
+  nameWithType: ComponentCache.Get
+- uid: ZeepSDK.Utilities.ComponentCache.Get``1(System.Boolean)
+  name: Get<T>(bool)
+  href: api/ZeepSDK.Utilities.ComponentCache.html#ZeepSDK_Utilities_ComponentCache_Get__1_System_Boolean_
+  commentId: M:ZeepSDK.Utilities.ComponentCache.Get``1(System.Boolean)
+  name.vb: Get(Of T)(Boolean)
+  fullName: ZeepSDK.Utilities.ComponentCache.Get<T>(bool)
+  fullName.vb: ZeepSDK.Utilities.ComponentCache.Get(Of T)(Boolean)
+  nameWithType: ComponentCache.Get<T>(bool)
+  nameWithType.vb: ComponentCache.Get(Of T)(Boolean)
 - uid: ZeepSDK.Utilities.ListUtility
   name: ListUtility
   href: api/ZeepSDK.Utilities.ListUtility.html
