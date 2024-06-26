@@ -1,16 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BepInEx.Logging;
 using UnityEngine;
+using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Level;
 
 internal static class ZeepLevelParser
 {
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(ZeepLevelParser));
+
     public static ZeepLevel Parse(string[] lines)
     {
         if (lines.Length == 0)
+        {
+            _logger.LogWarning("Trying to parse an empty level");
             return null;
+        }
 
         ZeepLevel level = new();
         if (!ParseFirstLine(lines[0], level))
@@ -35,7 +42,10 @@ internal static class ZeepLevelParser
             string[] splits = line.Split(',');
 
             if (splits.Length != 3)
+            {
+                _logger.LogWarning("First line has invalid amount of splits");
                 return false;
+            }
 
             level.SceneName = splits[0];
             level.PlayerName = splits[1];
@@ -45,8 +55,8 @@ internal static class ZeepLevelParser
         }
         catch (Exception e)
         {
-            Debug.LogError("Error while parsing first line");
-            Debug.LogException(e);
+            _logger.LogError("Error while parsing first line");
+            _logger.LogError(e);
             return false;
         }
     }
@@ -58,7 +68,10 @@ internal static class ZeepLevelParser
             string[] splits = line.Split(',');
 
             if (splits.Length != 8)
+            {
+                _logger.LogWarning("Camera line has invalid amount of splits");
                 return false;
+            }
 
             level.CameraPosition = new Vector3(
                 float.Parse(splits[0]),
@@ -78,8 +91,8 @@ internal static class ZeepLevelParser
         }
         catch (Exception e)
         {
-            Debug.LogError("Error while parsing camera line");
-            Debug.LogException(e);
+            _logger.LogError("Error while parsing camera line");
+            _logger.LogError(e);
             return false;
         }
     }
@@ -91,7 +104,10 @@ internal static class ZeepLevelParser
             string[] splits = line.Split(',');
 
             if (splits.Length != 6)
+            {
+                _logger.LogWarning("Validation line has invalid amount of splits");
                 return false;
+            }
 
             if (float.TryParse(splits[0], out float validationTime))
             {
@@ -114,8 +130,8 @@ internal static class ZeepLevelParser
         }
         catch (Exception e)
         {
-            Debug.LogError("Error while parsing validation line");
-            Debug.LogException(e);
+            _logger.LogError("Error while parsing validation line");
+            _logger.LogError(e);
             return false;
         }
     }
@@ -126,11 +142,17 @@ internal static class ZeepLevelParser
 
         foreach (string line in lines)
         {
+            if (string.IsNullOrWhiteSpace(line))
+                continue;
+
             try
             {
                 string[] splits = line.Split(',');
                 if (splits.Length != 38)
+                {
+                    _logger.LogWarning($"Block line has invalid amount of splits: {splits.Length}; '{line}'");
                     return false;
+                }
 
                 ZeepBlock block = new();
 
@@ -159,8 +181,8 @@ internal static class ZeepLevelParser
             }
             catch (Exception e)
             {
-                Debug.LogError("Error while parsing block line");
-                Debug.LogException(e);
+                _logger.LogError("Error while parsing block line");
+                _logger.LogError(e);
                 return false;
             }
         }
