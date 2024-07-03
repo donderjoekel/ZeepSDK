@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -193,7 +193,7 @@ public static class MultiplayerApi</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds a level to the playlist</p>
+  <div class="markdown level1 summary"><p>Adds a level to the playlist without updating the server</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -228,11 +228,56 @@ public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNe
 
 
 
+  <a id="ZeepSDK_Multiplayer_MultiplayerApi_AddLevelToPlaylist_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist*"></a>
+
+  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_AddLevelToPlaylist_ZeepSDK_Multiplayer_PlaylistItem_System_Boolean_System_Boolean_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem,System.Boolean,System.Boolean)">
+  AddLevelToPlaylist(PlaylistItem, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a level to the playlist</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNext, bool updateServer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>playlistItem</code> <a class="xref" href="ZeepSDK.Multiplayer.PlaylistItem.html">PlaylistItem</a></dt>
+    <dd><p>The item to add</p>
+</dd>
+    <dt><code>setAsPlayNext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Should this item be the next one that will be played?</p>
+</dd>
+    <dt><code>updateServer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Should an update be sent to the server (should only be true for the last update you do!)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="ZeepSDK_Multiplayer_MultiplayerApi_GetCurrentLevel_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel*"></a>
 
   <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_GetCurrentLevel" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel">
   GetCurrentLevel()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the level that is currently being played</p>
@@ -268,7 +313,7 @@ The level can be null due to not being connected, not playing an online match, o
 
   <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_SetNextLevelIndex_System_Int32_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex(System.Int32)">
   SetNextLevelIndex(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the level that should be played next</p>

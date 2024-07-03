@@ -23279,6 +23279,15 @@ references:
   fullName.vb: ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem, Boolean)
   nameWithType: MultiplayerApi.AddLevelToPlaylist(PlaylistItem, bool)
   nameWithType.vb: MultiplayerApi.AddLevelToPlaylist(PlaylistItem, Boolean)
+- uid: ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem,System.Boolean,System.Boolean)
+  name: AddLevelToPlaylist(PlaylistItem, bool, bool)
+  href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_AddLevelToPlaylist_ZeepSDK_Multiplayer_PlaylistItem_System_Boolean_System_Boolean_
+  commentId: M:ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem,System.Boolean,System.Boolean)
+  name.vb: AddLevelToPlaylist(PlaylistItem, Boolean, Boolean)
+  fullName: ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem, bool, bool)
+  fullName.vb: ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem, Boolean, Boolean)
+  nameWithType: MultiplayerApi.AddLevelToPlaylist(PlaylistItem, bool, bool)
+  nameWithType.vb: MultiplayerApi.AddLevelToPlaylist(PlaylistItem, Boolean, Boolean)
 - uid: ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist*
   name: AddLevelToPlaylist
   href: api/ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_AddLevelToPlaylist_
