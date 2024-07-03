@@ -5,7 +5,7 @@
         <AssemblyName>ZeepSDK</AssemblyName>
         <Description>ZeepSDK</Description>
         <Authors>TNRD</Authors>
-        <Version>1.32.1</Version>
+        <Version>1.32.2</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
         <Title>ZeepSDK</Title>
@@ -40,4 +40,22 @@
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all"/>
     </ItemGroup>
+
+    <Target Name="MDB" AfterTargets="PostBuildEvent">
+        <Message Text="Generating MDB" Importance="high"/>
+        <Exec Command="&quot;C:\Program Files\Unity\Hub\Editor\2021.3.10f1\Editor\Data\MonoBleedingEdge\bin\mono.exe&quot; &quot;C:\Program Files\Unity\Hub\Editor\2021.3.10f1\Editor\Data\MonoBleedingEdge\lib\mono\4.5\pdb2mdb.exe&quot; $(TargetPath)"/>
+    </Target>
+
+    <Target Name="Package" AfterTargets="PostBuildEvent">
+        <Message Text="Packaging Plugin" Importance="high"/>
+        <ItemGroup>
+            <OutputFiles Include="$(TargetDir)ZeepSDK*" Exclude="$(TargetDir)ZeepSDK*.zip"/>
+        </ItemGroup>
+        <Copy SourceFiles="@(OutputFiles)" DestinationFolder="$(TargetDir)\Package"/>
+    </Target>
+
+    <Target Name="Compress" AfterTargets="PostBuildEvent">
+        <Message Text="Compressing Plugin" Importance="high"/>
+        <Exec Command="&quot;C:\Program Files\7-Zip\7z.exe&quot; a -tzip $(TargetDir)$(AssemblyName)-$(Version).zip $(TargetDir)Package\*"/>
+    </Target>
 </Project>

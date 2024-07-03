@@ -63,12 +63,24 @@ public static class MultiplayerApi
     }
 
     /// <summary>
-    /// Adds a level to the playlist
+    /// Adds a level to the playlist without updating the server
     /// </summary>
     /// <param name="playlistItem">The item to add</param>
     /// <param name="setAsPlayNext">Should this item be the next one that will be played?</param>
     [PublicAPI]
     public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNext)
+    {
+        return AddLevelToPlaylist(playlistItem, setAsPlayNext, false);
+    }
+
+    /// <summary>
+    /// Adds a level to the playlist
+    /// </summary>
+    /// <param name="playlistItem">The item to add</param>
+    /// <param name="setAsPlayNext">Should this item be the next one that will be played?</param>
+    /// <param name="updateServer">Should an update be sent to the server (should only be true for the last update you do!)</param>
+    [PublicAPI]
+    public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNext, bool updateServer)
     {
         try
         {
@@ -84,15 +96,18 @@ public static class MultiplayerApi
                 ZeepkistNetwork.CurrentLobby.NextPlaylistIndex = index;
             }
 
-            ZeepkistNetwork.NetworkClient?.SendPacket(
-                new ChangeLobbyPlaylistPacket()
-                {
-                    NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
-                    IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
-                    playlist_all = ZeepkistNetwork.CurrentLobby.Playlist,
-                    CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
-                    NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
-                });
+            if (updateServer)
+            {
+                ZeepkistNetwork.NetworkClient?.SendPacket(
+                    new ChangeLobbyPlaylistPacket()
+                    {
+                        NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
+                        IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
+                        playlist_all = ZeepkistNetwork.CurrentLobby.Playlist,
+                        CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
+                        NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
+                    });
+            }
 
             return index;
         }
