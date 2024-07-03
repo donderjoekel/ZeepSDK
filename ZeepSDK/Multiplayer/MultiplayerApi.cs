@@ -63,24 +63,12 @@ public static class MultiplayerApi
     }
 
     /// <summary>
-    /// Adds a level to the playlist without updating the server
+    /// Adds a level to the playlist. Once you're done adding levels, call <see cref="UpdateServerPlaylist"/> to update the server
     /// </summary>
     /// <param name="playlistItem">The item to add</param>
     /// <param name="setAsPlayNext">Should this item be the next one that will be played?</param>
     [PublicAPI]
     public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNext)
-    {
-        return AddLevelToPlaylist(playlistItem, setAsPlayNext, false);
-    }
-
-    /// <summary>
-    /// Adds a level to the playlist
-    /// </summary>
-    /// <param name="playlistItem">The item to add</param>
-    /// <param name="setAsPlayNext">Should this item be the next one that will be played?</param>
-    /// <param name="updateServer">Should an update be sent to the server (should only be true for the last update you do!)</param>
-    [PublicAPI]
-    public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNext, bool updateServer)
     {
         try
         {
@@ -96,25 +84,36 @@ public static class MultiplayerApi
                 ZeepkistNetwork.CurrentLobby.NextPlaylistIndex = index;
             }
 
-            if (updateServer)
-            {
-                ZeepkistNetwork.NetworkClient?.SendPacket(
-                    new ChangeLobbyPlaylistPacket()
-                    {
-                        NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
-                        IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
-                        playlist_all = ZeepkistNetwork.CurrentLobby.Playlist,
-                        CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
-                        NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
-                    });
-            }
-
             return index;
         }
         catch (Exception e)
         {
             logger.LogError($"Unhandled exception in {nameof(AddLevelToPlaylist)}: " + e);
             return -1;
+        }
+    }
+
+    /// <summary>
+    /// Updates the playlist on the server
+    /// </summary>
+    [PublicAPI]
+    public static void UpdateServerPlaylist()
+    {
+        try
+        {
+            ZeepkistNetwork.NetworkClient?.SendPacket(
+                new ChangeLobbyPlaylistPacket()
+                {
+                    NewTime = ZeepkistNetwork.CurrentLobby.RoundTime,
+                    IsRandom = ZeepkistNetwork.CurrentLobby.PlaylistRandom,
+                    playlist_all = ZeepkistNetwork.CurrentLobby.Playlist,
+                    CurrentIndex = ZeepkistNetwork.CurrentLobby.CurrentPlaylistIndex,
+                    NextIndex = ZeepkistNetwork.CurrentLobby.NextPlaylistIndex
+                });
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unabled exception in {nameof(UpdateServerPlaylist)}: " + e);
         }
     }
 
