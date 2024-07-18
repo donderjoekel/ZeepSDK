@@ -54,12 +54,17 @@ public static class LevelEditorApi
     public static event LevelSavedDelegate LevelSaved;
 
     /// <summary>
-    /// Boolean indicating whether or not the mouse input is currently being blocked
+    /// An event that is fired whenever the block selection changes
+    /// </summary>
+    public static event SelectionChangedDelegate SelectionChanged;
+
+    /// <summary>
+    /// Boolean indicating whether the mouse input is currently being blocked
     /// </summary>
     public static bool IsMouseInputBlocked => mouseInputBlockers.Count > 0;
 
     /// <summary>
-    /// Boolean indicating whether or not the keyboard input is currently being blocked
+    /// Boolean indicating whether the keyboard input is currently being blocked
     /// </summary>
     public static bool IsKeyboardInputBlocked => keyboardInputBlockers.Count > 0;
 
@@ -86,12 +91,25 @@ public static class LevelEditorApi
                 AddScheduledCustomFolders();
             }
 
+            ComponentCache.Get<LEV_Selection>().ThingsJustGotSelected.AddListener(HandleThingsJustGotSelected);
+            ComponentCache.Get<LEV_Selection>().ThingsJustGotDeselected.AddListener(HandleThingsJustGotDeselected);
+
             EnteredLevelEditor.InvokeSafe();
         };
 
         LEV_LevelEditorCentral_OnDestroy.PostfixEvent += () => ExitedLevelEditor.InvokeSafe();
         LEV_SaveLoad_ExternalLoad.PostfixEvent += () => LevelLoaded.InvokeSafe();
         LEV_SaveLoad_ExternalSaveFile.PostfixEvent += () => LevelSaved.InvokeSafe();
+    }
+
+    private static void HandleThingsJustGotSelected()
+    {
+        SelectionChanged.InvokeSafe(ComponentCache.Get<LEV_Selection>().list);
+    }
+
+    private static void HandleThingsJustGotDeselected()
+    {
+        SelectionChanged.InvokeSafe(ComponentCache.Get<LEV_Selection>().list);
     }
 
     /// <summary>

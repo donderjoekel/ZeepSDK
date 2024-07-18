@@ -1,4 +1,5 @@
-﻿using JetBrains.Annotations;
+﻿using System.Collections.Generic;
+using JetBrains.Annotations;
 
 #pragma warning disable CS1591
 
@@ -18,3 +19,6 @@ public delegate void LevelSavedDelegate();
 
 [PublicAPI]
 public delegate void LevelLoadedDelegate();
+
+[PublicAPI]
+public delegate void SelectionChangedDelegate(List<BlockProperties> selection);
