@@ -22977,6 +22977,12 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.LevelEditor.LevelEditorApi.RemoveFromSelection
   nameWithType: LevelEditorApi.RemoveFromSelection
+- uid: ZeepSDK.LevelEditor.LevelEditorApi.SelectionChanged
+  name: SelectionChanged
+  href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_SelectionChanged
+  commentId: E:ZeepSDK.LevelEditor.LevelEditorApi.SelectionChanged
+  fullName: ZeepSDK.LevelEditor.LevelEditorApi.SelectionChanged
+  nameWithType: LevelEditorApi.SelectionChanged
 - uid: ZeepSDK.LevelEditor.LevelEditorApi.UnblockKeyboardInput(System.Object)
   name: UnblockKeyboardInput(object)
   href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_UnblockKeyboardInput_System_Object_
@@ -23021,6 +23027,12 @@ references:
   commentId: T:ZeepSDK.LevelEditor.LevelSavedDelegate
   fullName: ZeepSDK.LevelEditor.LevelSavedDelegate
   nameWithType: LevelSavedDelegate
+- uid: ZeepSDK.LevelEditor.SelectionChangedDelegate
+  name: SelectionChangedDelegate
+  href: api/ZeepSDK.LevelEditor.SelectionChangedDelegate.html
+  commentId: T:ZeepSDK.LevelEditor.SelectionChangedDelegate
+  fullName: ZeepSDK.LevelEditor.SelectionChangedDelegate
+  nameWithType: SelectionChangedDelegate
 - uid: ZeepSDK.Messaging
   name: ZeepSDK.Messaging
   href: api/ZeepSDK.Messaging.html
