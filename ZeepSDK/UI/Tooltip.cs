@@ -8,7 +8,7 @@ namespace ZeepSDK.UI;
 internal class Tooltip : MonoBehaviour
 {
     private const float FadeDuration = 0.1f;
-    private const float Opacity = 0.75f;
+    private const float Opacity = 0.9f;
 
     private RectTransform _canvasTransform;
     private RectTransform _transform;
@@ -24,7 +24,7 @@ internal class Tooltip : MonoBehaviour
         _transform.sizeDelta = new Vector2(200, 80);
 
         Image image = GetComponent<Image>();
-        image.color = new Color(0, 0, 0, 0.75f);
+        image.color = new Color(0, 0, 0, Opacity);
 
         _canvasGroup = GetComponent<CanvasGroup>();
         _canvasGroup.alpha = 0;
