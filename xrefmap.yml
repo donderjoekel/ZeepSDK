@@ -24172,6 +24172,22 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.UI.UIApi.AddToConfigurator
   nameWithType: UIApi.AddToConfigurator
+- uid: ZeepSDK.UI.UIApi.AddTooltip(UnityEngine.GameObject,System.String)
+  name: AddTooltip(GameObject, string)
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_AddTooltip_UnityEngine_GameObject_System_String_
+  commentId: M:ZeepSDK.UI.UIApi.AddTooltip(UnityEngine.GameObject,System.String)
+  name.vb: AddTooltip(GameObject, String)
+  fullName: ZeepSDK.UI.UIApi.AddTooltip(UnityEngine.GameObject, string)
+  fullName.vb: ZeepSDK.UI.UIApi.AddTooltip(UnityEngine.GameObject, String)
+  nameWithType: UIApi.AddTooltip(GameObject, string)
+  nameWithType.vb: UIApi.AddTooltip(GameObject, String)
+- uid: ZeepSDK.UI.UIApi.AddTooltip*
+  name: AddTooltip
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_AddTooltip_
+  commentId: Overload:ZeepSDK.UI.UIApi.AddTooltip
+  isSpec: "True"
+  fullName: ZeepSDK.UI.UIApi.AddTooltip
+  nameWithType: UIApi.AddTooltip
 - uid: ZeepSDK.UI.UIApi.RemoveFromConfigurator(UnityEngine.RectTransform)
   name: RemoveFromConfigurator(RectTransform)
   href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_RemoveFromConfigurator_UnityEngine_RectTransform_
