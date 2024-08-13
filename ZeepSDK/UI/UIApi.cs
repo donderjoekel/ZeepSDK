@@ -132,12 +132,17 @@ public static class UIApi
     /// </summary>
     public static void AddTooltip(GameObject gameObject, string text)
     {
+        CreateTooltip();
         gameObject.AddComponent<Tooltipper>().Initialize(text);
     }
 
     private static void CreateTooltip()
     {
+        if (_tooltip != null)
+            return;
+
         GameObject canvas = new("Tooltip Canvas", typeof(RectTransform));
+        Object.DontDestroyOnLoad(canvas);
         Canvas tooltipCanvas = canvas.AddComponent<Canvas>();
         tooltipCanvas.sortingOrder = short.MaxValue; // Internally sortingOrder is a signed short, not an int
         tooltipCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
