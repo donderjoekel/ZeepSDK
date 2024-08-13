@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using BepInEx.Logging;
 using UnityEngine;
+using UnityEngine.UI;
 using ZeepSDK.Extensions;
 using ZeepSDK.UI.Patches;
 using ZeepSDK.Utilities;
@@ -14,10 +15,12 @@ public static class UIApi
 {
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(UIApi));
     private static UIConfigurator uiConfigurator;
+    private static Tooltip _tooltip;
 
     internal static void Initialize(GameObject gameObject)
     {
         uiConfigurator = gameObject.AddComponent<UIConfigurator>();
+        CreateTooltip();
 
         OnlineChatUI_Awake.Awake += OnOnlineChatUIAwake;
         OnlineGameplayUI_Awake.Awake += OnOnlineGameplayUIAwake;
@@ -121,5 +124,49 @@ public static class UIApi
     public static void RemoveFromConfigurator(RectTransform rectTransform)
     {
         uiConfigurator.Remove(rectTransform);
+    }
+
+    /// <summary>
+    /// Adds a tooltip to the game object with the specified text
+    /// The tooltip will show up when the mouse is over the game object
+    /// </summary>
+    public static void AddTooltip(GameObject gameObject, string text)
+    {
+        gameObject.AddComponent<Tooltipper>().Initialize(text);
+    }
+
+    private static void CreateTooltip()
+    {
+        GameObject canvas = new("Tooltip Canvas", typeof(RectTransform));
+        Canvas tooltipCanvas = canvas.AddComponent<Canvas>();
+        tooltipCanvas.sortingOrder = short.MaxValue; // Internally sortingOrder is a signed short, not an int
+        tooltipCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+
+        CanvasScaler scaler = canvas.AddComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = new Vector2(1920, 1080);
+        scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
+        scaler.matchWidthOrHeight = 1;
+
+        GameObject tooltipHolder = new(
+            "Tooltip",
+            typeof(RectTransform),
+            typeof(Image),
+            typeof(CanvasGroup),
+            typeof(VerticalLayoutGroup),
+            typeof(ContentSizeFitter),
+            typeof(Tooltip));
+        _tooltip = tooltipHolder.GetComponent<Tooltip>();
+        _tooltip.transform.SetParent(canvas.transform);
+    }
+
+    internal static void ShowTooltip(string text)
+    {
+        _tooltip.Show(text);
+    }
+
+    internal static void HideTooltip()
+    {
+        _tooltip.Hide();
     }
 }
