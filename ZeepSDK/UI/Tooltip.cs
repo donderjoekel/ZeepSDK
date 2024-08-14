@@ -10,6 +10,10 @@ internal class Tooltip : MonoBehaviour
     private const float FadeDuration = 0.1f;
     private const float Opacity = 0.9f;
 
+    private readonly Vector3[] _canvasCorners = new Vector3[4];
+    private readonly Vector3[] _tooltipCorners = new Vector3[4];
+
+    private bool _first = true;
     private RectTransform _canvasTransform;
     private RectTransform _transform;
     private TextMeshProUGUI _text;
@@ -84,16 +88,38 @@ internal class Tooltip : MonoBehaviour
             null,
             out Vector2 localPoint);
 
+        _canvasTransform.GetWorldCorners(_canvasCorners);
+        _transform.GetWorldCorners(_tooltipCorners);
+
         if (!success) return;
 
-        localPoint.x += 24;
+        Rect canvasRect = new Rect(
+            _canvasCorners[0].x,
+            _canvasCorners[0].y,
+            _canvasCorners[2].x,
+            _canvasCorners[2].y);
+
+        localPoint.x += 24 * (1 - _transform.pivot.x);
         localPoint.y -= 24;
         _transform.anchoredPosition = localPoint;
+
+        if (_first)
+        {
+            _first = false;
+            return;
+        }
+
+        if (!canvasRect.Contains(_tooltipCorners[0]) || !canvasRect.Contains(_tooltipCorners[2]))
+        {
+            _transform.pivot = new Vector2(1 - _transform.pivot.x, 1);
+        }
     }
 
     public void Show(string text)
     {
+        _first = true;
         _text.text = text;
+        _transform.pivot = new Vector2(0, 1);
         StopAllCoroutines();
         StartCoroutine(FadeCanvasGroup(0, Opacity, FadeDuration));
     }

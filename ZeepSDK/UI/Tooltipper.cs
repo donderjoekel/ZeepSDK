@@ -17,6 +17,14 @@ internal class Tooltipper : MonoBehaviour, IPointerEnterHandler, IPointerMoveHan
         _text = text;
     }
 
+    private void OnDisable()
+    {
+        if (_shownTooltip)
+        {
+            UIApi.HideTooltip();
+        }
+    }
+
     private void Update()
     {
         if (!_isOver || _shownTooltip)
