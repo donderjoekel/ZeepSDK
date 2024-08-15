@@ -14,6 +14,7 @@ namespace ZeepSDK.Level;
 [PublicAPI]
 public static class LevelApi
 {
+    private const int PresentBlockID = 2264;
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(LevelApi));
     private static readonly Vector3Comparer _vector3Comparer = new();
     private static readonly IntComparer _intSequenceComparer = new();
@@ -52,7 +53,9 @@ public static class LevelApi
         inputBuilder.AppendLine(zeepLevel.Skybox.ToString());
         inputBuilder.AppendLine(zeepLevel.Ground.ToString());
 
-        List<ZeepBlock> orderedBlocks = zeepLevel.Blocks.OrderBy(x => x.Id)
+        List<ZeepBlock> orderedBlocks = zeepLevel.Blocks
+            .Where(x => x.Id != PresentBlockID)
+            .OrderBy(x => x.Id)
             .ThenBy(x => x.Position, _vector3Comparer)
             .ThenBy(x => x.Euler, _vector3Comparer)
             .ThenBy(x => x.Scale, _vector3Comparer)
