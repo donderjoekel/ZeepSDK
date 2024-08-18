@@ -75,6 +75,11 @@ public static class RacingApi
     /// </summary>
     public static event QuickResetDelegate QuickReset;
 
+    /// <summary>
+    /// An event that is fired when the player quits the game through the pause menu
+    /// </summary>
+    public static event QuitDelegate Quit;
+
     internal static void Initialize(GameObject gameObject)
     {
         ReadyToReset_HeyYouHitATrigger.TriggerCheckpoint += time => PassedCheckpoint.InvokeSafe(time);
@@ -86,6 +91,7 @@ public static class RacingApi
         GameMaster_ReleaseTheZeepkists.Released += () => RoundStarted.InvokeSafe();
         DamageWheel_KillWheel.KillWheel += () => WheelBroken.InvokeSafe();
         GameMaster_StartLevelFirstTime.StartLevelFirstTime += () => LevelLoaded.InvokeSafe();
+        PauseMenuUI_OnQuit.OnQuit += () => Quit.InvokeSafe();
         GameMaster_RestartLevel.RestartLevel += OnRestartLevel;
         ZeepkistNetwork.LobbyGameStateChanged += () =>
         {

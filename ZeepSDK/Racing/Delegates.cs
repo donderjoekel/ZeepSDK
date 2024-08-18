@@ -37,3 +37,5 @@ public delegate void LevelLoadedDelegate();
 [PublicAPI]
 public delegate void QuickResetDelegate();
 
+[PublicAPI]
+public delegate void QuitDelegate();
