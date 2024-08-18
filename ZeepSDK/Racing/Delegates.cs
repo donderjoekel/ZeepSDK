@@ -32,4 +32,10 @@ public delegate void RoundEndedDelegate();
 public delegate void WheelBrokenDelegate();
 
 [PublicAPI]
-public delegate void LevelLoaded();
+public delegate void LevelLoadedDelegate();
+
+[PublicAPI]
+public delegate void QuickResetDelegate();
+
+[PublicAPI]
+public delegate void QuitDelegate();
