@@ -3564,10 +3564,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Racing.LevelLoaded.yml",
+      "source_relative_path": "api/ZeepSDK.Racing.LevelLoadedDelegate.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.Racing.LevelLoaded.html"
+          "relative_path": "api/ZeepSDK.Racing.LevelLoadedDelegate.html"
         }
       },
       "version": ""
@@ -3588,6 +3588,26 @@
       "output": {
         ".html": {
           "relative_path": "api/ZeepSDK.Racing.PlayerSpawnedDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.QuickResetDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.QuickResetDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.QuitDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.QuitDelegate.html"
         }
       },
       "version": ""

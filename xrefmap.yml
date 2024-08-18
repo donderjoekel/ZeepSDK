@@ -23801,12 +23801,12 @@ references:
   commentId: T:ZeepSDK.Racing.EnteredThirdPersonDelegate
   fullName: ZeepSDK.Racing.EnteredThirdPersonDelegate
   nameWithType: EnteredThirdPersonDelegate
-- uid: ZeepSDK.Racing.LevelLoaded
-  name: LevelLoaded
-  href: api/ZeepSDK.Racing.LevelLoaded.html
-  commentId: T:ZeepSDK.Racing.LevelLoaded
-  fullName: ZeepSDK.Racing.LevelLoaded
-  nameWithType: LevelLoaded
+- uid: ZeepSDK.Racing.LevelLoadedDelegate
+  name: LevelLoadedDelegate
+  href: api/ZeepSDK.Racing.LevelLoadedDelegate.html
+  commentId: T:ZeepSDK.Racing.LevelLoadedDelegate
+  fullName: ZeepSDK.Racing.LevelLoadedDelegate
+  nameWithType: LevelLoadedDelegate
 - uid: ZeepSDK.Racing.PassedCheckpointDelegate
   name: PassedCheckpointDelegate
   href: api/ZeepSDK.Racing.PassedCheckpointDelegate.html
@@ -23819,6 +23819,18 @@ references:
   commentId: T:ZeepSDK.Racing.PlayerSpawnedDelegate
   fullName: ZeepSDK.Racing.PlayerSpawnedDelegate
   nameWithType: PlayerSpawnedDelegate
+- uid: ZeepSDK.Racing.QuickResetDelegate
+  name: QuickResetDelegate
+  href: api/ZeepSDK.Racing.QuickResetDelegate.html
+  commentId: T:ZeepSDK.Racing.QuickResetDelegate
+  fullName: ZeepSDK.Racing.QuickResetDelegate
+  nameWithType: QuickResetDelegate
+- uid: ZeepSDK.Racing.QuitDelegate
+  name: QuitDelegate
+  href: api/ZeepSDK.Racing.QuitDelegate.html
+  commentId: T:ZeepSDK.Racing.QuitDelegate
+  fullName: ZeepSDK.Racing.QuitDelegate
+  nameWithType: QuitDelegate
 - uid: ZeepSDK.Racing.RacingApi
   name: RacingApi
   href: api/ZeepSDK.Racing.RacingApi.html
@@ -23883,6 +23895,18 @@ references:
   commentId: E:ZeepSDK.Racing.RacingApi.PlayerSpawned
   fullName: ZeepSDK.Racing.RacingApi.PlayerSpawned
   nameWithType: RacingApi.PlayerSpawned
+- uid: ZeepSDK.Racing.RacingApi.QuickReset
+  name: QuickReset
+  href: api/ZeepSDK.Racing.RacingApi.html#ZeepSDK_Racing_RacingApi_QuickReset
+  commentId: E:ZeepSDK.Racing.RacingApi.QuickReset
+  fullName: ZeepSDK.Racing.RacingApi.QuickReset
+  nameWithType: RacingApi.QuickReset
+- uid: ZeepSDK.Racing.RacingApi.Quit
+  name: Quit
+  href: api/ZeepSDK.Racing.RacingApi.html#ZeepSDK_Racing_RacingApi_Quit
+  commentId: E:ZeepSDK.Racing.RacingApi.Quit
+  fullName: ZeepSDK.Racing.RacingApi.Quit
+  nameWithType: RacingApi.Quit
 - uid: ZeepSDK.Racing.RacingApi.RoundEnded
   name: RoundEnded
   href: api/ZeepSDK.Racing.RacingApi.html#ZeepSDK_Racing_RacingApi_RoundEnded

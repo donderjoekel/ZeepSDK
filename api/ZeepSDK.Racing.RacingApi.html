@@ -153,7 +153,7 @@ public static class RacingApi</code></pre>
 
   <h3 id="ZeepSDK_Racing_RacingApi_LoadTrackInFreePlayAsync_System_String_" data-uid="ZeepSDK.Racing.RacingApi.LoadTrackInFreePlayAsync(System.String)">
   LoadTrackInFreePlayAsync(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Attempts to load a track in free play mode</p>
@@ -327,7 +327,7 @@ public static class RacingApi</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event LevelLoaded LevelLoaded</code></pre>
+    <pre><code class="lang-csharp hljs">public static event LevelLoadedDelegate LevelLoaded</code></pre>
   </div>
 
 
@@ -337,7 +337,7 @@ public static class RacingApi</code></pre>
 
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ZeepSDK.Racing.LevelLoaded.html">LevelLoaded</a></dt>
+    <dt><a class="xref" href="ZeepSDK.Racing.LevelLoadedDelegate.html">LevelLoadedDelegate</a></dt>
     <dd></dd>
   </dl>
 
@@ -400,6 +400,68 @@ public static class RacingApi</code></pre>
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
     <dt><a class="xref" href="ZeepSDK.Racing.PlayerSpawnedDelegate.html">PlayerSpawnedDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="ZeepSDK_Racing_RacingApi_QuickReset" data-uid="ZeepSDK.Racing.RacingApi.QuickReset">
+  QuickReset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An event that is fired when the player presses the quick reset button</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event QuickResetDelegate QuickReset</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ZeepSDK.Racing.QuickResetDelegate.html">QuickResetDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="ZeepSDK_Racing_RacingApi_Quit" data-uid="ZeepSDK.Racing.RacingApi.Quit">
+  Quit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Racing/RacingApi.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An event that is fired when the player quits the game through the pause menu</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event QuitDelegate Quit</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ZeepSDK.Racing.QuitDelegate.html">QuitDelegate</a></dt>
     <dd></dd>
   </dl>
 
