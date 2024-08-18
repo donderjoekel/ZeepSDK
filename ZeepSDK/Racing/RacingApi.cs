@@ -68,7 +68,12 @@ public static class RacingApi
     /// <summary>
     /// An event that is fired when the level you are about to play has been loaded
     /// </summary>
-    public static event LevelLoaded LevelLoaded;
+    public static event LevelLoadedDelegate LevelLoaded;
+
+    /// <summary>
+    /// An event that is fired when the player presses the quick reset button
+    /// </summary>
+    public static event QuickResetDelegate QuickReset;
 
     internal static void Initialize(GameObject gameObject)
     {
@@ -81,6 +86,7 @@ public static class RacingApi
         GameMaster_ReleaseTheZeepkists.Released += () => RoundStarted.InvokeSafe();
         DamageWheel_KillWheel.KillWheel += () => WheelBroken.InvokeSafe();
         GameMaster_StartLevelFirstTime.StartLevelFirstTime += () => LevelLoaded.InvokeSafe();
+        GameMaster_RestartLevel.RestartLevel += OnRestartLevel;
         ZeepkistNetwork.LobbyGameStateChanged += () =>
         {
             if (ZeepkistNetwork.CurrentLobby != null && ZeepkistNetwork.CurrentLobby.GameState == 1)
@@ -88,6 +94,21 @@ public static class RacingApi
                 RoundEnded.InvokeSafe();
             }
         };
+    }
+
+    private static void OnRestartLevel()
+    {
+        if (PlayerManager.Instance == null) return;
+        if (PlayerManager.Instance.currentMaster == null) return;
+        GameMaster master = PlayerManager.Instance.currentMaster;
+
+        if (master.carSetups.Count != 1) return;
+        if (!master.carSetups[0].cc.ResetAction.buttonDown) return;
+        if (master.isPhotoMode) return;
+        if (master.pauseMenuHandler.IsPaused) return;
+        if (master.GetRoundEnded()) return;
+
+        QuickReset.InvokeSafe();
     }
 
     /// <summary>
