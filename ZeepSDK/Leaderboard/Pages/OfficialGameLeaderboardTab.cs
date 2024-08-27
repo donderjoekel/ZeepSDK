@@ -66,6 +66,8 @@ internal abstract class OfficialGameLeaderboardTab : BaseMultiplayerLeaderboardT
         {
             for (int i = 0; i < Instance.leaderboard_tab_positions.Count; ++i)
             {
+                Instance.leaderboard_tab_positions[i].gameObject.SetActive(true);
+
                 int index = CurrentPage * 16 + i;
                 if (index >= players.Length)
                     continue;
