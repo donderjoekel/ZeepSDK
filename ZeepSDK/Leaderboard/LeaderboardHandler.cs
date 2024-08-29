@@ -24,8 +24,8 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
 
     private void Start()
     {
-        AddTab(new RoundLeaderboardTab());
-        AddTab(new ChampionshipLeaderboardTab());
+        InsertTab(0, new ChampionshipLeaderboardTab());
+        InsertTab(0, new RoundLeaderboardTab());
 
         OnlineTabLeaderboardUI_OnOpen.OnOpen += OnOpen;
         OnlineTabLeaderboardUI_OnClose.OnClose += OnClose;
