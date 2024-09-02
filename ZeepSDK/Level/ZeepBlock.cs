@@ -1,10 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 using System.Numerics;
 
 namespace ZeepSDK.Level;
 
 internal class ZeepBlock
 {
+    private static readonly CultureInfo _culture = new("en-US");
+
     public ZeepBlock()
     {
         Paints = new List<int>();
@@ -21,6 +25,6 @@ internal class ZeepBlock
     public override string ToString()
     {
         return
-            $"Id: {Id}, Position: {Position}, Euler: {Euler}, Scale: {Scale}, Paints: {string.Join(", ", Paints)}, Options: {string.Join(", ", Options)}";
+            $"Id: {Id.ToString(_culture)}, Position: {Position.ToString(string.Empty, _culture)}, Euler: {Euler.ToString(string.Empty, _culture)}, Scale: {Scale.ToString(string.Empty, _culture)}, Paints: {string.Join(", ", Paints.Select(x => x.ToString(_culture)))}, Options: {string.Join(", ", Options.Select(x => x.ToString(_culture)))}";
     }
 }

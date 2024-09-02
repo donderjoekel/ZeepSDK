@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Numerics;
 using BepInEx.Logging;
@@ -10,6 +11,7 @@ namespace ZeepSDK.Level;
 internal static class ZeepLevelParser
 {
     private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(ZeepLevelParser));
+    private static readonly CultureInfo _culture = new("en-US");
 
     public static ZeepLevel Parse(string[] lines)
     {
@@ -74,18 +76,18 @@ internal static class ZeepLevelParser
             }
 
             level.CameraPosition = new Vector3(
-                float.Parse(splits[0]),
-                float.Parse(splits[1]),
-                float.Parse(splits[2]));
+                float.Parse(splits[0], NumberStyles.Any, _culture),
+                float.Parse(splits[1], NumberStyles.Any, _culture),
+                float.Parse(splits[2], NumberStyles.Any, _culture));
 
             level.CameraEuler = new Vector3(
-                float.Parse(splits[3]),
-                float.Parse(splits[4]),
-                float.Parse(splits[5]));
+                float.Parse(splits[3], NumberStyles.Any, _culture),
+                float.Parse(splits[4], NumberStyles.Any, _culture),
+                float.Parse(splits[5], NumberStyles.Any, _culture));
 
             level.CameraRotation = new Vector2(
-                float.Parse(splits[6]),
-                float.Parse(splits[7]));
+                float.Parse(splits[6], NumberStyles.Any, _culture),
+                float.Parse(splits[7], NumberStyles.Any, _culture));
 
             return true;
         }
@@ -109,7 +111,7 @@ internal static class ZeepLevelParser
                 return false;
             }
 
-            if (float.TryParse(splits[0], out float validationTime))
+            if (float.TryParse(splits[0], NumberStyles.Any, _culture, out float validationTime))
             {
                 level.IsValidated = true;
                 level.ValidationTime = validationTime;
@@ -119,12 +121,12 @@ internal static class ZeepLevelParser
                 level.IsValidated = false;
             }
 
-            level.GoldTime = float.Parse(splits[1]);
-            level.SilverTime = float.Parse(splits[2]);
-            level.BronzeTime = float.Parse(splits[3]);
+            level.GoldTime = float.Parse(splits[1], NumberStyles.Any, _culture);
+            level.SilverTime = float.Parse(splits[2], NumberStyles.Any, _culture);
+            level.BronzeTime = float.Parse(splits[3], NumberStyles.Any, _culture);
 
-            level.Skybox = int.Parse(splits[4]);
-            level.Ground = int.Parse(splits[5]);
+            level.Skybox = int.Parse(splits[4], NumberStyles.Any, _culture);
+            level.Ground = int.Parse(splits[5], NumberStyles.Any, _culture);
 
             return true;
         }
@@ -156,26 +158,26 @@ internal static class ZeepLevelParser
 
                 ZeepBlock block = new();
 
-                block.Id = int.Parse(splits[0]);
+                block.Id = int.Parse(splits[0], NumberStyles.Any, _culture);
 
                 block.Position = new Vector3(
-                    float.Parse(splits[1]),
-                    float.Parse(splits[2]),
-                    float.Parse(splits[3]));
+                    float.Parse(splits[1], NumberStyles.Any, _culture),
+                    float.Parse(splits[2], NumberStyles.Any, _culture),
+                    float.Parse(splits[3], NumberStyles.Any, _culture));
 
                 block.Euler = new Vector3(
-                    float.Parse(splits[4]),
-                    float.Parse(splits[5]),
-                    float.Parse(splits[6]));
+                    float.Parse(splits[4], NumberStyles.Any, _culture),
+                    float.Parse(splits[5], NumberStyles.Any, _culture),
+                    float.Parse(splits[6], NumberStyles.Any, _culture));
 
                 block.Scale = new Vector3(
-                    float.Parse(splits[7]),
-                    float.Parse(splits[8]),
-                    float.Parse(splits[9]));
+                    float.Parse(splits[7], NumberStyles.Any, _culture),
+                    float.Parse(splits[8], NumberStyles.Any, _culture),
+                    float.Parse(splits[9], NumberStyles.Any, _culture));
 
-                splits[10..27].ToList().ForEach(x => block.Paints.Add(int.Parse(x)));
+                splits[10..27].ToList().ForEach(x => block.Paints.Add(int.Parse(x, NumberStyles.Any, _culture)));
 
-                splits[27..38].ToList().ForEach(x => block.Options.Add(float.Parse(x)));
+                splits[27..38].ToList().ForEach(x => block.Options.Add(float.Parse(x, NumberStyles.Any, _culture)));
 
                 blocks.Add(block);
             }
