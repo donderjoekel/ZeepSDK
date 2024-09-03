@@ -633,6 +633,28 @@ references:
   commentId: N:ZeepSDK.Extensions
   fullName: ZeepSDK.Extensions
   nameWithType: ZeepSDK.Extensions
+- uid: ZeepSDK.Extensions.StringBuilderExtensions
+  name: StringBuilderExtensions
+  href: api/ZeepSDK.Extensions.StringBuilderExtensions.html
+  commentId: T:ZeepSDK.Extensions.StringBuilderExtensions
+  fullName: ZeepSDK.Extensions.StringBuilderExtensions
+  nameWithType: StringBuilderExtensions
+- uid: ZeepSDK.Extensions.StringBuilderExtensions.AppendCLRF(System.Text.StringBuilder,System.String)
+  name: AppendCLRF(StringBuilder, string)
+  href: api/ZeepSDK.Extensions.StringBuilderExtensions.html#ZeepSDK_Extensions_StringBuilderExtensions_AppendCLRF_System_Text_StringBuilder_System_String_
+  commentId: M:ZeepSDK.Extensions.StringBuilderExtensions.AppendCLRF(System.Text.StringBuilder,System.String)
+  name.vb: AppendCLRF(StringBuilder, String)
+  fullName: ZeepSDK.Extensions.StringBuilderExtensions.AppendCLRF(System.Text.StringBuilder, string)
+  fullName.vb: ZeepSDK.Extensions.StringBuilderExtensions.AppendCLRF(System.Text.StringBuilder, String)
+  nameWithType: StringBuilderExtensions.AppendCLRF(StringBuilder, string)
+  nameWithType.vb: StringBuilderExtensions.AppendCLRF(StringBuilder, String)
+- uid: ZeepSDK.Extensions.StringBuilderExtensions.AppendCLRF*
+  name: AppendCLRF
+  href: api/ZeepSDK.Extensions.StringBuilderExtensions.html#ZeepSDK_Extensions_StringBuilderExtensions_AppendCLRF_
+  commentId: Overload:ZeepSDK.Extensions.StringBuilderExtensions.AppendCLRF
+  isSpec: "True"
+  fullName: ZeepSDK.Extensions.StringBuilderExtensions.AppendCLRF
+  nameWithType: StringBuilderExtensions.AppendCLRF
 - uid: ZeepSDK.Extensions.TransformExtensions
   name: TransformExtensions
   href: api/ZeepSDK.Extensions.TransformExtensions.html
