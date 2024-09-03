@@ -4,6 +4,7 @@ using System.Security.Cryptography;
 using System.Text;
 using BepInEx.Logging;
 using JetBrains.Annotations;
+using ZeepSDK.Extensions;
 using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Level;
@@ -50,8 +51,8 @@ public static class LevelApi
     private static string Hash(ZeepLevel zeepLevel)
     {
         StringBuilder inputBuilder = new();
-        inputBuilder.AppendLine(zeepLevel.Skybox.ToString());
-        inputBuilder.AppendLine(zeepLevel.Ground.ToString());
+        inputBuilder.AppendCLRF(zeepLevel.Skybox.ToString());
+        inputBuilder.AppendCLRF(zeepLevel.Ground.ToString());
 
         List<ZeepBlock> orderedBlocks = zeepLevel.Blocks
             .Where(x => x.Id != PresentBlockID)
@@ -65,7 +66,7 @@ public static class LevelApi
 
         foreach (ZeepBlock block in orderedBlocks)
         {
-            inputBuilder.AppendLine(block.ToString());
+            inputBuilder.AppendCLRF(block.ToString());
         }
 
         byte[] hash = SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(inputBuilder.ToString()));
