@@ -26,16 +26,69 @@ public static class LevelApi
     /// <summary>
     /// Gets the current level that is being played
     /// </summary>
-    public static LevelScriptableObject CurrentLevel
+    public static LevelScriptableObject CurrentLevel =>
+        GetLevelFromLoader() ?? GetLevelFromSetupGame() ?? GetLevelFromGameMaster();
+
+    private static LevelScriptableObject GetLevelFromLoader()
     {
-        get
+        if (PlayerManager.Instance == null)
+            return null;
+        if (PlayerManager.Instance.loader == null)
+            return null;
+        if (PlayerManager.Instance.loader.GlobalLevel == null)
+            return null;
+        if (PlayerManager.Instance.loader.GlobalLevel.LevelData == null ||
+            PlayerManager.Instance.loader.GlobalLevel.LevelData.Length == 0)
         {
-            if (PlayerManager.Instance == null)
-                return null;
-            if (PlayerManager.Instance.loader == null)
-                return null;
-            return PlayerManager.Instance.loader.GlobalLevel;
+            return null;
         }
+
+        return PlayerManager.Instance.loader.GlobalLevel;
+    }
+
+    private static LevelScriptableObject GetLevelFromSetupGame()
+    {
+        if (PlayerManager.Instance == null)
+            return null;
+        if (PlayerManager.Instance.currentMaster == null)
+            return null;
+        if (PlayerManager.Instance.currentMaster.setupScript == null)
+            return null;
+        if (PlayerManager.Instance.currentMaster.setupScript.GlobalLevel == null)
+            return null;
+        if (PlayerManager.Instance.currentMaster.setupScript.GlobalLevel.LevelData == null ||
+            PlayerManager.Instance.currentMaster.setupScript.GlobalLevel.LevelData.Length == 0)
+        {
+            return null;
+        }
+
+        return PlayerManager.Instance.currentMaster.setupScript.GlobalLevel;
+    }
+
+    private static LevelScriptableObject GetLevelFromGameMaster()
+    {
+        if (PlayerManager.Instance == null)
+            return null;
+        if (PlayerManager.Instance.currentMaster == null)
+            return null;
+        if (PlayerManager.Instance.currentMaster.GlobalLevel == null)
+            return null;
+        if (PlayerManager.Instance.currentMaster.GlobalLevel.LevelData == null ||
+            PlayerManager.Instance.currentMaster.GlobalLevel.LevelData.Length == 0)
+        {
+            return null;
+        }
+
+        return PlayerManager.Instance.currentMaster.GlobalLevel;
+    }
+
+    /// <summary>
+    /// Gets the hash of the current level
+    /// <remarks>This is a shorthand for <see cref="GetLevelHash(LevelScriptableObject)"/> combined with <see cref="CurrentLevel"/></remarks>
+    /// </summary>
+    public static string GetCurrentLevelHash()
+    {
+        return GetLevelHash(CurrentLevel);
     }
 
     /// <summary>
