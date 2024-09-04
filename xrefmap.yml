@@ -22649,6 +22649,19 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Level.LevelApi.CurrentLevel
   nameWithType: LevelApi.CurrentLevel
+- uid: ZeepSDK.Level.LevelApi.GetCurrentLevelHash
+  name: GetCurrentLevelHash()
+  href: api/ZeepSDK.Level.LevelApi.html#ZeepSDK_Level_LevelApi_GetCurrentLevelHash
+  commentId: M:ZeepSDK.Level.LevelApi.GetCurrentLevelHash
+  fullName: ZeepSDK.Level.LevelApi.GetCurrentLevelHash()
+  nameWithType: LevelApi.GetCurrentLevelHash()
+- uid: ZeepSDK.Level.LevelApi.GetCurrentLevelHash*
+  name: GetCurrentLevelHash
+  href: api/ZeepSDK.Level.LevelApi.html#ZeepSDK_Level_LevelApi_GetCurrentLevelHash_
+  commentId: Overload:ZeepSDK.Level.LevelApi.GetCurrentLevelHash
+  isSpec: "True"
+  fullName: ZeepSDK.Level.LevelApi.GetCurrentLevelHash
+  nameWithType: LevelApi.GetCurrentLevelHash
 - uid: ZeepSDK.Level.LevelApi.GetLevelHash(LevelScriptableObject)
   name: GetLevelHash(LevelScriptableObject)
   href: api/ZeepSDK.Level.LevelApi.html#ZeepSDK_Level_LevelApi_GetLevelHash_LevelScriptableObject_
