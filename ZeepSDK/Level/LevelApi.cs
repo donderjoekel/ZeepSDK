@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using BepInEx.Logging;
 using JetBrains.Annotations;
 using ZeepSDK.Extensions;
+using ZeepSDK.Level.Patches;
 using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Level;
@@ -24,10 +26,30 @@ public static class LevelApi
     private static readonly Dictionary<string, string> uidToHash = new();
 
     /// <summary>
+    /// The parsed version of the current level
+    /// </summary>
+    public static ZeepLevel CurrentZeepLevel { get; private set; }
+
+    /// <summary>
+    /// The hash of the current level
+    /// </summary>
+    public static string CurrentHash { get; private set; }
+
+    /// <summary>
     /// Gets the current level that is being played
     /// </summary>
-    public static LevelScriptableObject CurrentLevel =>
-        GetLevelFromLoader() ?? GetLevelFromSetupGame() ?? GetLevelFromGameMaster();
+    public static LevelScriptableObject CurrentLevel => GetLevelFromLoader();
+
+    internal static void Initialize()
+    {
+        SetupGame_FinishLoading.FinishLoading += FinishLoading;
+    }
+
+    private static void FinishLoading(SetupGame instance)
+    {
+        CurrentZeepLevel = ZeepLevelParser.Parse(instance.lines);
+        CurrentHash = Hash(CurrentZeepLevel);
+    }
 
     private static LevelScriptableObject GetLevelFromLoader()
     {
@@ -46,46 +68,11 @@ public static class LevelApi
         return PlayerManager.Instance.loader.GlobalLevel;
     }
 
-    private static LevelScriptableObject GetLevelFromSetupGame()
-    {
-        if (PlayerManager.Instance == null)
-            return null;
-        if (PlayerManager.Instance.currentMaster == null)
-            return null;
-        if (PlayerManager.Instance.currentMaster.setupScript == null)
-            return null;
-        if (PlayerManager.Instance.currentMaster.setupScript.GlobalLevel == null)
-            return null;
-        if (PlayerManager.Instance.currentMaster.setupScript.GlobalLevel.LevelData == null ||
-            PlayerManager.Instance.currentMaster.setupScript.GlobalLevel.LevelData.Length == 0)
-        {
-            return null;
-        }
-
-        return PlayerManager.Instance.currentMaster.setupScript.GlobalLevel;
-    }
-
-    private static LevelScriptableObject GetLevelFromGameMaster()
-    {
-        if (PlayerManager.Instance == null)
-            return null;
-        if (PlayerManager.Instance.currentMaster == null)
-            return null;
-        if (PlayerManager.Instance.currentMaster.GlobalLevel == null)
-            return null;
-        if (PlayerManager.Instance.currentMaster.GlobalLevel.LevelData == null ||
-            PlayerManager.Instance.currentMaster.GlobalLevel.LevelData.Length == 0)
-        {
-            return null;
-        }
-
-        return PlayerManager.Instance.currentMaster.GlobalLevel;
-    }
-
     /// <summary>
     /// Gets the hash of the current level
     /// <remarks>This is a shorthand for <see cref="GetLevelHash(LevelScriptableObject)"/> combined with <see cref="CurrentLevel"/></remarks>
     /// </summary>
+    [Obsolete("Use CurrentHash instead")]
     public static string GetCurrentLevelHash()
     {
         return GetLevelHash(CurrentLevel);

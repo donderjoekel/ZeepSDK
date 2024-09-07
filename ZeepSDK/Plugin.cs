@@ -5,6 +5,7 @@ using ZeepSDK.Chat;
 using ZeepSDK.ChatCommands;
 using ZeepSDK.External.Cysharp.Threading.Tasks;
 using ZeepSDK.Leaderboard;
+using ZeepSDK.Level;
 using ZeepSDK.LevelEditor;
 using ZeepSDK.Multiplayer;
 using ZeepSDK.PhotoMode;
@@ -35,6 +36,7 @@ namespace ZeepSDK
             ChatApi.Initialize(gameObject);
             ChatCommandApi.Initialize(gameObject);
             LeaderboardApi.Initialize(gameObject);
+            LevelApi.Initialize();
             LevelEditorApi.Initialize(gameObject);
             RacingApi.Initialize(gameObject);
             MultiplayerApi.Initialize();
