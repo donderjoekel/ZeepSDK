@@ -90,6 +90,12 @@ public static class LevelApi
 
     private static string Hash(ZeepLevel zeepLevel)
     {
+        if (zeepLevel == null)
+        {
+            logger.LogWarning("Trying to hash a null level");
+            return null;
+        }
+
         StringBuilder inputBuilder = new();
         inputBuilder.AppendCLRF(zeepLevel.Skybox.ToString());
         inputBuilder.AppendCLRF(zeepLevel.Ground.ToString());
