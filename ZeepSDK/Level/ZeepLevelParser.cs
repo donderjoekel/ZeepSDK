@@ -152,7 +152,8 @@ internal static class ZeepLevelParser
                 string[] splits = line.Split(',');
                 if (splits.Length != 38)
                 {
-                    _logger.LogWarning($"Block line has invalid amount of splits: {splits.Length}; '{line}'");
+                    _logger.LogError(
+                        $"Unable to parse block line, got {splits.Length} splits, expected 38. UID: '{level.UniqueId}'. Line: '{line}'");
                     return false;
                 }
 
