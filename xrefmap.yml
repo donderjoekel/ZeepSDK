@@ -633,6 +633,28 @@ references:
   commentId: N:ZeepSDK.Extensions
   fullName: ZeepSDK.Extensions
   nameWithType: ZeepSDK.Extensions
+- uid: ZeepSDK.Extensions.ListExtensions
+  name: ListExtensions
+  href: api/ZeepSDK.Extensions.ListExtensions.html
+  commentId: T:ZeepSDK.Extensions.ListExtensions
+  fullName: ZeepSDK.Extensions.ListExtensions
+  nameWithType: ListExtensions
+- uid: ZeepSDK.Extensions.ListExtensions.Chunk*
+  name: Chunk
+  href: api/ZeepSDK.Extensions.ListExtensions.html#ZeepSDK_Extensions_ListExtensions_Chunk_
+  commentId: Overload:ZeepSDK.Extensions.ListExtensions.Chunk
+  isSpec: "True"
+  fullName: ZeepSDK.Extensions.ListExtensions.Chunk
+  nameWithType: ListExtensions.Chunk
+- uid: ZeepSDK.Extensions.ListExtensions.Chunk``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name: Chunk<T>(IEnumerable<T>, int)
+  href: api/ZeepSDK.Extensions.ListExtensions.html#ZeepSDK_Extensions_ListExtensions_Chunk__1_System_Collections_Generic_IEnumerable___0__System_Int32_
+  commentId: M:ZeepSDK.Extensions.ListExtensions.Chunk``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name.vb: Chunk(Of T)(IEnumerable(Of T), Integer)
+  fullName: ZeepSDK.Extensions.ListExtensions.Chunk<T>(System.Collections.Generic.IEnumerable<T>, int)
+  fullName.vb: ZeepSDK.Extensions.ListExtensions.Chunk(Of T)(System.Collections.Generic.IEnumerable(Of T), Integer)
+  nameWithType: ListExtensions.Chunk<T>(IEnumerable<T>, int)
+  nameWithType.vb: ListExtensions.Chunk(Of T)(IEnumerable(Of T), Integer)
 - uid: ZeepSDK.Extensions.StringBuilderExtensions
   name: StringBuilderExtensions
   href: api/ZeepSDK.Extensions.StringBuilderExtensions.html
