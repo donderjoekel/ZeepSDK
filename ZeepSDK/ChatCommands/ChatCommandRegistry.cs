@@ -13,6 +13,13 @@ internal static class ChatCommandRegistry
     public static void RegisterLocalChatCommand(ILocalChatCommand chatCommand)
     {
         localChatCommands.Add(chatCommand);
+        LocalChatCommandF1Help.addCommands(ChatCommandUtilities.GetHelpString(chatCommand));
+    }
+
+    public static void RegisterLocalChatCommandGroup(LocalChatCommandGroup chatCommandGroup)
+    {
+		localChatCommands.Add(chatCommandGroup);
+        LocalChatCommandF1Help.addCommands(chatCommandGroup.helpString());
     }
 
     public static void RegisterRemoteChatCommand(IRemoteChatCommand chatCommand)

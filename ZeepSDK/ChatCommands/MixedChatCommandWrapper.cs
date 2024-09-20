@@ -9,6 +9,8 @@ internal class MixedChatCommandWrapper : MixedChatCommandBase
     public override string Prefix { get; }
     public override string Command { get; }
     public override string Description { get; }
+    public override string[] Aliases { get; }
+    public override string[] Arguments { get; }
 
     public MixedChatCommandWrapper(
         string prefix,
@@ -21,6 +23,8 @@ internal class MixedChatCommandWrapper : MixedChatCommandBase
         Command = command;
         Description = description;
         this.callback = callback;
+        Aliases = [];
+        Arguments = [];
     }
 
     protected override void Handle(bool isLocal, ulong playerId, string arguments)

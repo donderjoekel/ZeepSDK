@@ -3,8 +3,10 @@ using BepInEx.Logging;
 using UnityEngine;
 using UnityEngine.UI;
 using ZeepSDK.Extensions;
+using ZeepSDK.Racing.Patches;
 using ZeepSDK.UI.Patches;
 using ZeepSDK.Utilities;
+using ZeepSDK.ChatCommands;
 
 namespace ZeepSDK.UI;
 
@@ -24,6 +26,7 @@ public static class UIApi
 
         OnlineChatUI_Awake.Awake += OnOnlineChatUIAwake;
         OnlineGameplayUI_Awake.Awake += OnOnlineGameplayUIAwake;
+        OnlineGameplayUI_Update.Update += OnOnlineGameplayUIUpdate;
         PlayerScreensUI_Awake.Awake += OnPlayerScreensUIAwake;
         SpectatorCameraUI_Awake.Awake += OnSpectatorCameraUIAwake;
     }
@@ -40,6 +43,12 @@ public static class UIApi
             return;
 
         AddToConfigurator(gameplayUi.GetComponentsInDirectDescendants<RectTransform>());
+        LocalChatCommandF1Help.registerBaseGameCommands(instance);
+    }
+
+    private static void OnOnlineGameplayUIUpdate(OnlineGameplayUI instance)
+    {
+        LocalChatCommandF1Help.nextPage(instance);
     }
 
     private static void OnPlayerScreensUIAwake(PlayerScreensUI instance)

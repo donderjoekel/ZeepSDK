@@ -7,6 +7,8 @@ internal class RemoteChatCommandWrapper : IRemoteChatCommand
     public string Prefix { get; }
     public string Command { get; }
     public string Description { get; }
+    public string[] Aliases { get; }
+    public string[] Arguments { get; }
 
     public RemoteChatCommandWrapper(
         string prefix,
@@ -19,6 +21,8 @@ internal class RemoteChatCommandWrapper : IRemoteChatCommand
         Command = command;
         Description = description;
         this.callback = callback;
+        Aliases = [];
+        Arguments = [];
     }
 
     public void Handle(ulong playerId, string arguments)

@@ -19,7 +19,17 @@ public interface IChatCommand
     string Command { get; }
 
     /// <summary>
+    /// The aliases of this chat command
+    /// </summary>
+    string[] Aliases { get; }
+
+    /// <summary>
+    /// The names of the arguments this chat command takes
+    /// </summary>
+    public string[] Arguments { get; }
+
+    /// <summary>
     /// The description of this chat command
     /// </summary>
-    string Description { get; }
+    public string Description { get; }
 }

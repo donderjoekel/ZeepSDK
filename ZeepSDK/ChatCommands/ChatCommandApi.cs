@@ -32,11 +32,15 @@ public static class ChatCommandApi
     /// <param name="command">The keyword for the command</param>
     /// <param name="description">The description for the command</param>
     /// <param name="callback">The callback to invoke whenever the command gets used</param>
+    /// <param name="aliases">The aliases that can be used in place of the keyword</param>
+    /// <param name="arguments">The arguments that this command takes</param>
     public static void RegisterLocalChatCommand(
         string prefix,
         string command,
         string description,
-        LocalChatCommandCallbackDelegate callback
+        LocalChatCommandCallbackDelegate callback,
+        string[] aliases = null,
+        string[] arguments = null
     )
     {
         try
@@ -44,7 +48,9 @@ public static class ChatCommandApi
             ChatCommandRegistry.RegisterLocalChatCommand(new LocalChatCommandWrapper(prefix,
                 command,
                 description,
-                callback));
+                callback,
+                aliases,
+                arguments));
         }
         catch (Exception e)
         {
@@ -62,6 +68,22 @@ public static class ChatCommandApi
         try
         {
             ChatCommandRegistry.RegisterLocalChatCommand(new TChatCommand());
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(RegisterLocalChatCommand)}: " + e);
+        }
+    }
+
+    /// <summary>
+    /// Allows you to register a local chat command
+    /// </summary>
+    /// <param name="commandGroup">command group to register</param>
+    public static void RegisterLocalChatCommandGroup(LocalChatCommandGroup commandGroup)
+    {
+        try
+        {
+            ChatCommandRegistry.RegisterLocalChatCommandGroup(commandGroup);
         }
         catch (Exception e)
         {

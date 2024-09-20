@@ -14,6 +14,12 @@ public abstract class MixedChatCommandBase : IMixedChatCommand
     /// <inheritdoc />
     public abstract string Description { get; }
 
+    /// <inheritdoc />
+    public abstract string[] Aliases { get; }
+
+    /// <inheritdoc />
+    public abstract string[] Arguments { get; }
+
     void IRemoteChatCommand.Handle(ulong playerId, string arguments)
     {
         Handle(false, playerId, arguments);
