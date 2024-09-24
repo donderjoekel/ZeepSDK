@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Numerics;
+using ZeepSDK.Numerics;
 
 namespace ZeepSDK.Utilities;
 

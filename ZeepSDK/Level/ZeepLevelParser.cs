@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Numerics;
 using BepInEx.Logging;
+using ZeepSDK.Numerics;
 using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Level;
@@ -76,18 +76,18 @@ internal static class ZeepLevelParser
             }
 
             level.CameraPosition = new Vector3(
-                float.Parse(splits[0], NumberStyles.Any, _culture),
-                float.Parse(splits[1], NumberStyles.Any, _culture),
-                float.Parse(splits[2], NumberStyles.Any, _culture));
+                decimal.Parse(splits[0], NumberStyles.Any, _culture),
+                decimal.Parse(splits[1], NumberStyles.Any, _culture),
+                decimal.Parse(splits[2], NumberStyles.Any, _culture));
 
             level.CameraEuler = new Vector3(
-                float.Parse(splits[3], NumberStyles.Any, _culture),
-                float.Parse(splits[4], NumberStyles.Any, _culture),
-                float.Parse(splits[5], NumberStyles.Any, _culture));
+                decimal.Parse(splits[3], NumberStyles.Any, _culture),
+                decimal.Parse(splits[4], NumberStyles.Any, _culture),
+                decimal.Parse(splits[5], NumberStyles.Any, _culture));
 
             level.CameraRotation = new Vector2(
-                float.Parse(splits[6], NumberStyles.Any, _culture),
-                float.Parse(splits[7], NumberStyles.Any, _culture));
+                decimal.Parse(splits[6], NumberStyles.Any, _culture),
+                decimal.Parse(splits[7], NumberStyles.Any, _culture));
 
             return true;
         }
@@ -162,19 +162,19 @@ internal static class ZeepLevelParser
                 block.Id = int.Parse(splits[0], NumberStyles.Any, _culture);
 
                 block.Position = new Vector3(
-                    float.Parse(splits[1], NumberStyles.Any, _culture),
-                    float.Parse(splits[2], NumberStyles.Any, _culture),
-                    float.Parse(splits[3], NumberStyles.Any, _culture));
+                    decimal.Parse(splits[1], NumberStyles.Any, _culture),
+                    decimal.Parse(splits[2], NumberStyles.Any, _culture),
+                    decimal.Parse(splits[3], NumberStyles.Any, _culture));
 
                 block.Euler = new Vector3(
-                    float.Parse(splits[4], NumberStyles.Any, _culture),
-                    float.Parse(splits[5], NumberStyles.Any, _culture),
-                    float.Parse(splits[6], NumberStyles.Any, _culture));
+                    decimal.Parse(splits[4], NumberStyles.Any, _culture),
+                    decimal.Parse(splits[5], NumberStyles.Any, _culture),
+                    decimal.Parse(splits[6], NumberStyles.Any, _culture));
 
                 block.Scale = new Vector3(
-                    float.Parse(splits[7], NumberStyles.Any, _culture),
-                    float.Parse(splits[8], NumberStyles.Any, _culture),
-                    float.Parse(splits[9], NumberStyles.Any, _culture));
+                    decimal.Parse(splits[7], NumberStyles.Any, _culture),
+                    decimal.Parse(splits[8], NumberStyles.Any, _culture),
+                    decimal.Parse(splits[9], NumberStyles.Any, _culture));
 
                 splits[10..27].ToList().ForEach(x => block.Paints.Add(int.Parse(x, NumberStyles.Any, _culture)));
 
