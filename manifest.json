@@ -3484,6 +3484,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Numerics.Vector2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Numerics.Vector2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Numerics.Vector3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Numerics.Vector3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Numerics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Numerics.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.PhotoMode.PhotoModeApi.yml",
       "output": {
         ".html": {

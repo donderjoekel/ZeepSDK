@@ -23870,6 +23870,194 @@ references:
   commentId: F:ZeepSDK.MyPluginInfo.PLUGIN_VERSION
   fullName: ZeepSDK.MyPluginInfo.PLUGIN_VERSION
   nameWithType: MyPluginInfo.PLUGIN_VERSION
+- uid: ZeepSDK.Numerics
+  name: ZeepSDK.Numerics
+  href: api/ZeepSDK.Numerics.html
+  commentId: N:ZeepSDK.Numerics
+  fullName: ZeepSDK.Numerics
+  nameWithType: ZeepSDK.Numerics
+- uid: ZeepSDK.Numerics.Vector2
+  name: Vector2
+  href: api/ZeepSDK.Numerics.Vector2.html
+  commentId: T:ZeepSDK.Numerics.Vector2
+  fullName: ZeepSDK.Numerics.Vector2
+  nameWithType: Vector2
+- uid: ZeepSDK.Numerics.Vector2.#ctor(System.Decimal,System.Decimal)
+  name: Vector2(decimal, decimal)
+  href: api/ZeepSDK.Numerics.Vector2.html#ZeepSDK_Numerics_Vector2__ctor_System_Decimal_System_Decimal_
+  commentId: M:ZeepSDK.Numerics.Vector2.#ctor(System.Decimal,System.Decimal)
+  name.vb: New(Decimal, Decimal)
+  fullName: ZeepSDK.Numerics.Vector2.Vector2(decimal, decimal)
+  fullName.vb: ZeepSDK.Numerics.Vector2.New(Decimal, Decimal)
+  nameWithType: Vector2.Vector2(decimal, decimal)
+  nameWithType.vb: Vector2.New(Decimal, Decimal)
+- uid: ZeepSDK.Numerics.Vector2.#ctor*
+  name: Vector2
+  href: api/ZeepSDK.Numerics.Vector2.html#ZeepSDK_Numerics_Vector2__ctor_
+  commentId: Overload:ZeepSDK.Numerics.Vector2.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ZeepSDK.Numerics.Vector2.Vector2
+  fullName.vb: ZeepSDK.Numerics.Vector2.New
+  nameWithType: Vector2.Vector2
+  nameWithType.vb: Vector2.New
+- uid: ZeepSDK.Numerics.Vector2.Equals(System.Object)
+  name: Equals(object)
+  href: api/ZeepSDK.Numerics.Vector2.html#ZeepSDK_Numerics_Vector2_Equals_System_Object_
+  commentId: M:ZeepSDK.Numerics.Vector2.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: ZeepSDK.Numerics.Vector2.Equals(object)
+  fullName.vb: ZeepSDK.Numerics.Vector2.Equals(Object)
+  nameWithType: Vector2.Equals(object)
+  nameWithType.vb: Vector2.Equals(Object)
+- uid: ZeepSDK.Numerics.Vector2.Equals(ZeepSDK.Numerics.Vector2)
+  name: Equals(Vector2)
+  href: api/ZeepSDK.Numerics.Vector2.html#ZeepSDK_Numerics_Vector2_Equals_ZeepSDK_Numerics_Vector2_
+  commentId: M:ZeepSDK.Numerics.Vector2.Equals(ZeepSDK.Numerics.Vector2)
+  fullName: ZeepSDK.Numerics.Vector2.Equals(ZeepSDK.Numerics.Vector2)
+  nameWithType: Vector2.Equals(Vector2)
+- uid: ZeepSDK.Numerics.Vector2.Equals*
+  name: Equals
+  href: api/ZeepSDK.Numerics.Vector2.html#ZeepSDK_Numerics_Vector2_Equals_
+  commentId: Overload:ZeepSDK.Numerics.Vector2.Equals
+  isSpec: "True"
+  fullName: ZeepSDK.Numerics.Vector2.Equals
+  nameWithType: Vector2.Equals
+- uid: ZeepSDK.Numerics.Vector2.GetHashCode
+  name: GetHashCode()
+  href: api/ZeepSDK.Numerics.Vector2.html#ZeepSDK_Numerics_Vector2_GetHashCode
+  commentId: M:ZeepSDK.Numerics.Vector2.GetHashCode
+  fullName: ZeepSDK.Numerics.Vector2.GetHashCode()
+  nameWithType: Vector2.GetHashCode()
+- uid: ZeepSDK.Numerics.Vector2.GetHashCode*
+  name: GetHashCode
+  href: api/ZeepSDK.Numerics.Vector2.html#ZeepSDK_Numerics_Vector2_GetHashCode_
+  commentId: Overload:ZeepSDK.Numerics.Vector2.GetHashCode
+  isSpec: "True"
+  fullName: ZeepSDK.Numerics.Vector2.GetHashCode
+  nameWithType: Vector2.GetHashCode
+- uid: ZeepSDK.Numerics.Vector2.ToString(System.String,System.IFormatProvider)
+  name: ToString(string, IFormatProvider)
+  href: api/ZeepSDK.Numerics.Vector2.html#ZeepSDK_Numerics_Vector2_ToString_System_String_System_IFormatProvider_
+  commentId: M:ZeepSDK.Numerics.Vector2.ToString(System.String,System.IFormatProvider)
+  name.vb: ToString(String, IFormatProvider)
+  fullName: ZeepSDK.Numerics.Vector2.ToString(string, System.IFormatProvider)
+  fullName.vb: ZeepSDK.Numerics.Vector2.ToString(String, System.IFormatProvider)
+  nameWithType: Vector2.ToString(string, IFormatProvider)
+  nameWithType.vb: Vector2.ToString(String, IFormatProvider)
+- uid: ZeepSDK.Numerics.Vector2.ToString*
+  name: ToString
+  href: api/ZeepSDK.Numerics.Vector2.html#ZeepSDK_Numerics_Vector2_ToString_
+  commentId: Overload:ZeepSDK.Numerics.Vector2.ToString
+  isSpec: "True"
+  fullName: ZeepSDK.Numerics.Vector2.ToString
+  nameWithType: Vector2.ToString
+- uid: ZeepSDK.Numerics.Vector2.X
+  name: X
+  href: api/ZeepSDK.Numerics.Vector2.html#ZeepSDK_Numerics_Vector2_X
+  commentId: F:ZeepSDK.Numerics.Vector2.X
+  fullName: ZeepSDK.Numerics.Vector2.X
+  nameWithType: Vector2.X
+- uid: ZeepSDK.Numerics.Vector2.Y
+  name: Y
+  href: api/ZeepSDK.Numerics.Vector2.html#ZeepSDK_Numerics_Vector2_Y
+  commentId: F:ZeepSDK.Numerics.Vector2.Y
+  fullName: ZeepSDK.Numerics.Vector2.Y
+  nameWithType: Vector2.Y
+- uid: ZeepSDK.Numerics.Vector3
+  name: Vector3
+  href: api/ZeepSDK.Numerics.Vector3.html
+  commentId: T:ZeepSDK.Numerics.Vector3
+  fullName: ZeepSDK.Numerics.Vector3
+  nameWithType: Vector3
+- uid: ZeepSDK.Numerics.Vector3.#ctor(System.Decimal,System.Decimal,System.Decimal)
+  name: Vector3(decimal, decimal, decimal)
+  href: api/ZeepSDK.Numerics.Vector3.html#ZeepSDK_Numerics_Vector3__ctor_System_Decimal_System_Decimal_System_Decimal_
+  commentId: M:ZeepSDK.Numerics.Vector3.#ctor(System.Decimal,System.Decimal,System.Decimal)
+  name.vb: New(Decimal, Decimal, Decimal)
+  fullName: ZeepSDK.Numerics.Vector3.Vector3(decimal, decimal, decimal)
+  fullName.vb: ZeepSDK.Numerics.Vector3.New(Decimal, Decimal, Decimal)
+  nameWithType: Vector3.Vector3(decimal, decimal, decimal)
+  nameWithType.vb: Vector3.New(Decimal, Decimal, Decimal)
+- uid: ZeepSDK.Numerics.Vector3.#ctor*
+  name: Vector3
+  href: api/ZeepSDK.Numerics.Vector3.html#ZeepSDK_Numerics_Vector3__ctor_
+  commentId: Overload:ZeepSDK.Numerics.Vector3.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ZeepSDK.Numerics.Vector3.Vector3
+  fullName.vb: ZeepSDK.Numerics.Vector3.New
+  nameWithType: Vector3.Vector3
+  nameWithType.vb: Vector3.New
+- uid: ZeepSDK.Numerics.Vector3.Equals(System.Object)
+  name: Equals(object)
+  href: api/ZeepSDK.Numerics.Vector3.html#ZeepSDK_Numerics_Vector3_Equals_System_Object_
+  commentId: M:ZeepSDK.Numerics.Vector3.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: ZeepSDK.Numerics.Vector3.Equals(object)
+  fullName.vb: ZeepSDK.Numerics.Vector3.Equals(Object)
+  nameWithType: Vector3.Equals(object)
+  nameWithType.vb: Vector3.Equals(Object)
+- uid: ZeepSDK.Numerics.Vector3.Equals(ZeepSDK.Numerics.Vector3)
+  name: Equals(Vector3)
+  href: api/ZeepSDK.Numerics.Vector3.html#ZeepSDK_Numerics_Vector3_Equals_ZeepSDK_Numerics_Vector3_
+  commentId: M:ZeepSDK.Numerics.Vector3.Equals(ZeepSDK.Numerics.Vector3)
+  fullName: ZeepSDK.Numerics.Vector3.Equals(ZeepSDK.Numerics.Vector3)
+  nameWithType: Vector3.Equals(Vector3)
+- uid: ZeepSDK.Numerics.Vector3.Equals*
+  name: Equals
+  href: api/ZeepSDK.Numerics.Vector3.html#ZeepSDK_Numerics_Vector3_Equals_
+  commentId: Overload:ZeepSDK.Numerics.Vector3.Equals
+  isSpec: "True"
+  fullName: ZeepSDK.Numerics.Vector3.Equals
+  nameWithType: Vector3.Equals
+- uid: ZeepSDK.Numerics.Vector3.GetHashCode
+  name: GetHashCode()
+  href: api/ZeepSDK.Numerics.Vector3.html#ZeepSDK_Numerics_Vector3_GetHashCode
+  commentId: M:ZeepSDK.Numerics.Vector3.GetHashCode
+  fullName: ZeepSDK.Numerics.Vector3.GetHashCode()
+  nameWithType: Vector3.GetHashCode()
+- uid: ZeepSDK.Numerics.Vector3.GetHashCode*
+  name: GetHashCode
+  href: api/ZeepSDK.Numerics.Vector3.html#ZeepSDK_Numerics_Vector3_GetHashCode_
+  commentId: Overload:ZeepSDK.Numerics.Vector3.GetHashCode
+  isSpec: "True"
+  fullName: ZeepSDK.Numerics.Vector3.GetHashCode
+  nameWithType: Vector3.GetHashCode
+- uid: ZeepSDK.Numerics.Vector3.ToString(System.String,System.IFormatProvider)
+  name: ToString(string, IFormatProvider)
+  href: api/ZeepSDK.Numerics.Vector3.html#ZeepSDK_Numerics_Vector3_ToString_System_String_System_IFormatProvider_
+  commentId: M:ZeepSDK.Numerics.Vector3.ToString(System.String,System.IFormatProvider)
+  name.vb: ToString(String, IFormatProvider)
+  fullName: ZeepSDK.Numerics.Vector3.ToString(string, System.IFormatProvider)
+  fullName.vb: ZeepSDK.Numerics.Vector3.ToString(String, System.IFormatProvider)
+  nameWithType: Vector3.ToString(string, IFormatProvider)
+  nameWithType.vb: Vector3.ToString(String, IFormatProvider)
+- uid: ZeepSDK.Numerics.Vector3.ToString*
+  name: ToString
+  href: api/ZeepSDK.Numerics.Vector3.html#ZeepSDK_Numerics_Vector3_ToString_
+  commentId: Overload:ZeepSDK.Numerics.Vector3.ToString
+  isSpec: "True"
+  fullName: ZeepSDK.Numerics.Vector3.ToString
+  nameWithType: Vector3.ToString
+- uid: ZeepSDK.Numerics.Vector3.X
+  name: X
+  href: api/ZeepSDK.Numerics.Vector3.html#ZeepSDK_Numerics_Vector3_X
+  commentId: F:ZeepSDK.Numerics.Vector3.X
+  fullName: ZeepSDK.Numerics.Vector3.X
+  nameWithType: Vector3.X
+- uid: ZeepSDK.Numerics.Vector3.Y
+  name: Y
+  href: api/ZeepSDK.Numerics.Vector3.html#ZeepSDK_Numerics_Vector3_Y
+  commentId: F:ZeepSDK.Numerics.Vector3.Y
+  fullName: ZeepSDK.Numerics.Vector3.Y
+  nameWithType: Vector3.Y
+- uid: ZeepSDK.Numerics.Vector3.Z
+  name: Z
+  href: api/ZeepSDK.Numerics.Vector3.html#ZeepSDK_Numerics_Vector3_Z
+  commentId: F:ZeepSDK.Numerics.Vector3.Z
+  fullName: ZeepSDK.Numerics.Vector3.Z
+  nameWithType: Vector3.Z
 - uid: ZeepSDK.PhotoMode
   name: ZeepSDK.PhotoMode
   href: api/ZeepSDK.PhotoMode.html
