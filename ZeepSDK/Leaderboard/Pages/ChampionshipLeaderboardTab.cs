@@ -1,7 +1,4 @@
-﻿using System.Linq;
-using ZeepkistClient;
-
-namespace ZeepSDK.Leaderboard.Pages;
+﻿namespace ZeepSDK.Leaderboard.Pages;
 
 internal class ChampionshipLeaderboardTab : OfficialGameLeaderboardTab
 {
@@ -11,17 +8,9 @@ internal class ChampionshipLeaderboardTab : OfficialGameLeaderboardTab
         return I2.Loc.LocalizationManager.GetTranslation("Online/Leaderboard/ChampionshipLB");
     }
 
-    /// <inheritdoc />
-    protected override ZeepkistNetworkPlayer[] GetOrderedPlayers()
+    protected override void OnEnable()
     {
-        return ZeepkistNetwork.PlayerList
-            .OrderByDescending(p => p.ChampionshipPoints.x)
-            .ToArray();
-    }
-
-    /// <inheritdoc />
-    protected override bool ShouldShowPosition(ZeepkistNetworkPlayer player)
-    {
-        return player.ChampionshipPoints.x > 0;
+        base.OnEnable();
+        Instance.drawChampionShipLeaderboard = true;
     }
 }
