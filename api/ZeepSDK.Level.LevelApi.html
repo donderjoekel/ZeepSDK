@@ -154,7 +154,7 @@ public static class LevelApi</code></pre>
 
   <h3 id="ZeepSDK_Level_LevelApi_CurrentHash" data-uid="ZeepSDK.Level.LevelApi.CurrentHash">
   CurrentHash
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Level/LevelApi.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Level/LevelApi.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The hash of the current level</p>
@@ -186,7 +186,7 @@ public static class LevelApi</code></pre>
 
   <h3 id="ZeepSDK_Level_LevelApi_CurrentLevel" data-uid="ZeepSDK.Level.LevelApi.CurrentLevel">
   CurrentLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Level/LevelApi.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Level/LevelApi.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the current level that is being played</p>
@@ -218,7 +218,7 @@ public static class LevelApi</code></pre>
 
   <h3 id="ZeepSDK_Level_LevelApi_CurrentZeepLevel" data-uid="ZeepSDK.Level.LevelApi.CurrentZeepLevel">
   CurrentZeepLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Level/LevelApi.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Level/LevelApi.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The parsed version of the current level</p>
@@ -254,7 +254,7 @@ public static class LevelApi</code></pre>
 
   <h3 id="ZeepSDK_Level_LevelApi_GetCurrentLevelHash" data-uid="ZeepSDK.Level.LevelApi.GetCurrentLevelHash">
   GetCurrentLevelHash()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Level/LevelApi.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Level/LevelApi.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the hash of the current level
@@ -288,7 +288,7 @@ public static string GetCurrentLevelHash()</code></pre>
 
   <h3 id="ZeepSDK_Level_LevelApi_GetLevelHash_LevelScriptableObject_" data-uid="ZeepSDK.Level.LevelApi.GetLevelHash(LevelScriptableObject)">
   GetLevelHash(LevelScriptableObject)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Level/LevelApi.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Level/LevelApi.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a hash that is unique to this level</p>
@@ -310,6 +310,48 @@ public static string GetCurrentLevelHash()</code></pre>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_Level_LevelApi_GetLevelHash_" data-uid="ZeepSDK.Level.LevelApi.GetLevelHash*"></a>
+
+  <h3 id="ZeepSDK_Level_LevelApi_GetLevelHash_LevelScriptableObject_ZeepSDK_Level_ZeepLevel__" data-uid="ZeepSDK.Level.LevelApi.GetLevelHash(LevelScriptableObject,ZeepSDK.Level.ZeepLevel@)">
+  GetLevelHash(LevelScriptableObject, out ZeepLevel)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Level/LevelApi.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a hash that is unique to this level</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetLevelHash(LevelScriptableObject levelScriptableObject, out ZeepLevel zeepLevel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>levelScriptableObject</code> <span class="xref">LevelScriptableObject</span></dt>
+    <dd><p>The level to hash</p>
+</dd>
+    <dt><code>zeepLevel</code> <a class="xref" href="ZeepSDK.Level.ZeepLevel.html">ZeepLevel</a></dt>
+    <dd><p>Will contain the parsed level</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The hash</p>
+</dd>
   </dl>
 
 

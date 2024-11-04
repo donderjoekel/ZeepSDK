@@ -22716,6 +22716,15 @@ references:
   commentId: M:ZeepSDK.Level.LevelApi.GetLevelHash(LevelScriptableObject)
   fullName: ZeepSDK.Level.LevelApi.GetLevelHash(LevelScriptableObject)
   nameWithType: LevelApi.GetLevelHash(LevelScriptableObject)
+- uid: ZeepSDK.Level.LevelApi.GetLevelHash(LevelScriptableObject,ZeepSDK.Level.ZeepLevel@)
+  name: GetLevelHash(LevelScriptableObject, out ZeepLevel)
+  href: api/ZeepSDK.Level.LevelApi.html#ZeepSDK_Level_LevelApi_GetLevelHash_LevelScriptableObject_ZeepSDK_Level_ZeepLevel__
+  commentId: M:ZeepSDK.Level.LevelApi.GetLevelHash(LevelScriptableObject,ZeepSDK.Level.ZeepLevel@)
+  name.vb: GetLevelHash(LevelScriptableObject, ZeepLevel)
+  fullName: ZeepSDK.Level.LevelApi.GetLevelHash(LevelScriptableObject, out ZeepSDK.Level.ZeepLevel)
+  fullName.vb: ZeepSDK.Level.LevelApi.GetLevelHash(LevelScriptableObject, ZeepSDK.Level.ZeepLevel)
+  nameWithType: LevelApi.GetLevelHash(LevelScriptableObject, out ZeepLevel)
+  nameWithType.vb: LevelApi.GetLevelHash(LevelScriptableObject, ZeepLevel)
 - uid: ZeepSDK.Level.LevelApi.GetLevelHash*
   name: GetLevelHash
   href: api/ZeepSDK.Level.LevelApi.html#ZeepSDK_Level_LevelApi_GetLevelHash_
