@@ -47,8 +47,8 @@ public static class LevelApi
 
     private static void FinishLoading(SetupGame instance)
     {
-        CurrentZeepLevel = ZeepLevelParser.Parse(instance.lines);
-        CurrentHash = Hash(CurrentZeepLevel);
+        CurrentHash = GetLevelHash(instance.GlobalLevel, out ZeepLevel zeepLevel);
+        CurrentZeepLevel = zeepLevel;
     }
 
     private static LevelScriptableObject GetLevelFromLoader()
@@ -84,9 +84,20 @@ public static class LevelApi
     /// <param name="levelScriptableObject">The level to hash</param>
     public static string GetLevelHash(LevelScriptableObject levelScriptableObject)
     {
-        ZeepLevel zeepLevel = ZeepLevelParser.Parse(levelScriptableObject.LevelData);
+        return GetLevelHash(levelScriptableObject, out _);
+    }
+
+    /// <summary>
+    /// Creates a hash that is unique to this level
+    /// </summary>
+    /// <param name="levelScriptableObject">The level to hash</param>
+    /// <param name="zeepLevel">Will contain the parsed level</param>
+    /// <returns>The hash</returns>
+    public static string GetLevelHash(LevelScriptableObject levelScriptableObject, out ZeepLevel zeepLevel)
+    {
+        zeepLevel = ZeepLevelParser.Parse(levelScriptableObject.LevelData);
         if (zeepLevel != null && levelScriptableObject.UseAvonturenLevel)
-            return zeepLevel.UniqueId;
+            return levelScriptableObject.UID;
         return zeepLevel == null ? null : Hash(zeepLevel);
     }
 
