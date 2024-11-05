@@ -25,4 +25,20 @@ internal static class ChatCommandRegistry
         localChatCommands.Add(chatCommand);
         remoteChatCommands.Add(chatCommand);
     }
+
+    public static void UnregisterLocalChatCommand(ILocalChatCommand chatCommand)
+    {
+        localChatCommands.Remove(chatCommand);
+    }
+
+    public static void UnregisterRemoteChatCommand(IRemoteChatCommand chatCommand)
+    {
+        remoteChatCommands.Remove(chatCommand);
+    }
+
+    public static void UnregisterMixedChatCommand(IMixedChatCommand chatCommand)
+    {
+        localChatCommands.Remove(chatCommand);
+        remoteChatCommands.Remove(chatCommand);
+    }
 }

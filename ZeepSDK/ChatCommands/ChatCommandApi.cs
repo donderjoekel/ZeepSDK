@@ -41,10 +41,12 @@ public static class ChatCommandApi
     {
         try
         {
-            ChatCommandRegistry.RegisterLocalChatCommand(new LocalChatCommandWrapper(prefix,
-                command,
-                description,
-                callback));
+            ChatCommandRegistry.RegisterLocalChatCommand(
+                new LocalChatCommandWrapper(
+                    prefix,
+                    command,
+                    description,
+                    callback));
         }
         catch (Exception e)
         {
@@ -70,6 +72,23 @@ public static class ChatCommandApi
     }
 
     /// <summary>
+    /// Allows you to register a local chat command
+    /// </summary>
+    /// <param name="command">The command to register</param>
+    public static void RegisterLocalChatCommand<TChatCommand>(TChatCommand command)
+        where TChatCommand : ILocalChatCommand, new()
+    {
+        try
+        {
+            ChatCommandRegistry.RegisterLocalChatCommand(command);
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(RegisterLocalChatCommand)}: " + e);
+        }
+    }
+
+    /// <summary>
     /// Allows you to register a remote chat command
     /// </summary>
     /// <param name="prefix">The prefix for the command. Note: this should not start with a / as this does not work</param>
@@ -85,10 +104,12 @@ public static class ChatCommandApi
     {
         try
         {
-            ChatCommandRegistry.RegisterRemoteChatCommand(new RemoteChatCommandWrapper(prefix,
-                command,
-                description,
-                callback));
+            ChatCommandRegistry.RegisterRemoteChatCommand(
+                new RemoteChatCommandWrapper(
+                    prefix,
+                    command,
+                    description,
+                    callback));
         }
         catch (Exception e)
         {
@@ -114,6 +135,23 @@ public static class ChatCommandApi
     }
 
     /// <summary>
+    /// Allows you to register a remote chat command
+    /// </summary>
+    /// <param name="command">The command to register</param>
+    public static void RegisterRemoteChatCommand<TChatCommand>(TChatCommand command)
+        where TChatCommand : IRemoteChatCommand, new()
+    {
+        try
+        {
+            ChatCommandRegistry.RegisterRemoteChatCommand(command);
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(RegisterRemoteChatCommand)}: " + e);
+        }
+    }
+
+    /// <summary>
     /// Allows you to register a mixed chat command
     /// </summary>
     /// <param name="prefix">The prefix for the command. Note: this should not start with a / as this does not work</param>
@@ -129,10 +167,12 @@ public static class ChatCommandApi
     {
         try
         {
-            ChatCommandRegistry.RegisterMixedChatCommand(new MixedChatCommandWrapper(prefix,
-                command,
-                description,
-                callback));
+            ChatCommandRegistry.RegisterMixedChatCommand(
+                new MixedChatCommandWrapper(
+                    prefix,
+                    command,
+                    description,
+                    callback));
         }
         catch (Exception e)
         {
@@ -155,5 +195,49 @@ public static class ChatCommandApi
         {
             logger.LogError($"Unhandled exception in {nameof(RegisterMixedChatCommand)}: " + e);
         }
+    }
+
+    /// <summary>
+    /// Allows you to register a mixed chat command
+    /// </summary>
+    /// <param name="command">The command to register</param>
+    public static void RegisterMixedChatCommand<TChatCommand>(TChatCommand command)
+        where TChatCommand : IMixedChatCommand, new()
+    {
+        try
+        {
+            ChatCommandRegistry.RegisterMixedChatCommand(command);
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(RegisterMixedChatCommand)}: " + e);
+        }
+    }
+
+    /// <summary>
+    /// Unregisters a local chat command
+    /// </summary>
+    /// <param name="command">The command to unregister</param>
+    public static void UnregisterLocalChatCommand(ILocalChatCommand command)
+    {
+        ChatCommandRegistry.UnregisterLocalChatCommand(command);
+    }
+
+    /// <summary>
+    /// Unregisters a remote chat command
+    /// </summary>
+    /// <param name="command">The command to unregister</param>
+    public static void UnregisterRemoteChatCommand(IRemoteChatCommand command)
+    {
+        ChatCommandRegistry.UnregisterRemoteChatCommand(command);
+    }
+
+    /// <summary>
+    /// Unregisters a mixed chat command
+    /// </summary>
+    /// <param name="command">The command to unregister</param>
+    public static void UnregisterMixedChatCommand(IMixedChatCommand command)
+    {
+        ChatCommandRegistry.UnregisterMixedChatCommand(command);
     }
 }
