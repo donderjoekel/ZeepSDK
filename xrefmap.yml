@@ -113,6 +113,15 @@ references:
   fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand(Of TChatCommand)()
   nameWithType: ChatCommandApi.RegisterLocalChatCommand<TChatCommand>()
   nameWithType.vb: ChatCommandApi.RegisterLocalChatCommand(Of TChatCommand)()
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand``1(``0)
+  name: RegisterLocalChatCommand<TChatCommand>(TChatCommand)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterLocalChatCommand__1___0_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand``1(``0)
+  name.vb: RegisterLocalChatCommand(Of TChatCommand)(TChatCommand)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand<TChatCommand>(TChatCommand)
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand(Of TChatCommand)(TChatCommand)
+  nameWithType: ChatCommandApi.RegisterLocalChatCommand<TChatCommand>(TChatCommand)
+  nameWithType.vb: ChatCommandApi.RegisterLocalChatCommand(Of TChatCommand)(TChatCommand)
 - uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate)
   name: RegisterMixedChatCommand(string, string, string, MixedChatCommandCallbackDelegate)
   href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterMixedChatCommand_System_String_System_String_System_String_ZeepSDK_ChatCommands_MixedChatCommandCallbackDelegate_
@@ -138,6 +147,15 @@ references:
   fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(Of TChatCommand)()
   nameWithType: ChatCommandApi.RegisterMixedChatCommand<TChatCommand>()
   nameWithType.vb: ChatCommandApi.RegisterMixedChatCommand(Of TChatCommand)()
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand``1(``0)
+  name: RegisterMixedChatCommand<TChatCommand>(TChatCommand)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterMixedChatCommand__1___0_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand``1(``0)
+  name.vb: RegisterMixedChatCommand(Of TChatCommand)(TChatCommand)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand<TChatCommand>(TChatCommand)
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterMixedChatCommand(Of TChatCommand)(TChatCommand)
+  nameWithType: ChatCommandApi.RegisterMixedChatCommand<TChatCommand>(TChatCommand)
+  nameWithType.vb: ChatCommandApi.RegisterMixedChatCommand(Of TChatCommand)(TChatCommand)
 - uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand(System.String,System.String,System.String,ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate)
   name: RegisterRemoteChatCommand(string, string, string, RemoteChatCommandCallbackDelegate)
   href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterRemoteChatCommand_System_String_System_String_System_String_ZeepSDK_ChatCommands_RemoteChatCommandCallbackDelegate_
@@ -163,6 +181,54 @@ references:
   fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand(Of TChatCommand)()
   nameWithType: ChatCommandApi.RegisterRemoteChatCommand<TChatCommand>()
   nameWithType.vb: ChatCommandApi.RegisterRemoteChatCommand(Of TChatCommand)()
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand``1(``0)
+  name: RegisterRemoteChatCommand<TChatCommand>(TChatCommand)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterRemoteChatCommand__1___0_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand``1(``0)
+  name.vb: RegisterRemoteChatCommand(Of TChatCommand)(TChatCommand)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand<TChatCommand>(TChatCommand)
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterRemoteChatCommand(Of TChatCommand)(TChatCommand)
+  nameWithType: ChatCommandApi.RegisterRemoteChatCommand<TChatCommand>(TChatCommand)
+  nameWithType.vb: ChatCommandApi.RegisterRemoteChatCommand(Of TChatCommand)(TChatCommand)
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommand(ZeepSDK.ChatCommands.ILocalChatCommand)
+  name: UnregisterLocalChatCommand(ILocalChatCommand)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_UnregisterLocalChatCommand_ZeepSDK_ChatCommands_ILocalChatCommand_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommand(ZeepSDK.ChatCommands.ILocalChatCommand)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommand(ZeepSDK.ChatCommands.ILocalChatCommand)
+  nameWithType: ChatCommandApi.UnregisterLocalChatCommand(ILocalChatCommand)
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommand*
+  name: UnregisterLocalChatCommand
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_UnregisterLocalChatCommand_
+  commentId: Overload:ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommand
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommand
+  nameWithType: ChatCommandApi.UnregisterLocalChatCommand
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterMixedChatCommand(ZeepSDK.ChatCommands.IMixedChatCommand)
+  name: UnregisterMixedChatCommand(IMixedChatCommand)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_UnregisterMixedChatCommand_ZeepSDK_ChatCommands_IMixedChatCommand_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.UnregisterMixedChatCommand(ZeepSDK.ChatCommands.IMixedChatCommand)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterMixedChatCommand(ZeepSDK.ChatCommands.IMixedChatCommand)
+  nameWithType: ChatCommandApi.UnregisterMixedChatCommand(IMixedChatCommand)
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterMixedChatCommand*
+  name: UnregisterMixedChatCommand
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_UnregisterMixedChatCommand_
+  commentId: Overload:ZeepSDK.ChatCommands.ChatCommandApi.UnregisterMixedChatCommand
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterMixedChatCommand
+  nameWithType: ChatCommandApi.UnregisterMixedChatCommand
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterRemoteChatCommand(ZeepSDK.ChatCommands.IRemoteChatCommand)
+  name: UnregisterRemoteChatCommand(IRemoteChatCommand)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_UnregisterRemoteChatCommand_ZeepSDK_ChatCommands_IRemoteChatCommand_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.UnregisterRemoteChatCommand(ZeepSDK.ChatCommands.IRemoteChatCommand)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterRemoteChatCommand(ZeepSDK.ChatCommands.IRemoteChatCommand)
+  nameWithType: ChatCommandApi.UnregisterRemoteChatCommand(IRemoteChatCommand)
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterRemoteChatCommand*
+  name: UnregisterRemoteChatCommand
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_UnregisterRemoteChatCommand_
+  commentId: Overload:ZeepSDK.ChatCommands.ChatCommandApi.UnregisterRemoteChatCommand
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterRemoteChatCommand
+  nameWithType: ChatCommandApi.UnregisterRemoteChatCommand
 - uid: ZeepSDK.ChatCommands.IChatCommand
   name: IChatCommand
   href: api/ZeepSDK.ChatCommands.IChatCommand.html
