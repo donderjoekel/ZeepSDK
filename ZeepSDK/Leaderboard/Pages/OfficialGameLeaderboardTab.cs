@@ -11,7 +11,7 @@ internal abstract class OfficialGameLeaderboardTab : BaseMultiplayerLeaderboardT
         ZeepkistNetwork.LeaderboardUpdated += OnLeaderboardUpdated;
         ZeepkistNetwork.PlayerResultsChanged += OnPlayerResultsChanged;
 
-        SetMaxPages((ZeepkistNetwork.PlayerList.Count - 1) / 16);
+        MaxPages = (ZeepkistNetwork.PlayerList.Count - 1) / 16;
     }
 
     /// <inheritdoc />
@@ -25,7 +25,7 @@ internal abstract class OfficialGameLeaderboardTab : BaseMultiplayerLeaderboardT
     {
         try
         {
-            SetMaxPages((ZeepkistNetwork.PlayerList.Count - 1) / 16);
+            MaxPages = (ZeepkistNetwork.PlayerList.Count - 1) / 16;
         }
         catch (Exception e)
         {
@@ -37,7 +37,7 @@ internal abstract class OfficialGameLeaderboardTab : BaseMultiplayerLeaderboardT
     {
         try
         {
-            SetMaxPages((ZeepkistNetwork.PlayerList.Count - 1) / 16);
+            MaxPages = (ZeepkistNetwork.PlayerList.Count - 1) / 16;
         }
         catch (Exception e)
         {
@@ -50,12 +50,6 @@ internal abstract class OfficialGameLeaderboardTab : BaseMultiplayerLeaderboardT
     {
         Logger.LogInfo("Drawing leaderboard -> forwarding to Instance.DrawTabLeaderboard()");
         Instance.currentPage = CurrentPage;
-        Instance.DrawTabLeaderboard();
-    }
-
-    private void SetMaxPages(int value)
-    {
-        MaxPages = value;
-        Instance.maxPages = MaxPages;
+        Instance.ClientRedrawLeaderBoard();
     }
 }
