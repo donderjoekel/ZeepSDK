@@ -37,6 +37,8 @@ internal class UIConfigurator : MonoBehaviour
     private readonly List<RectTransform> transforms = new();
     private readonly Dictionary<string, TransformSaveData> transformSaveData = new();
 
+    private ConfigEntry<bool> configEnabled;
+    private ConfigEntry<KeyCode> configEnabledKey;
     private ConfigEntry<KeyCode> configEditModeKey;
     private ConfigEntry<KeyCode> configNextCycleKey;
     private ConfigEntry<KeyCode> configPreviousCycleKey;
@@ -73,7 +75,7 @@ internal class UIConfigurator : MonoBehaviour
     private void Awake()
     {
         WhiteTexture = Texture2D.whiteTexture;
-        
+
         DontDestroyOnLoad(gameObject);
         RegisterConfig();
         LoadSaveData();
@@ -83,6 +85,16 @@ internal class UIConfigurator : MonoBehaviour
 
     private void RegisterConfig()
     {
+        configEnabled = Plugin.Instance.Config.Bind(
+            "UI",
+            "Enabled",
+            false,
+            "Enables or disables the UI Configurator");
+        configEnabledKey = Plugin.Instance.Config.Bind(
+            "UI",
+            "Enabled Key",
+            KeyCode.None,
+            "The key to enable or disable the UI Configurator");
         configEditModeKey = Plugin.Instance.Config.Bind(
             "UI",
             "Toggle Edit Mode Key",
@@ -208,6 +220,9 @@ internal class UIConfigurator : MonoBehaviour
 
     private void Update()
     {
+        if (!configEnabled.Value)
+            return;
+
         if (Input.GetKeyDown(configEditModeKey.Value))
         {
             ToggleEditMode();
