@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using BepInEx.Logging;
 using JetBrains.Annotations;
+using UnityEngine;
 using ZeepSDK.Extensions;
 using ZeepSDK.Level.Patches;
 using ZeepSDK.Utilities;
@@ -59,11 +60,6 @@ public static class LevelApi
             return null;
         if (PlayerManager.Instance.loader.GlobalLevel == null)
             return null;
-        if (PlayerManager.Instance.loader.GlobalLevel.LevelData == null ||
-            PlayerManager.Instance.loader.GlobalLevel.LevelData.Length == 0)
-        {
-            return null;
-        }
 
         return PlayerManager.Instance.loader.GlobalLevel;
     }
@@ -95,7 +91,25 @@ public static class LevelApi
     /// <returns>The hash</returns>
     public static string GetLevelHash(LevelScriptableObject levelScriptableObject, out ZeepLevel zeepLevel)
     {
-        zeepLevel = ZeepLevelParser.Parse(levelScriptableObject.LevelData);
+        const string winSeparator = "\r\n";
+        const string unixSeparator = "\n";
+
+        if (levelScriptableObject.resourcePathLevel)
+        {
+            TextAsset asset = Resources.Load<TextAsset>(
+                levelScriptableObject.levelResourcePathV16
+                    .Replace("Assets/Resources/", string.Empty)
+                    .Replace(".txt", string.Empty));
+            zeepLevel = ZeepLevelParser.Parse(
+                asset.text.Contains(winSeparator)
+                    ? asset.text.Split(winSeparator)
+                    : asset.text.Split(unixSeparator));
+        }
+        else
+        {
+            zeepLevel = ZeepLevelParser.Parse(levelScriptableObject.LevelData);
+        }
+
         if (zeepLevel != null && levelScriptableObject.UseAvonturenLevel)
             return levelScriptableObject.UID;
         return zeepLevel == null ? null : Hash(zeepLevel);
