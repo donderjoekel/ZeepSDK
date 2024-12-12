@@ -10,6 +10,7 @@ using ZeepSDK.LevelEditor;
 using ZeepSDK.Multiplayer;
 using ZeepSDK.PhotoMode;
 using ZeepSDK.Racing;
+using ZeepSDK.Scripting;
 using ZeepSDK.Storage;
 using ZeepSDK.UI;
 using ZeepSDK.Versioning;
@@ -42,6 +43,7 @@ namespace ZeepSDK
             MultiplayerApi.Initialize();
             PhotoModeApi.Initialize();
             UIApi.Initialize(gameObject);
+            ScriptingApi.Initialize();
 
             // Initialize the player loop helper, this is to reduce issues with UniTask
             if (!PlayerLoopHelper.IsInjectedUniTaskPlayerLoop())
