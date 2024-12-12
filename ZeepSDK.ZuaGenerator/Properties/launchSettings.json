@@ -1,0 +1,9 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Debug Roslyn on ZeepSDK": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "../ZeepSDK/ZeepSDK.csproj"
+    }
+  }
+}
