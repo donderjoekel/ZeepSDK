@@ -105,7 +105,7 @@ internal class {className} : ZeepSDK.Scripting.ZUA.ILuaEvent
 {{
     private readonly {delegateFullName} @delegate;
     
-    public string Name => ""{symbol.ContainingType.Name}.On{eventName}"";
+    public string Name => ""{symbol.ContainingType.Name}_On{eventName}"";
 
     public {className}()
     {{
