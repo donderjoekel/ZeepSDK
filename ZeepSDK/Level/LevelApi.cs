@@ -8,6 +8,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using ZeepSDK.Extensions;
 using ZeepSDK.Level.Patches;
+using ZeepSDK.Scripting.Attributes;
 using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Level;
@@ -23,22 +24,24 @@ public static class LevelApi
     private static readonly Vector3Comparer _vector3Comparer = new();
     private static readonly IntComparer _intSequenceComparer = new();
     private static readonly FloatComparer _floatSequenceComparer = new();
-
     private static readonly Dictionary<string, string> uidToHash = new();
 
     /// <summary>
     /// The parsed version of the current level
     /// </summary>
+    [GenerateProperty]
     public static ZeepLevel CurrentZeepLevel { get; private set; }
 
     /// <summary>
     /// The hash of the current level
     /// </summary>
+    [GenerateProperty]
     public static string CurrentHash { get; private set; }
 
     /// <summary>
     /// Gets the current level that is being played
     /// </summary>
+    [GenerateProperty]
     public static LevelScriptableObject CurrentLevel => GetLevelFromLoader();
 
     internal static void Initialize()
@@ -78,6 +81,7 @@ public static class LevelApi
     /// Creates a hash that is unique to this level
     /// </summary>
     /// <param name="levelScriptableObject">The level to hash</param>
+    [GenerateFunction]
     public static string GetLevelHash(LevelScriptableObject levelScriptableObject)
     {
         return GetLevelHash(levelScriptableObject, out _);

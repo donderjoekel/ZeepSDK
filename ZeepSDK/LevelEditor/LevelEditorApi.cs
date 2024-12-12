@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using ZeepSDK.Extensions;
 using ZeepSDK.LevelEditor.Builders;
 using ZeepSDK.LevelEditor.Patches;
+using ZeepSDK.Scripting.Attributes;
 using ZeepSDK.Utilities;
 
 namespace ZeepSDK.LevelEditor;
@@ -31,31 +32,37 @@ public static class LevelEditorApi
     /// <summary>
     /// An event that is fired when the user enters test mode
     /// </summary>
+    [GenerateEvent]
     public static event EnteredTestModeDelegate EnteredTestMode;
 
     /// <summary>
     /// An event that is fired when the user enters the level editor
     /// </summary>
+    [GenerateEvent]
     public static event EnteredLevelEditorDelegate EnteredLevelEditor;
 
     /// <summary>
     /// An event that is fired when the user leaves the level editor
     /// </summary>
+    [GenerateEvent]
     public static event ExitedLevelEditorDelegate ExitedLevelEditor;
 
     /// <summary>
     /// An event that is fired when the user loads an existing level from a file in the level editor 
     /// </summary>
+    [GenerateEvent]
     public static event LevelLoadedDelegate LevelLoaded;
 
     /// <summary>
     /// An event that is fired whenever the user saves a level in the level editor
     /// </summary>
+    [GenerateEvent]
     public static event LevelSavedDelegate LevelSaved;
 
     /// <summary>
     /// An event that is fired whenever the block selection changes
     /// </summary>
+    [GenerateEvent]
     public static event SelectionChangedDelegate SelectionChanged;
 
     /// <summary>
@@ -343,6 +350,7 @@ public static class LevelEditorApi
     /// <summary>
     /// Clears the selection in the level editor
     /// </summary>
+    [GenerateFunction]
     public static void ClearSelection()
     {
         try

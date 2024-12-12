@@ -1,5 +1,6 @@
 ﻿using JetBrains.Annotations;
 using UnityEngine;
+using ZeepSDK.Scripting.Attributes;
 using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Messaging;
@@ -69,6 +70,7 @@ public static class MessengerApi
     /// </summary>
     /// <param name="message">The message to display</param>
     /// <param name="duration">The duration to display the message</param>
+    [GenerateFunction]
     public static void Log(string message, float duration = DEFAULT_DURATION)
     {
         PlayerManager.Instance.messenger.Log(message, duration);
@@ -79,6 +81,7 @@ public static class MessengerApi
     /// </summary>
     /// <param name="message">The message to display</param>
     /// <param name="duration">The duration to display the message</param>
+    [GenerateFunction]
     public static void LogSuccess(string message, float duration = DEFAULT_DURATION)
     {
         PlayerManager.Instance.messenger.LogCustomColor(
@@ -94,6 +97,7 @@ public static class MessengerApi
     /// </summary>
     /// <param name="message">The message to display</param>
     /// <param name="duration">The duration to display the message</param>
+    [GenerateFunction]
     public static void LogWarning(string message, float duration = DEFAULT_DURATION)
     {
         PlayerManager.Instance.messenger.LogCustomColor(
@@ -109,6 +113,7 @@ public static class MessengerApi
     /// </summary>
     /// <param name="message">The message to display</param>
     /// <param name="duration">The duration to display the message</param>
+    [GenerateFunction]
     public static void LogError(string message, float duration = DEFAULT_DURATION)
     {
         PlayerManager.Instance.messenger.LogError(message, duration);

@@ -5,6 +5,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using ZeepkistClient;
 using ZeepkistNetworking;
+using ZeepSDK.Scripting.Attributes;
 using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Chat;
@@ -22,6 +23,7 @@ public static class ChatApi
     /// <summary>
     /// Event that is fired when a chat message is received
     /// </summary>
+    [GenerateEvent]
     public static event ChatMessageReceivedDelegate ChatMessageReceived;
 
     internal static void Initialize(GameObject gameObject)
@@ -51,6 +53,7 @@ public static class ChatApi
     /// Adds a message to the local chat UI
     /// </summary>
     /// <param name="message">The message you want to add</param>
+    [GenerateFunction]
     public static void AddLocalMessage(string message)
     {
         try
@@ -71,6 +74,7 @@ public static class ChatApi
     /// Sends a message to the chat
     /// </summary>
     /// <param name="message">The message you wish to send</param>
+    [GenerateFunction]
     public static void SendMessage(string message)
     {
         try
@@ -93,6 +97,7 @@ public static class ChatApi
     /// <summary>
     /// Clears the chat window
     /// </summary>
+    [GenerateFunction]
     public static void ClearChat()
     {
         try

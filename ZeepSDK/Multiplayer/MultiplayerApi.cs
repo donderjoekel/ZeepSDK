@@ -5,6 +5,7 @@ using ZeepkistClient;
 using ZeepkistNetworking;
 using ZeepSDK.Extensions;
 using ZeepSDK.Multiplayer.Patches;
+using ZeepSDK.Scripting.Attributes;
 using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Multiplayer;
@@ -20,36 +21,43 @@ public static class MultiplayerApi
     /// <summary>
     /// An event that gets fired whenever you connect to a game
     /// </summary>
+    [GenerateEvent]
     public static event ConnectedToGameDelegate ConnectedToGame;
 
     /// <summary>
     /// An event that gets fired whenever you disconnect from a game
     /// </summary>
+    [GenerateEvent]
     public static event DisconnectedFromGameDelegate DisconnectedFromGame;
 
     /// <summary>
     /// An event that gets fired whenever you have created a room/game
     /// </summary>
+    [GenerateEvent]
     public static event CreatedRoomDelegate CreatedRoom;
 
     /// <summary>
     /// An even that gets fired whenever you have joined a room/game
     /// </summary>
+    [GenerateEvent]
     public static event JoinedRoomDelegate JoinedRoom;
 
     /// <summary>
     /// An even that gets fired whenever a player joins the room/game
     /// </summary>
+    [GenerateEvent]
     public static event PlayerJoinedDelegate PlayerJoined;
 
     /// <summary>
     /// An even that gets fired whenever a player leaves the room/game
     /// </summary>
+    [GenerateEvent]
     public static event PlayerLeftDelegate PlayerLeft;
 
     /// <summary>
     /// Is the player currently in an online game or not
     /// </summary>
+    [GenerateProperty]
     public static bool IsPlayingOnline => ZeepkistNetwork.IsConnectedToGame;
 
     internal static void Initialize()
@@ -97,6 +105,7 @@ public static class MultiplayerApi
     /// Updates the playlist on the server
     /// </summary>
     [PublicAPI]
+    [GenerateFunction]
     public static void UpdateServerPlaylist()
     {
         try
@@ -121,6 +130,7 @@ public static class MultiplayerApi
     /// Sets the level that should be played next
     /// </summary>
     /// <param name="index">The (zero-based) index of the level</param>
+    [GenerateFunction]
     public static void SetNextLevelIndex(int index)
     {
         try

@@ -8,6 +8,7 @@ using ZeepSDK.Extensions;
 using ZeepSDK.External.Cysharp.Threading.Tasks;
 using ZeepSDK.External.FluentResults;
 using ZeepSDK.Racing.Patches;
+using ZeepSDK.Scripting.Attributes;
 using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Racing;
@@ -23,61 +24,73 @@ public static class RacingApi
     /// <summary>
     /// An event that is fired when the player crosses the finish line. The parameter is the time the player crossed the finish line
     /// </summary>
+    [GenerateEvent]
     public static event CrossedFinishLineDelegate CrossedFinishLine;
 
     /// <summary>
     /// An event that is fired whenever the player passes any checkpoint. The parameter is the time the player passed the checkpoint
     /// </summary>
+    [GenerateEvent]
     public static event PassedCheckpointDelegate PassedCheckpoint;
 
     /// <summary>
     /// An event that is fired whenever the player crashes. The parameter is the reason that the player crashed
     /// </summary>
+    [GenerateEvent]
     public static event CrashedDelegate Crashed;
 
     /// <summary>
     /// An event that is fired whenever the player enters first person mode
     /// </summary>
+    [GenerateEvent]
     public static event EnteredFirstPersonDelegate EnteredFirstPerson;
 
     /// <summary>
     /// An event that is fired whenever the player enters third person mode
     /// </summary>
+    [GenerateEvent]
     public static event EnteredThirdPersonDelegate EnteredThirdPerson;
 
     /// <summary>
     /// An event that is fired whenever the player spawns
     /// </summary>
+    [GenerateEvent]
     public static event PlayerSpawnedDelegate PlayerSpawned;
 
     /// <summary>
     /// An event that is fired whenever the round starts
     /// </summary>
+    [GenerateEvent]
     public static event RoundStartedDelegate RoundStarted;
 
     /// <summary>
     /// An event that is fired whenever the round ends
     /// </summary>
+    [GenerateEvent]
     public static event RoundStartedDelegate RoundEnded;
 
     /// <summary>
     /// An even that is fired whenever a wheel breaks
     /// </summary>
+    [GenerateEvent]
     public static event WheelBrokenDelegate WheelBroken;
 
     /// <summary>
     /// An event that is fired when the level you are about to play has been loaded
     /// </summary>
+    [GenerateEvent]
     public static event LevelLoadedDelegate LevelLoaded;
 
     /// <summary>
     /// An event that is fired when the player presses the quick reset button
     /// </summary>
+    [GenerateEvent]
     public static event QuickResetDelegate QuickReset;
 
     /// <summary>
     /// An event that is fired when the player quits the game through the pause menu
     /// </summary>
+    [GenerateEvent]
     public static event QuitDelegate Quit;
 
     internal static void Initialize(GameObject gameObject)
