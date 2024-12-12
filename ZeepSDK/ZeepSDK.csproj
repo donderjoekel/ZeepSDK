@@ -28,6 +28,7 @@
 
     <ItemGroup>
         <None Include="..\README.md" Pack="true" PackagePath="\"/>
+        <ProjectReference Include="..\ZeepSDK.ZuaGenerator\ZeepSDK.ZuaGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
     </ItemGroup>
 
     <ItemGroup>
