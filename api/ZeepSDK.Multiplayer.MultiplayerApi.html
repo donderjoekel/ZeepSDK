@@ -1,123 +1,86 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
 <html>
+
   <head>
     <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Class MultiplayerApi </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class MultiplayerApi ">
-      
-      <meta name="description" content="An API for interacting with the multiplayer side of Zeepkist">
-      <link rel="icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../public/docfx.min.css">
-      <link rel="stylesheet" href="../public/main.css">
-      <meta name="docfx:navrel" content="../toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
-      
-      
-      
-      
-      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
-      <meta name="loc:inThisArticle" content="In this article">
-      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
-      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
-      <meta name="loc:tocFilter" content="Filter by title">
-      <meta name="loc:nextArticle" content="Next">
-      <meta name="loc:prevArticle" content="Previous">
-      <meta name="loc:themeLight" content="Light">
-      <meta name="loc:themeDark" content="Dark">
-      <meta name="loc:themeAuto" content="Auto">
-      <meta name="loc:changeTheme" content="Change theme">
-      <meta name="loc:copy" content="Copy">
-      <meta name="loc:downloadPdf" content="Download PDF">
-
-      <script type="module" src="./../public/docfx.min.js"></script>
-
-      <script>
-        const theme = localStorage.getItem('theme') || 'auto'
-        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-      </script>
-
+    
+    <meta name="description" content="An API for interacting with the multiplayer side of Zeepkist">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
   </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
-    <header class="bg-body border-bottom">
-      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
-        <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../logo.svg" alt="">
-            
-          </a>
-          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-three-dots"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navpanel">
-            <div id="navbar">
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
+        </nav>
 
-    <main class="container-xxl">
-      <div class="toc-offcanvas">
-        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <nav class="toc" id="toc"></nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
           </div>
         </div>
-      </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
 
-      <div class="content">
-        <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
-            <i class="bi bi-list"></i>
-          </button>
-
-          <nav id="breadcrumb"></nav>
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
         </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ZeepSDK.Multiplayer.MultiplayerApi">
 
-        <article data-uid="ZeepSDK.Multiplayer.MultiplayerApi">
 
 
-
-  <h1 id="ZeepSDK_Multiplayer_MultiplayerApi" data-uid="ZeepSDK.Multiplayer.MultiplayerApi" class="text-break">
-Class MultiplayerApi  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L15"><i class="bi bi-code-slash"></i></a>
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ZeepSDK.html">ZeepSDK</a>.<a class="xref" href="ZeepSDK.Multiplayer.html">Multiplayer</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>An API for interacting with the multiplayer side of Zeepkist</p>
+  <h1 id="ZeepSDK_Multiplayer_MultiplayerApi" data-uid="ZeepSDK.Multiplayer.MultiplayerApi" class="text-break">Class MultiplayerApi</h1>
+  <div class="markdown level0 summary"><p>An API for interacting with the multiplayer side of Zeepkist</p>
 </div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[PublicAPI]
-public static class MultiplayerApi</code></pre>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">MultiplayerApi</span></div>
   </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">MultiplayerApi</span></div>
-    </dd>
-  </dl>
-
-
-
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -139,404 +102,414 @@ public static class MultiplayerApi</code></pre>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
-  </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ZeepSDK.html">ZeepSDK</a>.<a class="xref" href="ZeepSDK.Multiplayer.html">Multiplayer</a></h6>
+  <h6><strong>Assembly</strong>: ZeepSDK.dll</h6>
+  <h5 id="ZeepSDK_Multiplayer_MultiplayerApi_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public static class MultiplayerApi</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi_IsPlayingOnline.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi.IsPlayingOnline%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L60">View Source</a>
+  </span>
   <a id="ZeepSDK_Multiplayer_MultiplayerApi_IsPlayingOnline_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.IsPlayingOnline*"></a>
-
-  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_IsPlayingOnline" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.IsPlayingOnline">
-  IsPlayingOnline
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L53"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Multiplayer_MultiplayerApi_IsPlayingOnline" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.IsPlayingOnline">IsPlayingOnline</h4>
   <div class="markdown level1 summary"><p>Is the player currently in an online game or not</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsPlayingOnline { get; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi_AddLevelToPlaylist_ZeepSDK_Multiplayer_PlaylistItem_System_Boolean_.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L78">View Source</a>
+  </span>
   <a id="ZeepSDK_Multiplayer_MultiplayerApi_AddLevelToPlaylist_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist*"></a>
-
-  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_AddLevelToPlaylist_ZeepSDK_Multiplayer_PlaylistItem_System_Boolean_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem,System.Boolean)">
-  AddLevelToPlaylist(PlaylistItem, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L70"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Multiplayer_MultiplayerApi_AddLevelToPlaylist_ZeepSDK_Multiplayer_PlaylistItem_System_Boolean_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.AddLevelToPlaylist(ZeepSDK.Multiplayer.PlaylistItem,System.Boolean)">AddLevelToPlaylist(PlaylistItem, bool)</h4>
   <div class="markdown level1 summary"><p>Adds a level to the playlist. Once you're done adding levels, call <a class="xref" href="ZeepSDK.Multiplayer.MultiplayerApi.html#ZeepSDK_Multiplayer_MultiplayerApi_UpdateServerPlaylist">UpdateServerPlaylist()</a> to update the server</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[PublicAPI]
 public static int AddLevelToPlaylist(PlaylistItem playlistItem, bool setAsPlayNext)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>playlistItem</code> <a class="xref" href="ZeepSDK.Multiplayer.PlaylistItem.html">PlaylistItem</a></dt>
-    <dd><p>The item to add</p>
-</dd>
-    <dt><code>setAsPlayNext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Should this item be the next one that will be played?</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ZeepSDK.Multiplayer.PlaylistItem.html">PlaylistItem</a></td>
+        <td><span class="parametername">playlistItem</span></td>
+        <td><p>The item to add</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">setAsPlayNext</span></td>
+        <td><p>Should this item be the next one that will be played?</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi_GetCurrentLevel.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L163">View Source</a>
+  </span>
   <a id="ZeepSDK_Multiplayer_MultiplayerApi_GetCurrentLevel_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel*"></a>
-
-  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_GetCurrentLevel" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel">
-  GetCurrentLevel()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L153"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Multiplayer_MultiplayerApi_GetCurrentLevel" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.GetCurrentLevel">GetCurrentLevel()</h4>
   <div class="markdown level1 summary"><p>Gets the level that is currently being played</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use LevelApi.CurrentLevel instead&quot;)]
 public static LevelScriptableObject GetCurrentLevel()</code></pre>
   </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">LevelScriptableObject</span></dt>
-    <dd><p>The level or null if the level cannot be found
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LevelScriptableObject</span></td>
+        <td><p>The level or null if the level cannot be found
 <br><br>
 The level can be null due to not being connected, not playing an online match, or issues with downloading the level from the workshop</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi_SetNextLevelIndex_System_Int32_.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex(System.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L133">View Source</a>
+  </span>
   <a id="ZeepSDK_Multiplayer_MultiplayerApi_SetNextLevelIndex_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex*"></a>
-
-  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_SetNextLevelIndex_System_Int32_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex(System.Int32)">
-  SetNextLevelIndex(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L124"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Multiplayer_MultiplayerApi_SetNextLevelIndex_System_Int32_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.SetNextLevelIndex(System.Int32)">SetNextLevelIndex(int)</h4>
   <div class="markdown level1 summary"><p>Sets the level that should be played next</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void SetNextLevelIndex(int index)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The (zero-based) index of the level</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The (zero-based) index of the level</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi_UpdateServerPlaylist.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi.UpdateServerPlaylist%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L107">View Source</a>
+  </span>
   <a id="ZeepSDK_Multiplayer_MultiplayerApi_UpdateServerPlaylist_" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.UpdateServerPlaylist*"></a>
-
-  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_UpdateServerPlaylist" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.UpdateServerPlaylist">
-  UpdateServerPlaylist()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L99"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Multiplayer_MultiplayerApi_UpdateServerPlaylist" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.UpdateServerPlaylist">UpdateServerPlaylist()</h4>
   <div class="markdown level1 summary"><p>Updates the playlist on the server</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[PublicAPI]
 public static void UpdateServerPlaylist()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="events">Events
-</h2>
-
-
-
-  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_ConnectedToGame" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.ConnectedToGame">
-  ConnectedToGame
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L23"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h3 id="events">Events
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi_ConnectedToGame.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi.ConnectedToGame%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L25">View Source</a>
+  </span>
+  <h4 id="ZeepSDK_Multiplayer_MultiplayerApi_ConnectedToGame" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.ConnectedToGame">ConnectedToGame</h4>
   <div class="markdown level1 summary"><p>An event that gets fired whenever you connect to a game</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static event ConnectedToGameDelegate ConnectedToGame</code></pre>
   </div>
-
-
-
-
-
-
-  <h4 class="section">Event Type</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ZeepSDK.Multiplayer.ConnectedToGameDelegate.html">ConnectedToGameDelegate</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_CreatedRoom" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.CreatedRoom">
-  CreatedRoom
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L33"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ZeepSDK.Multiplayer.ConnectedToGameDelegate.html">ConnectedToGameDelegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi_CreatedRoom.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi.CreatedRoom%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L37">View Source</a>
+  </span>
+  <h4 id="ZeepSDK_Multiplayer_MultiplayerApi_CreatedRoom" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.CreatedRoom">CreatedRoom</h4>
   <div class="markdown level1 summary"><p>An event that gets fired whenever you have created a room/game</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static event CreatedRoomDelegate CreatedRoom</code></pre>
   </div>
-
-
-
-
-
-
-  <h4 class="section">Event Type</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ZeepSDK.Multiplayer.CreatedRoomDelegate.html">CreatedRoomDelegate</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_DisconnectedFromGame" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.DisconnectedFromGame">
-  DisconnectedFromGame
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L28"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ZeepSDK.Multiplayer.CreatedRoomDelegate.html">CreatedRoomDelegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi_DisconnectedFromGame.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi.DisconnectedFromGame%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L31">View Source</a>
+  </span>
+  <h4 id="ZeepSDK_Multiplayer_MultiplayerApi_DisconnectedFromGame" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.DisconnectedFromGame">DisconnectedFromGame</h4>
   <div class="markdown level1 summary"><p>An event that gets fired whenever you disconnect from a game</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static event DisconnectedFromGameDelegate DisconnectedFromGame</code></pre>
   </div>
-
-
-
-
-
-
-  <h4 class="section">Event Type</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ZeepSDK.Multiplayer.DisconnectedFromGameDelegate.html">DisconnectedFromGameDelegate</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_JoinedRoom" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.JoinedRoom">
-  JoinedRoom
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L38"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ZeepSDK.Multiplayer.DisconnectedFromGameDelegate.html">DisconnectedFromGameDelegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi_JoinedRoom.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi.JoinedRoom%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L43">View Source</a>
+  </span>
+  <h4 id="ZeepSDK_Multiplayer_MultiplayerApi_JoinedRoom" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.JoinedRoom">JoinedRoom</h4>
   <div class="markdown level1 summary"><p>An even that gets fired whenever you have joined a room/game</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static event JoinedRoomDelegate JoinedRoom</code></pre>
   </div>
-
-
-
-
-
-
-  <h4 class="section">Event Type</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ZeepSDK.Multiplayer.JoinedRoomDelegate.html">JoinedRoomDelegate</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_PlayerJoined" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.PlayerJoined">
-  PlayerJoined
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L43"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ZeepSDK.Multiplayer.JoinedRoomDelegate.html">JoinedRoomDelegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi_PlayerJoined.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi.PlayerJoined%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L49">View Source</a>
+  </span>
+  <h4 id="ZeepSDK_Multiplayer_MultiplayerApi_PlayerJoined" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.PlayerJoined">PlayerJoined</h4>
   <div class="markdown level1 summary"><p>An even that gets fired whenever a player joins the room/game</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static event PlayerJoinedDelegate PlayerJoined</code></pre>
   </div>
-
-
-
-
-
-
-  <h4 class="section">Event Type</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ZeepSDK.Multiplayer.PlayerJoinedDelegate.html">PlayerJoinedDelegate</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h3 id="ZeepSDK_Multiplayer_MultiplayerApi_PlayerLeft" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.PlayerLeft">
-  PlayerLeft
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L48"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ZeepSDK.Multiplayer.PlayerJoinedDelegate.html">PlayerJoinedDelegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi_PlayerLeft.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi.PlayerLeft%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L55">View Source</a>
+  </span>
+  <h4 id="ZeepSDK_Multiplayer_MultiplayerApi_PlayerLeft" data-uid="ZeepSDK.Multiplayer.MultiplayerApi.PlayerLeft">PlayerLeft</h4>
   <div class="markdown level1 summary"><p>An even that gets fired whenever a player leaves the room/game</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static event PlayerLeftDelegate PlayerLeft</code></pre>
   </div>
-
-
-
-
-
-
-  <h4 class="section">Event Type</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ZeepSDK.Multiplayer.PlayerLeftDelegate.html">PlayerLeftDelegate</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ZeepSDK.Multiplayer.PlayerLeftDelegate.html">PlayerLeftDelegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
 </article>
+          </div>
 
-        <div class="contribution d-print-none">
-          <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L15" class="edit-link">Edit this page</a>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Multiplayer_MultiplayerApi.md&amp;value=---%0Auid%3A%20ZeepSDK.Multiplayer.MultiplayerApi%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Multiplayer/MultiplayerApi.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
         </div>
-
-
       </div>
 
-      <div class="affix">
-        <nav id="affix"></nav>
-      </div>
-    </main>
-
-
-    <footer class="border-top text-secondary">
-      <div class="container-xxl">
-        <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
   </body>
 </html>
