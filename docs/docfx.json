@@ -3,58 +3,28 @@
     {
       "src": [
         {
-          "src": "../ZeepSDK/",
+          "src":  "../",
           "files": [
-            "ZeepSDK.csproj"
+            "ZeepSDK/ZeepSDK.csproj"
           ]
         }
       ],
       "dest": "api",
-      "includePrivateMembers": false,
-      "disableGitFeatures": false,
-      "disableDefaultFilter": false,
-      "noRestore": false,
-      "namespaceLayout": "flattened",
-      "memberLayout": "samePage",
-      "allowCompilationErrors": false,
-      "properties": {
-        "TargetFramework": "net472"
-      }
+      "filter": "filterConfig.yml",
+      "allowCompilationErrors": true
     }
   ],
   "build": {
     "content": [
       {
-        "files": [
-          "api/**.yml",
-          "api/index.md"
-        ]
-      },
-      {
-        "files": [
-          "articles/**.md",
-          "articles/**/toc.yml",
-          "toc.yml",
-          "*.md"
-        ]
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          "images/**"
-        ]
+        "files": [ "api/**.yml" ],
+        "exclude": [ "api/index.md"]
       }
     ],
     "output": "_site",
-    "globalMetadataFiles": [],
-    "fileMetadataFiles": [],
-    "template": [
-      "default",
-      "modern"
-    ],
-    "postProcessors": [],
-    "keepFileLink": false,
-    "disableGitFeatures": false
+    "markdownEngineName": "dfm",
+    "markdownEngineProperties": {
+        "enableSourceInfo": false
+    }
   }
 }
