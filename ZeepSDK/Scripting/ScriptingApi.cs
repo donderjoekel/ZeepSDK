@@ -26,6 +26,16 @@ public static class ScriptingApi
     {
         ChatCommandApi.RegisterLocalChatCommand<ZuaLoadCommand>();
         ChatCommandApi.RegisterLocalChatCommand<ZuaUnloadCommand>();
+        
+        Script.GlobalOptions.CustomConverters.SetClrToScriptCustomConversion<ulong>(
+            (_, value) => DynValue.NewString(value.ToString()));
+        Script.GlobalOptions.CustomConverters.SetScriptToClrCustomConversion(DataType.String, typeof(ulong),
+            value =>
+            {
+                if (ulong.TryParse(value.String, out ulong result))
+                    return result;
+                throw new InvalidCastException($"Cannot convert string to ulong; {value.String}");
+            });
     }
 
     /// <summary>
