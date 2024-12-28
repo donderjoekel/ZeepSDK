@@ -26,7 +26,7 @@ public class Zua
 
     private void Initialize(string luaContent)
     {
-        script = new Script(CoreModules.None);
+        script = new Script(CoreModules.Preset_SoftSandbox);
         RegisterFunction(new ListenToLuaFunction(this));
         RegisterAllFunctionsInCurrentAssembly();
         RegisterAllEventsInCurrentAssembly();
