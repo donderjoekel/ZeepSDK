@@ -27,6 +27,7 @@ public static class ScriptingApi
         ChatCommandApi.RegisterLocalChatCommand<ZuaLoadCommand>();
         ChatCommandApi.RegisterLocalChatCommand<ZuaUnloadCommand>();
         
+        Script.WarmUp();
         Script.GlobalOptions.CustomConverters.SetClrToScriptCustomConversion<ulong>(
             (_, value) => DynValue.NewString(value.ToString()));
         Script.GlobalOptions.CustomConverters.SetScriptToClrCustomConversion(DataType.String, typeof(ulong),
