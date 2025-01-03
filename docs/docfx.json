@@ -20,7 +20,7 @@
             "noRestore": false,
             "namespaceLayout": "flattened",
             "memberLayout": "samePage",
-            "allowCompilationErrors": false,
+            "allowCompilationErrors": true,
             "properties":
             {
                 "TargetFramework": "net472"
