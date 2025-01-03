@@ -2,7 +2,7 @@
 
 The ZeepSDK is a community built SDK that aims to make it easier to develop custom plugins for Zeepkist. It does this by exposing APIs that hide the actual implementation that is required to achieve the desired functionality, making it easy to use for the developer.
 
-Api documentation is available here: https://tnrd-org.github.io/ZeepSDK/api/index.html
+Api documentation is available here: https://donderjoekel.github.io/ZeepSDK/api/index.html
 
 ## Current features
 
