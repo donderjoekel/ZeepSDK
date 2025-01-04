@@ -184,6 +184,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Controls.ControlsApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Controls.ControlsApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Controls.InputOverrideStack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Controls.InputOverrideStack.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Controls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Controls.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Cosmetics.CosmeticsApi.yml",
       "output": {
         ".html": {
@@ -198,6 +228,16 @@
       "output": {
         ".html": {
           "relative_path": "api/ZeepSDK.Cosmetics.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Extensions.EventExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Extensions.EventExtensions.html"
         }
       },
       "version": ""
@@ -954,10 +994,50 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.IZeepGUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.IZeepGUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.IZeepWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.IZeepWindow.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.UI.UIApi.yml",
       "output": {
         ".html": {
           "relative_path": "api/ZeepSDK.UI.UIApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.ZeepDropdownMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.ZeepDropdownMenu.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.ZeepGUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.ZeepGUI.html"
         }
       },
       "version": ""
@@ -1004,6 +1084,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.DisposableBag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.DisposableBag.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Utilities.ListUtility.yml",
       "output": {
         ".html": {
@@ -1018,6 +1108,86 @@
       "output": {
         ".html": {
           "relative_path": "api/ZeepSDK.Utilities.LoggerFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.ConditionTickType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.ConditionTickType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.ConditionTicker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.ConditionTicker.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.IConditionTickable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.IConditionTickable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.IOverrideLayer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.IOverrideLayer-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.OverrideLayer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.OverrideLayer-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.OverrideStack-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.OverrideStack-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.html"
         }
       },
       "version": ""

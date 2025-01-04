@@ -555,6 +555,191 @@ references:
   commentId: T:ZeepSDK.Communication.MessageReceivedDelegate
   fullName: ZeepSDK.Communication.MessageReceivedDelegate
   nameWithType: MessageReceivedDelegate
+- uid: ZeepSDK.Controls
+  name: ZeepSDK.Controls
+  href: api/ZeepSDK.Controls.html
+  commentId: N:ZeepSDK.Controls
+  fullName: ZeepSDK.Controls
+  nameWithType: ZeepSDK.Controls
+- uid: ZeepSDK.Controls.ControlsApi
+  name: ControlsApi
+  href: api/ZeepSDK.Controls.ControlsApi.html
+  commentId: T:ZeepSDK.Controls.ControlsApi
+  fullName: ZeepSDK.Controls.ControlsApi
+  nameWithType: ControlsApi
+- uid: ZeepSDK.Controls.ControlsApi.AdventureInputOverride
+  name: AdventureInputOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_AdventureInputOverride
+  commentId: P:ZeepSDK.Controls.ControlsApi.AdventureInputOverride
+  fullName: ZeepSDK.Controls.ControlsApi.AdventureInputOverride
+  nameWithType: ControlsApi.AdventureInputOverride
+- uid: ZeepSDK.Controls.ControlsApi.AdventureInputOverride*
+  name: AdventureInputOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_AdventureInputOverride_
+  commentId: Overload:ZeepSDK.Controls.ControlsApi.AdventureInputOverride
+  isSpec: "True"
+  fullName: ZeepSDK.Controls.ControlsApi.AdventureInputOverride
+  nameWithType: ControlsApi.AdventureInputOverride
+- uid: ZeepSDK.Controls.ControlsApi.DefaultInputOverride
+  name: DefaultInputOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_DefaultInputOverride
+  commentId: P:ZeepSDK.Controls.ControlsApi.DefaultInputOverride
+  fullName: ZeepSDK.Controls.ControlsApi.DefaultInputOverride
+  nameWithType: ControlsApi.DefaultInputOverride
+- uid: ZeepSDK.Controls.ControlsApi.DefaultInputOverride*
+  name: DefaultInputOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_DefaultInputOverride_
+  commentId: Overload:ZeepSDK.Controls.ControlsApi.DefaultInputOverride
+  isSpec: "True"
+  fullName: ZeepSDK.Controls.ControlsApi.DefaultInputOverride
+  nameWithType: ControlsApi.DefaultInputOverride
+- uid: ZeepSDK.Controls.ControlsApi.DisableAllInput
+  name: DisableAllInput()
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_DisableAllInput
+  commentId: M:ZeepSDK.Controls.ControlsApi.DisableAllInput
+  fullName: ZeepSDK.Controls.ControlsApi.DisableAllInput()
+  nameWithType: ControlsApi.DisableAllInput()
+- uid: ZeepSDK.Controls.ControlsApi.DisableAllInput(System.Func{System.Boolean})
+  name: DisableAllInput(Func<bool>)
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_DisableAllInput_System_Func_System_Boolean__
+  commentId: M:ZeepSDK.Controls.ControlsApi.DisableAllInput(System.Func{System.Boolean})
+  name.vb: DisableAllInput(Func(Of Boolean))
+  fullName: ZeepSDK.Controls.ControlsApi.DisableAllInput(System.Func<bool>)
+  fullName.vb: ZeepSDK.Controls.ControlsApi.DisableAllInput(System.Func(Of Boolean))
+  nameWithType: ControlsApi.DisableAllInput(Func<bool>)
+  nameWithType.vb: ControlsApi.DisableAllInput(Func(Of Boolean))
+- uid: ZeepSDK.Controls.ControlsApi.DisableAllInput*
+  name: DisableAllInput
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_DisableAllInput_
+  commentId: Overload:ZeepSDK.Controls.ControlsApi.DisableAllInput
+  isSpec: "True"
+  fullName: ZeepSDK.Controls.ControlsApi.DisableAllInput
+  nameWithType: ControlsApi.DisableAllInput
+- uid: ZeepSDK.Controls.ControlsApi.EnableAllInput
+  name: EnableAllInput()
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_EnableAllInput
+  commentId: M:ZeepSDK.Controls.ControlsApi.EnableAllInput
+  fullName: ZeepSDK.Controls.ControlsApi.EnableAllInput()
+  nameWithType: ControlsApi.EnableAllInput()
+- uid: ZeepSDK.Controls.ControlsApi.EnableAllInput(System.Func{System.Boolean})
+  name: EnableAllInput(Func<bool>)
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_EnableAllInput_System_Func_System_Boolean__
+  commentId: M:ZeepSDK.Controls.ControlsApi.EnableAllInput(System.Func{System.Boolean})
+  name.vb: EnableAllInput(Func(Of Boolean))
+  fullName: ZeepSDK.Controls.ControlsApi.EnableAllInput(System.Func<bool>)
+  fullName.vb: ZeepSDK.Controls.ControlsApi.EnableAllInput(System.Func(Of Boolean))
+  nameWithType: ControlsApi.EnableAllInput(Func<bool>)
+  nameWithType.vb: ControlsApi.EnableAllInput(Func(Of Boolean))
+- uid: ZeepSDK.Controls.ControlsApi.EnableAllInput*
+  name: EnableAllInput
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_EnableAllInput_
+  commentId: Overload:ZeepSDK.Controls.ControlsApi.EnableAllInput
+  isSpec: "True"
+  fullName: ZeepSDK.Controls.ControlsApi.EnableAllInput
+  nameWithType: ControlsApi.EnableAllInput
+- uid: ZeepSDK.Controls.ControlsApi.EventSystemOverride
+  name: EventSystemOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_EventSystemOverride
+  commentId: P:ZeepSDK.Controls.ControlsApi.EventSystemOverride
+  fullName: ZeepSDK.Controls.ControlsApi.EventSystemOverride
+  nameWithType: ControlsApi.EventSystemOverride
+- uid: ZeepSDK.Controls.ControlsApi.EventSystemOverride*
+  name: EventSystemOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_EventSystemOverride_
+  commentId: Overload:ZeepSDK.Controls.ControlsApi.EventSystemOverride
+  isSpec: "True"
+  fullName: ZeepSDK.Controls.ControlsApi.EventSystemOverride
+  nameWithType: ControlsApi.EventSystemOverride
+- uid: ZeepSDK.Controls.ControlsApi.GameplayInputOverride
+  name: GameplayInputOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_GameplayInputOverride
+  commentId: P:ZeepSDK.Controls.ControlsApi.GameplayInputOverride
+  fullName: ZeepSDK.Controls.ControlsApi.GameplayInputOverride
+  nameWithType: ControlsApi.GameplayInputOverride
+- uid: ZeepSDK.Controls.ControlsApi.GameplayInputOverride*
+  name: GameplayInputOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_GameplayInputOverride_
+  commentId: Overload:ZeepSDK.Controls.ControlsApi.GameplayInputOverride
+  isSpec: "True"
+  fullName: ZeepSDK.Controls.ControlsApi.GameplayInputOverride
+  nameWithType: ControlsApi.GameplayInputOverride
+- uid: ZeepSDK.Controls.ControlsApi.LevelEditorInputOverride
+  name: LevelEditorInputOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_LevelEditorInputOverride
+  commentId: P:ZeepSDK.Controls.ControlsApi.LevelEditorInputOverride
+  fullName: ZeepSDK.Controls.ControlsApi.LevelEditorInputOverride
+  nameWithType: ControlsApi.LevelEditorInputOverride
+- uid: ZeepSDK.Controls.ControlsApi.LevelEditorInputOverride*
+  name: LevelEditorInputOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_LevelEditorInputOverride_
+  commentId: Overload:ZeepSDK.Controls.ControlsApi.LevelEditorInputOverride
+  isSpec: "True"
+  fullName: ZeepSDK.Controls.ControlsApi.LevelEditorInputOverride
+  nameWithType: ControlsApi.LevelEditorInputOverride
+- uid: ZeepSDK.Controls.ControlsApi.MenuInputOverride
+  name: MenuInputOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_MenuInputOverride
+  commentId: P:ZeepSDK.Controls.ControlsApi.MenuInputOverride
+  fullName: ZeepSDK.Controls.ControlsApi.MenuInputOverride
+  nameWithType: ControlsApi.MenuInputOverride
+- uid: ZeepSDK.Controls.ControlsApi.MenuInputOverride*
+  name: MenuInputOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_MenuInputOverride_
+  commentId: Overload:ZeepSDK.Controls.ControlsApi.MenuInputOverride
+  isSpec: "True"
+  fullName: ZeepSDK.Controls.ControlsApi.MenuInputOverride
+  nameWithType: ControlsApi.MenuInputOverride
+- uid: ZeepSDK.Controls.ControlsApi.OnlineInputOverride
+  name: OnlineInputOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_OnlineInputOverride
+  commentId: P:ZeepSDK.Controls.ControlsApi.OnlineInputOverride
+  fullName: ZeepSDK.Controls.ControlsApi.OnlineInputOverride
+  nameWithType: ControlsApi.OnlineInputOverride
+- uid: ZeepSDK.Controls.ControlsApi.OnlineInputOverride*
+  name: OnlineInputOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_OnlineInputOverride_
+  commentId: Overload:ZeepSDK.Controls.ControlsApi.OnlineInputOverride
+  isSpec: "True"
+  fullName: ZeepSDK.Controls.ControlsApi.OnlineInputOverride
+  nameWithType: ControlsApi.OnlineInputOverride
+- uid: ZeepSDK.Controls.ControlsApi.SpectateInputOverride
+  name: SpectateInputOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_SpectateInputOverride
+  commentId: P:ZeepSDK.Controls.ControlsApi.SpectateInputOverride
+  fullName: ZeepSDK.Controls.ControlsApi.SpectateInputOverride
+  nameWithType: ControlsApi.SpectateInputOverride
+- uid: ZeepSDK.Controls.ControlsApi.SpectateInputOverride*
+  name: SpectateInputOverride
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_SpectateInputOverride_
+  commentId: Overload:ZeepSDK.Controls.ControlsApi.SpectateInputOverride
+  isSpec: "True"
+  fullName: ZeepSDK.Controls.ControlsApi.SpectateInputOverride
+  nameWithType: ControlsApi.SpectateInputOverride
+- uid: ZeepSDK.Controls.InputOverrideStack
+  name: InputOverrideStack
+  href: api/ZeepSDK.Controls.InputOverrideStack.html
+  commentId: T:ZeepSDK.Controls.InputOverrideStack
+  fullName: ZeepSDK.Controls.InputOverrideStack
+  nameWithType: InputOverrideStack
+- uid: ZeepSDK.Controls.InputOverrideStack.#ctor(System.String)
+  name: InputOverrideStack(string)
+  href: api/ZeepSDK.Controls.InputOverrideStack.html#ZeepSDK_Controls_InputOverrideStack__ctor_System_String_
+  commentId: M:ZeepSDK.Controls.InputOverrideStack.#ctor(System.String)
+  name.vb: New(String)
+  fullName: ZeepSDK.Controls.InputOverrideStack.InputOverrideStack(string)
+  fullName.vb: ZeepSDK.Controls.InputOverrideStack.New(String)
+  nameWithType: InputOverrideStack.InputOverrideStack(string)
+  nameWithType.vb: InputOverrideStack.New(String)
+- uid: ZeepSDK.Controls.InputOverrideStack.#ctor*
+  name: InputOverrideStack
+  href: api/ZeepSDK.Controls.InputOverrideStack.html#ZeepSDK_Controls_InputOverrideStack__ctor_
+  commentId: Overload:ZeepSDK.Controls.InputOverrideStack.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ZeepSDK.Controls.InputOverrideStack.InputOverrideStack
+  fullName.vb: ZeepSDK.Controls.InputOverrideStack.New
+  nameWithType: InputOverrideStack.InputOverrideStack
+  nameWithType.vb: InputOverrideStack.New
 - uid: ZeepSDK.Cosmetics
   name: ZeepSDK.Cosmetics
   href: api/ZeepSDK.Cosmetics.html
@@ -699,6 +884,25 @@ references:
   commentId: N:ZeepSDK.Extensions
   fullName: ZeepSDK.Extensions
   nameWithType: ZeepSDK.Extensions
+- uid: ZeepSDK.Extensions.EventExtensions
+  name: EventExtensions
+  href: api/ZeepSDK.Extensions.EventExtensions.html
+  commentId: T:ZeepSDK.Extensions.EventExtensions
+  fullName: ZeepSDK.Extensions.EventExtensions
+  nameWithType: EventExtensions
+- uid: ZeepSDK.Extensions.EventExtensions.IsKeyUp(UnityEngine.Event,UnityEngine.KeyCode)
+  name: IsKeyUp(Event, KeyCode)
+  href: api/ZeepSDK.Extensions.EventExtensions.html#ZeepSDK_Extensions_EventExtensions_IsKeyUp_UnityEngine_Event_UnityEngine_KeyCode_
+  commentId: M:ZeepSDK.Extensions.EventExtensions.IsKeyUp(UnityEngine.Event,UnityEngine.KeyCode)
+  fullName: ZeepSDK.Extensions.EventExtensions.IsKeyUp(UnityEngine.Event, UnityEngine.KeyCode)
+  nameWithType: EventExtensions.IsKeyUp(Event, KeyCode)
+- uid: ZeepSDK.Extensions.EventExtensions.IsKeyUp*
+  name: IsKeyUp
+  href: api/ZeepSDK.Extensions.EventExtensions.html#ZeepSDK_Extensions_EventExtensions_IsKeyUp_
+  commentId: Overload:ZeepSDK.Extensions.EventExtensions.IsKeyUp
+  isSpec: "True"
+  fullName: ZeepSDK.Extensions.EventExtensions.IsKeyUp
+  nameWithType: EventExtensions.IsKeyUp
 - uid: ZeepSDK.Extensions.ListExtensions
   name: ListExtensions
   href: api/ZeepSDK.Extensions.ListExtensions.html
@@ -3570,6 +3774,99 @@ references:
   commentId: N:ZeepSDK.UI
   fullName: ZeepSDK.UI
   nameWithType: ZeepSDK.UI
+- uid: ZeepSDK.UI.IZeepGUI
+  name: IZeepGUI
+  href: api/ZeepSDK.UI.IZeepGUI.html
+  commentId: T:ZeepSDK.UI.IZeepGUI
+  fullName: ZeepSDK.UI.IZeepGUI
+  nameWithType: IZeepGUI
+- uid: ZeepSDK.UI.IZeepGUI.OnZeepGUI
+  name: OnZeepGUI()
+  href: api/ZeepSDK.UI.IZeepGUI.html#ZeepSDK_UI_IZeepGUI_OnZeepGUI
+  commentId: M:ZeepSDK.UI.IZeepGUI.OnZeepGUI
+  fullName: ZeepSDK.UI.IZeepGUI.OnZeepGUI()
+  nameWithType: IZeepGUI.OnZeepGUI()
+- uid: ZeepSDK.UI.IZeepGUI.OnZeepGUI*
+  name: OnZeepGUI
+  href: api/ZeepSDK.UI.IZeepGUI.html#ZeepSDK_UI_IZeepGUI_OnZeepGUI_
+  commentId: Overload:ZeepSDK.UI.IZeepGUI.OnZeepGUI
+  isSpec: "True"
+  fullName: ZeepSDK.UI.IZeepGUI.OnZeepGUI
+  nameWithType: IZeepGUI.OnZeepGUI
+- uid: ZeepSDK.UI.IZeepWindow
+  name: IZeepWindow
+  href: api/ZeepSDK.UI.IZeepWindow.html
+  commentId: T:ZeepSDK.UI.IZeepWindow
+  fullName: ZeepSDK.UI.IZeepWindow
+  nameWithType: IZeepWindow
+- uid: ZeepSDK.UI.IZeepWindow.Content
+  name: Content
+  href: api/ZeepSDK.UI.IZeepWindow.html#ZeepSDK_UI_IZeepWindow_Content
+  commentId: P:ZeepSDK.UI.IZeepWindow.Content
+  fullName: ZeepSDK.UI.IZeepWindow.Content
+  nameWithType: IZeepWindow.Content
+- uid: ZeepSDK.UI.IZeepWindow.Content*
+  name: Content
+  href: api/ZeepSDK.UI.IZeepWindow.html#ZeepSDK_UI_IZeepWindow_Content_
+  commentId: Overload:ZeepSDK.UI.IZeepWindow.Content
+  isSpec: "True"
+  fullName: ZeepSDK.UI.IZeepWindow.Content
+  nameWithType: IZeepWindow.Content
+- uid: ZeepSDK.UI.IZeepWindow.Id
+  name: Id
+  href: api/ZeepSDK.UI.IZeepWindow.html#ZeepSDK_UI_IZeepWindow_Id
+  commentId: P:ZeepSDK.UI.IZeepWindow.Id
+  fullName: ZeepSDK.UI.IZeepWindow.Id
+  nameWithType: IZeepWindow.Id
+- uid: ZeepSDK.UI.IZeepWindow.Id*
+  name: Id
+  href: api/ZeepSDK.UI.IZeepWindow.html#ZeepSDK_UI_IZeepWindow_Id_
+  commentId: Overload:ZeepSDK.UI.IZeepWindow.Id
+  isSpec: "True"
+  fullName: ZeepSDK.UI.IZeepWindow.Id
+  nameWithType: IZeepWindow.Id
+- uid: ZeepSDK.UI.IZeepWindow.Modal
+  name: Modal
+  href: api/ZeepSDK.UI.IZeepWindow.html#ZeepSDK_UI_IZeepWindow_Modal
+  commentId: P:ZeepSDK.UI.IZeepWindow.Modal
+  fullName: ZeepSDK.UI.IZeepWindow.Modal
+  nameWithType: IZeepWindow.Modal
+- uid: ZeepSDK.UI.IZeepWindow.Modal*
+  name: Modal
+  href: api/ZeepSDK.UI.IZeepWindow.html#ZeepSDK_UI_IZeepWindow_Modal_
+  commentId: Overload:ZeepSDK.UI.IZeepWindow.Modal
+  isSpec: "True"
+  fullName: ZeepSDK.UI.IZeepWindow.Modal
+  nameWithType: IZeepWindow.Modal
+- uid: ZeepSDK.UI.IZeepWindow.OnZeepWindowGUI(System.Int32)
+  name: OnZeepWindowGUI(int)
+  href: api/ZeepSDK.UI.IZeepWindow.html#ZeepSDK_UI_IZeepWindow_OnZeepWindowGUI_System_Int32_
+  commentId: M:ZeepSDK.UI.IZeepWindow.OnZeepWindowGUI(System.Int32)
+  name.vb: OnZeepWindowGUI(Integer)
+  fullName: ZeepSDK.UI.IZeepWindow.OnZeepWindowGUI(int)
+  fullName.vb: ZeepSDK.UI.IZeepWindow.OnZeepWindowGUI(Integer)
+  nameWithType: IZeepWindow.OnZeepWindowGUI(int)
+  nameWithType.vb: IZeepWindow.OnZeepWindowGUI(Integer)
+- uid: ZeepSDK.UI.IZeepWindow.OnZeepWindowGUI*
+  name: OnZeepWindowGUI
+  href: api/ZeepSDK.UI.IZeepWindow.html#ZeepSDK_UI_IZeepWindow_OnZeepWindowGUI_
+  commentId: Overload:ZeepSDK.UI.IZeepWindow.OnZeepWindowGUI
+  isSpec: "True"
+  fullName: ZeepSDK.UI.IZeepWindow.OnZeepWindowGUI
+  nameWithType: IZeepWindow.OnZeepWindowGUI
+- uid: ZeepSDK.UI.IZeepWindow.Rect
+  name: Rect
+  href: api/ZeepSDK.UI.IZeepWindow.html#ZeepSDK_UI_IZeepWindow_Rect
+  commentId: P:ZeepSDK.UI.IZeepWindow.Rect
+  fullName: ZeepSDK.UI.IZeepWindow.Rect
+  nameWithType: IZeepWindow.Rect
+- uid: ZeepSDK.UI.IZeepWindow.Rect*
+  name: Rect
+  href: api/ZeepSDK.UI.IZeepWindow.html#ZeepSDK_UI_IZeepWindow_Rect_
+  commentId: Overload:ZeepSDK.UI.IZeepWindow.Rect
+  isSpec: "True"
+  fullName: ZeepSDK.UI.IZeepWindow.Rect
+  nameWithType: IZeepWindow.Rect
 - uid: ZeepSDK.UI.UIApi
   name: UIApi
   href: api/ZeepSDK.UI.UIApi.html
@@ -3627,6 +3924,375 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.UI.UIApi.RemoveFromConfigurator
   nameWithType: UIApi.RemoveFromConfigurator
+- uid: ZeepSDK.UI.ZeepDropdownMenu
+  name: ZeepDropdownMenu
+  href: api/ZeepSDK.UI.ZeepDropdownMenu.html
+  commentId: T:ZeepSDK.UI.ZeepDropdownMenu
+  fullName: ZeepSDK.UI.ZeepDropdownMenu
+  nameWithType: ZeepDropdownMenu
+- uid: ZeepSDK.UI.ZeepDropdownMenu.#ctor
+  name: ZeepDropdownMenu()
+  href: api/ZeepSDK.UI.ZeepDropdownMenu.html#ZeepSDK_UI_ZeepDropdownMenu__ctor
+  commentId: M:ZeepSDK.UI.ZeepDropdownMenu.#ctor
+  name.vb: New()
+  fullName: ZeepSDK.UI.ZeepDropdownMenu.ZeepDropdownMenu()
+  fullName.vb: ZeepSDK.UI.ZeepDropdownMenu.New()
+  nameWithType: ZeepDropdownMenu.ZeepDropdownMenu()
+  nameWithType.vb: ZeepDropdownMenu.New()
+- uid: ZeepSDK.UI.ZeepDropdownMenu.#ctor*
+  name: ZeepDropdownMenu
+  href: api/ZeepSDK.UI.ZeepDropdownMenu.html#ZeepSDK_UI_ZeepDropdownMenu__ctor_
+  commentId: Overload:ZeepSDK.UI.ZeepDropdownMenu.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ZeepSDK.UI.ZeepDropdownMenu.ZeepDropdownMenu
+  fullName.vb: ZeepSDK.UI.ZeepDropdownMenu.New
+  nameWithType: ZeepDropdownMenu.ZeepDropdownMenu
+  nameWithType.vb: ZeepDropdownMenu.New
+- uid: ZeepSDK.UI.ZeepDropdownMenu.AddItem(UnityEngine.GUIContent,System.Action)
+  name: AddItem(GUIContent, Action)
+  href: api/ZeepSDK.UI.ZeepDropdownMenu.html#ZeepSDK_UI_ZeepDropdownMenu_AddItem_UnityEngine_GUIContent_System_Action_
+  commentId: M:ZeepSDK.UI.ZeepDropdownMenu.AddItem(UnityEngine.GUIContent,System.Action)
+  fullName: ZeepSDK.UI.ZeepDropdownMenu.AddItem(UnityEngine.GUIContent, System.Action)
+  nameWithType: ZeepDropdownMenu.AddItem(GUIContent, Action)
+- uid: ZeepSDK.UI.ZeepDropdownMenu.AddItem*
+  name: AddItem
+  href: api/ZeepSDK.UI.ZeepDropdownMenu.html#ZeepSDK_UI_ZeepDropdownMenu_AddItem_
+  commentId: Overload:ZeepSDK.UI.ZeepDropdownMenu.AddItem
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepDropdownMenu.AddItem
+  nameWithType: ZeepDropdownMenu.AddItem
+- uid: ZeepSDK.UI.ZeepDropdownMenu.Show
+  name: Show()
+  href: api/ZeepSDK.UI.ZeepDropdownMenu.html#ZeepSDK_UI_ZeepDropdownMenu_Show
+  commentId: M:ZeepSDK.UI.ZeepDropdownMenu.Show
+  fullName: ZeepSDK.UI.ZeepDropdownMenu.Show()
+  nameWithType: ZeepDropdownMenu.Show()
+- uid: ZeepSDK.UI.ZeepDropdownMenu.Show*
+  name: Show
+  href: api/ZeepSDK.UI.ZeepDropdownMenu.html#ZeepSDK_UI_ZeepDropdownMenu_Show_
+  commentId: Overload:ZeepSDK.UI.ZeepDropdownMenu.Show
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepDropdownMenu.Show
+  nameWithType: ZeepDropdownMenu.Show
+- uid: ZeepSDK.UI.ZeepGUI
+  name: ZeepGUI
+  href: api/ZeepSDK.UI.ZeepGUI.html
+  commentId: T:ZeepSDK.UI.ZeepGUI
+  fullName: ZeepSDK.UI.ZeepGUI
+  nameWithType: ZeepGUI
+- uid: ZeepSDK.UI.ZeepGUI.AddLastingWindow(ZeepSDK.UI.IZeepWindow)
+  name: AddLastingWindow(IZeepWindow)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_AddLastingWindow_ZeepSDK_UI_IZeepWindow_
+  commentId: M:ZeepSDK.UI.ZeepGUI.AddLastingWindow(ZeepSDK.UI.IZeepWindow)
+  fullName: ZeepSDK.UI.ZeepGUI.AddLastingWindow(ZeepSDK.UI.IZeepWindow)
+  nameWithType: ZeepGUI.AddLastingWindow(IZeepWindow)
+- uid: ZeepSDK.UI.ZeepGUI.AddLastingWindow*
+  name: AddLastingWindow
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_AddLastingWindow_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.AddLastingWindow
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.AddLastingWindow
+  nameWithType: ZeepGUI.AddLastingWindow
+- uid: ZeepSDK.UI.ZeepGUI.AddToolbarItem(System.String,System.Action,System.Int32)
+  name: AddToolbarItem(string, Action, int)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_AddToolbarItem_System_String_System_Action_System_Int32_
+  commentId: M:ZeepSDK.UI.ZeepGUI.AddToolbarItem(System.String,System.Action,System.Int32)
+  name.vb: AddToolbarItem(String, Action, Integer)
+  fullName: ZeepSDK.UI.ZeepGUI.AddToolbarItem(string, System.Action, int)
+  fullName.vb: ZeepSDK.UI.ZeepGUI.AddToolbarItem(String, System.Action, Integer)
+  nameWithType: ZeepGUI.AddToolbarItem(string, Action, int)
+  nameWithType.vb: ZeepGUI.AddToolbarItem(String, Action, Integer)
+- uid: ZeepSDK.UI.ZeepGUI.AddToolbarItem(UnityEngine.GUIContent,System.Action,System.Int32)
+  name: AddToolbarItem(GUIContent, Action, int)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_AddToolbarItem_UnityEngine_GUIContent_System_Action_System_Int32_
+  commentId: M:ZeepSDK.UI.ZeepGUI.AddToolbarItem(UnityEngine.GUIContent,System.Action,System.Int32)
+  name.vb: AddToolbarItem(GUIContent, Action, Integer)
+  fullName: ZeepSDK.UI.ZeepGUI.AddToolbarItem(UnityEngine.GUIContent, System.Action, int)
+  fullName.vb: ZeepSDK.UI.ZeepGUI.AddToolbarItem(UnityEngine.GUIContent, System.Action, Integer)
+  nameWithType: ZeepGUI.AddToolbarItem(GUIContent, Action, int)
+  nameWithType.vb: ZeepGUI.AddToolbarItem(GUIContent, Action, Integer)
+- uid: ZeepSDK.UI.ZeepGUI.AddToolbarItem*
+  name: AddToolbarItem
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_AddToolbarItem_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.AddToolbarItem
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.AddToolbarItem
+  nameWithType: ZeepGUI.AddToolbarItem
+- uid: ZeepSDK.UI.ZeepGUI.AddToolbarItemChild(System.String,System.String,System.Action,System.Int32)
+  name: AddToolbarItemChild(string, string, Action, int)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_AddToolbarItemChild_System_String_System_String_System_Action_System_Int32_
+  commentId: M:ZeepSDK.UI.ZeepGUI.AddToolbarItemChild(System.String,System.String,System.Action,System.Int32)
+  name.vb: AddToolbarItemChild(String, String, Action, Integer)
+  fullName: ZeepSDK.UI.ZeepGUI.AddToolbarItemChild(string, string, System.Action, int)
+  fullName.vb: ZeepSDK.UI.ZeepGUI.AddToolbarItemChild(String, String, System.Action, Integer)
+  nameWithType: ZeepGUI.AddToolbarItemChild(string, string, Action, int)
+  nameWithType.vb: ZeepGUI.AddToolbarItemChild(String, String, Action, Integer)
+- uid: ZeepSDK.UI.ZeepGUI.AddToolbarItemChild(System.String,UnityEngine.GUIContent,System.Action,System.Int32)
+  name: AddToolbarItemChild(string, GUIContent, Action, int)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_AddToolbarItemChild_System_String_UnityEngine_GUIContent_System_Action_System_Int32_
+  commentId: M:ZeepSDK.UI.ZeepGUI.AddToolbarItemChild(System.String,UnityEngine.GUIContent,System.Action,System.Int32)
+  name.vb: AddToolbarItemChild(String, GUIContent, Action, Integer)
+  fullName: ZeepSDK.UI.ZeepGUI.AddToolbarItemChild(string, UnityEngine.GUIContent, System.Action, int)
+  fullName.vb: ZeepSDK.UI.ZeepGUI.AddToolbarItemChild(String, UnityEngine.GUIContent, System.Action, Integer)
+  nameWithType: ZeepGUI.AddToolbarItemChild(string, GUIContent, Action, int)
+  nameWithType.vb: ZeepGUI.AddToolbarItemChild(String, GUIContent, Action, Integer)
+- uid: ZeepSDK.UI.ZeepGUI.AddToolbarItemChild*
+  name: AddToolbarItemChild
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_AddToolbarItemChild_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.AddToolbarItemChild
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.AddToolbarItemChild
+  nameWithType: ZeepGUI.AddToolbarItemChild
+- uid: ZeepSDK.UI.ZeepGUI.AddZeepGUI(ZeepSDK.UI.IZeepGUI)
+  name: AddZeepGUI(IZeepGUI)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_AddZeepGUI_ZeepSDK_UI_IZeepGUI_
+  commentId: M:ZeepSDK.UI.ZeepGUI.AddZeepGUI(ZeepSDK.UI.IZeepGUI)
+  fullName: ZeepSDK.UI.ZeepGUI.AddZeepGUI(ZeepSDK.UI.IZeepGUI)
+  nameWithType: ZeepGUI.AddZeepGUI(IZeepGUI)
+- uid: ZeepSDK.UI.ZeepGUI.AddZeepGUI*
+  name: AddZeepGUI
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_AddZeepGUI_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.AddZeepGUI
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.AddZeepGUI
+  nameWithType: ZeepGUI.AddZeepGUI
+- uid: ZeepSDK.UI.ZeepGUI.DoubleField(System.Double,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name: DoubleField(double, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DoubleField_System_Double_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.DoubleField(System.Double,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name.vb: DoubleField(Double, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.DoubleField(double, string, UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.DoubleField(Double, String, UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.DoubleField(double, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.DoubleField(Double, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.DoubleField(System.Double,UnityEngine.GUILayoutOption[])
+  name: DoubleField(double, params GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DoubleField_System_Double_UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.DoubleField(System.Double,UnityEngine.GUILayoutOption[])
+  name.vb: DoubleField(Double, ParamArray GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.DoubleField(double, params UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.DoubleField(Double, ParamArray UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.DoubleField(double, params GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.DoubleField(Double, ParamArray GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.DoubleField(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name: DoubleField(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DoubleField_System_String_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.DoubleField(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name.vb: DoubleField(String, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.DoubleField(string, string, UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.DoubleField(String, String, UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.DoubleField(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.DoubleField(String, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.DoubleField(System.String,UnityEngine.GUILayoutOption[])
+  name: DoubleField(string, params GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DoubleField_System_String_UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.DoubleField(System.String,UnityEngine.GUILayoutOption[])
+  name.vb: DoubleField(String, ParamArray GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.DoubleField(string, params UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.DoubleField(String, ParamArray UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.DoubleField(string, params GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.DoubleField(String, ParamArray GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.DoubleField*
+  name: DoubleField
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DoubleField_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.DoubleField
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.DoubleField
+  nameWithType: ZeepGUI.DoubleField
+- uid: ZeepSDK.UI.ZeepGUI.FileExitToolbarItem
+  name: FileExitToolbarItem
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_FileExitToolbarItem
+  commentId: F:ZeepSDK.UI.ZeepGUI.FileExitToolbarItem
+  fullName: ZeepSDK.UI.ZeepGUI.FileExitToolbarItem
+  nameWithType: ZeepGUI.FileExitToolbarItem
+- uid: ZeepSDK.UI.ZeepGUI.FileSettingsToolbarItem
+  name: FileSettingsToolbarItem
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_FileSettingsToolbarItem
+  commentId: F:ZeepSDK.UI.ZeepGUI.FileSettingsToolbarItem
+  fullName: ZeepSDK.UI.ZeepGUI.FileSettingsToolbarItem
+  nameWithType: ZeepGUI.FileSettingsToolbarItem
+- uid: ZeepSDK.UI.ZeepGUI.FileToolbarItem
+  name: FileToolbarItem
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_FileToolbarItem
+  commentId: F:ZeepSDK.UI.ZeepGUI.FileToolbarItem
+  fullName: ZeepSDK.UI.ZeepGUI.FileToolbarItem
+  nameWithType: ZeepGUI.FileToolbarItem
+- uid: ZeepSDK.UI.ZeepGUI.FloatField(System.Single,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name: FloatField(float, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_FloatField_System_Single_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.FloatField(System.Single,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name.vb: FloatField(Single, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.FloatField(float, string, UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.FloatField(Single, String, UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.FloatField(float, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.FloatField(Single, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.FloatField(System.Single,UnityEngine.GUILayoutOption[])
+  name: FloatField(float, params GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_FloatField_System_Single_UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.FloatField(System.Single,UnityEngine.GUILayoutOption[])
+  name.vb: FloatField(Single, ParamArray GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.FloatField(float, params UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.FloatField(Single, ParamArray UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.FloatField(float, params GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.FloatField(Single, ParamArray GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.FloatField(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name: FloatField(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_FloatField_System_String_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.FloatField(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name.vb: FloatField(String, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.FloatField(string, string, UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.FloatField(String, String, UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.FloatField(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.FloatField(String, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.FloatField(System.String,UnityEngine.GUILayoutOption[])
+  name: FloatField(string, params GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_FloatField_System_String_UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.FloatField(System.String,UnityEngine.GUILayoutOption[])
+  name.vb: FloatField(String, ParamArray GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.FloatField(string, params UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.FloatField(String, ParamArray UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.FloatField(string, params GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.FloatField(String, ParamArray GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.FloatField*
+  name: FloatField
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_FloatField_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.FloatField
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.FloatField
+  nameWithType: ZeepGUI.FloatField
+- uid: ZeepSDK.UI.ZeepGUI.IntField(System.Int32,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name: IntField(int, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_IntField_System_Int32_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.IntField(System.Int32,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name.vb: IntField(Integer, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.IntField(int, string, UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.IntField(Integer, String, UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.IntField(int, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.IntField(Integer, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.IntField(System.Int32,UnityEngine.GUILayoutOption[])
+  name: IntField(int, params GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_IntField_System_Int32_UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.IntField(System.Int32,UnityEngine.GUILayoutOption[])
+  name.vb: IntField(Integer, ParamArray GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.IntField(int, params UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.IntField(Integer, ParamArray UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.IntField(int, params GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.IntField(Integer, ParamArray GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.IntField(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name: IntField(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_IntField_System_String_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.IntField(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name.vb: IntField(String, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.IntField(string, string, UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.IntField(String, String, UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.IntField(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.IntField(String, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.IntField(System.String,UnityEngine.GUILayoutOption[])
+  name: IntField(string, params GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_IntField_System_String_UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.IntField(System.String,UnityEngine.GUILayoutOption[])
+  name.vb: IntField(String, ParamArray GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.IntField(string, params UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.IntField(String, ParamArray UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.IntField(string, params GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.IntField(String, ParamArray GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.IntField*
+  name: IntField
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_IntField_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.IntField
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.IntField
+  nameWithType: ZeepGUI.IntField
+- uid: ZeepSDK.UI.ZeepGUI.LabelButton(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name: LabelButton(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_LabelButton_System_String_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.LabelButton(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name.vb: LabelButton(String, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.LabelButton(string, string, UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.LabelButton(String, String, UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.LabelButton(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.LabelButton(String, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.LabelButton(UnityEngine.GUIContent,UnityEngine.GUIContent,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name: LabelButton(GUIContent, GUIContent, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_LabelButton_UnityEngine_GUIContent_UnityEngine_GUIContent_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.LabelButton(UnityEngine.GUIContent,UnityEngine.GUIContent,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name.vb: LabelButton(GUIContent, GUIContent, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.LabelButton(UnityEngine.GUIContent, UnityEngine.GUIContent, UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.LabelButton(UnityEngine.GUIContent, UnityEngine.GUIContent, UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.LabelButton(GUIContent, GUIContent, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.LabelButton(GUIContent, GUIContent, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.LabelButton*
+  name: LabelButton
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_LabelButton_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.LabelButton
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.LabelButton
+  nameWithType: ZeepGUI.LabelButton
+- uid: ZeepSDK.UI.ZeepGUI.RemoveLastingWindow(ZeepSDK.UI.IZeepWindow)
+  name: RemoveLastingWindow(IZeepWindow)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_RemoveLastingWindow_ZeepSDK_UI_IZeepWindow_
+  commentId: M:ZeepSDK.UI.ZeepGUI.RemoveLastingWindow(ZeepSDK.UI.IZeepWindow)
+  fullName: ZeepSDK.UI.ZeepGUI.RemoveLastingWindow(ZeepSDK.UI.IZeepWindow)
+  nameWithType: ZeepGUI.RemoveLastingWindow(IZeepWindow)
+- uid: ZeepSDK.UI.ZeepGUI.RemoveLastingWindow*
+  name: RemoveLastingWindow
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_RemoveLastingWindow_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.RemoveLastingWindow
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.RemoveLastingWindow
+  nameWithType: ZeepGUI.RemoveLastingWindow
+- uid: ZeepSDK.UI.ZeepGUI.RemoveZeepGUI(ZeepSDK.UI.IZeepGUI)
+  name: RemoveZeepGUI(IZeepGUI)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_RemoveZeepGUI_ZeepSDK_UI_IZeepGUI_
+  commentId: M:ZeepSDK.UI.ZeepGUI.RemoveZeepGUI(ZeepSDK.UI.IZeepGUI)
+  fullName: ZeepSDK.UI.ZeepGUI.RemoveZeepGUI(ZeepSDK.UI.IZeepGUI)
+  nameWithType: ZeepGUI.RemoveZeepGUI(IZeepGUI)
+- uid: ZeepSDK.UI.ZeepGUI.RemoveZeepGUI*
+  name: RemoveZeepGUI
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_RemoveZeepGUI_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.RemoveZeepGUI
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.RemoveZeepGUI
+  nameWithType: ZeepGUI.RemoveZeepGUI
+- uid: ZeepSDK.UI.ZeepGUI.Skin
+  name: Skin
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Skin
+  commentId: F:ZeepSDK.UI.ZeepGUI.Skin
+  fullName: ZeepSDK.UI.ZeepGUI.Skin
+  nameWithType: ZeepGUI.Skin
+- uid: ZeepSDK.UI.ZeepGUI.TextField(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name: TextField(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_TextField_System_String_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.TextField(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name.vb: TextField(String, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.TextField(string, string, UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.TextField(String, String, UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.TextField(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.TextField(String, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.TextField*
+  name: TextField
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_TextField_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.TextField
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.TextField
+  nameWithType: ZeepGUI.TextField
+- uid: ZeepSDK.UI.ZeepGUI.Toggle(System.Boolean,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name: Toggle(bool, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Toggle_System_Boolean_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.Toggle(System.Boolean,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name.vb: Toggle(Boolean, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.Toggle(bool, string, UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.Toggle(Boolean, String, UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.Toggle(bool, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.Toggle(Boolean, String, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.Toggle*
+  name: Toggle
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Toggle_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.Toggle
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.Toggle
+  nameWithType: ZeepGUI.Toggle
 - uid: ZeepSDK.Utilities
   name: ZeepSDK.Utilities
   href: api/ZeepSDK.Utilities.html
@@ -3741,6 +4407,57 @@ references:
   fullName.vb: ZeepSDK.Utilities.ComponentCache.Get(Of T)(Boolean)
   nameWithType: ComponentCache.Get<T>(bool)
   nameWithType.vb: ComponentCache.Get(Of T)(Boolean)
+- uid: ZeepSDK.Utilities.DisposableBag
+  name: DisposableBag
+  href: api/ZeepSDK.Utilities.DisposableBag.html
+  commentId: T:ZeepSDK.Utilities.DisposableBag
+  fullName: ZeepSDK.Utilities.DisposableBag
+  nameWithType: DisposableBag
+- uid: ZeepSDK.Utilities.DisposableBag.#ctor(System.IDisposable[])
+  name: DisposableBag(params IDisposable[])
+  href: api/ZeepSDK.Utilities.DisposableBag.html#ZeepSDK_Utilities_DisposableBag__ctor_System_IDisposable___
+  commentId: M:ZeepSDK.Utilities.DisposableBag.#ctor(System.IDisposable[])
+  name.vb: New(ParamArray IDisposable())
+  fullName: ZeepSDK.Utilities.DisposableBag.DisposableBag(params System.IDisposable[])
+  fullName.vb: ZeepSDK.Utilities.DisposableBag.New(ParamArray System.IDisposable())
+  nameWithType: DisposableBag.DisposableBag(params IDisposable[])
+  nameWithType.vb: DisposableBag.New(ParamArray IDisposable())
+- uid: ZeepSDK.Utilities.DisposableBag.#ctor*
+  name: DisposableBag
+  href: api/ZeepSDK.Utilities.DisposableBag.html#ZeepSDK_Utilities_DisposableBag__ctor_
+  commentId: Overload:ZeepSDK.Utilities.DisposableBag.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ZeepSDK.Utilities.DisposableBag.DisposableBag
+  fullName.vb: ZeepSDK.Utilities.DisposableBag.New
+  nameWithType: DisposableBag.DisposableBag
+  nameWithType.vb: DisposableBag.New
+- uid: ZeepSDK.Utilities.DisposableBag.Add(System.IDisposable)
+  name: Add(IDisposable)
+  href: api/ZeepSDK.Utilities.DisposableBag.html#ZeepSDK_Utilities_DisposableBag_Add_System_IDisposable_
+  commentId: M:ZeepSDK.Utilities.DisposableBag.Add(System.IDisposable)
+  fullName: ZeepSDK.Utilities.DisposableBag.Add(System.IDisposable)
+  nameWithType: DisposableBag.Add(IDisposable)
+- uid: ZeepSDK.Utilities.DisposableBag.Add*
+  name: Add
+  href: api/ZeepSDK.Utilities.DisposableBag.html#ZeepSDK_Utilities_DisposableBag_Add_
+  commentId: Overload:ZeepSDK.Utilities.DisposableBag.Add
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.DisposableBag.Add
+  nameWithType: DisposableBag.Add
+- uid: ZeepSDK.Utilities.DisposableBag.Dispose
+  name: Dispose()
+  href: api/ZeepSDK.Utilities.DisposableBag.html#ZeepSDK_Utilities_DisposableBag_Dispose
+  commentId: M:ZeepSDK.Utilities.DisposableBag.Dispose
+  fullName: ZeepSDK.Utilities.DisposableBag.Dispose()
+  nameWithType: DisposableBag.Dispose()
+- uid: ZeepSDK.Utilities.DisposableBag.Dispose*
+  name: Dispose
+  href: api/ZeepSDK.Utilities.DisposableBag.html#ZeepSDK_Utilities_DisposableBag_Dispose_
+  commentId: Overload:ZeepSDK.Utilities.DisposableBag.Dispose
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.DisposableBag.Dispose
+  nameWithType: DisposableBag.Dispose
 - uid: ZeepSDK.Utilities.ListUtility
   name: ListUtility
   href: api/ZeepSDK.Utilities.ListUtility.html
@@ -3816,6 +4533,497 @@ references:
   fullName.vb: ZeepSDK.Utilities.LoggerFactory.GetLogger(Of T)()
   nameWithType: LoggerFactory.GetLogger<T>()
   nameWithType.vb: LoggerFactory.GetLogger(Of T)()
+- uid: ZeepSDK.Utilities.Override
+  name: ZeepSDK.Utilities.Override
+  href: api/ZeepSDK.Utilities.Override.html
+  commentId: N:ZeepSDK.Utilities.Override
+  fullName: ZeepSDK.Utilities.Override
+  nameWithType: ZeepSDK.Utilities.Override
+- uid: ZeepSDK.Utilities.Override.ConditionTickType
+  name: ConditionTickType
+  href: api/ZeepSDK.Utilities.Override.ConditionTickType.html
+  commentId: T:ZeepSDK.Utilities.Override.ConditionTickType
+  fullName: ZeepSDK.Utilities.Override.ConditionTickType
+  nameWithType: ConditionTickType
+- uid: ZeepSDK.Utilities.Override.ConditionTickType.FixedUpdate
+  name: FixedUpdate
+  href: api/ZeepSDK.Utilities.Override.ConditionTickType.html#ZeepSDK_Utilities_Override_ConditionTickType_FixedUpdate
+  commentId: F:ZeepSDK.Utilities.Override.ConditionTickType.FixedUpdate
+  fullName: ZeepSDK.Utilities.Override.ConditionTickType.FixedUpdate
+  nameWithType: ConditionTickType.FixedUpdate
+- uid: ZeepSDK.Utilities.Override.ConditionTickType.LateUpdate
+  name: LateUpdate
+  href: api/ZeepSDK.Utilities.Override.ConditionTickType.html#ZeepSDK_Utilities_Override_ConditionTickType_LateUpdate
+  commentId: F:ZeepSDK.Utilities.Override.ConditionTickType.LateUpdate
+  fullName: ZeepSDK.Utilities.Override.ConditionTickType.LateUpdate
+  nameWithType: ConditionTickType.LateUpdate
+- uid: ZeepSDK.Utilities.Override.ConditionTickType.OnGUI
+  name: OnGUI
+  href: api/ZeepSDK.Utilities.Override.ConditionTickType.html#ZeepSDK_Utilities_Override_ConditionTickType_OnGUI
+  commentId: F:ZeepSDK.Utilities.Override.ConditionTickType.OnGUI
+  fullName: ZeepSDK.Utilities.Override.ConditionTickType.OnGUI
+  nameWithType: ConditionTickType.OnGUI
+- uid: ZeepSDK.Utilities.Override.ConditionTickType.Update
+  name: Update
+  href: api/ZeepSDK.Utilities.Override.ConditionTickType.html#ZeepSDK_Utilities_Override_ConditionTickType_Update
+  commentId: F:ZeepSDK.Utilities.Override.ConditionTickType.Update
+  fullName: ZeepSDK.Utilities.Override.ConditionTickType.Update
+  nameWithType: ConditionTickType.Update
+- uid: ZeepSDK.Utilities.Override.ConditionTicker
+  name: ConditionTicker
+  href: api/ZeepSDK.Utilities.Override.ConditionTicker.html
+  commentId: T:ZeepSDK.Utilities.Override.ConditionTicker
+  fullName: ZeepSDK.Utilities.Override.ConditionTicker
+  nameWithType: ConditionTicker
+- uid: ZeepSDK.Utilities.Override.ConditionTicker.Add(ZeepSDK.Utilities.Override.IConditionTickable)
+  name: Add(IConditionTickable)
+  href: api/ZeepSDK.Utilities.Override.ConditionTicker.html#ZeepSDK_Utilities_Override_ConditionTicker_Add_ZeepSDK_Utilities_Override_IConditionTickable_
+  commentId: M:ZeepSDK.Utilities.Override.ConditionTicker.Add(ZeepSDK.Utilities.Override.IConditionTickable)
+  fullName: ZeepSDK.Utilities.Override.ConditionTicker.Add(ZeepSDK.Utilities.Override.IConditionTickable)
+  nameWithType: ConditionTicker.Add(IConditionTickable)
+- uid: ZeepSDK.Utilities.Override.ConditionTicker.Add*
+  name: Add
+  href: api/ZeepSDK.Utilities.Override.ConditionTicker.html#ZeepSDK_Utilities_Override_ConditionTicker_Add_
+  commentId: Overload:ZeepSDK.Utilities.Override.ConditionTicker.Add
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.ConditionTicker.Add
+  nameWithType: ConditionTicker.Add
+- uid: ZeepSDK.Utilities.Override.ConditionTicker.Instance
+  name: Instance
+  href: api/ZeepSDK.Utilities.Override.ConditionTicker.html#ZeepSDK_Utilities_Override_ConditionTicker_Instance
+  commentId: P:ZeepSDK.Utilities.Override.ConditionTicker.Instance
+  fullName: ZeepSDK.Utilities.Override.ConditionTicker.Instance
+  nameWithType: ConditionTicker.Instance
+- uid: ZeepSDK.Utilities.Override.ConditionTicker.Instance*
+  name: Instance
+  href: api/ZeepSDK.Utilities.Override.ConditionTicker.html#ZeepSDK_Utilities_Override_ConditionTicker_Instance_
+  commentId: Overload:ZeepSDK.Utilities.Override.ConditionTicker.Instance
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.ConditionTicker.Instance
+  nameWithType: ConditionTicker.Instance
+- uid: ZeepSDK.Utilities.Override.ConditionTicker.Remove(ZeepSDK.Utilities.Override.IConditionTickable)
+  name: Remove(IConditionTickable)
+  href: api/ZeepSDK.Utilities.Override.ConditionTicker.html#ZeepSDK_Utilities_Override_ConditionTicker_Remove_ZeepSDK_Utilities_Override_IConditionTickable_
+  commentId: M:ZeepSDK.Utilities.Override.ConditionTicker.Remove(ZeepSDK.Utilities.Override.IConditionTickable)
+  fullName: ZeepSDK.Utilities.Override.ConditionTicker.Remove(ZeepSDK.Utilities.Override.IConditionTickable)
+  nameWithType: ConditionTicker.Remove(IConditionTickable)
+- uid: ZeepSDK.Utilities.Override.ConditionTicker.Remove*
+  name: Remove
+  href: api/ZeepSDK.Utilities.Override.ConditionTicker.html#ZeepSDK_Utilities_Override_ConditionTicker_Remove_
+  commentId: Overload:ZeepSDK.Utilities.Override.ConditionTicker.Remove
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.ConditionTicker.Remove
+  nameWithType: ConditionTicker.Remove
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1
+  name: ConditionalOverrideLayer<T>
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html
+  commentId: T:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1
+  name.vb: ConditionalOverrideLayer(Of T)
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T)
+  nameWithType: ConditionalOverrideLayer<T>
+  nameWithType.vb: ConditionalOverrideLayer(Of T)
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.#ctor(ZeepSDK.Utilities.Override.OverrideStack{`0},`0,System.Func{System.Boolean},ZeepSDK.Utilities.Override.ConditionTickType)
+  name: ConditionalOverrideLayer(OverrideStack<T>, T, Func<bool>, ConditionTickType)
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1__ctor_ZeepSDK_Utilities_Override_OverrideStack__0___0_System_Func_System_Boolean__ZeepSDK_Utilities_Override_ConditionTickType_
+  commentId: M:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.#ctor(ZeepSDK.Utilities.Override.OverrideStack{`0},`0,System.Func{System.Boolean},ZeepSDK.Utilities.Override.ConditionTickType)
+  name.vb: New(OverrideStack(Of T), T, Func(Of Boolean), ConditionTickType)
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>.ConditionalOverrideLayer(ZeepSDK.Utilities.Override.OverrideStack<T>, T, System.Func<bool>, ZeepSDK.Utilities.Override.ConditionTickType)
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T).New(ZeepSDK.Utilities.Override.OverrideStack(Of T), T, System.Func(Of Boolean), ZeepSDK.Utilities.Override.ConditionTickType)
+  nameWithType: ConditionalOverrideLayer<T>.ConditionalOverrideLayer(OverrideStack<T>, T, Func<bool>, ConditionTickType)
+  nameWithType.vb: ConditionalOverrideLayer(Of T).New(OverrideStack(Of T), T, Func(Of Boolean), ConditionTickType)
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.#ctor*
+  name: ConditionalOverrideLayer
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1__ctor_
+  commentId: Overload:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>.ConditionalOverrideLayer
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T).New
+  nameWithType: ConditionalOverrideLayer<T>.ConditionalOverrideLayer
+  nameWithType.vb: ConditionalOverrideLayer(Of T).New
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Dispose
+  name: Dispose()
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Dispose
+  commentId: M:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Dispose
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>.Dispose()
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T).Dispose()
+  nameWithType: ConditionalOverrideLayer<T>.Dispose()
+  nameWithType.vb: ConditionalOverrideLayer(Of T).Dispose()
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Dispose*
+  name: Dispose
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Dispose_
+  commentId: Overload:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Dispose
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>.Dispose
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T).Dispose
+  nameWithType: ConditionalOverrideLayer<T>.Dispose
+  nameWithType.vb: ConditionalOverrideLayer(Of T).Dispose
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Equals(System.Object)
+  name: Equals(object)
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Equals_System_Object_
+  commentId: M:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>.Equals(object)
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T).Equals(Object)
+  nameWithType: ConditionalOverrideLayer<T>.Equals(object)
+  nameWithType.vb: ConditionalOverrideLayer(Of T).Equals(Object)
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Equals(ZeepSDK.Utilities.Override.ConditionalOverrideLayer{`0})
+  name: Equals(ConditionalOverrideLayer<T>)
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Equals_ZeepSDK_Utilities_Override_ConditionalOverrideLayer__0__
+  commentId: M:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Equals(ZeepSDK.Utilities.Override.ConditionalOverrideLayer{`0})
+  name.vb: Equals(ConditionalOverrideLayer(Of T))
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>.Equals(ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>)
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T).Equals(ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T))
+  nameWithType: ConditionalOverrideLayer<T>.Equals(ConditionalOverrideLayer<T>)
+  nameWithType.vb: ConditionalOverrideLayer(Of T).Equals(ConditionalOverrideLayer(Of T))
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Equals(ZeepSDK.Utilities.Override.IOverrideLayer{`0})
+  name: Equals(IOverrideLayer<T>)
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Equals_ZeepSDK_Utilities_Override_IOverrideLayer__0__
+  commentId: M:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Equals(ZeepSDK.Utilities.Override.IOverrideLayer{`0})
+  name.vb: Equals(IOverrideLayer(Of T))
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>.Equals(ZeepSDK.Utilities.Override.IOverrideLayer<T>)
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T).Equals(ZeepSDK.Utilities.Override.IOverrideLayer(Of T))
+  nameWithType: ConditionalOverrideLayer<T>.Equals(IOverrideLayer<T>)
+  nameWithType.vb: ConditionalOverrideLayer(Of T).Equals(IOverrideLayer(Of T))
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Equals*
+  name: Equals
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Equals_
+  commentId: Overload:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Equals
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>.Equals
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T).Equals
+  nameWithType: ConditionalOverrideLayer<T>.Equals
+  nameWithType.vb: ConditionalOverrideLayer(Of T).Equals
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.GetHashCode
+  name: GetHashCode()
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_GetHashCode
+  commentId: M:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.GetHashCode
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>.GetHashCode()
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T).GetHashCode()
+  nameWithType: ConditionalOverrideLayer<T>.GetHashCode()
+  nameWithType.vb: ConditionalOverrideLayer(Of T).GetHashCode()
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.GetHashCode*
+  name: GetHashCode
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_GetHashCode_
+  commentId: Overload:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.GetHashCode
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>.GetHashCode
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T).GetHashCode
+  nameWithType: ConditionalOverrideLayer<T>.GetHashCode
+  nameWithType.vb: ConditionalOverrideLayer(Of T).GetHashCode
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Id
+  name: Id
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Id
+  commentId: P:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Id
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>.Id
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T).Id
+  nameWithType: ConditionalOverrideLayer<T>.Id
+  nameWithType.vb: ConditionalOverrideLayer(Of T).Id
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Id*
+  name: Id
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Id_
+  commentId: Overload:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Id
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>.Id
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T).Id
+  nameWithType: ConditionalOverrideLayer<T>.Id
+  nameWithType.vb: ConditionalOverrideLayer(Of T).Id
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Value
+  name: Value
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Value
+  commentId: P:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Value
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>.Value
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T).Value
+  nameWithType: ConditionalOverrideLayer<T>.Value
+  nameWithType.vb: ConditionalOverrideLayer(Of T).Value
+- uid: ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Value*
+  name: Value
+  href: api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Value_
+  commentId: Overload:ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Value
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>.Value
+  fullName.vb: ZeepSDK.Utilities.Override.ConditionalOverrideLayer(Of T).Value
+  nameWithType: ConditionalOverrideLayer<T>.Value
+  nameWithType.vb: ConditionalOverrideLayer(Of T).Value
+- uid: ZeepSDK.Utilities.Override.IConditionTickable
+  name: IConditionTickable
+  href: api/ZeepSDK.Utilities.Override.IConditionTickable.html
+  commentId: T:ZeepSDK.Utilities.Override.IConditionTickable
+  fullName: ZeepSDK.Utilities.Override.IConditionTickable
+  nameWithType: IConditionTickable
+- uid: ZeepSDK.Utilities.Override.IConditionTickable.Tick
+  name: Tick()
+  href: api/ZeepSDK.Utilities.Override.IConditionTickable.html#ZeepSDK_Utilities_Override_IConditionTickable_Tick
+  commentId: M:ZeepSDK.Utilities.Override.IConditionTickable.Tick
+  fullName: ZeepSDK.Utilities.Override.IConditionTickable.Tick()
+  nameWithType: IConditionTickable.Tick()
+- uid: ZeepSDK.Utilities.Override.IConditionTickable.Tick*
+  name: Tick
+  href: api/ZeepSDK.Utilities.Override.IConditionTickable.html#ZeepSDK_Utilities_Override_IConditionTickable_Tick_
+  commentId: Overload:ZeepSDK.Utilities.Override.IConditionTickable.Tick
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.IConditionTickable.Tick
+  nameWithType: IConditionTickable.Tick
+- uid: ZeepSDK.Utilities.Override.IConditionTickable.TickType
+  name: TickType
+  href: api/ZeepSDK.Utilities.Override.IConditionTickable.html#ZeepSDK_Utilities_Override_IConditionTickable_TickType
+  commentId: P:ZeepSDK.Utilities.Override.IConditionTickable.TickType
+  fullName: ZeepSDK.Utilities.Override.IConditionTickable.TickType
+  nameWithType: IConditionTickable.TickType
+- uid: ZeepSDK.Utilities.Override.IConditionTickable.TickType*
+  name: TickType
+  href: api/ZeepSDK.Utilities.Override.IConditionTickable.html#ZeepSDK_Utilities_Override_IConditionTickable_TickType_
+  commentId: Overload:ZeepSDK.Utilities.Override.IConditionTickable.TickType
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.IConditionTickable.TickType
+  nameWithType: IConditionTickable.TickType
+- uid: ZeepSDK.Utilities.Override.IOverrideLayer`1
+  name: IOverrideLayer<T>
+  href: api/ZeepSDK.Utilities.Override.IOverrideLayer-1.html
+  commentId: T:ZeepSDK.Utilities.Override.IOverrideLayer`1
+  name.vb: IOverrideLayer(Of T)
+  fullName: ZeepSDK.Utilities.Override.IOverrideLayer<T>
+  fullName.vb: ZeepSDK.Utilities.Override.IOverrideLayer(Of T)
+  nameWithType: IOverrideLayer<T>
+  nameWithType.vb: IOverrideLayer(Of T)
+- uid: ZeepSDK.Utilities.Override.IOverrideLayer`1.Id
+  name: Id
+  href: api/ZeepSDK.Utilities.Override.IOverrideLayer-1.html#ZeepSDK_Utilities_Override_IOverrideLayer_1_Id
+  commentId: P:ZeepSDK.Utilities.Override.IOverrideLayer`1.Id
+  fullName: ZeepSDK.Utilities.Override.IOverrideLayer<T>.Id
+  fullName.vb: ZeepSDK.Utilities.Override.IOverrideLayer(Of T).Id
+  nameWithType: IOverrideLayer<T>.Id
+  nameWithType.vb: IOverrideLayer(Of T).Id
+- uid: ZeepSDK.Utilities.Override.IOverrideLayer`1.Id*
+  name: Id
+  href: api/ZeepSDK.Utilities.Override.IOverrideLayer-1.html#ZeepSDK_Utilities_Override_IOverrideLayer_1_Id_
+  commentId: Overload:ZeepSDK.Utilities.Override.IOverrideLayer`1.Id
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.IOverrideLayer<T>.Id
+  fullName.vb: ZeepSDK.Utilities.Override.IOverrideLayer(Of T).Id
+  nameWithType: IOverrideLayer<T>.Id
+  nameWithType.vb: IOverrideLayer(Of T).Id
+- uid: ZeepSDK.Utilities.Override.IOverrideLayer`1.Value
+  name: Value
+  href: api/ZeepSDK.Utilities.Override.IOverrideLayer-1.html#ZeepSDK_Utilities_Override_IOverrideLayer_1_Value
+  commentId: P:ZeepSDK.Utilities.Override.IOverrideLayer`1.Value
+  fullName: ZeepSDK.Utilities.Override.IOverrideLayer<T>.Value
+  fullName.vb: ZeepSDK.Utilities.Override.IOverrideLayer(Of T).Value
+  nameWithType: IOverrideLayer<T>.Value
+  nameWithType.vb: IOverrideLayer(Of T).Value
+- uid: ZeepSDK.Utilities.Override.IOverrideLayer`1.Value*
+  name: Value
+  href: api/ZeepSDK.Utilities.Override.IOverrideLayer-1.html#ZeepSDK_Utilities_Override_IOverrideLayer_1_Value_
+  commentId: Overload:ZeepSDK.Utilities.Override.IOverrideLayer`1.Value
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.IOverrideLayer<T>.Value
+  fullName.vb: ZeepSDK.Utilities.Override.IOverrideLayer(Of T).Value
+  nameWithType: IOverrideLayer<T>.Value
+  nameWithType.vb: IOverrideLayer(Of T).Value
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1
+  name: OverrideLayer<T>
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html
+  commentId: T:ZeepSDK.Utilities.Override.OverrideLayer`1
+  name.vb: OverrideLayer(Of T)
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T)
+  nameWithType: OverrideLayer<T>
+  nameWithType.vb: OverrideLayer(Of T)
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1.#ctor(ZeepSDK.Utilities.Override.OverrideStack{`0},`0)
+  name: OverrideLayer(OverrideStack<T>, T)
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1__ctor_ZeepSDK_Utilities_Override_OverrideStack__0___0_
+  commentId: M:ZeepSDK.Utilities.Override.OverrideLayer`1.#ctor(ZeepSDK.Utilities.Override.OverrideStack{`0},`0)
+  name.vb: New(OverrideStack(Of T), T)
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>.OverrideLayer(ZeepSDK.Utilities.Override.OverrideStack<T>, T)
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T).New(ZeepSDK.Utilities.Override.OverrideStack(Of T), T)
+  nameWithType: OverrideLayer<T>.OverrideLayer(OverrideStack<T>, T)
+  nameWithType.vb: OverrideLayer(Of T).New(OverrideStack(Of T), T)
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1.#ctor*
+  name: OverrideLayer
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1__ctor_
+  commentId: Overload:ZeepSDK.Utilities.Override.OverrideLayer`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>.OverrideLayer
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T).New
+  nameWithType: OverrideLayer<T>.OverrideLayer
+  nameWithType.vb: OverrideLayer(Of T).New
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1.Dispose
+  name: Dispose()
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1_Dispose
+  commentId: M:ZeepSDK.Utilities.Override.OverrideLayer`1.Dispose
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>.Dispose()
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T).Dispose()
+  nameWithType: OverrideLayer<T>.Dispose()
+  nameWithType.vb: OverrideLayer(Of T).Dispose()
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1.Dispose*
+  name: Dispose
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1_Dispose_
+  commentId: Overload:ZeepSDK.Utilities.Override.OverrideLayer`1.Dispose
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>.Dispose
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T).Dispose
+  nameWithType: OverrideLayer<T>.Dispose
+  nameWithType.vb: OverrideLayer(Of T).Dispose
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1.Equals(System.Object)
+  name: Equals(object)
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1_Equals_System_Object_
+  commentId: M:ZeepSDK.Utilities.Override.OverrideLayer`1.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>.Equals(object)
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T).Equals(Object)
+  nameWithType: OverrideLayer<T>.Equals(object)
+  nameWithType.vb: OverrideLayer(Of T).Equals(Object)
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1.Equals(ZeepSDK.Utilities.Override.IOverrideLayer{`0})
+  name: Equals(IOverrideLayer<T>)
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1_Equals_ZeepSDK_Utilities_Override_IOverrideLayer__0__
+  commentId: M:ZeepSDK.Utilities.Override.OverrideLayer`1.Equals(ZeepSDK.Utilities.Override.IOverrideLayer{`0})
+  name.vb: Equals(IOverrideLayer(Of T))
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>.Equals(ZeepSDK.Utilities.Override.IOverrideLayer<T>)
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T).Equals(ZeepSDK.Utilities.Override.IOverrideLayer(Of T))
+  nameWithType: OverrideLayer<T>.Equals(IOverrideLayer<T>)
+  nameWithType.vb: OverrideLayer(Of T).Equals(IOverrideLayer(Of T))
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1.Equals(ZeepSDK.Utilities.Override.OverrideLayer{`0})
+  name: Equals(OverrideLayer<T>)
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1_Equals_ZeepSDK_Utilities_Override_OverrideLayer__0__
+  commentId: M:ZeepSDK.Utilities.Override.OverrideLayer`1.Equals(ZeepSDK.Utilities.Override.OverrideLayer{`0})
+  name.vb: Equals(OverrideLayer(Of T))
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>.Equals(ZeepSDK.Utilities.Override.OverrideLayer<T>)
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T).Equals(ZeepSDK.Utilities.Override.OverrideLayer(Of T))
+  nameWithType: OverrideLayer<T>.Equals(OverrideLayer<T>)
+  nameWithType.vb: OverrideLayer(Of T).Equals(OverrideLayer(Of T))
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1.Equals*
+  name: Equals
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1_Equals_
+  commentId: Overload:ZeepSDK.Utilities.Override.OverrideLayer`1.Equals
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>.Equals
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T).Equals
+  nameWithType: OverrideLayer<T>.Equals
+  nameWithType.vb: OverrideLayer(Of T).Equals
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1.GetHashCode
+  name: GetHashCode()
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1_GetHashCode
+  commentId: M:ZeepSDK.Utilities.Override.OverrideLayer`1.GetHashCode
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>.GetHashCode()
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T).GetHashCode()
+  nameWithType: OverrideLayer<T>.GetHashCode()
+  nameWithType.vb: OverrideLayer(Of T).GetHashCode()
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1.GetHashCode*
+  name: GetHashCode
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1_GetHashCode_
+  commentId: Overload:ZeepSDK.Utilities.Override.OverrideLayer`1.GetHashCode
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>.GetHashCode
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T).GetHashCode
+  nameWithType: OverrideLayer<T>.GetHashCode
+  nameWithType.vb: OverrideLayer(Of T).GetHashCode
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1.Id
+  name: Id
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1_Id
+  commentId: P:ZeepSDK.Utilities.Override.OverrideLayer`1.Id
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>.Id
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T).Id
+  nameWithType: OverrideLayer<T>.Id
+  nameWithType.vb: OverrideLayer(Of T).Id
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1.Id*
+  name: Id
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1_Id_
+  commentId: Overload:ZeepSDK.Utilities.Override.OverrideLayer`1.Id
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>.Id
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T).Id
+  nameWithType: OverrideLayer<T>.Id
+  nameWithType.vb: OverrideLayer(Of T).Id
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1.Value
+  name: Value
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1_Value
+  commentId: P:ZeepSDK.Utilities.Override.OverrideLayer`1.Value
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>.Value
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T).Value
+  nameWithType: OverrideLayer<T>.Value
+  nameWithType.vb: OverrideLayer(Of T).Value
+- uid: ZeepSDK.Utilities.Override.OverrideLayer`1.Value*
+  name: Value
+  href: api/ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1_Value_
+  commentId: Overload:ZeepSDK.Utilities.Override.OverrideLayer`1.Value
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.OverrideLayer<T>.Value
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideLayer(Of T).Value
+  nameWithType: OverrideLayer<T>.Value
+  nameWithType.vb: OverrideLayer(Of T).Value
+- uid: ZeepSDK.Utilities.Override.OverrideStack`1
+  name: OverrideStack<T>
+  href: api/ZeepSDK.Utilities.Override.OverrideStack-1.html
+  commentId: T:ZeepSDK.Utilities.Override.OverrideStack`1
+  name.vb: OverrideStack(Of T)
+  fullName: ZeepSDK.Utilities.Override.OverrideStack<T>
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideStack(Of T)
+  nameWithType: OverrideStack<T>
+  nameWithType.vb: OverrideStack(Of T)
+- uid: ZeepSDK.Utilities.Override.OverrideStack`1.#ctor(System.Func{`0},System.Action{`0},`0)
+  name: OverrideStack(Func<T>, Action<T>, T)
+  href: api/ZeepSDK.Utilities.Override.OverrideStack-1.html#ZeepSDK_Utilities_Override_OverrideStack_1__ctor_System_Func__0__System_Action__0___0_
+  commentId: M:ZeepSDK.Utilities.Override.OverrideStack`1.#ctor(System.Func{`0},System.Action{`0},`0)
+  name.vb: New(Func(Of T), Action(Of T), T)
+  fullName: ZeepSDK.Utilities.Override.OverrideStack<T>.OverrideStack(System.Func<T>, System.Action<T>, T)
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideStack(Of T).New(System.Func(Of T), System.Action(Of T), T)
+  nameWithType: OverrideStack<T>.OverrideStack(Func<T>, Action<T>, T)
+  nameWithType.vb: OverrideStack(Of T).New(Func(Of T), Action(Of T), T)
+- uid: ZeepSDK.Utilities.Override.OverrideStack`1.#ctor*
+  name: OverrideStack
+  href: api/ZeepSDK.Utilities.Override.OverrideStack-1.html#ZeepSDK_Utilities_Override_OverrideStack_1__ctor_
+  commentId: Overload:ZeepSDK.Utilities.Override.OverrideStack`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ZeepSDK.Utilities.Override.OverrideStack<T>.OverrideStack
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideStack(Of T).New
+  nameWithType: OverrideStack<T>.OverrideStack
+  nameWithType.vb: OverrideStack(Of T).New
+- uid: ZeepSDK.Utilities.Override.OverrideStack`1.Override(`0)
+  name: Override(T)
+  href: api/ZeepSDK.Utilities.Override.OverrideStack-1.html#ZeepSDK_Utilities_Override_OverrideStack_1_Override__0_
+  commentId: M:ZeepSDK.Utilities.Override.OverrideStack`1.Override(`0)
+  fullName: ZeepSDK.Utilities.Override.OverrideStack<T>.Override(T)
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideStack(Of T).Override(T)
+  nameWithType: OverrideStack<T>.Override(T)
+  nameWithType.vb: OverrideStack(Of T).Override(T)
+- uid: ZeepSDK.Utilities.Override.OverrideStack`1.Override(`0,System.Func{System.Boolean},ZeepSDK.Utilities.Override.ConditionTickType)
+  name: Override(T, Func<bool>, ConditionTickType)
+  href: api/ZeepSDK.Utilities.Override.OverrideStack-1.html#ZeepSDK_Utilities_Override_OverrideStack_1_Override__0_System_Func_System_Boolean__ZeepSDK_Utilities_Override_ConditionTickType_
+  commentId: M:ZeepSDK.Utilities.Override.OverrideStack`1.Override(`0,System.Func{System.Boolean},ZeepSDK.Utilities.Override.ConditionTickType)
+  name.vb: Override(T, Func(Of Boolean), ConditionTickType)
+  fullName: ZeepSDK.Utilities.Override.OverrideStack<T>.Override(T, System.Func<bool>, ZeepSDK.Utilities.Override.ConditionTickType)
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideStack(Of T).Override(T, System.Func(Of Boolean), ZeepSDK.Utilities.Override.ConditionTickType)
+  nameWithType: OverrideStack<T>.Override(T, Func<bool>, ConditionTickType)
+  nameWithType.vb: OverrideStack(Of T).Override(T, Func(Of Boolean), ConditionTickType)
+- uid: ZeepSDK.Utilities.Override.OverrideStack`1.Override*
+  name: Override
+  href: api/ZeepSDK.Utilities.Override.OverrideStack-1.html#ZeepSDK_Utilities_Override_OverrideStack_1_Override_
+  commentId: Overload:ZeepSDK.Utilities.Override.OverrideStack`1.Override
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.OverrideStack<T>.Override
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideStack(Of T).Override
+  nameWithType: OverrideStack<T>.Override
+  nameWithType.vb: OverrideStack(Of T).Override
+- uid: ZeepSDK.Utilities.Override.OverrideStack`1.Value
+  name: Value
+  href: api/ZeepSDK.Utilities.Override.OverrideStack-1.html#ZeepSDK_Utilities_Override_OverrideStack_1_Value
+  commentId: P:ZeepSDK.Utilities.Override.OverrideStack`1.Value
+  fullName: ZeepSDK.Utilities.Override.OverrideStack<T>.Value
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideStack(Of T).Value
+  nameWithType: OverrideStack<T>.Value
+  nameWithType.vb: OverrideStack(Of T).Value
+- uid: ZeepSDK.Utilities.Override.OverrideStack`1.Value*
+  name: Value
+  href: api/ZeepSDK.Utilities.Override.OverrideStack-1.html#ZeepSDK_Utilities_Override_OverrideStack_1_Value_
+  commentId: Overload:ZeepSDK.Utilities.Override.OverrideStack`1.Value
+  isSpec: "True"
+  fullName: ZeepSDK.Utilities.Override.OverrideStack<T>.Value
+  fullName.vb: ZeepSDK.Utilities.Override.OverrideStack(Of T).Value
+  nameWithType: OverrideStack<T>.Value
+  nameWithType.vb: OverrideStack(Of T).Value
 - uid: ZeepSDK.Utilities.SpriteUtility
   name: SpriteUtility
   href: api/ZeepSDK.Utilities.SpriteUtility.html
