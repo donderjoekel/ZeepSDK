@@ -1,8 +1,11 @@
 ﻿using BepInEx;
+using BepInEx.Configuration;
 using HarmonyLib;
+using UnityEngine;
 using UnityEngine.LowLevel;
 using ZeepSDK.Chat;
 using ZeepSDK.ChatCommands;
+using ZeepSDK.Controls;
 using ZeepSDK.External.Cysharp.Threading.Tasks;
 using ZeepSDK.Leaderboard;
 using ZeepSDK.Level;
@@ -17,13 +20,15 @@ using ZeepSDK.Versioning;
 
 namespace ZeepSDK
 {
-    [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+    [BepInPlugin(MyPluginInfo.PLUGIN_GUID, "Zeep SDK", MyPluginInfo.PLUGIN_VERSION)]
     internal class Plugin : BaseUnityPlugin
     {
         public static Plugin Instance { get; private set; }
         public static IModStorage Storage { get; private set; }
 
         private Harmony harmony;
+        
+        public ConfigEntry<KeyCode> ToggleToolbarKey { get; private set; }
 
         private void Awake()
         {
@@ -31,6 +36,9 @@ namespace ZeepSDK
 
             harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
             harmony.PatchAll();
+
+            ToggleToolbarKey =
+                Config.Bind("General", "Toggle Toolbar Key", KeyCode.F10, "The key to toggle the toolbar");
 
             Storage = StorageApi.CreateModStorage(Instance);
 
@@ -44,6 +52,7 @@ namespace ZeepSDK
             PhotoModeApi.Initialize();
             UIApi.Initialize(gameObject);
             ScriptingApi.Initialize();
+            ControlsApi.Initialize();
 
             // Initialize the player loop helper, this is to reduce issues with UniTask
             if (!PlayerLoopHelper.IsInjectedUniTaskPlayerLoop())

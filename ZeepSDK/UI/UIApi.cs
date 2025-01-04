@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using BepInEx.Logging;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +20,17 @@ public static class UIApi
 
     internal static void Initialize(GameObject gameObject)
     {
+        gameObject.AddComponent<ZeepGUIDispatcher>();
+        
+        string directoryName = Path.GetDirectoryName(Plugin.Instance.Info.Location);
+        string assetBundlePath = Path.Combine(directoryName, "zeepgui");
+        AssetBundle assetBundle = AssetBundle.LoadFromFile(assetBundlePath);
+        ZeepGUI.ZeepSkin = assetBundle.LoadAsset<GUISkin>("ZeepSkin");
+
+        ZeepGUI.AddToolbarItem(ZeepGUI.FileToolbarItem, null, int.MinValue);
+        // ZeepGUI.AddToolbarItemChild(ZeepGUI.FileToolbarItem, ZeepGUI.FileSettingsToolbarItem, OpenWindow, int.MinValue);
+        ZeepGUI.AddToolbarItemChild(ZeepGUI.FileToolbarItem, ZeepGUI.FileExitToolbarItem, Application.Quit, int.MaxValue);
+        
         uiConfigurator = gameObject.AddComponent<UIConfigurator>();
         CreateTooltip();
 
