@@ -25,6 +25,8 @@ public static class ZeepGUI
 
     public static OverrideStack<GUISkin> Skin = new(() => GUI.skin, value => GUI.skin = value, null);
 
+    public delegate void WindowFunction(int id, bool closeClicked);
+
     public static void AddZeepGUI(IZeepGUI receiver)
     {
         _receivers.Add(receiver);
@@ -264,6 +266,15 @@ public static class ZeepGUI
             GUILayout.Space(8);
             return GUILayout.Button(content, fieldOptions);
         }
+    }
+
+    public static Rect Window(int id, Rect clientRect, WindowFunction func, string text)
+    {
+        return GUI.Window(id, clientRect, i =>
+        {
+            bool closeClicked = GUI.Button(new Rect(clientRect.width - 24, 4, 20, 20), "X");
+            func(id, closeClicked);
+        }, text);
     }
 
     public static void AddLastingWindow(IZeepWindow zeepWindow)
