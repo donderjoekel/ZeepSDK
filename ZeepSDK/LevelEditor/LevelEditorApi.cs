@@ -5,6 +5,7 @@ using BepInEx.Logging;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using ZeepkistClient;
 using ZeepSDK.Extensions;
 using ZeepSDK.LevelEditor.Builders;
 using ZeepSDK.LevelEditor.Patches;
@@ -82,6 +83,9 @@ public static class LevelEditorApi
         SceneManager.sceneLoaded += (scene, mode) =>
         {
             if (scene.name != "GameScene")
+                return;
+
+            if (ZeepkistNetwork.IsConnectedToGame)
                 return;
 
             if (SetupGame.GlobalLevel.IsTestLevel)
