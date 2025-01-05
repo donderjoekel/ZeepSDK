@@ -1,5 +1,6 @@
 ﻿using System;
 using JetBrains.Annotations;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using ZeepSDK.Controls.Patches;
 using ZeepSDK.Utilities;
@@ -19,11 +20,17 @@ public static class ControlsApi
     private const string SpectateMapKey = "Spectate";
 
     public static OverrideStack<bool> EventSystemOverride { get; } = new(
-        () => EventSystem.current != null && EventSystem.current.enabled,
-        value=>
+        () =>
         {
-            if (EventSystem.current != null)
-                EventSystem.current.enabled = value;
+            EventSystem eventSystem = ComponentCache.Get<EventSystem>(true);
+            return eventSystem != null && eventSystem.enabled;
+
+        },
+        value =>
+        {
+            EventSystem eventSystem = ComponentCache.Get<EventSystem>(true);
+            if (eventSystem != null)
+                eventSystem.enabled = value;
         },
         true);
     public static InputOverrideStack DefaultInputOverride { get; } = new(DefaultMapKey);
@@ -43,6 +50,7 @@ public static class ControlsApi
         MenuInputOverride.UpdateBaseValue(true);
         OnlineInputOverride.UpdateBaseValue(true);
         SpectateInputOverride.UpdateBaseValue(true);
+        EventSystemOverride.UpdateBaseValue(true);
 
         Input_DisableAllInput.Invoked += () =>
         {
