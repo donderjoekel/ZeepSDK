@@ -4293,6 +4293,28 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.UI.ZeepGUI.Toggle
   nameWithType: ZeepGUI.Toggle
+- uid: ZeepSDK.UI.ZeepGUI.Window(System.Int32,UnityEngine.Rect,ZeepSDK.UI.ZeepGUI.WindowFunction,System.String)
+  name: Window(int, Rect, WindowFunction, string)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Window_System_Int32_UnityEngine_Rect_ZeepSDK_UI_ZeepGUI_WindowFunction_System_String_
+  commentId: M:ZeepSDK.UI.ZeepGUI.Window(System.Int32,UnityEngine.Rect,ZeepSDK.UI.ZeepGUI.WindowFunction,System.String)
+  name.vb: Window(Integer, Rect, WindowFunction, String)
+  fullName: ZeepSDK.UI.ZeepGUI.Window(int, UnityEngine.Rect, ZeepSDK.UI.ZeepGUI.WindowFunction, string)
+  fullName.vb: ZeepSDK.UI.ZeepGUI.Window(Integer, UnityEngine.Rect, ZeepSDK.UI.ZeepGUI.WindowFunction, String)
+  nameWithType: ZeepGUI.Window(int, Rect, ZeepGUI.WindowFunction, string)
+  nameWithType.vb: ZeepGUI.Window(Integer, Rect, ZeepGUI.WindowFunction, String)
+- uid: ZeepSDK.UI.ZeepGUI.Window*
+  name: Window
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Window_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.Window
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.Window
+  nameWithType: ZeepGUI.Window
+- uid: ZeepSDK.UI.ZeepGUI.WindowFunction
+  name: ZeepGUI.WindowFunction
+  href: api/ZeepSDK.UI.ZeepGUI.WindowFunction.html
+  commentId: T:ZeepSDK.UI.ZeepGUI.WindowFunction
+  fullName: ZeepSDK.UI.ZeepGUI.WindowFunction
+  nameWithType: ZeepGUI.WindowFunction
 - uid: ZeepSDK.Utilities
   name: ZeepSDK.Utilities
   href: api/ZeepSDK.Utilities.html
