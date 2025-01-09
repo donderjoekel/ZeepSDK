@@ -176,7 +176,16 @@ internal static class ZeepLevelParser
                     decimal.Parse(splits[8], NumberStyles.Any, _culture),
                     decimal.Parse(splits[9], NumberStyles.Any, _culture));
 
-                splits[10..27].ToList().ForEach(x => block.Paints.Add(int.Parse(x, NumberStyles.Any, _culture)));
+                // Hackfix for the note block
+                if (block.Id == 2279)
+                {
+                    splits[10..27].ToList()
+                        .ForEach(x => block.Paints.Add((int)float.Parse(x, NumberStyles.Any, _culture)));
+                }
+                else
+                {
+                    splits[10..27].ToList().ForEach(x => block.Paints.Add(int.Parse(x, NumberStyles.Any, _culture)));
+                }
 
                 splits[27..38].ToList().ForEach(x => block.Options.Add(float.Parse(x, NumberStyles.Any, _culture)));
 
