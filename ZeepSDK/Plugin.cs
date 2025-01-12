@@ -28,7 +28,8 @@ namespace ZeepSDK
 
         private Harmony harmony;
         
-        public ConfigEntry<KeyCode> ToggleToolbarKey { get; private set; }
+        public ConfigEntry<KeyCode> ToggleMenuBarKey { get; private set; }
+        public ConfigEntry<GuiSkins> GuiSkinConfig { get; private set; }
 
         private void Awake()
         {
@@ -37,8 +38,10 @@ namespace ZeepSDK
             harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
             harmony.PatchAll();
 
-            ToggleToolbarKey =
-                Config.Bind("General", "Toggle Toolbar Key", KeyCode.F10, "The key to toggle the toolbar");
+            ToggleMenuBarKey =
+                Config.Bind("General", "Toggle Menu Bar Key", KeyCode.None, "The key to toggle the menu bar");
+            GuiSkinConfig =
+                Config.Bind("General", "Selected GUI Skin", GuiSkins.SemiTransparent, "The skin to use for the UI");
 
             Storage = StorageApi.CreateModStorage(Instance);
 

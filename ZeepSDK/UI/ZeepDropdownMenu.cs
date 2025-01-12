@@ -18,24 +18,34 @@ public class ZeepDropdownMenu
                                               _currentDropdownMenu._rect.Contains(ZeepGUI.MousePosition);
 
     internal static bool HasDropdown => _currentDropdownMenu != null;
-    
+
     private class ZeepDropdownMenuItem
     {
         public GUIContent Content;
         public Action Action;
     }
 
-    private readonly float _x;
-    private readonly float _y;
+    private readonly int _x;
+    private readonly int _y;
     private readonly List<ZeepDropdownMenuItem> _items = new();
 
     private bool _initialized;
     private Rect _rect;
 
     public ZeepDropdownMenu()
+        : this(ZeepGUI.MousePosition.x, ZeepGUI.MousePosition.y)
     {
-        _x = ZeepGUI.MousePosition.x;
-        _y = ZeepGUI.MousePosition.y;
+    }
+
+    public ZeepDropdownMenu(float x, float y)
+        : this(Mathf.RoundToInt(x), Mathf.RoundToInt(y))
+    {
+    }
+
+    public ZeepDropdownMenu(int x, int y)
+    {
+        _x = x;
+        _y = y;
     }
 
     public void AddItem(GUIContent content, Action action)
@@ -62,9 +72,9 @@ public class ZeepDropdownMenu
         float maxWidth = 0;
         float height = 0;
 
-        foreach (ZeepDropdownMenuItem imGuiDropdownMenuItem in _items)
+        foreach (ZeepDropdownMenuItem item in _items)
         {
-            Vector2 contentSize = GUI.skin.button.CalcSize(imGuiDropdownMenuItem.Content);
+            Vector2 contentSize = GUI.skin.button.CalcSize(item.Content);
             Vector2 screenSize = GUI.skin.button.CalcScreenSize(contentSize);
             maxWidth = Mathf.Max(maxWidth, screenSize.x);
             height += screenSize.y;
@@ -99,7 +109,7 @@ public class ZeepDropdownMenu
         {
             foreach (ZeepDropdownMenuItem imGuiDropdownMenuItem in _currentDropdownMenu._items)
             {
-                if (GUILayout.Button(imGuiDropdownMenuItem.Content))
+                if (GUILayout.Button(imGuiDropdownMenuItem.Content, "toolbar button"))
                 {
                     _currentDropdownMenu = null;
                     imGuiDropdownMenuItem.Action?.Invoke();

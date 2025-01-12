@@ -1,11 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using BepInEx.Logging;
 using UnityEngine;
 using UnityEngine.UI;
 using ZeepSDK.Extensions;
 using ZeepSDK.UI.Patches;
 using ZeepSDK.Utilities;
+using Object = UnityEngine.Object;
 
 namespace ZeepSDK.UI;
 
@@ -25,7 +28,9 @@ public static class UIApi
         string directoryName = Path.GetDirectoryName(Plugin.Instance.Info.Location);
         string assetBundlePath = Path.Combine(directoryName, "zeepgui");
         AssetBundle assetBundle = AssetBundle.LoadFromFile(assetBundlePath);
-        ZeepGUI.ZeepSkin = assetBundle.LoadAsset<GUISkin>("ZeepSkin");
+        ZeepGUI.Skins = assetBundle.LoadAllAssets<GUISkin>();
+        Plugin.Instance.GuiSkinConfig.SettingChanged += OnSelectedSkinChanged;
+        OnSelectedSkinChanged(null, null); // Apply the current skin
 
         ZeepGUI.AddToolbarItem(ZeepGUI.FileToolbarItem, null, int.MinValue);
         // ZeepGUI.AddToolbarItemChild(ZeepGUI.FileToolbarItem, ZeepGUI.FileSettingsToolbarItem, OpenWindow, int.MinValue);
@@ -38,6 +43,16 @@ public static class UIApi
         OnlineGameplayUI_Awake.Awake += OnOnlineGameplayUIAwake;
         PlayerScreensUI_Awake.Awake += OnPlayerScreensUIAwake;
         SpectatorCameraUI_Awake.Awake += OnSpectatorCameraUIAwake;
+    }
+
+    private static void OnSelectedSkinChanged(object o, EventArgs eventArgs)
+    {
+        ZeepGUI.CurrentSkin = Plugin.Instance.GuiSkinConfig.Value switch
+        {
+            GuiSkins.Default => ZeepGUI.Skins.First(x => x.name == "Default"),
+            GuiSkins.SemiTransparent => ZeepGUI.Skins.First(x => x.name == "Semi Transparent"),
+            _ => throw new ArgumentOutOfRangeException()
+        };
     }
 
     private static void OnOnlineChatUIAwake(OnlineChatUI instance)

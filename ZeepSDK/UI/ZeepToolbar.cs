@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.EventSystems;
 using ZeepSDK.Controls;
 using ZeepSDK.UI.Patches;
@@ -149,33 +150,30 @@ internal class ZeepToolbar : IDisposable
 
     private void DrawItem(ZeepToolbarItem item)
     {
-        if (!GUILayout.Button(item.Content)) 
-            return;
-
         if (item.Children.Count > 0)
         {
-            CreateAndShowDropdown(item);
+            if (ZeepGUI.MenuButton(item.Content, out ZeepDropdownMenu menu))
+            {
+                foreach (ZeepToolbarItem child in item.Children)
+                {
+                    menu.AddItem(child.Content, ()=>
+                    {
+                        _hasMenu = false;
+                        child.Action();
+                    });
+                }
+
+                _hasMenu = true;
+                menu.Show();
+            }
         }
         else
         {
-            item.Action.Invoke();
-        }
-    }
-
-    private void CreateAndShowDropdown(ZeepToolbarItem item)
-    {
-        ZeepDropdownMenu menu = new();
-        foreach (ZeepToolbarItem child in item.Children)
-        {
-            menu.AddItem(child.Content, () =>
+            if (GUILayout.Button(item.Content, "toolbar button"))
             {
-                _hasMenu = false;
-                child.Action?.Invoke();
-            });
+                item.Action();
+            }
         }
-
-        _hasMenu = true;
-        menu.Show();
     }
 
     public void ToggleVisibleByKey()

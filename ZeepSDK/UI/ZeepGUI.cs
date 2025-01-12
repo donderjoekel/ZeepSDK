@@ -15,13 +15,16 @@ public static class ZeepGUI
     public const string FileSettingsToolbarItem = "Settings";
     public const string FileExitToolbarItem = "Exit Zeepkist";
 
+    private static readonly Dictionary<int, Rect> _menuButtonRects = new();
+
     private static readonly ZeepToolbar _toolbar = new();
     private static readonly List<IZeepGUI> _receivers = [];
     private static readonly List<IZeepWindow> _windows = [];
     private static bool _hasSetBaseValue;
 
     internal static Vector2 MousePosition { get; private set; }
-    internal static GUISkin ZeepSkin;
+    internal static GUISkin CurrentSkin;
+    internal static GUISkin[] Skins;
 
     public static OverrideStack<GUISkin> Skin = new(() => GUI.skin, value => GUI.skin = value, null);
 
@@ -267,14 +270,192 @@ public static class ZeepGUI
             return GUILayout.Button(content, fieldOptions);
         }
     }
-
-    public static Rect Window(int id, Rect clientRect, WindowFunction func, string text)
+    
+    public static bool LabelDropdownButton(string label, string text, out ZeepDropdownMenu menu,
+        GUILayoutOption[] labelOptions = null,
+        GUILayoutOption[] fieldOptions = null,
+        GUILayoutOption[] areaOptions = null)
     {
-        return GUI.Window(id, clientRect, i =>
+        using (new GUILayout.HorizontalScope(areaOptions))
         {
-            bool closeClicked = GUI.Button(new Rect(clientRect.width - 24, 4, 20, 20), "X");
-            func(id, closeClicked);
-        }, text);
+            GUILayout.Label(label, labelOptions);
+            GUILayout.Space(8);
+            return DropdownButton(text, out menu, fieldOptions);
+        }
+    }
+
+    public static bool LabelDropdownButton(GUIContent label, GUIContent content, out ZeepDropdownMenu menu,
+        GUILayoutOption[] labelOptions = null,
+        GUILayoutOption[] fieldOptions = null,
+        GUILayoutOption[] areaOptions = null)
+    {
+        using (new GUILayout.HorizontalScope(areaOptions))
+        {
+            GUILayout.Label(label, labelOptions);
+            GUILayout.Space(8);
+            return DropdownButton(content, out menu, fieldOptions);
+        }
+    }
+
+    public static void BeginMenuBar()
+    {
+        GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height));
+        GUILayout.BeginHorizontal("toolbar");
+    }
+
+    public static void EndMenuBar()
+    {
+        GUILayout.FlexibleSpace();
+        GUILayout.EndHorizontal();
+        GUILayout.EndArea();
+    }
+
+    public static void BeginWindowMenuBar()
+    {
+        GUILayout.BeginHorizontal("window toolbar");
+    }
+
+    public static void EndWindowMenuBar()
+    {
+        GUILayout.FlexibleSpace();
+        GUILayout.EndHorizontal();
+    }
+
+    public static bool DropdownButton(GUIContent content, out ZeepDropdownMenu menu, GUILayoutOption[] options = null)
+    {
+        return MenuButtonInternal(content, "button", out menu, options);
+    }
+
+    public static bool DropdownButton(string text, out ZeepDropdownMenu menu, GUILayoutOption[] options = null)
+    {
+        return DropdownButton(new GUIContent(text), out menu, options);
+    }
+
+    public static bool MenuButton(GUIContent content, out ZeepDropdownMenu menu)
+    {
+        return MenuButtonInternal(content, "toolbar button", out menu);
+    }
+    
+    public static bool MenuButton(string content, out ZeepDropdownMenu menu)
+    {
+        return MenuButton(new GUIContent(content), out menu);
+    }
+
+    public static bool WindowMenuButton(GUIContent content, out ZeepDropdownMenu menu)
+    {
+        return MenuButtonInternal(content, "window toolbar button", out menu);
+    }
+    
+    public static bool WindowMenuButton(string text, out ZeepDropdownMenu menu)
+    {
+        return WindowMenuButton(new GUIContent(text), out menu);
+    }
+
+    private static bool MenuButtonInternal(GUIContent content, GUIStyle style, out ZeepDropdownMenu menu, GUILayoutOption[] options = null)
+    {
+        int controlId = GUIUtility.GetControlID(FocusType.Keyboard);
+        bool result = GUILayout.Button(content, style, options);
+        if (Event.current.type == EventType.Repaint)
+        {
+            _menuButtonRects[controlId] = ZeepGUIUtility.ConvertToAbsolutePosition(GUILayoutUtility.GetLastRect());
+        }
+
+        if (result)
+        {
+            Rect rect = _menuButtonRects[controlId];
+            menu = new ZeepDropdownMenu(rect.x, rect.y + rect.height);
+        }
+        else
+        {
+            menu = null;
+        }
+
+        return result;
+    }
+
+    public static Rect Window(int id, Rect clientRect, string text, GUI.WindowFunction func, Action onClose)
+    {
+        return GUI.Window(id, clientRect, i => OnWindow(i, clientRect, func, onClose), text);
+    }
+
+    private static void OnWindow(int id, Rect clientRect, GUI.WindowFunction onWindow, Action onClose)
+    {
+        WindowCloseButton(clientRect, onClose);
+
+        const int headerVerticalOffset = 32; // The size of the title bar of the window
+
+        const int contentHorizontalOffset = 1 + 4; // 4 for padding
+        const int contentVerticalOffset = headerVerticalOffset + 8; // 8 for padding
+        const int contentWidthOffset = contentHorizontalOffset * 2;
+        const int contentHeightOffset = contentVerticalOffset + 8;
+
+        GUILayout.BeginArea(
+            new Rect(
+                contentHorizontalOffset,
+                contentVerticalOffset,
+                clientRect.width - contentWidthOffset,
+                clientRect.height - contentHeightOffset));
+        onWindow(id);
+        GUILayout.EndArea();
+
+        GUI.DragWindow(new Rect(0, 0, clientRect.width, 32));
+    }
+
+    public static Rect MenubarWindow(int id, Rect clientRect, string text,
+        Action<int> onMenu,
+        GUI.WindowFunction onWindow,
+        Action onClose)
+    {
+        return GUI.Window(id, clientRect, i => OnMenubarWindow(i, clientRect, onMenu, onWindow, onClose), text,
+            "toolbar window");
+    }
+
+    private static void OnMenubarWindow(int id, Rect clientRect, Action<int> onMenu, GUI.WindowFunction onWindow,
+        Action onClose)
+    {
+        WindowCloseButton(clientRect, onClose);
+
+        const int menuHorizontalOffset = 1;
+        const int menuVerticalOffset = 28;
+        const int menuWidthOffset = menuHorizontalOffset * 2;
+        const int menuHeight = 32;
+
+        GUILayout.BeginArea(
+            new Rect(menuHorizontalOffset,
+                menuVerticalOffset,
+                clientRect.width - menuWidthOffset,
+                menuHeight));
+        BeginWindowMenuBar();
+        onMenu(id);
+        EndWindowMenuBar();
+        GUILayout.EndArea();
+
+        const int contentHorizontalOffset = 1 + 4; // 4 for padding
+        const int contentVerticalOffset = menuVerticalOffset + 20 + 8; // 20 for menu height(how?) 8 for padding
+        const int contentWidthOffset = contentHorizontalOffset * 2;
+        const int contentHeightOffset = contentVerticalOffset + 8;
+
+        GUILayout.BeginArea(
+            new Rect(
+                contentHorizontalOffset,
+                contentVerticalOffset,
+                clientRect.width - contentWidthOffset,
+                clientRect.height - contentHeightOffset));
+        onWindow(id);
+        GUILayout.EndArea();
+
+        GUI.DragWindow(new Rect(0, 0, clientRect.width, 32));
+    }
+
+    private static void WindowCloseButton(Rect clientRect, Action onClose)
+    {
+        const int width = 20;
+        const int offset = 4;
+        if (GUI.Button(new Rect(clientRect.width - width - offset, offset, width, width), "X"))
+        {
+            onClose();
+            GUIUtility.ExitGUI();
+        }
     }
 
     public static void AddLastingWindow(IZeepWindow zeepWindow)
@@ -296,10 +477,10 @@ public static class ZeepGUI
             Skin.UpdateBaseValue(GUI.skin);
             _hasSetBaseValue = true;
         }
-        
+
         MousePosition = Event.current.mousePosition;
 
-        using (Skin.Override(ZeepSkin))
+        using (Skin.Override(CurrentSkin))
         {
             foreach (IZeepGUI receiver in _receivers)
             {
@@ -317,7 +498,7 @@ public static class ZeepGUI
             ZeepDropdownMenu.OnGUI();
             _toolbar.PostOnGUI();
 
-            if (Event.current.IsKeyUp(Plugin.Instance.ToggleToolbarKey.Value))
+            if (Event.current.IsKeyUp(Plugin.Instance.ToggleMenuBarKey.Value))
             {
                 _toolbar.ToggleVisibleByKey();
             }
