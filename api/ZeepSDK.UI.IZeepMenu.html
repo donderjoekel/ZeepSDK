@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Namespace ZeepSDK.UI </title>
+      <title>Interface IZeepMenu </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Namespace ZeepSDK.UI ">
+      <meta name="title" content="Interface IZeepMenu ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_UI_IZeepMenu.md&amp;value=---%0Auid%3A%20ZeepSDK.UI.IZeepMenu%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -80,62 +80,113 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ZeepSDK.UI">
+        <article data-uid="ZeepSDK.UI.IZeepMenu">
 
-  <h1 id="ZeepSDK_UI" data-uid="ZeepSDK.UI" class="text-break">Namespace ZeepSDK.UI</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
 
-    <h3 id="classes">
-Classes
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.UIApi.html">UIApi</a></dt>
-      <dd><p>An API related to the UI of the game</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.ZeepDropdownMenu.html">ZeepDropdownMenu</a></dt>
-      <dd><p>A custom dropdown menu that can be used for ZeepGUI</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a></dt>
-      <dd></dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.ZeepGUIUtility.html">ZeepGUIUtility</a></dt>
-      <dd></dd>
-    </dl>
-    <h3 id="interfaces">
-Interfaces
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.IZeepGUI.html">IZeepGUI</a></dt>
-      <dd><p>An interface you can implement that allows you to receive GUI events from the ZeepSDK</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.IZeepMenu.html">IZeepMenu</a></dt>
-      <dd></dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.IZeepWindow.html">IZeepWindow</a></dt>
-      <dd></dd>
-    </dl>
-    <h3 id="delegates">
-Delegates
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.ZeepGUI.WindowFunction.html">ZeepGUI.WindowFunction</a></dt>
-      <dd></dd>
-    </dl>
+
+  <h1 id="ZeepSDK_UI_IZeepMenu" data-uid="ZeepSDK.UI.IZeepMenu" class="text-break">
+Interface IZeepMenu  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/IZeepMenu.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ZeepSDK.html">ZeepSDK</a>.<a class="xref" href="ZeepSDK.UI.html">UI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IZeepMenu</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ZeepSDK_UI_IZeepMenu_AddItem_" data-uid="ZeepSDK.UI.IZeepMenu.AddItem*"></a>
+
+  <h3 id="ZeepSDK_UI_IZeepMenu_AddItem_System_String_System_Action_" data-uid="ZeepSDK.UI.IZeepMenu.AddItem(System.String,System.Action)">
+  AddItem(string, Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/IZeepMenu.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddItem(string text, Action onClick)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>onClick</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_UI_IZeepMenu_AddItem_" data-uid="ZeepSDK.UI.IZeepMenu.AddItem*"></a>
+
+  <h3 id="ZeepSDK_UI_IZeepMenu_AddItem_UnityEngine_GUIContent_System_Action_" data-uid="ZeepSDK.UI.IZeepMenu.AddItem(UnityEngine.GUIContent,System.Action)">
+  AddItem(GUIContent, Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/IZeepMenu.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddItem(GUIContent content, Action onClick)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
+    <dd></dd>
+    <dt><code>onClick</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 
 </article>
 
         <div class="contribution d-print-none">
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/IZeepMenu.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

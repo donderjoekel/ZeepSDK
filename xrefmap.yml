@@ -3793,6 +3793,34 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.UI.IZeepGUI.OnZeepGUI
   nameWithType: IZeepGUI.OnZeepGUI
+- uid: ZeepSDK.UI.IZeepMenu
+  name: IZeepMenu
+  href: api/ZeepSDK.UI.IZeepMenu.html
+  commentId: T:ZeepSDK.UI.IZeepMenu
+  fullName: ZeepSDK.UI.IZeepMenu
+  nameWithType: IZeepMenu
+- uid: ZeepSDK.UI.IZeepMenu.AddItem(System.String,System.Action)
+  name: AddItem(string, Action)
+  href: api/ZeepSDK.UI.IZeepMenu.html#ZeepSDK_UI_IZeepMenu_AddItem_System_String_System_Action_
+  commentId: M:ZeepSDK.UI.IZeepMenu.AddItem(System.String,System.Action)
+  name.vb: AddItem(String, Action)
+  fullName: ZeepSDK.UI.IZeepMenu.AddItem(string, System.Action)
+  fullName.vb: ZeepSDK.UI.IZeepMenu.AddItem(String, System.Action)
+  nameWithType: IZeepMenu.AddItem(string, Action)
+  nameWithType.vb: IZeepMenu.AddItem(String, Action)
+- uid: ZeepSDK.UI.IZeepMenu.AddItem(UnityEngine.GUIContent,System.Action)
+  name: AddItem(GUIContent, Action)
+  href: api/ZeepSDK.UI.IZeepMenu.html#ZeepSDK_UI_IZeepMenu_AddItem_UnityEngine_GUIContent_System_Action_
+  commentId: M:ZeepSDK.UI.IZeepMenu.AddItem(UnityEngine.GUIContent,System.Action)
+  fullName: ZeepSDK.UI.IZeepMenu.AddItem(UnityEngine.GUIContent, System.Action)
+  nameWithType: IZeepMenu.AddItem(GUIContent, Action)
+- uid: ZeepSDK.UI.IZeepMenu.AddItem*
+  name: AddItem
+  href: api/ZeepSDK.UI.IZeepMenu.html#ZeepSDK_UI_IZeepMenu_AddItem_
+  commentId: Overload:ZeepSDK.UI.IZeepMenu.AddItem
+  isSpec: "True"
+  fullName: ZeepSDK.UI.IZeepMenu.AddItem
+  nameWithType: IZeepMenu.AddItem
 - uid: ZeepSDK.UI.IZeepWindow
   name: IZeepWindow
   href: api/ZeepSDK.UI.IZeepWindow.html
@@ -3939,6 +3967,24 @@ references:
   fullName.vb: ZeepSDK.UI.ZeepDropdownMenu.New()
   nameWithType: ZeepDropdownMenu.ZeepDropdownMenu()
   nameWithType.vb: ZeepDropdownMenu.New()
+- uid: ZeepSDK.UI.ZeepDropdownMenu.#ctor(System.Int32,System.Int32)
+  name: ZeepDropdownMenu(int, int)
+  href: api/ZeepSDK.UI.ZeepDropdownMenu.html#ZeepSDK_UI_ZeepDropdownMenu__ctor_System_Int32_System_Int32_
+  commentId: M:ZeepSDK.UI.ZeepDropdownMenu.#ctor(System.Int32,System.Int32)
+  name.vb: New(Integer, Integer)
+  fullName: ZeepSDK.UI.ZeepDropdownMenu.ZeepDropdownMenu(int, int)
+  fullName.vb: ZeepSDK.UI.ZeepDropdownMenu.New(Integer, Integer)
+  nameWithType: ZeepDropdownMenu.ZeepDropdownMenu(int, int)
+  nameWithType.vb: ZeepDropdownMenu.New(Integer, Integer)
+- uid: ZeepSDK.UI.ZeepDropdownMenu.#ctor(System.Single,System.Single)
+  name: ZeepDropdownMenu(float, float)
+  href: api/ZeepSDK.UI.ZeepDropdownMenu.html#ZeepSDK_UI_ZeepDropdownMenu__ctor_System_Single_System_Single_
+  commentId: M:ZeepSDK.UI.ZeepDropdownMenu.#ctor(System.Single,System.Single)
+  name.vb: New(Single, Single)
+  fullName: ZeepSDK.UI.ZeepDropdownMenu.ZeepDropdownMenu(float, float)
+  fullName.vb: ZeepSDK.UI.ZeepDropdownMenu.New(Single, Single)
+  nameWithType: ZeepDropdownMenu.ZeepDropdownMenu(float, float)
+  nameWithType.vb: ZeepDropdownMenu.New(Single, Single)
 - uid: ZeepSDK.UI.ZeepDropdownMenu.#ctor*
   name: ZeepDropdownMenu
   href: api/ZeepSDK.UI.ZeepDropdownMenu.html#ZeepSDK_UI_ZeepDropdownMenu__ctor_
@@ -4057,6 +4103,32 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.UI.ZeepGUI.AddZeepGUI
   nameWithType: ZeepGUI.AddZeepGUI
+- uid: ZeepSDK.UI.ZeepGUI.BeginMenuBar
+  name: BeginMenuBar()
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_BeginMenuBar
+  commentId: M:ZeepSDK.UI.ZeepGUI.BeginMenuBar
+  fullName: ZeepSDK.UI.ZeepGUI.BeginMenuBar()
+  nameWithType: ZeepGUI.BeginMenuBar()
+- uid: ZeepSDK.UI.ZeepGUI.BeginMenuBar*
+  name: BeginMenuBar
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_BeginMenuBar_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.BeginMenuBar
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.BeginMenuBar
+  nameWithType: ZeepGUI.BeginMenuBar
+- uid: ZeepSDK.UI.ZeepGUI.BeginWindowMenuBar
+  name: BeginWindowMenuBar()
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_BeginWindowMenuBar
+  commentId: M:ZeepSDK.UI.ZeepGUI.BeginWindowMenuBar
+  fullName: ZeepSDK.UI.ZeepGUI.BeginWindowMenuBar()
+  nameWithType: ZeepGUI.BeginWindowMenuBar()
+- uid: ZeepSDK.UI.ZeepGUI.BeginWindowMenuBar*
+  name: BeginWindowMenuBar
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_BeginWindowMenuBar_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.BeginWindowMenuBar
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.BeginWindowMenuBar
+  nameWithType: ZeepGUI.BeginWindowMenuBar
 - uid: ZeepSDK.UI.ZeepGUI.DoubleField(System.Double,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
   name: DoubleField(double, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
   href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DoubleField_System_Double_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___
@@ -4100,6 +4172,57 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.UI.ZeepGUI.DoubleField
   nameWithType: ZeepGUI.DoubleField
+- uid: ZeepSDK.UI.ZeepGUI.DropdownButton(System.String,ZeepSDK.UI.ZeepDropdownMenu@,UnityEngine.GUILayoutOption[])
+  name: DropdownButton(string, out ZeepDropdownMenu, GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DropdownButton_System_String_ZeepSDK_UI_ZeepDropdownMenu__UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.DropdownButton(System.String,ZeepSDK.UI.ZeepDropdownMenu@,UnityEngine.GUILayoutOption[])
+  name.vb: DropdownButton(String, ZeepDropdownMenu, GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.DropdownButton(string, out ZeepSDK.UI.ZeepDropdownMenu, UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.DropdownButton(String, ZeepSDK.UI.ZeepDropdownMenu, UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.DropdownButton(string, out ZeepDropdownMenu, GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.DropdownButton(String, ZeepDropdownMenu, GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.DropdownButton(UnityEngine.GUIContent,ZeepSDK.UI.ZeepDropdownMenu@,UnityEngine.GUILayoutOption[])
+  name: DropdownButton(GUIContent, out ZeepDropdownMenu, GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DropdownButton_UnityEngine_GUIContent_ZeepSDK_UI_ZeepDropdownMenu__UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.DropdownButton(UnityEngine.GUIContent,ZeepSDK.UI.ZeepDropdownMenu@,UnityEngine.GUILayoutOption[])
+  name.vb: DropdownButton(GUIContent, ZeepDropdownMenu, GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.DropdownButton(UnityEngine.GUIContent, out ZeepSDK.UI.ZeepDropdownMenu, UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.DropdownButton(UnityEngine.GUIContent, ZeepSDK.UI.ZeepDropdownMenu, UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.DropdownButton(GUIContent, out ZeepDropdownMenu, GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.DropdownButton(GUIContent, ZeepDropdownMenu, GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.DropdownButton*
+  name: DropdownButton
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DropdownButton_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.DropdownButton
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.DropdownButton
+  nameWithType: ZeepGUI.DropdownButton
+- uid: ZeepSDK.UI.ZeepGUI.EndMenuBar
+  name: EndMenuBar()
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_EndMenuBar
+  commentId: M:ZeepSDK.UI.ZeepGUI.EndMenuBar
+  fullName: ZeepSDK.UI.ZeepGUI.EndMenuBar()
+  nameWithType: ZeepGUI.EndMenuBar()
+- uid: ZeepSDK.UI.ZeepGUI.EndMenuBar*
+  name: EndMenuBar
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_EndMenuBar_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.EndMenuBar
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.EndMenuBar
+  nameWithType: ZeepGUI.EndMenuBar
+- uid: ZeepSDK.UI.ZeepGUI.EndWindowMenuBar
+  name: EndWindowMenuBar()
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_EndWindowMenuBar
+  commentId: M:ZeepSDK.UI.ZeepGUI.EndWindowMenuBar
+  fullName: ZeepSDK.UI.ZeepGUI.EndWindowMenuBar()
+  nameWithType: ZeepGUI.EndWindowMenuBar()
+- uid: ZeepSDK.UI.ZeepGUI.EndWindowMenuBar*
+  name: EndWindowMenuBar
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_EndWindowMenuBar_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.EndWindowMenuBar
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.EndWindowMenuBar
+  nameWithType: ZeepGUI.EndWindowMenuBar
 - uid: ZeepSDK.UI.ZeepGUI.FileExitToolbarItem
   name: FileExitToolbarItem
   href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_FileExitToolbarItem
@@ -4229,6 +4352,72 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.UI.ZeepGUI.LabelButton
   nameWithType: ZeepGUI.LabelButton
+- uid: ZeepSDK.UI.ZeepGUI.LabelDropdownButton(System.String,System.String,ZeepSDK.UI.ZeepDropdownMenu@,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name: LabelDropdownButton(string, string, out ZeepDropdownMenu, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_LabelDropdownButton_System_String_System_String_ZeepSDK_UI_ZeepDropdownMenu__UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.LabelDropdownButton(System.String,System.String,ZeepSDK.UI.ZeepDropdownMenu@,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name.vb: LabelDropdownButton(String, String, ZeepDropdownMenu, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.LabelDropdownButton(string, string, out ZeepSDK.UI.ZeepDropdownMenu, UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.LabelDropdownButton(String, String, ZeepSDK.UI.ZeepDropdownMenu, UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.LabelDropdownButton(string, string, out ZeepDropdownMenu, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.LabelDropdownButton(String, String, ZeepDropdownMenu, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.LabelDropdownButton(UnityEngine.GUIContent,UnityEngine.GUIContent,ZeepSDK.UI.ZeepDropdownMenu@,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name: LabelDropdownButton(GUIContent, GUIContent, out ZeepDropdownMenu, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_LabelDropdownButton_UnityEngine_GUIContent_UnityEngine_GUIContent_ZeepSDK_UI_ZeepDropdownMenu__UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___
+  commentId: M:ZeepSDK.UI.ZeepGUI.LabelDropdownButton(UnityEngine.GUIContent,UnityEngine.GUIContent,ZeepSDK.UI.ZeepDropdownMenu@,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])
+  name.vb: LabelDropdownButton(GUIContent, GUIContent, ZeepDropdownMenu, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+  fullName: ZeepSDK.UI.ZeepGUI.LabelDropdownButton(UnityEngine.GUIContent, UnityEngine.GUIContent, out ZeepSDK.UI.ZeepDropdownMenu, UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[], UnityEngine.GUILayoutOption[])
+  fullName.vb: ZeepSDK.UI.ZeepGUI.LabelDropdownButton(UnityEngine.GUIContent, UnityEngine.GUIContent, ZeepSDK.UI.ZeepDropdownMenu, UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption(), UnityEngine.GUILayoutOption())
+  nameWithType: ZeepGUI.LabelDropdownButton(GUIContent, GUIContent, out ZeepDropdownMenu, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
+  nameWithType.vb: ZeepGUI.LabelDropdownButton(GUIContent, GUIContent, ZeepDropdownMenu, GUILayoutOption(), GUILayoutOption(), GUILayoutOption())
+- uid: ZeepSDK.UI.ZeepGUI.LabelDropdownButton*
+  name: LabelDropdownButton
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_LabelDropdownButton_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.LabelDropdownButton
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.LabelDropdownButton
+  nameWithType: ZeepGUI.LabelDropdownButton
+- uid: ZeepSDK.UI.ZeepGUI.MenuButton(System.String,ZeepSDK.UI.ZeepDropdownMenu@)
+  name: MenuButton(string, out ZeepDropdownMenu)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_MenuButton_System_String_ZeepSDK_UI_ZeepDropdownMenu__
+  commentId: M:ZeepSDK.UI.ZeepGUI.MenuButton(System.String,ZeepSDK.UI.ZeepDropdownMenu@)
+  name.vb: MenuButton(String, ZeepDropdownMenu)
+  fullName: ZeepSDK.UI.ZeepGUI.MenuButton(string, out ZeepSDK.UI.ZeepDropdownMenu)
+  fullName.vb: ZeepSDK.UI.ZeepGUI.MenuButton(String, ZeepSDK.UI.ZeepDropdownMenu)
+  nameWithType: ZeepGUI.MenuButton(string, out ZeepDropdownMenu)
+  nameWithType.vb: ZeepGUI.MenuButton(String, ZeepDropdownMenu)
+- uid: ZeepSDK.UI.ZeepGUI.MenuButton(UnityEngine.GUIContent,ZeepSDK.UI.ZeepDropdownMenu@)
+  name: MenuButton(GUIContent, out ZeepDropdownMenu)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_MenuButton_UnityEngine_GUIContent_ZeepSDK_UI_ZeepDropdownMenu__
+  commentId: M:ZeepSDK.UI.ZeepGUI.MenuButton(UnityEngine.GUIContent,ZeepSDK.UI.ZeepDropdownMenu@)
+  name.vb: MenuButton(GUIContent, ZeepDropdownMenu)
+  fullName: ZeepSDK.UI.ZeepGUI.MenuButton(UnityEngine.GUIContent, out ZeepSDK.UI.ZeepDropdownMenu)
+  fullName.vb: ZeepSDK.UI.ZeepGUI.MenuButton(UnityEngine.GUIContent, ZeepSDK.UI.ZeepDropdownMenu)
+  nameWithType: ZeepGUI.MenuButton(GUIContent, out ZeepDropdownMenu)
+  nameWithType.vb: ZeepGUI.MenuButton(GUIContent, ZeepDropdownMenu)
+- uid: ZeepSDK.UI.ZeepGUI.MenuButton*
+  name: MenuButton
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_MenuButton_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.MenuButton
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.MenuButton
+  nameWithType: ZeepGUI.MenuButton
+- uid: ZeepSDK.UI.ZeepGUI.MenubarWindow(System.Int32,UnityEngine.Rect,System.String,System.Action{System.Int32},UnityEngine.GUI.WindowFunction,System.Action)
+  name: MenubarWindow(int, Rect, string, Action<int>, WindowFunction, Action)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_MenubarWindow_System_Int32_UnityEngine_Rect_System_String_System_Action_System_Int32__UnityEngine_GUI_WindowFunction_System_Action_
+  commentId: M:ZeepSDK.UI.ZeepGUI.MenubarWindow(System.Int32,UnityEngine.Rect,System.String,System.Action{System.Int32},UnityEngine.GUI.WindowFunction,System.Action)
+  name.vb: MenubarWindow(Integer, Rect, String, Action(Of Integer), WindowFunction, Action)
+  fullName: ZeepSDK.UI.ZeepGUI.MenubarWindow(int, UnityEngine.Rect, string, System.Action<int>, UnityEngine.GUI.WindowFunction, System.Action)
+  fullName.vb: ZeepSDK.UI.ZeepGUI.MenubarWindow(Integer, UnityEngine.Rect, String, System.Action(Of Integer), UnityEngine.GUI.WindowFunction, System.Action)
+  nameWithType: ZeepGUI.MenubarWindow(int, Rect, string, Action<int>, GUI.WindowFunction, Action)
+  nameWithType.vb: ZeepGUI.MenubarWindow(Integer, Rect, String, Action(Of Integer), GUI.WindowFunction, Action)
+- uid: ZeepSDK.UI.ZeepGUI.MenubarWindow*
+  name: MenubarWindow
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_MenubarWindow_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.MenubarWindow
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.MenubarWindow
+  nameWithType: ZeepGUI.MenubarWindow
 - uid: ZeepSDK.UI.ZeepGUI.RemoveLastingWindow(ZeepSDK.UI.IZeepWindow)
   name: RemoveLastingWindow(IZeepWindow)
   href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_RemoveLastingWindow_ZeepSDK_UI_IZeepWindow_
@@ -4293,15 +4482,15 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.UI.ZeepGUI.Toggle
   nameWithType: ZeepGUI.Toggle
-- uid: ZeepSDK.UI.ZeepGUI.Window(System.Int32,UnityEngine.Rect,ZeepSDK.UI.ZeepGUI.WindowFunction,System.String)
-  name: Window(int, Rect, WindowFunction, string)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Window_System_Int32_UnityEngine_Rect_ZeepSDK_UI_ZeepGUI_WindowFunction_System_String_
-  commentId: M:ZeepSDK.UI.ZeepGUI.Window(System.Int32,UnityEngine.Rect,ZeepSDK.UI.ZeepGUI.WindowFunction,System.String)
-  name.vb: Window(Integer, Rect, WindowFunction, String)
-  fullName: ZeepSDK.UI.ZeepGUI.Window(int, UnityEngine.Rect, ZeepSDK.UI.ZeepGUI.WindowFunction, string)
-  fullName.vb: ZeepSDK.UI.ZeepGUI.Window(Integer, UnityEngine.Rect, ZeepSDK.UI.ZeepGUI.WindowFunction, String)
-  nameWithType: ZeepGUI.Window(int, Rect, ZeepGUI.WindowFunction, string)
-  nameWithType.vb: ZeepGUI.Window(Integer, Rect, ZeepGUI.WindowFunction, String)
+- uid: ZeepSDK.UI.ZeepGUI.Window(System.Int32,UnityEngine.Rect,System.String,UnityEngine.GUI.WindowFunction,System.Action)
+  name: Window(int, Rect, string, WindowFunction, Action)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Window_System_Int32_UnityEngine_Rect_System_String_UnityEngine_GUI_WindowFunction_System_Action_
+  commentId: M:ZeepSDK.UI.ZeepGUI.Window(System.Int32,UnityEngine.Rect,System.String,UnityEngine.GUI.WindowFunction,System.Action)
+  name.vb: Window(Integer, Rect, String, WindowFunction, Action)
+  fullName: ZeepSDK.UI.ZeepGUI.Window(int, UnityEngine.Rect, string, UnityEngine.GUI.WindowFunction, System.Action)
+  fullName.vb: ZeepSDK.UI.ZeepGUI.Window(Integer, UnityEngine.Rect, String, UnityEngine.GUI.WindowFunction, System.Action)
+  nameWithType: ZeepGUI.Window(int, Rect, string, GUI.WindowFunction, Action)
+  nameWithType.vb: ZeepGUI.Window(Integer, Rect, String, GUI.WindowFunction, Action)
 - uid: ZeepSDK.UI.ZeepGUI.Window*
   name: Window
   href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Window_
@@ -4315,6 +4504,50 @@ references:
   commentId: T:ZeepSDK.UI.ZeepGUI.WindowFunction
   fullName: ZeepSDK.UI.ZeepGUI.WindowFunction
   nameWithType: ZeepGUI.WindowFunction
+- uid: ZeepSDK.UI.ZeepGUI.WindowMenuButton(System.String,ZeepSDK.UI.ZeepDropdownMenu@)
+  name: WindowMenuButton(string, out ZeepDropdownMenu)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_WindowMenuButton_System_String_ZeepSDK_UI_ZeepDropdownMenu__
+  commentId: M:ZeepSDK.UI.ZeepGUI.WindowMenuButton(System.String,ZeepSDK.UI.ZeepDropdownMenu@)
+  name.vb: WindowMenuButton(String, ZeepDropdownMenu)
+  fullName: ZeepSDK.UI.ZeepGUI.WindowMenuButton(string, out ZeepSDK.UI.ZeepDropdownMenu)
+  fullName.vb: ZeepSDK.UI.ZeepGUI.WindowMenuButton(String, ZeepSDK.UI.ZeepDropdownMenu)
+  nameWithType: ZeepGUI.WindowMenuButton(string, out ZeepDropdownMenu)
+  nameWithType.vb: ZeepGUI.WindowMenuButton(String, ZeepDropdownMenu)
+- uid: ZeepSDK.UI.ZeepGUI.WindowMenuButton(UnityEngine.GUIContent,ZeepSDK.UI.ZeepDropdownMenu@)
+  name: WindowMenuButton(GUIContent, out ZeepDropdownMenu)
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_WindowMenuButton_UnityEngine_GUIContent_ZeepSDK_UI_ZeepDropdownMenu__
+  commentId: M:ZeepSDK.UI.ZeepGUI.WindowMenuButton(UnityEngine.GUIContent,ZeepSDK.UI.ZeepDropdownMenu@)
+  name.vb: WindowMenuButton(GUIContent, ZeepDropdownMenu)
+  fullName: ZeepSDK.UI.ZeepGUI.WindowMenuButton(UnityEngine.GUIContent, out ZeepSDK.UI.ZeepDropdownMenu)
+  fullName.vb: ZeepSDK.UI.ZeepGUI.WindowMenuButton(UnityEngine.GUIContent, ZeepSDK.UI.ZeepDropdownMenu)
+  nameWithType: ZeepGUI.WindowMenuButton(GUIContent, out ZeepDropdownMenu)
+  nameWithType.vb: ZeepGUI.WindowMenuButton(GUIContent, ZeepDropdownMenu)
+- uid: ZeepSDK.UI.ZeepGUI.WindowMenuButton*
+  name: WindowMenuButton
+  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_WindowMenuButton_
+  commentId: Overload:ZeepSDK.UI.ZeepGUI.WindowMenuButton
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUI.WindowMenuButton
+  nameWithType: ZeepGUI.WindowMenuButton
+- uid: ZeepSDK.UI.ZeepGUIUtility
+  name: ZeepGUIUtility
+  href: api/ZeepSDK.UI.ZeepGUIUtility.html
+  commentId: T:ZeepSDK.UI.ZeepGUIUtility
+  fullName: ZeepSDK.UI.ZeepGUIUtility
+  nameWithType: ZeepGUIUtility
+- uid: ZeepSDK.UI.ZeepGUIUtility.ConvertToAbsolutePosition(UnityEngine.Rect)
+  name: ConvertToAbsolutePosition(Rect)
+  href: api/ZeepSDK.UI.ZeepGUIUtility.html#ZeepSDK_UI_ZeepGUIUtility_ConvertToAbsolutePosition_UnityEngine_Rect_
+  commentId: M:ZeepSDK.UI.ZeepGUIUtility.ConvertToAbsolutePosition(UnityEngine.Rect)
+  fullName: ZeepSDK.UI.ZeepGUIUtility.ConvertToAbsolutePosition(UnityEngine.Rect)
+  nameWithType: ZeepGUIUtility.ConvertToAbsolutePosition(Rect)
+- uid: ZeepSDK.UI.ZeepGUIUtility.ConvertToAbsolutePosition*
+  name: ConvertToAbsolutePosition
+  href: api/ZeepSDK.UI.ZeepGUIUtility.html#ZeepSDK_UI_ZeepGUIUtility_ConvertToAbsolutePosition_
+  commentId: Overload:ZeepSDK.UI.ZeepGUIUtility.ConvertToAbsolutePosition
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUIUtility.ConvertToAbsolutePosition
+  nameWithType: ZeepGUIUtility.ConvertToAbsolutePosition
 - uid: ZeepSDK.Utilities
   name: ZeepSDK.Utilities
   href: api/ZeepSDK.Utilities.html

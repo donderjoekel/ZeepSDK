@@ -1004,6 +1004,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.IZeepMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.IZeepMenu.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.UI.IZeepWindow.yml",
       "output": {
         ".html": {
@@ -1048,6 +1058,16 @@
       "output": {
         ".html": {
           "relative_path": "api/ZeepSDK.UI.ZeepGUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.ZeepGUIUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.ZeepGUIUtility.html"
         }
       },
       "version": ""
