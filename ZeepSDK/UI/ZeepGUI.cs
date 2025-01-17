@@ -104,6 +104,19 @@ public static class ZeepGUI
             return IntField(value, fieldOptions);
         }
     }
+    
+    public static int IntField(int value, GUIContent content,
+        GUILayoutOption[] labelOptions = null,
+        GUILayoutOption[] fieldOptions = null,
+        GUILayoutOption[] areaOptions = null)
+    {
+        using (new GUILayout.HorizontalScope(areaOptions))
+        {
+            GUILayout.Label(content, labelOptions);
+            GUILayout.Space(8);
+            return IntField(value, fieldOptions);
+        }
+    }
 
     public static int IntField(string value, params GUILayoutOption[] options)
     {
@@ -123,6 +136,19 @@ public static class ZeepGUI
         if (int.TryParse(value, out int result))
         {
             return IntField(result, label, labelOptions, fieldOptions, areaOptions);
+        }
+
+        throw new ArgumentException("Value is not a valid integer", nameof(value));
+    }
+    
+    public static int IntField(string value, GUIContent content,
+        GUILayoutOption[] labelOptions = null,
+        GUILayoutOption[] fieldOptions = null,
+        GUILayoutOption[] areaOptions = null)
+    {
+        if (int.TryParse(value, out int result))
+        {
+            return IntField(result, content, labelOptions, fieldOptions, areaOptions);
         }
 
         throw new ArgumentException("Value is not a valid integer", nameof(value));
@@ -153,6 +179,19 @@ public static class ZeepGUI
         }
     }
 
+    public static float FloatField(float value, GUIContent content,
+        GUILayoutOption[] labelOptions = null,
+        GUILayoutOption[] fieldOptions = null,
+        GUILayoutOption[] areaOptions = null)
+    {
+        using (new GUILayout.HorizontalScope(areaOptions))
+        {
+            GUILayout.Label(content, labelOptions);
+            GUILayout.Space(8);
+            return FloatField(value, fieldOptions);
+        }
+    }
+    
     public static float FloatField(string value, params GUILayoutOption[] options)
     {
         if (float.TryParse(value, out float result))
@@ -171,6 +210,19 @@ public static class ZeepGUI
         if (float.TryParse(value, out float result))
         {
             return FloatField(result, label, labelOptions, fieldOptions, areaOptions);
+        }
+
+        throw new ArgumentException("Value is not a valid float", nameof(value));
+    }
+    
+    public static float FloatField(string value, GUIContent content,
+        GUILayoutOption[] labelOptions = null,
+        GUILayoutOption[] fieldOptions = null,
+        GUILayoutOption[] areaOptions = null)
+    {
+        if (float.TryParse(value, out float result))
+        {
+            return FloatField(result, content, labelOptions, fieldOptions, areaOptions);
         }
 
         throw new ArgumentException("Value is not a valid float", nameof(value));
@@ -200,6 +252,19 @@ public static class ZeepGUI
             return DoubleField(value, fieldOptions);
         }
     }
+    
+    public static double DoubleField(double value, GUIContent content,
+        GUILayoutOption[] labelOptions = null,
+        GUILayoutOption[] fieldOptions = null,
+        GUILayoutOption[] areaOptions = null)
+    {
+        using (new GUILayout.HorizontalScope(areaOptions))
+        {
+            GUILayout.Label(content, labelOptions);
+            GUILayout.Space(8);
+            return DoubleField(value, fieldOptions);
+        }
+    }
 
     public static double DoubleField(string value, params GUILayoutOption[] options)
     {
@@ -223,6 +288,19 @@ public static class ZeepGUI
 
         throw new ArgumentException("Value is not a valid double", nameof(value));
     }
+    
+    public static double DoubleField(string value, GUIContent content,
+        GUILayoutOption[] labelOptions = null,
+        GUILayoutOption[] fieldOptions = null,
+        GUILayoutOption[] areaOptions = null)
+    {
+        if (double.TryParse(value, out double result))
+        {
+            return DoubleField(result, content, labelOptions, fieldOptions, areaOptions);
+        }
+
+        throw new ArgumentException("Value is not a valid double", nameof(value));
+    }
 
     public static bool Toggle(bool value, string label,
         GUILayoutOption[] labelOptions = null,
@@ -232,6 +310,19 @@ public static class ZeepGUI
         using (new GUILayout.HorizontalScope(areaOptions))
         {
             GUILayout.Label(label, labelOptions);
+            GUILayout.Space(8);
+            return GUILayout.Toggle(value, GUIContent.none, fieldOptions);
+        }
+    }
+    
+    public static bool Toggle(bool value, GUIContent content,
+        GUILayoutOption[] labelOptions = null,
+        GUILayoutOption[] fieldOptions = null,
+        GUILayoutOption[] areaOptions = null)
+    {
+        using (new GUILayout.HorizontalScope(areaOptions))
+        {
+            GUILayout.Label(content, labelOptions);
             GUILayout.Space(8);
             return GUILayout.Toggle(value, GUIContent.none, fieldOptions);
         }
@@ -249,6 +340,19 @@ public static class ZeepGUI
             return GUILayout.TextField(value, fieldOptions);
         }
     }
+    
+    public static string TextField(string value, GUIContent content,
+        GUILayoutOption[] labelOptions = null,
+        GUILayoutOption[] fieldOptions = null,
+        GUILayoutOption[] areaOptions = null)
+    {
+        using (new GUILayout.HorizontalScope(areaOptions))
+        {
+            GUILayout.Label(content, labelOptions);
+            GUILayout.Space(8);
+            return GUILayout.TextField(value, fieldOptions);
+        }
+    }
 
     public static bool LabelButton(string label, string value,
         GUILayoutOption[] labelOptions = null,
@@ -256,6 +360,14 @@ public static class ZeepGUI
         GUILayoutOption[] areaOptions = null)
     {
         return LabelButton(new GUIContent(label), new GUIContent(value), labelOptions, fieldOptions, areaOptions);
+    }
+    
+    public static bool LabelButton(string label, GUIContent content,
+        GUILayoutOption[] labelOptions = null,
+        GUILayoutOption[] fieldOptions = null,
+        GUILayoutOption[] areaOptions = null)
+    {
+        return LabelButton(new GUIContent(label), content, labelOptions, fieldOptions, areaOptions);
     }
 
     public static bool LabelButton(GUIContent label, GUIContent content,
@@ -281,6 +393,19 @@ public static class ZeepGUI
             GUILayout.Label(label, labelOptions);
             GUILayout.Space(8);
             return DropdownButton(text, out menu, fieldOptions);
+        }
+    }
+    
+    public static bool LabelDropdownButton(string label, GUIContent content, out ZeepDropdownMenu menu,
+        GUILayoutOption[] labelOptions = null,
+        GUILayoutOption[] fieldOptions = null,
+        GUILayoutOption[] areaOptions = null)
+    {
+        using (new GUILayout.HorizontalScope(areaOptions))
+        {
+            GUILayout.Label(label, labelOptions);
+            GUILayout.Space(8);
+            return DropdownButton(content, out menu, fieldOptions);
         }
     }
 
