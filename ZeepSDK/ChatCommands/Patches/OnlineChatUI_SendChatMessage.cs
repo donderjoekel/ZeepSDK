@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using BepInEx.Logging;
 using HarmonyLib;
@@ -19,10 +20,15 @@ internal class OnlineChatUI_SendChatMessage
         {
             bool executedCustomCommand = false;
 
-            foreach (ILocalChatCommand localChatCommand in ChatCommandRegistry.LocalChatCommands)
+            List<ILocalChatCommand> matchingCommands = ChatCommandRegistry.LocalChatCommands
+                .Where(x => ChatCommandUtilities.MatchesCommand(message, x))
+                .OrderByDescending(x=>x.Command.Length)
+                .ToList();
+
+            if (matchingCommands.Count > 0)
             {
-                if (ProcessLocalChatCommand(localChatCommand, message))
-                    executedCustomCommand = true;
+                executedCustomCommand = true;
+                ProcessLocalChatCommand(matchingCommands.First(), message);
             }
 
             return !executedCustomCommand;
@@ -33,15 +39,11 @@ internal class OnlineChatUI_SendChatMessage
             return true;
         }
     }
+    
+    
 
     private static bool ProcessLocalChatCommand(ILocalChatCommand localChatCommand, string message)
     {
-        if (localChatCommand == null)
-            return false;
-
-        if (!ChatCommandUtilities.MatchesCommand(message, localChatCommand))
-            return false;
-
         string arguments = ChatCommandUtilities.GetArguments(message, localChatCommand);
 
         try

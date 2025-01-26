@@ -6,6 +6,7 @@ internal static class ChatCommandUtilities
 {
     public static bool MatchesCommand(string input, IChatCommand chatCommand)
     {
+        if (chatCommand == null) return false;
         string escapedPrefix = Regex.Escape(chatCommand.Prefix);
         string escapedCommand = Regex.Escape(chatCommand.Command);
         string pattern = $"^{escapedPrefix}{escapedCommand}(\\W|$).*";
