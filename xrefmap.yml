@@ -70,12 +70,24 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Chat.ChatApi.SendMessage
   nameWithType: ChatApi.SendMessage
+- uid: ZeepSDK.Chat.ChatApi.ServerMessageReceived
+  name: ServerMessageReceived
+  href: api/ZeepSDK.Chat.ChatApi.html#ZeepSDK_Chat_ChatApi_ServerMessageReceived
+  commentId: E:ZeepSDK.Chat.ChatApi.ServerMessageReceived
+  fullName: ZeepSDK.Chat.ChatApi.ServerMessageReceived
+  nameWithType: ChatApi.ServerMessageReceived
 - uid: ZeepSDK.Chat.ChatMessageReceivedDelegate
   name: ChatMessageReceivedDelegate
   href: api/ZeepSDK.Chat.ChatMessageReceivedDelegate.html
   commentId: T:ZeepSDK.Chat.ChatMessageReceivedDelegate
   fullName: ZeepSDK.Chat.ChatMessageReceivedDelegate
   nameWithType: ChatMessageReceivedDelegate
+- uid: ZeepSDK.Chat.ServerMessageReceivedDelegate
+  name: ServerMessageReceivedDelegate
+  href: api/ZeepSDK.Chat.ServerMessageReceivedDelegate.html
+  commentId: T:ZeepSDK.Chat.ServerMessageReceivedDelegate
+  fullName: ZeepSDK.Chat.ServerMessageReceivedDelegate
+  nameWithType: ServerMessageReceivedDelegate
 - uid: ZeepSDK.ChatCommands
   name: ZeepSDK.ChatCommands
   href: api/ZeepSDK.ChatCommands.html
