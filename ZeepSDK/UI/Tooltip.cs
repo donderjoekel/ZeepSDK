@@ -7,7 +7,7 @@ namespace ZeepSDK.UI;
 
 internal class Tooltip : MonoBehaviour
 {
-    private const float FadeDuration = 0.1f;
+    private const float FadeDuration = 0.05f;
     private const float Opacity = 0.9f;
 
     private readonly Vector3[] _canvasCorners = new Vector3[4];
@@ -136,7 +136,7 @@ internal class Tooltip : MonoBehaviour
 
         while (elapsedTime < duration)
         {
-            elapsedTime += Time.deltaTime;
+            elapsedTime += Time.unscaledDeltaTime;
             _canvasGroup.alpha = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / duration);
             yield return null;
         }

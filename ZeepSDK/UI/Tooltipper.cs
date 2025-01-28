@@ -5,12 +5,12 @@ namespace ZeepSDK.UI;
 
 internal class Tooltipper : MonoBehaviour, IPointerEnterHandler, IPointerMoveHandler, IPointerExitHandler
 {
-    private const float TooltipDelay = 0.5f;
+    private const float TooltipDelay = 0.05f;
 
     private string _text;
     private bool _isOver;
     private bool _shownTooltip;
-    private float _timeUntilTooltip = 0.5f;
+    private float _timeUntilTooltip = TooltipDelay;
 
     public void Initialize(string text)
     {
@@ -30,7 +30,7 @@ internal class Tooltipper : MonoBehaviour, IPointerEnterHandler, IPointerMoveHan
         if (!_isOver || _shownTooltip)
             return;
 
-        _timeUntilTooltip -= Time.deltaTime;
+        _timeUntilTooltip -= Time.unscaledDeltaTime;
         if (_timeUntilTooltip <= 0)
         {
             _shownTooltip = true;
