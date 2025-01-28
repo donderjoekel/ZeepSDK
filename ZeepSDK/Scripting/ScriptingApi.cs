@@ -26,6 +26,7 @@ public static class ScriptingApi
     {
         ChatCommandApi.RegisterLocalChatCommand<ZuaLoadCommand>();
         ChatCommandApi.RegisterLocalChatCommand<ZuaUnloadCommand>();
+        ChatCommandApi.RegisterLocalChatCommand<ZuaReloadCommand>();
         
         Script.WarmUp();
         Script.GlobalOptions.CustomConverters.SetClrToScriptCustomConversion<ulong>(
