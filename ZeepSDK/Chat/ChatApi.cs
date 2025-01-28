@@ -26,6 +26,12 @@ public static class ChatApi
     [GenerateEvent]
     public static event ChatMessageReceivedDelegate ChatMessageReceived;
 
+    /// <summary>
+    /// Event that is fired when a chat message that has been sent by the server is received
+    /// </summary>
+    [GenerateEvent]
+    public static event ServerMessageReceivedDelegate ServerMessageReceived;
+
     internal static void Initialize(GameObject gameObject)
     {
         ZeepkistNetwork.ChatMessageReceived += OnChatMessageReceived;
@@ -38,10 +44,16 @@ public static class ChatApi
             if (zeepkistChatMessage == null)
                 return;
             if (zeepkistChatMessage.Player == null)
-                return;
-            ChatMessageReceived?.Invoke(zeepkistChatMessage.Player.SteamID,
-                zeepkistChatMessage.Player.GetTaggedUsername(),
-                zeepkistChatMessage.Message);
+            {
+                ServerMessageReceived?.Invoke(zeepkistChatMessage.Message);
+            }
+            else
+            {
+                ChatMessageReceived?.Invoke(zeepkistChatMessage.Player.SteamID,
+                    zeepkistChatMessage.Player.GetTaggedUsername(),
+                    zeepkistChatMessage.Message);    
+            }
+            
         }
         catch (Exception e)
         {
