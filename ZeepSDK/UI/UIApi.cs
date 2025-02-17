@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using BepInEx.Logging;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 using ZeepSDK.Extensions;
@@ -15,6 +16,7 @@ namespace ZeepSDK.UI;
 /// <summary>
 /// An API related to the UI of the game
 /// </summary>
+[PublicAPI]
 public static class UIApi
 {
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(UIApi));
