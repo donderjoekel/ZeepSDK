@@ -5,7 +5,7 @@
         <AssemblyName>ZeepSDK</AssemblyName>
         <Description>ZeepSDK</Description>
         <Authors>TNRD</Authors>
-        <Version>1.40.2</Version>
+        <Version>1.41.0</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
         <Title>ZeepSDK</Title>
@@ -27,19 +27,19 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="..\README.md" Pack="true" PackagePath="\"/>
-        <ProjectReference Include="..\ZeepSDK.ZuaGenerator\ZeepSDK.ZuaGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+        <None Include="..\README.md" Pack="true" PackagePath="\" />
+        <ProjectReference Include="..\ZeepSDK.ZuaGenerator\ZeepSDK.ZuaGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="BepInEx.Analyzers" Version="1.0.8" PrivateAssets="all"/>
-        <PackageReference Include="BepInEx.Core" Version="5.0.0"/>
-        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0"/>
+        <PackageReference Include="BepInEx.Analyzers" Version="1.0.8" PrivateAssets="all" />
+        <PackageReference Include="BepInEx.Core" Version="5.4.21" />
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0" />
         <PackageReference Include="MoonSharp" Version="2.0.0" />
-        <PackageReference Include="Zeepkist.GameLibs" Version="16.69.1700" />
+        <PackageReference Include="Zeepkist.GameLibs" Version="16.73.1719-uifix.3" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
-        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all"/>
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
     </ItemGroup>
 </Project>

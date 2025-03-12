@@ -2,38 +2,107 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
-using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 using ZeepSDK.Controls;
 using ZeepSDK.UI.Patches;
 using ZeepSDK.Utilities;
 using ZeepSDK.Utilities.Override;
+using Cursor = UnityEngine.Cursor;
+using Screen = UnityEngine.Device.Screen;
 
 namespace ZeepSDK.UI;
 
-internal class ZeepToolbar : IDisposable
+internal class ZeepToolbar : ZeepGUIBehaviour
 {
-    private class ZeepToolbarItem
+    private class ToolbarButtonRoot
     {
-        public GUIContent Content;
-        public Action Action;
-        public readonly List<ZeepToolbarItem> Children = new();
-        public int Priority;
+        private readonly Dictionary<int, List<ToolbarButtonChild>> _children;
+
+        public string Title { get; private set; }
+        public Action OnClick { get; private set; }
+
+        public IEnumerable<ToolbarButtonChild> Children
+        {
+            get
+            {
+                foreach ((int _, List<ToolbarButtonChild> children) in _children.OrderBy(x=>x.Key))
+                {
+                    foreach (ToolbarButtonChild child in children)
+                    {
+                        yield return child;
+                    }
+                }
+            }
+        }
+
+        public ToolbarButtonRoot(string title, Action onClick)
+        {
+            Title = title;
+            OnClick = onClick;
+            _children = new Dictionary<int, List<ToolbarButtonChild>>();
+        }
+
+        public void AddChild(string title, Action onClick, int priority)
+        {
+            if (OnClick != null)
+                return;
+
+            if (!_children.TryGetValue(priority, out List<ToolbarButtonChild> children))
+                _children.Add(priority, children = new List<ToolbarButtonChild>());
+
+            children.Add(new ToolbarButtonChild(title, onClick));
+            children.Sort((x, y) => string.Compare(x.Title, y.Title, StringComparison.Ordinal));
+        }
     }
 
-    private readonly Dictionary<string, ZeepToolbarItem> _toolbarItems = new();
-    private readonly DisposableBag _disposableBag;
-    private Rect _toolbarRect = new Rect(0, -32, 0, 0);
-    private float _toolbarVelocity;
-    private bool _hasMenu;
-    private float _hideDelay;
-    private bool _visibleByKey;
+    private class ToolbarButtonChild
+    {
+        public string Title { get; private set; }
+        public Action OnClick { get; private set; }
 
+        public ToolbarButtonChild(string title, Action onClick)
+        {
+            Title = title;
+            OnClick = onClick;
+        }
+    }
+
+    private readonly Dictionary<string, ToolbarButtonRoot> _toolbarRoots = new();
+    private readonly DisposableBag _disposableBag;
     private readonly OverrideStack<bool> _cursorVisible = new(() => Cursor.visible, x =>
     {
         Cursor.visible = x;
         Cursor.lockState = x ? CursorLockMode.None : CursorLockMode.Locked;
     }, true);
+
+    private VisualElement _toolbar;
+    private bool _mouseOver;
+    private bool _inMenu;
+    private bool _visibleByKey;
+
+    private bool MouseOver
+    {
+        set
+        {
+            if (value == _mouseOver)
+                return;
+
+            _mouseOver = value;
+            UpdateStyle();
+        }
+    }
+
+    private bool InMenu
+    {
+        set
+        {
+            if (value == _inMenu)
+                return;
+
+            _inMenu = value;
+            UpdateStyle();
+        }
+    }
 
     public ZeepToolbar()
     {
@@ -42,10 +111,9 @@ internal class ZeepToolbar : IDisposable
         CursorManager_SetCursorEnabled.Invoked += SetCursorEnabledInvoked;
     }
 
-    public void Dispose()
+    protected override bool BlocksInput()
     {
-        _disposableBag.Dispose();
-        CursorManager_SetCursorEnabled.Invoked -= SetCursorEnabledInvoked;
+        return false;
     }
 
     private void SetCursorEnabledInvoked()
@@ -55,129 +123,104 @@ internal class ZeepToolbar : IDisposable
 
     private bool InputLockCondition()
     {
-        return (ZeepGUI.MousePosition.y < 32 && Cursor.visible) || _visibleByKey;
+        return ((_mouseOver || _inMenu) && Cursor.visible) || _visibleByKey;
+    }
+    
+    public void AddToolbarButtonRoot(string title, Action onClick = null)
+    {
+        if (_toolbarRoots.ContainsKey(title))
+            return; // Handle
+
+        ToolbarButtonRoot root = new(title, onClick);
+        _toolbarRoots.Add(title, root);
     }
 
-    public void AddItem(GUIContent content, Action action, int priority)
+    public void AddToolbarButtonChild(string rootTitle, string title, Action onClick, int priority = 0)
     {
-        if (string.IsNullOrWhiteSpace(content.text)) throw new Exception("Content cannot be empty");
-        AddItemToDictionary(content.text, content, action, priority);
+        if (!_toolbarRoots.TryGetValue(rootTitle, out ToolbarButtonRoot root))
+            return; // Handle
+
+        root.AddChild(title, onClick, priority);
     }
 
-    public void AddChild(string parent, GUIContent content, Action action, int priority)
+    protected override void BuildUi()
     {
-        if (string.IsNullOrWhiteSpace(parent)) throw new Exception("Parent cannot be empty");
-        if (string.IsNullOrWhiteSpace(content.text)) throw new Exception("Content cannot be empty");
-        if (!_toolbarItems.TryGetValue(parent, out ZeepToolbarItem parentItem))
-            throw new Exception("Parent does not exist");
-        parentItem.Children.Add(new ZeepToolbarItem
+        using (new ZeepGUI.ToolbarScope(ZeepGUI))
         {
-            Content = content,
-            Action = action,
-            Priority = priority
-        });
-        parentItem.Children.Sort((lhs, rhs) => lhs.Priority.CompareTo(rhs.Priority));
-    }
+            _toolbar = ZeepGUI.GetLastElement();
 
-    private ZeepToolbarItem AddItemToDictionary(string key, GUIContent content, Action action, int priority)
-    {
-        if (_toolbarItems.ContainsKey(key))
-            throw new Exception("Key already exists");
-        ZeepToolbarItem item = new()
-        {
-            Content = content,
-            Action = action,
-            Priority = priority
-        };
-        _toolbarItems.Add(key, item);
-        return item;
-    }
-
-    public void OnGUI()
-    {
-        _toolbarRect.width = Screen.width;
-        _toolbarRect.height = Screen.height;
-
-        Rect mouseRect = new(_toolbarRect)
-        {
-            y = 0,
-            height = 32
-        };
-        Vector2 mousePosition = Event.current.mousePosition;
-        bool hasMouse = mouseRect.Contains(mousePosition);
-        _toolbarRect.y = Mathf.SmoothDamp(
-            _toolbarRect.y,
-            hasMouse || _hasMenu || _hideDelay > 0 ? 0 : -32,
-            ref _toolbarVelocity,
-            0.25f, 
-            Mathf.Infinity,
-            Time.unscaledDeltaTime);
-
-        if (!hasMouse && !_hasMenu)
-            _hideDelay -= Time.unscaledDeltaTime;
-        else
-            _hideDelay = 1f;
-
-        if (_visibleByKey)
-        {
-            _toolbarRect.y = 0;
-        }
-
-        GUILayout.BeginArea(_toolbarRect);
-        GUILayout.BeginHorizontal("toolbar", GUILayout.ExpandWidth(true));
-
-        IOrderedEnumerable<ZeepToolbarItem> items = _toolbarItems
-            .Select(x => x.Value)
-            .OrderBy(x => x.Priority);
-
-        foreach (ZeepToolbarItem item in items)
-        {
-            DrawItem(item);
-        }
-
-        GUILayout.FlexibleSpace();
-        GUILayout.EndHorizontal();
-        GUILayout.EndArea();
-    }
-
-    public void PostOnGUI()
-    {
-        if (_hasMenu && !ZeepDropdownMenu.HasDropdown)
-        {
-            _hasMenu = false;
-        }
-    }
-
-    private void DrawItem(ZeepToolbarItem item)
-    {
-        if (item.Children.Count > 0)
-        {
-            if (ZeepGUI.MenuButton(item.Content, out ZeepDropdownMenu menu))
+            foreach ((string _, ToolbarButtonRoot root) in _toolbarRoots)
             {
-                foreach (ZeepToolbarItem child in item.Children)
+                if (root.OnClick != null)
                 {
-                    menu.AddItem(child.Content, ()=>
-                    {
-                        _hasMenu = false;
-                        child.Action();
-                    });
+                    ZeepGUI.Button(root.Title, () => root.OnClick());
                 }
+                else
+                {
+                    ZeepGUI.DropdownButton(root.Title, menu =>
+                    {
+                        InMenu = true;
 
-                _hasMenu = true;
-                menu.Show();
-            }
-        }
-        else
-        {
-            if (GUILayout.Button(item.Content, "toolbar button"))
-            {
-                item.Action();
+                        foreach (ToolbarButtonChild child in root.Children)
+                        {
+                            menu.AddItem(child.Title, false, () =>
+                            {
+                                InMenu = false;
+                                child.OnClick();
+                            });
+                        }
+                    });
+
+                    VisualElement dropdown = ZeepGUI.GetLastElement();
+                    dropdown.elementPanel.hierarchyChanged += OnHierarchyChanged;
+
+                    void OnHierarchyChanged(VisualElement element, HierarchyChangeType type)
+                    {
+                        if (type != HierarchyChangeType.Add)
+                            return;
+
+                        if (!InputLockCondition())
+                            return;
+
+                        VisualElement dropdownElement =
+                            element?.panel?.visualTree?.Q(className: GenericDropdownMenu.ussClassName);
+
+                        if (dropdownElement == null) return;
+
+                        dropdownElement.RegisterCallback<DetachFromPanelEvent, ZeepToolbar>((_, args) =>
+                        {
+                            args.InMenu = false;
+                            
+                        }, this);
+                    }
+                }
             }
         }
     }
 
-    public void ToggleVisibleByKey()
+    private void UpdateStyle()
     {
-        _visibleByKey = !_visibleByKey;
+        if (_mouseOver || _inMenu || _visibleByKey)
+        {
+            _toolbar.style.top = 0;
+        }
+        else
+        {
+            _toolbar.style.top = -_toolbar.resolvedStyle.height;
+        }
+    }
+
+    private void Update()
+    {
+        if (_toolbar == null) return;
+
+        if (Input.GetKeyUp(Plugin.Instance.ToggleMenuBarKey.Value))
+        {
+            _visibleByKey = !_visibleByKey;
+            UpdateStyle();
+        }
+
+        float mousePositionY = Screen.height - Input.mousePosition.y;
+        MouseOver = mousePositionY <= _toolbar.resolvedStyle.height;
     }
 }
