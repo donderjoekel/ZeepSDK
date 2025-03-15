@@ -1,5 +1,8 @@
 ﻿namespace ZeepSDK.UI.Elements;
 
+/// <summary>
+/// A text field that only accepts double
+/// </summary>
 public class DoubleField : NumericInputBaseField<double>
 {
     public DoubleField()

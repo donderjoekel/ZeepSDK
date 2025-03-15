@@ -1,5 +1,8 @@
 ﻿namespace ZeepSDK.UI.Elements
 {
+    /// <summary>
+    /// A text field that only accepts int
+    /// </summary>
     public class IntField : NumericInputBaseField<int>
     {
         public IntField()

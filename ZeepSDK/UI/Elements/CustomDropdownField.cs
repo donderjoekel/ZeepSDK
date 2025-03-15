@@ -4,6 +4,10 @@ using UnityEngine.UIElements;
 
 namespace ZeepSDK.UI.Elements
 {
+    
+    /// <summary>
+    /// A dropdown field with a specific generic type
+    /// </summary>
     public class CustomDropdownField<TItem> : DropdownField
     {
         private readonly List<TItem> _choices;

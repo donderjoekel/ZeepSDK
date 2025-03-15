@@ -1,5 +1,8 @@
 ﻿namespace ZeepSDK.UI.Elements
 {
+    /// <summary>
+    /// A text field that only accepts float
+    /// </summary>
     public class FloatField : NumericInputBaseField<float>
     {
         public FloatField()

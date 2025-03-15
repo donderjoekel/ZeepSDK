@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UIElements;
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 namespace ZeepSDK.UI.Elements
 {
+    /// <summary>
+    /// Reimplementation of TextField but then for numbers
+    /// </summary>
     public abstract class NumericInputBaseField<TNumber> : TextInputBaseField<TNumber>
     {
         public NumericInputBaseField()

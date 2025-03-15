@@ -8,9 +8,15 @@ using FloatField = ZeepSDK.UI.Elements.FloatField;
 
 namespace ZeepSDK.UI
 {
+    /// <summary>
+    /// A class that provides all kinds of gui elements
+    /// </summary>
     [PublicAPI]
     public partial class ZeepGUI
     {
+        /// <summary>
+        /// The style to apply to the control
+        /// </summary>
         public enum StyleMode
         {
             Regular,
@@ -34,44 +40,94 @@ namespace ZeepSDK.UI
             _stack.Push(_root);
         }
 
+        /// <summary>
+        /// The root visual element to add items to
+        /// </summary>
         public VisualElement Root => _root;
 
+        /// <summary>
+        /// Returns the last element from the stack
+        /// </summary>
+        /// <returns></returns>
         public VisualElement GetLastElement()
         {
             return _stack.Peek();
         }
 
-        public INerdScope Horizontal(ConfigureElementHandler onConfigureElement = null,
+        /// <summary>
+        /// Creates a scope that enforces horizontal positioning if its children
+        /// </summary>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <returns></returns>
+        public IZeepScope Horizontal(ConfigureElementHandler onConfigureElement = null,
             ConfigureStyleHandler onConfigureStyle = null)
         {
             return new HorizontalScope(this, onConfigureElement, onConfigureStyle);
         }
 
-        public INerdScope Vertical(ConfigureElementHandler onConfigureElement = null,
+        /// <summary>
+        /// Creates a scope that enforces vertical positioning if its children
+        /// </summary>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <returns></returns>
+        public IZeepScope Vertical(ConfigureElementHandler onConfigureElement = null,
             ConfigureStyleHandler onConfigureStyle = null)
         {
             return new VerticalScope(this, onConfigureElement, onConfigureStyle);
         }
 
-        public INerdScope Scroll(ScrollValueUpdatedHandler onScrollValueUpdated = null,
+        /// <summary>
+        /// Creates a scope that wraps its children in a (vertically) scrollable view
+        /// </summary>
+        /// <param name="onScrollValueUpdated"></param>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <returns></returns>
+        public IZeepScope Scroll(ScrollValueUpdatedHandler onScrollValueUpdated = null,
             ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)
         {
             return Scroll(Vector2.zero, onScrollValueUpdated, onConfigureElement, onConfigureStyle);
         }
 
-        public INerdScope Scroll(Vector2 scrollOffset, ScrollValueUpdatedHandler onScrollValueUpdated = null,
+        /// <summary>
+        /// Creates a scope that wraps its children in a (vertically) scrollable view
+        /// </summary>
+        /// <param name="scrollOffset"></param>
+        /// <param name="onScrollValueUpdated"></param>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <returns></returns>
+        public IZeepScope Scroll(Vector2 scrollOffset, ScrollValueUpdatedHandler onScrollValueUpdated = null,
             ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)
         {
             return new ScrollScope(this, scrollOffset, onScrollValueUpdated, onConfigureElement, onConfigureStyle);
         }
 
-        public INerdScope Container(ConfigureElementHandler onConfigureElement = null,
+        /// <summary>
+        /// Creates a scope that wraps its children
+        /// </summary>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <returns></returns>
+        public IZeepScope Container(ConfigureElementHandler onConfigureElement = null,
             ConfigureStyleHandler onConfigureStyle = null)
         {
             return new ContainerScope(this, onConfigureElement, onConfigureStyle);
         }
 
-        public INerdScope Window(string title,
+        /// <summary>
+        /// Creates a scope that wraps its children in the style of a window. The recommended approach is to make a class that inherits from <see cref="ZeepGUIWindow"/>
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="initialPosition"></param>
+        /// <param name="onPositionUpdated"></param>
+        /// <param name="onClose"></param>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <returns></returns>
+        public IZeepScope Window(string title,
             Rect initialPosition,
             WindowPositionUpdatedHandler onPositionUpdated,
             WindowClosedHandler onClose,
@@ -87,6 +143,16 @@ namespace ZeepSDK.UI
                 onConfigureStyle);
         }
 
+        /// <summary>
+        /// Creates a button control
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="onClick"></param>
+        /// <param name="tooltip"></param>
+        /// <param name="styleMode"></param>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <returns></returns>
         public Button Button(string text,
             ButtonClickHandler onClick,
             string tooltip = "",
@@ -111,6 +177,15 @@ namespace ZeepSDK.UI
             return element;
         }
 
+        /// <summary>
+        /// Creates a label control
+        /// </summary>
+        /// <param name="label"></param>
+        /// <param name="tooltip"></param>
+        /// <param name="styleMode"></param>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <returns></returns>
         public Label Label(string label,
             string tooltip = "",
             StyleMode styleMode = StyleMode.Regular,
@@ -131,6 +206,17 @@ namespace ZeepSDK.UI
             return element;
         }
 
+        /// <summary>
+        /// Creates a toggle control
+        /// </summary>
+        /// <param name="label"></param>
+        /// <param name="value"></param>
+        /// <param name="onValueUpdated"></param>
+        /// <param name="tooltip"></param>
+        /// <param name="styleMode"></param>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <returns></returns>
         public Toggle Toggle(string label,
             bool value,
             ToggleValueUpdatedHandler onValueUpdated,
@@ -157,6 +243,17 @@ namespace ZeepSDK.UI
             return element;
         }
 
+        /// <summary>
+        /// Creates a textfield control
+        /// </summary>
+        /// <param name="label"></param>
+        /// <param name="text"></param>
+        /// <param name="onValueUpdated"></param>
+        /// <param name="tooltip"></param>
+        /// <param name="styleMode"></param>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <returns></returns>
         public TextField TextField(string label,
             string text,
             TextFieldValueUpdatedHandler onValueUpdated,
@@ -184,6 +281,17 @@ namespace ZeepSDK.UI
             return element;
         }
 
+        /// <summary>
+        /// Creates an intfield control
+        /// </summary>
+        /// <param name="label"></param>
+        /// <param name="value"></param>
+        /// <param name="onValueUpdated"></param>
+        /// <param name="tooltip"></param>
+        /// <param name="styleMode"></param>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <returns></returns>
         public IntField IntField(string label,
             int value,
             IntFieldValueUpdatedHandler onValueUpdated,
@@ -210,6 +318,17 @@ namespace ZeepSDK.UI
             return element;
         }
 
+        /// <summary>
+        /// Creates a floatfield control
+        /// </summary>
+        /// <param name="label"></param>
+        /// <param name="value"></param>
+        /// <param name="onValueUpdated"></param>
+        /// <param name="tooltip"></param>
+        /// <param name="styleMode"></param>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <returns></returns>
         public FloatField FloatField(string label,
             float value,
             FloatFieldValueUpdatedHandler onValueUpdated,
@@ -236,6 +355,17 @@ namespace ZeepSDK.UI
             return element;
         }
 
+        /// <summary>
+        /// Creates a doublefield control
+        /// </summary>
+        /// <param name="label"></param>
+        /// <param name="value"></param>
+        /// <param name="onValueUpdated"></param>
+        /// <param name="tooltip"></param>
+        /// <param name="styleMode"></param>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <returns></returns>
         public DoubleField DoubleField(string label,
             double value,
             DoubleFieldValueUpdatedHandler onValueUpdated,
@@ -262,6 +392,20 @@ namespace ZeepSDK.UI
             return element;
         }
 
+        /// <summary>
+        /// Creates a generic typed dropdown control
+        /// </summary>
+        /// <param name="label"></param>
+        /// <param name="choices"></param>
+        /// <param name="initialChoice"></param>
+        /// <param name="onFormat"></param>
+        /// <param name="onValueUpdated"></param>
+        /// <param name="tooltip"></param>
+        /// <param name="styleMode"></param>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public CustomDropdownField<T> Dropdown<T>(string label,
             IEnumerable<T> choices,
             T initialChoice,
@@ -289,6 +433,16 @@ namespace ZeepSDK.UI
             return element;
         }
 
+        /// <summary>
+        /// Creates a button that when clicked will show a dropdown menu
+        /// </summary>
+        /// <param name="label"></param>
+        /// <param name="onBuildDropdownMenu"></param>
+        /// <param name="tooltip"></param>
+        /// <param name="styleMode"></param>
+        /// <param name="onConfigureElement"></param>
+        /// <param name="onConfigureStyle"></param>
+        /// <returns></returns>
         public Button DropdownButton(string label,
             BuildDropdownMenuHandler onBuildDropdownMenu,
             string tooltip = "",

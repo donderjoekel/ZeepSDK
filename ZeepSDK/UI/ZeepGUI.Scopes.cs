@@ -7,11 +7,14 @@ namespace ZeepSDK.UI
 {
     public partial class ZeepGUI
     {
-        public interface INerdScope : IDisposable
+        /// <summary>
+        /// A scope that can be used to contain controls
+        /// </summary>
+        public interface IZeepScope : IDisposable
         {
         }
 
-        internal readonly struct VerticalScope : INerdScope
+        internal readonly struct VerticalScope : IZeepScope
         {
             private readonly ZeepGUI _zeepGUI;
 
@@ -37,7 +40,7 @@ namespace ZeepSDK.UI
             }
         }
 
-        internal readonly struct HorizontalScope : INerdScope
+        internal readonly struct HorizontalScope : IZeepScope
         {
             private readonly ZeepGUI _zeepGUI;
 
@@ -63,7 +66,7 @@ namespace ZeepSDK.UI
             }
         }
 
-        internal readonly struct ScrollScope : INerdScope
+        internal readonly struct ScrollScope : IZeepScope
         {
             private readonly ZeepGUI _zeepGUI;
 
@@ -98,7 +101,7 @@ namespace ZeepSDK.UI
             }
         }
 
-        internal readonly struct WindowScope : INerdScope
+        internal readonly struct WindowScope : IZeepScope
         {
             private readonly ZeepGUI _zeepGUI;
 
@@ -127,7 +130,7 @@ namespace ZeepSDK.UI
             }
         }
 
-        internal readonly struct ContainerScope : INerdScope
+        internal readonly struct ContainerScope : IZeepScope
         {
             private readonly ZeepGUI _zeepGUI;
 
@@ -150,7 +153,7 @@ namespace ZeepSDK.UI
             }
         }
 
-        public readonly struct ToolbarScope : INerdScope
+        public readonly struct ToolbarScope : IZeepScope
         {
             private readonly ZeepGUI _zeepGUI;
 
