@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace ZeepSDK.UI;
@@ -17,12 +18,23 @@ internal class Tooltipper : MonoBehaviour, IPointerEnterHandler, IPointerMoveHan
         _text = text;
     }
 
+    private void OnEnable()
+    {
+        _isOver = false;
+        _shownTooltip = false;
+        _timeUntilTooltip = TooltipDelay;
+    }
+
     private void OnDisable()
     {
         if (_shownTooltip)
         {
             UIApi.HideTooltip();
         }
+        
+        _isOver = false;
+        _shownTooltip = false;
+        _timeUntilTooltip = TooltipDelay;
     }
 
     private void Update()

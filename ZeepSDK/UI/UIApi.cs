@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using BepInEx.Logging;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 using ZeepSDK.Extensions;
@@ -15,26 +16,37 @@ namespace ZeepSDK.UI;
 /// <summary>
 /// An API related to the UI of the game
 /// </summary>
+[PublicAPI]
 public static class UIApi
 {
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(UIApi));
     private static UIConfigurator uiConfigurator;
     private static Tooltip _tooltip;
+    private static ZeepToolbar _toolbar;
 
     internal static void Initialize(GameObject gameObject)
     {
-        gameObject.AddComponent<ZeepGUIDispatcher>();
-        
-        string directoryName = Path.GetDirectoryName(Plugin.Instance.Info.Location);
-        string assetBundlePath = Path.Combine(directoryName, "zeepgui");
-        AssetBundle assetBundle = AssetBundle.LoadFromFile(assetBundlePath);
-        ZeepGUI.Skins = assetBundle.LoadAllAssets<GUISkin>();
-        Plugin.Instance.GuiSkinConfig.SettingChanged += OnSelectedSkinChanged;
-        OnSelectedSkinChanged(null, null); // Apply the current skin
+        // gameObject.AddComponent<ZeepGUIDispatcher>();
+        GameObject zeepToolbarContainer = new GameObject("ZeepToolbar");
+        zeepToolbarContainer.transform.SetParent(gameObject.transform);
+        _toolbar = zeepToolbarContainer.AddComponent<ZeepToolbar>();
+        _toolbar.AddToolbarButtonRoot("File", null);
+        _toolbar.AddToolbarButtonChild("File", "Exit Zeepkist", Application.Quit, int.MaxValue);
 
-        ZeepGUI.AddToolbarItem(ZeepGUI.FileToolbarItem, null, int.MinValue);
+        GameObject zeepTooltipper = new GameObject("ZeepTooltipper");
+        zeepTooltipper.transform.SetParent(gameObject.transform);
+        zeepTooltipper.AddComponent<ZeepTooltipper>();
+        
+        // string directoryName = Path.GetDirectoryName(Plugin.Instance.Info.Location);
+        // string assetBundlePath = Path.Combine(directoryName, "zeepgui");
+        // AssetBundle assetBundle = AssetBundle.LoadFromFile(assetBundlePath);
+        // ZeepGUI.Skins = assetBundle.LoadAllAssets<GUISkin>();
+        // Plugin.Instance.GuiSkinConfig.SettingChanged += OnSelectedSkinChanged;
+        // OnSelectedSkinChanged(null, null); // Apply the current skin
+
+        // ZeepGUI.AddToolbarItem(ZeepGUI.FileToolbarItem, null, int.MinValue);
         // ZeepGUI.AddToolbarItemChild(ZeepGUI.FileToolbarItem, ZeepGUI.FileSettingsToolbarItem, OpenWindow, int.MinValue);
-        ZeepGUI.AddToolbarItemChild(ZeepGUI.FileToolbarItem, ZeepGUI.FileExitToolbarItem, Application.Quit, int.MaxValue);
+        // ZeepGUI.AddToolbarItemChild(ZeepGUI.FileToolbarItem, ZeepGUI.FileExitToolbarItem, Application.Quit, int.MaxValue);
         
         uiConfigurator = gameObject.AddComponent<UIConfigurator>();
         CreateTooltip();
@@ -45,14 +57,24 @@ public static class UIApi
         SpectatorCameraUI_Awake.Awake += OnSpectatorCameraUIAwake;
     }
 
-    private static void OnSelectedSkinChanged(object o, EventArgs eventArgs)
+    // private static void OnSelectedSkinChanged(object o, EventArgs eventArgs)
+    // {
+    //     ZeepGUI.CurrentSkin = Plugin.Instance.GuiSkinConfig.Value switch
+    //     {
+    //         GuiSkins.Default => ZeepGUI.Skins.First(x => x.name == "Default"),
+    //         GuiSkins.SemiTransparent => ZeepGUI.Skins.First(x => x.name == "Semi Transparent"),
+    //         _ => throw new ArgumentOutOfRangeException()
+    //     };
+    // }
+
+    public static void AddToolbarItem(string title, Action onClick)
     {
-        ZeepGUI.CurrentSkin = Plugin.Instance.GuiSkinConfig.Value switch
-        {
-            GuiSkins.Default => ZeepGUI.Skins.First(x => x.name == "Default"),
-            GuiSkins.SemiTransparent => ZeepGUI.Skins.First(x => x.name == "Semi Transparent"),
-            _ => throw new ArgumentOutOfRangeException()
-        };
+        _toolbar.AddToolbarButtonRoot(title, onClick);
+    }
+
+    public static void AddToolbarItemChild(string parentTitle, string title, Action onClick, int priority = 0)
+    {
+        _toolbar.AddToolbarButtonChild(parentTitle, title, onClick, priority);
     }
 
     private static void OnOnlineChatUIAwake(OnlineChatUI instance)
