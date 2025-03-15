@@ -96,40 +96,126 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.ZeepDropdownMenu.html">ZeepDropdownMenu</a></dt>
-      <dd><p>A custom dropdown menu that can be used for ZeepGUI</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a></dt>
+      <dt><a class="xref" href="ZeepSDK.UI.VisualElementExtensions.html">VisualElementExtensions</a></dt>
       <dd></dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.ZeepGUIUtility.html">ZeepGUIUtility</a></dt>
+      <dt><a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a></dt>
+      <dd><p>A class that provides all kinds of gui elements</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.ZeepGUIBehaviour.html">ZeepGUIBehaviour</a></dt>
+      <dd><p>A basic behaviour that allows you to easily make UI</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.ZeepGUIWindow.html">ZeepGUIWindow</a></dt>
+      <dd><p>A base class that can be inherited to more easily create a window</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.ZeepGUI.ToolbarScope.html">ZeepGUI.ToolbarScope</a></dt>
       <dd></dd>
     </dl>
     <h3 id="interfaces">
 Interfaces
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.IZeepGUI.html">IZeepGUI</a></dt>
-      <dd><p>An interface you can implement that allows you to receive GUI events from the ZeepSDK</p>
+      <dt><a class="xref" href="ZeepSDK.UI.IDropdownMenu.html">IDropdownMenu</a></dt>
+      <dd><p>Interface for a dropdown menu</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.IZeepMenu.html">IZeepMenu</a></dt>
-      <dd></dd>
+      <dt><a class="xref" href="ZeepSDK.UI.ZeepGUI.IZeepScope.html">ZeepGUI.IZeepScope</a></dt>
+      <dd><p>A scope that can be used to contain controls</p>
+</dd>
     </dl>
+    <h3 id="enums">
+Enums
+</h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.IZeepWindow.html">IZeepWindow</a></dt>
-      <dd></dd>
+      <dt><a class="xref" href="ZeepSDK.UI.ZeepGUI.StyleMode.html">ZeepGUI.StyleMode</a></dt>
+      <dd><p>The style to apply to the control</p>
+</dd>
     </dl>
     <h3 id="delegates">
 Delegates
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="ZeepSDK.UI.ZeepGUI.WindowFunction.html">ZeepGUI.WindowFunction</a></dt>
-      <dd></dd>
+      <dt><a class="xref" href="ZeepSDK.UI.BuildDropdownMenuHandler.html">BuildDropdownMenuHandler</a></dt>
+      <dd><p>Allows you to build a menu when a <a class="xref" href="ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DropdownButton_System_String_ZeepSDK_UI_BuildDropdownMenuHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_">DropdownButton(string, BuildDropdownMenuHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)</a> is clicked</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.ButtonClickHandler.html">ButtonClickHandler</a></dt>
+      <dd><p>Allows you to react to when a <a class="xref" href="ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Button_System_String_ZeepSDK_UI_ButtonClickHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_">Button(string, ButtonClickHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)</a> is clicked</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
+      <dd><p>Allows you to customize the given visual element</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
+      <dd><p>Allows you to apply a custom style</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.DoubleFieldValueUpdatedHandler.html">DoubleFieldValueUpdatedHandler</a></dt>
+      <dd><p>Allows you to react to when a <a class="xref" href="ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DoubleField_System_String_System_Double_ZeepSDK_UI_DoubleFieldValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_">DoubleField(string, double, DoubleFieldValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)</a> control gets its value updated</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.DropDownFormatHandler-1.html">DropDownFormatHandler&lt;T&gt;</a></dt>
+      <dd><p>Allows you to provide custom formatting for a dropdown item</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.DropDownValueUpdatedHandler-1.html">DropDownValueUpdatedHandler&lt;T&gt;</a></dt>
+      <dd><p>Allows you to react to when a <a class="xref" href="ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Dropdown__1_System_String_System_Collections_Generic_IEnumerable___0____0_ZeepSDK_UI_DropDownFormatHandler___0__ZeepSDK_UI_DropDownValueUpdatedHandler___0__System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_">Dropdown&lt;T&gt;(string, IEnumerable&lt;T&gt;, T, DropDownFormatHandler&lt;T&gt;, DropDownValueUpdatedHandler&lt;T&gt;, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)</a> control gets its value updated</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.FloatFieldValueUpdatedHandler.html">FloatFieldValueUpdatedHandler</a></dt>
+      <dd><p>Allows you to react to when a <a class="xref" href="ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_FloatField_System_String_System_Single_ZeepSDK_UI_FloatFieldValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_">FloatField(string, float, FloatFieldValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)</a> control gets its value updated</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.IntFieldValueUpdatedHandler.html">IntFieldValueUpdatedHandler</a></dt>
+      <dd><p>Allows you to react to when an <a class="xref" href="ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_IntField_System_String_System_Int32_ZeepSDK_UI_IntFieldValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_">IntField(string, int, IntFieldValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)</a> control gets its value updated</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.ScrollValueUpdatedHandler.html">ScrollValueUpdatedHandler</a></dt>
+      <dd><p>Allows you to react to when a <a class="xref" href="ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Scroll_ZeepSDK_UI_ScrollValueUpdatedHandler_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_">Scroll(ScrollValueUpdatedHandler, ConfigureElementHandler, ConfigureStyleHandler)</a> is scrolled</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.TextFieldValueUpdatedHandler.html">TextFieldValueUpdatedHandler</a></dt>
+      <dd><p>Allows you to react to when a <a class="xref" href="ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_TextField_System_String_System_String_ZeepSDK_UI_TextFieldValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_">TextField(string, string, TextFieldValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)</a> control gets its value updated</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.ToggleValueUpdatedHandler.html">ToggleValueUpdatedHandler</a></dt>
+      <dd><p>Allows you to react to when a <a class="xref" href="ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Toggle_System_String_System_Boolean_ZeepSDK_UI_ToggleValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_">Toggle(string, bool, ToggleValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)</a> control gets its value updated</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.WindowClosedHandler.html">WindowClosedHandler</a></dt>
+      <dd><p>Allows you to react to when a <a class="xref" href="ZeepSDK.UI.ZeepGUIWindow.html">ZeepGUIWindow</a> is closed
+<a class="xref" href="ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Window_System_String_UnityEngine_Rect_ZeepSDK_UI_WindowPositionUpdatedHandler_ZeepSDK_UI_WindowClosedHandler_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_">Window(string, Rect, WindowPositionUpdatedHandler, WindowClosedHandler, ConfigureElementHandler, ConfigureStyleHandler)</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ZeepSDK.UI.WindowPositionUpdatedHandler.html">WindowPositionUpdatedHandler</a></dt>
+      <dd><p>Allows you to react to when a <a class="xref" href="ZeepSDK.UI.ZeepGUIWindow.html">ZeepGUIWindow</a> has its position changed
+<a class="xref" href="ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Window_System_String_UnityEngine_Rect_ZeepSDK_UI_WindowPositionUpdatedHandler_ZeepSDK_UI_WindowClosedHandler_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_">Window(string, Rect, WindowPositionUpdatedHandler, WindowClosedHandler, ConfigureElementHandler, ConfigureStyleHandler)</a></p>
+</dd>
     </dl>
 
 

@@ -85,7 +85,7 @@
 
 
   <h1 id="ZeepSDK_UI_UIApi" data-uid="ZeepSDK.UI.UIApi" class="text-break">
-Class UIApi  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/UIApi.cs/#L18"><i class="bi bi-code-slash"></i></a>
+Class UIApi  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/UIApi.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,7 +98,8 @@ Class UIApi  <a class="header-action link-secondary" title="View source" href="h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class UIApi</code></pre>
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public static class UIApi</code></pre>
   </div>
 
 
@@ -153,7 +154,7 @@ Class UIApi  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="ZeepSDK_UI_UIApi_AddToConfigurator_System_Collections_Generic_IEnumerable_UnityEngine_RectTransform__" data-uid="ZeepSDK.UI.UIApi.AddToConfigurator(System.Collections.Generic.IEnumerable{UnityEngine.RectTransform})">
   AddToConfigurator(IEnumerable&lt;RectTransform&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/UIApi.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/UIApi.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Allows a collection of rect transforms to be configured with the UI Configurator</p>
@@ -185,7 +186,7 @@ Class UIApi  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="ZeepSDK_UI_UIApi_AddToConfigurator_UnityEngine_RectTransform_" data-uid="ZeepSDK.UI.UIApi.AddToConfigurator(UnityEngine.RectTransform)">
   AddToConfigurator(RectTransform)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/UIApi.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/UIApi.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Allows a rect transform to be configured with the UI Configurator</p>
@@ -213,11 +214,81 @@ Class UIApi  <a class="header-action link-secondary" title="View source" href="h
 
 
 
+  <a id="ZeepSDK_UI_UIApi_AddToolbarItem_" data-uid="ZeepSDK.UI.UIApi.AddToolbarItem*"></a>
+
+  <h3 id="ZeepSDK_UI_UIApi_AddToolbarItem_System_String_System_Action_" data-uid="ZeepSDK.UI.UIApi.AddToolbarItem(System.String,System.Action)">
+  AddToolbarItem(string, Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/UIApi.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddToolbarItem(string title, Action onClick)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>onClick</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_UI_UIApi_AddToolbarItemChild_" data-uid="ZeepSDK.UI.UIApi.AddToolbarItemChild*"></a>
+
+  <h3 id="ZeepSDK_UI_UIApi_AddToolbarItemChild_System_String_System_String_System_Action_System_Int32_" data-uid="ZeepSDK.UI.UIApi.AddToolbarItemChild(System.String,System.String,System.Action,System.Int32)">
+  AddToolbarItemChild(string, string, Action, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/UIApi.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddToolbarItemChild(string parentTitle, string title, Action onClick, int priority = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parentTitle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>onClick</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+    <dt><code>priority</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="ZeepSDK_UI_UIApi_AddTooltip_" data-uid="ZeepSDK.UI.UIApi.AddTooltip*"></a>
 
   <h3 id="ZeepSDK_UI_UIApi_AddTooltip_UnityEngine_GameObject_System_String_" data-uid="ZeepSDK.UI.UIApi.AddTooltip(UnityEngine.GameObject,System.String)">
   AddTooltip(GameObject, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/UIApi.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/UIApi.cs/#L182"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a tooltip to the game object with the specified text
@@ -252,7 +323,7 @@ The tooltip will show up when the mouse is over the game object</p>
 
   <h3 id="ZeepSDK_UI_UIApi_RemoveFromConfigurator_UnityEngine_RectTransform_" data-uid="ZeepSDK.UI.UIApi.RemoveFromConfigurator(UnityEngine.RectTransform)">
   RemoveFromConfigurator(RectTransform)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/UIApi.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/UIApi.cs/#L173"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes a rect transform from the UI Configurator</p>
@@ -284,7 +355,7 @@ The tooltip will show up when the mouse is over the game object</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/UIApi.cs/#L18" class="edit-link">Edit this page</a>
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/UIApi.cs/#L19" class="edit-link">Edit this page</a>
         </div>
 
 

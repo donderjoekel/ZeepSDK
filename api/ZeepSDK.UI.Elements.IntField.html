@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class IntField </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class IntField ">
+      
+      <meta name="description" content="A text field that only accepts int">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_UI_Elements_IntField.md&amp;value=---%0Auid%3A%20ZeepSDK.UI.Elements.IntField%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ZeepSDK.UI.Elements.IntField">
+
+
+
+  <h1 id="ZeepSDK_UI_Elements_IntField" data-uid="ZeepSDK.UI.Elements.IntField" class="text-break">
+Class IntField  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/Elements/IntField.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ZeepSDK.html">ZeepSDK</a>.<a class="xref" href="ZeepSDK.UI.html">UI</a>.<a class="xref" href="ZeepSDK.UI.Elements.html">Elements</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A text field that only accepts int</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class IntField : NumericInputBaseField&lt;int&gt;, IEventHandler, IStylePropertyAnimations, ITransform, ITransitionAnimations, IExperimentalFeatures, IVisualElementScheduler, IResolvedStyle, IBindable, INotifyValueChanged&lt;int&gt;, IMixedValueSupport</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CallbackEventHandler</span></div>
+      <div><span class="xref">Focusable</span></div>
+      <div><span class="xref">VisualElement</span></div>
+      <div><span class="xref">BindableElement</span></div>
+      <div><span class="xref">BaseField</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</div>
+      <div><span class="xref">TextInputBaseField</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</div>
+      <div><a class="xref" href="ZeepSDK.UI.Elements.NumericInputBaseField-1.html">NumericInputBaseField</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</div>
+      <div><span class="xref">IntField</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IEventHandler</span></div>
+      <div><span class="xref">IStylePropertyAnimations</span></div>
+      <div><span class="xref">ITransform</span></div>
+      <div><span class="xref">ITransitionAnimations</span></div>
+      <div><span class="xref">IExperimentalFeatures</span></div>
+      <div><span class="xref">IVisualElementScheduler</span></div>
+      <div><span class="xref">IResolvedStyle</span></div>
+      <div><span class="xref">IBindable</span></div>
+      <div><span class="xref">INotifyValueChanged</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</div>
+      <div><span class="xref">IMixedValueSupport</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1_value">NumericInputBaseField&lt;int&gt;.value</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1_SetValueWithoutNotify__0_">NumericInputBaseField&lt;int&gt;.SetValueWithoutNotify(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1_OnViewDataReady">NumericInputBaseField&lt;int&gt;.OnViewDataReady()</a>
+    </div>
+    <div>
+      <a class="xref" href="ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1_ValueToString__0_">NumericInputBaseField&lt;int&gt;.ValueToString(int)</a>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.s_SelectionColorProperty</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.s_CursorColorProperty</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.m_VisualInputTabIndex</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.m_TextInputBase</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.kMaxLengthNone</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.kMaskCharDefault</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.&lt;iTextHandle&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.ussClassName</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.labelUssClassName</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.inputUssClassName</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.singleLineInputUssClassName</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.multilineInputUssClassName</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.textInputUssName</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">TextInputBaseField&lt;int&gt;.MeasureTextSize(string, float, VisualElement.MeasureMode, float, VisualElement.MeasureMode)</a>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.SelectAll()</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.SyncTextEngine()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">TextInputBaseField&lt;int&gt;.DrawWithTextSelectionAndCursor(MeshGenerationContext, string)</a>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.OnAttachToPanel(AttachToPanelEvent)</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.OnFieldCustomStyleResolved(CustomStyleResolvedEvent)</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.ExecuteDefaultActionAtTarget(EventBase)</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.UpdateMixedValueContent()</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.textInputBase</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.textHandle</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.iTextHandle</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.text</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.isReadOnly</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.isPasswordField</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.selectionColor</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.cursorColor</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.cursorIndex</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.selectIndex</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.maxLength</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.doubleClickSelectsWord</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.tripleClickSelectsLine</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.isDelayed</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.maskChar</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.editorEventHandler</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.editorEngine</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.hasFocus</span>
+    </div>
+    <div>
+      <span class="xref">TextInputBaseField&lt;int&gt;.onIsReadOnlyChanged</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.noLabelVariantUssClassName</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.labelDraggerVariantUssClassName</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.mixedValueLabelUssClassName</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.alignedFieldUssClassName</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.inspectorFieldUssClassName</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.kIndentPerLevel</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.mixedValueString</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.serializedPropertyCopyName</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.s_LabelWidthRatioProperty</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.s_LabelExtraPaddingProperty</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.s_LabelBaseMinWidthProperty</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.m_LabelWidthRatio</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.m_LabelExtraPadding</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.m_LabelBaseMinWidth</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.m_VisualInput</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.m_Value</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.&lt;labelElement&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.m_ShowMixedValue</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.m_MixedValueLabel</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.m_CachedInspectorElement</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.m_CachedListAndFoldoutDepth</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.OnCustomStyleResolved(CustomStyleResolvedEvent)</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.OnInspectorFieldGeometryChanged(GeometryChangedEvent)</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.AlignLabel()</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.GetTooltipRect()</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.visualInput</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.rawValue</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.labelElement</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.label</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.showMixedValue</span>
+    </div>
+    <div>
+      <span class="xref">BaseField&lt;int&gt;.mixedValueLabel</span>
+    </div>
+    <div>
+      <span class="xref">BindableElement.&lt;binding&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">BindableElement.&lt;bindingPath&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">BindableElement.binding</span>
+    </div>
+    <div>
+      <span class="xref">BindableElement.bindingPath</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.&lt;UnityEngine.UIElements.IStylePropertyAnimations.runningAnimationCount&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.&lt;UnityEngine.UIElements.IStylePropertyAnimations.completedAnimationCount&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.s_NextId</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.s_EmptyClassList</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.userDataPropertyKey</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.disabledUssClassName</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_Name</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_ClassList</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_PropertyBag</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_Flags</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_ViewDataKey</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_RenderHints</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.lastLayout</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.lastPseudoPadding</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.renderChainData</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_Layout</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_BoundingBox</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_WorldBoundingBox</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_WorldTransformCache</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_WorldTransformInverseCache</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_WorldClip</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_WorldClipMinusGroup</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_WorldClipIsInfinite</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.s_InfiniteRect</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.triggerPseudoMask</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.dependencyPseudoMask</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_PseudoStates</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.&lt;containedPointerIds&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.&lt;pickingMode&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.&lt;yogaNode&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_Style</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.variableContext</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.inheritedStylesHash</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.controlid</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.imguiContainerDescendantCount</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.&lt;enabledSelf&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.&lt;generateVisualContent&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.k_GenerateVisualContentMarker</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_SubRenderTargetMode</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.s_runtimeMaterial</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_defaultMaterial</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_RunningAnimations</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.k_RootVisualContainerName</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.&lt;hierarchy&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.&lt;isRootVisualContainer&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.&lt;cacheAsBitmap&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_PhysicalParent</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_LogicalParent</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.s_EmptyList</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_Children</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.&lt;elementPanel&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_VisualTreeAssetSource</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.s_CustomStyleAccess</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.inlineStyleAccess</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.styleSheetList</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.s_InternalStyleSheetPath</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.tooltipPropertyKey</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.s_TypeData</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.m_TypeData</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetStylePropertyAnimationSystem()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">VisualElement.IStylePropertyAnimations.Start(StylePropertyId, float, float, int, int, Func&lt;float, float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.IStylePropertyAnimations.Start(StylePropertyId, int, int, int, int, Func&lt;float, float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.IStylePropertyAnimations.Start(StylePropertyId, Length, Length, int, int, Func&lt;float, float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.IStylePropertyAnimations.Start(StylePropertyId, Color, Color, int, int, Func&lt;float, float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.IStylePropertyAnimations.StartEnum(StylePropertyId, int, int, int, int, Func&lt;float, float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.IStylePropertyAnimations.Start(StylePropertyId, Background, Background, int, int, Func&lt;float, float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.IStylePropertyAnimations.Start(StylePropertyId, FontDefinition, FontDefinition, int, int, Func&lt;float, float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.IStylePropertyAnimations.Start(StylePropertyId, Font, Font, int, int, Func&lt;float, float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.IStylePropertyAnimations.Start(StylePropertyId, TextShadow, TextShadow, int, int, Func&lt;float, float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.IStylePropertyAnimations.Start(StylePropertyId, Scale, Scale, int, int, Func&lt;float, float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.IStylePropertyAnimations.Start(StylePropertyId, Translate, Translate, int, int, Func&lt;float, float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.IStylePropertyAnimations.Start(StylePropertyId, Rotate, Rotate, int, int, Func&lt;float, float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.IStylePropertyAnimations.Start(StylePropertyId, TransformOrigin, TransformOrigin, int, int, Func&lt;float, float&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IStylePropertyAnimations.CancelAnimation(StylePropertyId)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IStylePropertyAnimations.CancelAllAnimations()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IStylePropertyAnimations.HasRunningAnimation(StylePropertyId)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IStylePropertyAnimations.UpdateAnimation(StylePropertyId)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">VisualElement.IStylePropertyAnimations.GetAllAnimations(List&lt;StylePropertyId&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.TryConvertLengthUnits(StylePropertyId, ref Length, ref Length)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.TryConvertTransformOriginUnits(ref TransformOrigin, ref TransformOrigin)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.TryConvertTranslateUnits(ref Translate, ref Translate)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.MarkRenderHintsClean()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ComputeGlobalScale()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.UpdateBoundingBox()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.UpdateWorldBoundingBox()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.UpdateWorldTransform()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.UpdateWorldTransformInverse()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.EnsureWorldTransformAndClipUpToDate()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.UpdateWorldClip()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.CombineClipRects(Rect, Rect)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.SubstractBorderPadding(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ComputeAAAlignedBound(Rect, Matrix4x4)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.UpdateHoverPseudoState()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ChangeIMGUIContainerCount(int)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ExecuteDefaultAction(EventBase)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.SetTooltip(TooltipEvent)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.Focus()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.SetPanel(BaseVisualElementPanel)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.WillChangePanel(BaseVisualElementPanel)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.HasChangedPanel(BaseVisualElementPanel)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.SendEvent(EventBase)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.SendEvent(EventBase, DispatchMode)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IncrementVersion(VersionChangeType)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.InvokeHierarchyChanged(HierarchyChangeType)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">VisualElement.SetEnabledFromHierarchy(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">VisualElement.SetEnabledFromHierarchyPrivate(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">VisualElement.SetEnabled(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">VisualElement.PropagateEnabledToChildren(bool)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.MarkDirtyRepaint()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.InvokeGenerateVisualContent(MeshGenerationContext)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.stringbuilder">VisualElement.GetFullHierarchicalViewDataKey(StringBuilder)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetFullHierarchicalViewDataKey()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">VisualElement.GetOrCreateViewData&lt;T&gt;(object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.GetOrCreateViewData&lt;T&gt;(ScriptableObject, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">VisualElement.OverwriteFromViewData(object, string)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.SaveViewData()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">VisualElement.IsViewDataPersitenceSupportedOnChildren(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">VisualElement.OnViewDataReady(bool)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ContainsPoint(Vector2)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.Overlaps(Rect)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.AssignMeasureFunction()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.RemoveMeasureFunction()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">VisualElement.DoMeasure(float, VisualElement.MeasureMode, float, VisualElement.MeasureMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">VisualElement.Measure(YogaNode, float, YogaMeasureMode, float, YogaMeasureMode)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.SetSize(Vector2)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.FinalizeLayout()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.SetInlineRule(StyleSheet, StyleRule)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.UpdateInlineRule(StyleSheet, StyleRule)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.SetComputedStyle(ref ComputedStyle)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ResetPositionProperties()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetClasses()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetClassesForIteration()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ClearClassList()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.AddToClassList(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.RemoveFromClassList(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.ToggleInClassList(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.EnableInClassList(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.ClassListContains(string)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.FindAncestorUserData()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetProperty(PropertyName)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">VisualElement.SetProperty(PropertyName, object)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.HasProperty(PropertyName)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">VisualElement.TryGetPropertyInternal(PropertyName, out object)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.CheckUserKeyArgument(PropertyName)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">VisualElement.SetPropertyInternal(PropertyName, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">VisualElement.UpdateCursorStyle(long)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.getRuntimeMaterial()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetAnimationSystem()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.RegisterAnimation(IValueAnimationUpdate)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.UnregisterAnimation(IValueAnimationUpdate)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.UnregisterRunningAnimations()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.RegisterRunningAnimations()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">VisualElement.ITransitionAnimations.Start(float, float, int, Action&lt;VisualElement, float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ITransitionAnimations.Start(Rect, Rect, int, Action&lt;VisualElement, Rect&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ITransitionAnimations.Start(Color, Color, int, Action&lt;VisualElement, Color&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ITransitionAnimations.Start(Vector3, Vector3, int, Action&lt;VisualElement, Vector3&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ITransitionAnimations.Start(Vector2, Vector2, int, Action&lt;VisualElement, Vector2&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ITransitionAnimations.Start(Quaternion, Quaternion, int, Action&lt;VisualElement, Quaternion&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ITransitionAnimations.Start(StyleValues, StyleValues, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">VisualElement.ITransitionAnimations.Start(Func&lt;VisualElement, float&gt;, float, int, Action&lt;VisualElement, float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">VisualElement.ITransitionAnimations.Start(Func&lt;VisualElement, Rect&gt;, Rect, int, Action&lt;VisualElement, Rect&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">VisualElement.ITransitionAnimations.Start(Func&lt;VisualElement, Color&gt;, Color, int, Action&lt;VisualElement, Color&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">VisualElement.ITransitionAnimations.Start(Func&lt;VisualElement, Vector3&gt;, Vector3, int, Action&lt;VisualElement, Vector3&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">VisualElement.ITransitionAnimations.Start(Func&lt;VisualElement, Vector2&gt;, Vector2, int, Action&lt;VisualElement, Vector2&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">VisualElement.ITransitionAnimations.Start(Func&lt;VisualElement, Quaternion&gt;, Quaternion, int, Action&lt;VisualElement, Quaternion&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">VisualElement.StartAnimation&lt;T&gt;(ValueAnimation&lt;T&gt;, Func&lt;VisualElement, T&gt;, T, int, Action&lt;VisualElement, T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.AssignStyleValues(VisualElement, StyleValues)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ReadCurrentValues(VisualElement, StyleValues)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ITransitionAnimations.Start(StyleValues, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">VisualElement.Start(Func&lt;VisualElement, StyleValues&gt;, StyleValues, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ITransitionAnimations.Layout(Rect, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ITransitionAnimations.TopLeft(Vector2, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ITransitionAnimations.Size(Vector2, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">VisualElement.ITransitionAnimations.Scale(float, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ITransitionAnimations.Position(Vector3, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ITransitionAnimations.Rotation(Quaternion, int)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ShouldClip()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.Add(VisualElement)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.Insert(int, VisualElement)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.Remove(VisualElement)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.RemoveAt(int)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.Clear()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.ElementAt(int)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IndexOf(VisualElement)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">VisualElement.ElementAtTreePath(List&lt;int&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">VisualElement.FindElementInTree(VisualElement, List&lt;int&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.Children()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.comparison-1">VisualElement.Sort(Comparison&lt;VisualElement&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.BringToFront()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.SendToBack()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.PlaceBehind(VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.PlaceInFront(VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.RemoveFromHierarchy()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetFirstOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetFirstAncestorOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.Contains(VisualElement)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">VisualElement.GatherAllChildren(List&lt;VisualElement&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.FindCommonAncestor(VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetRoot()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetRootVisualContainer()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetNextElementDepthFirst()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.GetPreviousElementDepthFirst()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.RetargetElement(VisualElement)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">VisualElement.Min(float, float, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">VisualElement.Max(float, float, float, float)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.TransformAlignedRectToParentSpace(ref Rect)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.CalculateConservativeRect(ref Matrix4x4, Rect)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.TransformAlignedRect(ref Matrix4x4, ref Rect)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.OrderMinMaxRect(ref Rect)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.MultiplyMatrix44Point2(ref Matrix4x4, Vector2)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.MultiplyVector2(ref Matrix4x4, Vector2)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.MultiplyMatrix44Rect2(ref Matrix4x4, Rect)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.MultiplyMatrix34(ref Matrix4x4, ref Matrix4x4, out Matrix4x4)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.TranslateMatrix34(ref Matrix4x4, Vector3, out Matrix4x4)</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.TranslateMatrix34InPlace(ref Matrix4x4, Vector3)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">VisualElement.IVisualElementScheduler.Execute(Action&lt;TimerState&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">VisualElement.IVisualElementScheduler.Execute(Action)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.AddStyleSheetPath(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.HasStyleSheetPath(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">VisualElement.RemoveStyleSheetPath(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">VisualElement.ResolveLengthValue(Length, bool)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ResolveTranslate()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ResolveTransformOrigin()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ResolveRotation()</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ResolveScale()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">VisualElement.&lt;AssignMeasureFunction&gt;b__253_0(YogaNode, float, YogaMeasureMode, float, YogaMeasureMode)</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.hasRunningAnimations</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.hasCompletedAnimations</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IStylePropertyAnimations.runningAnimationCount</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IStylePropertyAnimations.completedAnimationCount</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.styleAnimation</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.isCompositeRoot</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.isHierarchyDisplayed</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.viewDataKey</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.enableViewDataPersistence</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.userData</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.canGrabFocus</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.focusController</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.usageHints</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.renderHints</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.transform</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ITransform.position</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ITransform.rotation</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ITransform.scale</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.ITransform.matrix</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.isLayoutManual</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.scaledPixelsPerPoint</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.layout</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.contentRect</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.paddingRect</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.isBoundingBoxDirty</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.isWorldBoundingBoxDirty</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.boundingBox</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.worldBoundingBox</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.boundingBoxInParentSpace</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.worldBound</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.localBound</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.rect</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.isWorldTransformDirty</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.isWorldTransformInverseDirty</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.worldTransform</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.worldTransformRef</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.worldTransformInverse</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.isWorldClipDirty</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.worldClip</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.worldClipMinusGroup</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.worldClipIsInfinite</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.pseudoStates</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.containedPointerIds</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.pickingMode</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.name</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.classList</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.fullTypeName</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.typeName</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.yogaNode</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.computedStyle</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.hasInlineStyle</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.styleInitialized</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.opacity</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.isParentEnabledInHierarchy</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.enabledInHierarchy</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.enabledSelf</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.visible</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.generateVisualContent</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.requireMeasureFunction</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.subRenderTargetMode</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.defaultMaterial</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.experimental</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IExperimentalFeatures.animation</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.hierarchy</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.isRootVisualContainer</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.cacheAsBitmap</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.disableClipping</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.parent</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.elementPanel</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.panel</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.contentContainer</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.visualTreeAssetSource</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">VisualElement.this[int]</a>
+    </div>
+    <div>
+      <span class="xref">VisualElement.childCount</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.positionWithLayout</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.pivotedMatrixWithLayout</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.hasDefaultRotationAndScale</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.schedule</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.style</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.customStyle</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.styleSheets</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.tooltip</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.typeData</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.resolvedStyle</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.alignContent</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.alignItems</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.alignSelf</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.backgroundColor</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.backgroundImage</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.borderBottomColor</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.borderBottomLeftRadius</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.borderBottomRightRadius</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.borderBottomWidth</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.borderLeftColor</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.borderLeftWidth</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.borderRightColor</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.borderRightWidth</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.borderTopColor</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.borderTopLeftRadius</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.borderTopRightRadius</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.borderTopWidth</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.bottom</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.color</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.display</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.flexBasis</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.flexDirection</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.flexGrow</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.flexShrink</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.flexWrap</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.fontSize</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.height</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.justifyContent</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.left</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.letterSpacing</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.marginBottom</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.marginLeft</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.marginRight</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.marginTop</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.maxHeight</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.maxWidth</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.minHeight</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.minWidth</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.opacity</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.paddingBottom</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.paddingLeft</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.paddingRight</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.paddingTop</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.position</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.right</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.rotate</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.scale</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.textOverflow</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.top</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.transformOrigin</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.transitionDelay</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.transitionDuration</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.transitionProperty</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.transitionTimingFunction</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.translate</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.unityBackgroundImageTintColor</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.unityBackgroundScaleMode</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.unityFont</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.unityFontDefinition</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.unityFontStyleAndWeight</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.unityParagraphSpacing</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.unitySliceBottom</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.unitySliceLeft</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.unitySliceRight</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.unitySliceTop</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.unityTextAlign</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.unityTextOutlineColor</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.unityTextOutlineWidth</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.unityTextOverflowPosition</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.visibility</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.whiteSpace</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.width</span>
+    </div>
+    <div>
+      <span class="xref">VisualElement.IResolvedStyle.wordSpacing</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.&lt;focusable&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.&lt;tabIndex&gt;k__BackingField</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.m_DelegatesFocus</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.m_ExcludeFromFocusRing</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.isIMGUIContainer</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.Blur()</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.BlurImmediately()</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.GetFocusDelegate()</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.GetFirstFocusableChild(VisualElement)</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.ExecuteDefaultActionDisabled(EventBase)</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.ProcessEvent(EventBase)</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.focusable</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.tabIndex</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.delegatesFocus</span>
+    </div>
+    <div>
+      <span class="xref">Focusable.excludeFromFocusRing</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.m_CallbackRegistry</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.RegisterCallback&lt;TEventType&gt;(EventCallback&lt;TEventType&gt;, TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.RegisterCallback&lt;TEventType, TUserArgsType&gt;(EventCallback&lt;TEventType, TUserArgsType&gt;, TUserArgsType, TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.RegisterCallback&lt;TEventType&gt;(EventCallback&lt;TEventType&gt;, InvokePolicy, TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.UnregisterCallback&lt;TEventType&gt;(EventCallback&lt;TEventType&gt;, TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.UnregisterCallback&lt;TEventType, TUserArgsType&gt;(EventCallback&lt;TEventType, TUserArgsType&gt;, TrickleDown)</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.TryGetUserArgs&lt;TEventType, TCallbackArgs&gt;(EventCallback&lt;TEventType, TCallbackArgs&gt;, TrickleDown, out TCallbackArgs)</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.HandleEventAtTargetPhase(EventBase)</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.HandleEvent(EventBase)</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.HasTrickleDownHandlers()</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.HasBubbleUpHandlers()</span>
+    </div>
+    <div>
+      <span class="xref">CallbackEventHandler.ExecuteDefaultActionDisabledAtTarget(EventBase)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="ZeepSDK.UI.VisualElementExtensions.html#ZeepSDK_UI_VisualElementExtensions_RegisterHierarchyChanged_UnityEngine_UIElements_VisualElement_System_Action_UnityEngine_UIElements_VisualElement_System_Int32__">VisualElementExtensions.RegisterHierarchyChanged(VisualElement, Action&lt;VisualElement, int&gt;)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="ZeepSDK_UI_Elements_IntField__ctor_" data-uid="ZeepSDK.UI.Elements.IntField.#ctor*"></a>
+
+  <h3 id="ZeepSDK_UI_Elements_IntField__ctor" data-uid="ZeepSDK.UI.Elements.IntField.#ctor">
+  IntField()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/Elements/IntField.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntField()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_UI_Elements_IntField__ctor_" data-uid="ZeepSDK.UI.Elements.IntField.#ctor*"></a>
+
+  <h3 id="ZeepSDK_UI_Elements_IntField__ctor_System_Int32_System_Char_" data-uid="ZeepSDK.UI.Elements.IntField.#ctor(System.Int32,System.Char)">
+  IntField(int, char)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/Elements/IntField.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntField(int maxLength, char maskChar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>maskChar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_UI_Elements_IntField__ctor_" data-uid="ZeepSDK.UI.Elements.IntField.#ctor*"></a>
+
+  <h3 id="ZeepSDK_UI_Elements_IntField__ctor_System_String_" data-uid="ZeepSDK.UI.Elements.IntField.#ctor(System.String)">
+  IntField(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/Elements/IntField.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntField(string label)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_UI_Elements_IntField__ctor_" data-uid="ZeepSDK.UI.Elements.IntField.#ctor*"></a>
+
+  <h3 id="ZeepSDK_UI_Elements_IntField__ctor_System_String_System_Int32_System_Char_" data-uid="ZeepSDK.UI.Elements.IntField.#ctor(System.String,System.Int32,System.Char)">
+  IntField(string, int, char)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/Elements/IntField.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntField(string label, int maxLength, char maskChar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>maxLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>maskChar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ZeepSDK_UI_Elements_IntField_StringToValue_" data-uid="ZeepSDK.UI.Elements.IntField.StringToValue*"></a>
+
+  <h3 id="ZeepSDK_UI_Elements_IntField_StringToValue_System_String_" data-uid="ZeepSDK.UI.Elements.IntField.StringToValue(System.String)">
+  StringToValue(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/Elements/IntField.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int StringToValue(string str)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>str</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/Elements/IntField.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

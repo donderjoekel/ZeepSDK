@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ZeepGUI ">
       
-      
+      <meta name="description" content="A class that provides all kinds of gui elements">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="ZeepSDK_UI_ZeepGUI" data-uid="ZeepSDK.UI.ZeepGUI" class="text-break">
-Class ZeepGUI  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class ZeepGUI  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.Scopes.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,12 +93,13 @@ Class ZeepGUI  <a class="header-action link-secondary" title="View source" href=
   <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>A class that provides all kinds of gui elements</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[PublicAPI]
-public static class ZeepGUI</code></pre>
+public class ZeepGUI</code></pre>
   </div>
 
 
@@ -145,29 +146,27 @@ public static class ZeepGUI</code></pre>
 
 
 
-  <h2 class="section" id="fields">Fields
+  <h2 class="section" id="constructors">Constructors
 </h2>
 
 
+  <a id="ZeepSDK_UI_ZeepGUI__ctor_" data-uid="ZeepSDK.UI.ZeepGUI.#ctor*"></a>
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_FileExitToolbarItem" data-uid="ZeepSDK.UI.ZeepGUI.FileExitToolbarItem">
-  FileExitToolbarItem
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI__ctor_UnityEngine_UIElements_VisualElement_" data-uid="ZeepSDK.UI.ZeepGUI.#ctor(UnityEngine.UIElements.VisualElement)">
+  ZeepGUI(VisualElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string FileExitToolbarItem = &quot;Exit Zeepkist&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public ZeepGUI(VisualElement root)</code></pre>
   </div>
 
-
-
-
-  <h4 class="section">Field Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>root</code> <span class="xref">VisualElement</span></dt>
     <dd></dd>
   </dl>
 
@@ -180,87 +179,36 @@ public static class ZeepGUI</code></pre>
 
 
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_FileSettingsToolbarItem" data-uid="ZeepSDK.UI.ZeepGUI.FileSettingsToolbarItem">
-  FileSettingsToolbarItem
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L15"><i class="bi bi-code-slash"></i></a>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="ZeepSDK_UI_ZeepGUI_Root_" data-uid="ZeepSDK.UI.ZeepGUI.Root*"></a>
+
+  <h3 id="ZeepSDK_UI_ZeepGUI_Root" data-uid="ZeepSDK.UI.ZeepGUI.Root">
+  Root
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The root visual element to add items to</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string FileSettingsToolbarItem = &quot;Settings&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public VisualElement Root { get; }</code></pre>
   </div>
 
 
 
 
-  <h4 class="section">Field Value</h4>
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><span class="xref">VisualElement</span></dt>
     <dd></dd>
   </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_FileToolbarItem" data-uid="ZeepSDK.UI.ZeepGUI.FileToolbarItem">
-  FileToolbarItem
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L14"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string FileToolbarItem = &quot;File&quot;</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_Skin" data-uid="ZeepSDK.UI.ZeepGUI.Skin">
-  Skin
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L29"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static OverrideStack&lt;GUISkin&gt; Skin</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ZeepSDK.Utilities.Override.OverrideStack-1.html">OverrideStack</a>&lt;<span class="xref">GUISkin</span>&gt;</dt>
-    <dd></dd>
-  </dl>
-
 
 
 
@@ -273,23 +221,40 @@ public static class ZeepGUI</code></pre>
 </h2>
 
 
-  <a id="ZeepSDK_UI_ZeepGUI_AddLastingWindow_" data-uid="ZeepSDK.UI.ZeepGUI.AddLastingWindow*"></a>
+  <a id="ZeepSDK_UI_ZeepGUI_Button_" data-uid="ZeepSDK.UI.ZeepGUI.Button*"></a>
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_AddLastingWindow_ZeepSDK_UI_IZeepWindow_" data-uid="ZeepSDK.UI.ZeepGUI.AddLastingWindow(ZeepSDK.UI.IZeepWindow)">
-  AddLastingWindow(IZeepWindow)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L586"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI_Button_System_String_ZeepSDK_UI_ButtonClickHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.Button(System.String,ZeepSDK.UI.ButtonClickHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  Button(string, ButtonClickHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a button control</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void AddLastingWindow(IZeepWindow zeepWindow)</code></pre>
+    <pre><code class="lang-csharp hljs">public Button Button(string text, ButtonClickHandler onClick, string tooltip = &quot;&quot;, ZeepGUI.StyleMode styleMode = StyleMode.Regular, ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>zeepWindow</code> <a class="xref" href="ZeepSDK.UI.IZeepWindow.html">IZeepWindow</a></dt>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>onClick</code> <a class="xref" href="ZeepSDK.UI.ButtonClickHandler.html">ButtonClickHandler</a></dt>
+    <dd></dd>
+    <dt><code>tooltip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>styleMode</code> <a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.StyleMode.html">StyleMode</a></dt>
+    <dd></dd>
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
+    <dd></dd>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Button</span></dt>
     <dd></dd>
   </dl>
 
@@ -303,223 +268,34 @@ public static class ZeepGUI</code></pre>
 
 
 
+  <a id="ZeepSDK_UI_ZeepGUI_Container_" data-uid="ZeepSDK.UI.ZeepGUI.Container*"></a>
 
-  <a id="ZeepSDK_UI_ZeepGUI_AddToolbarItem_" data-uid="ZeepSDK.UI.ZeepGUI.AddToolbarItem*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_AddToolbarItem_System_String_System_Action_System_Int32_" data-uid="ZeepSDK.UI.ZeepGUI.AddToolbarItem(System.String,System.Action,System.Int32)">
-  AddToolbarItem(string, Action, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI_Container_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.Container(ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  Container(ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a scope that wraps its children</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void AddToolbarItem(string content, Action clicked, int priority = 0)</code></pre>
+    <pre><code class="lang-csharp hljs">public ZeepGUI.IZeepScope Container(ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>content</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
     <dd></dd>
-    <dt><code>clicked</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
-    <dd></dd>
-    <dt><code>priority</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
     <dd></dd>
   </dl>
 
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_AddToolbarItem_" data-uid="ZeepSDK.UI.ZeepGUI.AddToolbarItem*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_AddToolbarItem_UnityEngine_GUIContent_System_Action_System_Int32_" data-uid="ZeepSDK.UI.ZeepGUI.AddToolbarItem(UnityEngine.GUIContent,System.Action,System.Int32)">
-  AddToolbarItem(GUIContent, Action, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L48"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void AddToolbarItem(GUIContent content, Action clicked, int priority = 0)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
+  <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
-    <dd></dd>
-    <dt><code>clicked</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
-    <dd></dd>
-    <dt><code>priority</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.IZeepScope.html">IZeepScope</a></dt>
     <dd></dd>
   </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_AddToolbarItemChild_" data-uid="ZeepSDK.UI.ZeepGUI.AddToolbarItemChild*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_AddToolbarItemChild_System_String_System_String_System_Action_System_Int32_" data-uid="ZeepSDK.UI.ZeepGUI.AddToolbarItemChild(System.String,System.String,System.Action,System.Int32)">
-  AddToolbarItemChild(string, string, Action, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L59"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void AddToolbarItemChild(string parent, string content, Action clicked, int priority = 0)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>parent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>content</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>clicked</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
-    <dd></dd>
-    <dt><code>priority</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_AddToolbarItemChild_" data-uid="ZeepSDK.UI.ZeepGUI.AddToolbarItemChild*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_AddToolbarItemChild_System_String_UnityEngine_GUIContent_System_Action_System_Int32_" data-uid="ZeepSDK.UI.ZeepGUI.AddToolbarItemChild(System.String,UnityEngine.GUIContent,System.Action,System.Int32)">
-  AddToolbarItemChild(string, GUIContent, Action, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L64"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void AddToolbarItemChild(string parent, GUIContent content, Action clicked, int priority = 0)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>parent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
-    <dd></dd>
-    <dt><code>clicked</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
-    <dd></dd>
-    <dt><code>priority</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_AddZeepGUI_" data-uid="ZeepSDK.UI.ZeepGUI.AddZeepGUI*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_AddZeepGUI_ZeepSDK_UI_IZeepGUI_" data-uid="ZeepSDK.UI.ZeepGUI.AddZeepGUI(ZeepSDK.UI.IZeepGUI)">
-  AddZeepGUI(IZeepGUI)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L33"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void AddZeepGUI(IZeepGUI receiver)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>receiver</code> <a class="xref" href="ZeepSDK.UI.IZeepGUI.html">IZeepGUI</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_BeginMenuBar_" data-uid="ZeepSDK.UI.ZeepGUI.BeginMenuBar*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_BeginMenuBar" data-uid="ZeepSDK.UI.ZeepGUI.BeginMenuBar">
-  BeginMenuBar()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L425"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void BeginMenuBar()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_BeginWindowMenuBar_" data-uid="ZeepSDK.UI.ZeepGUI.BeginWindowMenuBar*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_BeginWindowMenuBar" data-uid="ZeepSDK.UI.ZeepGUI.BeginWindowMenuBar">
-  BeginWindowMenuBar()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L438"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void BeginWindowMenuBar()</code></pre>
-  </div>
-
-
 
 
 
@@ -533,243 +309,40 @@ public static class ZeepGUI</code></pre>
 
   <a id="ZeepSDK_UI_ZeepGUI_DoubleField_" data-uid="ZeepSDK.UI.ZeepGUI.DoubleField*"></a>
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_DoubleField_System_Double_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.DoubleField(System.Double,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  DoubleField(double, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI_DoubleField_System_String_System_Double_ZeepSDK_UI_DoubleFieldValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.DoubleField(System.String,System.Double,ZeepSDK.UI.DoubleFieldValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  DoubleField(string, double, DoubleFieldValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L369"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a doublefield control</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static double DoubleField(double value, string label, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public DoubleField DoubleField(string label, double value, DoubleFieldValueUpdatedHandler onValueUpdated, string tooltip = &quot;&quot;, ZeepGUI.StyleMode styleMode = StyleMode.Regular, ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
     <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_DoubleField_" data-uid="ZeepSDK.UI.ZeepGUI.DoubleField*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_DoubleField_System_Double_UnityEngine_GUIContent_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.DoubleField(System.Double,UnityEngine.GUIContent,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  DoubleField(double, GUIContent, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L256"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static double DoubleField(double value, GUIContent content, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd></dd>
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
+    <dt><code>onValueUpdated</code> <a class="xref" href="ZeepSDK.UI.DoubleFieldValueUpdatedHandler.html">DoubleFieldValueUpdatedHandler</a></dt>
     <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>tooltip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>styleMode</code> <a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.StyleMode.html">StyleMode</a></dt>
     <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
     <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_DoubleField_" data-uid="ZeepSDK.UI.ZeepGUI.DoubleField*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_DoubleField_System_Double_UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.DoubleField(System.Double,UnityEngine.GUILayoutOption[])">
-  DoubleField(double, params GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L231"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static double DoubleField(double value, params GUILayoutOption[] options)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
-    <dt><code>options</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_DoubleField_" data-uid="ZeepSDK.UI.ZeepGUI.DoubleField*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_DoubleField_System_String_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.DoubleField(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  DoubleField(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L279"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static double DoubleField(string value, string label, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_DoubleField_" data-uid="ZeepSDK.UI.ZeepGUI.DoubleField*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_DoubleField_System_String_UnityEngine_GUIContent_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.DoubleField(System.String,UnityEngine.GUIContent,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  DoubleField(string, GUIContent, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L292"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static double DoubleField(string value, GUIContent content, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
-    <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_DoubleField_" data-uid="ZeepSDK.UI.ZeepGUI.DoubleField*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_DoubleField_System_String_UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.DoubleField(System.String,UnityEngine.GUILayoutOption[])">
-  DoubleField(string, params GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L269"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static double DoubleField(string value, params GUILayoutOption[] options)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>options</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dt><a class="xref" href="ZeepSDK.UI.Elements.DoubleField.html">DoubleField</a></dt>
     <dd></dd>
   </dl>
 
@@ -785,31 +358,38 @@ public static class ZeepGUI</code></pre>
 
   <a id="ZeepSDK_UI_ZeepGUI_DropdownButton_" data-uid="ZeepSDK.UI.ZeepGUI.DropdownButton*"></a>
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_DropdownButton_System_String_ZeepSDK_UI_ZeepDropdownMenu__UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.DropdownButton(System.String,ZeepSDK.UI.ZeepDropdownMenu@,UnityEngine.GUILayoutOption[])">
-  DropdownButton(string, out ZeepDropdownMenu, GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L454"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI_DropdownButton_System_String_ZeepSDK_UI_BuildDropdownMenuHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.DropdownButton(System.String,ZeepSDK.UI.BuildDropdownMenuHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  DropdownButton(string, BuildDropdownMenuHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L446"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a button that when clicked will show a dropdown menu</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool DropdownButton(string text, out ZeepDropdownMenu menu, GUILayoutOption[] options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Button DropdownButton(string label, BuildDropdownMenuHandler onBuildDropdownMenu, string tooltip = &quot;&quot;, ZeepGUI.StyleMode styleMode = StyleMode.Regular, ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>menu</code> <a class="xref" href="ZeepSDK.UI.ZeepDropdownMenu.html">ZeepDropdownMenu</a></dt>
+    <dt><code>onBuildDropdownMenu</code> <a class="xref" href="ZeepSDK.UI.BuildDropdownMenuHandler.html">BuildDropdownMenuHandler</a></dt>
     <dd></dd>
-    <dt><code>options</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>tooltip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>styleMode</code> <a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.StyleMode.html">StyleMode</a></dt>
+    <dd></dd>
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
+    <dd></dd>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><span class="xref">Button</span></dt>
     <dd></dd>
   </dl>
 
@@ -823,88 +403,54 @@ public static class ZeepGUI</code></pre>
 
 
 
-  <a id="ZeepSDK_UI_ZeepGUI_DropdownButton_" data-uid="ZeepSDK.UI.ZeepGUI.DropdownButton*"></a>
+  <a id="ZeepSDK_UI_ZeepGUI_Dropdown_" data-uid="ZeepSDK.UI.ZeepGUI.Dropdown*"></a>
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_DropdownButton_UnityEngine_GUIContent_ZeepSDK_UI_ZeepDropdownMenu__UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.DropdownButton(UnityEngine.GUIContent,ZeepSDK.UI.ZeepDropdownMenu@,UnityEngine.GUILayoutOption[])">
-  DropdownButton(GUIContent, out ZeepDropdownMenu, GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L449"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI_Dropdown__1_System_String_System_Collections_Generic_IEnumerable___0____0_ZeepSDK_UI_DropDownFormatHandler___0__ZeepSDK_UI_DropDownValueUpdatedHandler___0__System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.Dropdown``1(System.String,System.Collections.Generic.IEnumerable{``0},``0,ZeepSDK.UI.DropDownFormatHandler{``0},ZeepSDK.UI.DropDownValueUpdatedHandler{``0},System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  Dropdown&lt;T&gt;(string, IEnumerable&lt;T&gt;, T, DropDownFormatHandler&lt;T&gt;, DropDownValueUpdatedHandler&lt;T&gt;, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L409"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a generic typed dropdown control</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool DropdownButton(GUIContent content, out ZeepDropdownMenu menu, GUILayoutOption[] options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public CustomDropdownField&lt;T&gt; Dropdown&lt;T&gt;(string label, IEnumerable&lt;T&gt; choices, T initialChoice, DropDownFormatHandler&lt;T&gt; onFormat, DropDownValueUpdatedHandler&lt;T&gt; onValueUpdated, string tooltip = &quot;&quot;, ZeepGUI.StyleMode styleMode = StyleMode.Regular, ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
+    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>menu</code> <a class="xref" href="ZeepSDK.UI.ZeepDropdownMenu.html">ZeepDropdownMenu</a></dt>
+    <dt><code>choices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
     <dd></dd>
-    <dt><code>options</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>initialChoice</code> <span class="xref">T</span></dt>
+    <dd></dd>
+    <dt><code>onFormat</code> <a class="xref" href="ZeepSDK.UI.DropDownFormatHandler-1.html">DropDownFormatHandler</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>onValueUpdated</code> <a class="xref" href="ZeepSDK.UI.DropDownValueUpdatedHandler-1.html">DropDownValueUpdatedHandler</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>tooltip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>styleMode</code> <a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.StyleMode.html">StyleMode</a></dt>
+    <dd></dd>
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
+    <dd></dd>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><a class="xref" href="ZeepSDK.UI.Elements.CustomDropdownField-1.html">CustomDropdownField</a>&lt;T&gt;</dt>
     <dd></dd>
   </dl>
 
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_EndMenuBar_" data-uid="ZeepSDK.UI.ZeepGUI.EndMenuBar*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_EndMenuBar" data-uid="ZeepSDK.UI.ZeepGUI.EndMenuBar">
-  EndMenuBar()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L431"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void EndMenuBar()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_EndWindowMenuBar_" data-uid="ZeepSDK.UI.ZeepGUI.EndWindowMenuBar*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_EndWindowMenuBar" data-uid="ZeepSDK.UI.ZeepGUI.EndWindowMenuBar">
-  EndWindowMenuBar()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L443"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void EndWindowMenuBar()</code></pre>
-  </div>
-
-
-
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -917,35 +463,40 @@ public static class ZeepGUI</code></pre>
 
   <a id="ZeepSDK_UI_ZeepGUI_FloatField_" data-uid="ZeepSDK.UI.ZeepGUI.FloatField*"></a>
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_FloatField_System_Single_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.FloatField(System.Single,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  FloatField(float, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI_FloatField_System_String_System_Single_ZeepSDK_UI_FloatFieldValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.FloatField(System.String,System.Single,ZeepSDK.UI.FloatFieldValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  FloatField(string, float, FloatFieldValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L332"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a floatfield control</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float FloatField(float value, string label, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public FloatField FloatField(string label, float value, FloatFieldValueUpdatedHandler onValueUpdated, string tooltip = &quot;&quot;, ZeepGUI.StyleMode styleMode = StyleMode.Regular, ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
+    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd></dd>
-    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>onValueUpdated</code> <a class="xref" href="ZeepSDK.UI.FloatFieldValueUpdatedHandler.html">FloatFieldValueUpdatedHandler</a></dt>
     <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>tooltip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>styleMode</code> <a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.StyleMode.html">StyleMode</a></dt>
     <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
+    <dd></dd>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><a class="xref" href="ZeepSDK.UI.Elements.FloatField.html">FloatField</a></dt>
     <dd></dd>
   </dl>
 
@@ -959,201 +510,64 @@ public static class ZeepGUI</code></pre>
 
 
 
-  <a id="ZeepSDK_UI_ZeepGUI_FloatField_" data-uid="ZeepSDK.UI.ZeepGUI.FloatField*"></a>
+  <a id="ZeepSDK_UI_ZeepGUI_GetLastElement_" data-uid="ZeepSDK.UI.ZeepGUI.GetLastElement*"></a>
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_FloatField_System_Single_UnityEngine_GUIContent_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.FloatField(System.Single,UnityEngine.GUIContent,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  FloatField(float, GUIContent, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI_GetLastElement" data-uid="ZeepSDK.UI.ZeepGUI.GetLastElement">
+  GetLastElement()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the last element from the stack</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float FloatField(float value, GUIContent content, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public VisualElement GetLastElement()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">VisualElement</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_UI_ZeepGUI_Horizontal_" data-uid="ZeepSDK.UI.ZeepGUI.Horizontal*"></a>
+
+  <h3 id="ZeepSDK_UI_ZeepGUI_Horizontal_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.Horizontal(ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  Horizontal(ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a scope that enforces horizontal positioning if its children</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ZeepGUI.IZeepScope Horizontal(ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
     <dd></dd>
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
-    <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_FloatField_" data-uid="ZeepSDK.UI.ZeepGUI.FloatField*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_FloatField_System_Single_UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.FloatField(System.Single,UnityEngine.GUILayoutOption[])">
-  FloatField(float, params GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L157"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float FloatField(float value, params GUILayoutOption[] options)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-    <dt><code>options</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_FloatField_" data-uid="ZeepSDK.UI.ZeepGUI.FloatField*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_FloatField_System_String_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.FloatField(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  FloatField(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L205"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float FloatField(string value, string label, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_FloatField_" data-uid="ZeepSDK.UI.ZeepGUI.FloatField*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_FloatField_System_String_UnityEngine_GUIContent_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.FloatField(System.String,UnityEngine.GUIContent,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  FloatField(string, GUIContent, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L218"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float FloatField(string value, GUIContent content, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
-    <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_FloatField_" data-uid="ZeepSDK.UI.ZeepGUI.FloatField*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_FloatField_System_String_UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.FloatField(System.String,UnityEngine.GUILayoutOption[])">
-  FloatField(string, params GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L195"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float FloatField(string value, params GUILayoutOption[] options)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>options</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.IZeepScope.html">IZeepScope</a></dt>
     <dd></dd>
   </dl>
 
@@ -1169,79 +583,40 @@ public static class ZeepGUI</code></pre>
 
   <a id="ZeepSDK_UI_ZeepGUI_IntField_" data-uid="ZeepSDK.UI.ZeepGUI.IntField*"></a>
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_IntField_System_Int32_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.IntField(System.Int32,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  IntField(int, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI_IntField_System_String_System_Int32_ZeepSDK_UI_IntFieldValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.IntField(System.String,System.Int32,ZeepSDK.UI.IntFieldValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  IntField(string, int, IntFieldValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L295"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates an intfield control</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int IntField(int value, string label, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IntField IntField(string label, int value, IntFieldValueUpdatedHandler onValueUpdated, string tooltip = &quot;&quot;, ZeepGUI.StyleMode styleMode = StyleMode.Regular, ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
+    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
-    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>onValueUpdated</code> <a class="xref" href="ZeepSDK.UI.IntFieldValueUpdatedHandler.html">IntFieldValueUpdatedHandler</a></dt>
     <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>tooltip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>styleMode</code> <a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.StyleMode.html">StyleMode</a></dt>
     <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
     <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_IntField_" data-uid="ZeepSDK.UI.ZeepGUI.IntField*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_IntField_System_Int32_UnityEngine_GUIContent_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.IntField(System.Int32,UnityEngine.GUIContent,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  IntField(int, GUIContent, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L108"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int IntField(int value, GUIContent content, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
-    <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="ZeepSDK.UI.Elements.IntField.html">IntField</a></dt>
     <dd></dd>
   </dl>
 
@@ -1255,245 +630,38 @@ public static class ZeepGUI</code></pre>
 
 
 
-  <a id="ZeepSDK_UI_ZeepGUI_IntField_" data-uid="ZeepSDK.UI.ZeepGUI.IntField*"></a>
+  <a id="ZeepSDK_UI_ZeepGUI_Label_" data-uid="ZeepSDK.UI.ZeepGUI.Label*"></a>
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_IntField_System_Int32_UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.IntField(System.Int32,UnityEngine.GUILayoutOption[])">
-  IntField(int, params GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI_Label_System_String_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.Label(System.String,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  Label(string, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L189"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a label control</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int IntField(int value, params GUILayoutOption[] options)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-    <dt><code>options</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_IntField_" data-uid="ZeepSDK.UI.ZeepGUI.IntField*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_IntField_System_String_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.IntField(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  IntField(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L131"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int IntField(string value, string label, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_IntField_" data-uid="ZeepSDK.UI.ZeepGUI.IntField*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_IntField_System_String_UnityEngine_GUIContent_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.IntField(System.String,UnityEngine.GUIContent,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  IntField(string, GUIContent, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L144"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int IntField(string value, GUIContent content, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
-    <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_IntField_" data-uid="ZeepSDK.UI.ZeepGUI.IntField*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_IntField_System_String_UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.IntField(System.String,UnityEngine.GUILayoutOption[])">
-  IntField(string, params GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L121"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int IntField(string value, params GUILayoutOption[] options)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>options</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_LabelButton_" data-uid="ZeepSDK.UI.ZeepGUI.LabelButton*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_LabelButton_System_String_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.LabelButton(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  LabelButton(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L357"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool LabelButton(string label, string value, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Label Label(string label, string tooltip = &quot;&quot;, ZeepGUI.StyleMode styleMode = StyleMode.Regular, ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>tooltip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>styleMode</code> <a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.StyleMode.html">StyleMode</a></dt>
     <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
     <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_LabelButton_" data-uid="ZeepSDK.UI.ZeepGUI.LabelButton*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_LabelButton_System_String_UnityEngine_GUIContent_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.LabelButton(System.String,UnityEngine.GUIContent,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  LabelButton(string, GUIContent, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L365"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool LabelButton(string label, GUIContent content, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
-    <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><span class="xref">Label</span></dt>
     <dd></dd>
   </dl>
 
@@ -1507,37 +675,36 @@ public static class ZeepGUI</code></pre>
 
 
 
-  <a id="ZeepSDK_UI_ZeepGUI_LabelButton_" data-uid="ZeepSDK.UI.ZeepGUI.LabelButton*"></a>
+  <a id="ZeepSDK_UI_ZeepGUI_Scroll_" data-uid="ZeepSDK.UI.ZeepGUI.Scroll*"></a>
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_LabelButton_UnityEngine_GUIContent_UnityEngine_GUIContent_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.LabelButton(UnityEngine.GUIContent,UnityEngine.GUIContent,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  LabelButton(GUIContent, GUIContent, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L373"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI_Scroll_UnityEngine_Vector2_ZeepSDK_UI_ScrollValueUpdatedHandler_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.Scroll(UnityEngine.Vector2,ZeepSDK.UI.ScrollValueUpdatedHandler,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  Scroll(Vector2, ScrollValueUpdatedHandler, ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a scope that wraps its children in a (vertically) scrollable view</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool LabelButton(GUIContent label, GUIContent content, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ZeepGUI.IZeepScope Scroll(Vector2 scrollOffset, ScrollValueUpdatedHandler onScrollValueUpdated = null, ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>label</code> <span class="xref">GUIContent</span></dt>
+    <dt><code>scrollOffset</code> <span class="xref">Vector2</span></dt>
     <dd></dd>
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
+    <dt><code>onScrollValueUpdated</code> <a class="xref" href="ZeepSDK.UI.ScrollValueUpdatedHandler.html">ScrollValueUpdatedHandler</a></dt>
     <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
     <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.IZeepScope.html">IZeepScope</a></dt>
     <dd></dd>
   </dl>
 
@@ -1551,359 +718,34 @@ public static class ZeepGUI</code></pre>
 
 
 
-  <a id="ZeepSDK_UI_ZeepGUI_LabelDropdownButton_" data-uid="ZeepSDK.UI.ZeepGUI.LabelDropdownButton*"></a>
+  <a id="ZeepSDK_UI_ZeepGUI_Scroll_" data-uid="ZeepSDK.UI.ZeepGUI.Scroll*"></a>
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_LabelDropdownButton_System_String_System_String_ZeepSDK_UI_ZeepDropdownMenu__UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.LabelDropdownButton(System.String,System.String,ZeepSDK.UI.ZeepDropdownMenu@,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  LabelDropdownButton(string, string, out ZeepDropdownMenu, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI_Scroll_ZeepSDK_UI_ScrollValueUpdatedHandler_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.Scroll(ZeepSDK.UI.ScrollValueUpdatedHandler,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  Scroll(ScrollValueUpdatedHandler, ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a scope that wraps its children in a (vertically) scrollable view</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool LabelDropdownButton(string label, string text, out ZeepDropdownMenu menu, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ZeepGUI.IZeepScope Scroll(ScrollValueUpdatedHandler onScrollValueUpdated = null, ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>onScrollValueUpdated</code> <a class="xref" href="ZeepSDK.UI.ScrollValueUpdatedHandler.html">ScrollValueUpdatedHandler</a></dt>
     <dd></dd>
-    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
     <dd></dd>
-    <dt><code>menu</code> <a class="xref" href="ZeepSDK.UI.ZeepDropdownMenu.html">ZeepDropdownMenu</a></dt>
-    <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_LabelDropdownButton_" data-uid="ZeepSDK.UI.ZeepGUI.LabelDropdownButton*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_LabelDropdownButton_System_String_UnityEngine_GUIContent_ZeepSDK_UI_ZeepDropdownMenu__UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.LabelDropdownButton(System.String,UnityEngine.GUIContent,ZeepSDK.UI.ZeepDropdownMenu@,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  LabelDropdownButton(string, GUIContent, out ZeepDropdownMenu, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L399"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool LabelDropdownButton(string label, GUIContent content, out ZeepDropdownMenu menu, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
-    <dd></dd>
-    <dt><code>menu</code> <a class="xref" href="ZeepSDK.UI.ZeepDropdownMenu.html">ZeepDropdownMenu</a></dt>
-    <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_LabelDropdownButton_" data-uid="ZeepSDK.UI.ZeepGUI.LabelDropdownButton*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_LabelDropdownButton_UnityEngine_GUIContent_UnityEngine_GUIContent_ZeepSDK_UI_ZeepDropdownMenu__UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.LabelDropdownButton(UnityEngine.GUIContent,UnityEngine.GUIContent,ZeepSDK.UI.ZeepDropdownMenu@,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  LabelDropdownButton(GUIContent, GUIContent, out ZeepDropdownMenu, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L412"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool LabelDropdownButton(GUIContent label, GUIContent content, out ZeepDropdownMenu menu, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>label</code> <span class="xref">GUIContent</span></dt>
-    <dd></dd>
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
-    <dd></dd>
-    <dt><code>menu</code> <a class="xref" href="ZeepSDK.UI.ZeepDropdownMenu.html">ZeepDropdownMenu</a></dt>
-    <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_MenuButton_" data-uid="ZeepSDK.UI.ZeepGUI.MenuButton*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_MenuButton_System_String_ZeepSDK_UI_ZeepDropdownMenu__" data-uid="ZeepSDK.UI.ZeepGUI.MenuButton(System.String,ZeepSDK.UI.ZeepDropdownMenu@)">
-  MenuButton(string, out ZeepDropdownMenu)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L464"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool MenuButton(string content, out ZeepDropdownMenu menu)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>content</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>menu</code> <a class="xref" href="ZeepSDK.UI.ZeepDropdownMenu.html">ZeepDropdownMenu</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_MenuButton_" data-uid="ZeepSDK.UI.ZeepGUI.MenuButton*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_MenuButton_UnityEngine_GUIContent_ZeepSDK_UI_ZeepDropdownMenu__" data-uid="ZeepSDK.UI.ZeepGUI.MenuButton(UnityEngine.GUIContent,ZeepSDK.UI.ZeepDropdownMenu@)">
-  MenuButton(GUIContent, out ZeepDropdownMenu)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L459"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool MenuButton(GUIContent content, out ZeepDropdownMenu menu)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
-    <dd></dd>
-    <dt><code>menu</code> <a class="xref" href="ZeepSDK.UI.ZeepDropdownMenu.html">ZeepDropdownMenu</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_MenubarWindow_" data-uid="ZeepSDK.UI.ZeepGUI.MenubarWindow*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_MenubarWindow_System_Int32_UnityEngine_Rect_System_String_System_Action_System_Int32__UnityEngine_GUI_WindowFunction_System_Action_" data-uid="ZeepSDK.UI.ZeepGUI.MenubarWindow(System.Int32,UnityEngine.Rect,System.String,System.Action{System.Int32},UnityEngine.GUI.WindowFunction,System.Action)">
-  MenubarWindow(int, Rect, string, Action&lt;int&gt;, WindowFunction, Action)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L529"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Rect MenubarWindow(int id, Rect clientRect, string text, Action&lt;int&gt; onMenu, GUI.WindowFunction onWindow, Action onClose)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-    <dt><code>clientRect</code> <span class="xref">Rect</span></dt>
-    <dd></dd>
-    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>onMenu</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
-    <dd></dd>
-    <dt><code>onWindow</code> <span class="xref">GUI</span>.<span class="xref">WindowFunction</span></dt>
-    <dd></dd>
-    <dt><code>onClose</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Rect</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_RemoveLastingWindow_" data-uid="ZeepSDK.UI.ZeepGUI.RemoveLastingWindow*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_RemoveLastingWindow_ZeepSDK_UI_IZeepWindow_" data-uid="ZeepSDK.UI.ZeepGUI.RemoveLastingWindow(ZeepSDK.UI.IZeepWindow)">
-  RemoveLastingWindow(IZeepWindow)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L593"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void RemoveLastingWindow(IZeepWindow zeepWindow)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>zeepWindow</code> <a class="xref" href="ZeepSDK.UI.IZeepWindow.html">IZeepWindow</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_RemoveZeepGUI_" data-uid="ZeepSDK.UI.ZeepGUI.RemoveZeepGUI*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_RemoveZeepGUI_ZeepSDK_UI_IZeepGUI_" data-uid="ZeepSDK.UI.ZeepGUI.RemoveZeepGUI(ZeepSDK.UI.IZeepGUI)">
-  RemoveZeepGUI(IZeepGUI)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L38"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void RemoveZeepGUI(IZeepGUI receiver)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>receiver</code> <a class="xref" href="ZeepSDK.UI.IZeepGUI.html">IZeepGUI</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_TextField_" data-uid="ZeepSDK.UI.ZeepGUI.TextField*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_TextField_System_String_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.TextField(System.String,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  TextField(string, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L331"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string TextField(string value, string label, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.IZeepScope.html">IZeepScope</a></dt>
     <dd></dd>
   </dl>
 
@@ -1919,79 +761,40 @@ public static class ZeepGUI</code></pre>
 
   <a id="ZeepSDK_UI_ZeepGUI_TextField_" data-uid="ZeepSDK.UI.ZeepGUI.TextField*"></a>
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_TextField_System_String_UnityEngine_GUIContent_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.TextField(System.String,UnityEngine.GUIContent,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  TextField(string, GUIContent, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L344"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI_TextField_System_String_System_String_ZeepSDK_UI_TextFieldValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.TextField(System.String,System.String,ZeepSDK.UI.TextFieldValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  TextField(string, string, TextFieldValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L257"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a textfield control</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string TextField(string value, GUIContent content, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public TextField TextField(string label, string text, TextFieldValueUpdatedHandler onValueUpdated, string tooltip = &quot;&quot;, ZeepGUI.StyleMode styleMode = StyleMode.Regular, ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
-    <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_Toggle_" data-uid="ZeepSDK.UI.ZeepGUI.Toggle*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_Toggle_System_Boolean_System_String_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.Toggle(System.Boolean,System.String,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  Toggle(bool, string, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L305"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool Toggle(bool value, string label, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
     <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>onValueUpdated</code> <a class="xref" href="ZeepSDK.UI.TextFieldValueUpdatedHandler.html">TextFieldValueUpdatedHandler</a></dt>
     <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>tooltip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>styleMode</code> <a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.StyleMode.html">StyleMode</a></dt>
+    <dd></dd>
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
+    <dd></dd>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><span class="xref">TextField</span></dt>
     <dd></dd>
   </dl>
 
@@ -2007,35 +810,79 @@ public static class ZeepGUI</code></pre>
 
   <a id="ZeepSDK_UI_ZeepGUI_Toggle_" data-uid="ZeepSDK.UI.ZeepGUI.Toggle*"></a>
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_Toggle_System_Boolean_UnityEngine_GUIContent_UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___UnityEngine_GUILayoutOption___" data-uid="ZeepSDK.UI.ZeepGUI.Toggle(System.Boolean,UnityEngine.GUIContent,UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[],UnityEngine.GUILayoutOption[])">
-  Toggle(bool, GUIContent, GUILayoutOption[], GUILayoutOption[], GUILayoutOption[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI_Toggle_System_String_System_Boolean_ZeepSDK_UI_ToggleValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.Toggle(System.String,System.Boolean,ZeepSDK.UI.ToggleValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  Toggle(string, bool, ToggleValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L220"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a toggle control</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool Toggle(bool value, GUIContent content, GUILayoutOption[] labelOptions = null, GUILayoutOption[] fieldOptions = null, GUILayoutOption[] areaOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Toggle Toggle(string label, bool value, ToggleValueUpdatedHandler onValueUpdated, string tooltip = &quot;&quot;, ZeepGUI.StyleMode styleMode = StyleMode.Regular, ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
+    <dt><code>label</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
+    <dt><code>onValueUpdated</code> <a class="xref" href="ZeepSDK.UI.ToggleValueUpdatedHandler.html">ToggleValueUpdatedHandler</a></dt>
     <dd></dd>
-    <dt><code>labelOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>tooltip</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>fieldOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>styleMode</code> <a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.StyleMode.html">StyleMode</a></dt>
     <dd></dd>
-    <dt><code>areaOptions</code> <span class="xref">GUILayoutOption</span>[]</dt>
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
+    <dd></dd>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><span class="xref">Toggle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ZeepSDK_UI_ZeepGUI_Vertical_" data-uid="ZeepSDK.UI.ZeepGUI.Vertical*"></a>
+
+  <h3 id="ZeepSDK_UI_ZeepGUI_Vertical_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.Vertical(ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  Vertical(ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a scope that enforces vertical positioning if its children</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ZeepGUI.IZeepScope Vertical(ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
+    <dd></dd>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.IZeepScope.html">IZeepScope</a></dt>
     <dd></dd>
   </dl>
 
@@ -2051,111 +898,38 @@ public static class ZeepGUI</code></pre>
 
   <a id="ZeepSDK_UI_ZeepGUI_Window_" data-uid="ZeepSDK.UI.ZeepGUI.Window*"></a>
 
-  <h3 id="ZeepSDK_UI_ZeepGUI_Window_System_Int32_UnityEngine_Rect_System_String_UnityEngine_GUI_WindowFunction_System_Action_" data-uid="ZeepSDK.UI.ZeepGUI.Window(System.Int32,UnityEngine.Rect,System.String,UnityEngine.GUI.WindowFunction,System.Action)">
-  Window(int, Rect, string, WindowFunction, Action)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L501"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ZeepSDK_UI_ZeepGUI_Window_System_String_UnityEngine_Rect_ZeepSDK_UI_WindowPositionUpdatedHandler_ZeepSDK_UI_WindowClosedHandler_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_" data-uid="ZeepSDK.UI.ZeepGUI.Window(System.String,UnityEngine.Rect,ZeepSDK.UI.WindowPositionUpdatedHandler,ZeepSDK.UI.WindowClosedHandler,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)">
+  Window(string, Rect, WindowPositionUpdatedHandler, WindowClosedHandler, ConfigureElementHandler, ConfigureStyleHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a scope that wraps its children in the style of a window. The recommended approach is to make a class that inherits from <a class="xref" href="ZeepSDK.UI.ZeepGUIWindow.html">ZeepGUIWindow</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Rect Window(int id, Rect clientRect, string text, GUI.WindowFunction func, Action onClose)</code></pre>
+    <pre><code class="lang-csharp hljs">public ZeepGUI.IZeepScope Window(string title, Rect initialPosition, WindowPositionUpdatedHandler onPositionUpdated, WindowClosedHandler onClose, ConfigureElementHandler onConfigureElement = null, ConfigureStyleHandler onConfigureStyle = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>clientRect</code> <span class="xref">Rect</span></dt>
+    <dt><code>initialPosition</code> <span class="xref">Rect</span></dt>
     <dd></dd>
-    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>onPositionUpdated</code> <a class="xref" href="ZeepSDK.UI.WindowPositionUpdatedHandler.html">WindowPositionUpdatedHandler</a></dt>
     <dd></dd>
-    <dt><code>func</code> <span class="xref">GUI</span>.<span class="xref">WindowFunction</span></dt>
+    <dt><code>onClose</code> <a class="xref" href="ZeepSDK.UI.WindowClosedHandler.html">WindowClosedHandler</a></dt>
     <dd></dd>
-    <dt><code>onClose</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dt><code>onConfigureElement</code> <a class="xref" href="ZeepSDK.UI.ConfigureElementHandler.html">ConfigureElementHandler</a></dt>
+    <dd></dd>
+    <dt><code>onConfigureStyle</code> <a class="xref" href="ZeepSDK.UI.ConfigureStyleHandler.html">ConfigureStyleHandler</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">Rect</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_WindowMenuButton_" data-uid="ZeepSDK.UI.ZeepGUI.WindowMenuButton*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_WindowMenuButton_System_String_ZeepSDK_UI_ZeepDropdownMenu__" data-uid="ZeepSDK.UI.ZeepGUI.WindowMenuButton(System.String,ZeepSDK.UI.ZeepDropdownMenu@)">
-  WindowMenuButton(string, out ZeepDropdownMenu)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L474"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool WindowMenuButton(string text, out ZeepDropdownMenu menu)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>menu</code> <a class="xref" href="ZeepSDK.UI.ZeepDropdownMenu.html">ZeepDropdownMenu</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ZeepSDK_UI_ZeepGUI_WindowMenuButton_" data-uid="ZeepSDK.UI.ZeepGUI.WindowMenuButton*"></a>
-
-  <h3 id="ZeepSDK_UI_ZeepGUI_WindowMenuButton_UnityEngine_GUIContent_ZeepSDK_UI_ZeepDropdownMenu__" data-uid="ZeepSDK.UI.ZeepGUI.WindowMenuButton(UnityEngine.GUIContent,ZeepSDK.UI.ZeepDropdownMenu@)">
-  WindowMenuButton(GUIContent, out ZeepDropdownMenu)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L469"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool WindowMenuButton(GUIContent content, out ZeepDropdownMenu menu)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>content</code> <span class="xref">GUIContent</span></dt>
-    <dd></dd>
-    <dt><code>menu</code> <a class="xref" href="ZeepSDK.UI.ZeepDropdownMenu.html">ZeepDropdownMenu</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><a class="xref" href="ZeepSDK.UI.ZeepGUI.html">ZeepGUI</a>.<a class="xref" href="ZeepSDK.UI.ZeepGUI.IZeepScope.html">IZeepScope</a></dt>
     <dd></dd>
   </dl>
 
@@ -2173,7 +947,7 @@ public static class ZeepGUI</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.cs/#L11" class="edit-link">Edit this page</a>
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/UI/ZeepGUI.Scopes.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

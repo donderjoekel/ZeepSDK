@@ -10,7 +10,11 @@
           "relative_path": "api/ZeepSDK.Chat.ChatApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Chat.ChatApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Chat.ChatApi.yml\" sourcestartlinenumber=\"1\">An API that allows you to send and receive chat messages</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20,7 +24,11 @@
           "relative_path": "api/ZeepSDK.Chat.ChatMessageReceivedDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Chat.ChatMessageReceivedDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -30,7 +38,11 @@
           "relative_path": "api/ZeepSDK.Chat.ServerMessageReceivedDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Chat.ServerMessageReceivedDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -40,7 +52,11 @@
           "relative_path": "api/ZeepSDK.Chat.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Chat",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -50,7 +66,11 @@
           "relative_path": "api/ZeepSDK.ChatCommands.ChatCommandApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.ChatCommandApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.ChatCommandApi.yml\" sourcestartlinenumber=\"1\">An API that allows you to register chat commands</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -60,7 +80,11 @@
           "relative_path": "api/ZeepSDK.ChatCommands.IChatCommand.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.IChatCommand",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.IChatCommand.yml\" sourcestartlinenumber=\"1\">The base interface for all chat commands</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -70,7 +94,11 @@
           "relative_path": "api/ZeepSDK.ChatCommands.ILocalChatCommand.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.ILocalChatCommand",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.ILocalChatCommand.yml\" sourcestartlinenumber=\"1\">The interface to use for local chat commands</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -80,7 +108,11 @@
           "relative_path": "api/ZeepSDK.ChatCommands.IMixedChatCommand.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.IMixedChatCommand",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.IMixedChatCommand.yml\" sourcestartlinenumber=\"1\">The interface to use for a mixed chat command</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -90,7 +122,11 @@
           "relative_path": "api/ZeepSDK.ChatCommands.IRemoteChatCommand.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.IRemoteChatCommand",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.IRemoteChatCommand.yml\" sourcestartlinenumber=\"1\">The interface to use for remote chat commands</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -100,7 +136,11 @@
           "relative_path": "api/ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -110,7 +150,11 @@
           "relative_path": "api/ZeepSDK.ChatCommands.MixedChatCommandBase.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.MixedChatCommandBase",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.MixedChatCommandBase.yml\" sourcestartlinenumber=\"1\">A base class that can be used for implementing a mixed chat command</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -120,7 +164,11 @@
           "relative_path": "api/ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -130,7 +178,11 @@
           "relative_path": "api/ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -140,7 +192,11 @@
           "relative_path": "api/ZeepSDK.ChatCommands.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -150,7 +206,11 @@
           "relative_path": "api/ZeepSDK.Communication.CommunicationApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Communication.CommunicationApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Communication.CommunicationApi.yml\" sourcestartlinenumber=\"1\">An api that enables communication between mods</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -160,7 +220,11 @@
           "relative_path": "api/ZeepSDK.Communication.IComReceiver.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Communication.IComReceiver",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Communication.IComReceiver.yml\" sourcestartlinenumber=\"1\">A receiver that can listen for messages from senders</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -170,7 +234,11 @@
           "relative_path": "api/ZeepSDK.Communication.IComSender.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Communication.IComSender",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Communication.IComSender.yml\" sourcestartlinenumber=\"1\">A sender that can broadcast messages to all listening receivers</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -180,7 +248,11 @@
           "relative_path": "api/ZeepSDK.Communication.MessageReceivedDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Communication.MessageReceivedDelegate",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Communication.MessageReceivedDelegate.yml\" sourcestartlinenumber=\"1\">The delegate for when a message is received</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -190,7 +262,11 @@
           "relative_path": "api/ZeepSDK.Communication.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Communication",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -200,7 +276,11 @@
           "relative_path": "api/ZeepSDK.Controls.ControlsApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Controls.ControlsApi",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -210,7 +290,11 @@
           "relative_path": "api/ZeepSDK.Controls.InputOverrideStack.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Controls.InputOverrideStack",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -220,7 +304,11 @@
           "relative_path": "api/ZeepSDK.Controls.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Controls",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -230,7 +318,11 @@
           "relative_path": "api/ZeepSDK.Cosmetics.CosmeticsApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Cosmetics.CosmeticsApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Cosmetics.CosmeticsApi.yml\" sourcestartlinenumber=\"1\">An api that allows you to get cosmetics</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -240,7 +332,11 @@
           "relative_path": "api/ZeepSDK.Cosmetics.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Cosmetics",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -250,7 +346,11 @@
           "relative_path": "api/ZeepSDK.Extensions.EventExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Extensions.EventExtensions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -260,7 +360,11 @@
           "relative_path": "api/ZeepSDK.Extensions.ListExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Extensions.ListExtensions",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Extensions.ListExtensions.yml\" sourcestartlinenumber=\"1\">Extensions for lists</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -270,7 +374,11 @@
           "relative_path": "api/ZeepSDK.Extensions.StringBuilderExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Extensions.StringBuilderExtensions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -280,7 +388,11 @@
           "relative_path": "api/ZeepSDK.Extensions.TransformExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Extensions.TransformExtensions",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Extensions.TransformExtensions.yml\" sourcestartlinenumber=\"1\">A class containing extensions for <xref href=\"UnityEngine.Transform\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -290,7 +402,11 @@
           "relative_path": "api/ZeepSDK.Extensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Extensions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -300,7 +416,11 @@
           "relative_path": "api/ZeepSDK.Leaderboard.ILeaderboardTab.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.ILeaderboardTab",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.ILeaderboardTab.yml\" sourcestartlinenumber=\"1\">Either <xref href=\"ZeepSDK.Leaderboard.IMultiplayerLeaderboardTab\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"ZeepSDK.Leaderboard.ISingleplayerLeaderboardTab\" data-throw-if-not-resolved=\"false\"></xref> should be implemented</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -310,7 +430,11 @@
           "relative_path": "api/ZeepSDK.Leaderboard.IMultiplayerLeaderboardTab.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.IMultiplayerLeaderboardTab",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.IMultiplayerLeaderboardTab.yml\" sourcestartlinenumber=\"1\">The interface to implement if you want to create a custom tab for the multiplayer leaderboard</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -320,7 +444,11 @@
           "relative_path": "api/ZeepSDK.Leaderboard.ISingleplayerLeaderboardTab.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.ISingleplayerLeaderboardTab",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.ISingleplayerLeaderboardTab.yml\" sourcestartlinenumber=\"1\">The interface to implement if you want to create a custom tab for the singleplayer leaderboard</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -330,7 +458,11 @@
           "relative_path": "api/ZeepSDK.Leaderboard.LeaderboardApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.LeaderboardApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.LeaderboardApi.yml\" sourcestartlinenumber=\"1\">An API that allows you to add custom tabs to the leaderboard</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -340,7 +472,11 @@
           "relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.yml\" sourcestartlinenumber=\"1\">A base implementation that can be used for creating a custom tab for the leaderboard\n<remarks>This is a replacement for <xref href=\"ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab\" data-throw-if-not-resolved=\"false\"></xref> to keep backward compatibility</remarks></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -350,7 +486,11 @@
           "relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.yml\" sourcestartlinenumber=\"1\">[Obsolete] A base implementation that can be used for creating a custom tab for the leaderboard</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -360,7 +500,11 @@
           "relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseMultiplayerLeaderboardTab.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.Pages.BaseMultiplayerLeaderboardTab",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.Pages.BaseMultiplayerLeaderboardTab.yml\" sourcestartlinenumber=\"1\">A base implementation that can be used for creating a custom multiplayer tab for the leaderboard</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -370,7 +514,11 @@
           "relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseSingleplayerLeaderboardTab.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.Pages.BaseSingleplayerLeaderboardTab",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.Pages.BaseSingleplayerLeaderboardTab.yml\" sourcestartlinenumber=\"1\">A base implementation that can be used for creating a custom singleplayer tab for the leaderboard</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -380,7 +528,11 @@
           "relative_path": "api/ZeepSDK.Leaderboard.Pages.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.Pages",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -390,7 +542,11 @@
           "relative_path": "api/ZeepSDK.Leaderboard.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -400,7 +556,11 @@
           "relative_path": "api/ZeepSDK.Level.LevelApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Level.LevelApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Level.LevelApi.yml\" sourcestartlinenumber=\"1\">An API for interacting with levels</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -410,7 +570,11 @@
           "relative_path": "api/ZeepSDK.Level.ZeepBlock.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Level.ZeepBlock",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Level.ZeepBlock.yml\" sourcestartlinenumber=\"1\">A block in a Zeeplevel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -420,7 +584,11 @@
           "relative_path": "api/ZeepSDK.Level.ZeepLevel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Level.ZeepLevel",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Level.ZeepLevel.yml\" sourcestartlinenumber=\"1\">A representation of a Zeeplevel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -430,7 +598,11 @@
           "relative_path": "api/ZeepSDK.Level.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Level",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -440,7 +612,11 @@
           "relative_path": "api/ZeepSDK.LevelEditor.EnteredLevelEditorDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.EnteredLevelEditorDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -450,7 +626,11 @@
           "relative_path": "api/ZeepSDK.LevelEditor.EnteredTestModeDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.EnteredTestModeDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -460,7 +640,11 @@
           "relative_path": "api/ZeepSDK.LevelEditor.ExitedLevelEditorDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.ExitedLevelEditorDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -470,7 +654,11 @@
           "relative_path": "api/ZeepSDK.LevelEditor.ICustomBlockBuilder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.ICustomBlockBuilder",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.LevelEditor.ICustomBlockBuilder.yml\" sourcestartlinenumber=\"1\">A builder that is used to define a custom block</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -480,7 +668,11 @@
           "relative_path": "api/ZeepSDK.LevelEditor.ICustomFolderBuilder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.ICustomFolderBuilder",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.LevelEditor.ICustomFolderBuilder.yml\" sourcestartlinenumber=\"1\">A builder that is used to define a custom folder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -490,7 +682,11 @@
           "relative_path": "api/ZeepSDK.LevelEditor.LevelEditorApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.LevelEditorApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.LevelEditor.LevelEditorApi.yml\" sourcestartlinenumber=\"1\">An API for interacting with the level editor</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -500,7 +696,11 @@
           "relative_path": "api/ZeepSDK.LevelEditor.LevelLoadedDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.LevelLoadedDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -510,7 +710,11 @@
           "relative_path": "api/ZeepSDK.LevelEditor.LevelSavedDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.LevelSavedDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -520,7 +724,11 @@
           "relative_path": "api/ZeepSDK.LevelEditor.SelectionChangedDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.SelectionChangedDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -530,7 +738,11 @@
           "relative_path": "api/ZeepSDK.LevelEditor.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -540,7 +752,11 @@
           "relative_path": "api/ZeepSDK.Messaging.ITaggedMessenger.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Messaging.ITaggedMessenger",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Messaging.ITaggedMessenger.yml\" sourcestartlinenumber=\"1\">A messenger that shows a tag when logging a message</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -550,7 +766,11 @@
           "relative_path": "api/ZeepSDK.Messaging.MessengerApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Messaging.MessengerApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Messaging.MessengerApi.yml\" sourcestartlinenumber=\"1\">Show the user a message using the game's messenger</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -560,7 +780,11 @@
           "relative_path": "api/ZeepSDK.Messaging.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Messaging",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -570,7 +794,11 @@
           "relative_path": "api/ZeepSDK.Multiplayer.ConnectedToGameDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.ConnectedToGameDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -580,7 +808,11 @@
           "relative_path": "api/ZeepSDK.Multiplayer.CreatedRoomDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.CreatedRoomDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -590,7 +822,11 @@
           "relative_path": "api/ZeepSDK.Multiplayer.DisconnectedFromGameDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.DisconnectedFromGameDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -600,7 +836,11 @@
           "relative_path": "api/ZeepSDK.Multiplayer.JoinedRoomDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.JoinedRoomDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -610,7 +850,11 @@
           "relative_path": "api/ZeepSDK.Multiplayer.MultiplayerApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.MultiplayerApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Multiplayer.MultiplayerApi.yml\" sourcestartlinenumber=\"1\">An API for interacting with the multiplayer side of Zeepkist</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -620,7 +864,11 @@
           "relative_path": "api/ZeepSDK.Multiplayer.PlayerJoinedDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.PlayerJoinedDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -630,7 +878,11 @@
           "relative_path": "api/ZeepSDK.Multiplayer.PlayerLeftDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.PlayerLeftDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -640,7 +892,11 @@
           "relative_path": "api/ZeepSDK.Multiplayer.PlaylistItem.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.PlaylistItem",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Multiplayer.PlaylistItem.yml\" sourcestartlinenumber=\"1\">An item describing a level in a playlist</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -650,7 +906,11 @@
           "relative_path": "api/ZeepSDK.Multiplayer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -660,7 +920,11 @@
           "relative_path": "api/ZeepSDK.MyPluginInfo.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.MyPluginInfo",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -670,7 +934,11 @@
           "relative_path": "api/ZeepSDK.Numerics.Vector2.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Numerics.Vector2",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Numerics.Vector2.yml\" sourcestartlinenumber=\"1\">A decimal backed vector2</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -680,7 +948,11 @@
           "relative_path": "api/ZeepSDK.Numerics.Vector3.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Numerics.Vector3",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Numerics.Vector3.yml\" sourcestartlinenumber=\"1\">A decimal backed vector3</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -690,7 +962,11 @@
           "relative_path": "api/ZeepSDK.Numerics.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Numerics",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -700,7 +976,11 @@
           "relative_path": "api/ZeepSDK.PhotoMode.PhotoModeApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.PhotoMode.PhotoModeApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.PhotoMode.PhotoModeApi.yml\" sourcestartlinenumber=\"1\">An API for interacting with Photo Mode</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -710,7 +990,11 @@
           "relative_path": "api/ZeepSDK.PhotoMode.PhotoModeEnteredDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.PhotoMode.PhotoModeEnteredDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -720,7 +1004,11 @@
           "relative_path": "api/ZeepSDK.PhotoMode.PhotoModeExitedDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.PhotoMode.PhotoModeExitedDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -730,7 +1018,11 @@
           "relative_path": "api/ZeepSDK.PhotoMode.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.PhotoMode",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -740,7 +1032,11 @@
           "relative_path": "api/ZeepSDK.Playlist.IPlaylistEditor.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Playlist.IPlaylistEditor",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Playlist.IPlaylistEditor.yml\" sourcestartlinenumber=\"1\">An editor for a playlist</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -750,7 +1046,11 @@
           "relative_path": "api/ZeepSDK.Playlist.PlaylistApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Playlist.PlaylistApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Playlist.PlaylistApi.yml\" sourcestartlinenumber=\"1\">An API for interacting with playlists</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -760,7 +1060,11 @@
           "relative_path": "api/ZeepSDK.Playlist.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Playlist",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -770,7 +1074,11 @@
           "relative_path": "api/ZeepSDK.Racing.CrashReason.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.CrashReason",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Racing.CrashReason.yml\" sourcestartlinenumber=\"1\">The reason why a player crashed</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -780,7 +1088,11 @@
           "relative_path": "api/ZeepSDK.Racing.CrashedDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.CrashedDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -790,7 +1102,11 @@
           "relative_path": "api/ZeepSDK.Racing.CrossedFinishLineDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.CrossedFinishLineDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -800,7 +1116,11 @@
           "relative_path": "api/ZeepSDK.Racing.EnteredFirstPersonDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.EnteredFirstPersonDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -810,7 +1130,11 @@
           "relative_path": "api/ZeepSDK.Racing.EnteredThirdPersonDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.EnteredThirdPersonDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -820,7 +1144,11 @@
           "relative_path": "api/ZeepSDK.Racing.LevelLoadedDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.LevelLoadedDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -830,7 +1158,11 @@
           "relative_path": "api/ZeepSDK.Racing.PassedCheckpointDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.PassedCheckpointDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -840,7 +1172,11 @@
           "relative_path": "api/ZeepSDK.Racing.PlayerSpawnedDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.PlayerSpawnedDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -850,7 +1186,11 @@
           "relative_path": "api/ZeepSDK.Racing.QuickResetDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.QuickResetDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -860,7 +1200,11 @@
           "relative_path": "api/ZeepSDK.Racing.QuitDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.QuitDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -870,7 +1214,11 @@
           "relative_path": "api/ZeepSDK.Racing.RacingApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.RacingApi",
+      "Summary": ""
     },
     {
       "type": "ManagedReference",
@@ -880,7 +1228,11 @@
           "relative_path": "api/ZeepSDK.Racing.RoundEndedDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.RoundEndedDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -890,7 +1242,11 @@
           "relative_path": "api/ZeepSDK.Racing.RoundStartedDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.RoundStartedDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -900,7 +1256,11 @@
           "relative_path": "api/ZeepSDK.Racing.WheelBrokenDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.WheelBrokenDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -910,7 +1270,11 @@
           "relative_path": "api/ZeepSDK.Racing.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -920,7 +1284,11 @@
           "relative_path": "api/ZeepSDK.Scripting.ScriptingApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Scripting.ScriptingApi",
+      "Summary": ""
     },
     {
       "type": "ManagedReference",
@@ -930,7 +1298,11 @@
           "relative_path": "api/ZeepSDK.Scripting.ZUA.ILuaEvent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Scripting.ZUA.ILuaEvent",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Scripting.ZUA.ILuaEvent.yml\" sourcestartlinenumber=\"1\">Represents a Lua event that can be subscribed to or unsubscribed from.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -940,7 +1312,11 @@
           "relative_path": "api/ZeepSDK.Scripting.ZUA.ILuaFunction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Scripting.ZUA.ILuaFunction",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Scripting.ZUA.ILuaFunction.yml\" sourcestartlinenumber=\"1\">Represents a Lua function definition that includes a namespace, name, and a delegate to invoke the function.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -950,7 +1326,11 @@
           "relative_path": "api/ZeepSDK.Scripting.ZUA.Zua.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Scripting.ZUA.Zua",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Scripting.ZUA.Zua.yml\" sourcestartlinenumber=\"1\">A wrapper around a Lua script</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -960,7 +1340,11 @@
           "relative_path": "api/ZeepSDK.Scripting.ZUA.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Scripting.ZUA",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -970,7 +1354,11 @@
           "relative_path": "api/ZeepSDK.Scripting.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Scripting",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -980,7 +1368,11 @@
           "relative_path": "api/ZeepSDK.Storage.IModStorage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Storage.IModStorage",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Storage.IModStorage.yml\" sourcestartlinenumber=\"1\">A storage object that allows you to save and load data to a directory for your mod</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -990,7 +1382,11 @@
           "relative_path": "api/ZeepSDK.Storage.StorageApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Storage.StorageApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Storage.StorageApi.yml\" sourcestartlinenumber=\"1\">An API for creating storage objects for your mod</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1000,37 +1396,277 @@
           "relative_path": "api/ZeepSDK.Storage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Storage",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.IZeepGUI.yml",
+      "source_relative_path": "api/ZeepSDK.UI.BuildDropdownMenuHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.UI.IZeepGUI.html"
+          "relative_path": "api/ZeepSDK.UI.BuildDropdownMenuHandler.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.BuildDropdownMenuHandler",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.BuildDropdownMenuHandler.yml\" sourcestartlinenumber=\"1\">Allows you to build a menu when a <xref href=\"ZeepSDK.UI.ZeepGUI.DropdownButton(System.String%2cZeepSDK.UI.BuildDropdownMenuHandler%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> is clicked</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.IZeepMenu.yml",
+      "source_relative_path": "api/ZeepSDK.UI.ButtonClickHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.UI.IZeepMenu.html"
+          "relative_path": "api/ZeepSDK.UI.ButtonClickHandler.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.ButtonClickHandler",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ButtonClickHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUI.Button(System.String%2cZeepSDK.UI.ButtonClickHandler%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> is clicked</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.IZeepWindow.yml",
+      "source_relative_path": "api/ZeepSDK.UI.ConfigureElementHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.UI.IZeepWindow.html"
+          "relative_path": "api/ZeepSDK.UI.ConfigureElementHandler.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.ConfigureElementHandler",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ConfigureElementHandler.yml\" sourcestartlinenumber=\"1\">Allows you to customize the given visual element</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.ConfigureStyleHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.ConfigureStyleHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.ConfigureStyleHandler",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ConfigureStyleHandler.yml\" sourcestartlinenumber=\"1\">Allows you to apply a custom style</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.DoubleFieldValueUpdatedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.DoubleFieldValueUpdatedHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.DoubleFieldValueUpdatedHandler",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.DoubleFieldValueUpdatedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUI.DoubleField(System.String%2cSystem.Double%2cZeepSDK.UI.DoubleFieldValueUpdatedHandler%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> control gets its value updated</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.DropDownFormatHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.DropDownFormatHandler-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.DropDownFormatHandler<T>",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.DropDownFormatHandler-1.yml\" sourcestartlinenumber=\"1\">Allows you to provide custom formatting for a dropdown item</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.DropDownValueUpdatedHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.DropDownValueUpdatedHandler-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.DropDownValueUpdatedHandler<T>",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.DropDownValueUpdatedHandler-1.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUI.Dropdown%60%601(System.String%2cSystem.Collections.Generic.IEnumerable%7b%60%600%7d%2c%60%600%2cZeepSDK.UI.DropDownFormatHandler%7b%60%600%7d%2cZeepSDK.UI.DropDownValueUpdatedHandler%7b%60%600%7d%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> control gets its value updated</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.Elements.CustomDropdownField-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.Elements.CustomDropdownField-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.Elements.CustomDropdownField<TItem>",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.Elements.CustomDropdownField-1.yml\" sourcestartlinenumber=\"1\">A dropdown field with a specific generic type</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.Elements.DoubleField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.Elements.DoubleField.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.Elements.DoubleField",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.Elements.DoubleField.yml\" sourcestartlinenumber=\"1\">A text field that only accepts double</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.Elements.FloatField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.Elements.FloatField.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.Elements.FloatField",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.Elements.FloatField.yml\" sourcestartlinenumber=\"1\">A text field that only accepts float</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.Elements.IntField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.Elements.IntField.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.Elements.IntField",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.Elements.IntField.yml\" sourcestartlinenumber=\"1\">A text field that only accepts int</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.Elements.NumericInputBaseField-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.Elements.NumericInputBaseField-1.yml\" sourcestartlinenumber=\"1\">Reimplementation of TextField but then for numbers</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.Elements.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.Elements.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.Elements",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.FloatFieldValueUpdatedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.FloatFieldValueUpdatedHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.FloatFieldValueUpdatedHandler",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.FloatFieldValueUpdatedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUI.FloatField(System.String%2cSystem.Single%2cZeepSDK.UI.FloatFieldValueUpdatedHandler%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> control gets its value updated</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.IDropdownMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.IDropdownMenu.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.IDropdownMenu",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.IDropdownMenu.yml\" sourcestartlinenumber=\"1\">Interface for a dropdown menu</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.IntFieldValueUpdatedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.IntFieldValueUpdatedHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.IntFieldValueUpdatedHandler",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.IntFieldValueUpdatedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when an <xref href=\"ZeepSDK.UI.ZeepGUI.IntField(System.String%2cSystem.Int32%2cZeepSDK.UI.IntFieldValueUpdatedHandler%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> control gets its value updated</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.ScrollValueUpdatedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.ScrollValueUpdatedHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.ScrollValueUpdatedHandler",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ScrollValueUpdatedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUI.Scroll(ZeepSDK.UI.ScrollValueUpdatedHandler%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> is scrolled</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.TextFieldValueUpdatedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.TextFieldValueUpdatedHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.TextFieldValueUpdatedHandler",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.TextFieldValueUpdatedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUI.TextField(System.String%2cSystem.String%2cZeepSDK.UI.TextFieldValueUpdatedHandler%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> control gets its value updated</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.ToggleValueUpdatedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.ToggleValueUpdatedHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.ToggleValueUpdatedHandler",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ToggleValueUpdatedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUI.Toggle(System.String%2cSystem.Boolean%2cZeepSDK.UI.ToggleValueUpdatedHandler%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> control gets its value updated</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1040,27 +1676,95 @@
           "relative_path": "api/ZeepSDK.UI.UIApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.UIApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.UIApi.yml\" sourcestartlinenumber=\"1\">An API related to the UI of the game</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.ZeepDropdownMenu.yml",
+      "source_relative_path": "api/ZeepSDK.UI.VisualElementExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.UI.ZeepDropdownMenu.html"
+          "relative_path": "api/ZeepSDK.UI.VisualElementExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.VisualElementExtensions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.ZeepGUI.WindowFunction.yml",
+      "source_relative_path": "api/ZeepSDK.UI.WindowClosedHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.UI.ZeepGUI.WindowFunction.html"
+          "relative_path": "api/ZeepSDK.UI.WindowClosedHandler.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.WindowClosedHandler",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.WindowClosedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUIWindow\" data-throw-if-not-resolved=\"false\"></xref> is closed\n<xref href=\"ZeepSDK.UI.ZeepGUI.Window(System.String%2cUnityEngine.Rect%2cZeepSDK.UI.WindowPositionUpdatedHandler%2cZeepSDK.UI.WindowClosedHandler%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.WindowPositionUpdatedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.WindowPositionUpdatedHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.WindowPositionUpdatedHandler",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.WindowPositionUpdatedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUIWindow\" data-throw-if-not-resolved=\"false\"></xref> has its position changed\n<xref href=\"ZeepSDK.UI.ZeepGUI.Window(System.String%2cUnityEngine.Rect%2cZeepSDK.UI.WindowPositionUpdatedHandler%2cZeepSDK.UI.WindowClosedHandler%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.ZeepGUI.IZeepScope.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.ZeepGUI.IZeepScope.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.ZeepGUI.IZeepScope",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ZeepGUI.IZeepScope.yml\" sourcestartlinenumber=\"1\">A scope that can be used to contain controls</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.ZeepGUI.StyleMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.ZeepGUI.StyleMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.ZeepGUI.StyleMode",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ZeepGUI.StyleMode.yml\" sourcestartlinenumber=\"1\">The style to apply to the control</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.ZeepGUI.ToolbarScope.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.ZeepGUI.ToolbarScope.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.ZeepGUI.ToolbarScope",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1070,17 +1774,39 @@
           "relative_path": "api/ZeepSDK.UI.ZeepGUI.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.ZeepGUI",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ZeepGUI.yml\" sourcestartlinenumber=\"1\">A class that provides all kinds of gui elements</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.ZeepGUIUtility.yml",
+      "source_relative_path": "api/ZeepSDK.UI.ZeepGUIBehaviour.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.UI.ZeepGUIUtility.html"
+          "relative_path": "api/ZeepSDK.UI.ZeepGUIBehaviour.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.ZeepGUIBehaviour",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ZeepGUIBehaviour.yml\" sourcestartlinenumber=\"1\">A basic behaviour that allows you to easily make UI</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.ZeepGUIWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.ZeepGUIWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.ZeepGUIWindow",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ZeepGUIWindow.yml\" sourcestartlinenumber=\"1\">A base class that can be inherited to more easily create a window</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1090,7 +1816,11 @@
           "relative_path": "api/ZeepSDK.UI.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1100,7 +1830,11 @@
           "relative_path": "api/ZeepSDK.Utilities.ColorDefinition.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.ColorDefinition",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.ColorDefinition.yml\" sourcestartlinenumber=\"1\">A definition of a color with a name and a value</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1110,7 +1844,11 @@
           "relative_path": "api/ZeepSDK.Utilities.ColorUtility.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.ColorUtility",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.ColorUtility.yml\" sourcestartlinenumber=\"1\">A class containing utilities that are related to <xref href=\"UnityEngine.Color\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1120,7 +1858,11 @@
           "relative_path": "api/ZeepSDK.Utilities.ComponentCache.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.ComponentCache",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.ComponentCache.yml\" sourcestartlinenumber=\"1\">A cache for components that live somewhere in the project.\nIt uses Object.FindObjectOfType to find the component so this is not particularly efficient.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1130,7 +1872,11 @@
           "relative_path": "api/ZeepSDK.Utilities.DisposableBag.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.DisposableBag",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1140,7 +1886,11 @@
           "relative_path": "api/ZeepSDK.Utilities.ListUtility.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.ListUtility",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.ListUtility.yml\" sourcestartlinenumber=\"1\">A class containing utility methods for lists</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1150,7 +1900,11 @@
           "relative_path": "api/ZeepSDK.Utilities.LoggerFactory.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.LoggerFactory",
+      "Summary": ""
     },
     {
       "type": "ManagedReference",
@@ -1160,7 +1914,11 @@
           "relative_path": "api/ZeepSDK.Utilities.Override.ConditionTickType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override.ConditionTickType",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1170,7 +1928,11 @@
           "relative_path": "api/ZeepSDK.Utilities.Override.ConditionTicker.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override.ConditionTicker",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1180,7 +1942,11 @@
           "relative_path": "api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1190,7 +1956,11 @@
           "relative_path": "api/ZeepSDK.Utilities.Override.IConditionTickable.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override.IConditionTickable",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1200,7 +1970,11 @@
           "relative_path": "api/ZeepSDK.Utilities.Override.IOverrideLayer-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override.IOverrideLayer<T>",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1210,7 +1984,11 @@
           "relative_path": "api/ZeepSDK.Utilities.Override.OverrideLayer-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override.OverrideLayer<T>",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1220,7 +1998,11 @@
           "relative_path": "api/ZeepSDK.Utilities.Override.OverrideStack-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override.OverrideStack<T>",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1230,7 +2012,11 @@
           "relative_path": "api/ZeepSDK.Utilities.Override.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1240,7 +2026,11 @@
           "relative_path": "api/ZeepSDK.Utilities.SpriteUtility.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.SpriteUtility",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.SpriteUtility.yml\" sourcestartlinenumber=\"1\">A class containing utilities that are related to <xref href=\"UnityEngine.Sprite\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1250,7 +2040,11 @@
           "relative_path": "api/ZeepSDK.Utilities.UnityFolders.PluginsFolder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.UnityFolders.PluginsFolder",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.UnityFolders.PluginsFolder.yml\" sourcestartlinenumber=\"1\">An interface for accessing the game's Plugins folder (not the BepInEx one).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1260,7 +2054,11 @@
           "relative_path": "api/ZeepSDK.Utilities.UnityFolders.StreamingAssetsFolder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.UnityFolders.StreamingAssetsFolder",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.UnityFolders.StreamingAssetsFolder.yml\" sourcestartlinenumber=\"1\">An interface for accessing the game's StreamingAssets folder.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1270,7 +2068,11 @@
           "relative_path": "api/ZeepSDK.Utilities.UnityFolders.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.UnityFolders",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1280,7 +2082,11 @@
           "relative_path": "api/ZeepSDK.Utilities.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1290,7 +2096,11 @@
           "relative_path": "api/ZeepSDK.Workshop.WorkshopApi.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Workshop.WorkshopApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Workshop.WorkshopApi.yml\" sourcestartlinenumber=\"1\">An API for interacting with the workshop</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1300,7 +2110,11 @@
           "relative_path": "api/ZeepSDK.Workshop.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Workshop",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1310,7 +2124,11 @@
           "relative_path": "api/ZeepSDK.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK",
+      "Summary": null
     },
     {
       "type": "Conceptual",
@@ -1326,11 +2144,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "api/toc.html"
-        },
         ".json": {
           "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
@@ -1349,11 +2167,11 @@
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/toc.html"
-        },
         ".json": {
           "relative_path": "articles/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/toc.html"
         }
       },
       "version": ""
@@ -1372,11 +2190,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""
