@@ -96,4 +96,11 @@ public interface IModStorage
     /// </summary>
     /// <param name="name">The name of the file without extension</param>
     void DeleteBlob(string name);
+
+    /// <summary>
+    /// Saves data to a file
+    /// </summary>
+    /// <param name="filename">The filename including extension</param>
+    /// <param name="data">The data to save</param>
+    void SaveToFile(string filename, byte[] data);
 }

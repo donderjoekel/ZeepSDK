@@ -147,4 +147,10 @@ internal class ModStorage : IModStorage
         if (File.Exists(path))
             File.Delete(path);
     }
+
+    public void SaveToFile(string filename, byte[] data)
+    {
+        string path = CreatePath(filename, string.Empty);
+        File.WriteAllBytes(path, data);
+    }
 }
