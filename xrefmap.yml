@@ -3729,6 +3729,22 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Storage.IModStorage.RemoveConverter
   nameWithType: IModStorage.RemoveConverter
+- uid: ZeepSDK.Storage.IModStorage.SaveToFile(System.String,System.Byte[])
+  name: SaveToFile(string, byte[])
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_SaveToFile_System_String_System_Byte___
+  commentId: M:ZeepSDK.Storage.IModStorage.SaveToFile(System.String,System.Byte[])
+  name.vb: SaveToFile(String, Byte())
+  fullName: ZeepSDK.Storage.IModStorage.SaveToFile(string, byte[])
+  fullName.vb: ZeepSDK.Storage.IModStorage.SaveToFile(String, Byte())
+  nameWithType: IModStorage.SaveToFile(string, byte[])
+  nameWithType.vb: IModStorage.SaveToFile(String, Byte())
+- uid: ZeepSDK.Storage.IModStorage.SaveToFile*
+  name: SaveToFile
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_SaveToFile_
+  commentId: Overload:ZeepSDK.Storage.IModStorage.SaveToFile
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.IModStorage.SaveToFile
+  nameWithType: IModStorage.SaveToFile
 - uid: ZeepSDK.Storage.IModStorage.SaveToJson(System.String,System.Object)
   name: SaveToJson(string, object)
   href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_SaveToJson_System_String_System_Object_
