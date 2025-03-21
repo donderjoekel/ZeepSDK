@@ -1,5 +1,8 @@
-﻿using JetBrains.Annotations;
+﻿using System;
+using BepInEx.Logging;
+using JetBrains.Annotations;
 using UnityEngine;
+using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Leaderboard;
 
@@ -10,6 +13,7 @@ namespace ZeepSDK.Leaderboard;
 public static class LeaderboardApi
 {
     private static LeaderboardHandler leaderboardHandler;
+    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(LeaderboardApi));
 
     internal static void Initialize(GameObject gameObject)
     {
@@ -24,9 +28,17 @@ public static class LeaderboardApi
     public static TTab AddTab<TTab>()
         where TTab : ILeaderboardTab, new()
     {
-        TTab tab = new TTab();
-        leaderboardHandler.AddTab(tab);
-        return tab;
+        try
+        {
+            TTab tab = new TTab();
+            leaderboardHandler.AddTab(tab);
+            return tab;
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(AddTab)}: " + e);
+            return default;
+        }
     }
 
     /// <summary>
@@ -35,7 +47,14 @@ public static class LeaderboardApi
     /// <param name="tab">The tab to add</param>
     public static void AddTab(ILeaderboardTab tab)
     {
-        leaderboardHandler.AddTab(tab);
+        try
+        {
+            leaderboardHandler.AddTab(tab);
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(AddTab)}: " + e);
+        }
     }
 
     /// <summary>
@@ -47,9 +66,17 @@ public static class LeaderboardApi
     public static TTab InsertTab<TTab>(int index)
         where TTab : ILeaderboardTab, new()
     {
-        TTab tab = new TTab();
-        leaderboardHandler.InsertTab(index, tab);
-        return tab;
+        try
+        {
+            TTab tab = new TTab();
+            leaderboardHandler.InsertTab(index, tab);
+            return tab;
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(InsertTab)}: " + e);
+            return default;
+        }
     }
 
     /// <summary>
@@ -59,7 +86,14 @@ public static class LeaderboardApi
     /// <param name="tab">The tab to insert</param>
     public static void InsertTab(int index, ILeaderboardTab tab)
     {
-        leaderboardHandler.InsertTab(index, tab);
+        try
+        {
+            leaderboardHandler.InsertTab(index, tab);
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(InsertTab)}: " + e);
+        }
     }
 
     /// <summary>
@@ -68,6 +102,13 @@ public static class LeaderboardApi
     /// <param name="tab">The tab to remove</param>
     public static void RemoveTab(ILeaderboardTab tab)
     {
-        leaderboardHandler.RemoveTab(tab);
+        try
+        {
+            leaderboardHandler.RemoveTab(tab);
+        }
+        catch (Exception e)
+        {
+            logger.LogError($"Unhandled exception in {nameof(RemoveTab)}: " + e);
+        }
     }
 }
