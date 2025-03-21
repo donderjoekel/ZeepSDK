@@ -111,8 +111,14 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab
         if (!IsActive)
             return;
 
+        int previousPage = CurrentPage;
         CurrentPage = CurrentPage - 1 < 0 ? MaxPages : CurrentPage - 1;
         UpdatePageNumber();
+        int currentPage = CurrentPage;
+        if (currentPage != previousPage)
+        {
+            OnPageChanged(previousPage, currentPage);
+        }
     }
 
     /// <inheritdoc />
@@ -121,8 +127,14 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab
         if (!IsActive)
             return;
 
+        int previousPage = CurrentPage;
         CurrentPage = CurrentPage + 1 > MaxPages ? 0 : CurrentPage + 1;
         UpdatePageNumber();
+        int currentPage = CurrentPage;
+        if (currentPage != previousPage)
+        {
+            OnPageChanged(previousPage, currentPage);
+        }
     }
 
     /// <inheritdoc />
@@ -197,4 +209,13 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab
     /// Called when the tab needs to (re)draw
     /// </summary>
     protected abstract void OnDraw();
+
+    /// <summary>
+    /// Called when the page has been changed
+    /// </summary>
+    /// <param name="previous">The previous page number</param>
+    /// <param name="current">The current page number</param>
+    protected virtual void OnPageChanged(int previous, int current)
+    {
+    }
 }
