@@ -1349,6 +1349,22 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnEnable
   nameWithType: BaseCoreLeaderboardTab.OnEnable
+- uid: ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnPageChanged(System.Int32,System.Int32)
+  name: OnPageChanged(int, int)
+  href: api/ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnPageChanged_System_Int32_System_Int32_
+  commentId: M:ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnPageChanged(System.Int32,System.Int32)
+  name.vb: OnPageChanged(Integer, Integer)
+  fullName: ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnPageChanged(int, int)
+  fullName.vb: ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnPageChanged(Integer, Integer)
+  nameWithType: BaseCoreLeaderboardTab.OnPageChanged(int, int)
+  nameWithType.vb: BaseCoreLeaderboardTab.OnPageChanged(Integer, Integer)
+- uid: ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnPageChanged*
+  name: OnPageChanged
+  href: api/ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnPageChanged_
+  commentId: Overload:ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnPageChanged
+  isSpec: "True"
+  fullName: ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnPageChanged
+  nameWithType: BaseCoreLeaderboardTab.OnPageChanged
 - uid: ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.UpdatePageNumber
   name: UpdatePageNumber()
   href: api/ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html#ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_UpdatePageNumber

@@ -390,7 +390,7 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab</code></pre>
 
   <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Draw" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Draw">
   Draw()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L141"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called whenever the tab needs to (re)draw</p>
@@ -449,7 +449,7 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab</code></pre>
 
   <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GetLeaderboardTitle" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.GetLeaderboardTitle">
   GetLeaderboardTitle()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L196"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This should return the title of the leaderboard that gets displayed in the UI</p>
@@ -481,7 +481,7 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab</code></pre>
 
   <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GoToNextPage" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.GoToNextPage">
   GoToNextPage()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the user wants to go to the next page</p>
@@ -535,7 +535,7 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab</code></pre>
 
   <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnDisable" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnDisable">
   OnDisable()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L206"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when te tab gets disabled</p>
@@ -562,7 +562,7 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab</code></pre>
 
   <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnDraw" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnDraw">
   OnDraw()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the tab needs to (re)draw</p>
@@ -589,7 +589,7 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab</code></pre>
 
   <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnEnable" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnEnable">
   OnEnable()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L201"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the tab gets enabled</p>
@@ -612,11 +612,47 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab</code></pre>
 
 
 
+  <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnPageChanged_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnPageChanged*"></a>
+
+  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnPageChanged_System_Int32_System_Int32_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnPageChanged(System.Int32,System.Int32)">
+  OnPageChanged(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the page has been changed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnPageChanged(int previous, int current)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>previous</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The previous page number</p>
+</dd>
+    <dt><code>current</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The current page number</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_UpdatePageNumber_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.UpdatePageNumber*"></a>
 
   <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_UpdatePageNumber" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.UpdatePageNumber">
   UpdatePageNumber()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This can be called to update the page number that is visible in the UI</p>
