@@ -24,29 +24,20 @@ public static class UIApi
     private static Tooltip _tooltip;
     private static ZeepToolbar _toolbar;
 
+    public const string FileTitle = "File";
+
     internal static void Initialize(GameObject gameObject)
     {
         // gameObject.AddComponent<ZeepGUIDispatcher>();
         GameObject zeepToolbarContainer = new GameObject("ZeepToolbar");
         zeepToolbarContainer.transform.SetParent(gameObject.transform);
         _toolbar = zeepToolbarContainer.AddComponent<ZeepToolbar>();
-        _toolbar.AddToolbarButtonRoot("File", null);
-        _toolbar.AddToolbarButtonChild("File", "Exit Zeepkist", Application.Quit, int.MaxValue);
+        AddToolbarItem(FileTitle, null);
+        AddToolbarItemChild(FileTitle, "Exit Zeepkist", Application.Quit, int.MaxValue);
 
         GameObject zeepTooltipper = new GameObject("ZeepTooltipper");
         zeepTooltipper.transform.SetParent(gameObject.transform);
         zeepTooltipper.AddComponent<ZeepTooltipper>();
-        
-        // string directoryName = Path.GetDirectoryName(Plugin.Instance.Info.Location);
-        // string assetBundlePath = Path.Combine(directoryName, "zeepgui");
-        // AssetBundle assetBundle = AssetBundle.LoadFromFile(assetBundlePath);
-        // ZeepGUI.Skins = assetBundle.LoadAllAssets<GUISkin>();
-        // Plugin.Instance.GuiSkinConfig.SettingChanged += OnSelectedSkinChanged;
-        // OnSelectedSkinChanged(null, null); // Apply the current skin
-
-        // ZeepGUI.AddToolbarItem(ZeepGUI.FileToolbarItem, null, int.MinValue);
-        // ZeepGUI.AddToolbarItemChild(ZeepGUI.FileToolbarItem, ZeepGUI.FileSettingsToolbarItem, OpenWindow, int.MinValue);
-        // ZeepGUI.AddToolbarItemChild(ZeepGUI.FileToolbarItem, ZeepGUI.FileExitToolbarItem, Application.Quit, int.MaxValue);
         
         uiConfigurator = gameObject.AddComponent<UIConfigurator>();
         CreateTooltip();
@@ -56,16 +47,6 @@ public static class UIApi
         PlayerScreensUI_Awake.Awake += OnPlayerScreensUIAwake;
         SpectatorCameraUI_Awake.Awake += OnSpectatorCameraUIAwake;
     }
-
-    // private static void OnSelectedSkinChanged(object o, EventArgs eventArgs)
-    // {
-    //     ZeepGUI.CurrentSkin = Plugin.Instance.GuiSkinConfig.Value switch
-    //     {
-    //         GuiSkins.Default => ZeepGUI.Skins.First(x => x.name == "Default"),
-    //         GuiSkins.SemiTransparent => ZeepGUI.Skins.First(x => x.name == "Semi Transparent"),
-    //         _ => throw new ArgumentOutOfRangeException()
-    //     };
-    // }
 
     public static void AddToolbarItem(string title, Action onClick)
     {

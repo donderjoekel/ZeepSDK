@@ -68,13 +68,13 @@ internal class ZeepToolbar : ZeepGUIBehaviour
     }
 
     private readonly Dictionary<string, ToolbarButtonRoot> _toolbarRoots = new();
-    private readonly DisposableBag _disposableBag;
     private readonly OverrideStack<bool> _cursorVisible = new(() => Cursor.visible, x =>
     {
         Cursor.visible = x;
         Cursor.lockState = x ? CursorLockMode.None : CursorLockMode.Locked;
     }, true);
 
+    private DisposableBag _disposableBag;
     private VisualElement _toolbar;
     private bool _mouseOver;
     private bool _inMenu;
@@ -104,7 +104,7 @@ internal class ZeepToolbar : ZeepGUIBehaviour
         }
     }
 
-    public ZeepToolbar()
+    protected override void OnAwake()
     {
         _disposableBag = ControlsApi.DisableAllInput(InputLockCondition);
         _disposableBag.Add(_cursorVisible.Override(true, () => _visibleByKey));
