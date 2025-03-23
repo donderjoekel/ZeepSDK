@@ -4393,6 +4393,12 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.UI.UIApi.AddTooltip
   nameWithType: UIApi.AddTooltip
+- uid: ZeepSDK.UI.UIApi.FileTitle
+  name: FileTitle
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_FileTitle
+  commentId: F:ZeepSDK.UI.UIApi.FileTitle
+  fullName: ZeepSDK.UI.UIApi.FileTitle
+  nameWithType: UIApi.FileTitle
 - uid: ZeepSDK.UI.UIApi.RemoveFromConfigurator(UnityEngine.RectTransform)
   name: RemoveFromConfigurator(RectTransform)
   href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_RemoveFromConfigurator_UnityEngine_RectTransform_
