@@ -10,9 +10,9 @@ internal class LEV_SaveLoad_ExternalLoad
     public static event Action PostfixEvent;
 
     [UsedImplicitly]
-    private static void Postfix(bool useV15loading, bool retainUndoList)
+    private static void Postfix(bool retainUndoList)
     {
-        if (!useV15loading && !retainUndoList)
+        if (!retainUndoList)
         {
             PostfixEvent?.Invoke();
         }

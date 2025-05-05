@@ -28,7 +28,6 @@ public static class UIApi
 
     internal static void Initialize(GameObject gameObject)
     {
-        // gameObject.AddComponent<ZeepGUIDispatcher>();
         GameObject zeepToolbarContainer = new GameObject("ZeepToolbar");
         zeepToolbarContainer.transform.SetParent(gameObject.transform);
         _toolbar = zeepToolbarContainer.AddComponent<ZeepToolbar>();
