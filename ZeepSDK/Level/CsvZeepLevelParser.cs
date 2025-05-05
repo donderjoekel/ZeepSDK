@@ -8,12 +8,12 @@ using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Level;
 
-internal static class ZeepLevelParser
+internal static class CsvZeepLevelParser
 {
-    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(ZeepLevelParser));
+    private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(CsvZeepLevelParser));
     private static readonly CultureInfo _culture = new("en-US");
 
-    public static ZeepLevel Parse(string[] lines)
+    public static CsvZeepLevel Parse(string[] lines)
     {
         if (lines.Length == 0)
         {
@@ -21,7 +21,7 @@ internal static class ZeepLevelParser
             return null;
         }
 
-        ZeepLevel level = new();
+        CsvZeepLevel level = new();
         if (!ParseFirstLine(lines[0], level))
             return null;
 
@@ -37,7 +37,7 @@ internal static class ZeepLevelParser
         return level;
     }
 
-    private static bool ParseFirstLine(string line, ZeepLevel level)
+    private static bool ParseFirstLine(string line, CsvZeepLevel level)
     {
         try
         {
@@ -63,7 +63,7 @@ internal static class ZeepLevelParser
         }
     }
 
-    private static bool ParseCameraLine(string line, ZeepLevel level)
+    private static bool ParseCameraLine(string line, CsvZeepLevel level)
     {
         try
         {
@@ -99,7 +99,7 @@ internal static class ZeepLevelParser
         }
     }
 
-    private static bool ParseValidationLine(string line, ZeepLevel level)
+    private static bool ParseValidationLine(string line, CsvZeepLevel level)
     {
         try
         {
@@ -138,9 +138,9 @@ internal static class ZeepLevelParser
         }
     }
 
-    private static bool ParseBlocks(string[] lines, ZeepLevel level)
+    private static bool ParseBlocks(string[] lines, CsvZeepLevel level)
     {
-        List<ZeepBlock> blocks = new();
+        List<CsvZeepBlock> blocks = new();
 
         foreach (string line in lines)
         {
@@ -157,7 +157,7 @@ internal static class ZeepLevelParser
                     return false;
                 }
 
-                ZeepBlock block = new();
+                CsvZeepBlock block = new();
 
                 block.Id = int.Parse(splits[0], NumberStyles.Any, _culture);
 

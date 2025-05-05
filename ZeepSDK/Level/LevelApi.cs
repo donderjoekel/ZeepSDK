@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using BepInEx.Logging;
+﻿using System.Collections.Generic;
 using JetBrains.Annotations;
-using UnityEngine;
-using ZeepSDK.Extensions;
+using Newtonsoft.Json;
 using ZeepSDK.Level.Patches;
 using ZeepSDK.Scripting.Attributes;
-using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Level;
 
@@ -19,18 +12,7 @@ namespace ZeepSDK.Level;
 [PublicAPI]
 public static class LevelApi
 {
-    private const int PresentBlockID = 2264;
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(LevelApi));
-    private static readonly Vector3Comparer _vector3Comparer = new();
-    private static readonly IntComparer _intSequenceComparer = new();
-    private static readonly FloatComparer _floatSequenceComparer = new();
     private static readonly Dictionary<string, string> uidToHash = new();
-
-    /// <summary>
-    /// The parsed version of the current level
-    /// </summary>
-    [GenerateProperty]
-    public static ZeepLevel CurrentZeepLevel { get; private set; }
 
     /// <summary>
     /// The hash of the current level
@@ -51,8 +33,7 @@ public static class LevelApi
 
     private static void FinishLoading(SetupGame instance)
     {
-        CurrentHash = GetLevelHash(instance.GlobalLevel, out ZeepLevel zeepLevel);
-        CurrentZeepLevel = zeepLevel;
+        CurrentHash = GetLevelHash(instance.GlobalLevel);
     }
 
     private static LevelScriptableObject GetLevelFromLoader()
@@ -68,92 +49,44 @@ public static class LevelApi
     }
 
     /// <summary>
-    /// Gets the hash of the current level
-    /// <remarks>This is a shorthand for <see cref="GetLevelHash(LevelScriptableObject)"/> combined with <see cref="CurrentLevel"/></remarks>
-    /// </summary>
-    [Obsolete("Use CurrentHash instead")]
-    public static string GetCurrentLevelHash()
-    {
-        return GetLevelHash(CurrentLevel);
-    }
-
-    /// <summary>
     /// Creates a hash that is unique to this level
     /// </summary>
     /// <param name="levelScriptableObject">The level to hash</param>
     [GenerateFunction]
     public static string GetLevelHash(LevelScriptableObject levelScriptableObject)
     {
-        return GetLevelHash(levelScriptableObject, out _);
-    }
-
-    /// <summary>
-    /// Creates a hash that is unique to this level
-    /// </summary>
-    /// <param name="levelScriptableObject">The level to hash</param>
-    /// <param name="zeepLevel">Will contain the parsed level</param>
-    /// <returns>The hash</returns>
-    public static string GetLevelHash(LevelScriptableObject levelScriptableObject, out ZeepLevel zeepLevel)
-    {
         const string winSeparator = "\r\n";
         const string unixSeparator = "\n";
 
-        if (levelScriptableObject.resourcePathLevel)
+        levelScriptableObject.ForceCheckIfOldOrNewData();
+
+        if (levelScriptableObject.useLevelV15Data)
         {
-            TextAsset asset = Resources.Load<TextAsset>(
-                levelScriptableObject.levelResourcePathV16
-                    .Replace("Assets/Resources/", string.Empty)
-                    .Replace(".txt", string.Empty));
-            zeepLevel = ZeepLevelParser.Parse(
-                asset.text.Contains(winSeparator)
-                    ? asset.text.Split(winSeparator)
-                    : asset.text.Split(unixSeparator));
+            string v15LevelData = levelScriptableObject.GetV15LevelData();
+
+            if (v15LevelData.StartsWith("{"))
+            {
+                v15LevelJSON v15LevelJson = JsonConvert.DeserializeObject<v15LevelJSON>(v15LevelData);
+                if (v15LevelJson != null && levelScriptableObject.UseAvonturenLevel)
+                    return levelScriptableObject.UID;
+                return v15LevelJson.level.zeepHash;
+            }
+
+            CsvZeepLevel csvZeepLevel = CsvZeepLevelParser.Parse(
+                v15LevelData.Contains(winSeparator)
+                    ? v15LevelData.Split(winSeparator)
+                    : v15LevelData.Split(unixSeparator));
+                
+            if (csvZeepLevel != null && levelScriptableObject.UseAvonturenLevel)
+                return levelScriptableObject.UID;
+            return csvZeepLevel.CalculateHash();
         }
         else
         {
-            zeepLevel = ZeepLevelParser.Parse(levelScriptableObject.LevelData);
+            CsvZeepLevel csvZeepLevel = CsvZeepLevelParser.Parse(levelScriptableObject.GetOldLevelData());
+            if (csvZeepLevel != null && levelScriptableObject.UseAvonturenLevel)
+                return levelScriptableObject.UID;
+            return csvZeepLevel.CalculateHash();
         }
-
-        if (zeepLevel != null && levelScriptableObject.UseAvonturenLevel)
-            return levelScriptableObject.UID;
-        return zeepLevel == null ? null : Hash(zeepLevel);
-    }
-
-    private static string Hash(ZeepLevel zeepLevel)
-    {
-        if (zeepLevel == null)
-        {
-            logger.LogWarning("Trying to hash a null level");
-            return null;
-        }
-
-        StringBuilder inputBuilder = new();
-        inputBuilder.AppendCLRF(zeepLevel.Skybox.ToString());
-        inputBuilder.AppendCLRF(zeepLevel.Ground.ToString());
-
-        List<ZeepBlock> orderedBlocks = zeepLevel.Blocks
-            .Where(x => x.Id != PresentBlockID)
-            .OrderBy(x => x.Id)
-            .ThenBy(x => x.Position, _vector3Comparer)
-            .ThenBy(x => x.Euler, _vector3Comparer)
-            .ThenBy(x => x.Scale, _vector3Comparer)
-            .ThenBy(x => x.Paints, _intSequenceComparer)
-            .ThenBy(x => x.Options, _floatSequenceComparer)
-            .ToList();
-
-        foreach (ZeepBlock block in orderedBlocks)
-        {
-            inputBuilder.AppendCLRF(block.ToString());
-        }
-
-        byte[] hash = SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(inputBuilder.ToString()));
-        StringBuilder hashBuilder = new(hash.Length * 2);
-
-        foreach (byte b in hash)
-        {
-            hashBuilder.Append(b.ToString("X2"));
-        }
-
-        return hashBuilder.ToString();
     }
 }
