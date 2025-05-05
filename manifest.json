@@ -476,21 +476,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.yml\" sourcestartlinenumber=\"1\">A base implementation that can be used for creating a custom tab for the leaderboard\n<remarks>This is a replacement for <xref href=\"ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab\" data-throw-if-not-resolved=\"false\"></xref> to keep backward compatibility</remarks></p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.Pages.BaseLeaderboardTab.yml\" sourcestartlinenumber=\"1\">[Obsolete] A base implementation that can be used for creating a custom tab for the leaderboard</p>\n"
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.yml\" sourcestartlinenumber=\"1\">A base implementation that can be used for creating a custom tab for the leaderboard\n<remarks>This is a replacement for BaseLeaderboardTab to keep backward compatibility</remarks></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -561,34 +547,6 @@
       "IsMRef": true,
       "Title": "ZeepSDK.Level.LevelApi",
       "Summary": "<p sourcefile=\"api/ZeepSDK.Level.LevelApi.yml\" sourcestartlinenumber=\"1\">An API for interacting with levels</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Level.ZeepBlock.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.Level.ZeepBlock.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.Level.ZeepBlock",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.Level.ZeepBlock.yml\" sourcestartlinenumber=\"1\">A block in a Zeeplevel</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Level.ZeepLevel.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.Level.ZeepLevel.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.Level.ZeepLevel",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.Level.ZeepLevel.yml\" sourcestartlinenumber=\"1\">A representation of a Zeeplevel</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2144,11 +2102,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "api/toc.json"
-        },
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -2167,11 +2125,11 @@
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "articles/toc.json"
-        },
         ".html": {
           "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
         }
       },
       "version": ""
@@ -2190,11 +2148,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "toc.json"
-        },
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""
