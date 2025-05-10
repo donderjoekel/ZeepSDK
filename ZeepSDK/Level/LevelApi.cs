@@ -60,6 +60,8 @@ public static class LevelApi
 
         levelScriptableObject.ForceCheckIfOldOrNewData();
 
+        CsvZeepLevel csvZeepLevel;
+
         if (levelScriptableObject.useLevelV15Data)
         {
             string v15LevelData = levelScriptableObject.GetV15LevelData();
@@ -67,26 +69,23 @@ public static class LevelApi
             if (v15LevelData.StartsWith("{"))
             {
                 v15LevelJSON v15LevelJson = JsonConvert.DeserializeObject<v15LevelJSON>(v15LevelData);
-                if (v15LevelJson != null && levelScriptableObject.UseAvonturenLevel)
+                if (v15LevelJson != null && (levelScriptableObject.UseAvonturenLevel || levelScriptableObject.IsAdventureLevel))
                     return levelScriptableObject.UID;
                 return v15LevelJson.level.zeepHash;
             }
 
-            CsvZeepLevel csvZeepLevel = CsvZeepLevelParser.Parse(
+            csvZeepLevel = CsvZeepLevelParser.Parse(
                 v15LevelData.Contains(winSeparator)
                     ? v15LevelData.Split(winSeparator)
                     : v15LevelData.Split(unixSeparator));
-                
-            if (csvZeepLevel != null && levelScriptableObject.UseAvonturenLevel)
-                return levelScriptableObject.UID;
-            return csvZeepLevel.CalculateHash();
         }
         else
         {
-            CsvZeepLevel csvZeepLevel = CsvZeepLevelParser.Parse(levelScriptableObject.GetOldLevelData());
-            if (csvZeepLevel != null && levelScriptableObject.UseAvonturenLevel)
-                return levelScriptableObject.UID;
-            return csvZeepLevel.CalculateHash();
+            csvZeepLevel = CsvZeepLevelParser.Parse(levelScriptableObject.GetOldLevelData());
         }
+
+        if (csvZeepLevel != null && (levelScriptableObject.UseAvonturenLevel || levelScriptableObject.IsAdventureLevel))
+            return levelScriptableObject.UID;
+        return csvZeepLevel.CalculateHash();
     }
 }
