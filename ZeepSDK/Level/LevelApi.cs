@@ -86,6 +86,7 @@ public static class LevelApi
 
         if (csvZeepLevel != null && (levelScriptableObject.UseAvonturenLevel || levelScriptableObject.IsAdventureLevel))
             return levelScriptableObject.UID;
-        return csvZeepLevel.CalculateHash();
+        
+        return csvZeepLevel?.CalculateHash();
     }
 }
