@@ -4,6 +4,860 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagNetworking.BugsnagUnityWebRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagNetworking.BugsnagUnityWebRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagNetworking.BugsnagUnityWebRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagNetworking.RequestEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagNetworking.RequestEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagNetworking.RequestEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagNetworking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagNetworking.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagNetworking",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Bugsnag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Bugsnag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Bugsnag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.BugsnagAutoInit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.BugsnagAutoInit.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.BugsnagAutoInit",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.BugsnagCoroutineRunner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.BugsnagCoroutineRunner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.BugsnagCoroutineRunner",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.BugsnagSettingsObject.EditorBreadcrumbTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.BugsnagSettingsObject.EditorBreadcrumbTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.BugsnagSettingsObject.EditorBreadcrumbTypes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.BugsnagSettingsObject.EditorLogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.BugsnagSettingsObject.EditorLogLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.BugsnagSettingsObject.EditorLogLevel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.BugsnagSettingsObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.BugsnagSettingsObject.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.BugsnagSettingsObject",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Configuration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Configuration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.EnabledErrorTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.EnabledErrorTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.EnabledErrorTypes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.EndpointConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.EndpointConfiguration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.EndpointConfiguration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.IBreadcrumbs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.IBreadcrumbs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.IBreadcrumbs",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.ICacheManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.ICacheManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.ICacheManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.IDevice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.IDevice.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.IDevice",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.IEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.IEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.IEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.IFeatureFlagStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.IFeatureFlagStore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.IFeatureFlagStore",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.IMetadataEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.IMetadataEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.IMetadataEditor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.ISession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.ISession.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.ISession",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.ISessionTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.ISessionTracker.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.ISessionTracker",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.IUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.IUser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.IUser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.IUserEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.IUserEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.IUserEditor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.LastRunInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.LastRunInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.LastRunInfo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.LogTypeSeverityMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.LogTypeSeverityMapping.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.LogTypeSeverityMapping",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.MainThreadDispatchBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.MainThreadDispatchBehaviour.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.MainThreadDispatchBehaviour",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.MaximumLogTypeCounter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.MaximumLogTypeCounter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.MaximumLogTypeCounter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.App.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.App",
+      "Summary": "<p sourcefile=\"api/BugsnagUnity.Payload.App.yml\" sourcestartlinenumber=\"1\">Represents the &quot;app&quot; key in the error report payload.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.AppWithState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.AppWithState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.AppWithState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Breadcrumb.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Breadcrumb.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Breadcrumb",
+      "Summary": "<p sourcefile=\"api/BugsnagUnity.Payload.Breadcrumb.yml\" sourcestartlinenumber=\"1\">Represents an individual breadcrumb in the error report payload.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.BreadcrumbType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.BreadcrumbType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.BreadcrumbType",
+      "Summary": "<p sourcefile=\"api/BugsnagUnity.Payload.BreadcrumbType.yml\" sourcestartlinenumber=\"1\">Represents all of the possible breadcrumb types that the Bugsnag API supports.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Correlation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Correlation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Correlation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Device.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Device.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Device",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.DeviceWithState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.DeviceWithState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.DeviceWithState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Error.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Error.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Error",
+      "Summary": "<p sourcefile=\"api/BugsnagUnity.Payload.Error.yml\" sourcestartlinenumber=\"1\">Represents an individual error in the Bugsnag payload.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Event.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Event.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Event",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.FeatureFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.FeatureFlag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.FeatureFlag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IApp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IApp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IApp",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IAppWithState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IAppWithState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IAppWithState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IBreadcrumb.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IBreadcrumb.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IBreadcrumb",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IDeviceWithState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IDeviceWithState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IDeviceWithState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IError",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IPayload.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IPayload.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IPayload",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IStackframe.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IStackframe.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IStackframe",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IThread.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IThread.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IThread",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Metadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Metadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Metadata",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.PayloadContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.PayloadContainer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.PayloadContainer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.PayloadType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.PayloadType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.PayloadType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Report.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Report.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Report",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Session.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Session.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Session",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.StackTraceLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.StackTraceLine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.StackTraceLine",
+      "Summary": "<p sourcefile=\"api/BugsnagUnity.Payload.StackTraceLine.yml\" sourcestartlinenumber=\"1\">Represents an individual stack trace line in the Bugsnag payload.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.User.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.User",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.PayloadManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.PayloadManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.PayloadManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.PostProcessBuild.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.PostProcessBuild.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.PostProcessBuild",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Severity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Severity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Severity",
+      "Summary": "<p sourcefile=\"api/BugsnagUnity.Severity.yml\" sourcestartlinenumber=\"1\">The Bugsnag API defines these three severities</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.SwitchCacheType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.SwitchCacheType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.SwitchCacheType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.TelemetryType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.TelemetryType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.TelemetryType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.ThreadSendPolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.ThreadSendPolicy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.ThreadSendPolicy",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.UniqueLogThrottle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.UniqueLogThrottle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.UniqueLogThrottle",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.UnityLogMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.UnityLogMessage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.UnityLogMessage",
+      "Summary": "<p sourcefile=\"api/BugsnagUnity.UnityLogMessage.yml\" sourcestartlinenumber=\"1\">Represents a log message received from Unity</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Chat.ChatApi.yml",
       "output": {
         ".html": {

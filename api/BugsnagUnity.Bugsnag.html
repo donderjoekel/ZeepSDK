@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Bugsnag </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Bugsnag ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=BugsnagUnity_Bugsnag.md&amp;value=---%0Auid%3A%20BugsnagUnity.Bugsnag%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BugsnagUnity.Bugsnag">
+
+
+
+  <h1 id="BugsnagUnity_Bugsnag" data-uid="BugsnagUnity.Bugsnag" class="text-break">
+Class Bugsnag  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BugsnagUnity.html">BugsnagUnity</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Bugsnag</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Bugsnag</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="BugsnagUnity_Bugsnag_Breadcrumbs_" data-uid="BugsnagUnity.Bugsnag.Breadcrumbs*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_Breadcrumbs" data-uid="BugsnagUnity.Bugsnag.Breadcrumbs">
+  Breadcrumbs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;Breadcrumb&gt; Breadcrumbs { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BugsnagUnity.Payload.Breadcrumb.html">Breadcrumb</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_Context_" data-uid="BugsnagUnity.Bugsnag.Context*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_Context" data-uid="BugsnagUnity.Bugsnag.Context">
+  Context
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bugsnag uses the concept of contexts to help display and group your errors.
+Contexts represent what was happening in your game at the time an error
+occurs. Unless manually set, this will be automatically set to be your currently active Unity Scene.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Context { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="BugsnagUnity_Bugsnag_AddFeatureFlag_" data-uid="BugsnagUnity.Bugsnag.AddFeatureFlag*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_AddFeatureFlag_System_String_System_String_" data-uid="BugsnagUnity.Bugsnag.AddFeatureFlag(System.String,System.String)">
+  AddFeatureFlag(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddFeatureFlag(string name, string variant = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>variant</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_AddFeatureFlags_" data-uid="BugsnagUnity.Bugsnag.AddFeatureFlags*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_AddFeatureFlags_BugsnagUnity_Payload_FeatureFlag___" data-uid="BugsnagUnity.Bugsnag.AddFeatureFlags(BugsnagUnity.Payload.FeatureFlag[])">
+  AddFeatureFlags(FeatureFlag[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddFeatureFlags(FeatureFlag[] featureFlags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>featureFlags</code> <a class="xref" href="BugsnagUnity.Payload.FeatureFlag.html">FeatureFlag</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_AddMetadata_" data-uid="BugsnagUnity.Bugsnag.AddMetadata*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_AddMetadata_System_String_System_Collections_Generic_IDictionary_System_String_System_Object__" data-uid="BugsnagUnity.Bugsnag.AddMetadata(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+  AddMetadata(string, IDictionary&lt;string, object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>AddMetadata that will appear in every reported event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddMetadata(string section, IDictionary&lt;string, object&gt; metadata)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>section</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>metadata</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_AddMetadata_" data-uid="BugsnagUnity.Bugsnag.AddMetadata*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_AddMetadata_System_String_System_String_System_Object_" data-uid="BugsnagUnity.Bugsnag.AddMetadata(System.String,System.String,System.Object)">
+  AddMetadata(string, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>AddMetadata that will appear in every reported event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddMetadata(string section, string key, object value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>section</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_AddOnError_" data-uid="BugsnagUnity.Bugsnag.AddOnError*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_AddOnError_System_Func_BugsnagUnity_IEvent_System_Boolean__" data-uid="BugsnagUnity.Bugsnag.AddOnError(System.Func{BugsnagUnity.IEvent,System.Boolean})">
+  AddOnError(Func&lt;IEvent, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add an OnError callback to run when an error occurs</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddOnError(Func&lt;IEvent, bool&gt; bugsnagCallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bugsnagCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="BugsnagUnity.IEvent.html">IEvent</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_AddOnSession_" data-uid="BugsnagUnity.Bugsnag.AddOnSession*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_AddOnSession_System_Func_BugsnagUnity_ISession_System_Boolean__" data-uid="BugsnagUnity.Bugsnag.AddOnSession(System.Func{BugsnagUnity.ISession,System.Boolean})">
+  AddOnSession(Func&lt;ISession, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add an OnSession callback to run when an session is created</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddOnSession(Func&lt;ISession, bool&gt; callback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="BugsnagUnity.ISession.html">ISession</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_ClearFeatureFlag_" data-uid="BugsnagUnity.Bugsnag.ClearFeatureFlag*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_ClearFeatureFlag_System_String_" data-uid="BugsnagUnity.Bugsnag.ClearFeatureFlag(System.String)">
+  ClearFeatureFlag(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ClearFeatureFlag(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_ClearFeatureFlags_" data-uid="BugsnagUnity.Bugsnag.ClearFeatureFlags*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_ClearFeatureFlags" data-uid="BugsnagUnity.Bugsnag.ClearFeatureFlags">
+  ClearFeatureFlags()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ClearFeatureFlags()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_ClearMetadata_" data-uid="BugsnagUnity.Bugsnag.ClearMetadata*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_ClearMetadata_System_String_" data-uid="BugsnagUnity.Bugsnag.ClearMetadata(System.String)">
+  ClearMetadata(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clear the metadata stored in the specified section</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ClearMetadata(string section)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>section</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_ClearMetadata_" data-uid="BugsnagUnity.Bugsnag.ClearMetadata*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_ClearMetadata_System_String_System_String_" data-uid="BugsnagUnity.Bugsnag.ClearMetadata(System.String,System.String)">
+  ClearMetadata(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clear the metadata stored with the specified section and key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ClearMetadata(string section, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>section</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_GetLastRunInfo_" data-uid="BugsnagUnity.Bugsnag.GetLastRunInfo*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_GetLastRunInfo" data-uid="BugsnagUnity.Bugsnag.GetLastRunInfo">
+  GetLastRunInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get information regarding the last application run. This will be null on non mobile platforms.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LastRunInfo GetLastRunInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BugsnagUnity.LastRunInfo.html">LastRunInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_GetMetadata_" data-uid="BugsnagUnity.Bugsnag.GetMetadata*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_GetMetadata_System_String_" data-uid="BugsnagUnity.Bugsnag.GetMetadata(System.String)">
+  GetMetadata(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the metadata stored in the specified section</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDictionary&lt;string, object&gt; GetMetadata(string section)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>section</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_GetMetadata_" data-uid="BugsnagUnity.Bugsnag.GetMetadata*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_GetMetadata_System_String_System_String_" data-uid="BugsnagUnity.Bugsnag.GetMetadata(System.String,System.String)">
+  GetMetadata(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the metadata stored with the specified section and key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetMetadata(string section, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>section</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_GetUser_" data-uid="BugsnagUnity.Bugsnag.GetUser*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_GetUser" data-uid="BugsnagUnity.Bugsnag.GetUser">
+  GetUser()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static User GetUser()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BugsnagUnity.Payload.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_IsStarted_" data-uid="BugsnagUnity.Bugsnag.IsStarted*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_IsStarted" data-uid="BugsnagUnity.Bugsnag.IsStarted">
+  IsStarted()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsStarted()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_LeaveBreadcrumb_" data-uid="BugsnagUnity.Bugsnag.LeaveBreadcrumb*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_LeaveBreadcrumb_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__BugsnagUnity_Payload_BreadcrumbType_" data-uid="BugsnagUnity.Bugsnag.LeaveBreadcrumb(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},BugsnagUnity.Payload.BreadcrumbType)">
+  LeaveBreadcrumb(string, Dictionary&lt;string, object&gt;, BreadcrumbType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LeaveBreadcrumb(string message, Dictionary&lt;string, object&gt; metadata = null, BreadcrumbType type = BreadcrumbType.Manual)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>metadata</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>type</code> <a class="xref" href="BugsnagUnity.Payload.BreadcrumbType.html">BreadcrumbType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_LeaveBreadcrumb_" data-uid="BugsnagUnity.Bugsnag.LeaveBreadcrumb*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_LeaveBreadcrumb_UnityEngine_Networking_UnityWebRequest_System_Nullable_System_TimeSpan__" data-uid="BugsnagUnity.Bugsnag.LeaveBreadcrumb(UnityEngine.Networking.UnityWebRequest,System.Nullable{System.TimeSpan})">
+  LeaveBreadcrumb(UnityWebRequest, TimeSpan?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LeaveBreadcrumb(UnityWebRequest request, TimeSpan? duration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <span class="xref">UnityWebRequest</span></dt>
+    <dd></dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_MarkLaunchCompleted_" data-uid="BugsnagUnity.Bugsnag.MarkLaunchCompleted*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_MarkLaunchCompleted" data-uid="BugsnagUnity.Bugsnag.MarkLaunchCompleted">
+  MarkLaunchCompleted()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Setting Configuration.LaunchDurationMillis to 0 will cause Bugsnag to consider the app to be launching until Bugsnag.MarkLaunchCompleted() has been called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void MarkLaunchCompleted()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_Notify_" data-uid="BugsnagUnity.Bugsnag.Notify*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_Notify_System_Exception_BugsnagUnity_Severity_System_Func_BugsnagUnity_IEvent_System_Boolean__" data-uid="BugsnagUnity.Bugsnag.Notify(System.Exception,BugsnagUnity.Severity,System.Func{BugsnagUnity.IEvent,System.Boolean})">
+  Notify(Exception, Severity, Func&lt;IEvent, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Notify(Exception exception, Severity severity, Func&lt;IEvent, bool&gt; callback = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+    <dt><code>severity</code> <a class="xref" href="BugsnagUnity.Severity.html">Severity</a></dt>
+    <dd></dd>
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="BugsnagUnity.IEvent.html">IEvent</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_Notify_" data-uid="BugsnagUnity.Bugsnag.Notify*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_Notify_System_Exception_System_Func_BugsnagUnity_IEvent_System_Boolean__" data-uid="BugsnagUnity.Bugsnag.Notify(System.Exception,System.Func{BugsnagUnity.IEvent,System.Boolean})">
+  Notify(Exception, Func&lt;IEvent, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Notify(Exception exception, Func&lt;IEvent, bool&gt; callback = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="BugsnagUnity.IEvent.html">IEvent</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_Notify_" data-uid="BugsnagUnity.Bugsnag.Notify*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_Notify_System_Exception_System_String_System_Func_BugsnagUnity_IEvent_System_Boolean__" data-uid="BugsnagUnity.Bugsnag.Notify(System.Exception,System.String,System.Func{BugsnagUnity.IEvent,System.Boolean})">
+  Notify(Exception, string, Func&lt;IEvent, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Notify(Exception exception, string stacktrace, Func&lt;IEvent, bool&gt; callback = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+    <dt><code>stacktrace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="BugsnagUnity.IEvent.html">IEvent</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_Notify_" data-uid="BugsnagUnity.Bugsnag.Notify*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_Notify_System_String_System_String_System_String_System_Func_BugsnagUnity_IEvent_System_Boolean__" data-uid="BugsnagUnity.Bugsnag.Notify(System.String,System.String,System.String,System.Func{BugsnagUnity.IEvent,System.Boolean})">
+  Notify(string, string, string, Func&lt;IEvent, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Notify(string name, string message, string stackTrace, Func&lt;IEvent, bool&gt; callback = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>stackTrace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="BugsnagUnity.IEvent.html">IEvent</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_PauseSession_" data-uid="BugsnagUnity.Bugsnag.PauseSession*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_PauseSession" data-uid="BugsnagUnity.Bugsnag.PauseSession">
+  PauseSession()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PauseSession()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_RemoveOnError_" data-uid="BugsnagUnity.Bugsnag.RemoveOnError*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_RemoveOnError_System_Func_BugsnagUnity_IEvent_System_Boolean__" data-uid="BugsnagUnity.Bugsnag.RemoveOnError(System.Func{BugsnagUnity.IEvent,System.Boolean})">
+  RemoveOnError(Func&lt;IEvent, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove an OnError callback</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveOnError(Func&lt;IEvent, bool&gt; bugsnagCallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bugsnagCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="BugsnagUnity.IEvent.html">IEvent</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_RemoveOnSession_" data-uid="BugsnagUnity.Bugsnag.RemoveOnSession*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_RemoveOnSession_System_Func_BugsnagUnity_ISession_System_Boolean__" data-uid="BugsnagUnity.Bugsnag.RemoveOnSession(System.Func{BugsnagUnity.ISession,System.Boolean})">
+  RemoveOnSession(Func&lt;ISession, bool&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove an OnSession callback</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveOnSession(Func&lt;ISession, bool&gt; callback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="BugsnagUnity.ISession.html">ISession</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_ResumeSession_" data-uid="BugsnagUnity.Bugsnag.ResumeSession*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_ResumeSession" data-uid="BugsnagUnity.Bugsnag.ResumeSession">
+  ResumeSession()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ResumeSession()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_SetApplicationState_" data-uid="BugsnagUnity.Bugsnag.SetApplicationState*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_SetApplicationState_System_Boolean_" data-uid="BugsnagUnity.Bugsnag.SetApplicationState(System.Boolean)">
+  SetApplicationState(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Used to signal to the Bugsnag client that the focused state of the
+application has changed. This is used for session tracking and also
+the tracking of in foreground time for the application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetApplicationState(bool inFocus)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inFocus</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_SetUser_" data-uid="BugsnagUnity.Bugsnag.SetUser*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_SetUser_System_String_System_String_System_String_" data-uid="BugsnagUnity.Bugsnag.SetUser(System.String,System.String,System.String)">
+  SetUser(string, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetUser(string id, string email, string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>email</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_Start_" data-uid="BugsnagUnity.Bugsnag.Start*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_Start_BugsnagUnity_Configuration_" data-uid="BugsnagUnity.Bugsnag.Start(BugsnagUnity.Configuration)">
+  Start(Configuration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Start(Configuration configuration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configuration</code> <a class="xref" href="BugsnagUnity.Configuration.html">Configuration</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_Start_" data-uid="BugsnagUnity.Bugsnag.Start*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_Start_System_String_" data-uid="BugsnagUnity.Bugsnag.Start(System.String)">
+  Start(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Start(string apiKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>apiKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BugsnagUnity_Bugsnag_StartSession_" data-uid="BugsnagUnity.Bugsnag.StartSession*"></a>
+
+  <h3 id="BugsnagUnity_Bugsnag_StartSession" data-uid="BugsnagUnity.Bugsnag.StartSession">
+  StartSession()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void StartSession()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Bugsnag.cs/#L8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

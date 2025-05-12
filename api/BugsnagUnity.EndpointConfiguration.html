@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class MyPluginInfo </title>
+      <title>Class EndpointConfiguration </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class MyPluginInfo ">
+      <meta name="title" content="Class EndpointConfiguration ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_MyPluginInfo.md&amp;value=---%0Auid%3A%20ZeepSDK.MyPluginInfo%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=BugsnagUnity_EndpointConfiguration.md&amp;value=---%0Auid%3A%20BugsnagUnity.EndpointConfiguration%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -80,16 +80,16 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ZeepSDK.MyPluginInfo">
+        <article data-uid="BugsnagUnity.EndpointConfiguration">
 
 
 
-  <h1 id="ZeepSDK_MyPluginInfo" data-uid="ZeepSDK.MyPluginInfo" class="text-break">
-Class MyPluginInfo  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/obj/Release/net472/MyPluginInfo.cs/#L3"><i class="bi bi-code-slash"></i></a>
+  <h1 id="BugsnagUnity_EndpointConfiguration" data-uid="BugsnagUnity.EndpointConfiguration" class="text-break">
+Class EndpointConfiguration  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/EndpointConfiguration.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ZeepSDK.html">ZeepSDK</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BugsnagUnity.html">BugsnagUnity</a></dd></dl>
   <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
   </div>
 
@@ -97,7 +97,7 @@ Class MyPluginInfo  <a class="header-action link-secondary" title="View source" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class MyPluginInfo</code></pre>
+    <pre><code class="lang-csharp hljs">public class EndpointConfiguration</code></pre>
   </div>
 
 
@@ -107,7 +107,7 @@ Class MyPluginInfo  <a class="header-action link-secondary" title="View source" 
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">MyPluginInfo</span></div>
+      <div><span class="xref">EndpointConfiguration</span></div>
     </dd>
   </dl>
 
@@ -144,91 +144,34 @@ Class MyPluginInfo  <a class="header-action link-secondary" title="View source" 
 
 
 
-  <h2 class="section" id="fields">Fields
+  <h2 class="section" id="constructors">Constructors
 </h2>
 
 
+  <a id="BugsnagUnity_EndpointConfiguration__ctor_" data-uid="BugsnagUnity.EndpointConfiguration.#ctor*"></a>
 
-  <h3 id="ZeepSDK_MyPluginInfo_PLUGIN_GUID" data-uid="ZeepSDK.MyPluginInfo.PLUGIN_GUID">
-  PLUGIN_GUID
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/obj/Release/net472/MyPluginInfo.cs/#L5"><i class="bi bi-code-slash"></i></a>
+  <h3 id="BugsnagUnity_EndpointConfiguration__ctor_System_String_System_String_" data-uid="BugsnagUnity.EndpointConfiguration.#ctor(System.String,System.String)">
+  EndpointConfiguration(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/EndpointConfiguration.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string PLUGIN_GUID = &quot;ZeepSDK&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public EndpointConfiguration(string notifyEndpoint, string sessionEndpoint)</code></pre>
   </div>
 
-
-
-
-  <h4 class="section">Field Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>notifyEndpoint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>sessionEndpoint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
 
 
-
-
-
-
-
-
-
-  <h3 id="ZeepSDK_MyPluginInfo_PLUGIN_NAME" data-uid="ZeepSDK.MyPluginInfo.PLUGIN_NAME">
-  PLUGIN_NAME
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/obj/Release/net472/MyPluginInfo.cs/#L6"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string PLUGIN_NAME = &quot;ZeepSDK&quot;</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="ZeepSDK_MyPluginInfo_PLUGIN_VERSION" data-uid="ZeepSDK.MyPluginInfo.PLUGIN_VERSION">
-  PLUGIN_VERSION
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/obj/Release/net472/MyPluginInfo.cs/#L7"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string PLUGIN_VERSION = &quot;1.43.5&quot;</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -242,7 +185,7 @@ Class MyPluginInfo  <a class="header-action link-secondary" title="View source" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/obj/Release/net472/MyPluginInfo.cs/#L3" class="edit-link">Edit this page</a>
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/EndpointConfiguration.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 
