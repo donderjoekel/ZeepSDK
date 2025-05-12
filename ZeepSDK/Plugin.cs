@@ -1,6 +1,10 @@
-﻿using BepInEx;
+﻿using System;
+using BepInEx;
 using BepInEx.Configuration;
+using BugsnagUnity;
+using BugsnagUnity.Payload;
 using HarmonyLib;
+using Steamworks;
 using UnityEngine;
 using UnityEngine.LowLevel;
 using ZeepSDK.Chat;
@@ -27,6 +31,7 @@ namespace ZeepSDK
         public static IModStorage Storage { get; private set; }
 
         private Harmony harmony;
+        private bool _setBugSnagInfo;
         
         public ConfigEntry<KeyCode> ToggleMenuBarKey { get; private set; }
 
@@ -61,10 +66,32 @@ namespace ZeepSDK
                 PlayerLoopHelper.Initialize(ref loop);
             }
 
+            try
+            {
+                MainThreadDispatchBehaviour.InitializeLoop();
+                Bugsnag.Start("");
+            }
+            catch (Exception e)
+            {
+                Logger.LogError("Failed to initialize bugsnag");
+                Logger.LogFatal(e);
+            }
+
             // Plugin startup logic
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
 
             VersionChecker.CheckVersions().Forget();
+        }
+
+        private void Update()
+        {
+            if (_setBugSnagInfo)
+                return;
+            if (!SteamClient.IsValid || !SteamClient.IsLoggedOn)
+                return;
+
+            Bugsnag.SetUser(SteamClient.SteamId.Value.ToString(), null, SteamClient.Name);
+            _setBugSnagInfo = true;
         }
 
         private void OnDestroy()
