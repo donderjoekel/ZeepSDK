@@ -29,8 +29,7 @@ namespace BugsnagUnity
 
         private static readonly Queue<Action> _executionQueue = new Queue<Action>();
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-        private static void InitializeLoop()
+        public static void InitializeLoop()
         {
             var playerLoop = PlayerLoop.GetCurrentPlayerLoop();
             var newSystem = new PlayerLoopSystem
