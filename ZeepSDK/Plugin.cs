@@ -4,6 +4,8 @@ using BepInEx.Configuration;
 using BugsnagUnity;
 using BugsnagUnity.Payload;
 using HarmonyLib;
+using Sentry.Unity;
+using Sentry.Unity.iOS;
 using Steamworks;
 using UnityEngine;
 using UnityEngine.LowLevel;
@@ -31,7 +33,7 @@ namespace ZeepSDK
         public static IModStorage Storage { get; private set; }
 
         private Harmony harmony;
-        private bool _setBugSnagInfo;
+        private bool _setBugInfo;
         
         public ConfigEntry<KeyCode> ToggleMenuBarKey { get; private set; }
 
@@ -66,17 +68,6 @@ namespace ZeepSDK
                 PlayerLoopHelper.Initialize(ref loop);
             }
 
-            try
-            {
-                MainThreadDispatchBehaviour.InitializeLoop();
-                Bugsnag.Start("");
-            }
-            catch (Exception e)
-            {
-                Logger.LogError("Failed to initialize bugsnag");
-                Logger.LogFatal(e);
-            }
-
             // Plugin startup logic
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
 
@@ -85,13 +76,28 @@ namespace ZeepSDK
 
         private void Update()
         {
-            if (_setBugSnagInfo)
+            if (_setBugInfo)
                 return;
             if (!SteamClient.IsValid || !SteamClient.IsLoggedOn)
                 return;
 
-            Bugsnag.SetUser(SteamClient.SteamId.Value.ToString(), null, SteamClient.Name);
-            _setBugSnagInfo = true;
+            SentryUnityOptions options = new()
+            {
+                Dsn = ""
+            };
+                
+            options.SetBeforeSend((evt) =>
+            {
+                evt.User.Id = SteamClient.SteamId.Value.ToString();
+                evt.User.Username = SteamClient.Name;
+                return evt;
+            });
+
+            SentryIntegrations.Configure(options);
+            SentryUnity.Init(options);
+            SentryInitialization.SetupStartupTracing(options);
+
+            _setBugInfo = true;
         }
 
         private void OnDestroy()
