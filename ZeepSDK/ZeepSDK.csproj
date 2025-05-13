@@ -5,7 +5,7 @@
         <AssemblyName>ZeepSDK</AssemblyName>
         <Description>ZeepSDK</Description>
         <Authors>TNRD</Authors>
-        <Version>1.43.6</Version>
+        <Version>1.43.5</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
         <Title>ZeepSDK</Title>
@@ -41,53 +41,5 @@
 
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
-    </ItemGroup>
-    
-    <ItemGroup>
-        <Reference Include="Sentry">
-          <HintPath>External\Sentry\Sentry.dll</HintPath>
-        </Reference>
-        <Reference Include="Sentry.Microsoft.Bcl.AsyncInterfaces">
-          <HintPath>External\Sentry\Sentry.Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
-        </Reference>
-        <Reference Include="Sentry.System.Buffers">
-          <HintPath>External\Sentry\Sentry.System.Buffers.dll</HintPath>
-        </Reference>
-        <Reference Include="Sentry.System.Collections.Immutable">
-          <HintPath>External\Sentry\Sentry.System.Collections.Immutable.dll</HintPath>
-        </Reference>
-        <Reference Include="Sentry.System.Memory">
-          <HintPath>External\Sentry\Sentry.System.Memory.dll</HintPath>
-        </Reference>
-        <Reference Include="Sentry.System.Numerics.Vectors">
-          <HintPath>External\Sentry\Sentry.System.Numerics.Vectors.dll</HintPath>
-        </Reference>
-        <Reference Include="Sentry.System.Reflection.Metadata">
-          <HintPath>External\Sentry\Sentry.System.Reflection.Metadata.dll</HintPath>
-        </Reference>
-        <Reference Include="Sentry.System.Runtime.CompilerServices.Unsafe">
-          <HintPath>External\Sentry\Sentry.System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-        </Reference>
-        <Reference Include="Sentry.System.Text.Encodings.Web">
-          <HintPath>External\Sentry\Sentry.System.Text.Encodings.Web.dll</HintPath>
-        </Reference>
-        <Reference Include="Sentry.System.Text.Json">
-          <HintPath>External\Sentry\Sentry.System.Text.Json.dll</HintPath>
-        </Reference>
-        <Reference Include="Sentry.System.Threading.Tasks.Extensions">
-          <HintPath>External\Sentry\Sentry.System.Threading.Tasks.Extensions.dll</HintPath>
-        </Reference>
-        <Reference Include="Sentry.Unity">
-          <HintPath>External\Sentry\Sentry.Unity.dll</HintPath>
-        </Reference>
-        <Reference Include="Sentry.Unity.Android">
-          <HintPath>External\Sentry\Sentry.Unity.Android.dll</HintPath>
-        </Reference>
-        <Reference Include="Sentry.Unity.iOS">
-          <HintPath>External\Sentry\Sentry.Unity.iOS.dll</HintPath>
-        </Reference>
-        <Reference Include="Sentry.Unity.Native">
-          <HintPath>External\Sentry\Sentry.Unity.Native.dll</HintPath>
-        </Reference>
     </ItemGroup>
 </Project>
