@@ -84,7 +84,7 @@ namespace ZeepSDK
             VersionScriptableObject v = SteamManager.Instance.version;
             SentryUnityOptions options = new()
             {
-                Dsn = ""
+                Dsn = "",
                 Release = $"Zeepkist@{v.version}.{v.patch}.{v.build}"
             };
                 
