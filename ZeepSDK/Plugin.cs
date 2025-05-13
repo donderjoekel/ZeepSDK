@@ -1,11 +1,11 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System.Linq;
 using BepInEx;
+using BepInEx.Bootstrap;
 using BepInEx.Configuration;
-using BugsnagUnity;
-using BugsnagUnity.Payload;
 using HarmonyLib;
+using Sentry;
 using Sentry.Unity;
-using Sentry.Unity.iOS;
 using Steamworks;
 using UnityEngine;
 using UnityEngine.LowLevel;
@@ -81,13 +81,17 @@ namespace ZeepSDK
             if (!SteamClient.IsValid || !SteamClient.IsLoggedOn)
                 return;
 
+            VersionScriptableObject v = SteamManager.Instance.version;
             SentryUnityOptions options = new()
             {
                 Dsn = ""
+                Release = $"Zeepkist@{v.version}.{v.patch}.{v.build}"
             };
                 
-            options.SetBeforeSend((evt) =>
+            options.SetBeforeSend(evt =>
             {
+                evt.SetExtras(Chainloader.PluginInfos.Values.Select(x =>
+                    new KeyValuePair<string, object>(x.Metadata.Name, x.Metadata.Version.ToString())));
                 evt.User.Id = SteamClient.SteamId.Value.ToString();
                 evt.User.Username = SteamClient.Name;
                 return evt;
