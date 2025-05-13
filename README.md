@@ -40,3 +40,7 @@ Another cool feature is that there is functionality that allows you to create cu
 
 ### Racing Api
 The RacingApi currently contains a collection of events that are related to the player racing. Think of events like crossing the finish line, entering first/third person, or crashing.
+
+# Powered by
+
+[![Bugsnag](https://images.typeform.com/images/QKuaAssrFCq7/image/default-firstframe.png)](https://www.bugsnag.com)
