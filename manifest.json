@@ -858,6 +858,104 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Sentry.Unity.SceneManagerTracingAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sentry.Unity.SceneManagerTracingAPI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sentry.Unity.SceneManagerTracingAPI",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Sentry.Unity.SceneManagerTracingIntegration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sentry.Unity.SceneManagerTracingIntegration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sentry.Unity.SceneManagerTracingIntegration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Sentry.Unity.SentryInitialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sentry.Unity.SentryInitialization.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sentry.Unity.SentryInitialization",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Sentry.Unity.SentryIntegrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sentry.Unity.SentryIntegrations.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sentry.Unity.SentryIntegrations",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Sentry.Unity.SentryUnityInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sentry.Unity.SentryUnityInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sentry.Unity.SentryUnityInfo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Sentry.Unity.StartupTracingIntegration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sentry.Unity.StartupTracingIntegration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sentry.Unity.StartupTracingIntegration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Sentry.Unity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sentry.Unity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sentry.Unity",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Chat.ChatApi.yml",
       "output": {
         ".html": {
@@ -2956,11 +3054,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "api/toc.json"
-        },
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -2979,11 +3077,11 @@
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "articles/toc.json"
-        },
         ".html": {
           "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
         }
       },
       "version": ""
@@ -3002,11 +3100,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "toc.json"
-        },
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""
