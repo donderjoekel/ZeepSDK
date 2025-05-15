@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using BepInEx;
+using BepInEx.Bootstrap;
 using BepInEx.Configuration;
 using BugsnagUnity;
-using BugsnagUnity.Payload;
 using HarmonyLib;
 using Steamworks;
 using UnityEngine;
@@ -10,6 +12,7 @@ using UnityEngine.LowLevel;
 using ZeepSDK.Chat;
 using ZeepSDK.ChatCommands;
 using ZeepSDK.Controls;
+using ZeepSDK.Crashlytics;
 using ZeepSDK.External.Cysharp.Threading.Tasks;
 using ZeepSDK.Leaderboard;
 using ZeepSDK.Level;
@@ -31,9 +34,9 @@ namespace ZeepSDK
         public static IModStorage Storage { get; private set; }
 
         private Harmony harmony;
-        private bool _setBugSnagInfo;
         
         public ConfigEntry<KeyCode> ToggleMenuBarKey { get; private set; }
+        public ConfigEntry<bool> ConsentToCrashlytics { get; private set; }
 
         private void Awake()
         {
@@ -44,11 +47,21 @@ namespace ZeepSDK
 
             ToggleMenuBarKey =
                 Config.Bind("General", "Toggle Menu Bar Key", KeyCode.None, "The key to toggle the menu bar");
+            ConsentToCrashlytics = Config.Bind("General", "Crashlytics Enabled", true,
+                "Can ZeepSDK send crashlytics in order to help us fix bugs");
 
             Storage = StorageApi.CreateModStorage(Instance);
 
+            // Initialize the player loop helper, this is to reduce issues with UniTask
+            if (!PlayerLoopHelper.IsInjectedUniTaskPlayerLoop())
+            {
+                PlayerLoopSystem loop = PlayerLoop.GetCurrentPlayerLoop();
+                PlayerLoopHelper.Initialize(ref loop);
+            }
+
             ChatApi.Initialize(gameObject);
             ChatCommandApi.Initialize(gameObject);
+            CrashlyticsApi.Initialize(gameObject);
             LeaderboardApi.Initialize(gameObject);
             LevelApi.Initialize();
             LevelEditorApi.Initialize(gameObject);
@@ -59,39 +72,10 @@ namespace ZeepSDK
             ScriptingApi.Initialize();
             ControlsApi.Initialize();
 
-            // Initialize the player loop helper, this is to reduce issues with UniTask
-            if (!PlayerLoopHelper.IsInjectedUniTaskPlayerLoop())
-            {
-                PlayerLoopSystem loop = PlayerLoop.GetCurrentPlayerLoop();
-                PlayerLoopHelper.Initialize(ref loop);
-            }
-
-            try
-            {
-                MainThreadDispatchBehaviour.InitializeLoop();
-                Bugsnag.Start("");
-            }
-            catch (Exception e)
-            {
-                Logger.LogError("Failed to initialize bugsnag");
-                Logger.LogFatal(e);
-            }
-
             // Plugin startup logic
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
 
             VersionChecker.CheckVersions().Forget();
-        }
-
-        private void Update()
-        {
-            if (_setBugSnagInfo)
-                return;
-            if (!SteamClient.IsValid || !SteamClient.IsLoggedOn)
-                return;
-
-            Bugsnag.SetUser(SteamClient.SteamId.Value.ToString(), null, SteamClient.Name);
-            _setBugSnagInfo = true;
         }
 
         private void OnDestroy()

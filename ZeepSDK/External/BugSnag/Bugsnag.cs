@@ -17,6 +17,13 @@ namespace BugsnagUnity
             Start(new Configuration(apiKey));
         }
 
+        public static void Start(string apiKey, Action<Configuration> configureConfiguration)
+        {
+            Configuration configuration = new Configuration(apiKey);
+            configureConfiguration(configuration);
+            Start(configuration);
+        }
+
         public static void Start(Configuration configuration)
         {
 

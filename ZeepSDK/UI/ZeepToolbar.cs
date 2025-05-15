@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
+using ZeepSDK.BugReporting.Patches;
 using ZeepSDK.Controls;
 using ZeepSDK.UI.Patches;
 using ZeepSDK.Utilities;
@@ -79,6 +80,7 @@ internal class ZeepToolbar : ZeepGUIBehaviour
     private bool _mouseOver;
     private bool _inMenu;
     private bool _visibleByKey;
+    private bool _hasDoneAutoHide;
 
     private bool MouseOver
     {
@@ -109,6 +111,15 @@ internal class ZeepToolbar : ZeepGUIBehaviour
         _disposableBag = ControlsApi.DisableAllInput(InputLockCondition);
         _disposableBag.Add(_cursorVisible.Override(true, () => _visibleByKey));
         CursorManager_SetCursorEnabled.Invoked += SetCursorEnabledInvoked;
+        OpenUIOnStart_Start.Postfixed += Postfixed;
+    }
+
+    private void Postfixed(OpenUIOnStart obj)
+    {
+        if (_hasDoneAutoHide)
+            return;
+        _hasDoneAutoHide = true;
+        UpdateStyle();
     }
 
     protected override bool BlocksInput()
