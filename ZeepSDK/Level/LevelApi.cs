@@ -1,8 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using BepInEx.Logging;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
 using ZeepSDK.Level.Patches;
 using ZeepSDK.Scripting.Attributes;
+using ZeepSDK.Scripting.Functions;
+using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Level;
 
@@ -13,6 +17,7 @@ namespace ZeepSDK.Level;
 public static class LevelApi
 {
     private static readonly Dictionary<string, string> uidToHash = new();
+    private static ManualLogSource _logger = LoggerFactory.GetLogger(typeof(LevelApi));
 
     /// <summary>
     /// The hash of the current level
@@ -55,38 +60,47 @@ public static class LevelApi
     [GenerateFunction]
     public static string GetLevelHash(LevelScriptableObject levelScriptableObject)
     {
-        const string winSeparator = "\r\n";
-        const string unixSeparator = "\n";
-
-        levelScriptableObject.ForceCheckIfOldOrNewData();
-
-        CsvZeepLevel csvZeepLevel;
-
-        if (levelScriptableObject.useLevelV15Data)
+        try
         {
-            string v15LevelData = levelScriptableObject.GetV15LevelData();
+            const string winSeparator = "\r\n";
+            const string unixSeparator = "\n";
 
-            if (v15LevelData.StartsWith("{"))
+            levelScriptableObject.ForceCheckIfOldOrNewData();
+
+            CsvZeepLevel csvZeepLevel;
+
+            if (levelScriptableObject.useLevelV15Data)
             {
-                v15LevelJSON v15LevelJson = JsonConvert.DeserializeObject<v15LevelJSON>(v15LevelData);
-                if (v15LevelJson != null && (levelScriptableObject.UseAvonturenLevel || levelScriptableObject.IsAdventureLevel))
-                    return levelScriptableObject.UID;
-                return v15LevelJson.level.zeepHash;
+                string v15LevelData = levelScriptableObject.GetV15LevelData();
+
+                if (v15LevelData.StartsWith("{"))
+                {
+                    v15LevelJSON v15LevelJson = JsonConvert.DeserializeObject<v15LevelJSON>(v15LevelData);
+                    if (v15LevelJson != null && (levelScriptableObject.UseAvonturenLevel || levelScriptableObject.IsAdventureLevel))
+                        return levelScriptableObject.UID;
+                    return v15LevelJson.level.zeepHash;
+                }
+
+                csvZeepLevel = CsvZeepLevelParser.Parse(
+                    v15LevelData.Contains(winSeparator)
+                        ? v15LevelData.Split(winSeparator)
+                        : v15LevelData.Split(unixSeparator));
+            }
+            else
+            {
+                csvZeepLevel = CsvZeepLevelParser.Parse(levelScriptableObject.GetOldLevelData());
             }
 
-            csvZeepLevel = CsvZeepLevelParser.Parse(
-                v15LevelData.Contains(winSeparator)
-                    ? v15LevelData.Split(winSeparator)
-                    : v15LevelData.Split(unixSeparator));
-        }
-        else
-        {
-            csvZeepLevel = CsvZeepLevelParser.Parse(levelScriptableObject.GetOldLevelData());
-        }
-
-        if (csvZeepLevel != null && (levelScriptableObject.UseAvonturenLevel || levelScriptableObject.IsAdventureLevel))
-            return levelScriptableObject.UID;
+            if (csvZeepLevel != null && (levelScriptableObject.UseAvonturenLevel || levelScriptableObject.IsAdventureLevel))
+                return levelScriptableObject.UID;
         
-        return csvZeepLevel?.CalculateHash();
+            return csvZeepLevel?.CalculateHash();
+        }
+        catch (Exception e)
+        {
+            _logger.LogError("Failed to calculate level hash");
+            _logger.LogError(e);
+            return null;
+        }
     }
 }
