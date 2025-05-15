@@ -1194,6 +1194,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Crashlytics.CrashlyticsApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Crashlytics.CrashlyticsApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Crashlytics.CrashlyticsApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Crashlytics.CrashlyticsApi.yml\" sourcestartlinenumber=\"1\">An API for dealing with crashlytics</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Crashlytics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Crashlytics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Crashlytics",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Extensions.EventExtensions.yml",
       "output": {
         ".html": {

@@ -1284,6 +1284,15 @@ references:
   fullName.vb: BugsnagUnity.Bugsnag.Start(String)
   nameWithType: Bugsnag.Start(string)
   nameWithType.vb: Bugsnag.Start(String)
+- uid: BugsnagUnity.Bugsnag.Start(System.String,System.Action{BugsnagUnity.Configuration})
+  name: Start(string, Action<Configuration>)
+  href: api/BugsnagUnity.Bugsnag.html#BugsnagUnity_Bugsnag_Start_System_String_System_Action_BugsnagUnity_Configuration__
+  commentId: M:BugsnagUnity.Bugsnag.Start(System.String,System.Action{BugsnagUnity.Configuration})
+  name.vb: Start(String, Action(Of Configuration))
+  fullName: BugsnagUnity.Bugsnag.Start(string, System.Action<BugsnagUnity.Configuration>)
+  fullName.vb: BugsnagUnity.Bugsnag.Start(String, System.Action(Of BugsnagUnity.Configuration))
+  nameWithType: Bugsnag.Start(string, Action<Configuration>)
+  nameWithType.vb: Bugsnag.Start(String, Action(Of Configuration))
 - uid: BugsnagUnity.Bugsnag.Start*
   name: Start
   href: api/BugsnagUnity.Bugsnag.html#BugsnagUnity_Bugsnag_Start_
@@ -6941,6 +6950,47 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Cosmetics.CosmeticsApi.GetUnlockedZeepkists
   nameWithType: CosmeticsApi.GetUnlockedZeepkists
+- uid: ZeepSDK.Crashlytics
+  name: ZeepSDK.Crashlytics
+  href: api/ZeepSDK.Crashlytics.html
+  commentId: N:ZeepSDK.Crashlytics
+  fullName: ZeepSDK.Crashlytics
+  nameWithType: ZeepSDK.Crashlytics
+- uid: ZeepSDK.Crashlytics.CrashlyticsApi
+  name: CrashlyticsApi
+  href: api/ZeepSDK.Crashlytics.CrashlyticsApi.html
+  commentId: T:ZeepSDK.Crashlytics.CrashlyticsApi
+  fullName: ZeepSDK.Crashlytics.CrashlyticsApi
+  nameWithType: CrashlyticsApi
+- uid: ZeepSDK.Crashlytics.CrashlyticsApi.LeaveBreadcrumb(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  name: LeaveBreadcrumb(string, Dictionary<string, object>)
+  href: api/ZeepSDK.Crashlytics.CrashlyticsApi.html#ZeepSDK_Crashlytics_CrashlyticsApi_LeaveBreadcrumb_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  commentId: M:ZeepSDK.Crashlytics.CrashlyticsApi.LeaveBreadcrumb(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  name.vb: LeaveBreadcrumb(String, Dictionary(Of String, Object))
+  fullName: ZeepSDK.Crashlytics.CrashlyticsApi.LeaveBreadcrumb(string, System.Collections.Generic.Dictionary<string, object>)
+  fullName.vb: ZeepSDK.Crashlytics.CrashlyticsApi.LeaveBreadcrumb(String, System.Collections.Generic.Dictionary(Of String, Object))
+  nameWithType: CrashlyticsApi.LeaveBreadcrumb(string, Dictionary<string, object>)
+  nameWithType.vb: CrashlyticsApi.LeaveBreadcrumb(String, Dictionary(Of String, Object))
+- uid: ZeepSDK.Crashlytics.CrashlyticsApi.LeaveBreadcrumb*
+  name: LeaveBreadcrumb
+  href: api/ZeepSDK.Crashlytics.CrashlyticsApi.html#ZeepSDK_Crashlytics_CrashlyticsApi_LeaveBreadcrumb_
+  commentId: Overload:ZeepSDK.Crashlytics.CrashlyticsApi.LeaveBreadcrumb
+  isSpec: "True"
+  fullName: ZeepSDK.Crashlytics.CrashlyticsApi.LeaveBreadcrumb
+  nameWithType: CrashlyticsApi.LeaveBreadcrumb
+- uid: ZeepSDK.Crashlytics.CrashlyticsApi.Notify(System.Exception)
+  name: Notify(Exception)
+  href: api/ZeepSDK.Crashlytics.CrashlyticsApi.html#ZeepSDK_Crashlytics_CrashlyticsApi_Notify_System_Exception_
+  commentId: M:ZeepSDK.Crashlytics.CrashlyticsApi.Notify(System.Exception)
+  fullName: ZeepSDK.Crashlytics.CrashlyticsApi.Notify(System.Exception)
+  nameWithType: CrashlyticsApi.Notify(Exception)
+- uid: ZeepSDK.Crashlytics.CrashlyticsApi.Notify*
+  name: Notify
+  href: api/ZeepSDK.Crashlytics.CrashlyticsApi.html#ZeepSDK_Crashlytics_CrashlyticsApi_Notify_
+  commentId: Overload:ZeepSDK.Crashlytics.CrashlyticsApi.Notify
+  isSpec: "True"
+  fullName: ZeepSDK.Crashlytics.CrashlyticsApi.Notify
+  nameWithType: CrashlyticsApi.Notify
 - uid: ZeepSDK.Extensions
   name: ZeepSDK.Extensions
   href: api/ZeepSDK.Extensions.html
