@@ -43,6 +43,15 @@ public static class CrashlyticsApi
         Bugsnag.LeaveBreadcrumb(message, metadata, BreadcrumbType.Manual);
     }
 
+    /// <summary>
+    /// Allows you to notify crashlytics of an exception that happened
+    /// </summary>
+    /// <param name="exception"></param>
+    public static void Notify(Exception exception)
+    {
+        Bugsnag.Notify(exception);
+    }
+
     private static void OnPostfix(OpenUIOnStart instance)
     {
         if (instance.hasMod && PlayerPrefs.GetInt("ZeepSDK.HasGivenConsent", 0) == 0)
