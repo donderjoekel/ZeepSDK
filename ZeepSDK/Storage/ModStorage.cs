@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using BepInEx;
 using Newtonsoft.Json;
 using ZeepSDK.External.Newtonsoft.Json.UnityConverters;
@@ -16,6 +17,7 @@ namespace ZeepSDK.Storage;
 
 internal class ModStorage : IModStorage
 {
+    private readonly List<char> _invalidCharacters;
     private readonly BaseUnityPlugin plugin;
     private readonly JsonSerializerSettings settings;
     private readonly string directoryPath;
@@ -52,6 +54,10 @@ internal class ModStorage : IModStorage
                 new Vector4Converter(),
             }
         };
+        
+        _invalidCharacters = [];
+        _invalidCharacters.AddRange(Path.GetInvalidFileNameChars());
+        _invalidCharacters.AddRange(Path.GetInvalidPathChars());
 
         directoryPath = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
@@ -62,7 +68,7 @@ internal class ModStorage : IModStorage
 
     private string CreatePath(string name, string extension)
     {
-        string filePath = Path.Combine(directoryPath, name) + extension;
+        string filePath = Path.Combine(directoryPath, SanitizePath(name)) + extension;
 
         string directoryName = Path.GetDirectoryName(filePath);
         if (!string.IsNullOrEmpty(directoryName) && !Directory.Exists(directoryName))
@@ -71,6 +77,21 @@ internal class ModStorage : IModStorage
         }
 
         return filePath;
+    }
+
+    private string SanitizePath(string input)
+    {
+        StringBuilder builder = new();
+
+        foreach (char c in input)
+        {
+            if (_invalidCharacters.Contains(c))
+                builder.Append("_");
+            else
+                builder.Append(c);
+        }
+        
+        return builder.ToString();
     }
 
     public void AddConverter(JsonConverter converter)
