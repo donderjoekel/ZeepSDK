@@ -4,6 +4,8 @@ using System.Linq;
 using BepInEx.Bootstrap;
 using BepInEx.Logging;
 using BugsnagUnity;
+using BugsnagUnity.Payload;
+using JetBrains.Annotations;
 using Rewired;
 using Steamworks;
 using TMPro;
@@ -18,13 +20,27 @@ using Object = UnityEngine.Object;
 
 namespace ZeepSDK.Crashlytics;
 
-internal static class CrashlyticsApi
+/// <summary>
+/// An API for dealing with crashlytics
+/// </summary>
+[PublicAPI]
+public static class CrashlyticsApi
 {
     private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(CrashlyticsApi));
     
-    public static void Initialize(GameObject gameObject)
+    internal static void Initialize(GameObject gameObject)
     {
         OpenUIOnStart_Start.Postfixed += OnPostfix;
+    }
+
+    /// <summary>
+    /// Allows you to leave an extra breadcrumb in the crashlytics report
+    /// </summary>
+    /// <param name="message"></param>
+    /// <param name="metadata"></param>
+    public static void LeaveBreadcrumb(string message, Dictionary<string,object> metadata = null)
+    {
+        Bugsnag.LeaveBreadcrumb(message, metadata, BreadcrumbType.Manual);
     }
 
     private static void OnPostfix(OpenUIOnStart instance)
