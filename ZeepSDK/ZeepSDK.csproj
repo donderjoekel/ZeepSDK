@@ -42,26 +42,4 @@
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
     </ItemGroup>
-    <Target Name="PDB" AfterTargets="PostBuildEvent">
-        <Message Text="Generating PDB" Importance="high" />
-        <Exec Command="&quot;C:\Program Files\Unity\Hub\Editor\2021.3.10f1\Editor\Data\MonoBleedingEdge\bin\mono.exe&quot; &quot;C:\Program Files\Unity\Hub\Editor\2021.3.10f1\Editor\Data\MonoBleedingEdge\lib\mono\4.5\pdb2mdb.exe&quot; &quot;$(TargetPath)&quot;" />
-    </Target>
-
-    <Target Name="Package" AfterTargets="PostBuildEvent">
-        <Message Text="Packaging Plugin" Importance="high" />
-        <ItemGroup>
-            <OutputFiles Include="$(TargetDir)ZeepSDK*" Exclude="$(TargetDir)ZeepSDK*.zip" />
-            <OutputFiles Include="$(TargetDir)MoonSharp*" />
-            <OutputFiles Include="$(TargetDir)StandaloneWindows" />
-            <OutputFiles Include="$(TargetDir)zeepgui" />
-            <OutputFiles Include="$(TargetDir)Sentry*" />
-        </ItemGroup>
-        <Copy SourceFiles="@(OutputFiles)" DestinationFolder="$(TargetDir)\Package" />
-        <Copy SourceFiles="@(OutputFiles)" DestinationFolder="D:\SteamLibrary\steamapps\common\Zeepkist\BepInEx\plugins\Sideloaded\Plugins" />
-    </Target>
-
-    <Target Name="Compress" AfterTargets="PostBuildEvent">
-        <Message Text="Compressing Plugin" Importance="high" />
-        <Exec Command="&quot;C:\Program Files\7-Zip\7z.exe&quot; a -tzip &quot;$(TargetDir)$(AssemblyName)-$(Version).zip&quot; &quot;$(TargetDir)Package\*&quot;" />
-    </Target>
 </Project>
