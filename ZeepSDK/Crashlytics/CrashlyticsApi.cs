@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using BepInEx.Bootstrap;
 using BepInEx.Logging;
 using BugsnagUnity;
@@ -11,11 +12,9 @@ using Steamworks;
 using TMPro;
 using UnityEngine;
 using ZeepSDK.BugReporting.Patches;
-using ZeepSDK.Chat;
 using ZeepSDK.External.Cysharp.Threading.Tasks;
 using ZeepSDK.External.Cysharp.Threading.Tasks.Triggers;
 using ZeepSDK.Utilities;
-using Logger = UnityEngine.Logger;
 using Object = UnityEngine.Object;
 
 namespace ZeepSDK.Crashlytics;
@@ -81,6 +80,7 @@ public static class CrashlyticsApi
             Bugsnag.Start("", configuration =>
             {
                 configuration.AppVersion = $"{v.version}.{v.patch}.{v.build}";
+                configuration.AddOnSendError(AddOnSend);
 
                 Dictionary<string, object> modVersions = Chainloader.PluginInfos.ToDictionary(
                     x => x.Value.Metadata.Name,
@@ -97,6 +97,41 @@ public static class CrashlyticsApi
         }
 
         Bugsnag.SetUser(SteamClient.SteamId.Value.ToString(), null, SteamClient.Name);
+    }
+
+    private static bool AddOnSend(IEvent evt)
+    {
+        HashSet<Assembly> assemblies = [];
+
+        try
+        {
+            foreach (IError error in evt.Errors)
+            {
+                foreach (IStackframe frame in error.Stacktrace)
+                {
+                    string sub = frame.Method[..frame.Method.LastIndexOf('(')];
+                    int index;
+                    while ((index = sub.LastIndexOf('.')) != -1)
+                    {
+                        sub = sub[..index];
+                        Type foundType = Type.GetType(sub);
+                        if (foundType == null) continue;
+                        assemblies.Add(foundType.Assembly);
+                        break;
+                    }
+                }
+            }
+        }
+        finally
+        {
+            if (assemblies.Count > 0)
+            {
+                evt.AddMetadata("Assemblies",
+                    assemblies.ToDictionary(x => x.GetName().Name, object (y) => y.GetName().Version.ToString()));
+            }
+        }
+
+        return true;
     }
 
     private static async UniTaskVoid WaitForDestroy(OpenUIOnStart instance)
