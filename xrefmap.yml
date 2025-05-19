@@ -7038,6 +7038,25 @@ references:
   fullName.vb: ZeepSDK.Extensions.ListExtensions.Chunk(Of T)(System.Collections.Generic.IEnumerable(Of T), Integer)
   nameWithType: ListExtensions.Chunk<T>(IEnumerable<T>, int)
   nameWithType.vb: ListExtensions.Chunk(Of T)(IEnumerable(Of T), Integer)
+- uid: ZeepSDK.Extensions.ResultExtensions
+  name: ResultExtensions
+  href: api/ZeepSDK.Extensions.ResultExtensions.html
+  commentId: T:ZeepSDK.Extensions.ResultExtensions
+  fullName: ZeepSDK.Extensions.ResultExtensions
+  nameWithType: ResultExtensions
+- uid: ZeepSDK.Extensions.ResultExtensions.NotifyErrors(ZeepSDK.External.FluentResults.ResultBase)
+  name: NotifyErrors(ResultBase)
+  href: api/ZeepSDK.Extensions.ResultExtensions.html#ZeepSDK_Extensions_ResultExtensions_NotifyErrors_ZeepSDK_External_FluentResults_ResultBase_
+  commentId: M:ZeepSDK.Extensions.ResultExtensions.NotifyErrors(ZeepSDK.External.FluentResults.ResultBase)
+  fullName: ZeepSDK.Extensions.ResultExtensions.NotifyErrors(ZeepSDK.External.FluentResults.ResultBase)
+  nameWithType: ResultExtensions.NotifyErrors(ResultBase)
+- uid: ZeepSDK.Extensions.ResultExtensions.NotifyErrors*
+  name: NotifyErrors
+  href: api/ZeepSDK.Extensions.ResultExtensions.html#ZeepSDK_Extensions_ResultExtensions_NotifyErrors_
+  commentId: Overload:ZeepSDK.Extensions.ResultExtensions.NotifyErrors
+  isSpec: "True"
+  fullName: ZeepSDK.Extensions.ResultExtensions.NotifyErrors
+  nameWithType: ResultExtensions.NotifyErrors
 - uid: ZeepSDK.Extensions.StringBuilderExtensions
   name: StringBuilderExtensions
   href: api/ZeepSDK.Extensions.StringBuilderExtensions.html

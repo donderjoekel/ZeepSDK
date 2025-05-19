@@ -1250,6 +1250,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Extensions.ResultExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Extensions.ResultExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Extensions.ResultExtensions",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Extensions.ResultExtensions.yml\" sourcestartlinenumber=\"1\">Contains extensions for Result</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Extensions.StringBuilderExtensions.yml",
       "output": {
         ".html": {
