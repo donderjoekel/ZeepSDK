@@ -20,9 +20,12 @@ public readonly struct DisposableBag : IDisposable
 
     public void Dispose()
     {
+        if (_disposables == null) return;
         foreach (IDisposable disposable in _disposables)
         {
+            if (disposable == null) continue;
             disposable.Dispose();
         }
+        _disposables.Clear();
     }
 }

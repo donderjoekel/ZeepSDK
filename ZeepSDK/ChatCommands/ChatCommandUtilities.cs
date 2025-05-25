@@ -10,7 +10,7 @@ internal static class ChatCommandUtilities
         string escapedPrefix = Regex.Escape(chatCommand.Prefix);
         string escapedCommand = Regex.Escape(chatCommand.Command);
         string pattern = $"^{escapedPrefix}{escapedCommand}(\\W|$).*";
-        return Regex.IsMatch(input, pattern);
+        return Regex.IsMatch(input, pattern, RegexOptions.IgnoreCase);
     }
 
     public static string GetArguments(string input, IChatCommand chatCommand)
