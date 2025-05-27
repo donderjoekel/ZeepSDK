@@ -2216,6 +2216,76 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsTabSwitchedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsTabSwitchedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsTabSwitchedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsWindowClosedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsWindowClosedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsWindowClosedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsWindowOpenedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsWindowOpenedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsWindowOpenedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.SettingsApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.SettingsApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.SettingsApi",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Storage.IModStorage.yml",
       "output": {
         ".html": {

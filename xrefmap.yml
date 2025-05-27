@@ -9371,6 +9371,80 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Scripting.ZUA.Zua.Unload
   nameWithType: Zua.Unload
+- uid: ZeepSDK.Settings
+  name: ZeepSDK.Settings
+  href: api/ZeepSDK.Settings.html
+  commentId: N:ZeepSDK.Settings
+  fullName: ZeepSDK.Settings
+  nameWithType: ZeepSDK.Settings
+- uid: ZeepSDK.Settings.ModSettingsTabSwitchedDelegate
+  name: ModSettingsTabSwitchedDelegate
+  href: api/ZeepSDK.Settings.ModSettingsTabSwitchedDelegate.html
+  commentId: T:ZeepSDK.Settings.ModSettingsTabSwitchedDelegate
+  fullName: ZeepSDK.Settings.ModSettingsTabSwitchedDelegate
+  nameWithType: ModSettingsTabSwitchedDelegate
+- uid: ZeepSDK.Settings.ModSettingsWindowClosedDelegate
+  name: ModSettingsWindowClosedDelegate
+  href: api/ZeepSDK.Settings.ModSettingsWindowClosedDelegate.html
+  commentId: T:ZeepSDK.Settings.ModSettingsWindowClosedDelegate
+  fullName: ZeepSDK.Settings.ModSettingsWindowClosedDelegate
+  nameWithType: ModSettingsWindowClosedDelegate
+- uid: ZeepSDK.Settings.ModSettingsWindowOpenedDelegate
+  name: ModSettingsWindowOpenedDelegate
+  href: api/ZeepSDK.Settings.ModSettingsWindowOpenedDelegate.html
+  commentId: T:ZeepSDK.Settings.ModSettingsWindowOpenedDelegate
+  fullName: ZeepSDK.Settings.ModSettingsWindowOpenedDelegate
+  nameWithType: ModSettingsWindowOpenedDelegate
+- uid: ZeepSDK.Settings.SettingsApi
+  name: SettingsApi
+  href: api/ZeepSDK.Settings.SettingsApi.html
+  commentId: T:ZeepSDK.Settings.SettingsApi
+  fullName: ZeepSDK.Settings.SettingsApi
+  nameWithType: SettingsApi
+- uid: ZeepSDK.Settings.SettingsApi.CloseModSettings
+  name: CloseModSettings()
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_CloseModSettings
+  commentId: M:ZeepSDK.Settings.SettingsApi.CloseModSettings
+  fullName: ZeepSDK.Settings.SettingsApi.CloseModSettings()
+  nameWithType: SettingsApi.CloseModSettings()
+- uid: ZeepSDK.Settings.SettingsApi.CloseModSettings*
+  name: CloseModSettings
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_CloseModSettings_
+  commentId: Overload:ZeepSDK.Settings.SettingsApi.CloseModSettings
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.SettingsApi.CloseModSettings
+  nameWithType: SettingsApi.CloseModSettings
+- uid: ZeepSDK.Settings.SettingsApi.ModSettingsTabSwitched
+  name: ModSettingsTabSwitched
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ModSettingsTabSwitched
+  commentId: E:ZeepSDK.Settings.SettingsApi.ModSettingsTabSwitched
+  fullName: ZeepSDK.Settings.SettingsApi.ModSettingsTabSwitched
+  nameWithType: SettingsApi.ModSettingsTabSwitched
+- uid: ZeepSDK.Settings.SettingsApi.ModSettingsWindowClosed
+  name: ModSettingsWindowClosed
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ModSettingsWindowClosed
+  commentId: E:ZeepSDK.Settings.SettingsApi.ModSettingsWindowClosed
+  fullName: ZeepSDK.Settings.SettingsApi.ModSettingsWindowClosed
+  nameWithType: SettingsApi.ModSettingsWindowClosed
+- uid: ZeepSDK.Settings.SettingsApi.ModSettingsWindowOpened
+  name: ModSettingsWindowOpened
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ModSettingsWindowOpened
+  commentId: E:ZeepSDK.Settings.SettingsApi.ModSettingsWindowOpened
+  fullName: ZeepSDK.Settings.SettingsApi.ModSettingsWindowOpened
+  nameWithType: SettingsApi.ModSettingsWindowOpened
+- uid: ZeepSDK.Settings.SettingsApi.OpenModSettings
+  name: OpenModSettings()
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_OpenModSettings
+  commentId: M:ZeepSDK.Settings.SettingsApi.OpenModSettings
+  fullName: ZeepSDK.Settings.SettingsApi.OpenModSettings()
+  nameWithType: SettingsApi.OpenModSettings()
+- uid: ZeepSDK.Settings.SettingsApi.OpenModSettings*
+  name: OpenModSettings
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_OpenModSettings_
+  commentId: Overload:ZeepSDK.Settings.SettingsApi.OpenModSettings
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.SettingsApi.OpenModSettings
+  nameWithType: SettingsApi.OpenModSettings
 - uid: ZeepSDK.Storage
   name: ZeepSDK.Storage
   href: api/ZeepSDK.Storage.html
@@ -10810,6 +10884,19 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.UI.ZeepGUIWindow.GetTitle
   nameWithType: ZeepGUIWindow.GetTitle
+- uid: ZeepSDK.UI.ZeepGUIWindow.OnClose
+  name: OnClose()
+  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_OnClose
+  commentId: M:ZeepSDK.UI.ZeepGUIWindow.OnClose
+  fullName: ZeepSDK.UI.ZeepGUIWindow.OnClose()
+  nameWithType: ZeepGUIWindow.OnClose()
+- uid: ZeepSDK.UI.ZeepGUIWindow.OnClose*
+  name: OnClose
+  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_OnClose_
+  commentId: Overload:ZeepSDK.UI.ZeepGUIWindow.OnClose
+  isSpec: "True"
+  fullName: ZeepSDK.UI.ZeepGUIWindow.OnClose
+  nameWithType: ZeepGUIWindow.OnClose
 - uid: ZeepSDK.UI.ZeepGUIWindow.Open*
   name: Open
   href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_Open_
