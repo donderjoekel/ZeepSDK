@@ -21,6 +21,7 @@ using ZeepSDK.Multiplayer;
 using ZeepSDK.PhotoMode;
 using ZeepSDK.Racing;
 using ZeepSDK.Scripting;
+using ZeepSDK.Settings;
 using ZeepSDK.Storage;
 using ZeepSDK.UI;
 using ZeepSDK.Versioning;
@@ -71,6 +72,7 @@ namespace ZeepSDK
             UIApi.Initialize(gameObject);
             ScriptingApi.Initialize();
             ControlsApi.Initialize();
+            SettingsApi.Initialize();
 
             // Plugin startup logic
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");

@@ -107,7 +107,15 @@ namespace ZeepSDK.UI
         /// </summary>
         public void Close()
         {
+            OnClose();
             Destroy(gameObject);
+        }
+
+        /// <summary>
+        /// Called right before the window closes
+        /// </summary>
+        protected virtual void OnClose()
+        {
         }
     }
 }
