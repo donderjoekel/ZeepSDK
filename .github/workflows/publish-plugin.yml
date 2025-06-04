@@ -4,48 +4,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  install-unity:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup .NET SDK
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
-
-      - name: Install Unity 2021.3.10f1
-        uses: game-ci/unity-installer@v3
-        with:
-          unityVersion: 2021.3.10f1
-
-      - name: Install 7-Zip
-        run: choco install 7zip -y
-
-      - name: Add msbuild to PATH
-        uses: microsoft/setup-msbuild@v2
-
-      - name: Inject Bugsnag secret into Secrets.resx
+      - name: Download Unity Installer
         run: |
-          $resxPath = "Path/To/Secrets.resx"
-          $secretValue = "${{ secrets.BUGSNAG }}"
+          Invoke-WebRequest -Uri "https://download.unity3d.com/download_unity/1c7d0df0160b/Windows64EditorInstaller/UnitySetup64-2021.3.10f1.exe" -OutFile "UnitySetup64.exe"
 
-          [xml]$xml = Get-Content $resxPath
-
-          $dataNode = $xml.root.data | Where-Object { $_.name -eq "Bugsnag" }
-          $dataNode.value = $secretValue
-
-          $xml.Save($resxPath)
-        shell: pwsh
-
-      - name: Run PublishPlugin target
-        run: msbuild Path/To/YourProject.csproj -target:PublishPlugin
-
-      - name: Upload ZIP artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: plugin-zip
-          path: '**/upload-me-*.zip'
-
+      - name: Run Silent Installation
+        run: |
+          Start-Process -FilePath ".\UnitySetup64.exe" -ArgumentList "/S", "/D=C:\Unity" -NoNewWindow -Wait
