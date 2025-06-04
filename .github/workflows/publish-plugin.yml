@@ -1,0 +1,55 @@
+name: Publish Plugin
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Install Unity 2021.3.10f1
+        uses: game-ci/unity-installer@v3
+        with:
+          unityVersion: 2021.3.10f1
+
+      - name: Install 7-Zip
+        run: choco install 7zip -y
+
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Inject Bugsnag secret into Secrets.resx
+        run: |
+	  $resxPath = Get-ChildItem -Path . -Recurse -Filter Secrets.resx | Select-Object -First 1 | ForEach-Object { $_.FullName }
+	  if (-not $resxPath) {
+	    Write-Error "Secrets.resx file not found."
+	    exit 1
+	  }
+          $secretValue = "${{ secrets.BUGSNAG }}"
+
+          [xml]$xml = Get-Content $resxPath
+
+          $dataNode = $xml.root.data | Where-Object { $_.name -eq "Bugsnag" }
+          $dataNode.value = $secretValue
+
+          $xml.Save($resxPath)
+        shell: pwsh
+
+      - name: Run PublishPlugin target
+        run: msbuild Path/To/YourProject.csproj -target:PublishPlugin
+
+      - name: Upload ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: plugin-zip
+          path: '**/upload-me-*.zip'
+
