@@ -29,11 +29,7 @@ jobs:
 
       - name: Inject Bugsnag secret into Secrets.resx
         run: |
-	  $resxPath = Get-ChildItem -Path . -Recurse -Filter Secrets.resx | Select-Object -First 1 | ForEach-Object { $_.FullName }
-	  if (-not $resxPath) {
-	    Write-Error "Secrets.resx file not found."
-	    exit 1
-	  }
+          $resxPath = "Path/To/Secrets.resx"
           $secretValue = "${{ secrets.BUGSNAG }}"
 
           [xml]$xml = Get-Content $resxPath
