@@ -77,7 +77,7 @@ public static class CrashlyticsApi
         {
             VersionScriptableObject v = SteamManager.Instance.version;
             MainThreadDispatchBehaviour.InitializeLoop();
-            Bugsnag.Start("", configuration =>
+            Bugsnag.Start(Secrets.Bugsnag, configuration =>
             {
                 configuration.AppVersion = $"{v.version}.{v.patch}.{v.build}";
                 configuration.AddOnSendError(AddOnSend);
