@@ -136,19 +136,17 @@ internal class UIConfigurator : MonoBehaviour
 
     private void LoadSaveData()
     {
-        try
+        if (!Plugin.Storage.JsonFileExists("UIConfigurator"))
         {
-            Dictionary<string, TransformSaveData> loadedSaveData =
-                Plugin.Storage.LoadFromJson<Dictionary<string, TransformSaveData>>("UIConfigurator");
-
-            if (loadedSaveData != null)
-            {
-                transformSaveData.AddRange(loadedSaveData);
-            }
+            return;
         }
-        catch (FileNotFoundException)
+
+        Dictionary<string, TransformSaveData> loadedSaveData =
+            Plugin.Storage.LoadFromJson<Dictionary<string, TransformSaveData>>("UIConfigurator");
+
+        if (loadedSaveData != null)
         {
-            // Can be ignored
+            transformSaveData.AddRange(loadedSaveData);
         }
     }
 
