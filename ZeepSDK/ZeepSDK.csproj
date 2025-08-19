@@ -29,26 +29,26 @@
     <ItemGroup>
         <None Include="..\README.md" Pack="true" PackagePath="\" />
         <ProjectReference Include="..\ZeepSDK.ZuaGenerator\ZeepSDK.ZuaGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-        <None Update="ExternalFiles\StandaloneWindows">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <None Update="StandaloneWindows">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
-        <None Update="ExternalFiles\StandaloneWindows.manifest">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <None Update="StandaloneWindows.manifest">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
-        <None Update="ExternalFiles\zeepgui">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <None Update="zeepgui">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
-        <None Update="ExternalFiles\zeepgui.manifest">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <None Update="zeepgui.manifest">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
     </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="BepInEx.Analyzers" Version="1.0.8" PrivateAssets="all" />
-        <PackageReference Include="BepInEx.Core" Version="5.4.21" />
-        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0" />
+        <PackageReference Include="BepInEx.Core" Version="5.4.21" PrivateAssets="all"  />
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0" PrivateAssets="all"  />
         <PackageReference Include="MoonSharp" Version="2.0.0" />
-        <PackageReference Include="Zeepkist.GameLibs" Version="17.15.1867" />
+        <PackageReference Include="Zeepkist.GameLibs" Version="17.15.1867" PrivateAssets="all"  />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
