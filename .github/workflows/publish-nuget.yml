@@ -1,11 +1,8 @@
 name: Publish NuGet Package
 
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - '**/publish-docs.yml'
+  release:
+    types: [published]
   workflow_dispatch:
 
 jobs:
