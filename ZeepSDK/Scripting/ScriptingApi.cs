@@ -126,7 +126,6 @@ public static class ScriptingApi
         catch (SyntaxErrorException ex)
         {
             logger.LogError($"An error occured trying to load a lua script. {ex.DecoratedMessage}");
-            logger.LogError(ex);
             return null;
         }
         catch (Exception ex)

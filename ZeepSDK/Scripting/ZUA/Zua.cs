@@ -102,7 +102,6 @@ public class Zua
         catch (ScriptRuntimeException ex)
         {
             Logger.LogError($"Error calling Lua function '{name}. {ex.DecoratedMessage}");
-            Logger.LogError(ex);
         }
         catch (Exception e)
         {
