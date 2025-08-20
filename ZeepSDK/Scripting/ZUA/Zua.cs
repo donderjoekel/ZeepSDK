@@ -99,6 +99,10 @@ public class Zua
             DynValue[] dynArgs = args.Select(arg => DynValue.FromObject(script, arg)).ToArray();
             script.Call(function, dynArgs);
         }
+        catch (ScriptRuntimeException ex)
+        {
+            Logger.LogError($"Error calling Lua function '{name}. {ex.DecoratedMessage}");
+        }
         catch (Exception e)
         {
             Logger.LogError($"Error calling Lua function '{name}': {e.Message}");

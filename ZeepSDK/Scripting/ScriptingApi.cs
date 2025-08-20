@@ -123,10 +123,15 @@ public static class ScriptingApi
             loadedScripts.Add(filePath, zua);
             return zua;
         }
-        catch (Exception e)
+        catch (SyntaxErrorException ex)
         {
-            logger.LogError("An error occured trying to load a lua script");
-            logger.LogError(e);
+            logger.LogError($"An error occured trying to load a lua script. {ex.DecoratedMessage}");
+            return null;
+        }
+        catch (Exception ex)
+        {
+            logger.LogError($"An error occured trying to load a lua script.");
+            logger.LogError(ex);
             return null;
         }
     }
