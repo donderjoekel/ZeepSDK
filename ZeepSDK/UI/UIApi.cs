@@ -1,4 +1,6 @@
-﻿using System;
+﻿// #define ENABLE_UI_API
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -28,6 +30,7 @@ public static class UIApi
 
     internal static void Initialize(GameObject gameObject)
     {
+#if ENABLE_UI_API
         GameObject zeepToolbarContainer = new GameObject("ZeepToolbar");
         zeepToolbarContainer.transform.SetParent(gameObject.transform);
         _toolbar = zeepToolbarContainer.AddComponent<ZeepToolbar>();
@@ -37,7 +40,8 @@ public static class UIApi
         GameObject zeepTooltipper = new GameObject("ZeepTooltipper");
         zeepTooltipper.transform.SetParent(gameObject.transform);
         zeepTooltipper.AddComponent<ZeepTooltipper>();
-        
+#endif
+
         uiConfigurator = gameObject.AddComponent<UIConfigurator>();
         CreateTooltip();
 
@@ -49,12 +53,16 @@ public static class UIApi
 
     public static void AddToolbarItem(string title, Action onClick)
     {
+#if ENABLE_UI_API
         _toolbar.AddToolbarButtonRoot(title, onClick);
+#endif
     }
 
     public static void AddToolbarItemChild(string parentTitle, string title, Action onClick, int priority = 0)
     {
+#if ENABLE_UI_API
         _toolbar.AddToolbarButtonChild(parentTitle, title, onClick, priority);
+#endif
     }
 
     private static void OnOnlineChatUIAwake(OnlineChatUI instance)
