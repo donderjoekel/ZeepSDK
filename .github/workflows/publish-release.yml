@@ -37,7 +37,7 @@ jobs:
           version: ${{ env.VERSION }}
 
       - name: Publish
-        run: dotnet publish --artifacts-path "C:\out"
+        run: dotnet publish --artifacts-path "C:\out" /p:BugsnagKey="${{ secrets.BUGSNAG_KEY }}"
 
       - name: Get AssemblyName
         id: asm
