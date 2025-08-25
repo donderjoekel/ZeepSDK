@@ -5,7 +5,7 @@
         <AssemblyName>ZeepSDK</AssemblyName>
         <Description>ZeepSDK</Description>
         <Authors>TNRD</Authors>
-        <Version>1.45.8</Version>
+        <Version>1.45.9</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
         <Title>ZeepSDK</Title>
@@ -28,6 +28,7 @@
 
     <ItemGroup>
         <None Include="..\README.md" Pack="true" PackagePath="\" />
+        <ProjectReference Include="..\ZeepSDK.SecretsGenerator\ZeepSDK.SecretsGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
         <ProjectReference Include="..\ZeepSDK.ZuaGenerator\ZeepSDK.ZuaGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
         <None Update="StandaloneWindows">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -44,6 +45,10 @@
     </ItemGroup>
 
     <ItemGroup>
+        <CompilerVisibleProperty Include="BugsnagKey" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="BepInEx.Analyzers" Version="1.0.8" PrivateAssets="all" />
         <PackageReference Include="BepInEx.Core" Version="5.4.21" PrivateAssets="all"  />
         <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0" PrivateAssets="all"  />
@@ -53,20 +58,5 @@
 
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <EmbeddedResource Update="Secrets.resx">
-        <Generator>ResXFileCodeGenerator</Generator>
-        <LastGenOutput>Secrets.Designer.cs</LastGenOutput>
-      </EmbeddedResource>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="Secrets.Designer.cs">
-        <DesignTime>True</DesignTime>
-        <AutoGen>True</AutoGen>
-        <DependentUpon>Secrets.resx</DependentUpon>
-      </Compile>
     </ItemGroup>
 </Project>

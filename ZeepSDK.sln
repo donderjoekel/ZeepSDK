@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeepSDK", "ZeepSDK\ZeepSDK.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeepSDK.ZuaGenerator", "ZeepSDK.ZuaGenerator\ZeepSDK.ZuaGenerator.csproj", "{45A85391-BBED-44B6-9DA7-01BD534EB999}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeepSDK.SecretsGenerator", "ZeepSDK.SecretsGenerator\ZeepSDK.SecretsGenerator.csproj", "{6A6BF87D-F6D9-43A1-AF2A-FEB4015B8982}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{45A85391-BBED-44B6-9DA7-01BD534EB999}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45A85391-BBED-44B6-9DA7-01BD534EB999}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45A85391-BBED-44B6-9DA7-01BD534EB999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A6BF87D-F6D9-43A1-AF2A-FEB4015B8982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6BF87D-F6D9-43A1-AF2A-FEB4015B8982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6BF87D-F6D9-43A1-AF2A-FEB4015B8982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A6BF87D-F6D9-43A1-AF2A-FEB4015B8982}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
