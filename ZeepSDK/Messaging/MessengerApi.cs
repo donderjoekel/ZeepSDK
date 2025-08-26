@@ -89,7 +89,7 @@ public static class MessengerApi
             duration,
             Color.white,
             new Color32(40, 167, 69, 255));
-        PlayerManager.Instance.messenger.frog.sprite = SuccessSprite;
+        // PlayerManager.Instance.messenger.frog.sprite = SuccessSprite;
     }
 
     /// <summary>
@@ -105,7 +105,7 @@ public static class MessengerApi
             duration,
             new Color32(52, 58, 64, 255),
             new Color32(255, 193, 7, 255));
-        PlayerManager.Instance.messenger.frog.sprite = NeutralSprite;
+        // PlayerManager.Instance.messenger.frog.sprite = NeutralSprite;
     }
 
     /// <summary>
@@ -117,7 +117,7 @@ public static class MessengerApi
     public static void LogError(string message, float duration = DEFAULT_DURATION)
     {
         PlayerManager.Instance.messenger.LogError(message, duration);
-        PlayerManager.Instance.messenger.frog.sprite = ErrorSprite;
+        // PlayerManager.Instance.messenger.frog.sprite = ErrorSprite;
     }
 
     /// <summary>
