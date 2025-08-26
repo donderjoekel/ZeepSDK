@@ -1,0 +1,5 @@
+root = true
+
+[*]
+generated_code = true
+dotnet_diagnostic.CS1591.severity = none

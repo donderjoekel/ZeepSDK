@@ -6,6 +6,7 @@ namespace BugsnagUnity
     /// <summary>
     /// Manages events related to application state such as whether the app
     /// is in the foreground or background to improve report metadata.
+    /// </summary>
     class TimingTrackerBehaviour : MonoBehaviour
     {
 
