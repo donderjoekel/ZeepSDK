@@ -59,23 +59,4 @@
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
     </ItemGroup>
-
-    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-        <Message Text="Copying built files to output folder..." Importance="high" />
-        <PropertyGroup>
-            <DestinationFolder>/home/christiaan/.local/share/Steam/steamapps/common/Zeepkist/BepInEx/plugins/Sideload/ZeepSDK/</DestinationFolder>
-        </PropertyGroup>
-        <Copy
-                SourceFiles="$(TargetDir)ZeepSDK.dll"
-                DestinationFolder="$(DestinationFolder)"
-                SkipUnchangedFiles="true" />
-        <Copy
-                SourceFiles="$(TargetDir)ZeepSDK.pdb"
-                DestinationFolder="$(DestinationFolder)"
-                SkipUnchangedFiles="true" />
-        <Copy
-                SourceFiles="$(TargetDir)ZeepSDK.xml"
-                DestinationFolder="$(DestinationFolder)"
-                SkipUnchangedFiles="true" />
-    </Target>
 </Project>
