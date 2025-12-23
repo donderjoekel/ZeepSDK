@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ControlsApi ">
       
-      
+      <meta name="description" content="Provides APIs for controlling input and event system states across different game contexts. Allows mods to override input maps and the Unity EventSystem for various game modes.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/1.45.11/apiSpec/new?filename=ZeepSDK_Controls_ControlsApi.md&amp;value=---%0Auid%3A%20ZeepSDK.Controls.ControlsApi%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/2.0.0/apiSpec/new?filename=ZeepSDK_Controls_ControlsApi.md&amp;value=---%0Auid%3A%20ZeepSDK.Controls.ControlsApi%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,7 +85,7 @@
 
 
   <h1 id="ZeepSDK_Controls_ControlsApi" data-uid="ZeepSDK.Controls.ControlsApi" class="text-break">
-Class ControlsApi  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Controls/ControlsApi.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class ControlsApi  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Controls/ControlsApi.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,9 @@ Class ControlsApi  <a class="header-action link-secondary" title="View source" h
   <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Provides APIs for controlling input and event system states across different game contexts.
+Allows mods to override input maps and the Unity EventSystem for various game modes.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -153,10 +155,12 @@ public static class ControlsApi</code></pre>
 
   <h3 id="ZeepSDK_Controls_ControlsApi_AdventureInputOverride" data-uid="ZeepSDK.Controls.ControlsApi.AdventureInputOverride">
   AdventureInputOverride
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Controls/ControlsApi.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Controls/ControlsApi.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the override stack for the adventure input map.
+Allows mods to enable or disable adventure mode input handling.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -184,10 +188,12 @@ public static class ControlsApi</code></pre>
 
   <h3 id="ZeepSDK_Controls_ControlsApi_DefaultInputOverride" data-uid="ZeepSDK.Controls.ControlsApi.DefaultInputOverride">
   DefaultInputOverride
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Controls/ControlsApi.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Controls/ControlsApi.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the override stack for the default input map.
+Allows mods to enable or disable default input handling.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -215,10 +221,12 @@ public static class ControlsApi</code></pre>
 
   <h3 id="ZeepSDK_Controls_ControlsApi_EventSystemOverride" data-uid="ZeepSDK.Controls.ControlsApi.EventSystemOverride">
   EventSystemOverride
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Controls/ControlsApi.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Controls/ControlsApi.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the override stack for the Unity EventSystem.
+Allows mods to enable or disable the EventSystem, which controls UI input handling.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -246,10 +254,12 @@ public static class ControlsApi</code></pre>
 
   <h3 id="ZeepSDK_Controls_ControlsApi_GameplayInputOverride" data-uid="ZeepSDK.Controls.ControlsApi.GameplayInputOverride">
   GameplayInputOverride
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Controls/ControlsApi.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Controls/ControlsApi.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the override stack for the gameplay input map.
+Allows mods to enable or disable gameplay input handling.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -277,10 +287,12 @@ public static class ControlsApi</code></pre>
 
   <h3 id="ZeepSDK_Controls_ControlsApi_LevelEditorInputOverride" data-uid="ZeepSDK.Controls.ControlsApi.LevelEditorInputOverride">
   LevelEditorInputOverride
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Controls/ControlsApi.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Controls/ControlsApi.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the override stack for the level editor input map.
+Allows mods to enable or disable level editor input handling.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -308,10 +320,12 @@ public static class ControlsApi</code></pre>
 
   <h3 id="ZeepSDK_Controls_ControlsApi_MenuInputOverride" data-uid="ZeepSDK.Controls.ControlsApi.MenuInputOverride">
   MenuInputOverride
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Controls/ControlsApi.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Controls/ControlsApi.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the override stack for the menu input map.
+Allows mods to enable or disable menu input handling.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -339,10 +353,12 @@ public static class ControlsApi</code></pre>
 
   <h3 id="ZeepSDK_Controls_ControlsApi_OnlineInputOverride" data-uid="ZeepSDK.Controls.ControlsApi.OnlineInputOverride">
   OnlineInputOverride
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Controls/ControlsApi.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Controls/ControlsApi.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the override stack for the online input map.
+Allows mods to enable or disable online multiplayer input handling.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -370,10 +386,12 @@ public static class ControlsApi</code></pre>
 
   <h3 id="ZeepSDK_Controls_ControlsApi_SpectateInputOverride" data-uid="ZeepSDK.Controls.ControlsApi.SpectateInputOverride">
   SpectateInputOverride
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Controls/ControlsApi.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Controls/ControlsApi.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the override stack for the spectate input map.
+Allows mods to enable or disable spectate mode input handling.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -405,10 +423,12 @@ public static class ControlsApi</code></pre>
 
   <h3 id="ZeepSDK_Controls_ControlsApi_DisableAllInput" data-uid="ZeepSDK.Controls.ControlsApi.DisableAllInput">
   DisableAllInput()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Controls/ControlsApi.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Controls/ControlsApi.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disables all input maps and the EventSystem.
+Returns a <a class="xref" href="ZeepSDK.Utilities.DisposableBag.html">DisposableBag</a> that, when disposed, restores the previous state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -419,7 +439,8 @@ public static class ControlsApi</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="ZeepSDK.Utilities.DisposableBag.html">DisposableBag</a></dt>
-    <dd></dd>
+    <dd><p>A disposable bag that restores input when disposed.</p>
+</dd>
   </dl>
 
 
@@ -436,10 +457,13 @@ public static class ControlsApi</code></pre>
 
   <h3 id="ZeepSDK_Controls_ControlsApi_DisableAllInput_System_Func_System_Boolean__" data-uid="ZeepSDK.Controls.ControlsApi.DisableAllInput(System.Func{System.Boolean})">
   DisableAllInput(Func&lt;bool&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Controls/ControlsApi.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Controls/ControlsApi.cs/#L193"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Disables all input maps and the EventSystem while the specified condition is true.
+The condition is evaluated during OnGUI updates.
+Returns a <a class="xref" href="ZeepSDK.Utilities.DisposableBag.html">DisposableBag</a> that, when disposed, removes the conditional override.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -449,13 +473,15 @@ public static class ControlsApi</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>The condition that determines when input should be disabled. Input is disabled when this returns true.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="ZeepSDK.Utilities.DisposableBag.html">DisposableBag</a></dt>
-    <dd></dd>
+    <dd><p>A disposable bag that removes the conditional override when disposed.</p>
+</dd>
   </dl>
 
 
@@ -472,10 +498,12 @@ public static class ControlsApi</code></pre>
 
   <h3 id="ZeepSDK_Controls_ControlsApi_EnableAllInput" data-uid="ZeepSDK.Controls.ControlsApi.EnableAllInput">
   EnableAllInput()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Controls/ControlsApi.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Controls/ControlsApi.cs/#L172"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables all input maps and the EventSystem.
+Returns a <a class="xref" href="ZeepSDK.Utilities.DisposableBag.html">DisposableBag</a> that, when disposed, restores the previous state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -486,7 +514,8 @@ public static class ControlsApi</code></pre>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="ZeepSDK.Utilities.DisposableBag.html">DisposableBag</a></dt>
-    <dd></dd>
+    <dd><p>A disposable bag that restores input when disposed.</p>
+</dd>
   </dl>
 
 
@@ -503,10 +532,13 @@ public static class ControlsApi</code></pre>
 
   <h3 id="ZeepSDK_Controls_ControlsApi_EnableAllInput_System_Func_System_Boolean__" data-uid="ZeepSDK.Controls.ControlsApi.EnableAllInput(System.Func{System.Boolean})">
   EnableAllInput(Func&lt;bool&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Controls/ControlsApi.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Controls/ControlsApi.cs/#L214"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables all input maps and the EventSystem while the specified condition is true.
+The condition is evaluated during OnGUI updates.
+Returns a <a class="xref" href="ZeepSDK.Utilities.DisposableBag.html">DisposableBag</a> that, when disposed, removes the conditional override.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -516,13 +548,15 @@ public static class ControlsApi</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>The condition that determines when input should be enabled. Input is enabled when this returns true.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="ZeepSDK.Utilities.DisposableBag.html">DisposableBag</a></dt>
-    <dd></dd>
+    <dd><p>A disposable bag that removes the conditional override when disposed.</p>
+</dd>
   </dl>
 
 
@@ -539,7 +573,7 @@ public static class ControlsApi</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Controls/ControlsApi.cs/#L11" class="edit-link">Edit this page</a>
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Controls/ControlsApi.cs/#L15" class="edit-link">Edit this page</a>
         </div>
 
 

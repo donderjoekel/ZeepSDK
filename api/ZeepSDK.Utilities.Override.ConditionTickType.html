@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Enum ConditionTickType ">
       
-      
+      <meta name="description" content="Specifies when a condition should be evaluated in the Unity lifecycle. Used by  to determine when to check its condition.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/1.45.11/apiSpec/new?filename=ZeepSDK_Utilities_Override_ConditionTickType.md&amp;value=---%0Auid%3A%20ZeepSDK.Utilities.Override.ConditionTickType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/2.0.0/apiSpec/new?filename=ZeepSDK_Utilities_Override_ConditionTickType.md&amp;value=---%0Auid%3A%20ZeepSDK.Utilities.Override.ConditionTickType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -86,7 +86,7 @@
 
 
   <h1 id="ZeepSDK_Utilities_Override_ConditionTickType" data-uid="ZeepSDK.Utilities.Override.ConditionTickType" class="text-break">
-Enum ConditionTickType  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionTickType.cs/#L3"><i class="bi bi-code-slash"></i></a>
+Enum ConditionTickType  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionTickType.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -94,7 +94,9 @@ Enum ConditionTickType  <a class="header-action link-secondary" title="View sour
   <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Specifies when a condition should be evaluated in the Unity lifecycle.
+Used by <a class="xref" href="ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html">ConditionalOverrideLayer&lt;T&gt;</a> to determine when to check its condition.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -114,16 +116,20 @@ Enum ConditionTickType  <a class="header-action link-secondary" title="View sour
   <dl class="parameters">
     <dt id="ZeepSDK_Utilities_Override_ConditionTickType_FixedUpdate"><code>FixedUpdate = 1</code></dt>
   
-  <dd></dd>
+  <dd><p>The condition is evaluated during Unity's FixedUpdate method, at fixed time intervals.</p>
+</dd>
     <dt id="ZeepSDK_Utilities_Override_ConditionTickType_LateUpdate"><code>LateUpdate = 2</code></dt>
   
-  <dd></dd>
+  <dd><p>The condition is evaluated during Unity's LateUpdate method, after all Update methods have been called.</p>
+</dd>
     <dt id="ZeepSDK_Utilities_Override_ConditionTickType_OnGUI"><code>OnGUI = 3</code></dt>
   
-  <dd></dd>
+  <dd><p>The condition is evaluated during Unity's OnGUI method, multiple times per frame for GUI events.</p>
+</dd>
     <dt id="ZeepSDK_Utilities_Override_ConditionTickType_Update"><code>Update = 0</code></dt>
   
-  <dd></dd>
+  <dd><p>The condition is evaluated during Unity's Update method, once per frame.</p>
+</dd>
   </dl>
 
 
@@ -131,7 +137,7 @@ Enum ConditionTickType  <a class="header-action link-secondary" title="View sour
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionTickType.cs/#L3" class="edit-link">Edit this page</a>
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionTickType.cs/#L7" class="edit-link">Edit this page</a>
         </div>
 
 

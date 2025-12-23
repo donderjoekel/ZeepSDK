@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ConditionTicker ">
       
-      
+      <meta name="description" content="A singleton MonoBehaviour that manages and ticks  objects according to their specified . Ticks are performed during Unity&#39;s Update, FixedUpdate, LateUpdate, or OnGUI lifecycle methods.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/1.45.11/apiSpec/new?filename=ZeepSDK_Utilities_Override_ConditionTicker.md&amp;value=---%0Auid%3A%20ZeepSDK.Utilities.Override.ConditionTicker%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/2.0.0/apiSpec/new?filename=ZeepSDK_Utilities_Override_ConditionTicker.md&amp;value=---%0Auid%3A%20ZeepSDK.Utilities.Override.ConditionTicker%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,7 +85,7 @@
 
 
   <h1 id="ZeepSDK_Utilities_Override_ConditionTicker" data-uid="ZeepSDK.Utilities.Override.ConditionTicker" class="text-break">
-Class ConditionTicker  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionTicker.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class ConditionTicker  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionTicker.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,10 @@ Class ConditionTicker  <a class="header-action link-secondary" title="View sourc
   <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>A singleton MonoBehaviour that manages and ticks <a class="xref" href="ZeepSDK.Utilities.Override.IConditionTickable.html">IConditionTickable</a> objects
+according to their specified <a class="xref" href="ZeepSDK.Utilities.Override.ConditionTickType.html">ConditionTickType</a>.
+Ticks are performed during Unity's Update, FixedUpdate, LateUpdate, or OnGUI lifecycle methods.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -435,10 +438,12 @@ Class ConditionTicker  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ZeepSDK_Utilities_Override_ConditionTicker_Instance" data-uid="ZeepSDK.Utilities.Override.ConditionTicker.Instance">
   Instance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionTicker.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionTicker.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the singleton instance of the <a class="xref" href="ZeepSDK.Utilities.Override.ConditionTicker.html">ConditionTicker</a>.
+Creates a new instance if one doesn't exist.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -470,10 +475,11 @@ Class ConditionTicker  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ZeepSDK_Utilities_Override_ConditionTicker_Add_ZeepSDK_Utilities_Override_IConditionTickable_" data-uid="ZeepSDK.Utilities.Override.ConditionTicker.Add(ZeepSDK.Utilities.Override.IConditionTickable)">
   Add(IConditionTickable)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionTicker.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionTicker.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a condition tickable to the appropriate tick list based on its <a class="xref" href="ZeepSDK.Utilities.Override.ConditionTickType.html">ConditionTickType</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -483,7 +489,8 @@ Class ConditionTicker  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>tickable</code> <a class="xref" href="ZeepSDK.Utilities.Override.IConditionTickable.html">IConditionTickable</a></dt>
-    <dd></dd>
+    <dd><p>The condition tickable to add.</p>
+</dd>
   </dl>
 
 
@@ -501,10 +508,11 @@ Class ConditionTicker  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ZeepSDK_Utilities_Override_ConditionTicker_Remove_ZeepSDK_Utilities_Override_IConditionTickable_" data-uid="ZeepSDK.Utilities.Override.ConditionTicker.Remove(ZeepSDK.Utilities.Override.IConditionTickable)">
   Remove(IConditionTickable)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionTicker.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionTicker.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes a condition tickable from the appropriate tick list based on its <a class="xref" href="ZeepSDK.Utilities.Override.ConditionTickType.html">ConditionTickType</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -514,7 +522,8 @@ Class ConditionTicker  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>tickable</code> <a class="xref" href="ZeepSDK.Utilities.Override.IConditionTickable.html">IConditionTickable</a></dt>
-    <dd></dd>
+    <dd><p>The condition tickable to remove.</p>
+</dd>
   </dl>
 
 
@@ -532,7 +541,7 @@ Class ConditionTicker  <a class="header-action link-secondary" title="View sourc
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionTicker.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionTicker.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 

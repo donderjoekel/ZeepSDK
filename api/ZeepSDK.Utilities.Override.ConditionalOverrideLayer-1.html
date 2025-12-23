@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ConditionalOverrideLayer&lt;T&gt; ">
       
-      
+      <meta name="description" content="Represents an override layer that is conditionally active based on a boolean condition. The condition is evaluated periodically according to the specified , and the override is automatically added or removed from the stack when the condition changes.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/1.45.11/apiSpec/new?filename=ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1.md&amp;value=---%0Auid%3A%20ZeepSDK.Utilities.Override.ConditionalOverrideLayer%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/2.0.0/apiSpec/new?filename=ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1.md&amp;value=---%0Auid%3A%20ZeepSDK.Utilities.Override.ConditionalOverrideLayer%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,7 +85,7 @@
 
 
   <h1 id="ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1" data-uid="ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1" class="text-break">
-Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L5"><i class="bi bi-code-slash"></i></a>
+Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,10 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
   <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Represents an override layer that is conditionally active based on a boolean condition.
+The condition is evaluated periodically according to the specified <a class="xref" href="ZeepSDK.Utilities.Override.ConditionTickType.html">ConditionTickType</a>,
+and the override is automatically added or removed from the stack when the condition changes.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -105,7 +108,8 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>The type of value being overridden.</p>
+</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -160,10 +164,11 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
 
   <h3 id="ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1__ctor_ZeepSDK_Utilities_Override_OverrideStack__0___0_System_Func_System_Boolean__ZeepSDK_Utilities_Override_ConditionTickType_" data-uid="ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.#ctor(ZeepSDK.Utilities.Override.OverrideStack{`0},`0,System.Func{System.Boolean},ZeepSDK.Utilities.Override.ConditionTickType)">
   ConditionalOverrideLayer(OverrideStack&lt;T&gt;, T, Func&lt;bool&gt;, ConditionTickType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html">ConditionalOverrideLayer&lt;T&gt;</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -173,13 +178,17 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>stack</code> <a class="xref" href="ZeepSDK.Utilities.Override.OverrideStack-1.html">OverrideStack</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>The override stack that this layer belongs to.</p>
+</dd>
     <dt><code>value</code> <span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The value to apply when the condition is true.</p>
+</dd>
     <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>The condition function that determines when this override is active.</p>
+</dd>
     <dt><code>conditionTickType</code> <a class="xref" href="ZeepSDK.Utilities.Override.ConditionTickType.html">ConditionTickType</a></dt>
-    <dd></dd>
+    <dd><p>The tick type that determines when the condition is evaluated (Update, FixedUpdate, LateUpdate, or OnGUI).</p>
+</dd>
   </dl>
 
 
@@ -201,10 +210,11 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
 
   <h3 id="ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Id" data-uid="ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Id">
   Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the unique identifier for this override layer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -232,10 +242,11 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
 
   <h3 id="ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Value" data-uid="ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the value that this override layer applies when active.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -267,10 +278,12 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
 
   <h3 id="ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Dispose" data-uid="ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes this override layer from the stack and unregisters it from the condition ticker.
+If the override is currently active, it is removed from the stack before cleanup.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -293,10 +306,11 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
 
   <h3 id="ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Equals_System_Object_" data-uid="ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Equals(System.Object)">
   Equals(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to this instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -306,13 +320,15 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
+    <dd><p>The object to compare with.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p><code>true</code> if the objects are equal; otherwise, <code>false</code>.</p>
+</dd>
   </dl>
 
 
@@ -329,10 +345,11 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
 
   <h3 id="ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Equals_ZeepSDK_Utilities_Override_ConditionalOverrideLayer__0__" data-uid="ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Equals(ZeepSDK.Utilities.Override.ConditionalOverrideLayer{`0})">
   Equals(ConditionalOverrideLayer&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html">ConditionalOverrideLayer&lt;T&gt;</a> is equal to this instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -342,13 +359,15 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>other</code> <a class="xref" href="ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html">ConditionalOverrideLayer</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>The other conditional override layer to compare with.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p><code>true</code> if the instances are equal; otherwise, <code>false</code>.</p>
+</dd>
   </dl>
 
 
@@ -365,10 +384,11 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
 
   <h3 id="ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Equals_ZeepSDK_Utilities_Override_IOverrideLayer__0__" data-uid="ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.Equals(ZeepSDK.Utilities.Override.IOverrideLayer{`0})">
   Equals(IOverrideLayer&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="ZeepSDK.Utilities.Override.IOverrideLayer-1.html">IOverrideLayer&lt;T&gt;</a> is equal to this instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -378,13 +398,15 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>other</code> <a class="xref" href="ZeepSDK.Utilities.Override.IOverrideLayer-1.html">IOverrideLayer</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>The other override layer to compare with.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p><code>true</code> if the instances are equal; otherwise, <code>false</code>.</p>
+</dd>
   </dl>
 
 
@@ -401,10 +423,11 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
 
   <h3 id="ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_GetHashCode" data-uid="ZeepSDK.Utilities.Override.ConditionalOverrideLayer`1.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L124"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a hash code for this instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -415,7 +438,8 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>A hash code based on the <a class="xref" href="ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html#ZeepSDK_Utilities_Override_ConditionalOverrideLayer_1_Id">Id</a>.</p>
+</dd>
   </dl>
 
 
@@ -432,7 +456,7 @@ Class ConditionalOverrideLayer&lt;T&gt;  <a class="header-action link-secondary"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L5" class="edit-link">Edit this page</a>
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/ConditionalOverrideLayer.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 

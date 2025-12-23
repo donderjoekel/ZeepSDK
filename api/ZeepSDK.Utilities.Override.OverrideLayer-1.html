@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct OverrideLayer&lt;T&gt; ">
       
-      
+      <meta name="description" content="Represents a simple override layer that is immediately active when created. Unlike , this override is always active until disposed.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/1.45.11/apiSpec/new?filename=ZeepSDK_Utilities_Override_OverrideLayer_1.md&amp;value=---%0Auid%3A%20ZeepSDK.Utilities.Override.OverrideLayer%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/2.0.0/apiSpec/new?filename=ZeepSDK_Utilities_Override_OverrideLayer_1.md&amp;value=---%0Auid%3A%20ZeepSDK.Utilities.Override.OverrideLayer%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,7 +85,7 @@
 
 
   <h1 id="ZeepSDK_Utilities_Override_OverrideLayer_1" data-uid="ZeepSDK.Utilities.Override.OverrideLayer`1" class="text-break">
-Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L5"><i class="bi bi-code-slash"></i></a>
+Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,9 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
   <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Represents a simple override layer that is immediately active when created.
+Unlike <a class="xref" href="ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html">ConditionalOverrideLayer&lt;T&gt;</a>, this override is always active until disposed.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -105,7 +107,8 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>The type of value being overridden.</p>
+</dd>
   </dl>
 
 
@@ -149,10 +152,12 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="ZeepSDK_Utilities_Override_OverrideLayer_1__ctor_ZeepSDK_Utilities_Override_OverrideStack__0___0_" data-uid="ZeepSDK.Utilities.Override.OverrideLayer`1.#ctor(ZeepSDK.Utilities.Override.OverrideStack{`0},`0)">
   OverrideLayer(OverrideStack&lt;T&gt;, T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ZeepSDK.Utilities.Override.OverrideLayer-1.html">OverrideLayer&lt;T&gt;</a> struct.
+The override is immediately added to the stack and becomes active.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -162,9 +167,11 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>stack</code> <a class="xref" href="ZeepSDK.Utilities.Override.OverrideStack-1.html">OverrideStack</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>The override stack that this layer belongs to.</p>
+</dd>
     <dt><code>value</code> <span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The value to apply as an override.</p>
+</dd>
   </dl>
 
 
@@ -186,10 +193,11 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="ZeepSDK_Utilities_Override_OverrideLayer_1_Id" data-uid="ZeepSDK.Utilities.Override.OverrideLayer`1.Id">
   Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the unique identifier for this override layer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -217,10 +225,11 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="ZeepSDK_Utilities_Override_OverrideLayer_1_Value" data-uid="ZeepSDK.Utilities.Override.OverrideLayer`1.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the value that this override layer applies.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -252,10 +261,11 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="ZeepSDK_Utilities_Override_OverrideLayer_1_Dispose" data-uid="ZeepSDK.Utilities.Override.OverrideLayer`1.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes this override layer from the stack, restoring the previous override state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -278,10 +288,11 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="ZeepSDK_Utilities_Override_OverrideLayer_1_Equals_System_Object_" data-uid="ZeepSDK.Utilities.Override.OverrideLayer`1.Equals(System.Object)">
   Equals(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to this instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -291,13 +302,15 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
+    <dd><p>The object to compare with.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p><code>true</code> if the objects are equal; otherwise, <code>false</code>.</p>
+</dd>
   </dl>
 
 
@@ -314,10 +327,11 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="ZeepSDK_Utilities_Override_OverrideLayer_1_Equals_ZeepSDK_Utilities_Override_IOverrideLayer__0__" data-uid="ZeepSDK.Utilities.Override.OverrideLayer`1.Equals(ZeepSDK.Utilities.Override.IOverrideLayer{`0})">
   Equals(IOverrideLayer&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="ZeepSDK.Utilities.Override.IOverrideLayer-1.html">IOverrideLayer&lt;T&gt;</a> is equal to this instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -327,13 +341,15 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>other</code> <a class="xref" href="ZeepSDK.Utilities.Override.IOverrideLayer-1.html">IOverrideLayer</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>The other override layer to compare with.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p><code>true</code> if the instances are equal; otherwise, <code>false</code>.</p>
+</dd>
   </dl>
 
 
@@ -350,10 +366,11 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="ZeepSDK_Utilities_Override_OverrideLayer_1_Equals_ZeepSDK_Utilities_Override_OverrideLayer__0__" data-uid="ZeepSDK.Utilities.Override.OverrideLayer`1.Equals(ZeepSDK.Utilities.Override.OverrideLayer{`0})">
   Equals(OverrideLayer&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="ZeepSDK.Utilities.Override.OverrideLayer-1.html">OverrideLayer&lt;T&gt;</a> is equal to this instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -363,13 +380,15 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>other</code> <a class="xref" href="ZeepSDK.Utilities.Override.OverrideLayer-1.html">OverrideLayer</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>The other override layer to compare with.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p><code>true</code> if the instances are equal; otherwise, <code>false</code>.</p>
+</dd>
   </dl>
 
 
@@ -386,10 +405,11 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 
   <h3 id="ZeepSDK_Utilities_Override_OverrideLayer_1_GetHashCode" data-uid="ZeepSDK.Utilities.Override.OverrideLayer`1.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a hash code for this instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -400,7 +420,8 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>A hash code based on the <a class="xref" href="ZeepSDK.Utilities.Override.OverrideLayer-1.html#ZeepSDK_Utilities_Override_OverrideLayer_1_Id">Id</a>.</p>
+</dd>
   </dl>
 
 
@@ -417,7 +438,7 @@ Struct OverrideLayer&lt;T&gt;  <a class="header-action link-secondary" title="Vi
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L5" class="edit-link">Edit this page</a>
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideLayer.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IConditionTickable ">
       
-      
+      <meta name="description" content="Represents an object that can be ticked by the  at regular intervals. Implementations specify when they should be ticked via the  property.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/1.45.11/apiSpec/new?filename=ZeepSDK_Utilities_Override_IConditionTickable.md&amp;value=---%0Auid%3A%20ZeepSDK.Utilities.Override.IConditionTickable%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/2.0.0/apiSpec/new?filename=ZeepSDK_Utilities_Override_IConditionTickable.md&amp;value=---%0Auid%3A%20ZeepSDK.Utilities.Override.IConditionTickable%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,7 +85,7 @@
 
 
   <h1 id="ZeepSDK_Utilities_Override_IConditionTickable" data-uid="ZeepSDK.Utilities.Override.IConditionTickable" class="text-break">
-Interface IConditionTickable  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/IConditionTickable.cs/#L3"><i class="bi bi-code-slash"></i></a>
+Interface IConditionTickable  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/IConditionTickable.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,9 @@ Interface IConditionTickable  <a class="header-action link-secondary" title="Vie
   <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Represents an object that can be ticked by the <a class="xref" href="ZeepSDK.Utilities.Override.ConditionTicker.html">ConditionTicker</a> at regular intervals.
+Implementations specify when they should be ticked via the <a class="xref" href="ZeepSDK.Utilities.Override.IConditionTickable.html#ZeepSDK_Utilities_Override_IConditionTickable_TickType">TickType</a> property.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -120,10 +122,11 @@ Interface IConditionTickable  <a class="header-action link-secondary" title="Vie
 
   <h3 id="ZeepSDK_Utilities_Override_IConditionTickable_TickType" data-uid="ZeepSDK.Utilities.Override.IConditionTickable.TickType">
   TickType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/IConditionTickable.cs/#L5"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/IConditionTickable.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the tick type that determines when this object should be ticked.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -155,10 +158,12 @@ Interface IConditionTickable  <a class="header-action link-secondary" title="Vie
 
   <h3 id="ZeepSDK_Utilities_Override_IConditionTickable_Tick" data-uid="ZeepSDK.Utilities.Override.IConditionTickable.Tick">
   Tick()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/IConditionTickable.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/IConditionTickable.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs the tick operation. This method is called periodically by the <a class="xref" href="ZeepSDK.Utilities.Override.ConditionTicker.html">ConditionTicker</a>
+according to the <a class="xref" href="ZeepSDK.Utilities.Override.IConditionTickable.html#ZeepSDK_Utilities_Override_IConditionTickable_TickType">TickType</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -181,7 +186,7 @@ Interface IConditionTickable  <a class="header-action link-secondary" title="Vie
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/IConditionTickable.cs/#L3" class="edit-link">Edit this page</a>
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/IConditionTickable.cs/#L7" class="edit-link">Edit this page</a>
         </div>
 
 

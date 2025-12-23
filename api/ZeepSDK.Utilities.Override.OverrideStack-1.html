@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class OverrideStack&lt;T&gt; ">
       
-      
+      <meta name="description" content="Manages a stack of override layers that can modify a value. Override layers are applied in a stack-based manner, with the most recent active layer taking precedence. Supports both immediate overrides and conditionally active overrides.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/1.45.11/apiSpec/new?filename=ZeepSDK_Utilities_Override_OverrideStack_1.md&amp;value=---%0Auid%3A%20ZeepSDK.Utilities.Override.OverrideStack%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/2.0.0/apiSpec/new?filename=ZeepSDK_Utilities_Override_OverrideStack_1.md&amp;value=---%0Auid%3A%20ZeepSDK.Utilities.Override.OverrideStack%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,7 +85,7 @@
 
 
   <h1 id="ZeepSDK_Utilities_Override_OverrideStack_1" data-uid="ZeepSDK.Utilities.Override.OverrideStack`1" class="text-break">
-Class OverrideStack&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideStack.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class OverrideStack&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideStack.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,10 @@ Class OverrideStack&lt;T&gt;  <a class="header-action link-secondary" title="Vie
   <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Manages a stack of override layers that can modify a value.
+Override layers are applied in a stack-based manner, with the most recent active layer taking precedence.
+Supports both immediate overrides and conditionally active overrides.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -105,7 +108,8 @@ Class OverrideStack&lt;T&gt;  <a class="header-action link-secondary" title="Vie
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>The type of value being managed.</p>
+</dd>
   </dl>
 
   <dl class="typelist inheritance">
@@ -163,10 +167,11 @@ Class OverrideStack&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="ZeepSDK_Utilities_Override_OverrideStack_1__ctor_System_Func__0__System_Action__0___0_" data-uid="ZeepSDK.Utilities.Override.OverrideStack`1.#ctor(System.Func{`0},System.Action{`0},`0)">
   OverrideStack(Func&lt;T&gt;, Action&lt;T&gt;, T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideStack.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideStack.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ZeepSDK.Utilities.Override.OverrideStack-1.html">OverrideStack&lt;T&gt;</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -176,11 +181,14 @@ Class OverrideStack&lt;T&gt;  <a class="header-action link-secondary" title="Vie
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>getValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>A function that retrieves the current value from the underlying system.</p>
+</dd>
     <dt><code>setValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>An action that sets the value in the underlying system.</p>
+</dd>
     <dt><code>baseValue</code> <span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The initial base value to use when no override layers are active.</p>
+</dd>
   </dl>
 
 
@@ -202,10 +210,12 @@ Class OverrideStack&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="ZeepSDK_Utilities_Override_OverrideStack_1_Value" data-uid="ZeepSDK.Utilities.Override.OverrideStack`1.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideStack.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideStack.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the current effective value.
+Returns the base value if no override layers are active, otherwise returns the value from the getter function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -237,10 +247,12 @@ Class OverrideStack&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="ZeepSDK_Utilities_Override_OverrideStack_1_Override__0_" data-uid="ZeepSDK.Utilities.Override.OverrideStack`1.Override(`0)">
   Override(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideStack.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideStack.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates an immediate override layer that is active as soon as it is created.
+The override remains active until the returned layer is disposed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -250,13 +262,15 @@ Class OverrideStack&lt;T&gt;  <a class="header-action link-secondary" title="Vie
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>value</code> <span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The value to apply as an override.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="ZeepSDK.Utilities.Override.OverrideLayer-1.html">OverrideLayer</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>An override layer that can be disposed to remove the override.</p>
+</dd>
   </dl>
 
 
@@ -273,10 +287,12 @@ Class OverrideStack&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="ZeepSDK_Utilities_Override_OverrideStack_1_Override__0_System_Func_System_Boolean__ZeepSDK_Utilities_Override_ConditionTickType_" data-uid="ZeepSDK.Utilities.Override.OverrideStack`1.Override(`0,System.Func{System.Boolean},ZeepSDK.Utilities.Override.ConditionTickType)">
   Override(T, Func&lt;bool&gt;, ConditionTickType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideStack.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideStack.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a conditional override layer that is only active when the specified condition is true.
+The condition is evaluated periodically according to the specified <a class="xref" href="ZeepSDK.Utilities.Override.ConditionTickType.html">ConditionTickType</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -286,17 +302,21 @@ Class OverrideStack&lt;T&gt;  <a class="header-action link-secondary" title="Vie
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>value</code> <span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The value to apply when the condition is true.</p>
+</dd>
     <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>The condition function that determines when this override is active.</p>
+</dd>
     <dt><code>conditionTickType</code> <a class="xref" href="ZeepSDK.Utilities.Override.ConditionTickType.html">ConditionTickType</a></dt>
-    <dd></dd>
+    <dd><p>The tick type that determines when the condition is evaluated. Defaults to <a class="xref" href="ZeepSDK.Utilities.Override.ConditionTickType.html#ZeepSDK_Utilities_Override_ConditionTickType_Update">Update</a>.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html">ConditionalOverrideLayer</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>A conditional override layer that can be disposed to remove the override.</p>
+</dd>
   </dl>
 
 
@@ -313,7 +333,7 @@ Class OverrideStack&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/donderjoekel/ZeepSDK/blob/1.45.11/ZeepSDK/Utilities/Override/OverrideStack.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.0/ZeepSDK/Utilities/Override/OverrideStack.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -9377,12 +9377,6 @@ references:
   commentId: N:ZeepSDK.Settings
   fullName: ZeepSDK.Settings
   nameWithType: ZeepSDK.Settings
-- uid: ZeepSDK.Settings.ModSettingsTabSwitchedDelegate
-  name: ModSettingsTabSwitchedDelegate
-  href: api/ZeepSDK.Settings.ModSettingsTabSwitchedDelegate.html
-  commentId: T:ZeepSDK.Settings.ModSettingsTabSwitchedDelegate
-  fullName: ZeepSDK.Settings.ModSettingsTabSwitchedDelegate
-  nameWithType: ModSettingsTabSwitchedDelegate
 - uid: ZeepSDK.Settings.ModSettingsWindowClosedDelegate
   name: ModSettingsWindowClosedDelegate
   href: api/ZeepSDK.Settings.ModSettingsWindowClosedDelegate.html
@@ -9414,12 +9408,6 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Settings.SettingsApi.CloseModSettings
   nameWithType: SettingsApi.CloseModSettings
-- uid: ZeepSDK.Settings.SettingsApi.ModSettingsTabSwitched
-  name: ModSettingsTabSwitched
-  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ModSettingsTabSwitched
-  commentId: E:ZeepSDK.Settings.SettingsApi.ModSettingsTabSwitched
-  fullName: ZeepSDK.Settings.SettingsApi.ModSettingsTabSwitched
-  nameWithType: SettingsApi.ModSettingsTabSwitched
 - uid: ZeepSDK.Settings.SettingsApi.ModSettingsWindowClosed
   name: ModSettingsWindowClosed
   href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ModSettingsWindowClosed
@@ -9686,505 +9674,89 @@ references:
   commentId: N:ZeepSDK.UI
   fullName: ZeepSDK.UI
   nameWithType: ZeepSDK.UI
-- uid: ZeepSDK.UI.BuildDropdownMenuHandler
-  name: BuildDropdownMenuHandler
-  href: api/ZeepSDK.UI.BuildDropdownMenuHandler.html
-  commentId: T:ZeepSDK.UI.BuildDropdownMenuHandler
-  fullName: ZeepSDK.UI.BuildDropdownMenuHandler
-  nameWithType: BuildDropdownMenuHandler
-- uid: ZeepSDK.UI.ButtonClickHandler
-  name: ButtonClickHandler
-  href: api/ZeepSDK.UI.ButtonClickHandler.html
-  commentId: T:ZeepSDK.UI.ButtonClickHandler
-  fullName: ZeepSDK.UI.ButtonClickHandler
-  nameWithType: ButtonClickHandler
-- uid: ZeepSDK.UI.ConfigureElementHandler
-  name: ConfigureElementHandler
-  href: api/ZeepSDK.UI.ConfigureElementHandler.html
-  commentId: T:ZeepSDK.UI.ConfigureElementHandler
-  fullName: ZeepSDK.UI.ConfigureElementHandler
-  nameWithType: ConfigureElementHandler
-- uid: ZeepSDK.UI.ConfigureStyleHandler
-  name: ConfigureStyleHandler
-  href: api/ZeepSDK.UI.ConfigureStyleHandler.html
-  commentId: T:ZeepSDK.UI.ConfigureStyleHandler
-  fullName: ZeepSDK.UI.ConfigureStyleHandler
-  nameWithType: ConfigureStyleHandler
-- uid: ZeepSDK.UI.DoubleFieldValueUpdatedHandler
-  name: DoubleFieldValueUpdatedHandler
-  href: api/ZeepSDK.UI.DoubleFieldValueUpdatedHandler.html
-  commentId: T:ZeepSDK.UI.DoubleFieldValueUpdatedHandler
-  fullName: ZeepSDK.UI.DoubleFieldValueUpdatedHandler
-  nameWithType: DoubleFieldValueUpdatedHandler
-- uid: ZeepSDK.UI.DropDownFormatHandler`1
-  name: DropDownFormatHandler<T>
-  href: api/ZeepSDK.UI.DropDownFormatHandler-1.html
-  commentId: T:ZeepSDK.UI.DropDownFormatHandler`1
-  name.vb: DropDownFormatHandler(Of T)
-  fullName: ZeepSDK.UI.DropDownFormatHandler<T>
-  fullName.vb: ZeepSDK.UI.DropDownFormatHandler(Of T)
-  nameWithType: DropDownFormatHandler<T>
-  nameWithType.vb: DropDownFormatHandler(Of T)
-- uid: ZeepSDK.UI.DropDownValueUpdatedHandler`1
-  name: DropDownValueUpdatedHandler<T>
-  href: api/ZeepSDK.UI.DropDownValueUpdatedHandler-1.html
-  commentId: T:ZeepSDK.UI.DropDownValueUpdatedHandler`1
-  name.vb: DropDownValueUpdatedHandler(Of T)
-  fullName: ZeepSDK.UI.DropDownValueUpdatedHandler<T>
-  fullName.vb: ZeepSDK.UI.DropDownValueUpdatedHandler(Of T)
-  nameWithType: DropDownValueUpdatedHandler<T>
-  nameWithType.vb: DropDownValueUpdatedHandler(Of T)
-- uid: ZeepSDK.UI.Elements
-  name: ZeepSDK.UI.Elements
-  href: api/ZeepSDK.UI.Elements.html
-  commentId: N:ZeepSDK.UI.Elements
-  fullName: ZeepSDK.UI.Elements
-  nameWithType: ZeepSDK.UI.Elements
-- uid: ZeepSDK.UI.Elements.CustomDropdownField`1
-  name: CustomDropdownField<TItem>
-  href: api/ZeepSDK.UI.Elements.CustomDropdownField-1.html
-  commentId: T:ZeepSDK.UI.Elements.CustomDropdownField`1
-  name.vb: CustomDropdownField(Of TItem)
-  fullName: ZeepSDK.UI.Elements.CustomDropdownField<TItem>
-  fullName.vb: ZeepSDK.UI.Elements.CustomDropdownField(Of TItem)
-  nameWithType: CustomDropdownField<TItem>
-  nameWithType.vb: CustomDropdownField(Of TItem)
-- uid: ZeepSDK.UI.Elements.CustomDropdownField`1.#ctor(System.String,System.Collections.Generic.IEnumerable{`0},`0,ZeepSDK.UI.DropDownFormatHandler{`0},ZeepSDK.UI.ZeepGUI.StyleMode)
-  name: CustomDropdownField(string, IEnumerable<TItem>, TItem, DropDownFormatHandler<TItem>, StyleMode)
-  href: api/ZeepSDK.UI.Elements.CustomDropdownField-1.html#ZeepSDK_UI_Elements_CustomDropdownField_1__ctor_System_String_System_Collections_Generic_IEnumerable__0___0_ZeepSDK_UI_DropDownFormatHandler__0__ZeepSDK_UI_ZeepGUI_StyleMode_
-  commentId: M:ZeepSDK.UI.Elements.CustomDropdownField`1.#ctor(System.String,System.Collections.Generic.IEnumerable{`0},`0,ZeepSDK.UI.DropDownFormatHandler{`0},ZeepSDK.UI.ZeepGUI.StyleMode)
-  name.vb: New(String, IEnumerable(Of TItem), TItem, DropDownFormatHandler(Of TItem), StyleMode)
-  fullName: ZeepSDK.UI.Elements.CustomDropdownField<TItem>.CustomDropdownField(string, System.Collections.Generic.IEnumerable<TItem>, TItem, ZeepSDK.UI.DropDownFormatHandler<TItem>, ZeepSDK.UI.ZeepGUI.StyleMode)
-  fullName.vb: ZeepSDK.UI.Elements.CustomDropdownField(Of TItem).New(String, System.Collections.Generic.IEnumerable(Of TItem), TItem, ZeepSDK.UI.DropDownFormatHandler(Of TItem), ZeepSDK.UI.ZeepGUI.StyleMode)
-  nameWithType: CustomDropdownField<TItem>.CustomDropdownField(string, IEnumerable<TItem>, TItem, DropDownFormatHandler<TItem>, ZeepGUI.StyleMode)
-  nameWithType.vb: CustomDropdownField(Of TItem).New(String, IEnumerable(Of TItem), TItem, DropDownFormatHandler(Of TItem), ZeepGUI.StyleMode)
-- uid: ZeepSDK.UI.Elements.CustomDropdownField`1.#ctor*
-  name: CustomDropdownField
-  href: api/ZeepSDK.UI.Elements.CustomDropdownField-1.html#ZeepSDK_UI_Elements_CustomDropdownField_1__ctor_
-  commentId: Overload:ZeepSDK.UI.Elements.CustomDropdownField`1.#ctor
+- uid: ZeepSDK.UI.IZeepGUIDrawer
+  name: IZeepGUIDrawer
+  href: api/ZeepSDK.UI.IZeepGUIDrawer.html
+  commentId: T:ZeepSDK.UI.IZeepGUIDrawer
+  fullName: ZeepSDK.UI.IZeepGUIDrawer
+  nameWithType: IZeepGUIDrawer
+- uid: ZeepSDK.UI.IZeepGUIDrawer.OnZeepGUI(Imui.Core.ImGui)
+  name: OnZeepGUI(ImGui)
+  href: api/ZeepSDK.UI.IZeepGUIDrawer.html#ZeepSDK_UI_IZeepGUIDrawer_OnZeepGUI_Imui_Core_ImGui_
+  commentId: M:ZeepSDK.UI.IZeepGUIDrawer.OnZeepGUI(Imui.Core.ImGui)
+  fullName: ZeepSDK.UI.IZeepGUIDrawer.OnZeepGUI(Imui.Core.ImGui)
+  nameWithType: IZeepGUIDrawer.OnZeepGUI(ImGui)
+- uid: ZeepSDK.UI.IZeepGUIDrawer.OnZeepGUI*
+  name: OnZeepGUI
+  href: api/ZeepSDK.UI.IZeepGUIDrawer.html#ZeepSDK_UI_IZeepGUIDrawer_OnZeepGUI_
+  commentId: Overload:ZeepSDK.UI.IZeepGUIDrawer.OnZeepGUI
   isSpec: "True"
-  name.vb: New
-  fullName: ZeepSDK.UI.Elements.CustomDropdownField<TItem>.CustomDropdownField
-  fullName.vb: ZeepSDK.UI.Elements.CustomDropdownField(Of TItem).New
-  nameWithType: CustomDropdownField<TItem>.CustomDropdownField
-  nameWithType.vb: CustomDropdownField(Of TItem).New
-- uid: ZeepSDK.UI.Elements.DoubleField
-  name: DoubleField
-  href: api/ZeepSDK.UI.Elements.DoubleField.html
-  commentId: T:ZeepSDK.UI.Elements.DoubleField
-  fullName: ZeepSDK.UI.Elements.DoubleField
-  nameWithType: DoubleField
-- uid: ZeepSDK.UI.Elements.DoubleField.#ctor
-  name: DoubleField()
-  href: api/ZeepSDK.UI.Elements.DoubleField.html#ZeepSDK_UI_Elements_DoubleField__ctor
-  commentId: M:ZeepSDK.UI.Elements.DoubleField.#ctor
-  name.vb: New()
-  fullName: ZeepSDK.UI.Elements.DoubleField.DoubleField()
-  fullName.vb: ZeepSDK.UI.Elements.DoubleField.New()
-  nameWithType: DoubleField.DoubleField()
-  nameWithType.vb: DoubleField.New()
-- uid: ZeepSDK.UI.Elements.DoubleField.#ctor(System.Int32,System.Char)
-  name: DoubleField(int, char)
-  href: api/ZeepSDK.UI.Elements.DoubleField.html#ZeepSDK_UI_Elements_DoubleField__ctor_System_Int32_System_Char_
-  commentId: M:ZeepSDK.UI.Elements.DoubleField.#ctor(System.Int32,System.Char)
-  name.vb: New(Integer, Char)
-  fullName: ZeepSDK.UI.Elements.DoubleField.DoubleField(int, char)
-  fullName.vb: ZeepSDK.UI.Elements.DoubleField.New(Integer, Char)
-  nameWithType: DoubleField.DoubleField(int, char)
-  nameWithType.vb: DoubleField.New(Integer, Char)
-- uid: ZeepSDK.UI.Elements.DoubleField.#ctor(System.String)
-  name: DoubleField(string)
-  href: api/ZeepSDK.UI.Elements.DoubleField.html#ZeepSDK_UI_Elements_DoubleField__ctor_System_String_
-  commentId: M:ZeepSDK.UI.Elements.DoubleField.#ctor(System.String)
-  name.vb: New(String)
-  fullName: ZeepSDK.UI.Elements.DoubleField.DoubleField(string)
-  fullName.vb: ZeepSDK.UI.Elements.DoubleField.New(String)
-  nameWithType: DoubleField.DoubleField(string)
-  nameWithType.vb: DoubleField.New(String)
-- uid: ZeepSDK.UI.Elements.DoubleField.#ctor(System.String,System.Int32,System.Char)
-  name: DoubleField(string, int, char)
-  href: api/ZeepSDK.UI.Elements.DoubleField.html#ZeepSDK_UI_Elements_DoubleField__ctor_System_String_System_Int32_System_Char_
-  commentId: M:ZeepSDK.UI.Elements.DoubleField.#ctor(System.String,System.Int32,System.Char)
-  name.vb: New(String, Integer, Char)
-  fullName: ZeepSDK.UI.Elements.DoubleField.DoubleField(string, int, char)
-  fullName.vb: ZeepSDK.UI.Elements.DoubleField.New(String, Integer, Char)
-  nameWithType: DoubleField.DoubleField(string, int, char)
-  nameWithType.vb: DoubleField.New(String, Integer, Char)
-- uid: ZeepSDK.UI.Elements.DoubleField.#ctor*
-  name: DoubleField
-  href: api/ZeepSDK.UI.Elements.DoubleField.html#ZeepSDK_UI_Elements_DoubleField__ctor_
-  commentId: Overload:ZeepSDK.UI.Elements.DoubleField.#ctor
+  fullName: ZeepSDK.UI.IZeepGUIDrawer.OnZeepGUI
+  nameWithType: IZeepGUIDrawer.OnZeepGUI
+- uid: ZeepSDK.UI.IZeepToolbarDrawer
+  name: IZeepToolbarDrawer
+  href: api/ZeepSDK.UI.IZeepToolbarDrawer.html
+  commentId: T:ZeepSDK.UI.IZeepToolbarDrawer
+  fullName: ZeepSDK.UI.IZeepToolbarDrawer
+  nameWithType: IZeepToolbarDrawer
+- uid: ZeepSDK.UI.IZeepToolbarDrawer.DrawMenuItems(Imui.Core.ImGui)
+  name: DrawMenuItems(ImGui)
+  href: api/ZeepSDK.UI.IZeepToolbarDrawer.html#ZeepSDK_UI_IZeepToolbarDrawer_DrawMenuItems_Imui_Core_ImGui_
+  commentId: M:ZeepSDK.UI.IZeepToolbarDrawer.DrawMenuItems(Imui.Core.ImGui)
+  fullName: ZeepSDK.UI.IZeepToolbarDrawer.DrawMenuItems(Imui.Core.ImGui)
+  nameWithType: IZeepToolbarDrawer.DrawMenuItems(ImGui)
+- uid: ZeepSDK.UI.IZeepToolbarDrawer.DrawMenuItems*
+  name: DrawMenuItems
+  href: api/ZeepSDK.UI.IZeepToolbarDrawer.html#ZeepSDK_UI_IZeepToolbarDrawer_DrawMenuItems_
+  commentId: Overload:ZeepSDK.UI.IZeepToolbarDrawer.DrawMenuItems
   isSpec: "True"
-  name.vb: New
-  fullName: ZeepSDK.UI.Elements.DoubleField.DoubleField
-  fullName.vb: ZeepSDK.UI.Elements.DoubleField.New
-  nameWithType: DoubleField.DoubleField
-  nameWithType.vb: DoubleField.New
-- uid: ZeepSDK.UI.Elements.DoubleField.StringToValue(System.String)
-  name: StringToValue(string)
-  href: api/ZeepSDK.UI.Elements.DoubleField.html#ZeepSDK_UI_Elements_DoubleField_StringToValue_System_String_
-  commentId: M:ZeepSDK.UI.Elements.DoubleField.StringToValue(System.String)
-  name.vb: StringToValue(String)
-  fullName: ZeepSDK.UI.Elements.DoubleField.StringToValue(string)
-  fullName.vb: ZeepSDK.UI.Elements.DoubleField.StringToValue(String)
-  nameWithType: DoubleField.StringToValue(string)
-  nameWithType.vb: DoubleField.StringToValue(String)
-- uid: ZeepSDK.UI.Elements.DoubleField.StringToValue*
-  name: StringToValue
-  href: api/ZeepSDK.UI.Elements.DoubleField.html#ZeepSDK_UI_Elements_DoubleField_StringToValue_
-  commentId: Overload:ZeepSDK.UI.Elements.DoubleField.StringToValue
+  fullName: ZeepSDK.UI.IZeepToolbarDrawer.DrawMenuItems
+  nameWithType: IZeepToolbarDrawer.DrawMenuItems
+- uid: ZeepSDK.UI.IZeepToolbarDrawer.MenuTitle
+  name: MenuTitle
+  href: api/ZeepSDK.UI.IZeepToolbarDrawer.html#ZeepSDK_UI_IZeepToolbarDrawer_MenuTitle
+  commentId: P:ZeepSDK.UI.IZeepToolbarDrawer.MenuTitle
+  fullName: ZeepSDK.UI.IZeepToolbarDrawer.MenuTitle
+  nameWithType: IZeepToolbarDrawer.MenuTitle
+- uid: ZeepSDK.UI.IZeepToolbarDrawer.MenuTitle*
+  name: MenuTitle
+  href: api/ZeepSDK.UI.IZeepToolbarDrawer.html#ZeepSDK_UI_IZeepToolbarDrawer_MenuTitle_
+  commentId: Overload:ZeepSDK.UI.IZeepToolbarDrawer.MenuTitle
   isSpec: "True"
-  fullName: ZeepSDK.UI.Elements.DoubleField.StringToValue
-  nameWithType: DoubleField.StringToValue
-- uid: ZeepSDK.UI.Elements.FloatField
-  name: FloatField
-  href: api/ZeepSDK.UI.Elements.FloatField.html
-  commentId: T:ZeepSDK.UI.Elements.FloatField
-  fullName: ZeepSDK.UI.Elements.FloatField
-  nameWithType: FloatField
-- uid: ZeepSDK.UI.Elements.FloatField.#ctor
-  name: FloatField()
-  href: api/ZeepSDK.UI.Elements.FloatField.html#ZeepSDK_UI_Elements_FloatField__ctor
-  commentId: M:ZeepSDK.UI.Elements.FloatField.#ctor
-  name.vb: New()
-  fullName: ZeepSDK.UI.Elements.FloatField.FloatField()
-  fullName.vb: ZeepSDK.UI.Elements.FloatField.New()
-  nameWithType: FloatField.FloatField()
-  nameWithType.vb: FloatField.New()
-- uid: ZeepSDK.UI.Elements.FloatField.#ctor(System.Int32,System.Char)
-  name: FloatField(int, char)
-  href: api/ZeepSDK.UI.Elements.FloatField.html#ZeepSDK_UI_Elements_FloatField__ctor_System_Int32_System_Char_
-  commentId: M:ZeepSDK.UI.Elements.FloatField.#ctor(System.Int32,System.Char)
-  name.vb: New(Integer, Char)
-  fullName: ZeepSDK.UI.Elements.FloatField.FloatField(int, char)
-  fullName.vb: ZeepSDK.UI.Elements.FloatField.New(Integer, Char)
-  nameWithType: FloatField.FloatField(int, char)
-  nameWithType.vb: FloatField.New(Integer, Char)
-- uid: ZeepSDK.UI.Elements.FloatField.#ctor(System.String)
-  name: FloatField(string)
-  href: api/ZeepSDK.UI.Elements.FloatField.html#ZeepSDK_UI_Elements_FloatField__ctor_System_String_
-  commentId: M:ZeepSDK.UI.Elements.FloatField.#ctor(System.String)
-  name.vb: New(String)
-  fullName: ZeepSDK.UI.Elements.FloatField.FloatField(string)
-  fullName.vb: ZeepSDK.UI.Elements.FloatField.New(String)
-  nameWithType: FloatField.FloatField(string)
-  nameWithType.vb: FloatField.New(String)
-- uid: ZeepSDK.UI.Elements.FloatField.#ctor(System.String,System.Int32,System.Char)
-  name: FloatField(string, int, char)
-  href: api/ZeepSDK.UI.Elements.FloatField.html#ZeepSDK_UI_Elements_FloatField__ctor_System_String_System_Int32_System_Char_
-  commentId: M:ZeepSDK.UI.Elements.FloatField.#ctor(System.String,System.Int32,System.Char)
-  name.vb: New(String, Integer, Char)
-  fullName: ZeepSDK.UI.Elements.FloatField.FloatField(string, int, char)
-  fullName.vb: ZeepSDK.UI.Elements.FloatField.New(String, Integer, Char)
-  nameWithType: FloatField.FloatField(string, int, char)
-  nameWithType.vb: FloatField.New(String, Integer, Char)
-- uid: ZeepSDK.UI.Elements.FloatField.#ctor*
-  name: FloatField
-  href: api/ZeepSDK.UI.Elements.FloatField.html#ZeepSDK_UI_Elements_FloatField__ctor_
-  commentId: Overload:ZeepSDK.UI.Elements.FloatField.#ctor
+  fullName: ZeepSDK.UI.IZeepToolbarDrawer.MenuTitle
+  nameWithType: IZeepToolbarDrawer.MenuTitle
+- uid: ZeepSDK.UI.IZeepTooltip
+  name: IZeepTooltip
+  href: api/ZeepSDK.UI.IZeepTooltip.html
+  commentId: T:ZeepSDK.UI.IZeepTooltip
+  fullName: ZeepSDK.UI.IZeepTooltip
+  nameWithType: IZeepTooltip
+- uid: ZeepSDK.UI.IZeepTooltip.Content
+  name: Content
+  href: api/ZeepSDK.UI.IZeepTooltip.html#ZeepSDK_UI_IZeepTooltip_Content
+  commentId: P:ZeepSDK.UI.IZeepTooltip.Content
+  fullName: ZeepSDK.UI.IZeepTooltip.Content
+  nameWithType: IZeepTooltip.Content
+- uid: ZeepSDK.UI.IZeepTooltip.Content*
+  name: Content
+  href: api/ZeepSDK.UI.IZeepTooltip.html#ZeepSDK_UI_IZeepTooltip_Content_
+  commentId: Overload:ZeepSDK.UI.IZeepTooltip.Content
   isSpec: "True"
-  name.vb: New
-  fullName: ZeepSDK.UI.Elements.FloatField.FloatField
-  fullName.vb: ZeepSDK.UI.Elements.FloatField.New
-  nameWithType: FloatField.FloatField
-  nameWithType.vb: FloatField.New
-- uid: ZeepSDK.UI.Elements.FloatField.StringToValue(System.String)
-  name: StringToValue(string)
-  href: api/ZeepSDK.UI.Elements.FloatField.html#ZeepSDK_UI_Elements_FloatField_StringToValue_System_String_
-  commentId: M:ZeepSDK.UI.Elements.FloatField.StringToValue(System.String)
-  name.vb: StringToValue(String)
-  fullName: ZeepSDK.UI.Elements.FloatField.StringToValue(string)
-  fullName.vb: ZeepSDK.UI.Elements.FloatField.StringToValue(String)
-  nameWithType: FloatField.StringToValue(string)
-  nameWithType.vb: FloatField.StringToValue(String)
-- uid: ZeepSDK.UI.Elements.FloatField.StringToValue*
-  name: StringToValue
-  href: api/ZeepSDK.UI.Elements.FloatField.html#ZeepSDK_UI_Elements_FloatField_StringToValue_
-  commentId: Overload:ZeepSDK.UI.Elements.FloatField.StringToValue
+  fullName: ZeepSDK.UI.IZeepTooltip.Content
+  nameWithType: IZeepTooltip.Content
+- uid: ZeepSDK.UI.IZeepTooltip.IsOver
+  name: IsOver
+  href: api/ZeepSDK.UI.IZeepTooltip.html#ZeepSDK_UI_IZeepTooltip_IsOver
+  commentId: P:ZeepSDK.UI.IZeepTooltip.IsOver
+  fullName: ZeepSDK.UI.IZeepTooltip.IsOver
+  nameWithType: IZeepTooltip.IsOver
+- uid: ZeepSDK.UI.IZeepTooltip.IsOver*
+  name: IsOver
+  href: api/ZeepSDK.UI.IZeepTooltip.html#ZeepSDK_UI_IZeepTooltip_IsOver_
+  commentId: Overload:ZeepSDK.UI.IZeepTooltip.IsOver
   isSpec: "True"
-  fullName: ZeepSDK.UI.Elements.FloatField.StringToValue
-  nameWithType: FloatField.StringToValue
-- uid: ZeepSDK.UI.Elements.IntField
-  name: IntField
-  href: api/ZeepSDK.UI.Elements.IntField.html
-  commentId: T:ZeepSDK.UI.Elements.IntField
-  fullName: ZeepSDK.UI.Elements.IntField
-  nameWithType: IntField
-- uid: ZeepSDK.UI.Elements.IntField.#ctor
-  name: IntField()
-  href: api/ZeepSDK.UI.Elements.IntField.html#ZeepSDK_UI_Elements_IntField__ctor
-  commentId: M:ZeepSDK.UI.Elements.IntField.#ctor
-  name.vb: New()
-  fullName: ZeepSDK.UI.Elements.IntField.IntField()
-  fullName.vb: ZeepSDK.UI.Elements.IntField.New()
-  nameWithType: IntField.IntField()
-  nameWithType.vb: IntField.New()
-- uid: ZeepSDK.UI.Elements.IntField.#ctor(System.Int32,System.Char)
-  name: IntField(int, char)
-  href: api/ZeepSDK.UI.Elements.IntField.html#ZeepSDK_UI_Elements_IntField__ctor_System_Int32_System_Char_
-  commentId: M:ZeepSDK.UI.Elements.IntField.#ctor(System.Int32,System.Char)
-  name.vb: New(Integer, Char)
-  fullName: ZeepSDK.UI.Elements.IntField.IntField(int, char)
-  fullName.vb: ZeepSDK.UI.Elements.IntField.New(Integer, Char)
-  nameWithType: IntField.IntField(int, char)
-  nameWithType.vb: IntField.New(Integer, Char)
-- uid: ZeepSDK.UI.Elements.IntField.#ctor(System.String)
-  name: IntField(string)
-  href: api/ZeepSDK.UI.Elements.IntField.html#ZeepSDK_UI_Elements_IntField__ctor_System_String_
-  commentId: M:ZeepSDK.UI.Elements.IntField.#ctor(System.String)
-  name.vb: New(String)
-  fullName: ZeepSDK.UI.Elements.IntField.IntField(string)
-  fullName.vb: ZeepSDK.UI.Elements.IntField.New(String)
-  nameWithType: IntField.IntField(string)
-  nameWithType.vb: IntField.New(String)
-- uid: ZeepSDK.UI.Elements.IntField.#ctor(System.String,System.Int32,System.Char)
-  name: IntField(string, int, char)
-  href: api/ZeepSDK.UI.Elements.IntField.html#ZeepSDK_UI_Elements_IntField__ctor_System_String_System_Int32_System_Char_
-  commentId: M:ZeepSDK.UI.Elements.IntField.#ctor(System.String,System.Int32,System.Char)
-  name.vb: New(String, Integer, Char)
-  fullName: ZeepSDK.UI.Elements.IntField.IntField(string, int, char)
-  fullName.vb: ZeepSDK.UI.Elements.IntField.New(String, Integer, Char)
-  nameWithType: IntField.IntField(string, int, char)
-  nameWithType.vb: IntField.New(String, Integer, Char)
-- uid: ZeepSDK.UI.Elements.IntField.#ctor*
-  name: IntField
-  href: api/ZeepSDK.UI.Elements.IntField.html#ZeepSDK_UI_Elements_IntField__ctor_
-  commentId: Overload:ZeepSDK.UI.Elements.IntField.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: ZeepSDK.UI.Elements.IntField.IntField
-  fullName.vb: ZeepSDK.UI.Elements.IntField.New
-  nameWithType: IntField.IntField
-  nameWithType.vb: IntField.New
-- uid: ZeepSDK.UI.Elements.IntField.StringToValue(System.String)
-  name: StringToValue(string)
-  href: api/ZeepSDK.UI.Elements.IntField.html#ZeepSDK_UI_Elements_IntField_StringToValue_System_String_
-  commentId: M:ZeepSDK.UI.Elements.IntField.StringToValue(System.String)
-  name.vb: StringToValue(String)
-  fullName: ZeepSDK.UI.Elements.IntField.StringToValue(string)
-  fullName.vb: ZeepSDK.UI.Elements.IntField.StringToValue(String)
-  nameWithType: IntField.StringToValue(string)
-  nameWithType.vb: IntField.StringToValue(String)
-- uid: ZeepSDK.UI.Elements.IntField.StringToValue*
-  name: StringToValue
-  href: api/ZeepSDK.UI.Elements.IntField.html#ZeepSDK_UI_Elements_IntField_StringToValue_
-  commentId: Overload:ZeepSDK.UI.Elements.IntField.StringToValue
-  isSpec: "True"
-  fullName: ZeepSDK.UI.Elements.IntField.StringToValue
-  nameWithType: IntField.StringToValue
-- uid: ZeepSDK.UI.Elements.NumericInputBaseField`1
-  name: NumericInputBaseField<TNumber>
-  href: api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html
-  commentId: T:ZeepSDK.UI.Elements.NumericInputBaseField`1
-  name.vb: NumericInputBaseField(Of TNumber)
-  fullName: ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>
-  fullName.vb: ZeepSDK.UI.Elements.NumericInputBaseField(Of TNumber)
-  nameWithType: NumericInputBaseField<TNumber>
-  nameWithType.vb: NumericInputBaseField(Of TNumber)
-- uid: ZeepSDK.UI.Elements.NumericInputBaseField`1.#ctor
-  name: NumericInputBaseField()
-  href: api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1__ctor
-  commentId: M:ZeepSDK.UI.Elements.NumericInputBaseField`1.#ctor
-  name.vb: New()
-  fullName: ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>.NumericInputBaseField()
-  fullName.vb: ZeepSDK.UI.Elements.NumericInputBaseField(Of TNumber).New()
-  nameWithType: NumericInputBaseField<TNumber>.NumericInputBaseField()
-  nameWithType.vb: NumericInputBaseField(Of TNumber).New()
-- uid: ZeepSDK.UI.Elements.NumericInputBaseField`1.#ctor(System.Int32,System.Char)
-  name: NumericInputBaseField(int, char)
-  href: api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1__ctor_System_Int32_System_Char_
-  commentId: M:ZeepSDK.UI.Elements.NumericInputBaseField`1.#ctor(System.Int32,System.Char)
-  name.vb: New(Integer, Char)
-  fullName: ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>.NumericInputBaseField(int, char)
-  fullName.vb: ZeepSDK.UI.Elements.NumericInputBaseField(Of TNumber).New(Integer, Char)
-  nameWithType: NumericInputBaseField<TNumber>.NumericInputBaseField(int, char)
-  nameWithType.vb: NumericInputBaseField(Of TNumber).New(Integer, Char)
-- uid: ZeepSDK.UI.Elements.NumericInputBaseField`1.#ctor(System.String)
-  name: NumericInputBaseField(string)
-  href: api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1__ctor_System_String_
-  commentId: M:ZeepSDK.UI.Elements.NumericInputBaseField`1.#ctor(System.String)
-  name.vb: New(String)
-  fullName: ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>.NumericInputBaseField(string)
-  fullName.vb: ZeepSDK.UI.Elements.NumericInputBaseField(Of TNumber).New(String)
-  nameWithType: NumericInputBaseField<TNumber>.NumericInputBaseField(string)
-  nameWithType.vb: NumericInputBaseField(Of TNumber).New(String)
-- uid: ZeepSDK.UI.Elements.NumericInputBaseField`1.#ctor(System.String,System.Int32,System.Char)
-  name: NumericInputBaseField(string, int, char)
-  href: api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1__ctor_System_String_System_Int32_System_Char_
-  commentId: M:ZeepSDK.UI.Elements.NumericInputBaseField`1.#ctor(System.String,System.Int32,System.Char)
-  name.vb: New(String, Integer, Char)
-  fullName: ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>.NumericInputBaseField(string, int, char)
-  fullName.vb: ZeepSDK.UI.Elements.NumericInputBaseField(Of TNumber).New(String, Integer, Char)
-  nameWithType: NumericInputBaseField<TNumber>.NumericInputBaseField(string, int, char)
-  nameWithType.vb: NumericInputBaseField(Of TNumber).New(String, Integer, Char)
-- uid: ZeepSDK.UI.Elements.NumericInputBaseField`1.#ctor*
-  name: NumericInputBaseField
-  href: api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1__ctor_
-  commentId: Overload:ZeepSDK.UI.Elements.NumericInputBaseField`1.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>.NumericInputBaseField
-  fullName.vb: ZeepSDK.UI.Elements.NumericInputBaseField(Of TNumber).New
-  nameWithType: NumericInputBaseField<TNumber>.NumericInputBaseField
-  nameWithType.vb: NumericInputBaseField(Of TNumber).New
-- uid: ZeepSDK.UI.Elements.NumericInputBaseField`1.OnViewDataReady
-  name: OnViewDataReady()
-  href: api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1_OnViewDataReady
-  commentId: M:ZeepSDK.UI.Elements.NumericInputBaseField`1.OnViewDataReady
-  fullName: ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>.OnViewDataReady()
-  fullName.vb: ZeepSDK.UI.Elements.NumericInputBaseField(Of TNumber).OnViewDataReady()
-  nameWithType: NumericInputBaseField<TNumber>.OnViewDataReady()
-  nameWithType.vb: NumericInputBaseField(Of TNumber).OnViewDataReady()
-- uid: ZeepSDK.UI.Elements.NumericInputBaseField`1.OnViewDataReady*
-  name: OnViewDataReady
-  href: api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1_OnViewDataReady_
-  commentId: Overload:ZeepSDK.UI.Elements.NumericInputBaseField`1.OnViewDataReady
-  isSpec: "True"
-  fullName: ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>.OnViewDataReady
-  fullName.vb: ZeepSDK.UI.Elements.NumericInputBaseField(Of TNumber).OnViewDataReady
-  nameWithType: NumericInputBaseField<TNumber>.OnViewDataReady
-  nameWithType.vb: NumericInputBaseField(Of TNumber).OnViewDataReady
-- uid: ZeepSDK.UI.Elements.NumericInputBaseField`1.SetValueWithoutNotify(`0)
-  name: SetValueWithoutNotify(TNumber)
-  href: api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1_SetValueWithoutNotify__0_
-  commentId: M:ZeepSDK.UI.Elements.NumericInputBaseField`1.SetValueWithoutNotify(`0)
-  fullName: ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>.SetValueWithoutNotify(TNumber)
-  fullName.vb: ZeepSDK.UI.Elements.NumericInputBaseField(Of TNumber).SetValueWithoutNotify(TNumber)
-  nameWithType: NumericInputBaseField<TNumber>.SetValueWithoutNotify(TNumber)
-  nameWithType.vb: NumericInputBaseField(Of TNumber).SetValueWithoutNotify(TNumber)
-- uid: ZeepSDK.UI.Elements.NumericInputBaseField`1.SetValueWithoutNotify*
-  name: SetValueWithoutNotify
-  href: api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1_SetValueWithoutNotify_
-  commentId: Overload:ZeepSDK.UI.Elements.NumericInputBaseField`1.SetValueWithoutNotify
-  isSpec: "True"
-  fullName: ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>.SetValueWithoutNotify
-  fullName.vb: ZeepSDK.UI.Elements.NumericInputBaseField(Of TNumber).SetValueWithoutNotify
-  nameWithType: NumericInputBaseField<TNumber>.SetValueWithoutNotify
-  nameWithType.vb: NumericInputBaseField(Of TNumber).SetValueWithoutNotify
-- uid: ZeepSDK.UI.Elements.NumericInputBaseField`1.ValueToString(`0)
-  name: ValueToString(TNumber)
-  href: api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1_ValueToString__0_
-  commentId: M:ZeepSDK.UI.Elements.NumericInputBaseField`1.ValueToString(`0)
-  fullName: ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>.ValueToString(TNumber)
-  fullName.vb: ZeepSDK.UI.Elements.NumericInputBaseField(Of TNumber).ValueToString(TNumber)
-  nameWithType: NumericInputBaseField<TNumber>.ValueToString(TNumber)
-  nameWithType.vb: NumericInputBaseField(Of TNumber).ValueToString(TNumber)
-- uid: ZeepSDK.UI.Elements.NumericInputBaseField`1.ValueToString*
-  name: ValueToString
-  href: api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1_ValueToString_
-  commentId: Overload:ZeepSDK.UI.Elements.NumericInputBaseField`1.ValueToString
-  isSpec: "True"
-  fullName: ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>.ValueToString
-  fullName.vb: ZeepSDK.UI.Elements.NumericInputBaseField(Of TNumber).ValueToString
-  nameWithType: NumericInputBaseField<TNumber>.ValueToString
-  nameWithType.vb: NumericInputBaseField(Of TNumber).ValueToString
-- uid: ZeepSDK.UI.Elements.NumericInputBaseField`1.value
-  name: value
-  href: api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1_value
-  commentId: P:ZeepSDK.UI.Elements.NumericInputBaseField`1.value
-  fullName: ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>.value
-  fullName.vb: ZeepSDK.UI.Elements.NumericInputBaseField(Of TNumber).value
-  nameWithType: NumericInputBaseField<TNumber>.value
-  nameWithType.vb: NumericInputBaseField(Of TNumber).value
-- uid: ZeepSDK.UI.Elements.NumericInputBaseField`1.value*
-  name: value
-  href: api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html#ZeepSDK_UI_Elements_NumericInputBaseField_1_value_
-  commentId: Overload:ZeepSDK.UI.Elements.NumericInputBaseField`1.value
-  isSpec: "True"
-  fullName: ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>.value
-  fullName.vb: ZeepSDK.UI.Elements.NumericInputBaseField(Of TNumber).value
-  nameWithType: NumericInputBaseField<TNumber>.value
-  nameWithType.vb: NumericInputBaseField(Of TNumber).value
-- uid: ZeepSDK.UI.FloatFieldValueUpdatedHandler
-  name: FloatFieldValueUpdatedHandler
-  href: api/ZeepSDK.UI.FloatFieldValueUpdatedHandler.html
-  commentId: T:ZeepSDK.UI.FloatFieldValueUpdatedHandler
-  fullName: ZeepSDK.UI.FloatFieldValueUpdatedHandler
-  nameWithType: FloatFieldValueUpdatedHandler
-- uid: ZeepSDK.UI.IDropdownMenu
-  name: IDropdownMenu
-  href: api/ZeepSDK.UI.IDropdownMenu.html
-  commentId: T:ZeepSDK.UI.IDropdownMenu
-  fullName: ZeepSDK.UI.IDropdownMenu
-  nameWithType: IDropdownMenu
-- uid: ZeepSDK.UI.IDropdownMenu.AddDisabledItem(System.String)
-  name: AddDisabledItem(string)
-  href: api/ZeepSDK.UI.IDropdownMenu.html#ZeepSDK_UI_IDropdownMenu_AddDisabledItem_System_String_
-  commentId: M:ZeepSDK.UI.IDropdownMenu.AddDisabledItem(System.String)
-  name.vb: AddDisabledItem(String)
-  fullName: ZeepSDK.UI.IDropdownMenu.AddDisabledItem(string)
-  fullName.vb: ZeepSDK.UI.IDropdownMenu.AddDisabledItem(String)
-  nameWithType: IDropdownMenu.AddDisabledItem(string)
-  nameWithType.vb: IDropdownMenu.AddDisabledItem(String)
-- uid: ZeepSDK.UI.IDropdownMenu.AddDisabledItem*
-  name: AddDisabledItem
-  href: api/ZeepSDK.UI.IDropdownMenu.html#ZeepSDK_UI_IDropdownMenu_AddDisabledItem_
-  commentId: Overload:ZeepSDK.UI.IDropdownMenu.AddDisabledItem
-  isSpec: "True"
-  fullName: ZeepSDK.UI.IDropdownMenu.AddDisabledItem
-  nameWithType: IDropdownMenu.AddDisabledItem
-- uid: ZeepSDK.UI.IDropdownMenu.AddItem(System.String,System.Action)
-  name: AddItem(string, Action)
-  href: api/ZeepSDK.UI.IDropdownMenu.html#ZeepSDK_UI_IDropdownMenu_AddItem_System_String_System_Action_
-  commentId: M:ZeepSDK.UI.IDropdownMenu.AddItem(System.String,System.Action)
-  name.vb: AddItem(String, Action)
-  fullName: ZeepSDK.UI.IDropdownMenu.AddItem(string, System.Action)
-  fullName.vb: ZeepSDK.UI.IDropdownMenu.AddItem(String, System.Action)
-  nameWithType: IDropdownMenu.AddItem(string, Action)
-  nameWithType.vb: IDropdownMenu.AddItem(String, Action)
-- uid: ZeepSDK.UI.IDropdownMenu.AddItem(System.String,System.Action{System.Object},System.Object)
-  name: AddItem(string, Action<object>, object)
-  href: api/ZeepSDK.UI.IDropdownMenu.html#ZeepSDK_UI_IDropdownMenu_AddItem_System_String_System_Action_System_Object__System_Object_
-  commentId: M:ZeepSDK.UI.IDropdownMenu.AddItem(System.String,System.Action{System.Object},System.Object)
-  name.vb: AddItem(String, Action(Of Object), Object)
-  fullName: ZeepSDK.UI.IDropdownMenu.AddItem(string, System.Action<object>, object)
-  fullName.vb: ZeepSDK.UI.IDropdownMenu.AddItem(String, System.Action(Of Object), Object)
-  nameWithType: IDropdownMenu.AddItem(string, Action<object>, object)
-  nameWithType.vb: IDropdownMenu.AddItem(String, Action(Of Object), Object)
-- uid: ZeepSDK.UI.IDropdownMenu.AddItem*
-  name: AddItem
-  href: api/ZeepSDK.UI.IDropdownMenu.html#ZeepSDK_UI_IDropdownMenu_AddItem_
-  commentId: Overload:ZeepSDK.UI.IDropdownMenu.AddItem
-  isSpec: "True"
-  fullName: ZeepSDK.UI.IDropdownMenu.AddItem
-  nameWithType: IDropdownMenu.AddItem
-- uid: ZeepSDK.UI.IDropdownMenu.AddSeparator
-  name: AddSeparator()
-  href: api/ZeepSDK.UI.IDropdownMenu.html#ZeepSDK_UI_IDropdownMenu_AddSeparator
-  commentId: M:ZeepSDK.UI.IDropdownMenu.AddSeparator
-  fullName: ZeepSDK.UI.IDropdownMenu.AddSeparator()
-  nameWithType: IDropdownMenu.AddSeparator()
-- uid: ZeepSDK.UI.IDropdownMenu.AddSeparator*
-  name: AddSeparator
-  href: api/ZeepSDK.UI.IDropdownMenu.html#ZeepSDK_UI_IDropdownMenu_AddSeparator_
-  commentId: Overload:ZeepSDK.UI.IDropdownMenu.AddSeparator
-  isSpec: "True"
-  fullName: ZeepSDK.UI.IDropdownMenu.AddSeparator
-  nameWithType: IDropdownMenu.AddSeparator
-- uid: ZeepSDK.UI.IntFieldValueUpdatedHandler
-  name: IntFieldValueUpdatedHandler
-  href: api/ZeepSDK.UI.IntFieldValueUpdatedHandler.html
-  commentId: T:ZeepSDK.UI.IntFieldValueUpdatedHandler
-  fullName: ZeepSDK.UI.IntFieldValueUpdatedHandler
-  nameWithType: IntFieldValueUpdatedHandler
-- uid: ZeepSDK.UI.ScrollValueUpdatedHandler
-  name: ScrollValueUpdatedHandler
-  href: api/ZeepSDK.UI.ScrollValueUpdatedHandler.html
-  commentId: T:ZeepSDK.UI.ScrollValueUpdatedHandler
-  fullName: ZeepSDK.UI.ScrollValueUpdatedHandler
-  nameWithType: ScrollValueUpdatedHandler
-- uid: ZeepSDK.UI.TextFieldValueUpdatedHandler
-  name: TextFieldValueUpdatedHandler
-  href: api/ZeepSDK.UI.TextFieldValueUpdatedHandler.html
-  commentId: T:ZeepSDK.UI.TextFieldValueUpdatedHandler
-  fullName: ZeepSDK.UI.TextFieldValueUpdatedHandler
-  nameWithType: TextFieldValueUpdatedHandler
-- uid: ZeepSDK.UI.ToggleValueUpdatedHandler
-  name: ToggleValueUpdatedHandler
-  href: api/ZeepSDK.UI.ToggleValueUpdatedHandler.html
-  commentId: T:ZeepSDK.UI.ToggleValueUpdatedHandler
-  fullName: ZeepSDK.UI.ToggleValueUpdatedHandler
-  nameWithType: ToggleValueUpdatedHandler
+  fullName: ZeepSDK.UI.IZeepTooltip.IsOver
+  nameWithType: IZeepTooltip.IsOver
 - uid: ZeepSDK.UI.UIApi
   name: UIApi
   href: api/ZeepSDK.UI.UIApi.html
@@ -10213,38 +9785,19 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.UI.UIApi.AddToConfigurator
   nameWithType: UIApi.AddToConfigurator
-- uid: ZeepSDK.UI.UIApi.AddToolbarItem(System.String,System.Action)
-  name: AddToolbarItem(string, Action)
-  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_AddToolbarItem_System_String_System_Action_
-  commentId: M:ZeepSDK.UI.UIApi.AddToolbarItem(System.String,System.Action)
-  name.vb: AddToolbarItem(String, Action)
-  fullName: ZeepSDK.UI.UIApi.AddToolbarItem(string, System.Action)
-  fullName.vb: ZeepSDK.UI.UIApi.AddToolbarItem(String, System.Action)
-  nameWithType: UIApi.AddToolbarItem(string, Action)
-  nameWithType.vb: UIApi.AddToolbarItem(String, Action)
-- uid: ZeepSDK.UI.UIApi.AddToolbarItem*
-  name: AddToolbarItem
-  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_AddToolbarItem_
-  commentId: Overload:ZeepSDK.UI.UIApi.AddToolbarItem
+- uid: ZeepSDK.UI.UIApi.AddToolbarDrawer(ZeepSDK.UI.IZeepToolbarDrawer)
+  name: AddToolbarDrawer(IZeepToolbarDrawer)
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_AddToolbarDrawer_ZeepSDK_UI_IZeepToolbarDrawer_
+  commentId: M:ZeepSDK.UI.UIApi.AddToolbarDrawer(ZeepSDK.UI.IZeepToolbarDrawer)
+  fullName: ZeepSDK.UI.UIApi.AddToolbarDrawer(ZeepSDK.UI.IZeepToolbarDrawer)
+  nameWithType: UIApi.AddToolbarDrawer(IZeepToolbarDrawer)
+- uid: ZeepSDK.UI.UIApi.AddToolbarDrawer*
+  name: AddToolbarDrawer
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_AddToolbarDrawer_
+  commentId: Overload:ZeepSDK.UI.UIApi.AddToolbarDrawer
   isSpec: "True"
-  fullName: ZeepSDK.UI.UIApi.AddToolbarItem
-  nameWithType: UIApi.AddToolbarItem
-- uid: ZeepSDK.UI.UIApi.AddToolbarItemChild(System.String,System.String,System.Action,System.Int32)
-  name: AddToolbarItemChild(string, string, Action, int)
-  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_AddToolbarItemChild_System_String_System_String_System_Action_System_Int32_
-  commentId: M:ZeepSDK.UI.UIApi.AddToolbarItemChild(System.String,System.String,System.Action,System.Int32)
-  name.vb: AddToolbarItemChild(String, String, Action, Integer)
-  fullName: ZeepSDK.UI.UIApi.AddToolbarItemChild(string, string, System.Action, int)
-  fullName.vb: ZeepSDK.UI.UIApi.AddToolbarItemChild(String, String, System.Action, Integer)
-  nameWithType: UIApi.AddToolbarItemChild(string, string, Action, int)
-  nameWithType.vb: UIApi.AddToolbarItemChild(String, String, Action, Integer)
-- uid: ZeepSDK.UI.UIApi.AddToolbarItemChild*
-  name: AddToolbarItemChild
-  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_AddToolbarItemChild_
-  commentId: Overload:ZeepSDK.UI.UIApi.AddToolbarItemChild
-  isSpec: "True"
-  fullName: ZeepSDK.UI.UIApi.AddToolbarItemChild
-  nameWithType: UIApi.AddToolbarItemChild
+  fullName: ZeepSDK.UI.UIApi.AddToolbarDrawer
+  nameWithType: UIApi.AddToolbarDrawer
 - uid: ZeepSDK.UI.UIApi.AddTooltip(UnityEngine.GameObject,System.String)
   name: AddTooltip(GameObject, string)
   href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_AddTooltip_UnityEngine_GameObject_System_String_
@@ -10261,6 +9814,19 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.UI.UIApi.AddTooltip
   nameWithType: UIApi.AddTooltip
+- uid: ZeepSDK.UI.UIApi.AddZeepGUIDrawer(ZeepSDK.UI.IZeepGUIDrawer)
+  name: AddZeepGUIDrawer(IZeepGUIDrawer)
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_AddZeepGUIDrawer_ZeepSDK_UI_IZeepGUIDrawer_
+  commentId: M:ZeepSDK.UI.UIApi.AddZeepGUIDrawer(ZeepSDK.UI.IZeepGUIDrawer)
+  fullName: ZeepSDK.UI.UIApi.AddZeepGUIDrawer(ZeepSDK.UI.IZeepGUIDrawer)
+  nameWithType: UIApi.AddZeepGUIDrawer(IZeepGUIDrawer)
+- uid: ZeepSDK.UI.UIApi.AddZeepGUIDrawer*
+  name: AddZeepGUIDrawer
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_AddZeepGUIDrawer_
+  commentId: Overload:ZeepSDK.UI.UIApi.AddZeepGUIDrawer
+  isSpec: "True"
+  fullName: ZeepSDK.UI.UIApi.AddZeepGUIDrawer
+  nameWithType: UIApi.AddZeepGUIDrawer
 - uid: ZeepSDK.UI.UIApi.FileTitle
   name: FileTitle
   href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_FileTitle
@@ -10280,665 +9846,45 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.UI.UIApi.RemoveFromConfigurator
   nameWithType: UIApi.RemoveFromConfigurator
-- uid: ZeepSDK.UI.VisualElementExtensions
-  name: VisualElementExtensions
-  href: api/ZeepSDK.UI.VisualElementExtensions.html
-  commentId: T:ZeepSDK.UI.VisualElementExtensions
-  fullName: ZeepSDK.UI.VisualElementExtensions
-  nameWithType: VisualElementExtensions
-- uid: ZeepSDK.UI.VisualElementExtensions.RegisterHierarchyChanged(UnityEngine.UIElements.VisualElement,System.Action{UnityEngine.UIElements.VisualElement,System.Int32})
-  name: RegisterHierarchyChanged(VisualElement, Action<VisualElement, int>)
-  href: api/ZeepSDK.UI.VisualElementExtensions.html#ZeepSDK_UI_VisualElementExtensions_RegisterHierarchyChanged_UnityEngine_UIElements_VisualElement_System_Action_UnityEngine_UIElements_VisualElement_System_Int32__
-  commentId: M:ZeepSDK.UI.VisualElementExtensions.RegisterHierarchyChanged(UnityEngine.UIElements.VisualElement,System.Action{UnityEngine.UIElements.VisualElement,System.Int32})
-  name.vb: RegisterHierarchyChanged(VisualElement, Action(Of VisualElement, Integer))
-  fullName: ZeepSDK.UI.VisualElementExtensions.RegisterHierarchyChanged(UnityEngine.UIElements.VisualElement, System.Action<UnityEngine.UIElements.VisualElement, int>)
-  fullName.vb: ZeepSDK.UI.VisualElementExtensions.RegisterHierarchyChanged(UnityEngine.UIElements.VisualElement, System.Action(Of UnityEngine.UIElements.VisualElement, Integer))
-  nameWithType: VisualElementExtensions.RegisterHierarchyChanged(VisualElement, Action<VisualElement, int>)
-  nameWithType.vb: VisualElementExtensions.RegisterHierarchyChanged(VisualElement, Action(Of VisualElement, Integer))
-- uid: ZeepSDK.UI.VisualElementExtensions.RegisterHierarchyChanged*
-  name: RegisterHierarchyChanged
-  href: api/ZeepSDK.UI.VisualElementExtensions.html#ZeepSDK_UI_VisualElementExtensions_RegisterHierarchyChanged_
-  commentId: Overload:ZeepSDK.UI.VisualElementExtensions.RegisterHierarchyChanged
+- uid: ZeepSDK.UI.UIApi.RemoveToolbarDrawer(ZeepSDK.UI.IZeepToolbarDrawer)
+  name: RemoveToolbarDrawer(IZeepToolbarDrawer)
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_RemoveToolbarDrawer_ZeepSDK_UI_IZeepToolbarDrawer_
+  commentId: M:ZeepSDK.UI.UIApi.RemoveToolbarDrawer(ZeepSDK.UI.IZeepToolbarDrawer)
+  fullName: ZeepSDK.UI.UIApi.RemoveToolbarDrawer(ZeepSDK.UI.IZeepToolbarDrawer)
+  nameWithType: UIApi.RemoveToolbarDrawer(IZeepToolbarDrawer)
+- uid: ZeepSDK.UI.UIApi.RemoveToolbarDrawer*
+  name: RemoveToolbarDrawer
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_RemoveToolbarDrawer_
+  commentId: Overload:ZeepSDK.UI.UIApi.RemoveToolbarDrawer
   isSpec: "True"
-  fullName: ZeepSDK.UI.VisualElementExtensions.RegisterHierarchyChanged
-  nameWithType: VisualElementExtensions.RegisterHierarchyChanged
-- uid: ZeepSDK.UI.WindowClosedHandler
-  name: WindowClosedHandler
-  href: api/ZeepSDK.UI.WindowClosedHandler.html
-  commentId: T:ZeepSDK.UI.WindowClosedHandler
-  fullName: ZeepSDK.UI.WindowClosedHandler
-  nameWithType: WindowClosedHandler
-- uid: ZeepSDK.UI.WindowPositionUpdatedHandler
-  name: WindowPositionUpdatedHandler
-  href: api/ZeepSDK.UI.WindowPositionUpdatedHandler.html
-  commentId: T:ZeepSDK.UI.WindowPositionUpdatedHandler
-  fullName: ZeepSDK.UI.WindowPositionUpdatedHandler
-  nameWithType: WindowPositionUpdatedHandler
-- uid: ZeepSDK.UI.ZeepGUI
-  name: ZeepGUI
-  href: api/ZeepSDK.UI.ZeepGUI.html
-  commentId: T:ZeepSDK.UI.ZeepGUI
-  fullName: ZeepSDK.UI.ZeepGUI
-  nameWithType: ZeepGUI
-- uid: ZeepSDK.UI.ZeepGUI.#ctor(UnityEngine.UIElements.VisualElement)
-  name: ZeepGUI(VisualElement)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI__ctor_UnityEngine_UIElements_VisualElement_
-  commentId: M:ZeepSDK.UI.ZeepGUI.#ctor(UnityEngine.UIElements.VisualElement)
-  name.vb: New(VisualElement)
-  fullName: ZeepSDK.UI.ZeepGUI.ZeepGUI(UnityEngine.UIElements.VisualElement)
-  fullName.vb: ZeepSDK.UI.ZeepGUI.New(UnityEngine.UIElements.VisualElement)
-  nameWithType: ZeepGUI.ZeepGUI(VisualElement)
-  nameWithType.vb: ZeepGUI.New(VisualElement)
-- uid: ZeepSDK.UI.ZeepGUI.#ctor*
-  name: ZeepGUI
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI__ctor_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.#ctor
+  fullName: ZeepSDK.UI.UIApi.RemoveToolbarDrawer
+  nameWithType: UIApi.RemoveToolbarDrawer
+- uid: ZeepSDK.UI.UIApi.RemoveTooltip(UnityEngine.GameObject)
+  name: RemoveTooltip(GameObject)
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_RemoveTooltip_UnityEngine_GameObject_
+  commentId: M:ZeepSDK.UI.UIApi.RemoveTooltip(UnityEngine.GameObject)
+  fullName: ZeepSDK.UI.UIApi.RemoveTooltip(UnityEngine.GameObject)
+  nameWithType: UIApi.RemoveTooltip(GameObject)
+- uid: ZeepSDK.UI.UIApi.RemoveTooltip*
+  name: RemoveTooltip
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_RemoveTooltip_
+  commentId: Overload:ZeepSDK.UI.UIApi.RemoveTooltip
   isSpec: "True"
-  name.vb: New
-  fullName: ZeepSDK.UI.ZeepGUI.ZeepGUI
-  fullName.vb: ZeepSDK.UI.ZeepGUI.New
-  nameWithType: ZeepGUI.ZeepGUI
-  nameWithType.vb: ZeepGUI.New
-- uid: ZeepSDK.UI.ZeepGUI.Button(System.String,ZeepSDK.UI.ButtonClickHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: Button(string, ButtonClickHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Button_System_String_ZeepSDK_UI_ButtonClickHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.Button(System.String,ZeepSDK.UI.ButtonClickHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name.vb: Button(String, ButtonClickHandler, String, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.Button(string, ZeepSDK.UI.ButtonClickHandler, string, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  fullName.vb: ZeepSDK.UI.ZeepGUI.Button(String, ZeepSDK.UI.ButtonClickHandler, String, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.Button(string, ButtonClickHandler, string, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  nameWithType.vb: ZeepGUI.Button(String, ButtonClickHandler, String, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.Button*
-  name: Button
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Button_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.Button
+  fullName: ZeepSDK.UI.UIApi.RemoveTooltip
+  nameWithType: UIApi.RemoveTooltip
+- uid: ZeepSDK.UI.UIApi.RemoveZeepGUIDrawer(ZeepSDK.UI.IZeepGUIDrawer)
+  name: RemoveZeepGUIDrawer(IZeepGUIDrawer)
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_RemoveZeepGUIDrawer_ZeepSDK_UI_IZeepGUIDrawer_
+  commentId: M:ZeepSDK.UI.UIApi.RemoveZeepGUIDrawer(ZeepSDK.UI.IZeepGUIDrawer)
+  fullName: ZeepSDK.UI.UIApi.RemoveZeepGUIDrawer(ZeepSDK.UI.IZeepGUIDrawer)
+  nameWithType: UIApi.RemoveZeepGUIDrawer(IZeepGUIDrawer)
+- uid: ZeepSDK.UI.UIApi.RemoveZeepGUIDrawer*
+  name: RemoveZeepGUIDrawer
+  href: api/ZeepSDK.UI.UIApi.html#ZeepSDK_UI_UIApi_RemoveZeepGUIDrawer_
+  commentId: Overload:ZeepSDK.UI.UIApi.RemoveZeepGUIDrawer
   isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.Button
-  nameWithType: ZeepGUI.Button
-- uid: ZeepSDK.UI.ZeepGUI.Container(ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: Container(ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Container_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.Container(ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.Container(ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.Container(ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.Container*
-  name: Container
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Container_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.Container
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.Container
-  nameWithType: ZeepGUI.Container
-- uid: ZeepSDK.UI.ZeepGUI.DoubleField(System.String,System.Double,ZeepSDK.UI.DoubleFieldValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: DoubleField(string, double, DoubleFieldValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DoubleField_System_String_System_Double_ZeepSDK_UI_DoubleFieldValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.DoubleField(System.String,System.Double,ZeepSDK.UI.DoubleFieldValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name.vb: DoubleField(String, Double, DoubleFieldValueUpdatedHandler, String, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.DoubleField(string, double, ZeepSDK.UI.DoubleFieldValueUpdatedHandler, string, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  fullName.vb: ZeepSDK.UI.ZeepGUI.DoubleField(String, Double, ZeepSDK.UI.DoubleFieldValueUpdatedHandler, String, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.DoubleField(string, double, DoubleFieldValueUpdatedHandler, string, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  nameWithType.vb: ZeepGUI.DoubleField(String, Double, DoubleFieldValueUpdatedHandler, String, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.DoubleField*
-  name: DoubleField
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DoubleField_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.DoubleField
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.DoubleField
-  nameWithType: ZeepGUI.DoubleField
-- uid: ZeepSDK.UI.ZeepGUI.Dropdown*
-  name: Dropdown
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Dropdown_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.Dropdown
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.Dropdown
-  nameWithType: ZeepGUI.Dropdown
-- uid: ZeepSDK.UI.ZeepGUI.DropdownButton(System.String,ZeepSDK.UI.BuildDropdownMenuHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: DropdownButton(string, BuildDropdownMenuHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DropdownButton_System_String_ZeepSDK_UI_BuildDropdownMenuHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.DropdownButton(System.String,ZeepSDK.UI.BuildDropdownMenuHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name.vb: DropdownButton(String, BuildDropdownMenuHandler, String, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.DropdownButton(string, ZeepSDK.UI.BuildDropdownMenuHandler, string, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  fullName.vb: ZeepSDK.UI.ZeepGUI.DropdownButton(String, ZeepSDK.UI.BuildDropdownMenuHandler, String, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.DropdownButton(string, BuildDropdownMenuHandler, string, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  nameWithType.vb: ZeepGUI.DropdownButton(String, BuildDropdownMenuHandler, String, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.DropdownButton*
-  name: DropdownButton
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_DropdownButton_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.DropdownButton
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.DropdownButton
-  nameWithType: ZeepGUI.DropdownButton
-- uid: ZeepSDK.UI.ZeepGUI.Dropdown``1(System.String,System.Collections.Generic.IEnumerable{``0},``0,ZeepSDK.UI.DropDownFormatHandler{``0},ZeepSDK.UI.DropDownValueUpdatedHandler{``0},System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: Dropdown<T>(string, IEnumerable<T>, T, DropDownFormatHandler<T>, DropDownValueUpdatedHandler<T>, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Dropdown__1_System_String_System_Collections_Generic_IEnumerable___0____0_ZeepSDK_UI_DropDownFormatHandler___0__ZeepSDK_UI_DropDownValueUpdatedHandler___0__System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.Dropdown``1(System.String,System.Collections.Generic.IEnumerable{``0},``0,ZeepSDK.UI.DropDownFormatHandler{``0},ZeepSDK.UI.DropDownValueUpdatedHandler{``0},System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name.vb: Dropdown(Of T)(String, IEnumerable(Of T), T, DropDownFormatHandler(Of T), DropDownValueUpdatedHandler(Of T), String, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.Dropdown<T>(string, System.Collections.Generic.IEnumerable<T>, T, ZeepSDK.UI.DropDownFormatHandler<T>, ZeepSDK.UI.DropDownValueUpdatedHandler<T>, string, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  fullName.vb: ZeepSDK.UI.ZeepGUI.Dropdown(Of T)(String, System.Collections.Generic.IEnumerable(Of T), T, ZeepSDK.UI.DropDownFormatHandler(Of T), ZeepSDK.UI.DropDownValueUpdatedHandler(Of T), String, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.Dropdown<T>(string, IEnumerable<T>, T, DropDownFormatHandler<T>, DropDownValueUpdatedHandler<T>, string, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  nameWithType.vb: ZeepGUI.Dropdown(Of T)(String, IEnumerable(Of T), T, DropDownFormatHandler(Of T), DropDownValueUpdatedHandler(Of T), String, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.FloatField(System.String,System.Single,ZeepSDK.UI.FloatFieldValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: FloatField(string, float, FloatFieldValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_FloatField_System_String_System_Single_ZeepSDK_UI_FloatFieldValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.FloatField(System.String,System.Single,ZeepSDK.UI.FloatFieldValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name.vb: FloatField(String, Single, FloatFieldValueUpdatedHandler, String, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.FloatField(string, float, ZeepSDK.UI.FloatFieldValueUpdatedHandler, string, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  fullName.vb: ZeepSDK.UI.ZeepGUI.FloatField(String, Single, ZeepSDK.UI.FloatFieldValueUpdatedHandler, String, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.FloatField(string, float, FloatFieldValueUpdatedHandler, string, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  nameWithType.vb: ZeepGUI.FloatField(String, Single, FloatFieldValueUpdatedHandler, String, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.FloatField*
-  name: FloatField
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_FloatField_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.FloatField
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.FloatField
-  nameWithType: ZeepGUI.FloatField
-- uid: ZeepSDK.UI.ZeepGUI.GetLastElement
-  name: GetLastElement()
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_GetLastElement
-  commentId: M:ZeepSDK.UI.ZeepGUI.GetLastElement
-  fullName: ZeepSDK.UI.ZeepGUI.GetLastElement()
-  nameWithType: ZeepGUI.GetLastElement()
-- uid: ZeepSDK.UI.ZeepGUI.GetLastElement*
-  name: GetLastElement
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_GetLastElement_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.GetLastElement
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.GetLastElement
-  nameWithType: ZeepGUI.GetLastElement
-- uid: ZeepSDK.UI.ZeepGUI.Horizontal(ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: Horizontal(ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Horizontal_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.Horizontal(ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.Horizontal(ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.Horizontal(ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.Horizontal*
-  name: Horizontal
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Horizontal_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.Horizontal
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.Horizontal
-  nameWithType: ZeepGUI.Horizontal
-- uid: ZeepSDK.UI.ZeepGUI.IZeepScope
-  name: ZeepGUI.IZeepScope
-  href: api/ZeepSDK.UI.ZeepGUI.IZeepScope.html
-  commentId: T:ZeepSDK.UI.ZeepGUI.IZeepScope
-  fullName: ZeepSDK.UI.ZeepGUI.IZeepScope
-  nameWithType: ZeepGUI.IZeepScope
-- uid: ZeepSDK.UI.ZeepGUI.IntField(System.String,System.Int32,ZeepSDK.UI.IntFieldValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: IntField(string, int, IntFieldValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_IntField_System_String_System_Int32_ZeepSDK_UI_IntFieldValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.IntField(System.String,System.Int32,ZeepSDK.UI.IntFieldValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name.vb: IntField(String, Integer, IntFieldValueUpdatedHandler, String, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.IntField(string, int, ZeepSDK.UI.IntFieldValueUpdatedHandler, string, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  fullName.vb: ZeepSDK.UI.ZeepGUI.IntField(String, Integer, ZeepSDK.UI.IntFieldValueUpdatedHandler, String, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.IntField(string, int, IntFieldValueUpdatedHandler, string, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  nameWithType.vb: ZeepGUI.IntField(String, Integer, IntFieldValueUpdatedHandler, String, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.IntField*
-  name: IntField
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_IntField_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.IntField
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.IntField
-  nameWithType: ZeepGUI.IntField
-- uid: ZeepSDK.UI.ZeepGUI.Label(System.String,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: Label(string, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Label_System_String_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.Label(System.String,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name.vb: Label(String, String, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.Label(string, string, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  fullName.vb: ZeepSDK.UI.ZeepGUI.Label(String, String, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.Label(string, string, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  nameWithType.vb: ZeepGUI.Label(String, String, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.Label*
-  name: Label
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Label_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.Label
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.Label
-  nameWithType: ZeepGUI.Label
-- uid: ZeepSDK.UI.ZeepGUI.Root
-  name: Root
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Root
-  commentId: P:ZeepSDK.UI.ZeepGUI.Root
-  fullName: ZeepSDK.UI.ZeepGUI.Root
-  nameWithType: ZeepGUI.Root
-- uid: ZeepSDK.UI.ZeepGUI.Root*
-  name: Root
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Root_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.Root
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.Root
-  nameWithType: ZeepGUI.Root
-- uid: ZeepSDK.UI.ZeepGUI.Scroll(UnityEngine.Vector2,ZeepSDK.UI.ScrollValueUpdatedHandler,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: Scroll(Vector2, ScrollValueUpdatedHandler, ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Scroll_UnityEngine_Vector2_ZeepSDK_UI_ScrollValueUpdatedHandler_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.Scroll(UnityEngine.Vector2,ZeepSDK.UI.ScrollValueUpdatedHandler,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.Scroll(UnityEngine.Vector2, ZeepSDK.UI.ScrollValueUpdatedHandler, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.Scroll(Vector2, ScrollValueUpdatedHandler, ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.Scroll(ZeepSDK.UI.ScrollValueUpdatedHandler,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: Scroll(ScrollValueUpdatedHandler, ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Scroll_ZeepSDK_UI_ScrollValueUpdatedHandler_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.Scroll(ZeepSDK.UI.ScrollValueUpdatedHandler,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.Scroll(ZeepSDK.UI.ScrollValueUpdatedHandler, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.Scroll(ScrollValueUpdatedHandler, ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.Scroll*
-  name: Scroll
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Scroll_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.Scroll
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.Scroll
-  nameWithType: ZeepGUI.Scroll
-- uid: ZeepSDK.UI.ZeepGUI.StyleMode
-  name: ZeepGUI.StyleMode
-  href: api/ZeepSDK.UI.ZeepGUI.StyleMode.html
-  commentId: T:ZeepSDK.UI.ZeepGUI.StyleMode
-  fullName: ZeepSDK.UI.ZeepGUI.StyleMode
-  nameWithType: ZeepGUI.StyleMode
-- uid: ZeepSDK.UI.ZeepGUI.StyleMode.Accent
-  name: Accent
-  href: api/ZeepSDK.UI.ZeepGUI.StyleMode.html#ZeepSDK_UI_ZeepGUI_StyleMode_Accent
-  commentId: F:ZeepSDK.UI.ZeepGUI.StyleMode.Accent
-  fullName: ZeepSDK.UI.ZeepGUI.StyleMode.Accent
-  nameWithType: ZeepGUI.StyleMode.Accent
-- uid: ZeepSDK.UI.ZeepGUI.StyleMode.Danger
-  name: Danger
-  href: api/ZeepSDK.UI.ZeepGUI.StyleMode.html#ZeepSDK_UI_ZeepGUI_StyleMode_Danger
-  commentId: F:ZeepSDK.UI.ZeepGUI.StyleMode.Danger
-  fullName: ZeepSDK.UI.ZeepGUI.StyleMode.Danger
-  nameWithType: ZeepGUI.StyleMode.Danger
-- uid: ZeepSDK.UI.ZeepGUI.StyleMode.Info
-  name: Info
-  href: api/ZeepSDK.UI.ZeepGUI.StyleMode.html#ZeepSDK_UI_ZeepGUI_StyleMode_Info
-  commentId: F:ZeepSDK.UI.ZeepGUI.StyleMode.Info
-  fullName: ZeepSDK.UI.ZeepGUI.StyleMode.Info
-  nameWithType: ZeepGUI.StyleMode.Info
-- uid: ZeepSDK.UI.ZeepGUI.StyleMode.Primary
-  name: Primary
-  href: api/ZeepSDK.UI.ZeepGUI.StyleMode.html#ZeepSDK_UI_ZeepGUI_StyleMode_Primary
-  commentId: F:ZeepSDK.UI.ZeepGUI.StyleMode.Primary
-  fullName: ZeepSDK.UI.ZeepGUI.StyleMode.Primary
-  nameWithType: ZeepGUI.StyleMode.Primary
-- uid: ZeepSDK.UI.ZeepGUI.StyleMode.Regular
-  name: Regular
-  href: api/ZeepSDK.UI.ZeepGUI.StyleMode.html#ZeepSDK_UI_ZeepGUI_StyleMode_Regular
-  commentId: F:ZeepSDK.UI.ZeepGUI.StyleMode.Regular
-  fullName: ZeepSDK.UI.ZeepGUI.StyleMode.Regular
-  nameWithType: ZeepGUI.StyleMode.Regular
-- uid: ZeepSDK.UI.ZeepGUI.StyleMode.Secondary
-  name: Secondary
-  href: api/ZeepSDK.UI.ZeepGUI.StyleMode.html#ZeepSDK_UI_ZeepGUI_StyleMode_Secondary
-  commentId: F:ZeepSDK.UI.ZeepGUI.StyleMode.Secondary
-  fullName: ZeepSDK.UI.ZeepGUI.StyleMode.Secondary
-  nameWithType: ZeepGUI.StyleMode.Secondary
-- uid: ZeepSDK.UI.ZeepGUI.StyleMode.Success
-  name: Success
-  href: api/ZeepSDK.UI.ZeepGUI.StyleMode.html#ZeepSDK_UI_ZeepGUI_StyleMode_Success
-  commentId: F:ZeepSDK.UI.ZeepGUI.StyleMode.Success
-  fullName: ZeepSDK.UI.ZeepGUI.StyleMode.Success
-  nameWithType: ZeepGUI.StyleMode.Success
-- uid: ZeepSDK.UI.ZeepGUI.StyleMode.Warning
-  name: Warning
-  href: api/ZeepSDK.UI.ZeepGUI.StyleMode.html#ZeepSDK_UI_ZeepGUI_StyleMode_Warning
-  commentId: F:ZeepSDK.UI.ZeepGUI.StyleMode.Warning
-  fullName: ZeepSDK.UI.ZeepGUI.StyleMode.Warning
-  nameWithType: ZeepGUI.StyleMode.Warning
-- uid: ZeepSDK.UI.ZeepGUI.TextField(System.String,System.String,ZeepSDK.UI.TextFieldValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: TextField(string, string, TextFieldValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_TextField_System_String_System_String_ZeepSDK_UI_TextFieldValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.TextField(System.String,System.String,ZeepSDK.UI.TextFieldValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name.vb: TextField(String, String, TextFieldValueUpdatedHandler, String, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.TextField(string, string, ZeepSDK.UI.TextFieldValueUpdatedHandler, string, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  fullName.vb: ZeepSDK.UI.ZeepGUI.TextField(String, String, ZeepSDK.UI.TextFieldValueUpdatedHandler, String, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.TextField(string, string, TextFieldValueUpdatedHandler, string, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  nameWithType.vb: ZeepGUI.TextField(String, String, TextFieldValueUpdatedHandler, String, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.TextField*
-  name: TextField
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_TextField_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.TextField
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.TextField
-  nameWithType: ZeepGUI.TextField
-- uid: ZeepSDK.UI.ZeepGUI.Toggle(System.String,System.Boolean,ZeepSDK.UI.ToggleValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: Toggle(string, bool, ToggleValueUpdatedHandler, string, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Toggle_System_String_System_Boolean_ZeepSDK_UI_ToggleValueUpdatedHandler_System_String_ZeepSDK_UI_ZeepGUI_StyleMode_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.Toggle(System.String,System.Boolean,ZeepSDK.UI.ToggleValueUpdatedHandler,System.String,ZeepSDK.UI.ZeepGUI.StyleMode,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name.vb: Toggle(String, Boolean, ToggleValueUpdatedHandler, String, StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.Toggle(string, bool, ZeepSDK.UI.ToggleValueUpdatedHandler, string, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  fullName.vb: ZeepSDK.UI.ZeepGUI.Toggle(String, Boolean, ZeepSDK.UI.ToggleValueUpdatedHandler, String, ZeepSDK.UI.ZeepGUI.StyleMode, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.Toggle(string, bool, ToggleValueUpdatedHandler, string, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-  nameWithType.vb: ZeepGUI.Toggle(String, Boolean, ToggleValueUpdatedHandler, String, ZeepGUI.StyleMode, ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.Toggle*
-  name: Toggle
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Toggle_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.Toggle
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.Toggle
-  nameWithType: ZeepGUI.Toggle
-- uid: ZeepSDK.UI.ZeepGUI.ToolbarScope
-  name: ZeepGUI.ToolbarScope
-  href: api/ZeepSDK.UI.ZeepGUI.ToolbarScope.html
-  commentId: T:ZeepSDK.UI.ZeepGUI.ToolbarScope
-  fullName: ZeepSDK.UI.ZeepGUI.ToolbarScope
-  nameWithType: ZeepGUI.ToolbarScope
-- uid: ZeepSDK.UI.ZeepGUI.ToolbarScope.#ctor(ZeepSDK.UI.ZeepGUI)
-  name: ToolbarScope(ZeepGUI)
-  href: api/ZeepSDK.UI.ZeepGUI.ToolbarScope.html#ZeepSDK_UI_ZeepGUI_ToolbarScope__ctor_ZeepSDK_UI_ZeepGUI_
-  commentId: M:ZeepSDK.UI.ZeepGUI.ToolbarScope.#ctor(ZeepSDK.UI.ZeepGUI)
-  name.vb: New(ZeepGUI)
-  fullName: ZeepSDK.UI.ZeepGUI.ToolbarScope.ToolbarScope(ZeepSDK.UI.ZeepGUI)
-  fullName.vb: ZeepSDK.UI.ZeepGUI.ToolbarScope.New(ZeepSDK.UI.ZeepGUI)
-  nameWithType: ZeepGUI.ToolbarScope.ToolbarScope(ZeepGUI)
-  nameWithType.vb: ZeepGUI.ToolbarScope.New(ZeepGUI)
-- uid: ZeepSDK.UI.ZeepGUI.ToolbarScope.#ctor*
-  name: ToolbarScope
-  href: api/ZeepSDK.UI.ZeepGUI.ToolbarScope.html#ZeepSDK_UI_ZeepGUI_ToolbarScope__ctor_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.ToolbarScope.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: ZeepSDK.UI.ZeepGUI.ToolbarScope.ToolbarScope
-  fullName.vb: ZeepSDK.UI.ZeepGUI.ToolbarScope.New
-  nameWithType: ZeepGUI.ToolbarScope.ToolbarScope
-  nameWithType.vb: ZeepGUI.ToolbarScope.New
-- uid: ZeepSDK.UI.ZeepGUI.ToolbarScope.Dispose
-  name: Dispose()
-  href: api/ZeepSDK.UI.ZeepGUI.ToolbarScope.html#ZeepSDK_UI_ZeepGUI_ToolbarScope_Dispose
-  commentId: M:ZeepSDK.UI.ZeepGUI.ToolbarScope.Dispose
-  fullName: ZeepSDK.UI.ZeepGUI.ToolbarScope.Dispose()
-  nameWithType: ZeepGUI.ToolbarScope.Dispose()
-- uid: ZeepSDK.UI.ZeepGUI.ToolbarScope.Dispose*
-  name: Dispose
-  href: api/ZeepSDK.UI.ZeepGUI.ToolbarScope.html#ZeepSDK_UI_ZeepGUI_ToolbarScope_Dispose_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.ToolbarScope.Dispose
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.ToolbarScope.Dispose
-  nameWithType: ZeepGUI.ToolbarScope.Dispose
-- uid: ZeepSDK.UI.ZeepGUI.Vertical(ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: Vertical(ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Vertical_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.Vertical(ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.Vertical(ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.Vertical(ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.Vertical*
-  name: Vertical
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Vertical_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.Vertical
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.Vertical
-  nameWithType: ZeepGUI.Vertical
-- uid: ZeepSDK.UI.ZeepGUI.Window(System.String,UnityEngine.Rect,ZeepSDK.UI.WindowPositionUpdatedHandler,ZeepSDK.UI.WindowClosedHandler,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name: Window(string, Rect, WindowPositionUpdatedHandler, WindowClosedHandler, ConfigureElementHandler, ConfigureStyleHandler)
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Window_System_String_UnityEngine_Rect_ZeepSDK_UI_WindowPositionUpdatedHandler_ZeepSDK_UI_WindowClosedHandler_ZeepSDK_UI_ConfigureElementHandler_ZeepSDK_UI_ConfigureStyleHandler_
-  commentId: M:ZeepSDK.UI.ZeepGUI.Window(System.String,UnityEngine.Rect,ZeepSDK.UI.WindowPositionUpdatedHandler,ZeepSDK.UI.WindowClosedHandler,ZeepSDK.UI.ConfigureElementHandler,ZeepSDK.UI.ConfigureStyleHandler)
-  name.vb: Window(String, Rect, WindowPositionUpdatedHandler, WindowClosedHandler, ConfigureElementHandler, ConfigureStyleHandler)
-  fullName: ZeepSDK.UI.ZeepGUI.Window(string, UnityEngine.Rect, ZeepSDK.UI.WindowPositionUpdatedHandler, ZeepSDK.UI.WindowClosedHandler, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  fullName.vb: ZeepSDK.UI.ZeepGUI.Window(String, UnityEngine.Rect, ZeepSDK.UI.WindowPositionUpdatedHandler, ZeepSDK.UI.WindowClosedHandler, ZeepSDK.UI.ConfigureElementHandler, ZeepSDK.UI.ConfigureStyleHandler)
-  nameWithType: ZeepGUI.Window(string, Rect, WindowPositionUpdatedHandler, WindowClosedHandler, ConfigureElementHandler, ConfigureStyleHandler)
-  nameWithType.vb: ZeepGUI.Window(String, Rect, WindowPositionUpdatedHandler, WindowClosedHandler, ConfigureElementHandler, ConfigureStyleHandler)
-- uid: ZeepSDK.UI.ZeepGUI.Window*
-  name: Window
-  href: api/ZeepSDK.UI.ZeepGUI.html#ZeepSDK_UI_ZeepGUI_Window_
-  commentId: Overload:ZeepSDK.UI.ZeepGUI.Window
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUI.Window
-  nameWithType: ZeepGUI.Window
-- uid: ZeepSDK.UI.ZeepGUIBehaviour
-  name: ZeepGUIBehaviour
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html
-  commentId: T:ZeepSDK.UI.ZeepGUIBehaviour
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour
-  nameWithType: ZeepGUIBehaviour
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.BlocksInput
-  name: BlocksInput()
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_BlocksInput
-  commentId: M:ZeepSDK.UI.ZeepGUIBehaviour.BlocksInput
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.BlocksInput()
-  nameWithType: ZeepGUIBehaviour.BlocksInput()
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.BlocksInput*
-  name: BlocksInput
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_BlocksInput_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIBehaviour.BlocksInput
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.BlocksInput
-  nameWithType: ZeepGUIBehaviour.BlocksInput
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.BuildUi
-  name: BuildUi()
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_BuildUi
-  commentId: M:ZeepSDK.UI.ZeepGUIBehaviour.BuildUi
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.BuildUi()
-  nameWithType: ZeepGUIBehaviour.BuildUi()
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.BuildUi*
-  name: BuildUi
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_BuildUi_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIBehaviour.BuildUi
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.BuildUi
-  nameWithType: ZeepGUIBehaviour.BuildUi
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.OnAwake
-  name: OnAwake()
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_OnAwake
-  commentId: M:ZeepSDK.UI.ZeepGUIBehaviour.OnAwake
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.OnAwake()
-  nameWithType: ZeepGUIBehaviour.OnAwake()
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.OnAwake*
-  name: OnAwake
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_OnAwake_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIBehaviour.OnAwake
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.OnAwake
-  nameWithType: ZeepGUIBehaviour.OnAwake
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.OnDestroyed
-  name: OnDestroyed()
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_OnDestroyed
-  commentId: M:ZeepSDK.UI.ZeepGUIBehaviour.OnDestroyed
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.OnDestroyed()
-  nameWithType: ZeepGUIBehaviour.OnDestroyed()
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.OnDestroyed*
-  name: OnDestroyed
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_OnDestroyed_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIBehaviour.OnDestroyed
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.OnDestroyed
-  nameWithType: ZeepGUIBehaviour.OnDestroyed
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.OnStart
-  name: OnStart()
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_OnStart
-  commentId: M:ZeepSDK.UI.ZeepGUIBehaviour.OnStart
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.OnStart()
-  nameWithType: ZeepGUIBehaviour.OnStart()
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.OnStart*
-  name: OnStart
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_OnStart_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIBehaviour.OnStart
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.OnStart
-  nameWithType: ZeepGUIBehaviour.OnStart
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.RebuildUi
-  name: RebuildUi()
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_RebuildUi
-  commentId: M:ZeepSDK.UI.ZeepGUIBehaviour.RebuildUi
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.RebuildUi()
-  nameWithType: ZeepGUIBehaviour.RebuildUi()
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.RebuildUi*
-  name: RebuildUi
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_RebuildUi_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIBehaviour.RebuildUi
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.RebuildUi
-  nameWithType: ZeepGUIBehaviour.RebuildUi
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.UIDocument
-  name: UIDocument
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_UIDocument
-  commentId: P:ZeepSDK.UI.ZeepGUIBehaviour.UIDocument
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.UIDocument
-  nameWithType: ZeepGUIBehaviour.UIDocument
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.UIDocument*
-  name: UIDocument
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_UIDocument_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIBehaviour.UIDocument
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.UIDocument
-  nameWithType: ZeepGUIBehaviour.UIDocument
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.ZeepGUI
-  name: ZeepGUI
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_ZeepGUI
-  commentId: P:ZeepSDK.UI.ZeepGUIBehaviour.ZeepGUI
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.ZeepGUI
-  nameWithType: ZeepGUIBehaviour.ZeepGUI
-- uid: ZeepSDK.UI.ZeepGUIBehaviour.ZeepGUI*
-  name: ZeepGUI
-  href: api/ZeepSDK.UI.ZeepGUIBehaviour.html#ZeepSDK_UI_ZeepGUIBehaviour_ZeepGUI_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIBehaviour.ZeepGUI
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIBehaviour.ZeepGUI
-  nameWithType: ZeepGUIBehaviour.ZeepGUI
-- uid: ZeepSDK.UI.ZeepGUIWindow
-  name: ZeepGUIWindow
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html
-  commentId: T:ZeepSDK.UI.ZeepGUIWindow
-  fullName: ZeepSDK.UI.ZeepGUIWindow
-  nameWithType: ZeepGUIWindow
-- uid: ZeepSDK.UI.ZeepGUIWindow.BuildUi
-  name: BuildUi()
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_BuildUi
-  commentId: M:ZeepSDK.UI.ZeepGUIWindow.BuildUi
-  fullName: ZeepSDK.UI.ZeepGUIWindow.BuildUi()
-  nameWithType: ZeepGUIWindow.BuildUi()
-- uid: ZeepSDK.UI.ZeepGUIWindow.BuildUi*
-  name: BuildUi
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_BuildUi_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIWindow.BuildUi
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIWindow.BuildUi
-  nameWithType: ZeepGUIWindow.BuildUi
-- uid: ZeepSDK.UI.ZeepGUIWindow.BuildWindowUi
-  name: BuildWindowUi()
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_BuildWindowUi
-  commentId: M:ZeepSDK.UI.ZeepGUIWindow.BuildWindowUi
-  fullName: ZeepSDK.UI.ZeepGUIWindow.BuildWindowUi()
-  nameWithType: ZeepGUIWindow.BuildWindowUi()
-- uid: ZeepSDK.UI.ZeepGUIWindow.BuildWindowUi*
-  name: BuildWindowUi
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_BuildWindowUi_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIWindow.BuildWindowUi
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIWindow.BuildWindowUi
-  nameWithType: ZeepGUIWindow.BuildWindowUi
-- uid: ZeepSDK.UI.ZeepGUIWindow.Centered(System.Single,System.Single)
-  name: Centered(float, float)
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_Centered_System_Single_System_Single_
-  commentId: M:ZeepSDK.UI.ZeepGUIWindow.Centered(System.Single,System.Single)
-  name.vb: Centered(Single, Single)
-  fullName: ZeepSDK.UI.ZeepGUIWindow.Centered(float, float)
-  fullName.vb: ZeepSDK.UI.ZeepGUIWindow.Centered(Single, Single)
-  nameWithType: ZeepGUIWindow.Centered(float, float)
-  nameWithType.vb: ZeepGUIWindow.Centered(Single, Single)
-- uid: ZeepSDK.UI.ZeepGUIWindow.Centered(UnityEngine.Vector2)
-  name: Centered(Vector2)
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_Centered_UnityEngine_Vector2_
-  commentId: M:ZeepSDK.UI.ZeepGUIWindow.Centered(UnityEngine.Vector2)
-  fullName: ZeepSDK.UI.ZeepGUIWindow.Centered(UnityEngine.Vector2)
-  nameWithType: ZeepGUIWindow.Centered(Vector2)
-- uid: ZeepSDK.UI.ZeepGUIWindow.Centered*
-  name: Centered
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_Centered_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIWindow.Centered
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIWindow.Centered
-  nameWithType: ZeepGUIWindow.Centered
-- uid: ZeepSDK.UI.ZeepGUIWindow.Close
-  name: Close()
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_Close
-  commentId: M:ZeepSDK.UI.ZeepGUIWindow.Close
-  fullName: ZeepSDK.UI.ZeepGUIWindow.Close()
-  nameWithType: ZeepGUIWindow.Close()
-- uid: ZeepSDK.UI.ZeepGUIWindow.Close*
-  name: Close
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_Close_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIWindow.Close
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIWindow.Close
-  nameWithType: ZeepGUIWindow.Close
-- uid: ZeepSDK.UI.ZeepGUIWindow.GetInitialRect
-  name: GetInitialRect()
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_GetInitialRect
-  commentId: M:ZeepSDK.UI.ZeepGUIWindow.GetInitialRect
-  fullName: ZeepSDK.UI.ZeepGUIWindow.GetInitialRect()
-  nameWithType: ZeepGUIWindow.GetInitialRect()
-- uid: ZeepSDK.UI.ZeepGUIWindow.GetInitialRect*
-  name: GetInitialRect
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_GetInitialRect_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIWindow.GetInitialRect
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIWindow.GetInitialRect
-  nameWithType: ZeepGUIWindow.GetInitialRect
-- uid: ZeepSDK.UI.ZeepGUIWindow.GetTitle
-  name: GetTitle()
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_GetTitle
-  commentId: M:ZeepSDK.UI.ZeepGUIWindow.GetTitle
-  fullName: ZeepSDK.UI.ZeepGUIWindow.GetTitle()
-  nameWithType: ZeepGUIWindow.GetTitle()
-- uid: ZeepSDK.UI.ZeepGUIWindow.GetTitle*
-  name: GetTitle
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_GetTitle_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIWindow.GetTitle
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIWindow.GetTitle
-  nameWithType: ZeepGUIWindow.GetTitle
-- uid: ZeepSDK.UI.ZeepGUIWindow.OnClose
-  name: OnClose()
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_OnClose
-  commentId: M:ZeepSDK.UI.ZeepGUIWindow.OnClose
-  fullName: ZeepSDK.UI.ZeepGUIWindow.OnClose()
-  nameWithType: ZeepGUIWindow.OnClose()
-- uid: ZeepSDK.UI.ZeepGUIWindow.OnClose*
-  name: OnClose
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_OnClose_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIWindow.OnClose
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIWindow.OnClose
-  nameWithType: ZeepGUIWindow.OnClose
-- uid: ZeepSDK.UI.ZeepGUIWindow.Open*
-  name: Open
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_Open_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIWindow.Open
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIWindow.Open
-  nameWithType: ZeepGUIWindow.Open
-- uid: ZeepSDK.UI.ZeepGUIWindow.Open``1(System.Boolean)
-  name: Open<TWindow>(bool)
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_Open__1_System_Boolean_
-  commentId: M:ZeepSDK.UI.ZeepGUIWindow.Open``1(System.Boolean)
-  name.vb: Open(Of TWindow)(Boolean)
-  fullName: ZeepSDK.UI.ZeepGUIWindow.Open<TWindow>(bool)
-  fullName.vb: ZeepSDK.UI.ZeepGUIWindow.Open(Of TWindow)(Boolean)
-  nameWithType: ZeepGUIWindow.Open<TWindow>(bool)
-  nameWithType.vb: ZeepGUIWindow.Open(Of TWindow)(Boolean)
-- uid: ZeepSDK.UI.ZeepGUIWindow.RebuildWindowUi
-  name: RebuildWindowUi()
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_RebuildWindowUi
-  commentId: M:ZeepSDK.UI.ZeepGUIWindow.RebuildWindowUi
-  fullName: ZeepSDK.UI.ZeepGUIWindow.RebuildWindowUi()
-  nameWithType: ZeepGUIWindow.RebuildWindowUi()
-- uid: ZeepSDK.UI.ZeepGUIWindow.RebuildWindowUi*
-  name: RebuildWindowUi
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_RebuildWindowUi_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIWindow.RebuildWindowUi
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIWindow.RebuildWindowUi
-  nameWithType: ZeepGUIWindow.RebuildWindowUi
-- uid: ZeepSDK.UI.ZeepGUIWindow.Rect
-  name: Rect
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_Rect
-  commentId: P:ZeepSDK.UI.ZeepGUIWindow.Rect
-  fullName: ZeepSDK.UI.ZeepGUIWindow.Rect
-  nameWithType: ZeepGUIWindow.Rect
-- uid: ZeepSDK.UI.ZeepGUIWindow.Rect*
-  name: Rect
-  href: api/ZeepSDK.UI.ZeepGUIWindow.html#ZeepSDK_UI_ZeepGUIWindow_Rect_
-  commentId: Overload:ZeepSDK.UI.ZeepGUIWindow.Rect
-  isSpec: "True"
-  fullName: ZeepSDK.UI.ZeepGUIWindow.Rect
-  nameWithType: ZeepGUIWindow.Rect
+  fullName: ZeepSDK.UI.UIApi.RemoveZeepGUIDrawer
+  nameWithType: UIApi.RemoveZeepGUIDrawer
 - uid: ZeepSDK.Utilities
   name: ZeepSDK.Utilities
   href: api/ZeepSDK.Utilities.html

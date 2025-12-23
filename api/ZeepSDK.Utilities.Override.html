@@ -92,40 +92,58 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="ZeepSDK.Utilities.Override.ConditionTicker.html">ConditionTicker</a></dt>
-      <dd></dd>
+      <dd><p>A singleton MonoBehaviour that manages and ticks <a class="xref" href="ZeepSDK.Utilities.Override.IConditionTickable.html">IConditionTickable</a> objects
+according to their specified <a class="xref" href="ZeepSDK.Utilities.Override.ConditionTickType.html">ConditionTickType</a>.
+Ticks are performed during Unity's Update, FixedUpdate, LateUpdate, or OnGUI lifecycle methods.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html">ConditionalOverrideLayer&lt;T&gt;</a></dt>
-      <dd></dd>
+      <dd><p>Represents an override layer that is conditionally active based on a boolean condition.
+The condition is evaluated periodically according to the specified <a class="xref" href="ZeepSDK.Utilities.Override.ConditionTickType.html">ConditionTickType</a>,
+and the override is automatically added or removed from the stack when the condition changes.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="ZeepSDK.Utilities.Override.OverrideStack-1.html">OverrideStack&lt;T&gt;</a></dt>
-      <dd></dd>
+      <dd><p>Manages a stack of override layers that can modify a value.
+Override layers are applied in a stack-based manner, with the most recent active layer taking precedence.
+Supports both immediate overrides and conditionally active overrides.</p>
+</dd>
     </dl>
     <h3 id="structs">
 Structs
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="ZeepSDK.Utilities.Override.OverrideLayer-1.html">OverrideLayer&lt;T&gt;</a></dt>
-      <dd></dd>
+      <dd><p>Represents a simple override layer that is immediately active when created.
+Unlike <a class="xref" href="ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html">ConditionalOverrideLayer&lt;T&gt;</a>, this override is always active until disposed.</p>
+</dd>
     </dl>
     <h3 id="interfaces">
 Interfaces
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="ZeepSDK.Utilities.Override.IConditionTickable.html">IConditionTickable</a></dt>
-      <dd></dd>
+      <dd><p>Represents an object that can be ticked by the <a class="xref" href="ZeepSDK.Utilities.Override.ConditionTicker.html">ConditionTicker</a> at regular intervals.
+Implementations specify when they should be ticked via the <a class="xref" href="ZeepSDK.Utilities.Override.IConditionTickable.html#ZeepSDK_Utilities_Override_IConditionTickable_TickType">TickType</a> property.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="ZeepSDK.Utilities.Override.IOverrideLayer-1.html">IOverrideLayer&lt;T&gt;</a></dt>
-      <dd></dd>
+      <dd><p>Represents a layer in an override stack that can apply a value override.
+Implementations include <a class="xref" href="ZeepSDK.Utilities.Override.OverrideLayer-1.html">OverrideLayer&lt;T&gt;</a> for immediate overrides
+and <a class="xref" href="ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html">ConditionalOverrideLayer&lt;T&gt;</a> for conditionally active overrides.</p>
+</dd>
     </dl>
     <h3 id="enums">
 Enums
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="ZeepSDK.Utilities.Override.ConditionTickType.html">ConditionTickType</a></dt>
-      <dd></dd>
+      <dd><p>Specifies when a condition should be evaluated in the Unity lifecycle.
+Used by <a class="xref" href="ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html">ConditionalOverrideLayer&lt;T&gt;</a> to determine when to check its condition.</p>
+</dd>
     </dl>
 
 

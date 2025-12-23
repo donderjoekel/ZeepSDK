@@ -1134,7 +1134,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Controls.ControlsApi",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Controls.ControlsApi.yml\" sourcestartlinenumber=\"1\">Provides APIs for controlling input and event system states across different game contexts.\nAllows mods to override input maps and the Unity EventSystem for various game modes.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1148,7 +1148,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Controls.InputOverrideStack",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Controls.InputOverrideStack.yml\" sourcestartlinenumber=\"1\">Represents an override stack for managing input map states.\nAllows multiple layers of overrides to control whether input maps in a specific category are enabled or disabled.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1232,7 +1232,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Extensions.EventExtensions",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Extensions.EventExtensions.yml\" sourcestartlinenumber=\"1\">Provides extension methods for Unity's <xref href=\"UnityEngine.Event\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1274,7 +1274,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Extensions.StringBuilderExtensions",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Extensions.StringBuilderExtensions.yml\" sourcestartlinenumber=\"1\">Provides extension methods for <xref href=\"System.Text.StringBuilder\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2216,20 +2216,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsTabSwitchedDelegate.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.Settings.ModSettingsTabSwitchedDelegate.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.Settings.ModSettingsTabSwitchedDelegate",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Settings.ModSettingsWindowClosedDelegate.yml",
       "output": {
         ".html": {
@@ -2240,7 +2226,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Settings.ModSettingsWindowClosedDelegate",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsWindowClosedDelegate.yml\" sourcestartlinenumber=\"1\">Represents a method that is called when the mod settings window is closed.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2254,7 +2240,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Settings.ModSettingsWindowOpenedDelegate",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsWindowOpenedDelegate.yml\" sourcestartlinenumber=\"1\">Represents a method that is called when the mod settings window is opened.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2268,7 +2254,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Settings.SettingsApi",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.SettingsApi.yml\" sourcestartlinenumber=\"1\">Provides APIs for managing the mod settings window.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2328,269 +2314,45 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.BuildDropdownMenuHandler.yml",
+      "source_relative_path": "api/ZeepSDK.UI.IZeepGUIDrawer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.UI.BuildDropdownMenuHandler.html"
+          "relative_path": "api/ZeepSDK.UI.IZeepGUIDrawer.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "ZeepSDK.UI.BuildDropdownMenuHandler",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.BuildDropdownMenuHandler.yml\" sourcestartlinenumber=\"1\">Allows you to build a menu when a <xref href=\"ZeepSDK.UI.ZeepGUI.DropdownButton(System.String%2cZeepSDK.UI.BuildDropdownMenuHandler%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> is clicked</p>\n"
+      "Title": "ZeepSDK.UI.IZeepGUIDrawer",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.IZeepGUIDrawer.yml\" sourcestartlinenumber=\"1\">Interface for drawers that render custom GUI elements in the Zeep GUI system</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.ButtonClickHandler.yml",
+      "source_relative_path": "api/ZeepSDK.UI.IZeepToolbarDrawer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.UI.ButtonClickHandler.html"
+          "relative_path": "api/ZeepSDK.UI.IZeepToolbarDrawer.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "ZeepSDK.UI.ButtonClickHandler",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ButtonClickHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUI.Button(System.String%2cZeepSDK.UI.ButtonClickHandler%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> is clicked</p>\n"
+      "Title": "ZeepSDK.UI.IZeepToolbarDrawer",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.IZeepToolbarDrawer.yml\" sourcestartlinenumber=\"1\">Interface for drawers that add menu items to the Zeep toolbar</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.ConfigureElementHandler.yml",
+      "source_relative_path": "api/ZeepSDK.UI.IZeepTooltip.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ZeepSDK.UI.ConfigureElementHandler.html"
+          "relative_path": "api/ZeepSDK.UI.IZeepTooltip.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "ZeepSDK.UI.ConfigureElementHandler",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ConfigureElementHandler.yml\" sourcestartlinenumber=\"1\">Allows you to customize the given visual element</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.ConfigureStyleHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.ConfigureStyleHandler.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.ConfigureStyleHandler",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ConfigureStyleHandler.yml\" sourcestartlinenumber=\"1\">Allows you to apply a custom style</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.DoubleFieldValueUpdatedHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.DoubleFieldValueUpdatedHandler.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.DoubleFieldValueUpdatedHandler",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.DoubleFieldValueUpdatedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUI.DoubleField(System.String%2cSystem.Double%2cZeepSDK.UI.DoubleFieldValueUpdatedHandler%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> control gets its value updated</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.DropDownFormatHandler-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.DropDownFormatHandler-1.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.DropDownFormatHandler<T>",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.DropDownFormatHandler-1.yml\" sourcestartlinenumber=\"1\">Allows you to provide custom formatting for a dropdown item</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.DropDownValueUpdatedHandler-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.DropDownValueUpdatedHandler-1.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.DropDownValueUpdatedHandler<T>",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.DropDownValueUpdatedHandler-1.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUI.Dropdown%60%601(System.String%2cSystem.Collections.Generic.IEnumerable%7b%60%600%7d%2c%60%600%2cZeepSDK.UI.DropDownFormatHandler%7b%60%600%7d%2cZeepSDK.UI.DropDownValueUpdatedHandler%7b%60%600%7d%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> control gets its value updated</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.Elements.CustomDropdownField-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.Elements.CustomDropdownField-1.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.Elements.CustomDropdownField<TItem>",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.Elements.CustomDropdownField-1.yml\" sourcestartlinenumber=\"1\">A dropdown field with a specific generic type</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.Elements.DoubleField.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.Elements.DoubleField.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.Elements.DoubleField",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.Elements.DoubleField.yml\" sourcestartlinenumber=\"1\">A text field that only accepts double</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.Elements.FloatField.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.Elements.FloatField.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.Elements.FloatField",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.Elements.FloatField.yml\" sourcestartlinenumber=\"1\">A text field that only accepts float</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.Elements.IntField.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.Elements.IntField.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.Elements.IntField",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.Elements.IntField.yml\" sourcestartlinenumber=\"1\">A text field that only accepts int</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.Elements.NumericInputBaseField-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.Elements.NumericInputBaseField-1.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.Elements.NumericInputBaseField<TNumber>",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.Elements.NumericInputBaseField-1.yml\" sourcestartlinenumber=\"1\">Reimplementation of TextField but then for numbers</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.Elements.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.Elements.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.Elements",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.FloatFieldValueUpdatedHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.FloatFieldValueUpdatedHandler.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.FloatFieldValueUpdatedHandler",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.FloatFieldValueUpdatedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUI.FloatField(System.String%2cSystem.Single%2cZeepSDK.UI.FloatFieldValueUpdatedHandler%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> control gets its value updated</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.IDropdownMenu.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.IDropdownMenu.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.IDropdownMenu",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.IDropdownMenu.yml\" sourcestartlinenumber=\"1\">Interface for a dropdown menu</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.IntFieldValueUpdatedHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.IntFieldValueUpdatedHandler.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.IntFieldValueUpdatedHandler",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.IntFieldValueUpdatedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when an <xref href=\"ZeepSDK.UI.ZeepGUI.IntField(System.String%2cSystem.Int32%2cZeepSDK.UI.IntFieldValueUpdatedHandler%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> control gets its value updated</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.ScrollValueUpdatedHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.ScrollValueUpdatedHandler.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.ScrollValueUpdatedHandler",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ScrollValueUpdatedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUI.Scroll(ZeepSDK.UI.ScrollValueUpdatedHandler%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> is scrolled</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.TextFieldValueUpdatedHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.TextFieldValueUpdatedHandler.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.TextFieldValueUpdatedHandler",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.TextFieldValueUpdatedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUI.TextField(System.String%2cSystem.String%2cZeepSDK.UI.TextFieldValueUpdatedHandler%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> control gets its value updated</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.ToggleValueUpdatedHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.ToggleValueUpdatedHandler.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.ToggleValueUpdatedHandler",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ToggleValueUpdatedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUI.Toggle(System.String%2cSystem.Boolean%2cZeepSDK.UI.ToggleValueUpdatedHandler%2cSystem.String%2cZeepSDK.UI.ZeepGUI.StyleMode%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref> control gets its value updated</p>\n"
+      "Title": "ZeepSDK.UI.IZeepTooltip",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.IZeepTooltip.yml\" sourcestartlinenumber=\"1\">Interface for tooltip providers that supply tooltip information</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2605,132 +2367,6 @@
       "IsMRef": true,
       "Title": "ZeepSDK.UI.UIApi",
       "Summary": "<p sourcefile=\"api/ZeepSDK.UI.UIApi.yml\" sourcestartlinenumber=\"1\">An API related to the UI of the game</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.VisualElementExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.VisualElementExtensions.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.VisualElementExtensions",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.WindowClosedHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.WindowClosedHandler.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.WindowClosedHandler",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.WindowClosedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUIWindow\" data-throw-if-not-resolved=\"false\"></xref> is closed\n<xref href=\"ZeepSDK.UI.ZeepGUI.Window(System.String%2cUnityEngine.Rect%2cZeepSDK.UI.WindowPositionUpdatedHandler%2cZeepSDK.UI.WindowClosedHandler%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.WindowPositionUpdatedHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.WindowPositionUpdatedHandler.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.WindowPositionUpdatedHandler",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.WindowPositionUpdatedHandler.yml\" sourcestartlinenumber=\"1\">Allows you to react to when a <xref href=\"ZeepSDK.UI.ZeepGUIWindow\" data-throw-if-not-resolved=\"false\"></xref> has its position changed\n<xref href=\"ZeepSDK.UI.ZeepGUI.Window(System.String%2cUnityEngine.Rect%2cZeepSDK.UI.WindowPositionUpdatedHandler%2cZeepSDK.UI.WindowClosedHandler%2cZeepSDK.UI.ConfigureElementHandler%2cZeepSDK.UI.ConfigureStyleHandler)\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.ZeepGUI.IZeepScope.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.ZeepGUI.IZeepScope.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.ZeepGUI.IZeepScope",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ZeepGUI.IZeepScope.yml\" sourcestartlinenumber=\"1\">A scope that can be used to contain controls</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.ZeepGUI.StyleMode.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.ZeepGUI.StyleMode.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.ZeepGUI.StyleMode",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ZeepGUI.StyleMode.yml\" sourcestartlinenumber=\"1\">The style to apply to the control</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.ZeepGUI.ToolbarScope.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.ZeepGUI.ToolbarScope.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.ZeepGUI.ToolbarScope",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.ZeepGUI.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.ZeepGUI.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.ZeepGUI",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ZeepGUI.yml\" sourcestartlinenumber=\"1\">A class that provides all kinds of gui elements</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.ZeepGUIBehaviour.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.ZeepGUIBehaviour.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.ZeepGUIBehaviour",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ZeepGUIBehaviour.yml\" sourcestartlinenumber=\"1\">A basic behaviour that allows you to easily make UI</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ZeepSDK.UI.ZeepGUIWindow.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ZeepSDK.UI.ZeepGUIWindow.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ZeepSDK.UI.ZeepGUIWindow",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.ZeepGUIWindow.yml\" sourcestartlinenumber=\"1\">A base class that can be inherited to more easily create a window</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2800,7 +2436,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Utilities.DisposableBag",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.DisposableBag.yml\" sourcestartlinenumber=\"1\">A container that holds multiple <xref href=\"System.IDisposable\" data-throw-if-not-resolved=\"false\"></xref> objects and disposes them all when disposed.\nUseful for managing multiple disposable resources that should be cleaned up together.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2842,7 +2478,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Utilities.Override.ConditionTickType",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.Override.ConditionTickType.yml\" sourcestartlinenumber=\"1\">Specifies when a condition should be evaluated in the Unity lifecycle.\nUsed by <xref href=\"ZeepSDK.Utilities.Override.ConditionalOverrideLayer%601\" data-throw-if-not-resolved=\"false\"></xref> to determine when to check its condition.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2856,7 +2492,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Utilities.Override.ConditionTicker",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.Override.ConditionTicker.yml\" sourcestartlinenumber=\"1\">A singleton MonoBehaviour that manages and ticks <xref href=\"ZeepSDK.Utilities.Override.IConditionTickable\" data-throw-if-not-resolved=\"false\"></xref> objects\naccording to their specified <xref href=\"ZeepSDK.Utilities.Override.ConditionTickType\" data-throw-if-not-resolved=\"false\"></xref>.\nTicks are performed during Unity's Update, FixedUpdate, LateUpdate, or OnGUI lifecycle methods.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2870,7 +2506,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.yml\" sourcestartlinenumber=\"1\">Represents an override layer that is conditionally active based on a boolean condition.\nThe condition is evaluated periodically according to the specified <xref href=\"ZeepSDK.Utilities.Override.ConditionTickType\" data-throw-if-not-resolved=\"false\"></xref>,\nand the override is automatically added or removed from the stack when the condition changes.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2884,7 +2520,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Utilities.Override.IConditionTickable",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.Override.IConditionTickable.yml\" sourcestartlinenumber=\"1\">Represents an object that can be ticked by the <xref href=\"ZeepSDK.Utilities.Override.ConditionTicker\" data-throw-if-not-resolved=\"false\"></xref> at regular intervals.\nImplementations specify when they should be ticked via the <xref href=\"ZeepSDK.Utilities.Override.IConditionTickable.TickType\" data-throw-if-not-resolved=\"false\"></xref> property.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2898,7 +2534,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Utilities.Override.IOverrideLayer<T>",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.Override.IOverrideLayer-1.yml\" sourcestartlinenumber=\"1\">Represents a layer in an override stack that can apply a value override.\nImplementations include <xref href=\"ZeepSDK.Utilities.Override.OverrideLayer%601\" data-throw-if-not-resolved=\"false\"></xref> for immediate overrides\nand <xref href=\"ZeepSDK.Utilities.Override.ConditionalOverrideLayer%601\" data-throw-if-not-resolved=\"false\"></xref> for conditionally active overrides.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2912,7 +2548,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Utilities.Override.OverrideLayer<T>",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.Override.OverrideLayer-1.yml\" sourcestartlinenumber=\"1\">Represents a simple override layer that is immediately active when created.\nUnlike <xref href=\"ZeepSDK.Utilities.Override.ConditionalOverrideLayer%601\" data-throw-if-not-resolved=\"false\"></xref>, this override is always active until disposed.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2926,7 +2562,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Utilities.Override.OverrideStack<T>",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.Override.OverrideStack-1.yml\" sourcestartlinenumber=\"1\">Manages a stack of override layers that can modify a value.\nOverride layers are applied in a stack-based manner, with the most recent active layer taking precedence.\nSupports both immediate overrides and conditionally active overrides.</p>\n"
     },
     {
       "type": "ManagedReference",
