@@ -35,9 +35,10 @@ namespace ZeepSDK
         public static IModStorage Storage { get; private set; }
 
         private Harmony harmony;
-        
+
         public ConfigEntry<KeyCode> ToggleMenuBarKey { get; private set; }
         public ConfigEntry<bool> ConsentToCrashlytics { get; private set; }
+        public ConfigEntry<ZeepStyle> Theme { get; private set; }
 
         private void Awake()
         {
@@ -50,6 +51,9 @@ namespace ZeepSDK
                 Config.Bind("General", "Toggle Menu Bar Key", KeyCode.None, "The key to toggle the menu bar");
             ConsentToCrashlytics = Config.Bind("General", "Crashlytics Enabled", true,
                 "Can ZeepSDK send crashlytics in order to help us fix bugs");
+            Theme = Config.Bind("General", "Theme", ZeepStyle.Light, "The theme to use for displaying UI like these");
+
+            Config.SaveOnConfigSet = true;
 
             Storage = StorageApi.CreateModStorage(Instance);
 

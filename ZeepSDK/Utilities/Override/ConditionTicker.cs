@@ -3,6 +3,11 @@ using UnityEngine;
 
 namespace ZeepSDK.Utilities.Override;
 
+/// <summary>
+/// A singleton MonoBehaviour that manages and ticks <see cref="IConditionTickable"/> objects
+/// according to their specified <see cref="ConditionTickType"/>.
+/// Ticks are performed during Unity's Update, FixedUpdate, LateUpdate, or OnGUI lifecycle methods.
+/// </summary>
 public class ConditionTicker : MonoBehaviour
 {
     private readonly List<IConditionTickable> _update = [];
@@ -12,6 +17,10 @@ public class ConditionTicker : MonoBehaviour
     
     private static ConditionTicker _instance;
 
+    /// <summary>
+    /// Gets the singleton instance of the <see cref="ConditionTicker"/>.
+    /// Creates a new instance if one doesn't exist.
+    /// </summary>
     public static ConditionTicker Instance
     {
         get
@@ -31,6 +40,10 @@ public class ConditionTicker : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    /// <summary>
+    /// Adds a condition tickable to the appropriate tick list based on its <see cref="ConditionTickType"/>.
+    /// </summary>
+    /// <param name="tickable">The condition tickable to add.</param>
     public void Add(IConditionTickable tickable)
     {
         switch (tickable.TickType)
@@ -50,6 +63,10 @@ public class ConditionTicker : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Removes a condition tickable from the appropriate tick list based on its <see cref="ConditionTickType"/>.
+    /// </summary>
+    /// <param name="tickable">The condition tickable to remove.</param>
     public void Remove(IConditionTickable tickable)
     {
         switch (tickable.TickType)

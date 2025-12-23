@@ -1,17 +1,11 @@
-﻿// #define ENABLE_UI_API
-
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using BepInEx.Logging;
 using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine.UI;
 using ZeepSDK.Extensions;
 using ZeepSDK.UI.Patches;
 using ZeepSDK.Utilities;
-using Object = UnityEngine.Object;
 
 namespace ZeepSDK.UI;
 
@@ -21,48 +15,27 @@ namespace ZeepSDK.UI;
 [PublicAPI]
 public static class UIApi
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(UIApi));
-    private static UIConfigurator uiConfigurator;
-    private static Tooltip _tooltip;
-    private static ZeepToolbar _toolbar;
+    private static readonly ManualLogSource Logger = LoggerFactory.GetLogger(typeof(UIApi));
+    private static UIConfigurator _uiConfigurator;
+    private static ZeepGUI _zeepGUI;
+    private static ZeepToolbar _zeepToolbar;
+    private static ZeepTooltip _zeepTooltip;
 
     public const string FileTitle = "File";
 
     internal static void Initialize(GameObject gameObject)
     {
-#if ENABLE_UI_API
-        GameObject zeepToolbarContainer = new GameObject("ZeepToolbar");
-        zeepToolbarContainer.transform.SetParent(gameObject.transform);
-        _toolbar = zeepToolbarContainer.AddComponent<ZeepToolbar>();
-        AddToolbarItem(FileTitle, null);
-        AddToolbarItemChild(FileTitle, "Exit Zeepkist", Application.Quit, int.MaxValue);
-
-        GameObject zeepTooltipper = new GameObject("ZeepTooltipper");
-        zeepTooltipper.transform.SetParent(gameObject.transform);
-        zeepTooltipper.AddComponent<ZeepTooltipper>();
-#endif
-
-        uiConfigurator = gameObject.AddComponent<UIConfigurator>();
-        CreateTooltip();
+        _uiConfigurator = gameObject.AddComponent<UIConfigurator>();
+        _zeepGUI = gameObject.AddComponent<ZeepGUI>();
+        _zeepToolbar = new ZeepToolbar();
+        _zeepGUI.AddZeepGUIDrawer(_zeepToolbar);
+        _zeepTooltip = new ZeepTooltip();
+        _zeepGUI.AddZeepGUIDrawer(_zeepTooltip);
 
         OnlineChatUI_Awake.Awake += OnOnlineChatUIAwake;
         OnlineGameplayUI_Awake.Awake += OnOnlineGameplayUIAwake;
         PlayerScreensUI_Awake.Awake += OnPlayerScreensUIAwake;
         SpectatorCameraUI_Awake.Awake += OnSpectatorCameraUIAwake;
-    }
-
-    public static void AddToolbarItem(string title, Action onClick)
-    {
-#if ENABLE_UI_API
-        _toolbar.AddToolbarButtonRoot(title, onClick);
-#endif
-    }
-
-    public static void AddToolbarItemChild(string parentTitle, string title, Action onClick, int priority = 0)
-    {
-#if ENABLE_UI_API
-        _toolbar.AddToolbarButtonChild(parentTitle, title, onClick, priority);
-#endif
     }
 
     private static void OnOnlineChatUIAwake(OnlineChatUI instance)
@@ -109,7 +82,7 @@ public static class UIApi
         Transform guiHolder = instance.transform.Find("GUI Holder");
         Transform flyingCameraGUI = guiHolder.transform.Find("Flying Camera GUI");
         Transform smallLeaderboardHolder = guiHolder.transform.Find("Small Leaderboard Holder (false)");
-        Transform DSLRRect = flyingCameraGUI.transform.Find("DSLR Rect");
+        Transform dslrRect = flyingCameraGUI.transform.Find("DSLR Rect");
 
         if (smallLeaderboardHolder != null)
         {
@@ -124,9 +97,9 @@ public static class UIApi
             }
         }
 
-        if (DSLRRect != null)
+        if (dslrRect != null)
         {
-            AddToConfigurator(DSLRRect.GetComponentsInDirectDescendants<RectTransform>());
+            AddToConfigurator(dslrRect.GetComponentsInDirectDescendants<RectTransform>());
         }
     }
 
@@ -139,7 +112,7 @@ public static class UIApi
         if (rectTransform == null)
             return;
 
-        uiConfigurator.Add(rectTransform);
+        _uiConfigurator.Add(rectTransform);
     }
 
     /// <summary>
@@ -160,55 +133,78 @@ public static class UIApi
     /// <param name="rectTransform"></param>
     public static void RemoveFromConfigurator(RectTransform rectTransform)
     {
-        uiConfigurator.Remove(rectTransform);
+        _uiConfigurator.Remove(rectTransform);
     }
 
+    /// <summary>
+    /// Adds a ZeepGUI drawer that will be called during the GUI rendering phase
+    /// </summary>
+    /// <param name="drawer">The drawer to add</param>
+    /// <exception cref="ArgumentNullException">Thrown when drawer is null</exception>
+    public static void AddZeepGUIDrawer(IZeepGUIDrawer drawer)
+    {
+        if (drawer == null)
+            throw new ArgumentNullException(nameof(drawer));
+        _zeepGUI.AddZeepGUIDrawer(drawer);
+    }
+
+    /// <summary>
+    /// Removes a ZeepGUI drawer from the rendering phase
+    /// </summary>
+    /// <param name="drawer">The drawer to remove</param>
+    /// <exception cref="ArgumentNullException">Thrown when drawer is null</exception>
+    public static void RemoveZeepGUIDrawer(IZeepGUIDrawer drawer)
+    {
+        if (drawer == null)
+            throw new ArgumentNullException(nameof(drawer));
+        _zeepGUI.RemoveZeepGUIDrawer(drawer);
+    }
+
+    /// <summary>
+    /// Adds a toolbar drawer that will be rendered in the Zeep toolbar
+    /// </summary>
+    /// <param name="drawer">The toolbar drawer to add</param>
+    /// <exception cref="ArgumentNullException">Thrown when drawer is null</exception>
+    public static void AddToolbarDrawer(IZeepToolbarDrawer drawer)
+    {
+        if (drawer == null)
+            throw new ArgumentNullException(nameof(drawer));
+        _zeepToolbar.AddToolbarDrawer(drawer);
+    }
+
+    /// <summary>
+    /// Removes a toolbar drawer from the Zeep toolbar
+    /// </summary>
+    /// <param name="drawer">The toolbar drawer to remove</param>
+    /// <exception cref="ArgumentNullException">Thrown when drawer is null</exception>
+    public static void RemoveToolbarDrawer(IZeepToolbarDrawer drawer)
+    {
+        if (drawer == null)
+            throw new ArgumentNullException(nameof(drawer));
+        _zeepToolbar.RemoveToolbarDrawer(drawer);
+    }
+    
     /// <summary>
     /// Adds a tooltip to the game object with the specified text
     /// The tooltip will show up when the mouse is over the game object
     /// </summary>
     public static void AddTooltip(GameObject gameObject, string text)
     {
-        CreateTooltip();
-        gameObject.AddComponent<Tooltipper>().Initialize(text);
+        var tooltipper = gameObject.AddComponent<Tooltipper>();
+        tooltipper.Initialize(text);
+        _zeepTooltip.AddTooltip(tooltipper);
     }
 
-    private static void CreateTooltip()
+    /// <summary>
+    /// Removes a tooltip from the specified game object
+    /// </summary>
+    /// <param name="gameObject">The game object to remove the tooltip from</param>
+    public static void RemoveTooltip(GameObject gameObject)
     {
-        if (_tooltip != null)
-            return;
-
-        GameObject canvas = new("Tooltip Canvas", typeof(RectTransform));
-        Object.DontDestroyOnLoad(canvas);
-        Canvas tooltipCanvas = canvas.AddComponent<Canvas>();
-        tooltipCanvas.sortingOrder = short.MaxValue; // Internally sortingOrder is a signed short, not an int
-        tooltipCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
-
-        CanvasScaler scaler = canvas.AddComponent<CanvasScaler>();
-        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-        scaler.referenceResolution = new Vector2(1920, 1080);
-        scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
-        scaler.matchWidthOrHeight = 1;
-
-        GameObject tooltipHolder = new(
-            "Tooltip",
-            typeof(RectTransform),
-            typeof(Image),
-            typeof(CanvasGroup),
-            typeof(VerticalLayoutGroup),
-            typeof(ContentSizeFitter),
-            typeof(Tooltip));
-        _tooltip = tooltipHolder.GetComponent<Tooltip>();
-        _tooltip.transform.SetParent(canvas.transform);
-    }
-
-    internal static void ShowTooltip(string text)
-    {
-        _tooltip.Show(text);
-    }
-
-    internal static void HideTooltip()
-    {
-        _tooltip.Hide();
+        var tooltipper = gameObject.GetComponent<Tooltipper>();
+        if (tooltipper != null)
+        {
+            _zeepTooltip.RemoveTooltip(tooltipper);
+        }
     }
 }

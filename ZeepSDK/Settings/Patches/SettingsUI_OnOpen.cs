@@ -45,7 +45,7 @@ internal class SettingsUI_OnOpen
         RemoveListeners(modsButton.onRight);
         modsButton.onClick.AddListener(() =>
         {
-            ZeepGUIWindow.Open<ZeepSettingsWindow>(true);
+            SettingsApi.OpenModSettings();
             __instance.Close(true);
         });
 

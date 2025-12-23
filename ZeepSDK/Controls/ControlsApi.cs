@@ -8,6 +8,10 @@ using ZeepSDK.Utilities.Override;
 
 namespace ZeepSDK.Controls;
 
+/// <summary>
+/// Provides APIs for controlling input and event system states across different game contexts.
+/// Allows mods to override input maps and the Unity EventSystem for various game modes.
+/// </summary>
 [PublicAPI]
 public static class ControlsApi
 {
@@ -19,6 +23,10 @@ public static class ControlsApi
     private const string OnlineMapKey = "Online";
     private const string SpectateMapKey = "Spectate";
 
+    /// <summary>
+    /// Gets the override stack for the Unity EventSystem.
+    /// Allows mods to enable or disable the EventSystem, which controls UI input handling.
+    /// </summary>
     public static OverrideStack<bool> EventSystemOverride { get; } = new(
         () =>
         {
@@ -33,12 +41,47 @@ public static class ControlsApi
                 eventSystem.enabled = value;
         },
         true);
+    
+    /// <summary>
+    /// Gets the override stack for the default input map.
+    /// Allows mods to enable or disable default input handling.
+    /// </summary>
     public static InputOverrideStack DefaultInputOverride { get; } = new(DefaultMapKey);
+    
+    /// <summary>
+    /// Gets the override stack for the adventure input map.
+    /// Allows mods to enable or disable adventure mode input handling.
+    /// </summary>
     public static InputOverrideStack AdventureInputOverride { get; } = new(AdventureMapKey);
+    
+    /// <summary>
+    /// Gets the override stack for the gameplay input map.
+    /// Allows mods to enable or disable gameplay input handling.
+    /// </summary>
     public static InputOverrideStack GameplayInputOverride { get; } = new(GameplayMapKey);
+    
+    /// <summary>
+    /// Gets the override stack for the level editor input map.
+    /// Allows mods to enable or disable level editor input handling.
+    /// </summary>
     public static InputOverrideStack LevelEditorInputOverride { get; } = new(LevelEditorMapKey);
+    
+    /// <summary>
+    /// Gets the override stack for the menu input map.
+    /// Allows mods to enable or disable menu input handling.
+    /// </summary>
     public static InputOverrideStack MenuInputOverride { get; } = new(MenuMapKey);
+    
+    /// <summary>
+    /// Gets the override stack for the online input map.
+    /// Allows mods to enable or disable online multiplayer input handling.
+    /// </summary>
     public static InputOverrideStack OnlineInputOverride { get; } = new(OnlineMapKey);
+    
+    /// <summary>
+    /// Gets the override stack for the spectate input map.
+    /// Allows mods to enable or disable spectate mode input handling.
+    /// </summary>
     public static InputOverrideStack SpectateInputOverride { get; } = new(SpectateMapKey);
 
     internal static void Initialize()
@@ -102,6 +145,11 @@ public static class ControlsApi
         };
     }
 
+    /// <summary>
+    /// Disables all input maps and the EventSystem.
+    /// Returns a <see cref="DisposableBag"/> that, when disposed, restores the previous state.
+    /// </summary>
+    /// <returns>A disposable bag that restores input when disposed.</returns>
     public static DisposableBag DisableAllInput()
     {
         return new DisposableBag(
@@ -116,6 +164,11 @@ public static class ControlsApi
         );
     }
     
+    /// <summary>
+    /// Enables all input maps and the EventSystem.
+    /// Returns a <see cref="DisposableBag"/> that, when disposed, restores the previous state.
+    /// </summary>
+    /// <returns>A disposable bag that restores input when disposed.</returns>
     public static DisposableBag EnableAllInput()
     {
         return new DisposableBag(
@@ -130,6 +183,13 @@ public static class ControlsApi
         );
     }
 
+    /// <summary>
+    /// Disables all input maps and the EventSystem while the specified condition is true.
+    /// The condition is evaluated during OnGUI updates.
+    /// Returns a <see cref="DisposableBag"/> that, when disposed, removes the conditional override.
+    /// </summary>
+    /// <param name="condition">The condition that determines when input should be disabled. Input is disabled when this returns true.</param>
+    /// <returns>A disposable bag that removes the conditional override when disposed.</returns>
     public static DisposableBag DisableAllInput(Func<bool> condition)
     {
         return new DisposableBag(
@@ -144,6 +204,13 @@ public static class ControlsApi
         );
     }
     
+    /// <summary>
+    /// Enables all input maps and the EventSystem while the specified condition is true.
+    /// The condition is evaluated during OnGUI updates.
+    /// Returns a <see cref="DisposableBag"/> that, when disposed, removes the conditional override.
+    /// </summary>
+    /// <param name="condition">The condition that determines when input should be enabled. Input is enabled when this returns true.</param>
+    /// <returns>A disposable bag that removes the conditional override when disposed.</returns>
     public static DisposableBag EnableAllInput(Func<bool> condition)
     {
         return new DisposableBag(

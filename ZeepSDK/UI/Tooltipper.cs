@@ -4,70 +4,40 @@ using UnityEngine.EventSystems;
 
 namespace ZeepSDK.UI;
 
-internal class Tooltipper : MonoBehaviour, IPointerEnterHandler, IPointerMoveHandler, IPointerExitHandler
+internal class Tooltipper : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IZeepTooltip
 {
-    private const float TooltipDelay = 0.05f;
-
-    private string _text;
-    private bool _isOver;
-    private bool _shownTooltip;
-    private float _timeUntilTooltip = TooltipDelay;
+    public bool IsOver { get; private set; }
+    public string Content { get; private set; }
 
     public void Initialize(string text)
     {
-        _text = text;
+        Content = text;
+    }
+
+    private void OnDestroy()
+    {
+        UIApi.RemoveTooltip(gameObject);
     }
 
     private void OnEnable()
     {
-        _isOver = false;
-        _shownTooltip = false;
-        _timeUntilTooltip = TooltipDelay;
+        IsOver = false;
     }
 
     private void OnDisable()
     {
-        if (_shownTooltip)
-        {
-            UIApi.HideTooltip();
-        }
-        
-        _isOver = false;
-        _shownTooltip = false;
-        _timeUntilTooltip = TooltipDelay;
-    }
-
-    private void Update()
-    {
-        if (!_isOver || _shownTooltip)
-            return;
-
-        _timeUntilTooltip -= Time.unscaledDeltaTime;
-        if (_timeUntilTooltip <= 0)
-        {
-            _shownTooltip = true;
-            UIApi.ShowTooltip(_text);
-        }
+        IsOver = false;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        _isOver = true;
-        _shownTooltip = false;
-        _timeUntilTooltip = TooltipDelay;
-    }
-
-    public void OnPointerMove(PointerEventData eventData)
-    {
-        _timeUntilTooltip = TooltipDelay;
+        Debug.Log("Tooltipper.OnPointerEnter");
+        IsOver = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        _isOver = false;
-        if (_shownTooltip)
-        {
-            UIApi.HideTooltip();
-        }
+        Debug.Log("Tooltipper.OnPointerExit");
+        IsOver = false;
     }
 }
