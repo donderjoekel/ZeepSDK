@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Creating Local Chat Commands </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Creating Local Chat Commands ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="creating-local-chat-commands">Creating Local Chat Commands</h1>
+
+<p>Local chat commands are commands that can be executed by the local player (the person playing the game) in the chat. They are useful for providing quick access to mod functionality without needing to open menus or use keyboard shortcuts.</p>
+<h2 id="overview">Overview</h2>
+<p>ZeepSDK provides two ways to create local chat commands:</p>
+<ol>
+<li><strong>Callback Delegate Method</strong> - Simple and quick for basic commands</li>
+<li><strong>Interface Implementation Method</strong> - Better for more complex commands or when you need to reuse command logic</li>
+</ol>
+<p>Both methods are registered using the <code>ChatCommandApi.RegisterLocalChatCommand</code> method.</p>
+<h2 id="method-1-using-callback-delegates">Method 1: Using Callback Delegates</h2>
+<p>The simplest way to create a local chat command is using a callback delegate. This is perfect for simple commands that don't require complex logic.</p>
+<h3 id="basic-example">Basic Example</h3>
+<pre><code class="lang-csharp">using BepInEx;
+using ZeepSDK.Chat;
+using ZeepSDK.ChatCommands;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private void Awake()
+    {
+        // Register a simple command
+        ChatCommandApi.RegisterLocalChatCommand(
+            prefix: &quot;/&quot;,
+            command: &quot;hello&quot;,
+            description: &quot;Says hello to the player&quot;,
+            callback: OnHelloCommand
+        );
+    }
+
+    private void OnHelloCommand(string arguments)
+    {
+        ChatApi.AddLocalMessage(&quot;Hello! You typed: &quot; + arguments);
+    }
+}
+</code></pre>
+<p>When a player types <code>/hello</code> or <code>/hello world</code> in the chat, the <code>OnHelloCommand</code> method will be called with the remaining text as the <code>arguments</code> parameter.</p>
+<h3 id="command-with-arguments">Command with Arguments</h3>
+<p>You can parse arguments to create more sophisticated commands:</p>
+<pre><code class="lang-csharp">using BepInEx;
+using ZeepSDK.Chat;
+using ZeepSDK.ChatCommands;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private void Awake()
+    {
+        ChatCommandApi.RegisterLocalChatCommand(
+            prefix: &quot;/&quot;,
+            command: &quot;teleport&quot;,
+            description: &quot;Teleports to coordinates: /teleport x y z&quot;,
+            callback: OnTeleportCommand
+        );
+    }
+
+    private void OnTeleportCommand(string arguments)
+    {
+        if (string.IsNullOrWhiteSpace(arguments))
+        {
+            ChatApi.AddLocalMessage(&quot;Usage: /teleport x y z&quot;);
+            return;
+        }
+
+        string[] parts = arguments.Split(' ');
+        if (parts.Length != 3)
+        {
+            ChatApi.AddLocalMessage(&quot;Invalid arguments. Usage: /teleport x y z&quot;);
+            return;
+        }
+
+        if (float.TryParse(parts[0], out float x) &amp;&amp;
+            float.TryParse(parts[1], out float y) &amp;&amp;
+            float.TryParse(parts[2], out float z))
+        {
+            // Perform teleportation logic here
+            ChatApi.AddLocalMessage($&quot;Teleporting to ({x}, {y}, {z})&quot;);
+        }
+        else
+        {
+            ChatApi.AddLocalMessage(&quot;Invalid coordinates. Please use numbers.&quot;);
+        }
+    }
+}
+</code></pre>
+<h2 id="method-2-using-interface-implementation">Method 2: Using Interface Implementation</h2>
+<p>For more complex commands or when you want to organize your code better, you can implement the <code>ILocalChatCommand</code> interface. This approach is also useful when you need to create multiple commands or want to reuse command logic.</p>
+<h3 id="basic-interface-implementation">Basic Interface Implementation</h3>
+<pre><code class="lang-csharp">using ZeepSDK.Chat;
+using ZeepSDK.ChatCommands;
+
+public class HelloCommand : ILocalChatCommand
+{
+    public string Prefix =&gt; &quot;/&quot;;
+    public string Command =&gt; &quot;hello&quot;;
+    public string Description =&gt; &quot;Says hello to the player&quot;;
+
+    public void Handle(string arguments)
+    {
+        ChatApi.AddLocalMessage(&quot;Hello! You typed: &quot; + arguments);
+    }
+}
+</code></pre>
+<p>Then register it in your plugin:</p>
+<pre><code class="lang-csharp">using BepInEx;
+using ZeepSDK.ChatCommands;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private void Awake()
+    {
+        // Register using the generic method
+        ChatCommandApi.RegisterLocalChatCommand&lt;HelloCommand&gt;();
+        
+        // Or register an instance
+        ChatCommandApi.RegisterLocalChatCommand(new HelloCommand());
+    }
+}
+</code></pre>
+<h3 id="advanced-example-command-with-state">Advanced Example: Command with State</h3>
+<p>Interface implementation is particularly useful when your command needs to maintain state or access plugin data:</p>
+<pre><code class="lang-csharp">using ZeepSDK.Chat;
+using ZeepSDK.ChatCommands;
+
+public class ToggleFeatureCommand : ILocalChatCommand
+{
+    private readonly MyMod plugin;
+    private bool featureEnabled = false;
+
+    public ToggleFeatureCommand(MyMod plugin)
+    {
+        this.plugin = plugin;
+    }
+
+    public string Prefix =&gt; &quot;/&quot;;
+    public string Command =&gt; &quot;toggle&quot;;
+    public string Description =&gt; &quot;Toggles a feature on/off&quot;;
+
+    public void Handle(string arguments)
+    {
+        featureEnabled = !featureEnabled;
+        ChatApi.AddLocalMessage($&quot;Feature is now {(featureEnabled ? &quot;enabled&quot; : &quot;disabled&quot;)}&quot;);
+    }
+}
+</code></pre>
+<p>Register it with an instance:</p>
+<pre><code class="lang-csharp">private void Awake()
+{
+    ChatCommandApi.RegisterLocalChatCommand(new ToggleFeatureCommand(this));
+}
+</code></pre>
+<h2 id="command-prefixes">Command Prefixes</h2>
+<p>The prefix is what appears before the command keyword. Common prefixes include:</p>
+<ul>
+<li><code>/</code> - Most common, e.g., <code>/help</code>, <code>/clear</code></li>
+<li><code>!</code> - Sometimes used for special commands</li>
+<li>Custom prefixes - You can use any string, but <code>/</code> is the standard</li>
+</ul>
+<p><strong>Note:</strong> The prefix is combined with the command to form the full command. For example, prefix <code>/</code> + command <code>help</code> = <code>/help</code>.</p>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-provide-clear-descriptions">1. Provide Clear Descriptions</h3>
+<p>Always provide a clear, concise description. This description appears when users run the built-in <code>/help</code> command:</p>
+<pre><code class="lang-csharp">public string Description =&gt; &quot;Teleports to the specified coordinates&quot;;
+</code></pre>
+<h3 id="2-validate-arguments">2. Validate Arguments</h3>
+<p>Always validate user input to provide helpful error messages:</p>
+<pre><code class="lang-csharp">public void Handle(string arguments)
+{
+    if (string.IsNullOrWhiteSpace(arguments))
+    {
+        ChatApi.AddLocalMessage(&quot;Usage: /command &lt;required_argument&gt;&quot;);
+        return;
+    }
+    
+    // Process arguments...
+}
+</code></pre>
+<h3 id="3-use-appropriate-command-names">3. Use Appropriate Command Names</h3>
+<p>Choose command names that are:</p>
+<ul>
+<li>Short and memorable</li>
+<li>Descriptive of their function</li>
+<li>Not conflicting with existing commands</li>
+</ul>
+<h3 id="4-handle-errors-gracefully">4. Handle Errors Gracefully</h3>
+<p>Wrap your command logic in try-catch blocks if it might throw exceptions:</p>
+<pre><code class="lang-csharp">public void Handle(string arguments)
+{
+    try
+    {
+        // Your command logic
+    }
+    catch (Exception ex)
+    {
+        ChatApi.AddLocalMessage($&quot;Error: {ex.Message}&quot;);
+        Logger.LogError($&quot;Command error: {ex}&quot;);
+    }
+}
+</code></pre>
+<h3 id="5-provide-usage-information">5. Provide Usage Information</h3>
+<p>For commands that take arguments, show usage information when called incorrectly:</p>
+<pre><code class="lang-csharp">public void Handle(string arguments)
+{
+    if (string.IsNullOrWhiteSpace(arguments))
+    {
+        ChatApi.AddLocalMessage(&quot;Usage: /mycommand &lt;option1&gt; &lt;option2&gt;&quot;);
+        ChatApi.AddLocalMessage(&quot;Options: list, add, remove&quot;);
+        return;
+    }
+}
+</code></pre>
+<h2 id="complete-example">Complete Example</h2>
+<p>Here's a complete example that demonstrates a practical use case:</p>
+<pre><code class="lang-csharp">using BepInEx;
+using ZeepSDK.Chat;
+using ZeepSDK.ChatCommands;
+using UnityEngine;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private void Awake()
+    {
+        // Register multiple commands
+        ChatCommandApi.RegisterLocalChatCommand(
+            &quot;/&quot;, &quot;speed&quot;, &quot;Sets player speed multiplier: /speed &lt;multiplier&gt;&quot;,
+            OnSpeedCommand
+        );
+        
+        ChatCommandApi.RegisterLocalChatCommand(
+            &quot;/&quot;, &quot;reset&quot;, &quot;Resets player speed to normal&quot;,
+            OnResetCommand
+        );
+    }
+
+    private void OnSpeedCommand(string arguments)
+    {
+        if (string.IsNullOrWhiteSpace(arguments))
+        {
+            ChatApi.AddLocalMessage(&quot;Usage: /speed &lt;multiplier&gt;&quot;);
+            ChatApi.AddLocalMessage(&quot;Example: /speed 2.5&quot;);
+            return;
+        }
+
+        if (float.TryParse(arguments, out float multiplier) &amp;&amp; multiplier &gt; 0)
+        {
+            // Apply speed multiplier logic here
+            ChatApi.AddLocalMessage($&quot;Speed set to {multiplier}x&quot;);
+        }
+        else
+        {
+            ChatApi.AddLocalMessage(&quot;Invalid multiplier. Please use a positive number.&quot;);
+        }
+    }
+
+    private void OnResetCommand(string arguments)
+    {
+        // Reset speed logic here
+        ChatApi.AddLocalMessage(&quot;Speed reset to normal&quot;);
+    }
+}
+</code></pre>
+<h2 id="unregistering-commands">Unregistering Commands</h2>
+<p>If you need to unregister a command (e.g., when your plugin is disabled), you can use the unregister method:</p>
+<pre><code class="lang-csharp">private ILocalChatCommand myCommand;
+
+private void Awake()
+{
+    myCommand = new MyCommand();
+    ChatCommandApi.RegisterLocalChatCommand(myCommand);
+}
+
+private void OnDestroy()
+{
+    ChatCommandApi.UnregisterLocalChatCommand(myCommand);
+}
+</code></pre>
+<h2 id="summary">Summary</h2>
+<ul>
+<li><strong>Callback Delegate Method</strong>: Best for simple, one-off commands</li>
+<li><strong>Interface Implementation Method</strong>: Best for complex commands, reusable logic, or when you need to maintain state</li>
+<li>Always provide clear descriptions and validate user input</li>
+<li>Use appropriate prefixes (typically <code>/</code>)</li>
+<li>Handle errors gracefully and provide helpful usage messages</li>
+</ul>
+<p>Local chat commands are a powerful way to make your mod's functionality easily accessible to users. Choose the method that best fits your needs and follow the best practices to create a great user experience.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/docs/articles/local-chat-commands.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

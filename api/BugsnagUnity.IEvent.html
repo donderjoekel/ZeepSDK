@@ -1,114 +1,80 @@
 <!DOCTYPE html>
+<!--[if IE]><![endif]-->
 <html>
+
   <head>
     <meta charset="utf-8">
-      <title>Interface IEvent </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IEvent ">
-      
-      
-      <link rel="icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../public/docfx.min.css">
-      <link rel="stylesheet" href="../public/main.css">
-      <meta name="docfx:navrel" content="../toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
-      
-      
-      
-      
-      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/2.0.2/apiSpec/new?filename=BugsnagUnity_IEvent.md&amp;value=---%0Auid%3A%20BugsnagUnity.IEvent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
-      <meta name="loc:inThisArticle" content="In this article">
-      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
-      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
-      <meta name="loc:tocFilter" content="Filter by title">
-      <meta name="loc:nextArticle" content="Next">
-      <meta name="loc:prevArticle" content="Previous">
-      <meta name="loc:themeLight" content="Light">
-      <meta name="loc:themeDark" content="Dark">
-      <meta name="loc:themeAuto" content="Auto">
-      <meta name="loc:changeTheme" content="Change theme">
-      <meta name="loc:copy" content="Copy">
-      <meta name="loc:downloadPdf" content="Download PDF">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IEvent </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IEvent ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
 
-      <script type="module" src="./../public/docfx.min.js"></script>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
 
-      <script>
-        const theme = localStorage.getItem('theme') || 'auto'
-        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-      </script>
-
-  </head>
-
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
-    <header class="bg-body border-bottom">
-      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
-        <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../logo.svg" alt="">
-            
-          </a>
-          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-three-dots"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navpanel">
-            <div id="navbar">
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
+        </nav>
 
-    <main class="container-xxl">
-      <div class="toc-offcanvas">
-        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <nav class="toc" id="toc"></nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
           </div>
         </div>
-      </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
 
-      <div class="content">
-        <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
-            <i class="bi bi-list"></i>
-          </button>
-
-          <nav id="breadcrumb"></nav>
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
         </div>
-
-        <article data-uid="BugsnagUnity.IEvent">
-
-
-
-  <h1 id="BugsnagUnity_IEvent" data-uid="BugsnagUnity.IEvent" class="text-break">
-Interface IEvent  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L8"><i class="bi bi-code-slash"></i></a>
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="BugsnagUnity.html">BugsnagUnity</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"></div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IEvent : IMetadataEditor, IUserEditor, IFeatureFlagStore</code></pre>
-  </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BugsnagUnity.IEvent">
 
 
 
-
-
-
-
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
+  <h1 id="BugsnagUnity_IEvent" data-uid="BugsnagUnity.IEvent" class="text-break">Interface IEvent</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="BugsnagUnity.IMetadataEditor.html#BugsnagUnity_IMetadataEditor_AddMetadata_System_String_System_String_System_Object_">IMetadataEditor.AddMetadata(string, string, object)</a>
     </div>
@@ -145,380 +111,386 @@ Interface IEvent  <a class="header-action link-secondary" title="View source" hr
     <div>
       <a class="xref" href="BugsnagUnity.IFeatureFlagStore.html#BugsnagUnity_IFeatureFlagStore_ClearFeatureFlags">IFeatureFlagStore.ClearFeatureFlags()</a>
     </div>
-  </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="BugsnagUnity.html">BugsnagUnity</a></h6>
+  <h6><strong>Assembly</strong>: ZeepSDK.dll</h6>
+  <h5 id="BugsnagUnity_IEvent_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IEvent : IMetadataEditor, IUserEditor, IFeatureFlagStore</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=BugsnagUnity_IEvent_ApiKey.md&amp;value=---%0Auid%3A%20BugsnagUnity.IEvent.ApiKey%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L10">View Source</a>
+  </span>
   <a id="BugsnagUnity_IEvent_ApiKey_" data-uid="BugsnagUnity.IEvent.ApiKey*"></a>
-
-  <h3 id="BugsnagUnity_IEvent_ApiKey" data-uid="BugsnagUnity.IEvent.ApiKey">
-  ApiKey
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L10"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="BugsnagUnity_IEvent_ApiKey" data-uid="BugsnagUnity.IEvent.ApiKey">ApiKey</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">string ApiKey { get; set; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=BugsnagUnity_IEvent_App.md&amp;value=---%0Auid%3A%20BugsnagUnity.IEvent.App%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L12">View Source</a>
+  </span>
   <a id="BugsnagUnity_IEvent_App_" data-uid="BugsnagUnity.IEvent.App*"></a>
-
-  <h3 id="BugsnagUnity_IEvent_App" data-uid="BugsnagUnity.IEvent.App">
-  App
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L12"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="BugsnagUnity_IEvent_App" data-uid="BugsnagUnity.IEvent.App">App</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IAppWithState App { get; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="BugsnagUnity.Payload.IAppWithState.html">IAppWithState</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BugsnagUnity.Payload.IAppWithState.html">IAppWithState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=BugsnagUnity_IEvent_Breadcrumbs.md&amp;value=---%0Auid%3A%20BugsnagUnity.IEvent.Breadcrumbs%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L18">View Source</a>
+  </span>
   <a id="BugsnagUnity_IEvent_Breadcrumbs_" data-uid="BugsnagUnity.IEvent.Breadcrumbs*"></a>
-
-  <h3 id="BugsnagUnity_IEvent_Breadcrumbs" data-uid="BugsnagUnity.IEvent.Breadcrumbs">
-  Breadcrumbs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L18"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="BugsnagUnity_IEvent_Breadcrumbs" data-uid="BugsnagUnity.IEvent.Breadcrumbs">Breadcrumbs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ReadOnlyCollection&lt;IBreadcrumb&gt; Breadcrumbs { get; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="BugsnagUnity.Payload.IBreadcrumb.html">IBreadcrumb</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="BugsnagUnity.Payload.IBreadcrumb.html">IBreadcrumb</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=BugsnagUnity_IEvent_Context.md&amp;value=---%0Auid%3A%20BugsnagUnity.IEvent.Context%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L14">View Source</a>
+  </span>
   <a id="BugsnagUnity_IEvent_Context_" data-uid="BugsnagUnity.IEvent.Context*"></a>
-
-  <h3 id="BugsnagUnity_IEvent_Context" data-uid="BugsnagUnity.IEvent.Context">
-  Context
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L14"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="BugsnagUnity_IEvent_Context" data-uid="BugsnagUnity.IEvent.Context">Context</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">string Context { get; set; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=BugsnagUnity_IEvent_Device.md&amp;value=---%0Auid%3A%20BugsnagUnity.IEvent.Device%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L16">View Source</a>
+  </span>
   <a id="BugsnagUnity_IEvent_Device_" data-uid="BugsnagUnity.IEvent.Device*"></a>
-
-  <h3 id="BugsnagUnity_IEvent_Device" data-uid="BugsnagUnity.IEvent.Device">
-  Device
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L16"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="BugsnagUnity_IEvent_Device" data-uid="BugsnagUnity.IEvent.Device">Device</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IDeviceWithState Device { get; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="BugsnagUnity.Payload.IDeviceWithState.html">IDeviceWithState</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BugsnagUnity.Payload.IDeviceWithState.html">IDeviceWithState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=BugsnagUnity_IEvent_Errors.md&amp;value=---%0Auid%3A%20BugsnagUnity.IEvent.Errors%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L20">View Source</a>
+  </span>
   <a id="BugsnagUnity_IEvent_Errors_" data-uid="BugsnagUnity.IEvent.Errors*"></a>
-
-  <h3 id="BugsnagUnity_IEvent_Errors" data-uid="BugsnagUnity.IEvent.Errors">
-  Errors
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L20"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="BugsnagUnity_IEvent_Errors" data-uid="BugsnagUnity.IEvent.Errors">Errors</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">List&lt;IError&gt; Errors { get; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BugsnagUnity.Payload.IError.html">IError</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BugsnagUnity.Payload.IError.html">IError</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=BugsnagUnity_IEvent_FeatureFlags.md&amp;value=---%0Auid%3A%20BugsnagUnity.IEvent.FeatureFlags%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L22">View Source</a>
+  </span>
   <a id="BugsnagUnity_IEvent_FeatureFlags_" data-uid="BugsnagUnity.IEvent.FeatureFlags*"></a>
-
-  <h3 id="BugsnagUnity_IEvent_FeatureFlags" data-uid="BugsnagUnity.IEvent.FeatureFlags">
-  FeatureFlags
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L22"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="BugsnagUnity_IEvent_FeatureFlags" data-uid="BugsnagUnity.IEvent.FeatureFlags">FeatureFlags</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ReadOnlyCollection&lt;FeatureFlag&gt; FeatureFlags { get; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="BugsnagUnity.Payload.FeatureFlag.html">FeatureFlag</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="BugsnagUnity.Payload.FeatureFlag.html">FeatureFlag</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=BugsnagUnity_IEvent_GroupingHash.md&amp;value=---%0Auid%3A%20BugsnagUnity.IEvent.GroupingHash%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L24">View Source</a>
+  </span>
   <a id="BugsnagUnity_IEvent_GroupingHash_" data-uid="BugsnagUnity.IEvent.GroupingHash*"></a>
-
-  <h3 id="BugsnagUnity_IEvent_GroupingHash" data-uid="BugsnagUnity.IEvent.GroupingHash">
-  GroupingHash
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L24"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="BugsnagUnity_IEvent_GroupingHash" data-uid="BugsnagUnity.IEvent.GroupingHash">GroupingHash</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">string GroupingHash { get; set; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=BugsnagUnity_IEvent_Severity.md&amp;value=---%0Auid%3A%20BugsnagUnity.IEvent.Severity%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L26">View Source</a>
+  </span>
   <a id="BugsnagUnity_IEvent_Severity_" data-uid="BugsnagUnity.IEvent.Severity*"></a>
-
-  <h3 id="BugsnagUnity_IEvent_Severity" data-uid="BugsnagUnity.IEvent.Severity">
-  Severity
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L26"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="BugsnagUnity_IEvent_Severity" data-uid="BugsnagUnity.IEvent.Severity">Severity</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Severity Severity { get; set; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="BugsnagUnity.Severity.html">Severity</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="BugsnagUnity.Severity.html">Severity</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=BugsnagUnity_IEvent_Threads.md&amp;value=---%0Auid%3A%20BugsnagUnity.IEvent.Threads%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L28">View Source</a>
+  </span>
   <a id="BugsnagUnity_IEvent_Threads_" data-uid="BugsnagUnity.IEvent.Threads*"></a>
-
-  <h3 id="BugsnagUnity_IEvent_Threads" data-uid="BugsnagUnity.IEvent.Threads">
-  Threads
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L28"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="BugsnagUnity_IEvent_Threads" data-uid="BugsnagUnity.IEvent.Threads">Threads</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">List&lt;IThread&gt; Threads { get; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BugsnagUnity.Payload.IThread.html">IThread</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BugsnagUnity.Payload.IThread.html">IThread</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=BugsnagUnity_IEvent_Unhandled.md&amp;value=---%0Auid%3A%20BugsnagUnity.IEvent.Unhandled%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L30">View Source</a>
+  </span>
   <a id="BugsnagUnity_IEvent_Unhandled_" data-uid="BugsnagUnity.IEvent.Unhandled*"></a>
-
-  <h3 id="BugsnagUnity_IEvent_Unhandled" data-uid="BugsnagUnity.IEvent.Unhandled">
-  Unhandled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L30"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="BugsnagUnity_IEvent_Unhandled" data-uid="BugsnagUnity.IEvent.Unhandled">Unhandled</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">bool Unhandled { get; set; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
 </article>
+          </div>
 
-        <div class="contribution d-print-none">
-          <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L8" class="edit-link">Edit this page</a>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=BugsnagUnity_IEvent.md&amp;value=---%0Auid%3A%20BugsnagUnity.IEvent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/External/BugSnag/Payload/IEvent.cs/#L8" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
         </div>
-
-
       </div>
 
-      <div class="affix">
-        <nav id="affix"></nav>
-      </div>
-    </main>
-
-
-    <footer class="border-top text-secondary">
-      <div class="container-xxl">
-        <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
   </body>
 </html>

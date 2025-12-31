@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Creating Remote Chat Commands </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Creating Remote Chat Commands ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="creating-remote-chat-commands">Creating Remote Chat Commands</h1>
+
+<p>Remote chat commands are commands that can be executed by other players in a multiplayer lobby. These commands are only processed when you are the host (master client) of the lobby, making them perfect for lobby management features like vote skipping, kicking players, or changing game settings.</p>
+<h2 id="overview">Overview</h2>
+<p>Remote chat commands differ from local commands in several important ways:</p>
+<ul>
+<li><strong>Host-only</strong>: Only work when you are the host of the lobby</li>
+<li><strong>Player identification</strong>: Receive the Steam ID of the player who executed the command</li>
+<li><strong>Public messages</strong>: Use <code>ChatApi.SendMessage()</code> to send messages visible to all players</li>
+<li><strong>Different prefix</strong>: Typically use <code>!</code> instead of <code>/</code> (and should NOT start with <code>/</code>)</li>
+</ul>
+<p>ZeepSDK provides two ways to create remote chat commands:</p>
+<ol>
+<li><strong>Callback Delegate Method</strong> - Simple and quick for basic commands</li>
+<li><strong>Interface Implementation Method</strong> - Better for more complex commands or when you need to reuse command logic</li>
+</ol>
+<h2 id="important-considerations">Important Considerations</h2>
+<p>Before creating remote chat commands, keep in mind:</p>
+<ul>
+<li><strong>Host requirement</strong>: Commands only work when you are the host. The system automatically checks this, so you don't need to verify it yourself.</li>
+<li><strong>Prefix restriction</strong>: The prefix should <strong>NOT</strong> start with <code>/</code> as this does not work for remote commands. Use <code>!</code> or another prefix instead.</li>
+<li><strong>Player ID</strong>: You receive the Steam ID (<code>ulong</code>) of the player who executed the command, allowing you to identify and interact with specific players.</li>
+</ul>
+<h2 id="method-1-using-callback-delegates">Method 1: Using Callback Delegates</h2>
+<p>The simplest way to create a remote chat command is using a callback delegate. This is perfect for simple commands that don't require complex logic.</p>
+<h3 id="basic-example">Basic Example</h3>
+<pre><code class="lang-csharp">using BepInEx;
+using ZeepSDK.Chat;
+using ZeepSDK.ChatCommands;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private void Awake()
+    {
+        // Register a simple remote command
+        ChatCommandApi.RegisterRemoteChatCommand(
+            prefix: &quot;!&quot;,
+            command: &quot;hello&quot;,
+            description: &quot;Says hello to everyone&quot;,
+            callback: OnHelloCommand
+        );
+    }
+
+    private void OnHelloCommand(ulong playerId, string arguments)
+    {
+        ChatApi.SendMessage($&quot;Player {playerId} says hello!&quot;);
+    }
+}
+</code></pre>
+<p>When a player types <code>!hello</code> or <code>!hello world</code> in the chat, the <code>OnHelloCommand</code> method will be called with the player's Steam ID and the remaining text as arguments.</p>
+<h3 id="command-with-player-identification">Command with Player Identification</h3>
+<p>You can use the <code>playerId</code> parameter to identify and respond to specific players:</p>
+<pre><code class="lang-csharp">using BepInEx;
+using ZeepSDK.Chat;
+using ZeepSDK.ChatCommands;
+using ZeepkistClient;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private void Awake()
+    {
+        ChatCommandApi.RegisterRemoteChatCommand(
+            prefix: &quot;!&quot;,
+            command: &quot;whoami&quot;,
+            description: &quot;Shows your player information&quot;,
+            callback: OnWhoAmICommand
+        );
+    }
+
+    private void OnWhoAmICommand(ulong playerId, string arguments)
+    {
+        // Find the player by their Steam ID
+        ZeepkistPlayer player = ZeepkistNetwork.GetPlayerBySteamID(playerId);
+        if (player != null)
+        {
+            string username = player.GetTaggedUsername();
+            ChatApi.SendMessage($&quot;{username} (ID: {playerId}) executed the command!&quot;);
+        }
+        else
+        {
+            ChatApi.SendMessage($&quot;Player with ID {playerId} not found.&quot;);
+        }
+    }
+}
+</code></pre>
+<h3 id="vote-skip-example">Vote Skip Example</h3>
+<p>Here's a practical example for implementing a vote skip feature:</p>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using BepInEx;
+using ZeepSDK.Chat;
+using ZeepSDK.ChatCommands;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private readonly HashSet&lt;ulong&gt; votes = new HashSet&lt;ulong&gt;();
+    private int requiredVotes = 3;
+
+    private void Awake()
+    {
+        ChatCommandApi.RegisterRemoteChatCommand(
+            prefix: &quot;!&quot;,
+            command: &quot;skip&quot;,
+            description: &quot;Vote to skip the current level&quot;,
+            callback: OnSkipCommand
+        );
+    }
+
+    private void OnSkipCommand(ulong playerId, string arguments)
+    {
+        if (votes.Contains(playerId))
+        {
+            ChatApi.SendMessage(&quot;You have already voted to skip!&quot;);
+            return;
+        }
+
+        votes.Add(playerId);
+        int currentVotes = votes.Count;
+        
+        ChatApi.SendMessage($&quot;Skip vote: {currentVotes}/{requiredVotes}&quot;);
+
+        if (currentVotes &gt;= requiredVotes)
+        {
+            ChatApi.SendMessage(&quot;Skip vote passed! Skipping level...&quot;);
+            votes.Clear();
+            // Implement level skip logic here
+        }
+    }
+}
+</code></pre>
+<h2 id="method-2-using-interface-implementation">Method 2: Using Interface Implementation</h2>
+<p>For more complex commands or when you want to organize your code better, you can implement the <code>IRemoteChatCommand</code> interface. This approach is also useful when you need to create multiple commands or want to reuse command logic.</p>
+<h3 id="basic-interface-implementation">Basic Interface Implementation</h3>
+<pre><code class="lang-csharp">using ZeepSDK.Chat;
+using ZeepSDK.ChatCommands;
+
+public class HelloCommand : IRemoteChatCommand
+{
+    public string Prefix =&gt; &quot;!&quot;;
+    public string Command =&gt; &quot;hello&quot;;
+    public string Description =&gt; &quot;Says hello to everyone&quot;;
+
+    public void Handle(ulong playerId, string arguments)
+    {
+        ChatApi.SendMessage($&quot;Player {playerId} says hello!&quot;);
+    }
+}
+</code></pre>
+<p>Then register it in your plugin:</p>
+<pre><code class="lang-csharp">using BepInEx;
+using ZeepSDK.ChatCommands;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private void Awake()
+    {
+        // Register using the generic method
+        ChatCommandApi.RegisterRemoteChatCommand&lt;HelloCommand&gt;();
+        
+        // Or register an instance
+        ChatCommandApi.RegisterRemoteChatCommand(new HelloCommand());
+    }
+}
+</code></pre>
+<h3 id="advanced-example-command-with-state-and-player-management">Advanced Example: Command with State and Player Management</h3>
+<p>Interface implementation is particularly useful when your command needs to maintain state or access plugin data:</p>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using UnityEngine;
+using ZeepSDK.Chat;
+using ZeepSDK.ChatCommands;
+using ZeepkistClient;
+
+public class KickCommand : IRemoteChatCommand
+{
+    private readonly MyMod plugin;
+    private readonly HashSet&lt;ulong&gt; kickVotes = new HashSet&lt;ulong&gt;();
+
+    public KickCommand(MyMod plugin)
+    {
+        this.plugin = plugin;
+    }
+
+    public string Prefix =&gt; &quot;!&quot;;
+    public string Command =&gt; &quot;kick&quot;;
+    public string Description =&gt; &quot;Vote to kick a player: !kick &lt;player_id&gt;&quot;;
+
+    public void Handle(ulong playerId, string arguments)
+    {
+        if (string.IsNullOrWhiteSpace(arguments))
+        {
+            ChatApi.SendMessage(&quot;Usage: !kick &lt;player_id&gt;&quot;);
+            return;
+        }
+
+        if (!ulong.TryParse(arguments, out ulong targetPlayerId))
+        {
+            ChatApi.SendMessage(&quot;Invalid player ID. Please provide a valid Steam ID.&quot;);
+            return;
+        }
+
+        // Prevent self-kick
+        if (playerId == targetPlayerId)
+        {
+            ChatApi.SendMessage(&quot;You cannot vote to kick yourself!&quot;);
+            return;
+        }
+
+        // Check if target player exists
+        ZeepkistPlayer targetPlayer = ZeepkistNetwork.GetPlayerBySteamID(targetPlayerId);
+        if (targetPlayer == null)
+        {
+            ChatApi.SendMessage(&quot;Player not found in this lobby.&quot;);
+            return;
+        }
+
+        // Add vote
+        string voteKey = $&quot;{playerId}_{targetPlayerId}&quot;;
+        if (kickVotes.Contains(playerId))
+        {
+            ChatApi.SendMessage(&quot;You have already voted to kick this player.&quot;);
+            return;
+        }
+
+        kickVotes.Add(playerId);
+        ChatApi.SendMessage($&quot;Kick vote registered. Votes needed: {GetRequiredVotes()}&quot;);
+        
+        // Implement kick logic when enough votes are reached
+    }
+
+    private int GetRequiredVotes()
+    {
+        // Calculate required votes based on lobby size
+        int playerCount = ZeepkistNetwork.Players.Count;
+        return Mathf.Max(2, playerCount / 2);
+    }
+}
+</code></pre>
+<h2 id="command-prefixes">Command Prefixes</h2>
+<p>The prefix is what appears before the command keyword. For remote commands:</p>
+<ul>
+<li><code>!</code> - Most common for remote commands, e.g., <code>!help</code>, <code>!skip</code></li>
+<li>Custom prefixes - You can use any string, but <code>!</code> is the standard</li>
+<li><strong>Important</strong>: The prefix should <strong>NOT</strong> start with <code>/</code> as this does not work for remote commands</li>
+</ul>
+<p><strong>Note:</strong> The prefix is combined with the command to form the full command. For example, prefix <code>!</code> + command <code>help</code> = <code>!help</code>.</p>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-provide-clear-descriptions">1. Provide Clear Descriptions</h3>
+<p>Always provide a clear, concise description. This description appears when users run the built-in <code>!help</code> command:</p>
+<pre><code class="lang-csharp">public string Description =&gt; &quot;Vote to skip the current level&quot;;
+</code></pre>
+<h3 id="2-validate-arguments">2. Validate Arguments</h3>
+<p>Always validate user input to provide helpful error messages:</p>
+<pre><code class="lang-csharp">public void Handle(ulong playerId, string arguments)
+{
+    if (string.IsNullOrWhiteSpace(arguments))
+    {
+        ChatApi.SendMessage(&quot;Usage: !command &lt;required_argument&gt;&quot;);
+        return;
+    }
+    
+    // Process arguments...
+}
+</code></pre>
+<h3 id="3-use-appropriate-command-names">3. Use Appropriate Command Names</h3>
+<p>Choose command names that are:</p>
+<ul>
+<li>Short and memorable</li>
+<li>Descriptive of their function</li>
+<li>Not conflicting with existing commands</li>
+</ul>
+<h3 id="4-handle-errors-gracefully">4. Handle Errors Gracefully</h3>
+<p>Wrap your command logic in try-catch blocks if it might throw exceptions:</p>
+<pre><code class="lang-csharp">public void Handle(ulong playerId, string arguments)
+{
+    try
+    {
+        // Your command logic
+    }
+    catch (Exception ex)
+    {
+        ChatApi.SendMessage($&quot;Error: {ex.Message}&quot;);
+        Logger.LogError($&quot;Command error: {ex}&quot;);
+    }
+}
+</code></pre>
+<h3 id="5-provide-usage-information">5. Provide Usage Information</h3>
+<p>For commands that take arguments, show usage information when called incorrectly:</p>
+<pre><code class="lang-csharp">public void Handle(ulong playerId, string arguments)
+{
+    if (string.IsNullOrWhiteSpace(arguments))
+    {
+        ChatApi.SendMessage(&quot;Usage: !mycommand &lt;option1&gt; &lt;option2&gt;&quot;);
+        ChatApi.SendMessage(&quot;Options: list, add, remove&quot;);
+        return;
+    }
+}
+</code></pre>
+<h3 id="6-verify-player-existence">6. Verify Player Existence</h3>
+<p>When working with player IDs, always verify the player exists:</p>
+<pre><code class="lang-csharp">ZeepkistPlayer player = ZeepkistNetwork.GetPlayerBySteamID(playerId);
+if (player == null)
+{
+    ChatApi.SendMessage(&quot;Player not found in this lobby.&quot;);
+    return;
+}
+</code></pre>
+<h3 id="7-prevent-abuse">7. Prevent Abuse</h3>
+<p>Implement safeguards to prevent command abuse:</p>
+<pre><code class="lang-csharp">private readonly Dictionary&lt;ulong, DateTime&gt; lastCommandTime = new Dictionary&lt;ulong, DateTime&gt;();
+private readonly TimeSpan cooldown = TimeSpan.FromSeconds(5);
+
+public void Handle(ulong playerId, string arguments)
+{
+    if (lastCommandTime.TryGetValue(playerId, out DateTime lastTime))
+    {
+        if (DateTime.Now - lastTime &lt; cooldown)
+        {
+            ChatApi.SendMessage(&quot;Please wait before using this command again.&quot;);
+            return;
+        }
+    }
+    
+    lastCommandTime[playerId] = DateTime.Now;
+    // Process command...
+}
+</code></pre>
+<h2 id="complete-example">Complete Example</h2>
+<p>Here's a complete example that demonstrates a practical use case - a lobby management system:</p>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using BepInEx;
+using UnityEngine;
+using ZeepSDK.Chat;
+using ZeepSDK.ChatCommands;
+using ZeepkistClient;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private readonly HashSet&lt;ulong&gt; skipVotes = new HashSet&lt;ulong&gt;();
+
+    private void Awake()
+    {
+        // Register multiple remote commands
+        ChatCommandApi.RegisterRemoteChatCommand(
+            &quot;!&quot;, &quot;skip&quot;, &quot;Vote to skip the current level&quot;,
+            OnSkipCommand
+        );
+        
+        ChatCommandApi.RegisterRemoteChatCommand(
+            &quot;!&quot;, &quot;players&quot;, &quot;Lists all players in the lobby&quot;,
+            OnPlayersCommand
+        );
+    }
+
+    private void OnSkipCommand(ulong playerId, string arguments)
+    {
+        if (skipVotes.Contains(playerId))
+        {
+            ChatApi.SendMessage(&quot;You have already voted to skip!&quot;);
+            return;
+        }
+
+        skipVotes.Add(playerId);
+        int playerCount = ZeepkistNetwork.Players.Count;
+        int requiredVotes = Mathf.Max(2, playerCount / 2);
+        
+        ChatApi.SendMessage($&quot;Skip vote: {skipVotes.Count}/{requiredVotes}&quot;);
+
+        if (skipVotes.Count &gt;= requiredVotes)
+        {
+            ChatApi.SendMessage(&quot;Skip vote passed! Skipping level...&quot;);
+            skipVotes.Clear();
+            // Implement level skip logic here
+        }
+    }
+
+    private void OnPlayersCommand(ulong playerId, string arguments)
+    {
+        ChatApi.SendMessage($&quot;Players in lobby ({ZeepkistNetwork.Players.Count}):&quot;);
+        foreach (ZeepkistPlayer player in ZeepkistNetwork.Players)
+        {
+            string username = player.GetTaggedUsername();
+            string hostIndicator = ZeepkistNetwork.IsMasterClient ? &quot; [HOST]&quot; : &quot;&quot;;
+            ChatApi.SendMessage($&quot;- {username} (ID: {player.SteamID}){hostIndicator}&quot;);
+        }
+    }
+}
+</code></pre>
+<h2 id="unregistering-commands">Unregistering Commands</h2>
+<p>If you need to unregister a command (e.g., when your plugin is disabled), you can use the unregister method:</p>
+<pre><code class="lang-csharp">private IRemoteChatCommand myCommand;
+
+private void Awake()
+{
+    myCommand = new MyCommand();
+    ChatCommandApi.RegisterRemoteChatCommand(myCommand);
+}
+
+private void OnDestroy()
+{
+    ChatCommandApi.UnregisterRemoteChatCommand(myCommand);
+}
+</code></pre>
+<h2 id="differences-from-local-commands">Differences from Local Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Local Commands</th>
+<th>Remote Commands</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prefix</strong></td>
+<td><code>/</code> (can use others)</td>
+<td><code>!</code> (should NOT use <code>/</code>)</td>
+</tr>
+<tr>
+<td><strong>Who can use</strong></td>
+<td>Only the local player</td>
+<td>Other players in lobby</td>
+</tr>
+<tr>
+<td><strong>Host requirement</strong></td>
+<td>No</td>
+<td>Yes (only host processes)</td>
+</tr>
+<tr>
+<td><strong>Player ID</strong></td>
+<td>Not provided</td>
+<td>Provided as parameter</td>
+</tr>
+<tr>
+<td><strong>Message method</strong></td>
+<td><code>ChatApi.AddLocalMessage()</code></td>
+<td><code>ChatApi.SendMessage()</code></td>
+</tr>
+<tr>
+<td><strong>Use case</strong></td>
+<td>Personal utilities</td>
+<td>Lobby management, multiplayer features</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary">Summary</h2>
+<ul>
+<li><strong>Callback Delegate Method</strong>: Best for simple, one-off commands</li>
+<li><strong>Interface Implementation Method</strong>: Best for complex commands, reusable logic, or when you need to maintain state</li>
+<li><strong>Host-only</strong>: Commands only work when you are the host</li>
+<li><strong>Player identification</strong>: Always receive the Steam ID of the command sender</li>
+<li><strong>Prefix restriction</strong>: Do not use <code>/</code> as prefix - use <code>!</code> or another prefix</li>
+<li>Always provide clear descriptions and validate user input</li>
+<li>Handle errors gracefully and provide helpful usage messages</li>
+<li>Implement safeguards to prevent command abuse</li>
+</ul>
+<p>Remote chat commands are a powerful way to add multiplayer functionality to your mods, enabling features like voting systems, lobby management, and player interactions. Choose the method that best fits your needs and follow the best practices to create a great user experience.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/docs/articles/remote-chat-commands.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

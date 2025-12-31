@@ -1,102 +1,174 @@
 <!DOCTYPE html>
+<!--[if IE]><![endif]-->
 <html>
+
   <head>
     <meta charset="utf-8">
-      <title>This is the HOMEPAGE. </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="This is the HOMEPAGE. ">
-      
-      
-      <link rel="icon" href="favicon.ico">
-      <link rel="stylesheet" href="public/docfx.min.css">
-      <link rel="stylesheet" href="public/main.css">
-      <meta name="docfx:navrel" content="toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
-      
-      
-      
-      
-      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/docs/index.md/#L1">
-      <meta name="loc:inThisArticle" content="In this article">
-      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
-      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
-      <meta name="loc:tocFilter" content="Filter by title">
-      <meta name="loc:nextArticle" content="Next">
-      <meta name="loc:prevArticle" content="Previous">
-      <meta name="loc:themeLight" content="Light">
-      <meta name="loc:themeDark" content="Dark">
-      <meta name="loc:themeAuto" content="Auto">
-      <meta name="loc:changeTheme" content="Change theme">
-      <meta name="loc:copy" content="Copy">
-      <meta name="loc:downloadPdf" content="Download PDF">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Welcome to ZeepSDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Welcome to ZeepSDK ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
 
-      <script type="module" src="./public/docfx.min.js"></script>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
 
-      <script>
-        const theme = localStorage.getItem('theme') || 'auto'
-        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-      </script>
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
 
-  </head>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="welcome-to-zeepsdk">Welcome to ZeepSDK</h1>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
-    <header class="bg-body border-bottom">
-      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
-        <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="index.html">
-            <img id="logo" class="svg" src="logo.svg" alt="">
-            
-          </a>
-          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-three-dots"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navpanel">
-            <div id="navbar">
+<p><strong>ZeepSDK</strong> is a community-built Software Development Kit designed to simplify plugin development for <strong>Zeepkist</strong>. By providing a comprehensive set of APIs that abstract away complex implementation details, ZeepSDK enables developers to focus on creating innovative features and enhancements for the game.</p>
+<h2 id="what-is-zeepsdk">What is ZeepSDK?</h2>
+<p>ZeepSDK is a <a href="https://github.com/BepInEx/BepInEx">BepInEx</a>-based framework that exposes a collection of well-designed APIs covering various aspects of Zeepkist gameplay and functionality. Instead of dealing with low-level game internals, developers can use these high-level APIs to quickly implement features like custom chat commands, leaderboard pages, level editor enhancements, racing events, and much more.</p>
+<p>By exposing well-designed APIs, ZeepSDK acts as a translation layer between mods and Zeepkist, making it easier to maintain compatibility and fix issues without requiring updates to individual mods.</p>
+<h2 id="available-apis">Available APIs</h2>
+<p>ZeepSDK provides APIs organized into several categories:</p>
+<h3 id="core-apis">Core APIs</h3>
+<ul>
+<li><strong>Chat API</strong> - Send messages to chat and interact with the chat system</li>
+<li><strong>Chat Commands API</strong> - Create local and remote chat commands with built-in help system</li>
+<li><strong>Messaging API</strong> - Display messages to users using the game's messenger system (info, success, warning, error)</li>
+<li><strong>Storage API</strong> - Persistent data storage for your mods</li>
+<li><strong>Settings API</strong> - Manage mod settings windows and configuration</li>
+<li><strong>UI API</strong> - Create custom user interfaces, toolbars, and GUI elements</li>
+<li><strong>Controls API</strong> - Override and manage input handling (keyboard and mouse)</li>
+</ul>
+<h3 id="gameplay-apis">Gameplay APIs</h3>
+<ul>
+<li><strong>Racing API</strong> - Hook into racing events (finish line, crashes, camera changes, etc.)</li>
+<li><strong>Level API</strong> - Interact with levels, including CSV level parsing and current level information</li>
+<li><strong>Multiplayer API</strong> - Interact with multiplayer lobbies, playlists, and player events</li>
+<li><strong>Leaderboard API</strong> - Create custom leaderboard pages that integrate seamlessly</li>
+<li><strong>Playlist API</strong> - Manage and edit playlists saved to disk</li>
+</ul>
+<h3 id="editor-apis">Editor APIs</h3>
+<ul>
+<li><strong>Level Editor API</strong> - Extend the level editor with custom blocks, folders, input blocking, and events</li>
+<li><strong>Photo Mode API</strong> - Integrate with the game's photo mode system</li>
+</ul>
+<h3 id="advanced-apis">Advanced APIs</h3>
+<ul>
+<li><strong>Scripting API</strong> - Advanced Lua scripting capabilities (ZUA) for complex mods</li>
+<li><strong>Communication API</strong> - Enable inter-mod communication through senders and receivers</li>
+<li><strong>Workshop API</strong> - Subscribe to and unsubscribe from Steam Workshop items</li>
+<li><strong>Cosmetics API</strong> - Access and manage player cosmetics (soapboxes, hats, etc.)</li>
+<li><strong>Crashlytics API</strong> - Error reporting and crash tracking (optional, user consent required)</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="installation">Installation</h3>
+<p>Before using ZeepSDK, you need to have BepInEx installed. The easiest way to install BepInEx for Zeepkist is using one of these community tools:</p>
+<ul>
+<li><strong>Windows</strong>: <a href="https://github.com/donderjoekel/ModkistRevamped">Modkist Revamped</a> - A modloader for Zeepkist using mod.io with a user-friendly interface</li>
+<li><strong>Linux</strong>: <a href="https://codeberg.org/Vulpesx/zeeper">zeeper</a> - A command-line tool for managing Zeepkist mods and installing BepInEx</li>
+</ul>
+<p>You can install ZeepSDK using the same tools, or manually by placing <code>ZeepSDK.dll</code> in your <code>BepInEx/plugins</code> directory.</p>
+<h3 id="development">Development</h3>
+<p>When creating plugins, we recommend using the <code>ZeepSDK</code> NuGet package instead of directly referencing <code>ZeepSDK.dll</code>. This ensures you get the latest version and proper dependency management.</p>
+<h3 id="documentation">Documentation</h3>
+<ul>
+<li>Check out the <a href="articles/">Articles</a> section for tutorials and guides</li>
+<li>Browse the <a href="api/">API Documentation</a> for detailed reference on all available APIs</li>
+<li>Explore the codebase to see examples of how other developers use ZeepSDK</li>
+</ul>
+<h2 id="built-in-features">Built-in Features</h2>
+<p>ZeepSDK includes several built-in chat commands:</p>
+<p><strong>Local Commands:</strong></p>
+<ul>
+<li><code>/help</code> - Shows available local commands with descriptions</li>
+<li><code>/clear</code> - Clears the chat</li>
+</ul>
+<p><strong>Remote Commands:</strong></p>
+<ul>
+<li><code>!help</code> - Shows available remote commands with descriptions (host only)</li>
+</ul>
+<p>Remote commands can be used by other players in the same lobby, but only if you are currently the host. This is useful for features like vote skipping or lobby management.</p>
+<h2 id="contributing">Contributing</h2>
+<p>ZeepSDK is a community project. Contributions, bug reports, and feature requests are welcome! See the <a href="../CONTRIBUTING.md">Contributing Guide</a> for more information.</p>
+<hr>
+<p><em>Happy modding! 🚀</em></p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/docs/index.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
             </div>
           </div>
         </div>
-      </nav>
-    </header>
-
-    <main class="container-xxl">
-
-      <div class="content">
-        <div class="actionbar">
-
-          <nav id="breadcrumb"></nav>
-        </div>
-
-        <article data-uid="">
-<h1 id="this-is-the-homepage">This is the <strong>HOMEPAGE</strong>.</h1>
-
-<p>Refer to <a href="http://daringfireball.net/projects/markdown/">Markdown</a> for how to write markdown files.</p>
-<h2 id="quick-start-notes">Quick Start Notes:</h2>
-<ol>
-<li>Add images to the <em>images</em> folder if the file is referencing an image.</li>
-</ol>
-
-</article>
-
-        <div class="contribution d-print-none">
-          <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/docs/index.md/#L1" class="edit-link">Edit this page</a>
-        </div>
-
-        <div class="next-article d-print-none border-top" id="nextArticle"></div>
-
       </div>
 
-      <div class="affix">
-        <nav id="affix"></nav>
-      </div>
-    </main>
-
-
-    <footer class="border-top text-secondary">
-      <div class="container-xxl">
-        <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
   </body>
 </html>

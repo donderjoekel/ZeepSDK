@@ -1,137 +1,93 @@
 <!DOCTYPE html>
+<!--[if IE]><![endif]-->
 <html>
+
   <head>
     <meta charset="utf-8">
-      <title>Class BaseCoreLeaderboardTab </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class BaseCoreLeaderboardTab ">
-      
-      <meta name="description" content="A base implementation that can be used for creating a custom tab for the leaderboard This is a replacement for BaseLeaderboardTab to keep backward compatibility">
-      <link rel="icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../public/docfx.min.css">
-      <link rel="stylesheet" href="../public/main.css">
-      <meta name="docfx:navrel" content="../toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
-      
-      
-      
-      
-      <meta name="docfx:docurl" content="https://github.com/donderjoekel/ZeepSDK/new/2.0.2/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
-      <meta name="loc:inThisArticle" content="In this article">
-      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
-      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
-      <meta name="loc:tocFilter" content="Filter by title">
-      <meta name="loc:nextArticle" content="Next">
-      <meta name="loc:prevArticle" content="Previous">
-      <meta name="loc:themeLight" content="Light">
-      <meta name="loc:themeDark" content="Dark">
-      <meta name="loc:themeAuto" content="Auto">
-      <meta name="loc:changeTheme" content="Change theme">
-      <meta name="loc:copy" content="Copy">
-      <meta name="loc:downloadPdf" content="Download PDF">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BaseCoreLeaderboardTab </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BaseCoreLeaderboardTab ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
 
-      <script type="module" src="./../public/docfx.min.js"></script>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
 
-      <script>
-        const theme = localStorage.getItem('theme') || 'auto'
-        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-      </script>
-
-  </head>
-
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
-    <header class="bg-body border-bottom">
-      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
-        <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../logo.svg" alt="">
-            
-          </a>
-          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-three-dots"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navpanel">
-            <div id="navbar">
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
+        </nav>
 
-    <main class="container-xxl">
-      <div class="toc-offcanvas">
-        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <nav class="toc" id="toc"></nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
           </div>
         </div>
-      </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
 
-      <div class="content">
-        <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
-            <i class="bi bi-list"></i>
-          </button>
-
-          <nav id="breadcrumb"></nav>
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
         </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab">
 
-        <article data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab">
 
 
-
-  <h1 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab" class="text-break">
-Class BaseCoreLeaderboardTab  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L13"><i class="bi bi-code-slash"></i></a>
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ZeepSDK.html">ZeepSDK</a>.<a class="xref" href="ZeepSDK.Leaderboard.html">Leaderboard</a>.<a class="xref" href="ZeepSDK.Leaderboard.Pages.html">Pages</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>ZeepSDK.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>A base implementation that can be used for creating a custom tab for the leaderboard
+  <h1 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab" class="text-break">Class BaseCoreLeaderboardTab</h1>
+  <div class="markdown level0 summary"><p>A base implementation that can be used for creating a custom tab for the leaderboard
 <remarks>This is a replacement for BaseLeaderboardTab to keep backward compatibility</remarks></p>
 </div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[PublicAPI]
-public abstract class BaseCoreLeaderboardTab : ILeaderboardTab</code></pre>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">BaseCoreLeaderboardTab</span></div>
+      <div class="level2"><a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseMultiplayerLeaderboardTab.html">BaseMultiplayerLeaderboardTab</a></div>
+      <div class="level2"><a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseSingleplayerLeaderboardTab.html">BaseSingleplayerLeaderboardTab</a></div>
   </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">BaseCoreLeaderboardTab</span></div>
-    </dd>
-  </dl>
-
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="ZeepSDK.Leaderboard.ILeaderboardTab.html">ILeaderboardTab</a></div>
-    </dd>
-  </dl>
-
-  <dl class="typelist derived">
-    <dt>Derived</dt>
-    <dd>
-      <div><a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseMultiplayerLeaderboardTab.html">BaseMultiplayerLeaderboardTab</a></div>
-      <div><a class="xref" href="ZeepSDK.Leaderboard.Pages.BaseSingleplayerLeaderboardTab.html">BaseSingleplayerLeaderboardTab</a></div>
-    </dd>
-  </dl>
-
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="ZeepSDK.Leaderboard.ILeaderboardTab.html">ILeaderboardTab</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -153,550 +109,468 @@ public abstract class BaseCoreLeaderboardTab : ILeaderboardTab</code></pre>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
-  </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ZeepSDK.html">ZeepSDK</a>.<a class="xref" href="ZeepSDK.Leaderboard.html">Leaderboard</a>.<a class="xref" href="ZeepSDK.Leaderboard.Pages.html">Pages</a></h6>
+  <h6><strong>Assembly</strong>: ZeepSDK.dll</h6>
+  <h5 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[PublicAPI]
+public abstract class BaseCoreLeaderboardTab : ILeaderboardTab</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab__ctor.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.%23ctor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L44">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab__ctor_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.#ctor*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab__ctor" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.#ctor">
-  BaseCoreLeaderboardTab()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L44"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab__ctor" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.#ctor">BaseCoreLeaderboardTab()</h4>
   <div class="markdown level1 summary"><p>Constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected BaseCoreLeaderboardTab()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_CurrentPage.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.CurrentPage%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L29">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_CurrentPage_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.CurrentPage*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_CurrentPage" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.CurrentPage">
-  CurrentPage
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L29"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_CurrentPage" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.CurrentPage">CurrentPage</h4>
   <div class="markdown level1 summary"><p>The index of the current page</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected int CurrentPage { get; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Instance.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Instance%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L24">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Instance_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Instance*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Instance" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Instance">
-  Instance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L24"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Instance" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Instance">Instance</h4>
   <div class="markdown level1 summary"><p>The instance of the leaderboard UI</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected OnlineTabLeaderboardUI Instance { get; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">OnlineTabLeaderboardUI</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">OnlineTabLeaderboardUI</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_IsActive.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.IsActive%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L39">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_IsActive_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.IsActive*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_IsActive" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.IsActive">
-  IsActive
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L39"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_IsActive" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.IsActive">IsActive</h4>
   <div class="markdown level1 summary"><p>A boolean representing if the page is currently active</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected bool IsActive { get; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Logger.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Logger%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L19">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Logger_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Logger*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Logger" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Logger">
-  Logger
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L19"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Logger" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Logger">Logger</h4>
   <div class="markdown level1 summary"><p>A logger that can be used to log messages</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected ManualLogSource Logger { get; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">ManualLogSource</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ManualLogSource</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_MaxPages.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.MaxPages%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L34">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_MaxPages_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.MaxPages*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_MaxPages" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.MaxPages">
-  MaxPages
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L34"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_MaxPages" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.MaxPages">MaxPages</h4>
   <div class="markdown level1 summary"><p>The maximum amount of pages</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected int MaxPages { get; set; }</code></pre>
   </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Disable.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Disable%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L92">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Disable_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Disable*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Disable" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Disable">
-  Disable()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L92"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Disable" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Disable">Disable()</h4>
   <div class="markdown level1 summary"><p>Called when the tab is disabled</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Disable()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Draw.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Draw%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L141">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Draw_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Draw*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Draw" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Draw">
-  Draw()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L141"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Draw" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Draw">Draw()</h4>
   <div class="markdown level1 summary"><p>Called whenever the tab needs to (re)draw</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Draw()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Enable_OnlineTabLeaderboardUI_.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Enable(OnlineTabLeaderboardUI)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L50">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Enable_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Enable*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Enable_OnlineTabLeaderboardUI_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Enable(OnlineTabLeaderboardUI)">
-  Enable(OnlineTabLeaderboardUI)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L50"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_Enable_OnlineTabLeaderboardUI_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.Enable(OnlineTabLeaderboardUI)">Enable(OnlineTabLeaderboardUI)</h4>
   <div class="markdown level1 summary"><p>Called when the tab is enabled</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Enable(OnlineTabLeaderboardUI sender)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>sender</code> <span class="xref">OnlineTabLeaderboardUI</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">OnlineTabLeaderboardUI</span></td>
+        <td><span class="parametername">sender</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GetLeaderboardTitle.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.GetLeaderboardTitle%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L196">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GetLeaderboardTitle_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.GetLeaderboardTitle*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GetLeaderboardTitle" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.GetLeaderboardTitle">
-  GetLeaderboardTitle()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L196"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GetLeaderboardTitle" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.GetLeaderboardTitle">GetLeaderboardTitle()</h4>
   <div class="markdown level1 summary"><p>This should return the title of the leaderboard that gets displayed in the UI</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected abstract string GetLeaderboardTitle()</code></pre>
   </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GoToNextPage.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.GoToNextPage%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L125">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GoToNextPage_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.GoToNextPage*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GoToNextPage" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.GoToNextPage">
-  GoToNextPage()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L125"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GoToNextPage" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.GoToNextPage">GoToNextPage()</h4>
   <div class="markdown level1 summary"><p>Called when the user wants to go to the next page</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void GoToNextPage()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GoToPreviousPage.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.GoToPreviousPage%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L109">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GoToPreviousPage_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.GoToPreviousPage*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GoToPreviousPage" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.GoToPreviousPage">
-  GoToPreviousPage()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L109"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_GoToPreviousPage" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.GoToPreviousPage">GoToPreviousPage()</h4>
   <div class="markdown level1 summary"><p>Called when the user wants to go to the previous page</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void GoToPreviousPage()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnDisable.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnDisable%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L206">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnDisable_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnDisable*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnDisable" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnDisable">
-  OnDisable()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L206"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnDisable" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnDisable">OnDisable()</h4>
   <div class="markdown level1 summary"><p>Called when te tab gets disabled</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected abstract void OnDisable()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnDraw.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnDraw%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L211">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnDraw_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnDraw*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnDraw" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnDraw">
-  OnDraw()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L211"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnDraw" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnDraw">OnDraw()</h4>
   <div class="markdown level1 summary"><p>Called when the tab needs to (re)draw</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected abstract void OnDraw()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnEnable.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnEnable%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L201">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnEnable_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnEnable*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnEnable" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnEnable">
-  OnEnable()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L201"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnEnable" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnEnable">OnEnable()</h4>
   <div class="markdown level1 summary"><p>Called when the tab gets enabled</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected abstract void OnEnable()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnPageChanged_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnPageChanged(System.Int32%2CSystem.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L218">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnPageChanged_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnPageChanged*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnPageChanged_System_Int32_System_Int32_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnPageChanged(System.Int32,System.Int32)">
-  OnPageChanged(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L218"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_OnPageChanged_System_Int32_System_Int32_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.OnPageChanged(System.Int32,System.Int32)">OnPageChanged(int, int)</h4>
   <div class="markdown level1 summary"><p>Called when the page has been changed</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void OnPageChanged(int previous, int current)</code></pre>
   </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>previous</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The previous page number</p>
-</dd>
-    <dt><code>current</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The current page number</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">previous</span></td>
+        <td><p>The previous page number</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">current</span></td>
+        <td><p>The current page number</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_UpdatePageNumber.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.UpdatePageNumber%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L161">View Source</a>
+  </span>
   <a id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_UpdatePageNumber_" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.UpdatePageNumber*"></a>
-
-  <h3 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_UpdatePageNumber" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.UpdatePageNumber">
-  UpdatePageNumber()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L161"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
+  <h4 id="ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab_UpdatePageNumber" data-uid="ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.UpdatePageNumber">UpdatePageNumber()</h4>
   <div class="markdown level1 summary"><p>This can be called to update the page number that is visible in the UI</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-
+  <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void UpdatePageNumber()</code></pre>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="ZeepSDK.Leaderboard.ILeaderboardTab.html">ILeaderboardTab</a>
+  </div>
 
 </article>
+          </div>
 
-        <div class="contribution d-print-none">
-          <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.0.2/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L13" class="edit-link">Edit this page</a>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/new/main/apiSpec/new?filename=ZeepSDK_Leaderboard_Pages_BaseCoreLeaderboardTab.md&amp;value=---%0Auid%3A%20ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/ZeepSDK/Leaderboard/Pages/BaseCoreLeaderboardTab.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
         </div>
-
-
       </div>
 
-      <div class="affix">
-        <nav id="affix"></nav>
-      </div>
-    </main>
-
-
-    <footer class="border-top text-secondary">
-      <div class="container-xxl">
-        <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
   </body>
 </html>
