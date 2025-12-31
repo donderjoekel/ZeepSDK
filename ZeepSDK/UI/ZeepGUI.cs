@@ -17,6 +17,7 @@ internal class ZeepGUI : MonoBehaviour
         ImuiUnityGUIBackend_Awake.Awake += backend =>
         {
             _gui = new ImGui(backend, backend);
+            OnThemeChanged(null, null);
         };
         
         Plugin.Instance.Theme.SettingChanged += OnThemeChanged;
