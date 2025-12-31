@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Using IZeepGUIDrawer </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Using IZeepGUIDrawer ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="using-izeepguidrawer">Using IZeepGUIDrawer</h1>
+
+<p><code>IZeepGUIDrawer</code> is an interface that allows you to create custom GUI elements that are rendered using ZeepSDK's immediate mode GUI system. This is perfect for creating windows, overlays, debug panels, and other custom UI elements that integrate seamlessly with the game's UI system.</p>
+<h2 id="overview">Overview</h2>
+<p><code>IZeepGUIDrawer</code> provides a way to draw custom UI elements using the ImGui (Immediate Mode GUI) system. Your drawer's <code>OnZeepGUI</code> method is called every frame during the GUI rendering phase, allowing you to create interactive UI elements.</p>
+<h3 id="when-to-use-izeepguidrawer">When to Use IZeepGUIDrawer</h3>
+<p>Use <code>IZeepGUIDrawer</code> when you need to:</p>
+<ul>
+<li>Create custom windows or overlays</li>
+<li>Display debug information</li>
+<li>Create interactive UI panels</li>
+<li>Build mod configuration interfaces</li>
+<li>Display real-time game information</li>
+</ul>
+<h2 id="basic-implementation">Basic Implementation</h2>
+<h3 id="simple-example">Simple Example</h3>
+<p>Here's a basic example of implementing <code>IZeepGUIDrawer</code>:</p>
+<pre><code class="lang-csharp">using BepInEx;
+using Imui.Core;
+using ZeepSDK.UI;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private MyGUIDrawer _drawer;
+
+    private void Awake()
+    {
+        _drawer = new MyGUIDrawer();
+        UIApi.AddZeepGUIDrawer(_drawer);
+    }
+
+    private void OnDestroy()
+    {
+        UIApi.RemoveZeepGUIDrawer(_drawer);
+    }
+}
+
+public class MyGUIDrawer : IZeepGUIDrawer
+{
+    private bool _windowOpen = true;
+
+    public void OnZeepGUI(ImGui gui)
+    {
+        if (_windowOpen &amp;&amp; gui.BeginWindow(&quot;My Custom Window&quot;, ref _windowOpen, (400, 300)))
+        {
+            gui.Text(&quot;Hello from ZeepSDK!&quot;);
+            
+            if (gui.Button(&quot;Click Me&quot;))
+            {
+                // Handle button click
+            }
+            
+            gui.EndWindow();
+        }
+    }
+}
+</code></pre>
+<h2 id="common-imgui-controls">Common ImGui Controls</h2>
+<p>The <code>ImGui</code> instance provides many controls for building your UI. Here are the most commonly used ones:</p>
+<h3 id="windows">Windows</h3>
+<pre><code class="lang-csharp">// Create a window
+bool windowOpen = true;
+if (gui.BeginWindow(&quot;Window Title&quot;, ref windowOpen, (width, height)))
+{
+    // Window content
+    gui.EndWindow();
+}
+</code></pre>
+<h3 id="text">Text</h3>
+<pre><code class="lang-csharp">// Simple text
+gui.Text(&quot;Hello World&quot;);
+
+// Text with custom settings
+gui.Text(&quot;Styled Text&quot;, new ImTextSettings(24, 0.5f, 0.5f, true));
+
+// Text with tooltip
+gui.Text(&quot;Hover me&quot;, &quot;This is a tooltip&quot;);
+</code></pre>
+<h3 id="buttons">Buttons</h3>
+<pre><code class="lang-csharp">// Simple button
+if (gui.Button(&quot;Click Me&quot;))
+{
+    // Button was clicked
+}
+
+// Button with custom size
+if (gui.Button(&quot;Click Me&quot;, (100, 30)))
+{
+    // Button was clicked
+}
+</code></pre>
+<h3 id="checkboxes">Checkboxes</h3>
+<pre><code class="lang-csharp">bool value = true;
+if (gui.Checkbox(ref value, &quot;Enable Feature&quot;))
+{
+    // Value changed
+}
+</code></pre>
+<h3 id="text-input">Text Input</h3>
+<pre><code class="lang-csharp">string text = &quot;Initial value&quot;;
+string newText = gui.TextEdit(text, (200, 30));
+if (newText != text)
+{
+    text = newText;
+    // Text changed
+}
+</code></pre>
+<h3 id="numeric-input">Numeric Input</h3>
+<pre><code class="lang-csharp">int number = 10;
+if (gui.NumericEdit(ref number, (100, 30)))
+{
+    // Number changed
+}
+
+float floatValue = 1.5f;
+if (gui.NumericEdit(ref floatValue, (100, 30)))
+{
+    // Float value changed
+}
+</code></pre>
+<h3 id="dropdowns">Dropdowns</h3>
+<pre><code class="lang-csharp">int selectedIndex = 0;
+string[] options = { &quot;Option 1&quot;, &quot;Option 2&quot;, &quot;Option 3&quot; };
+if (gui.Dropdown(ref selectedIndex, options, (150, 30)))
+{
+    // Selection changed
+}
+</code></pre>
+<h3 id="color-picker">Color Picker</h3>
+<pre><code class="lang-csharp">Color color = Color.red;
+if (gui.ColorEdit(ref color, (100, 30)))
+{
+    // Color changed
+}
+</code></pre>
+<h3 id="layout">Layout</h3>
+<pre><code class="lang-csharp">// Horizontal layout
+gui.BeginHorizontal((400, 30));
+gui.Text(&quot;Left&quot;);
+gui.Text(&quot;Right&quot;);
+gui.EndHorizontal();
+
+// Vertical layout
+gui.BeginVertical((400, 200));
+gui.Text(&quot;Top&quot;);
+gui.Text(&quot;Bottom&quot;);
+gui.EndVertical();
+
+// Using scopes (recommended)
+using (gui.Horizontal((400, 30)))
+{
+    gui.Text(&quot;Left&quot;);
+    gui.Text(&quot;Right&quot;);
+}
+
+using (gui.Vertical((400, 200)))
+{
+    gui.Text(&quot;Top&quot;);
+    gui.Text(&quot;Bottom&quot;);
+}
+</code></pre>
+<h3 id="separators-and-spacing">Separators and Spacing</h3>
+<pre><code class="lang-csharp">gui.Separator();
+gui.AddSpacing();
+gui.AddSpacing(20); // Custom spacing
+</code></pre>
+<h2 id="complete-examples">Complete Examples</h2>
+<h3 id="example-1-simple-info-window">Example 1: Simple Info Window</h3>
+<pre><code class="lang-csharp">using Imui.Core;
+using UnityEngine;
+using ZeepSDK.UI;
+
+public class InfoWindowDrawer : IZeepGUIDrawer
+{
+    private bool _visible = true;
+    private int _frameCount = 0;
+    private float _fps = 0;
+    private float _fpsUpdateTimer = 0;
+
+    public void OnZeepGUI(ImGui gui)
+    {
+        // Update FPS
+        _frameCount++;
+        _fpsUpdateTimer += Time.deltaTime;
+        if (_fpsUpdateTimer &gt;= 1.0f)
+        {
+            _fps = _frameCount / _fpsUpdateTimer;
+            _frameCount = 0;
+            _fpsUpdateTimer = 0;
+        }
+
+        // Draw window
+        if (_visible &amp;&amp; gui.BeginWindow(&quot;Info Window&quot;, ref _visible, (300, 200)))
+        {
+            gui.Text($&quot;FPS: {_fps:F1}&quot;);
+            gui.Separator();
+            gui.Text($&quot;Time: {Time.time:F2}s&quot;);
+            gui.Text($&quot;Frame: {Time.frameCount}&quot;);
+            
+            gui.EndWindow();
+        }
+    }
+}
+</code></pre>
+<h3 id="example-2-settings-panel">Example 2: Settings Panel</h3>
+<pre><code class="lang-csharp">using Imui.Core;
+using UnityEngine;
+using ZeepSDK.UI;
+
+public class SettingsPanelDrawer : IZeepGUIDrawer
+{
+    private bool _visible = false;
+    private bool _enableFeature = true;
+    private float _volume = 0.5f;
+    private string _playerName = &quot;Player&quot;;
+    private int _selectedOption = 0;
+    private readonly string[] _options = { &quot;Low&quot;, &quot;Medium&quot;, &quot;High&quot; };
+
+    public void OnZeepGUI(ImGui gui)
+    {
+        // Toggle visibility with a key
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            _visible = !_visible;
+        }
+
+        if (!_visible)
+            return;
+
+        if (gui.BeginWindow(&quot;Settings&quot;, ref _visible, (400, 400)))
+        {
+            gui.Text(&quot;Mod Settings&quot;, new ImTextSettings(24, 0.5f));
+            gui.Separator();
+
+            // Checkbox
+            if (gui.Checkbox(ref _enableFeature, &quot;Enable Feature&quot;))
+            {
+                // Feature toggled
+            }
+
+            gui.Separator();
+
+            // Slider-like numeric input
+            gui.Text(&quot;Volume:&quot;);
+            if (gui.NumericEdit(ref _volume, (200, 30)))
+            {
+                _volume = Mathf.Clamp01(_volume);
+            }
+
+            gui.Separator();
+
+            // Text input
+            gui.Text(&quot;Player Name:&quot;);
+            string newName = gui.TextEdit(_playerName, (200, 30));
+            if (newName != _playerName)
+            {
+                _playerName = newName;
+            }
+
+            gui.Separator();
+
+            // Dropdown
+            gui.Text(&quot;Quality:&quot;);
+            if (gui.Dropdown(ref _selectedOption, _options, (200, 30)))
+            {
+                // Quality changed
+            }
+
+            gui.Separator();
+
+            // Buttons
+            using (gui.Horizontal((400, 30)))
+            {
+                if (gui.Button(&quot;Save&quot;, (100, 30)))
+                {
+                    // Save settings
+                }
+
+                if (gui.Button(&quot;Reset&quot;, (100, 30)))
+                {
+                    _enableFeature = true;
+                    _volume = 0.5f;
+                    _playerName = &quot;Player&quot;;
+                    _selectedOption = 0;
+                }
+            }
+
+            gui.EndWindow();
+        }
+    }
+}
+</code></pre>
+<h3 id="example-3-debug-overlay">Example 3: Debug Overlay</h3>
+<pre><code class="lang-csharp">using Imui.Core;
+using Imui.Style;
+using UnityEngine;
+using ZeepSDK.UI;
+using ZeepkistClient;
+
+public class DebugOverlayDrawer : IZeepGUIDrawer
+{
+    private bool _enabled = false;
+
+    public void OnZeepGUI(ImGui gui)
+    {
+        if (!_enabled)
+            return;
+
+        // Draw overlay in top-right corner
+        var screenSize = new Vector2(Screen.width, Screen.height);
+        var overlaySize = new Vector2(300, 200);
+        var overlayPos = new Vector2(screenSize.x - overlaySize.x - 10, 10);
+
+        gui.Layout.Push(ImAxis.Vertical, new ImRect(overlayPos, overlaySize));
+        
+        gui.Text(&quot;Debug Info&quot;, new ImTextSettings(18, 0.5f));
+        gui.Separator();
+
+        if (PlayerManager.Instance != null)
+        {
+            gui.Text($&quot;Position: {PlayerManager.Instance.currentPlayer.transform.position}&quot;);
+            gui.Text($&quot;Velocity: {PlayerManager.Instance.currentPlayer.rigidbody.velocity.magnitude:F2}&quot;);
+        }
+
+        if (ZeepkistNetwork.IsConnectedToGame)
+        {
+            gui.Text($&quot;Players: {ZeepkistNetwork.Players.Count}&quot;);
+            gui.Text($&quot;Host: {ZeepkistNetwork.IsMasterClient}&quot;);
+        }
+
+        gui.Layout.Pop();
+    }
+
+    public void SetEnabled(bool enabled)
+    {
+        _enabled = enabled;
+    }
+}
+</code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-always-clean-up">1. Always Clean Up</h3>
+<p>Remove your drawer when your plugin is destroyed:</p>
+<pre><code class="lang-csharp">private void OnDestroy()
+{
+    UIApi.RemoveZeepGUIDrawer(_drawer);
+}
+</code></pre>
+<h3 id="2-use-scopes-for-layouts">2. Use Scopes for Layouts</h3>
+<p>Prefer using scopes with <code>using</code> statements for layouts:</p>
+<pre><code class="lang-csharp">// Good
+using (gui.Horizontal((400, 30)))
+{
+    gui.Text(&quot;Left&quot;);
+    gui.Text(&quot;Right&quot;);
+}
+
+// Also works, but scopes are safer
+gui.BeginHorizontal((400, 30));
+gui.Text(&quot;Left&quot;);
+gui.Text(&quot;Right&quot;);
+gui.EndHorizontal();
+</code></pre>
+<h3 id="3-check-window-visibility">3. Check Window Visibility</h3>
+<p>Always check if a window should be drawn:</p>
+<pre><code class="lang-csharp">if (_visible &amp;&amp; gui.BeginWindow(&quot;Title&quot;, ref _visible, size))
+{
+    // Window content
+    gui.EndWindow();
+}
+</code></pre>
+<h3 id="4-handle-input-responsibly">4. Handle Input Responsibly</h3>
+<p>Don't process input when windows are not visible or when the game is paused:</p>
+<pre><code class="lang-csharp">public void OnZeepGUI(ImGui gui)
+{
+    if (!_visible || Time.timeScale == 0)
+        return;
+    
+    // Draw UI
+}
+</code></pre>
+<h3 id="5-use-appropriate-sizes">5. Use Appropriate Sizes</h3>
+<p>Make sure your windows and controls are appropriately sized:</p>
+<pre><code class="lang-csharp">// Good - explicit size
+gui.BeginWindow(&quot;Title&quot;, ref open, (400, 300));
+
+// Good - use layout width/height
+var width = gui.GetLayoutWidth();
+var height = gui.GetLayoutHeight();
+gui.BeginWindow(&quot;Title&quot;, ref open, (width, height));
+</code></pre>
+<h3 id="6-organize-complex-uis">6. Organize Complex UIs</h3>
+<p>Break down complex UIs into smaller methods:</p>
+<pre><code class="lang-csharp">public void OnZeepGUI(ImGui gui)
+{
+    if (gui.BeginWindow(&quot;Complex UI&quot;, ref _visible, (600, 500)))
+    {
+        DrawHeader(gui);
+        DrawSettings(gui);
+        DrawButtons(gui);
+        gui.EndWindow();
+    }
+}
+
+private void DrawHeader(ImGui gui)
+{
+    gui.Text(&quot;Settings&quot;, new ImTextSettings(24));
+    gui.Separator();
+}
+
+private void DrawSettings(ImGui gui)
+{
+    // Settings controls
+}
+
+private void DrawButtons(ImGui gui)
+{
+    // Buttons
+}
+</code></pre>
+<h3 id="7-store-state-appropriately">7. Store State Appropriately</h3>
+<p>Store UI state in your drawer class:</p>
+<pre><code class="lang-csharp">public class MyDrawer : IZeepGUIDrawer
+{
+    private bool _windowOpen = true;
+    private string _inputText = &quot;&quot;;
+    private int _selectedIndex = 0;
+    
+    // UI state goes here
+}
+</code></pre>
+<h2 id="advanced-topics">Advanced Topics</h2>
+<h3 id="conditional-rendering">Conditional Rendering</h3>
+<p>You can conditionally render UI elements based on game state:</p>
+<pre><code class="lang-csharp">public void OnZeepGUI(ImGui gui)
+{
+    if (!ZeepkistNetwork.IsConnectedToGame)
+        return; // Don't show UI when not in a game
+    
+    // Draw UI
+}
+</code></pre>
+<h3 id="multiple-windows">Multiple Windows</h3>
+<p>You can create multiple windows in a single drawer:</p>
+<pre><code class="lang-csharp">public void OnZeepGUI(ImGui gui)
+{
+    if (_window1Open &amp;&amp; gui.BeginWindow(&quot;Window 1&quot;, ref _window1Open, (300, 200)))
+    {
+        gui.Text(&quot;Window 1 Content&quot;);
+        gui.EndWindow();
+    }
+
+    if (_window2Open &amp;&amp; gui.BeginWindow(&quot;Window 2&quot;, ref _window2Open, (300, 200)))
+    {
+        gui.Text(&quot;Window 2 Content&quot;);
+        gui.EndWindow();
+    }
+}
+</code></pre>
+<h3 id="tooltips">Tooltips</h3>
+<p>Add tooltips to provide additional information:</p>
+<pre><code class="lang-csharp">gui.Text(&quot;Hover me&quot;, &quot;This is a tooltip&quot;);
+gui.TooltipAtLastControl(&quot;Additional information&quot;);
+</code></pre>
+<h2 id="integration-with-plugin">Integration with Plugin</h2>
+<p>Here's a complete example of integrating a GUI drawer with your plugin:</p>
+<pre><code class="lang-csharp">using BepInEx;
+using ZeepSDK.UI;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private MyGUIDrawer _drawer;
+
+    private void Awake()
+    {
+        _drawer = new MyGUIDrawer(this);
+        UIApi.AddZeepGUIDrawer(_drawer);
+        
+        Logger.LogInfo(&quot;My Mod loaded!&quot;);
+    }
+
+    private void OnDestroy()
+    {
+        if (_drawer != null)
+        {
+            UIApi.RemoveZeepGUIDrawer(_drawer);
+        }
+    }
+}
+</code></pre>
+<h2 id="summary">Summary</h2>
+<ul>
+<li><code>IZeepGUIDrawer</code> allows you to create custom UI elements using ImGui</li>
+<li>Implement the interface and register your drawer with <code>UIApi.AddZeepGUIDrawer()</code></li>
+<li>Always remove your drawer in <code>OnDestroy()</code></li>
+<li>Use ImGui controls like windows, buttons, text inputs, and layouts</li>
+<li>Follow best practices for clean, maintainable UI code</li>
+<li>Organize complex UIs into smaller methods</li>
+<li>Handle state appropriately in your drawer class</li>
+</ul>
+<p>With <code>IZeepGUIDrawer</code>, you can create rich, interactive UI elements that integrate seamlessly with Zeepkist's UI system!</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/docs/articles/zeep-gui-drawer.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

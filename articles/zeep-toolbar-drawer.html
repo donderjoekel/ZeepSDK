@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Using IZeepToolbarDrawer </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Using IZeepToolbarDrawer ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="using-izeeptoolbardrawer">Using IZeepToolbarDrawer</h1>
+
+<p><code>IZeepToolbarDrawer</code> is an interface that allows you to add custom menu items to the Zeep toolbar menu bar. This provides a clean, integrated way to expose your mod's functionality through the game's menu system.</p>
+<h2 id="overview">Overview</h2>
+<p>The Zeep toolbar is a menu bar that appears at the top of the screen when toggled (by default, using the key configured in ZeepSDK settings). It includes a built-in &quot;File&quot; menu and allows mods to add their own menus with custom menu items.</p>
+<h3 id="when-to-use-izeeptoolbardrawer">When to Use IZeepToolbarDrawer</h3>
+<p>Use <code>IZeepToolbarDrawer</code> when you want to:</p>
+<ul>
+<li>Add menu items to the toolbar for easy access to mod features</li>
+<li>Provide a consistent UI experience that matches the game's menu system</li>
+<li>Organize multiple mod features under a single menu</li>
+<li>Create shortcuts to open windows, toggle features, or execute commands</li>
+</ul>
+<h2 id="basic-implementation">Basic Implementation</h2>
+<h3 id="simple-example">Simple Example</h3>
+<p>Here's a basic example of implementing <code>IZeepToolbarDrawer</code>:</p>
+<pre><code class="lang-csharp">using BepInEx;
+using Imui.Core;
+using ZeepSDK.UI;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private MyToolbarDrawer _toolbarDrawer;
+
+    private void Awake()
+    {
+        _toolbarDrawer = new MyToolbarDrawer();
+        UIApi.AddToolbarDrawer(_toolbarDrawer);
+    }
+
+    private void OnDestroy()
+    {
+        UIApi.RemoveToolbarDrawer(_toolbarDrawer);
+    }
+}
+
+public class MyToolbarDrawer : IZeepToolbarDrawer
+{
+    public string MenuTitle =&gt; &quot;My Mod&quot;;
+
+    public void DrawMenuItems(ImGui gui)
+    {
+        if (gui.Menu(&quot;Open Settings&quot;))
+        {
+            // Open settings window
+        }
+
+        if (gui.Menu(&quot;Toggle Feature&quot;))
+        {
+            // Toggle a feature
+        }
+    }
+}
+</code></pre>
+<h2 id="menu-items">Menu Items</h2>
+<h3 id="basic-menu-items">Basic Menu Items</h3>
+<p>The most common way to add menu items is using <code>gui.Menu()</code>:</p>
+<pre><code class="lang-csharp">public void DrawMenuItems(ImGui gui)
+{
+    if (gui.Menu(&quot;My Menu Item&quot;))
+    {
+        // This code runs when the menu item is clicked
+        Logger.LogInfo(&quot;Menu item clicked!&quot;);
+    }
+}
+</code></pre>
+<h3 id="menu-items-with-actions">Menu Items with Actions</h3>
+<p>You can perform any action when a menu item is clicked:</p>
+<pre><code class="lang-csharp">public class MyToolbarDrawer : IZeepToolbarDrawer
+{
+    private bool _featureEnabled = false;
+
+    public string MenuTitle =&gt; &quot;My Mod&quot;;
+
+    public void DrawMenuItems(ImGui gui)
+    {
+        if (gui.Menu(&quot;Enable Feature&quot;))
+        {
+            _featureEnabled = true;
+            Logger.LogInfo(&quot;Feature enabled&quot;);
+        }
+
+        if (gui.Menu(&quot;Disable Feature&quot;))
+        {
+            _featureEnabled = false;
+            Logger.LogInfo(&quot;Feature disabled&quot;);
+        }
+
+        if (gui.Menu(&quot;Toggle Feature&quot;))
+        {
+            _featureEnabled = !_featureEnabled;
+            Logger.LogInfo($&quot;Feature is now {(_featureEnabled ? &quot;enabled&quot; : &quot;disabled&quot;)}&quot;);
+        }
+    }
+}
+</code></pre>
+<h3 id="separators">Separators</h3>
+<p>Use separators to group related menu items:</p>
+<pre><code class="lang-csharp">public void DrawMenuItems(ImGui gui)
+{
+    if (gui.Menu(&quot;First Item&quot;))
+    {
+        // Action 1
+    }
+
+    gui.Separator();
+
+    if (gui.Menu(&quot;Second Item&quot;))
+    {
+        // Action 2
+    }
+
+    if (gui.Menu(&quot;Third Item&quot;))
+    {
+        // Action 3
+    }
+
+    gui.Separator();
+
+    if (gui.Menu(&quot;Last Item&quot;))
+    {
+        // Action 4
+    }
+}
+</code></pre>
+<h3 id="checkable-menu-items">Checkable Menu Items</h3>
+<p>You can create checkable menu items to show the state of a feature:</p>
+<pre><code class="lang-csharp">public class MyToolbarDrawer : IZeepToolbarDrawer
+{
+    private bool _featureEnabled = false;
+
+    public string MenuTitle =&gt; &quot;My Mod&quot;;
+
+    public void DrawMenuItems(ImGui gui)
+    {
+        if (gui.Menu(&quot;Enable Feature&quot;, _featureEnabled))
+        {
+            _featureEnabled = !_featureEnabled;
+        }
+    }
+}
+</code></pre>
+<h2 id="complete-examples">Complete Examples</h2>
+<h3 id="example-1-settings-and-features-menu">Example 1: Settings and Features Menu</h3>
+<pre><code class="lang-csharp">using BepInEx;
+using Imui.Core;
+using ZeepSDK.UI;
+using ZeepSDK.Settings;
+
+public class MyToolbarDrawer : IZeepToolbarDrawer
+{
+    private readonly MyMod _plugin;
+    private bool _debugMode = false;
+    private bool _showOverlay = true;
+
+    public MyToolbarDrawer(MyMod plugin)
+    {
+        _plugin = plugin;
+    }
+
+    public string MenuTitle =&gt; &quot;My Mod&quot;;
+
+    public void DrawMenuItems(ImGui gui)
+    {
+        // Settings
+        if (gui.Menu(&quot;Open Settings&quot;))
+        {
+            SettingsApi.OpenModSettings();
+        }
+
+        gui.Separator();
+
+        // Features
+        if (gui.Menu(&quot;Toggle Debug Mode&quot;, _debugMode))
+        {
+            _debugMode = !_debugMode;
+            _plugin.Logger.LogInfo($&quot;Debug mode: {_debugMode}&quot;);
+        }
+
+        if (gui.Menu(&quot;Toggle Overlay&quot;, _showOverlay))
+        {
+            _showOverlay = !_showOverlay;
+            _plugin.Logger.LogInfo($&quot;Overlay: {_showOverlay}&quot;);
+        }
+
+        gui.Separator();
+
+        // Actions
+        if (gui.Menu(&quot;Reset All&quot;))
+        {
+            _debugMode = false;
+            _showOverlay = true;
+            _plugin.Logger.LogInfo(&quot;All settings reset&quot;);
+        }
+    }
+}
+</code></pre>
+<h3 id="example-2-window-management">Example 2: Window Management</h3>
+<pre><code class="lang-csharp">using BepInEx;
+using Imui.Core;
+using ZeepSDK.UI;
+
+public class WindowManagerToolbarDrawer : IZeepToolbarDrawer
+{
+    private readonly MyMod _plugin;
+    private bool _infoWindowOpen = false;
+    private bool _debugWindowOpen = false;
+
+    public WindowManagerToolbarDrawer(MyMod plugin)
+    {
+        _plugin = plugin;
+    }
+
+    public string MenuTitle =&gt; &quot;Windows&quot;;
+
+    public void DrawMenuItems(ImGui gui)
+    {
+        if (gui.Menu(&quot;Show Info Window&quot;, _infoWindowOpen))
+        {
+            _infoWindowOpen = !_infoWindowOpen;
+        }
+
+        if (gui.Menu(&quot;Show Debug Window&quot;, _debugWindowOpen))
+        {
+            _debugWindowOpen = !_debugWindowOpen;
+        }
+
+        gui.Separator();
+
+        if (gui.Menu(&quot;Close All Windows&quot;))
+        {
+            _infoWindowOpen = false;
+            _debugWindowOpen = false;
+        }
+    }
+}
+</code></pre>
+<h3 id="example-3-multi-feature-menu">Example 3: Multi-Feature Menu</h3>
+<pre><code class="lang-csharp">using BepInEx;
+using Imui.Core;
+using ZeepSDK.UI;
+using ZeepSDK.Chat;
+
+public class FeatureToolbarDrawer : IZeepToolbarDrawer
+{
+    private readonly MyMod _plugin;
+
+    public FeatureToolbarDrawer(MyMod plugin)
+    {
+        _plugin = plugin;
+    }
+
+    public string MenuTitle =&gt; &quot;Features&quot;;
+
+    public void DrawMenuItems(ImGui gui)
+    {
+        // Quick Actions
+        if (gui.Menu(&quot;Send Test Message&quot;))
+        {
+            ChatApi.SendMessage(&quot;Test message from toolbar!&quot;);
+        }
+
+        if (gui.Menu(&quot;Clear Chat&quot;))
+        {
+            ChatApi.ClearChat();
+        }
+
+        gui.Separator();
+
+        // Mod Features
+        if (gui.Menu(&quot;Feature 1&quot;))
+        {
+            _plugin.ExecuteFeature1();
+        }
+
+        if (gui.Menu(&quot;Feature 2&quot;))
+        {
+            _plugin.ExecuteFeature2();
+        }
+
+        gui.Separator();
+
+        // Help
+        if (gui.Menu(&quot;About&quot;))
+        {
+            ChatApi.AddLocalMessage(&quot;My Mod v1.0.0 - Created by You&quot;);
+        }
+    }
+}
+</code></pre>
+<h2 id="integration-with-plugin">Integration with Plugin</h2>
+<p>Here's a complete example showing how to integrate a toolbar drawer with your plugin:</p>
+<pre><code class="lang-csharp">using BepInEx;
+using Imui.Core;
+using ZeepSDK.UI;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private MyToolbarDrawer _toolbarDrawer;
+
+    private void Awake()
+    {
+        _toolbarDrawer = new MyToolbarDrawer(this);
+        UIApi.AddToolbarDrawer(_toolbarDrawer);
+        
+        Logger.LogInfo(&quot;My Mod loaded!&quot;);
+    }
+
+    private void OnDestroy()
+    {
+        if (_toolbarDrawer != null)
+        {
+            UIApi.RemoveToolbarDrawer(_toolbarDrawer);
+        }
+    }
+
+    public void ExecuteFeature1()
+    {
+        Logger.LogInfo(&quot;Feature 1 executed&quot;);
+    }
+
+    public void ExecuteFeature2()
+    {
+        Logger.LogInfo(&quot;Feature 2 executed&quot;);
+    }
+}
+
+public class MyToolbarDrawer : IZeepToolbarDrawer
+{
+    private readonly MyMod _plugin;
+
+    public MyToolbarDrawer(MyMod plugin)
+    {
+        _plugin = plugin;
+    }
+
+    public string MenuTitle =&gt; &quot;My Mod&quot;;
+
+    public void DrawMenuItems(ImGui gui)
+    {
+        if (gui.Menu(&quot;Feature 1&quot;))
+        {
+            _plugin.ExecuteFeature1();
+        }
+
+        if (gui.Menu(&quot;Feature 2&quot;))
+        {
+            _plugin.ExecuteFeature2();
+        }
+    }
+}
+</code></pre>
+<h2 id="accessing-plugin-state">Accessing Plugin State</h2>
+<p>You can access your plugin's state and methods from the toolbar drawer:</p>
+<pre><code class="lang-csharp">public class MyToolbarDrawer : IZeepToolbarDrawer
+{
+    private readonly MyMod _plugin;
+
+    public MyToolbarDrawer(MyMod plugin)
+    {
+        _plugin = plugin;
+    }
+
+    public string MenuTitle =&gt; &quot;My Mod&quot;;
+
+    public void DrawMenuItems(ImGui gui)
+    {
+        // Access plugin configuration
+        if (gui.Menu(&quot;Toggle Feature&quot;, _plugin.FeatureEnabled))
+        {
+            _plugin.FeatureEnabled = !_plugin.FeatureEnabled;
+        }
+
+        // Call plugin methods
+        if (gui.Menu(&quot;Execute Action&quot;))
+        {
+            _plugin.DoSomething();
+        }
+
+        // Access plugin state
+        if (gui.Menu($&quot;Status: {_plugin.GetStatus()}&quot;))
+        {
+            // Menu item shows current status
+        }
+    }
+}
+</code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-always-clean-up">1. Always Clean Up</h3>
+<p>Remove your toolbar drawer when your plugin is destroyed:</p>
+<pre><code class="lang-csharp">private void OnDestroy()
+{
+    if (_toolbarDrawer != null)
+    {
+        UIApi.RemoveToolbarDrawer(_toolbarDrawer);
+    }
+}
+</code></pre>
+<h3 id="2-use-descriptive-menu-titles">2. Use Descriptive Menu Titles</h3>
+<p>Choose clear, concise menu titles that identify your mod:</p>
+<pre><code class="lang-csharp">// Good
+public string MenuTitle =&gt; &quot;My Mod&quot;;
+public string MenuTitle =&gt; &quot;Racing Tools&quot;;
+public string MenuTitle =&gt; &quot;Leaderboard Plus&quot;;
+
+// Avoid
+public string MenuTitle =&gt; &quot;Mod&quot;;
+public string MenuTitle =&gt; &quot;Stuff&quot;;
+</code></pre>
+<h3 id="3-organize-menu-items-logically">3. Organize Menu Items Logically</h3>
+<p>Group related items together and use separators:</p>
+<pre><code class="lang-csharp">public void DrawMenuItems(ImGui gui)
+{
+    // Settings group
+    if (gui.Menu(&quot;Settings&quot;)) { }
+    if (gui.Menu(&quot;Preferences&quot;)) { }
+    
+    gui.Separator();
+    
+    // Actions group
+    if (gui.Menu(&quot;Action 1&quot;)) { }
+    if (gui.Menu(&quot;Action 2&quot;)) { }
+    
+    gui.Separator();
+    
+    // Help group
+    if (gui.Menu(&quot;About&quot;)) { }
+    if (gui.Menu(&quot;Help&quot;)) { }
+}
+</code></pre>
+<h3 id="4-use-checkable-items-for-toggles">4. Use Checkable Items for Toggles</h3>
+<p>Use checkable menu items to show the state of toggleable features:</p>
+<pre><code class="lang-csharp">if (gui.Menu(&quot;Enable Feature&quot;, _featureEnabled))
+{
+    _featureEnabled = !_featureEnabled;
+}
+</code></pre>
+<h3 id="5-keep-menu-items-concise">5. Keep Menu Items Concise</h3>
+<p>Keep menu item labels short and clear:</p>
+<pre><code class="lang-csharp">// Good
+if (gui.Menu(&quot;Open Settings&quot;)) { }
+if (gui.Menu(&quot;Toggle Debug&quot;)) { }
+
+// Avoid
+if (gui.Menu(&quot;Click here to open the settings window&quot;)) { }
+if (gui.Menu(&quot;This will toggle the debug mode on or off&quot;)) { }
+</code></pre>
+<h3 id="6-handle-errors-gracefully">6. Handle Errors Gracefully</h3>
+<p>Wrap actions in try-catch blocks if they might throw exceptions:</p>
+<pre><code class="lang-csharp">public void DrawMenuItems(ImGui gui)
+{
+    if (gui.Menu(&quot;Risky Action&quot;))
+    {
+        try
+        {
+            // Potentially risky operation
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($&quot;Error executing action: {ex}&quot;);
+        }
+    }
+}
+</code></pre>
+<h3 id="7-update-state-appropriately">7. Update State Appropriately</h3>
+<p>Update state immediately when menu items are clicked:</p>
+<pre><code class="lang-csharp">public void DrawMenuItems(ImGui gui)
+{
+    if (gui.Menu(&quot;Toggle Feature&quot;, _enabled))
+    {
+        _enabled = !_enabled;
+        SaveSettings(); // Persist state if needed
+    }
+}
+</code></pre>
+<h2 id="advanced-usage">Advanced Usage</h2>
+<h3 id="dynamic-menu-items">Dynamic Menu Items</h3>
+<p>You can create dynamic menu items based on game state:</p>
+<pre><code class="lang-csharp">public void DrawMenuItems(ImGui gui)
+{
+    if (ZeepkistNetwork.IsConnectedToGame)
+    {
+        if (gui.Menu(&quot;Disconnect&quot;))
+        {
+            // Disconnect from game
+        }
+    }
+    else
+    {
+        if (gui.Menu(&quot;Connect&quot;))
+        {
+            // Connect to game
+        }
+    }
+}
+</code></pre>
+<h3 id="menu-items-with-counters">Menu Items with Counters</h3>
+<p>Display information in menu items:</p>
+<pre><code class="lang-csharp">public void DrawMenuItems(ImGui gui)
+{
+    int itemCount = GetItemCount();
+    if (gui.Menu($&quot;Items ({itemCount})&quot;))
+    {
+        // Show items
+    }
+}
+</code></pre>
+<h3 id="conditional-menu-items">Conditional Menu Items</h3>
+<p>Show or hide menu items based on conditions:</p>
+<pre><code class="lang-csharp">public void DrawMenuItems(ImGui gui)
+{
+    if (gui.Menu(&quot;Always Visible&quot;))
+    {
+        // Always shown
+    }
+
+    if (_debugMode)
+    {
+        gui.Separator();
+        if (gui.Menu(&quot;Debug Only&quot;))
+        {
+            // Only shown in debug mode
+        }
+    }
+}
+</code></pre>
+<h2 id="toggling-the-toolbar">Toggling the Toolbar</h2>
+<p>The toolbar is toggled using a configurable key. Users can:</p>
+<ol>
+<li>Set the toggle key in ZeepSDK settings</li>
+<li>Press the key to show/hide the toolbar</li>
+<li>The toolbar appears at the top of the screen when visible</li>
+</ol>
+<p>Your menu will automatically appear in the toolbar when it's visible, so you don't need to handle the visibility yourself.</p>
+<h2 id="summary">Summary</h2>
+<ul>
+<li><code>IZeepToolbarDrawer</code> allows you to add custom menus to the Zeep toolbar</li>
+<li>Implement the interface with <code>MenuTitle</code> and <code>DrawMenuItems</code> method</li>
+<li>Register your drawer with <code>UIApi.AddToolbarDrawer()</code></li>
+<li>Always remove your drawer in <code>OnDestroy()</code></li>
+<li>Use <code>gui.Menu()</code> to create menu items</li>
+<li>Use <code>gui.Separator()</code> to group related items</li>
+<li>Use checkable menu items to show toggle states</li>
+<li>Organize menu items logically with separators</li>
+<li>Keep menu titles and item labels concise and descriptive</li>
+</ul>
+<p>With <code>IZeepToolbarDrawer</code>, you can provide users with easy access to your mod's features through the integrated toolbar menu system!</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/main/docs/articles/zeep-toolbar-drawer.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

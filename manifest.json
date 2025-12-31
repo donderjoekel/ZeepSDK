@@ -2758,6 +2758,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/zeep-gui-drawer.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/zeep-gui-drawer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/zeep-toolbar-drawer.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/zeep-toolbar-drawer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
