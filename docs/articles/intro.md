@@ -7,6 +7,7 @@ Welcome to the ZeepSDK tutorials and guides! This section contains step-by-step 
 These articles cover practical topics to help you build powerful mods for Zeepkist:
 
 - **Chat Commands** - Learn how to create local and remote chat commands for your mods
+- **UI Development** - Learn how to create custom GUI elements and windows
 - **More tutorials coming soon** - Additional guides will be added as the SDK evolves
 
 ## Available Tutorials
@@ -15,6 +16,11 @@ These articles cover practical topics to help you build powerful mods for Zeepki
 
 - **[Creating Local Chat Commands](local-chat-commands.md)** - Learn how to create commands that can be executed by the local player, perfect for personal utilities and mod features.
 - **[Creating Remote Chat Commands](remote-chat-commands.md)** - Learn how to create commands that can be executed by other players in multiplayer lobbies, ideal for lobby management and multiplayer features.
+
+### UI Development
+
+- **[Using IZeepGUIDrawer](zeep-gui-drawer.md)** - Learn how to create custom GUI elements, windows, and overlays using the ImGui system.
+- **[Using IZeepToolbarDrawer](zeep-toolbar-drawer.md)** - Learn how to add custom menu items to the Zeep toolbar menu bar.
 
 ## Prerequisites
 

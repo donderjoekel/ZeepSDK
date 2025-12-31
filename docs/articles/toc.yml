@@ -4,3 +4,7 @@
   href: local-chat-commands.md
 - name: Creating Remote Chat Commands
   href: remote-chat-commands.md
+- name: Using IZeepGUIDrawer
+  href: zeep-gui-drawer.md
+- name: Using IZeepToolbarDrawer
+  href: zeep-toolbar-drawer.md
