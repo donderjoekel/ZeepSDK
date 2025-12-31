@@ -259,52 +259,55 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
 
         var controlSize = new ImSize((section * 2) - spacing - buttonWidth, height);
 
-        switch (entry.SettingType)
+        if (entry.SettingType.IsEnum && entry.SettingType != typeof(KeyCode))
         {
-            case var _ when entry.SettingType == typeof(KeyCode):
-                DrawKeyCodeEntry(gui, entry, key, controlSize);
-                break;
-            case var _ when entry.SettingType.IsEnum:
-                DrawEnumEntry(gui, entry, key, controlSize);
-                break;
-            case var _ when entry.SettingType == typeof(string):
-                DrawStringEntry(gui, entry, key, controlSize);
-                break;
-            case var _ when entry.SettingType == typeof(bool):
-                if (IsButton(entry))
-                {
-                    DrawButtonEntry(gui, entry, key, controlSize);
-                }
-                else
-                {
-                    DrawBoolEntry(gui, entry, key, controlSize);
-                }
-
-                break;
-            case var _ when entry.SettingType == typeof(int):
-                DrawIntEntry(gui, entry, key, controlSize);
-                break;
-            case var _ when entry.SettingType == typeof(float):
-                DrawFloatEntry(gui, entry, key, controlSize);
-                break;
-            case var _ when entry.SettingType == typeof(double):
-                DrawDoubleEntry(gui, entry, key, controlSize);
-                break;
-            case var _ when entry.SettingType == typeof(Vector2):
-                DrawVector2Entry(gui, entry, key, controlSize);
-                break;
-            case var _ when entry.SettingType == typeof(Vector3):
-                DrawVector3Entry(gui, entry, key, controlSize);
-                break;
-            case var _ when entry.SettingType == typeof(Vector4):
-                DrawVector4Entry(gui, entry, key, controlSize);
-                break;
-            case var _ when entry.SettingType == typeof(Color):
-                DrawColorEntry(gui, entry, key, controlSize);
-                break;
-            default:
-                DrawUnsupportedType(gui, entry, key);
-                break;
+            DrawEnumEntry(gui, entry, key, controlSize);
+        }
+        else
+        {
+            switch (entry)
+            {
+                case ConfigEntry<KeyCode> keyCodeEntry:
+                    DrawKeyCodeEntry(gui, keyCodeEntry, key, controlSize);
+                    break;
+                case ConfigEntry<string> stringEntry:
+                    DrawStringEntry(gui, stringEntry, key, controlSize);
+                    break;
+                case ConfigEntry<bool> boolEntry:
+                    if (IsButton(boolEntry))
+                    {
+                        DrawButtonEntry(gui,boolEntry, key, controlSize);
+                    }
+                    else
+                    {
+                        DrawBoolEntry(gui, boolEntry, key, controlSize);
+                    }
+                    break;
+                case ConfigEntry<int> intEntry:
+                    DrawIntEntry(gui, intEntry, key, controlSize);
+                    break;
+                case ConfigEntry<float> floatEntry:
+                    DrawFloatEntry(gui, floatEntry, key, controlSize);
+                    break;
+                case ConfigEntry<double> doubleEntry:
+                    DrawDoubleEntry(gui, doubleEntry, key, controlSize);
+                    break;
+                case ConfigEntry<Vector2> vector2Entry:
+                    DrawVector2Entry(gui, vector2Entry, key, controlSize);
+                    break;
+                case ConfigEntry<Vector3> vector3Entry:
+                    DrawVector3Entry(gui, vector3Entry, key, controlSize);
+                    break;
+                case ConfigEntry<Vector4> vector4Entry:
+                    DrawVector4Entry(gui, vector4Entry, key, controlSize);
+                    break;
+                case ConfigEntry<Color> colorEntry:
+                    DrawColorEntry(gui, colorEntry, key, controlSize);
+                    break;
+                default:
+                    DrawUnsupportedType(gui, entry, key);
+                    break;
+            }
         }
 
         DrawTooltip(gui, entry);
@@ -320,7 +323,7 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
         gui.EndHorizontal();
     }
 
-    private void DrawKeyCodeEntry(ImGui gui, ConfigEntryBase entry, string key, ImSize size)
+    private void DrawKeyCodeEntry(ImGui gui, ConfigEntry<KeyCode> entry, string key, ImSize size)
     {
         var popupButtonSize = new ImSize(size.Width - 100 - gui.Style.Layout.Spacing, size.Height);
         var clearButtonSize = new ImSize(100, size.Height);
@@ -345,86 +348,138 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
         }
     }
 
-    private void DrawStringEntry(ImGui gui, ConfigEntryBase entry, string key, ImSize size)
+    private void DrawStringEntry(ImGui gui, ConfigEntry<string> entry, string key, ImSize size)
     {
-        var current = (string)entry.BoxedValue;
-        var value = gui.TextEdit(current, size);
-        if (value != current)
+        if (!DrawAcceptableValues(gui, entry, size))
         {
-            entry.BoxedValue = value;
+            var current = (string)entry.BoxedValue;
+            var value = gui.TextEdit(current, size);
+            if (value != current)
+            {
+                entry.BoxedValue = value;
+            }
         }
     }
 
-    private void DrawBoolEntry(ImGui gui, ConfigEntryBase entry, string key, ImSize size)
+    private void DrawBoolEntry(ImGui gui, ConfigEntry<bool> entry, string key, ImSize size)
     {
-        var current = (bool)entry.BoxedValue;
-        if (gui.Checkbox(ref current, string.Empty, size))
+        if (!DrawAcceptableValues(gui, entry, size))
         {
-            entry.BoxedValue = current;
+            var current = entry.Value;
+            if (gui.Checkbox(ref current, string.Empty, size))
+            {
+                entry.Value = current;
+            }
         }
     }
 
-    private void DrawIntEntry(ImGui gui, ConfigEntryBase entry, string key, ImSize size)
+    private void DrawIntEntry(ImGui gui, ConfigEntry<int> entry, string key, ImSize size)
     {
-        var current = (int)entry.BoxedValue;
-        if (gui.NumericEdit(ref current, size))
+        if (!DrawAcceptableValues(gui, entry, size))
         {
-            entry.BoxedValue = current;
+            var current = entry.Value;
+            if (gui.NumericEdit(ref current, size))
+            {
+                entry.Value = current;
+            }
         }
     }
 
-    private void DrawFloatEntry(ImGui gui, ConfigEntryBase entry, string key, ImSize size)
+    private void DrawFloatEntry(ImGui gui, ConfigEntry<float> entry, string key, ImSize size)
     {
-        var current = (float)entry.BoxedValue;
-        if (gui.NumericEdit(ref current, size))
+        if (!DrawAcceptableValues(gui, entry, size))
         {
-            entry.BoxedValue = current;
+            var current = entry.Value;
+            if (gui.NumericEdit(ref current, size))
+            {
+                entry.Value = current;
+            }
         }
     }
 
-    private void DrawDoubleEntry(ImGui gui, ConfigEntryBase entry, string key, ImSize size)
+    private void DrawDoubleEntry(ImGui gui, ConfigEntry<double> entry, string key, ImSize size)
     {
-        var current = (double)entry.BoxedValue;
-        if (gui.NumericEdit(ref current, size))
+        if (!DrawAcceptableValues(gui, entry, size))
         {
-            entry.BoxedValue = current;
+            var current = entry.Value;
+            if (gui.NumericEdit(ref current, size))
+            {
+                entry.Value = current;
+            }
         }
     }
 
-    private void DrawVector2Entry(ImGui gui, ConfigEntryBase entry, string key, ImSize size)
+    private void DrawVector2Entry(ImGui gui, ConfigEntry<Vector2> entry, string key, ImSize size)
     {
-        var current = (Vector2)entry.BoxedValue;
-        if (gui.Vector(ref current, size))
+        if (!DrawAcceptableValues(gui, entry, size))
         {
-            entry.BoxedValue = current;
+            var current = entry.Value;
+            if (gui.Vector(ref current, size))
+            {
+                entry.Value = current;
+            }
         }
     }
 
-    private void DrawVector3Entry(ImGui gui, ConfigEntryBase entry, string key, ImSize size)
+    private void DrawVector3Entry(ImGui gui, ConfigEntry<Vector3> entry, string key, ImSize size)
     {
-        var current = (Vector3)entry.BoxedValue;
-        if (gui.Vector(ref current, size))
+        if (!DrawAcceptableValues(gui, entry, size))
         {
-            entry.BoxedValue = current;
+            var current = entry.Value;
+            if (gui.Vector(ref current, size))
+            {
+                entry.Value = current;
+            }
         }
     }
 
-    private void DrawVector4Entry(ImGui gui, ConfigEntryBase entry, string key, ImSize size)
+    private void DrawVector4Entry(ImGui gui, ConfigEntry<Vector4> entry, string key, ImSize size)
     {
-        var current = (Vector4)entry.BoxedValue;
-        if (gui.Vector(ref current, size))
+        if (!DrawAcceptableValues(gui, entry, size))
         {
-            entry.BoxedValue = current;
+            var current = entry.Value;
+            if (gui.Vector(ref current, size))
+            {
+                entry.Value = current;
+            }
         }
     }
 
-    private void DrawColorEntry(ImGui gui, ConfigEntryBase entry, string key, ImSize size)
+    private void DrawColorEntry(ImGui gui, ConfigEntry<Color> entry, string key, ImSize size)
     {
-        var current = (Color)entry.BoxedValue;
-        if (gui.ColorEdit(ref current, size))
+        if (!DrawAcceptableValues(gui, entry, size))
         {
-            entry.BoxedValue = current;
+            var current = entry.Value;
+            if (gui.ColorEdit(ref current, size))
+            {
+                entry.Value = current;
+            }
         }
+    }
+
+    private bool DrawAcceptableValues<T>(ImGui gui, ConfigEntry<T> entry, ImSize size)
+        where T : IEquatable<T>
+    {
+        if (entry.Description.AcceptableValues is not AcceptableValueList<T> acceptableValues)
+        {
+            return false;
+        }
+
+        if (gui.BeginDropdown(entry.Value.ToString(), size))
+        {
+            foreach (var value in acceptableValues.AcceptableValues)
+            {
+                if (gui.Menu(value.ToString(), Equals(value, entry.Value)))
+                {
+                    entry.Value = value;
+                    gui.CloseDropdown();
+                }
+            }
+
+            gui.EndDropdown();
+        }
+
+        return true;
     }
 
     private void DrawUnsupportedType(ImGui gui, ConfigEntryBase entry, string key)
