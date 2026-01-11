@@ -224,4 +224,24 @@ public static class ControlsApi
             EventSystemOverride.Override(true, condition, ConditionTickType.OnGUI)
         );
     }
+    
+    /// <summary>
+    /// Disables all input maps while the specified condition is true, but keeps the EventSystem enabled.
+    /// The condition is evaluated during OnGUI updates.
+    /// Returns a <see cref="DisposableBag"/> that, when disposed, removes the conditional override.
+    /// </summary>
+    /// <param name="condition">The condition that determines when input should be disabled. Input is disabled when this returns true.</param>
+    /// <returns>A disposable bag that removes the conditional override when disposed.</returns>
+    public static DisposableBag DisableAllInputExceptEventSystem(Func<bool> condition)
+    {
+        return new DisposableBag(
+            AdventureInputOverride.Override(false, condition, ConditionTickType.OnGUI),
+            DefaultInputOverride.Override(false, condition, ConditionTickType.OnGUI),
+            GameplayInputOverride.Override(false, condition, ConditionTickType.OnGUI),
+            LevelEditorInputOverride.Override(false, condition, ConditionTickType.OnGUI),
+            MenuInputOverride.Override(false, condition, ConditionTickType.OnGUI),
+            OnlineInputOverride.Override(false, condition, ConditionTickType.OnGUI),
+            SpectateInputOverride.Override(false, condition, ConditionTickType.OnGUI)
+        );
+    }
 }
