@@ -858,6 +858,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Imui.Controls.ImGuiWindowExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Imui.Controls.ImGuiWindowExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Imui.Controls.ImGuiWindowExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Imui.Controls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Imui.Controls.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Imui.Controls",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Chat.ChatApi.yml",
       "output": {
         ".html": {
@@ -2353,6 +2381,132 @@
       "IsMRef": true,
       "Title": "ZeepSDK.UI.IZeepTooltip",
       "Summary": "<p sourcefile=\"api/ZeepSDK.UI.IZeepTooltip.yml\" sourcestartlinenumber=\"1\">Interface for tooltip providers that supply tooltip information</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.ColumnExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.ColumnExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.ColumnExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.CutFromExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.CutFromExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.CutFromExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.GridExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.GridExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.GridExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.Internal.IEnumerableExtension",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.Internal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.Internal",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.MiscellaniousExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.MoveToExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.MoveToExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.MoveToExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.RowExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.RowExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.RowExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx",
+      "Summary": null
     },
     {
       "type": "ManagedReference",

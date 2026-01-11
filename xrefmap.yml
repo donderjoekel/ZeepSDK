@@ -6061,6 +6061,97 @@ references:
   isSpec: "True"
   fullName: BugsnagUnity.UnityLogMessage.Type
   nameWithType: UnityLogMessage.Type
+- uid: Imui.Controls
+  name: Imui.Controls
+  href: api/Imui.Controls.html
+  commentId: N:Imui.Controls
+  fullName: Imui.Controls
+  nameWithType: Imui.Controls
+- uid: Imui.Controls.ImGuiWindowExtensions
+  name: ImGuiWindowExtensions
+  href: api/Imui.Controls.ImGuiWindowExtensions.html
+  commentId: T:Imui.Controls.ImGuiWindowExtensions
+  fullName: Imui.Controls.ImGuiWindowExtensions
+  nameWithType: ImGuiWindowExtensions
+- uid: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,Imui.Core.ImRect,System.Action,System.Action,Imui.Core.ImWindowFlag)
+  name: BeginWindow(ImGui, string, ref bool, ImRect, Action, Action, ImWindowFlag)
+  href: api/Imui.Controls.ImGuiWindowExtensions.html#Imui_Controls_ImGuiWindowExtensions_BeginWindow_Imui_Core_ImGui_System_String_System_Boolean__Imui_Core_ImRect_System_Action_System_Action_Imui_Core_ImWindowFlag_
+  commentId: M:Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,Imui.Core.ImRect,System.Action,System.Action,Imui.Core.ImWindowFlag)
+  name.vb: BeginWindow(ImGui, String, Boolean, ImRect, Action, Action, ImWindowFlag)
+  fullName: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, string, ref bool, Imui.Core.ImRect, System.Action, System.Action, Imui.Core.ImWindowFlag)
+  fullName.vb: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, String, Boolean, Imui.Core.ImRect, System.Action, System.Action, Imui.Core.ImWindowFlag)
+  nameWithType: ImGuiWindowExtensions.BeginWindow(ImGui, string, ref bool, ImRect, Action, Action, ImWindowFlag)
+  nameWithType.vb: ImGuiWindowExtensions.BeginWindow(ImGui, String, Boolean, ImRect, Action, Action, ImWindowFlag)
+- uid: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,System.Action,System.Action,Imui.Controls.ImSize,Imui.Core.ImWindowFlag)
+  name: BeginWindow(ImGui, string, ref bool, Action, Action, ImSize, ImWindowFlag)
+  href: api/Imui.Controls.ImGuiWindowExtensions.html#Imui_Controls_ImGuiWindowExtensions_BeginWindow_Imui_Core_ImGui_System_String_System_Boolean__System_Action_System_Action_Imui_Controls_ImSize_Imui_Core_ImWindowFlag_
+  commentId: M:Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,System.Action,System.Action,Imui.Controls.ImSize,Imui.Core.ImWindowFlag)
+  name.vb: BeginWindow(ImGui, String, Boolean, Action, Action, ImSize, ImWindowFlag)
+  fullName: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, string, ref bool, System.Action, System.Action, Imui.Controls.ImSize, Imui.Core.ImWindowFlag)
+  fullName.vb: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, String, Boolean, System.Action, System.Action, Imui.Controls.ImSize, Imui.Core.ImWindowFlag)
+  nameWithType: ImGuiWindowExtensions.BeginWindow(ImGui, string, ref bool, Action, Action, ImSize, ImWindowFlag)
+  nameWithType.vb: ImGuiWindowExtensions.BeginWindow(ImGui, String, Boolean, Action, Action, ImSize, ImWindowFlag)
+- uid: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,System.Boolean@,Imui.Controls.ImSize,Imui.Core.ImWindowFlag)
+  name: BeginWindow(ImGui, string, ref bool, ref bool, ImSize, ImWindowFlag)
+  href: api/Imui.Controls.ImGuiWindowExtensions.html#Imui_Controls_ImGuiWindowExtensions_BeginWindow_Imui_Core_ImGui_System_String_System_Boolean__System_Boolean__Imui_Controls_ImSize_Imui_Core_ImWindowFlag_
+  commentId: M:Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,System.Boolean@,Imui.Controls.ImSize,Imui.Core.ImWindowFlag)
+  name.vb: BeginWindow(ImGui, String, Boolean, Boolean, ImSize, ImWindowFlag)
+  fullName: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, string, ref bool, ref bool, Imui.Controls.ImSize, Imui.Core.ImWindowFlag)
+  fullName.vb: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, String, Boolean, Boolean, Imui.Controls.ImSize, Imui.Core.ImWindowFlag)
+  nameWithType: ImGuiWindowExtensions.BeginWindow(ImGui, string, ref bool, ref bool, ImSize, ImWindowFlag)
+  nameWithType.vb: ImGuiWindowExtensions.BeginWindow(ImGui, String, Boolean, Boolean, ImSize, ImWindowFlag)
+- uid: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,System.Boolean@,Imui.Core.ImRect,Imui.Core.ImWindowFlag)
+  name: BeginWindow(ImGui, string, ref bool, ref bool, ImRect, ImWindowFlag)
+  href: api/Imui.Controls.ImGuiWindowExtensions.html#Imui_Controls_ImGuiWindowExtensions_BeginWindow_Imui_Core_ImGui_System_String_System_Boolean__System_Boolean__Imui_Core_ImRect_Imui_Core_ImWindowFlag_
+  commentId: M:Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,System.Boolean@,Imui.Core.ImRect,Imui.Core.ImWindowFlag)
+  name.vb: BeginWindow(ImGui, String, Boolean, Boolean, ImRect, ImWindowFlag)
+  fullName: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, string, ref bool, ref bool, Imui.Core.ImRect, Imui.Core.ImWindowFlag)
+  fullName.vb: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, String, Boolean, Boolean, Imui.Core.ImRect, Imui.Core.ImWindowFlag)
+  nameWithType: ImGuiWindowExtensions.BeginWindow(ImGui, string, ref bool, ref bool, ImRect, ImWindowFlag)
+  nameWithType.vb: ImGuiWindowExtensions.BeginWindow(ImGui, String, Boolean, Boolean, ImRect, ImWindowFlag)
+- uid: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,System.Boolean@,Imui.Core.ImRect,System.Action,System.Action,Imui.Core.ImWindowFlag)
+  name: BeginWindow(ImGui, string, ref bool, ref bool, ImRect, Action, Action, ImWindowFlag)
+  href: api/Imui.Controls.ImGuiWindowExtensions.html#Imui_Controls_ImGuiWindowExtensions_BeginWindow_Imui_Core_ImGui_System_String_System_Boolean__System_Boolean__Imui_Core_ImRect_System_Action_System_Action_Imui_Core_ImWindowFlag_
+  commentId: M:Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,System.Boolean@,Imui.Core.ImRect,System.Action,System.Action,Imui.Core.ImWindowFlag)
+  name.vb: BeginWindow(ImGui, String, Boolean, Boolean, ImRect, Action, Action, ImWindowFlag)
+  fullName: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, string, ref bool, ref bool, Imui.Core.ImRect, System.Action, System.Action, Imui.Core.ImWindowFlag)
+  fullName.vb: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, String, Boolean, Boolean, Imui.Core.ImRect, System.Action, System.Action, Imui.Core.ImWindowFlag)
+  nameWithType: ImGuiWindowExtensions.BeginWindow(ImGui, string, ref bool, ref bool, ImRect, Action, Action, ImWindowFlag)
+  nameWithType.vb: ImGuiWindowExtensions.BeginWindow(ImGui, String, Boolean, Boolean, ImRect, Action, Action, ImWindowFlag)
+- uid: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,System.Boolean@,Imui.Core.ImRect,System.Action,System.Action,System.Action,System.Action,Imui.Core.ImWindowFlag)
+  name: BeginWindow(ImGui, string, ref bool, ref bool, ImRect, Action, Action, Action, Action, ImWindowFlag)
+  href: api/Imui.Controls.ImGuiWindowExtensions.html#Imui_Controls_ImGuiWindowExtensions_BeginWindow_Imui_Core_ImGui_System_String_System_Boolean__System_Boolean__Imui_Core_ImRect_System_Action_System_Action_System_Action_System_Action_Imui_Core_ImWindowFlag_
+  commentId: M:Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,System.Boolean@,Imui.Core.ImRect,System.Action,System.Action,System.Action,System.Action,Imui.Core.ImWindowFlag)
+  name.vb: BeginWindow(ImGui, String, Boolean, Boolean, ImRect, Action, Action, Action, Action, ImWindowFlag)
+  fullName: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, string, ref bool, ref bool, Imui.Core.ImRect, System.Action, System.Action, System.Action, System.Action, Imui.Core.ImWindowFlag)
+  fullName.vb: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, String, Boolean, Boolean, Imui.Core.ImRect, System.Action, System.Action, System.Action, System.Action, Imui.Core.ImWindowFlag)
+  nameWithType: ImGuiWindowExtensions.BeginWindow(ImGui, string, ref bool, ref bool, ImRect, Action, Action, Action, Action, ImWindowFlag)
+  nameWithType.vb: ImGuiWindowExtensions.BeginWindow(ImGui, String, Boolean, Boolean, ImRect, Action, Action, Action, Action, ImWindowFlag)
+- uid: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,System.Boolean@,System.Action,System.Action,Imui.Controls.ImSize,Imui.Core.ImWindowFlag)
+  name: BeginWindow(ImGui, string, ref bool, ref bool, Action, Action, ImSize, ImWindowFlag)
+  href: api/Imui.Controls.ImGuiWindowExtensions.html#Imui_Controls_ImGuiWindowExtensions_BeginWindow_Imui_Core_ImGui_System_String_System_Boolean__System_Boolean__System_Action_System_Action_Imui_Controls_ImSize_Imui_Core_ImWindowFlag_
+  commentId: M:Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,System.Boolean@,System.Action,System.Action,Imui.Controls.ImSize,Imui.Core.ImWindowFlag)
+  name.vb: BeginWindow(ImGui, String, Boolean, Boolean, Action, Action, ImSize, ImWindowFlag)
+  fullName: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, string, ref bool, ref bool, System.Action, System.Action, Imui.Controls.ImSize, Imui.Core.ImWindowFlag)
+  fullName.vb: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, String, Boolean, Boolean, System.Action, System.Action, Imui.Controls.ImSize, Imui.Core.ImWindowFlag)
+  nameWithType: ImGuiWindowExtensions.BeginWindow(ImGui, string, ref bool, ref bool, Action, Action, ImSize, ImWindowFlag)
+  nameWithType.vb: ImGuiWindowExtensions.BeginWindow(ImGui, String, Boolean, Boolean, Action, Action, ImSize, ImWindowFlag)
+- uid: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,System.Boolean@,System.Action,System.Action,System.Action,System.Action,Imui.Controls.ImSize,Imui.Core.ImWindowFlag)
+  name: BeginWindow(ImGui, string, ref bool, ref bool, Action, Action, Action, Action, ImSize, ImWindowFlag)
+  href: api/Imui.Controls.ImGuiWindowExtensions.html#Imui_Controls_ImGuiWindowExtensions_BeginWindow_Imui_Core_ImGui_System_String_System_Boolean__System_Boolean__System_Action_System_Action_System_Action_System_Action_Imui_Controls_ImSize_Imui_Core_ImWindowFlag_
+  commentId: M:Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui,System.String,System.Boolean@,System.Boolean@,System.Action,System.Action,System.Action,System.Action,Imui.Controls.ImSize,Imui.Core.ImWindowFlag)
+  name.vb: BeginWindow(ImGui, String, Boolean, Boolean, Action, Action, Action, Action, ImSize, ImWindowFlag)
+  fullName: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, string, ref bool, ref bool, System.Action, System.Action, System.Action, System.Action, Imui.Controls.ImSize, Imui.Core.ImWindowFlag)
+  fullName.vb: Imui.Controls.ImGuiWindowExtensions.BeginWindow(Imui.Core.ImGui, String, Boolean, Boolean, System.Action, System.Action, System.Action, System.Action, Imui.Controls.ImSize, Imui.Core.ImWindowFlag)
+  nameWithType: ImGuiWindowExtensions.BeginWindow(ImGui, string, ref bool, ref bool, Action, Action, Action, Action, ImSize, ImWindowFlag)
+  nameWithType.vb: ImGuiWindowExtensions.BeginWindow(ImGui, String, Boolean, Boolean, Action, Action, Action, Action, ImSize, ImWindowFlag)
+- uid: Imui.Controls.ImGuiWindowExtensions.BeginWindow*
+  name: BeginWindow
+  href: api/Imui.Controls.ImGuiWindowExtensions.html#Imui_Controls_ImGuiWindowExtensions_BeginWindow_
+  commentId: Overload:Imui.Controls.ImGuiWindowExtensions.BeginWindow
+  isSpec: "True"
+  fullName: Imui.Controls.ImGuiWindowExtensions.BeginWindow
+  nameWithType: ImGuiWindowExtensions.BeginWindow
 - uid: ZeepSDK
   name: ZeepSDK
   href: api/ZeepSDK.html
@@ -6687,6 +6778,22 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Controls.ControlsApi.DisableAllInput
   nameWithType: ControlsApi.DisableAllInput
+- uid: ZeepSDK.Controls.ControlsApi.DisableAllInputExceptEventSystem(System.Func{System.Boolean})
+  name: DisableAllInputExceptEventSystem(Func<bool>)
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_DisableAllInputExceptEventSystem_System_Func_System_Boolean__
+  commentId: M:ZeepSDK.Controls.ControlsApi.DisableAllInputExceptEventSystem(System.Func{System.Boolean})
+  name.vb: DisableAllInputExceptEventSystem(Func(Of Boolean))
+  fullName: ZeepSDK.Controls.ControlsApi.DisableAllInputExceptEventSystem(System.Func<bool>)
+  fullName.vb: ZeepSDK.Controls.ControlsApi.DisableAllInputExceptEventSystem(System.Func(Of Boolean))
+  nameWithType: ControlsApi.DisableAllInputExceptEventSystem(Func<bool>)
+  nameWithType.vb: ControlsApi.DisableAllInputExceptEventSystem(Func(Of Boolean))
+- uid: ZeepSDK.Controls.ControlsApi.DisableAllInputExceptEventSystem*
+  name: DisableAllInputExceptEventSystem
+  href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_DisableAllInputExceptEventSystem_
+  commentId: Overload:ZeepSDK.Controls.ControlsApi.DisableAllInputExceptEventSystem
+  isSpec: "True"
+  fullName: ZeepSDK.Controls.ControlsApi.DisableAllInputExceptEventSystem
+  nameWithType: ControlsApi.DisableAllInputExceptEventSystem
 - uid: ZeepSDK.Controls.ControlsApi.EnableAllInput
   name: EnableAllInput()
   href: api/ZeepSDK.Controls.ControlsApi.html#ZeepSDK_Controls_ControlsApi_EnableAllInput
@@ -9757,6 +9864,460 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.UI.IZeepTooltip.IsOver
   nameWithType: IZeepTooltip.IsOver
+- uid: ZeepSDK.UI.RectEx
+  name: ZeepSDK.UI.RectEx
+  href: api/ZeepSDK.UI.RectEx.html
+  commentId: N:ZeepSDK.UI.RectEx
+  fullName: ZeepSDK.UI.RectEx
+  nameWithType: ZeepSDK.UI.RectEx
+- uid: ZeepSDK.UI.RectEx.ColumnExtensions
+  name: ColumnExtensions
+  href: api/ZeepSDK.UI.RectEx.ColumnExtensions.html
+  commentId: T:ZeepSDK.UI.RectEx.ColumnExtensions
+  fullName: ZeepSDK.UI.RectEx.ColumnExtensions
+  nameWithType: ColumnExtensions
+- uid: ZeepSDK.UI.RectEx.ColumnExtensions.Column(Imui.Core.ImRect,System.Int32,System.Single)
+  name: Column(ImRect, int, float)
+  href: api/ZeepSDK.UI.RectEx.ColumnExtensions.html#ZeepSDK_UI_RectEx_ColumnExtensions_Column_Imui_Core_ImRect_System_Int32_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.ColumnExtensions.Column(Imui.Core.ImRect,System.Int32,System.Single)
+  name.vb: Column(ImRect, Integer, Single)
+  fullName: ZeepSDK.UI.RectEx.ColumnExtensions.Column(Imui.Core.ImRect, int, float)
+  fullName.vb: ZeepSDK.UI.RectEx.ColumnExtensions.Column(Imui.Core.ImRect, Integer, Single)
+  nameWithType: ColumnExtensions.Column(ImRect, int, float)
+  nameWithType.vb: ColumnExtensions.Column(ImRect, Integer, Single)
+- uid: ZeepSDK.UI.RectEx.ColumnExtensions.Column(Imui.Core.ImRect,System.Single[],System.Single)
+  name: Column(ImRect, float[], float)
+  href: api/ZeepSDK.UI.RectEx.ColumnExtensions.html#ZeepSDK_UI_RectEx_ColumnExtensions_Column_Imui_Core_ImRect_System_Single___System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.ColumnExtensions.Column(Imui.Core.ImRect,System.Single[],System.Single)
+  name.vb: Column(ImRect, Single(), Single)
+  fullName: ZeepSDK.UI.RectEx.ColumnExtensions.Column(Imui.Core.ImRect, float[], float)
+  fullName.vb: ZeepSDK.UI.RectEx.ColumnExtensions.Column(Imui.Core.ImRect, Single(), Single)
+  nameWithType: ColumnExtensions.Column(ImRect, float[], float)
+  nameWithType.vb: ColumnExtensions.Column(ImRect, Single(), Single)
+- uid: ZeepSDK.UI.RectEx.ColumnExtensions.Column(Imui.Core.ImRect,System.Single[],System.Single[],System.Single)
+  name: Column(ImRect, float[], float[], float)
+  href: api/ZeepSDK.UI.RectEx.ColumnExtensions.html#ZeepSDK_UI_RectEx_ColumnExtensions_Column_Imui_Core_ImRect_System_Single___System_Single___System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.ColumnExtensions.Column(Imui.Core.ImRect,System.Single[],System.Single[],System.Single)
+  name.vb: Column(ImRect, Single(), Single(), Single)
+  fullName: ZeepSDK.UI.RectEx.ColumnExtensions.Column(Imui.Core.ImRect, float[], float[], float)
+  fullName.vb: ZeepSDK.UI.RectEx.ColumnExtensions.Column(Imui.Core.ImRect, Single(), Single(), Single)
+  nameWithType: ColumnExtensions.Column(ImRect, float[], float[], float)
+  nameWithType.vb: ColumnExtensions.Column(ImRect, Single(), Single(), Single)
+- uid: ZeepSDK.UI.RectEx.ColumnExtensions.Column*
+  name: Column
+  href: api/ZeepSDK.UI.RectEx.ColumnExtensions.html#ZeepSDK_UI_RectEx_ColumnExtensions_Column_
+  commentId: Overload:ZeepSDK.UI.RectEx.ColumnExtensions.Column
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.ColumnExtensions.Column
+  nameWithType: ColumnExtensions.Column
+- uid: ZeepSDK.UI.RectEx.CutFromExtensions
+  name: CutFromExtensions
+  href: api/ZeepSDK.UI.RectEx.CutFromExtensions.html
+  commentId: T:ZeepSDK.UI.RectEx.CutFromExtensions
+  fullName: ZeepSDK.UI.RectEx.CutFromExtensions
+  nameWithType: CutFromExtensions
+- uid: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromBottom(Imui.Core.ImRect,System.Single,System.Single)
+  name: CutFromBottom(ImRect, float, float)
+  href: api/ZeepSDK.UI.RectEx.CutFromExtensions.html#ZeepSDK_UI_RectEx_CutFromExtensions_CutFromBottom_Imui_Core_ImRect_System_Single_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.CutFromExtensions.CutFromBottom(Imui.Core.ImRect,System.Single,System.Single)
+  name.vb: CutFromBottom(ImRect, Single, Single)
+  fullName: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromBottom(Imui.Core.ImRect, float, float)
+  fullName.vb: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromBottom(Imui.Core.ImRect, Single, Single)
+  nameWithType: CutFromExtensions.CutFromBottom(ImRect, float, float)
+  nameWithType.vb: CutFromExtensions.CutFromBottom(ImRect, Single, Single)
+- uid: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromBottom*
+  name: CutFromBottom
+  href: api/ZeepSDK.UI.RectEx.CutFromExtensions.html#ZeepSDK_UI_RectEx_CutFromExtensions_CutFromBottom_
+  commentId: Overload:ZeepSDK.UI.RectEx.CutFromExtensions.CutFromBottom
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromBottom
+  nameWithType: CutFromExtensions.CutFromBottom
+- uid: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromLeft(Imui.Core.ImRect,System.Single,System.Single)
+  name: CutFromLeft(ImRect, float, float)
+  href: api/ZeepSDK.UI.RectEx.CutFromExtensions.html#ZeepSDK_UI_RectEx_CutFromExtensions_CutFromLeft_Imui_Core_ImRect_System_Single_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.CutFromExtensions.CutFromLeft(Imui.Core.ImRect,System.Single,System.Single)
+  name.vb: CutFromLeft(ImRect, Single, Single)
+  fullName: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromLeft(Imui.Core.ImRect, float, float)
+  fullName.vb: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromLeft(Imui.Core.ImRect, Single, Single)
+  nameWithType: CutFromExtensions.CutFromLeft(ImRect, float, float)
+  nameWithType.vb: CutFromExtensions.CutFromLeft(ImRect, Single, Single)
+- uid: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromLeft*
+  name: CutFromLeft
+  href: api/ZeepSDK.UI.RectEx.CutFromExtensions.html#ZeepSDK_UI_RectEx_CutFromExtensions_CutFromLeft_
+  commentId: Overload:ZeepSDK.UI.RectEx.CutFromExtensions.CutFromLeft
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromLeft
+  nameWithType: CutFromExtensions.CutFromLeft
+- uid: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromRight(Imui.Core.ImRect,System.Single,System.Single)
+  name: CutFromRight(ImRect, float, float)
+  href: api/ZeepSDK.UI.RectEx.CutFromExtensions.html#ZeepSDK_UI_RectEx_CutFromExtensions_CutFromRight_Imui_Core_ImRect_System_Single_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.CutFromExtensions.CutFromRight(Imui.Core.ImRect,System.Single,System.Single)
+  name.vb: CutFromRight(ImRect, Single, Single)
+  fullName: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromRight(Imui.Core.ImRect, float, float)
+  fullName.vb: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromRight(Imui.Core.ImRect, Single, Single)
+  nameWithType: CutFromExtensions.CutFromRight(ImRect, float, float)
+  nameWithType.vb: CutFromExtensions.CutFromRight(ImRect, Single, Single)
+- uid: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromRight*
+  name: CutFromRight
+  href: api/ZeepSDK.UI.RectEx.CutFromExtensions.html#ZeepSDK_UI_RectEx_CutFromExtensions_CutFromRight_
+  commentId: Overload:ZeepSDK.UI.RectEx.CutFromExtensions.CutFromRight
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromRight
+  nameWithType: CutFromExtensions.CutFromRight
+- uid: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromTop(Imui.Core.ImRect,System.Single,System.Single)
+  name: CutFromTop(ImRect, float, float)
+  href: api/ZeepSDK.UI.RectEx.CutFromExtensions.html#ZeepSDK_UI_RectEx_CutFromExtensions_CutFromTop_Imui_Core_ImRect_System_Single_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.CutFromExtensions.CutFromTop(Imui.Core.ImRect,System.Single,System.Single)
+  name.vb: CutFromTop(ImRect, Single, Single)
+  fullName: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromTop(Imui.Core.ImRect, float, float)
+  fullName.vb: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromTop(Imui.Core.ImRect, Single, Single)
+  nameWithType: CutFromExtensions.CutFromTop(ImRect, float, float)
+  nameWithType.vb: CutFromExtensions.CutFromTop(ImRect, Single, Single)
+- uid: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromTop*
+  name: CutFromTop
+  href: api/ZeepSDK.UI.RectEx.CutFromExtensions.html#ZeepSDK_UI_RectEx_CutFromExtensions_CutFromTop_
+  commentId: Overload:ZeepSDK.UI.RectEx.CutFromExtensions.CutFromTop
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.CutFromExtensions.CutFromTop
+  nameWithType: CutFromExtensions.CutFromTop
+- uid: ZeepSDK.UI.RectEx.GridExtensions
+  name: GridExtensions
+  href: api/ZeepSDK.UI.RectEx.GridExtensions.html
+  commentId: T:ZeepSDK.UI.RectEx.GridExtensions
+  fullName: ZeepSDK.UI.RectEx.GridExtensions
+  nameWithType: GridExtensions
+- uid: ZeepSDK.UI.RectEx.GridExtensions.Grid(Imui.Core.ImRect,System.Int32,System.Int32,System.Single)
+  name: Grid(ImRect, int, int, float)
+  href: api/ZeepSDK.UI.RectEx.GridExtensions.html#ZeepSDK_UI_RectEx_GridExtensions_Grid_Imui_Core_ImRect_System_Int32_System_Int32_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.GridExtensions.Grid(Imui.Core.ImRect,System.Int32,System.Int32,System.Single)
+  name.vb: Grid(ImRect, Integer, Integer, Single)
+  fullName: ZeepSDK.UI.RectEx.GridExtensions.Grid(Imui.Core.ImRect, int, int, float)
+  fullName.vb: ZeepSDK.UI.RectEx.GridExtensions.Grid(Imui.Core.ImRect, Integer, Integer, Single)
+  nameWithType: GridExtensions.Grid(ImRect, int, int, float)
+  nameWithType.vb: GridExtensions.Grid(ImRect, Integer, Integer, Single)
+- uid: ZeepSDK.UI.RectEx.GridExtensions.Grid(Imui.Core.ImRect,System.Int32,System.Int32,System.Single,System.Single)
+  name: Grid(ImRect, int, int, float, float)
+  href: api/ZeepSDK.UI.RectEx.GridExtensions.html#ZeepSDK_UI_RectEx_GridExtensions_Grid_Imui_Core_ImRect_System_Int32_System_Int32_System_Single_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.GridExtensions.Grid(Imui.Core.ImRect,System.Int32,System.Int32,System.Single,System.Single)
+  name.vb: Grid(ImRect, Integer, Integer, Single, Single)
+  fullName: ZeepSDK.UI.RectEx.GridExtensions.Grid(Imui.Core.ImRect, int, int, float, float)
+  fullName.vb: ZeepSDK.UI.RectEx.GridExtensions.Grid(Imui.Core.ImRect, Integer, Integer, Single, Single)
+  nameWithType: GridExtensions.Grid(ImRect, int, int, float, float)
+  nameWithType.vb: GridExtensions.Grid(ImRect, Integer, Integer, Single, Single)
+- uid: ZeepSDK.UI.RectEx.GridExtensions.Grid(Imui.Core.ImRect,System.Int32,System.Single)
+  name: Grid(ImRect, int, float)
+  href: api/ZeepSDK.UI.RectEx.GridExtensions.html#ZeepSDK_UI_RectEx_GridExtensions_Grid_Imui_Core_ImRect_System_Int32_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.GridExtensions.Grid(Imui.Core.ImRect,System.Int32,System.Single)
+  name.vb: Grid(ImRect, Integer, Single)
+  fullName: ZeepSDK.UI.RectEx.GridExtensions.Grid(Imui.Core.ImRect, int, float)
+  fullName.vb: ZeepSDK.UI.RectEx.GridExtensions.Grid(Imui.Core.ImRect, Integer, Single)
+  nameWithType: GridExtensions.Grid(ImRect, int, float)
+  nameWithType.vb: GridExtensions.Grid(ImRect, Integer, Single)
+- uid: ZeepSDK.UI.RectEx.GridExtensions.Grid*
+  name: Grid
+  href: api/ZeepSDK.UI.RectEx.GridExtensions.html#ZeepSDK_UI_RectEx_GridExtensions_Grid_
+  commentId: Overload:ZeepSDK.UI.RectEx.GridExtensions.Grid
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.GridExtensions.Grid
+  nameWithType: GridExtensions.Grid
+- uid: ZeepSDK.UI.RectEx.Internal
+  name: ZeepSDK.UI.RectEx.Internal
+  href: api/ZeepSDK.UI.RectEx.Internal.html
+  commentId: N:ZeepSDK.UI.RectEx.Internal
+  fullName: ZeepSDK.UI.RectEx.Internal
+  nameWithType: ZeepSDK.UI.RectEx.Internal
+- uid: ZeepSDK.UI.RectEx.Internal.IEnumerableExtension
+  name: IEnumerableExtension
+  href: api/ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.html
+  commentId: T:ZeepSDK.UI.RectEx.Internal.IEnumerableExtension
+  fullName: ZeepSDK.UI.RectEx.Internal.IEnumerableExtension
+  nameWithType: IEnumerableExtension
+- uid: ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.Merge*
+  name: Merge
+  href: api/ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.html#ZeepSDK_UI_RectEx_Internal_IEnumerableExtension_Merge_
+  commentId: Overload:ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.Merge
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.Merge
+  nameWithType: IEnumerableExtension.Merge
+- uid: ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.Merge``3(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Func{``0,``1,``2})
+  name: Merge<TFirst, TSecond, TResult>(IEnumerable<TFirst>, IEnumerable<TSecond>, Func<TFirst, TSecond, TResult>)
+  href: api/ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.html#ZeepSDK_UI_RectEx_Internal_IEnumerableExtension_Merge__3_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__System_Func___0___1___2__
+  commentId: M:ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.Merge``3(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Func{``0,``1,``2})
+  name.vb: Merge(Of TFirst, TSecond, TResult)(IEnumerable(Of TFirst), IEnumerable(Of TSecond), Func(Of TFirst, TSecond, TResult))
+  fullName: ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.Merge<TFirst, TSecond, TResult>(System.Collections.Generic.IEnumerable<TFirst>, System.Collections.Generic.IEnumerable<TSecond>, System.Func<TFirst, TSecond, TResult>)
+  fullName.vb: ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.Merge(Of TFirst, TSecond, TResult)(System.Collections.Generic.IEnumerable(Of TFirst), System.Collections.Generic.IEnumerable(Of TSecond), System.Func(Of TFirst, TSecond, TResult))
+  nameWithType: IEnumerableExtension.Merge<TFirst, TSecond, TResult>(IEnumerable<TFirst>, IEnumerable<TSecond>, Func<TFirst, TSecond, TResult>)
+  nameWithType.vb: IEnumerableExtension.Merge(Of TFirst, TSecond, TResult)(IEnumerable(Of TFirst), IEnumerable(Of TSecond), Func(Of TFirst, TSecond, TResult))
+- uid: ZeepSDK.UI.RectEx.MiscellaniousExtensions
+  name: MiscellaniousExtensions
+  href: api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html
+  commentId: T:ZeepSDK.UI.RectEx.MiscellaniousExtensions
+  fullName: ZeepSDK.UI.RectEx.MiscellaniousExtensions
+  nameWithType: MiscellaniousExtensions
+- uid: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Abs(Imui.Core.ImRect)
+  name: Abs(ImRect)
+  href: api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html#ZeepSDK_UI_RectEx_MiscellaniousExtensions_Abs_Imui_Core_ImRect_
+  commentId: M:ZeepSDK.UI.RectEx.MiscellaniousExtensions.Abs(Imui.Core.ImRect)
+  fullName: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Abs(Imui.Core.ImRect)
+  nameWithType: MiscellaniousExtensions.Abs(ImRect)
+- uid: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Abs*
+  name: Abs
+  href: api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html#ZeepSDK_UI_RectEx_MiscellaniousExtensions_Abs_
+  commentId: Overload:ZeepSDK.UI.RectEx.MiscellaniousExtensions.Abs
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Abs
+  nameWithType: MiscellaniousExtensions.Abs
+- uid: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Extend(Imui.Core.ImRect,System.Single)
+  name: Extend(ImRect, float)
+  href: api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html#ZeepSDK_UI_RectEx_MiscellaniousExtensions_Extend_Imui_Core_ImRect_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.MiscellaniousExtensions.Extend(Imui.Core.ImRect,System.Single)
+  name.vb: Extend(ImRect, Single)
+  fullName: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Extend(Imui.Core.ImRect, float)
+  fullName.vb: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Extend(Imui.Core.ImRect, Single)
+  nameWithType: MiscellaniousExtensions.Extend(ImRect, float)
+  nameWithType.vb: MiscellaniousExtensions.Extend(ImRect, Single)
+- uid: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Extend*
+  name: Extend
+  href: api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html#ZeepSDK_UI_RectEx_MiscellaniousExtensions_Extend_
+  commentId: Overload:ZeepSDK.UI.RectEx.MiscellaniousExtensions.Extend
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Extend
+  nameWithType: MiscellaniousExtensions.Extend
+- uid: ZeepSDK.UI.RectEx.MiscellaniousExtensions.FirstLine(Imui.Core.ImRect,System.Single)
+  name: FirstLine(ImRect, float)
+  href: api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html#ZeepSDK_UI_RectEx_MiscellaniousExtensions_FirstLine_Imui_Core_ImRect_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.MiscellaniousExtensions.FirstLine(Imui.Core.ImRect,System.Single)
+  name.vb: FirstLine(ImRect, Single)
+  fullName: ZeepSDK.UI.RectEx.MiscellaniousExtensions.FirstLine(Imui.Core.ImRect, float)
+  fullName.vb: ZeepSDK.UI.RectEx.MiscellaniousExtensions.FirstLine(Imui.Core.ImRect, Single)
+  nameWithType: MiscellaniousExtensions.FirstLine(ImRect, float)
+  nameWithType.vb: MiscellaniousExtensions.FirstLine(ImRect, Single)
+- uid: ZeepSDK.UI.RectEx.MiscellaniousExtensions.FirstLine*
+  name: FirstLine
+  href: api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html#ZeepSDK_UI_RectEx_MiscellaniousExtensions_FirstLine_
+  commentId: Overload:ZeepSDK.UI.RectEx.MiscellaniousExtensions.FirstLine
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.MiscellaniousExtensions.FirstLine
+  nameWithType: MiscellaniousExtensions.FirstLine
+- uid: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Intend(Imui.Core.ImRect,System.Single)
+  name: Intend(ImRect, float)
+  href: api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html#ZeepSDK_UI_RectEx_MiscellaniousExtensions_Intend_Imui_Core_ImRect_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.MiscellaniousExtensions.Intend(Imui.Core.ImRect,System.Single)
+  name.vb: Intend(ImRect, Single)
+  fullName: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Intend(Imui.Core.ImRect, float)
+  fullName.vb: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Intend(Imui.Core.ImRect, Single)
+  nameWithType: MiscellaniousExtensions.Intend(ImRect, float)
+  nameWithType.vb: MiscellaniousExtensions.Intend(ImRect, Single)
+- uid: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Intend*
+  name: Intend
+  href: api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html#ZeepSDK_UI_RectEx_MiscellaniousExtensions_Intend_
+  commentId: Overload:ZeepSDK.UI.RectEx.MiscellaniousExtensions.Intend
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Intend
+  nameWithType: MiscellaniousExtensions.Intend
+- uid: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Invert(Imui.Core.ImRect)
+  name: Invert(ImRect)
+  href: api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html#ZeepSDK_UI_RectEx_MiscellaniousExtensions_Invert_Imui_Core_ImRect_
+  commentId: M:ZeepSDK.UI.RectEx.MiscellaniousExtensions.Invert(Imui.Core.ImRect)
+  fullName: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Invert(Imui.Core.ImRect)
+  nameWithType: MiscellaniousExtensions.Invert(ImRect)
+- uid: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Invert*
+  name: Invert
+  href: api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html#ZeepSDK_UI_RectEx_MiscellaniousExtensions_Invert_
+  commentId: Overload:ZeepSDK.UI.RectEx.MiscellaniousExtensions.Invert
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Invert
+  nameWithType: MiscellaniousExtensions.Invert
+- uid: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Union(Imui.Core.ImRect,Imui.Core.ImRect[])
+  name: Union(ImRect, params ImRect[])
+  href: api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html#ZeepSDK_UI_RectEx_MiscellaniousExtensions_Union_Imui_Core_ImRect_Imui_Core_ImRect___
+  commentId: M:ZeepSDK.UI.RectEx.MiscellaniousExtensions.Union(Imui.Core.ImRect,Imui.Core.ImRect[])
+  name.vb: Union(ImRect, ParamArray ImRect())
+  fullName: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Union(Imui.Core.ImRect, params Imui.Core.ImRect[])
+  fullName.vb: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Union(Imui.Core.ImRect, ParamArray Imui.Core.ImRect())
+  nameWithType: MiscellaniousExtensions.Union(ImRect, params ImRect[])
+  nameWithType.vb: MiscellaniousExtensions.Union(ImRect, ParamArray ImRect())
+- uid: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Union*
+  name: Union
+  href: api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html#ZeepSDK_UI_RectEx_MiscellaniousExtensions_Union_
+  commentId: Overload:ZeepSDK.UI.RectEx.MiscellaniousExtensions.Union
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.MiscellaniousExtensions.Union
+  nameWithType: MiscellaniousExtensions.Union
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions
+  name: MoveToExtensions
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html
+  commentId: T:ZeepSDK.UI.RectEx.MoveToExtensions
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions
+  nameWithType: MoveToExtensions
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveDown(Imui.Core.ImRect,System.Single)
+  name: MoveDown(ImRect, float)
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveDown_Imui_Core_ImRect_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.MoveToExtensions.MoveDown(Imui.Core.ImRect,System.Single)
+  name.vb: MoveDown(ImRect, Single)
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveDown(Imui.Core.ImRect, float)
+  fullName.vb: ZeepSDK.UI.RectEx.MoveToExtensions.MoveDown(Imui.Core.ImRect, Single)
+  nameWithType: MoveToExtensions.MoveDown(ImRect, float)
+  nameWithType.vb: MoveToExtensions.MoveDown(ImRect, Single)
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveDown*
+  name: MoveDown
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveDown_
+  commentId: Overload:ZeepSDK.UI.RectEx.MoveToExtensions.MoveDown
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveDown
+  nameWithType: MoveToExtensions.MoveDown
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveDownFor(Imui.Core.ImRect,System.Single,System.Single)
+  name: MoveDownFor(ImRect, float, float)
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveDownFor_Imui_Core_ImRect_System_Single_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.MoveToExtensions.MoveDownFor(Imui.Core.ImRect,System.Single,System.Single)
+  name.vb: MoveDownFor(ImRect, Single, Single)
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveDownFor(Imui.Core.ImRect, float, float)
+  fullName.vb: ZeepSDK.UI.RectEx.MoveToExtensions.MoveDownFor(Imui.Core.ImRect, Single, Single)
+  nameWithType: MoveToExtensions.MoveDownFor(ImRect, float, float)
+  nameWithType.vb: MoveToExtensions.MoveDownFor(ImRect, Single, Single)
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveDownFor*
+  name: MoveDownFor
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveDownFor_
+  commentId: Overload:ZeepSDK.UI.RectEx.MoveToExtensions.MoveDownFor
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveDownFor
+  nameWithType: MoveToExtensions.MoveDownFor
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveLeft(Imui.Core.ImRect,System.Single)
+  name: MoveLeft(ImRect, float)
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveLeft_Imui_Core_ImRect_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.MoveToExtensions.MoveLeft(Imui.Core.ImRect,System.Single)
+  name.vb: MoveLeft(ImRect, Single)
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveLeft(Imui.Core.ImRect, float)
+  fullName.vb: ZeepSDK.UI.RectEx.MoveToExtensions.MoveLeft(Imui.Core.ImRect, Single)
+  nameWithType: MoveToExtensions.MoveLeft(ImRect, float)
+  nameWithType.vb: MoveToExtensions.MoveLeft(ImRect, Single)
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveLeft*
+  name: MoveLeft
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveLeft_
+  commentId: Overload:ZeepSDK.UI.RectEx.MoveToExtensions.MoveLeft
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveLeft
+  nameWithType: MoveToExtensions.MoveLeft
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveLeftFor(Imui.Core.ImRect,System.Single,System.Single)
+  name: MoveLeftFor(ImRect, float, float)
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveLeftFor_Imui_Core_ImRect_System_Single_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.MoveToExtensions.MoveLeftFor(Imui.Core.ImRect,System.Single,System.Single)
+  name.vb: MoveLeftFor(ImRect, Single, Single)
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveLeftFor(Imui.Core.ImRect, float, float)
+  fullName.vb: ZeepSDK.UI.RectEx.MoveToExtensions.MoveLeftFor(Imui.Core.ImRect, Single, Single)
+  nameWithType: MoveToExtensions.MoveLeftFor(ImRect, float, float)
+  nameWithType.vb: MoveToExtensions.MoveLeftFor(ImRect, Single, Single)
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveLeftFor*
+  name: MoveLeftFor
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveLeftFor_
+  commentId: Overload:ZeepSDK.UI.RectEx.MoveToExtensions.MoveLeftFor
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveLeftFor
+  nameWithType: MoveToExtensions.MoveLeftFor
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveRight(Imui.Core.ImRect,System.Single)
+  name: MoveRight(ImRect, float)
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveRight_Imui_Core_ImRect_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.MoveToExtensions.MoveRight(Imui.Core.ImRect,System.Single)
+  name.vb: MoveRight(ImRect, Single)
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveRight(Imui.Core.ImRect, float)
+  fullName.vb: ZeepSDK.UI.RectEx.MoveToExtensions.MoveRight(Imui.Core.ImRect, Single)
+  nameWithType: MoveToExtensions.MoveRight(ImRect, float)
+  nameWithType.vb: MoveToExtensions.MoveRight(ImRect, Single)
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveRight*
+  name: MoveRight
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveRight_
+  commentId: Overload:ZeepSDK.UI.RectEx.MoveToExtensions.MoveRight
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveRight
+  nameWithType: MoveToExtensions.MoveRight
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveRightFor(Imui.Core.ImRect,System.Single,System.Single)
+  name: MoveRightFor(ImRect, float, float)
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveRightFor_Imui_Core_ImRect_System_Single_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.MoveToExtensions.MoveRightFor(Imui.Core.ImRect,System.Single,System.Single)
+  name.vb: MoveRightFor(ImRect, Single, Single)
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveRightFor(Imui.Core.ImRect, float, float)
+  fullName.vb: ZeepSDK.UI.RectEx.MoveToExtensions.MoveRightFor(Imui.Core.ImRect, Single, Single)
+  nameWithType: MoveToExtensions.MoveRightFor(ImRect, float, float)
+  nameWithType.vb: MoveToExtensions.MoveRightFor(ImRect, Single, Single)
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveRightFor*
+  name: MoveRightFor
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveRightFor_
+  commentId: Overload:ZeepSDK.UI.RectEx.MoveToExtensions.MoveRightFor
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveRightFor
+  nameWithType: MoveToExtensions.MoveRightFor
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveUp(Imui.Core.ImRect,System.Single)
+  name: MoveUp(ImRect, float)
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveUp_Imui_Core_ImRect_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.MoveToExtensions.MoveUp(Imui.Core.ImRect,System.Single)
+  name.vb: MoveUp(ImRect, Single)
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveUp(Imui.Core.ImRect, float)
+  fullName.vb: ZeepSDK.UI.RectEx.MoveToExtensions.MoveUp(Imui.Core.ImRect, Single)
+  nameWithType: MoveToExtensions.MoveUp(ImRect, float)
+  nameWithType.vb: MoveToExtensions.MoveUp(ImRect, Single)
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveUp*
+  name: MoveUp
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveUp_
+  commentId: Overload:ZeepSDK.UI.RectEx.MoveToExtensions.MoveUp
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveUp
+  nameWithType: MoveToExtensions.MoveUp
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveUpFor(Imui.Core.ImRect,System.Single,System.Single)
+  name: MoveUpFor(ImRect, float, float)
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveUpFor_Imui_Core_ImRect_System_Single_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.MoveToExtensions.MoveUpFor(Imui.Core.ImRect,System.Single,System.Single)
+  name.vb: MoveUpFor(ImRect, Single, Single)
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveUpFor(Imui.Core.ImRect, float, float)
+  fullName.vb: ZeepSDK.UI.RectEx.MoveToExtensions.MoveUpFor(Imui.Core.ImRect, Single, Single)
+  nameWithType: MoveToExtensions.MoveUpFor(ImRect, float, float)
+  nameWithType.vb: MoveToExtensions.MoveUpFor(ImRect, Single, Single)
+- uid: ZeepSDK.UI.RectEx.MoveToExtensions.MoveUpFor*
+  name: MoveUpFor
+  href: api/ZeepSDK.UI.RectEx.MoveToExtensions.html#ZeepSDK_UI_RectEx_MoveToExtensions_MoveUpFor_
+  commentId: Overload:ZeepSDK.UI.RectEx.MoveToExtensions.MoveUpFor
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.MoveToExtensions.MoveUpFor
+  nameWithType: MoveToExtensions.MoveUpFor
+- uid: ZeepSDK.UI.RectEx.RowExtensions
+  name: RowExtensions
+  href: api/ZeepSDK.UI.RectEx.RowExtensions.html
+  commentId: T:ZeepSDK.UI.RectEx.RowExtensions
+  fullName: ZeepSDK.UI.RectEx.RowExtensions
+  nameWithType: RowExtensions
+- uid: ZeepSDK.UI.RectEx.RowExtensions.Row(Imui.Core.ImRect,System.Int32,System.Single)
+  name: Row(ImRect, int, float)
+  href: api/ZeepSDK.UI.RectEx.RowExtensions.html#ZeepSDK_UI_RectEx_RowExtensions_Row_Imui_Core_ImRect_System_Int32_System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.RowExtensions.Row(Imui.Core.ImRect,System.Int32,System.Single)
+  name.vb: Row(ImRect, Integer, Single)
+  fullName: ZeepSDK.UI.RectEx.RowExtensions.Row(Imui.Core.ImRect, int, float)
+  fullName.vb: ZeepSDK.UI.RectEx.RowExtensions.Row(Imui.Core.ImRect, Integer, Single)
+  nameWithType: RowExtensions.Row(ImRect, int, float)
+  nameWithType.vb: RowExtensions.Row(ImRect, Integer, Single)
+- uid: ZeepSDK.UI.RectEx.RowExtensions.Row(Imui.Core.ImRect,System.Single[],System.Single)
+  name: Row(ImRect, float[], float)
+  href: api/ZeepSDK.UI.RectEx.RowExtensions.html#ZeepSDK_UI_RectEx_RowExtensions_Row_Imui_Core_ImRect_System_Single___System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.RowExtensions.Row(Imui.Core.ImRect,System.Single[],System.Single)
+  name.vb: Row(ImRect, Single(), Single)
+  fullName: ZeepSDK.UI.RectEx.RowExtensions.Row(Imui.Core.ImRect, float[], float)
+  fullName.vb: ZeepSDK.UI.RectEx.RowExtensions.Row(Imui.Core.ImRect, Single(), Single)
+  nameWithType: RowExtensions.Row(ImRect, float[], float)
+  nameWithType.vb: RowExtensions.Row(ImRect, Single(), Single)
+- uid: ZeepSDK.UI.RectEx.RowExtensions.Row(Imui.Core.ImRect,System.Single[],System.Single[],System.Single)
+  name: Row(ImRect, float[], float[], float)
+  href: api/ZeepSDK.UI.RectEx.RowExtensions.html#ZeepSDK_UI_RectEx_RowExtensions_Row_Imui_Core_ImRect_System_Single___System_Single___System_Single_
+  commentId: M:ZeepSDK.UI.RectEx.RowExtensions.Row(Imui.Core.ImRect,System.Single[],System.Single[],System.Single)
+  name.vb: Row(ImRect, Single(), Single(), Single)
+  fullName: ZeepSDK.UI.RectEx.RowExtensions.Row(Imui.Core.ImRect, float[], float[], float)
+  fullName.vb: ZeepSDK.UI.RectEx.RowExtensions.Row(Imui.Core.ImRect, Single(), Single(), Single)
+  nameWithType: RowExtensions.Row(ImRect, float[], float[], float)
+  nameWithType.vb: RowExtensions.Row(ImRect, Single(), Single(), Single)
+- uid: ZeepSDK.UI.RectEx.RowExtensions.Row*
+  name: Row
+  href: api/ZeepSDK.UI.RectEx.RowExtensions.html#ZeepSDK_UI_RectEx_RowExtensions_Row_
+  commentId: Overload:ZeepSDK.UI.RectEx.RowExtensions.Row
+  isSpec: "True"
+  fullName: ZeepSDK.UI.RectEx.RowExtensions.Row
+  nameWithType: RowExtensions.Row
 - uid: ZeepSDK.UI.UIApi
   name: UIApi
   href: api/ZeepSDK.UI.UIApi.html
