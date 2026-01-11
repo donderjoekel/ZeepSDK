@@ -8,6 +8,7 @@ using Imui.Controls;
 using Imui.Core;
 using Imui.Rendering;
 using UnityEngine;
+using ZeepSDK.Controls;
 using ZeepSDK.UI;
 
 namespace ZeepSDK.Settings;
@@ -44,11 +45,17 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
     private readonly List<PluginInfo> _plugins = [];
     private bool _open = false;
     private bool _openKeyPopup = false;
+    private bool _mouse = false;
 
     private SelectedPluginInfo _selectedPluginInfo;
     private ConfigEntryBase _currentKeyCodeEntry;
     private KeyCode _currentKeyCode;
     private float _keyCodeCountdown = 10f;
+
+    public ZeepSettingsDrawer()
+    {
+        ControlsApi.DisableAllInputExceptEventSystem(() => (_open && _mouse) || _openKeyPopup);
+    }
 
     public void Open()
     {
@@ -73,7 +80,7 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
     public void OnZeepGUI(ImGui gui)
     {
         const int windowHeight = 720;
-        if (gui.BeginWindow("Zeep Settings", ref _open, (1280, windowHeight)))
+        if (gui.BeginWindow("Zeep Settings", ref _open, ref _mouse, (1280, windowHeight)))
         {
             var maxHeight = gui.GetLayoutHeight();
             using (gui.Horizontal())
@@ -121,7 +128,8 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
         var id = gui.PushId("ZeepSettingsKeyCodePopup");
         {
             gui.BeginPopup();
-            var rect = ImWindow.GetInitialWindowRect(gui, new ImSize(600, 300));
+            var rect = ImWindow.GetInitialWindowRect(gui, new ImSize(600, 300));\
+            
             gui.Canvas.PushClipRect(rect);
             gui.Canvas.PushRectMask(rect, 0);
             gui.Box(rect, gui.Style.Window.Box);
@@ -166,7 +174,6 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
         }
 
         gui.PopId();
-
 
         _keyCodeCountdown -= Time.deltaTime;
         if (_keyCodeCountdown <= 0)
