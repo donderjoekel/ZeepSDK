@@ -14,8 +14,8 @@ public static class GridExtensions
 
     public static ImRect[,] Grid(this ImRect rect, int rows, int columns, float spaceBetweenRows, float spaceBetweenColumns)
     {
-        ImRect[][] grid = rect.Column(rows, spaceBetweenRows)
-            .Select(x => x.Row(columns, spaceBetweenColumns))
+        ImRect[][] grid = RowExtensions.Row(rect, rows, spaceBetweenRows)
+            .Select(x => ColumnExtensions.Column(x, columns, spaceBetweenColumns))
             .ToArray();
 
         ImRect[,] result = new ImRect[rows, columns];
