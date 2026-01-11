@@ -128,7 +128,7 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
         var id = gui.PushId("ZeepSettingsKeyCodePopup");
         {
             gui.BeginPopup();
-            var rect = ImWindow.GetInitialWindowRect(gui, new ImSize(600, 300));\
+            var rect = ImWindow.GetInitialWindowRect(gui, new ImSize(600, 300));
             
             gui.Canvas.PushClipRect(rect);
             gui.Canvas.PushRectMask(rect, 0);
