@@ -7954,6 +7954,19 @@ references:
   commentId: E:ZeepSDK.LevelEditor.LevelEditorApi.ExitedLevelEditor
   fullName: ZeepSDK.LevelEditor.LevelEditorApi.ExitedLevelEditor
   nameWithType: LevelEditorApi.ExitedLevelEditor
+- uid: ZeepSDK.LevelEditor.LevelEditorApi.IsInLevelEditor
+  name: IsInLevelEditor
+  href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_IsInLevelEditor
+  commentId: P:ZeepSDK.LevelEditor.LevelEditorApi.IsInLevelEditor
+  fullName: ZeepSDK.LevelEditor.LevelEditorApi.IsInLevelEditor
+  nameWithType: LevelEditorApi.IsInLevelEditor
+- uid: ZeepSDK.LevelEditor.LevelEditorApi.IsInLevelEditor*
+  name: IsInLevelEditor
+  href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_IsInLevelEditor_
+  commentId: Overload:ZeepSDK.LevelEditor.LevelEditorApi.IsInLevelEditor
+  isSpec: "True"
+  fullName: ZeepSDK.LevelEditor.LevelEditorApi.IsInLevelEditor
+  nameWithType: LevelEditorApi.IsInLevelEditor
 - uid: ZeepSDK.LevelEditor.LevelEditorApi.IsKeyboardInputBlocked
   name: IsKeyboardInputBlocked
   href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_IsKeyboardInputBlocked
@@ -7980,6 +7993,19 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.LevelEditor.LevelEditorApi.IsMouseInputBlocked
   nameWithType: LevelEditorApi.IsMouseInputBlocked
+- uid: ZeepSDK.LevelEditor.LevelEditorApi.IsTestingLevel
+  name: IsTestingLevel
+  href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_IsTestingLevel
+  commentId: P:ZeepSDK.LevelEditor.LevelEditorApi.IsTestingLevel
+  fullName: ZeepSDK.LevelEditor.LevelEditorApi.IsTestingLevel
+  nameWithType: LevelEditorApi.IsTestingLevel
+- uid: ZeepSDK.LevelEditor.LevelEditorApi.IsTestingLevel*
+  name: IsTestingLevel
+  href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_IsTestingLevel_
+  commentId: Overload:ZeepSDK.LevelEditor.LevelEditorApi.IsTestingLevel
+  isSpec: "True"
+  fullName: ZeepSDK.LevelEditor.LevelEditorApi.IsTestingLevel
+  nameWithType: LevelEditorApi.IsTestingLevel
 - uid: ZeepSDK.LevelEditor.LevelEditorApi.LevelLoaded
   name: LevelLoaded
   href: api/ZeepSDK.LevelEditor.LevelEditorApi.html#ZeepSDK_LevelEditor_LevelEditorApi_LevelLoaded
