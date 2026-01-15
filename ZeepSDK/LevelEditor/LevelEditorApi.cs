@@ -75,6 +75,16 @@ public static class LevelEditorApi
     /// Boolean indicating whether the keyboard input is currently being blocked
     /// </summary>
     public static bool IsKeyboardInputBlocked => keyboardInputBlockers.Count > 0;
+    
+    /// <summary>
+    /// Boolean indicating whether the user is in the level editor or not
+    /// </summary>
+    public static bool IsInLevelEditor { get; private set; }
+    
+    /// <summary>
+    /// Boolean indicating whether the user is testing their custom-made level or not
+    /// </summary>
+    public static bool IsTestingLevel { get; private set; }
 
     internal static void Initialize(GameObject gameObject)
     {
@@ -91,6 +101,7 @@ public static class LevelEditorApi
             if (SetupGame.GlobalLevel.IsTestLevel)
             {
                 EnteredTestMode.InvokeSafe();
+                IsTestingLevel = true;
             }
         };
 
@@ -106,9 +117,15 @@ public static class LevelEditorApi
             ComponentCache.Get<LEV_Selection>().ThingsJustGotDeselected.AddListener(HandleThingsJustGotDeselected);
 
             EnteredLevelEditor.InvokeSafe();
+            IsInLevelEditor = true;
+            IsTestingLevel = false;
         };
 
-        LEV_LevelEditorCentral_OnDestroy.PostfixEvent += () => ExitedLevelEditor.InvokeSafe();
+        LEV_LevelEditorCentral_OnDestroy.PostfixEvent += () =>
+        {
+            ExitedLevelEditor.InvokeSafe();
+            IsInLevelEditor = false;
+        };
         LEV_SaveLoad_ExternalLoad.PostfixEvent += () => LevelLoaded.InvokeSafe();
         LEV_SaveLoad_ExternalSaveFile.PostfixEvent += () => LevelSaved.InvokeSafe();
     }
