@@ -8,6 +8,18 @@ using ZeepSDK.Level;
 
 namespace ZeepSDK.Tests;
 
+/**
+ * LegacyHashCompatibilityTests is an unbreakable contract between ZeepSDK and
+ * the ZeepCentraal API for legacy SHA1 hash generation for CSV levels.
+ *
+ * NEVER modify recorded hashes in `vectors.csv`.
+ *
+ * If a test fails to generate the expected hash, it is a breaking change and
+ * must be corrected before merging. Breaking this contract will result in
+ * ZeepSDK/GTR being unable to associate record submissions to the correct level
+ * in ZeepCentraal.
+ */
+
 public class LegacyHashCompatibilityTests
 {
     private static readonly string FixtureDirectory =
