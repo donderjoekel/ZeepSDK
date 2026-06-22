@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>net472</TargetFramework>
         <AssemblyName>ZeepSDK</AssemblyName>
@@ -28,7 +27,13 @@
 
     <ItemGroup>
         <None Include="..\README.md" Pack="true" PackagePath="\" />
+        <ProjectReference Include="..\ZeepSDK.BugSnag\ZeepSDK.BugSnag.csproj" />
+        <ProjectReference Include="..\ZeepSDK.FluentResults\ZeepSDK.FluentResults.csproj" />
+        <ProjectReference Include="..\ZeepSDK.R3\ZeepSDK.R3.csproj" />
+        <ProjectReference Include="..\ZeepSDK.RectEx\ZeepSDK.RectEx.csproj" />
         <ProjectReference Include="..\ZeepSDK.SecretsGenerator\ZeepSDK.SecretsGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+        <ProjectReference Include="..\ZeepSDK.UniTask\ZeepSDK.UniTask.csproj" />
+        <ProjectReference Include="..\ZeepSDK.UnityConverters\ZeepSDK.UnityConverters.csproj" />
         <ProjectReference Include="..\ZeepSDK.ZuaGenerator\ZeepSDK.ZuaGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
         <None Update="StandaloneWindows">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -49,14 +54,34 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="BepInEx.Analyzers" Version="1.0.8" PrivateAssets="all" />
-        <PackageReference Include="BepInEx.Core" Version="5.4.21" PrivateAssets="all" />
-        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0" PrivateAssets="all" />
-        <PackageReference Include="MoonSharp" Version="2.0.0" />
-        <PackageReference Include="Zeepkist.GameLibs" Version="17.32.1912" PrivateAssets="all" />
+        <PackageReference Include="BepInEx.Analyzers" PrivateAssets="all" />
+        <PackageReference Include="BepInEx.Core" PrivateAssets="all" />
+        <PackageReference Include="BepInEx.PluginInfoProps" PrivateAssets="all" />
+        <PackageReference Include="ILRepack.Lib.MSBuild.Task">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="MoonSharp" />
+        <PackageReference Include="Zeepkist.GameLibs" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" PrivateAssets="All" />
     </ItemGroup>
 
-    <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
-        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
-    </ItemGroup>
+    <Target Name="ILRepacker" AfterTargets="Build">
+        <ItemGroup>
+            <InputAssemblies Include="$(OutputPath)ZeepSDK.dll" />
+            <InputAssemblies Include="$(OutputPath)ZeepSDK.BugSnag.dll" />
+            <InputAssemblies Include="$(OutputPath)ZeepSDK.FluentResults.dll" />
+            <InputAssemblies Include="$(OutputPath)ZeepSDK.R3.dll" />
+            <InputAssemblies Include="$(OutputPath)ZeepSDK.RectEx.dll" />
+            <InputAssemblies Include="$(OutputPath)ZeepSDK.UniTask.dll" />
+            <InputAssemblies Include="$(OutputPath)ZeepSDK.UnityConverters.dll" />
+            <ILRepackLib Include="@(ReferencePathWithRefAssemblies->'%(RootDir)%(Directory)'->Distinct())" />
+        </ItemGroup>
+        <ILRepack
+                Parallel="true"
+                InputAssemblies="@(InputAssemblies)"
+                LibraryPath="@(ILRepackLib)"
+                TargetKind="Dll"
+                OutputFile="$(OutputPath)ZeepSDKPacked.dll" />
+    </Target>
 </Project>
