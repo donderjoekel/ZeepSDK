@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <Nullable>disable</Nullable>
+        <IsPackable>false</IsPackable>
+        <IsTestProject>true</IsTestProject>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+        <PackageReference Include="xunit" Version="2.9.3" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="3.1.5">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Include="..\ZeepSDK\Extensions\StringBuilderExtensions.cs" Link="Source\StringBuilderExtensions.cs" />
+        <Compile Include="..\ZeepSDK\Level\CsvZeepBlock.cs" Link="Source\CsvZeepBlock.cs" />
+        <Compile Include="..\ZeepSDK\Level\CsvZeepLevel.cs" Link="Source\CsvZeepLevel.cs" />
+        <Compile Include="..\ZeepSDK\Level\CsvZeepLevelParser.cs" Link="Source\CsvZeepLevelParser.cs" />
+        <Compile Include="..\ZeepSDK\Numerics\Vector2.cs" Link="Source\Vector2.cs" />
+        <Compile Include="..\ZeepSDK\Numerics\Vector3.cs" Link="Source\Vector3.cs" />
+        <Compile Include="..\ZeepSDK\Utilities\SequenceComparer.cs" Link="Source\SequenceComparer.cs" />
+        <Compile Include="..\ZeepSDK\Utilities\Vector3Comparer.cs" Link="Source\Vector3Comparer.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="testdata\legacy-hash\**\*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+</Project>
