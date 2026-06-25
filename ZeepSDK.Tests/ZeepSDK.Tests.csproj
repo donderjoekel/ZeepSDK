@@ -23,6 +23,8 @@
         <Compile Include="..\ZeepSDK\Level\CsvZeepBlock.cs" Link="Source\CsvZeepBlock.cs" />
         <Compile Include="..\ZeepSDK\Level\CsvZeepLevel.cs" Link="Source\CsvZeepLevel.cs" />
         <Compile Include="..\ZeepSDK\Level\CsvZeepLevelParser.cs" Link="Source\CsvZeepLevelParser.cs" />
+        <Compile Include="..\ZeepSDK\Level\LevelHashV2.cs" Link="Source\LevelHashV2.cs" />
+        <Compile Include="..\ZeepSDK\Level\LevelHashV2Calculator.cs" Link="Source\LevelHashV2Calculator.cs" />
         <Compile Include="..\ZeepSDK\Level\XxHash128Reflection.cs" Link="Source\XxHash128Reflection.cs" />
         <Compile Include="..\ZeepSDK\Numerics\Vector2.cs" Link="Source\Vector2.cs" />
         <Compile Include="..\ZeepSDK\Numerics\Vector3.cs" Link="Source\Vector3.cs" />
@@ -36,6 +38,8 @@
         </None>
     </ItemGroup>
 </Project>
+
+
 
 
 
