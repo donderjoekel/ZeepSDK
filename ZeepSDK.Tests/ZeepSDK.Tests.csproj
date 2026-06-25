@@ -9,6 +9,8 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+        <PackageReference Include="System.IO.Hashing" Version="10.0.0" />
         <PackageReference Include="xunit" Version="2.9.3" />
         <PackageReference Include="xunit.runner.visualstudio" Version="3.1.5">
             <PrivateAssets>all</PrivateAssets>
@@ -21,6 +23,7 @@
         <Compile Include="..\ZeepSDK\Level\CsvZeepBlock.cs" Link="Source\CsvZeepBlock.cs" />
         <Compile Include="..\ZeepSDK\Level\CsvZeepLevel.cs" Link="Source\CsvZeepLevel.cs" />
         <Compile Include="..\ZeepSDK\Level\CsvZeepLevelParser.cs" Link="Source\CsvZeepLevelParser.cs" />
+        <Compile Include="..\ZeepSDK\Level\XxHash128Reflection.cs" Link="Source\XxHash128Reflection.cs" />
         <Compile Include="..\ZeepSDK\Numerics\Vector2.cs" Link="Source\Vector2.cs" />
         <Compile Include="..\ZeepSDK\Numerics\Vector3.cs" Link="Source\Vector3.cs" />
         <Compile Include="..\ZeepSDK\Utilities\SequenceComparer.cs" Link="Source\SequenceComparer.cs" />
@@ -33,3 +36,8 @@
         </None>
     </ItemGroup>
 </Project>
+
+
+
+
+
