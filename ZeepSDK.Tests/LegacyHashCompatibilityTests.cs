@@ -72,7 +72,7 @@ public class LegacyHashCompatibilityTests
             return;
         }
 
-        JObject json = JObject.Parse(content);
+        JObject json = ParseCanonicalJson(content);
         Assert.Equal(expectedZeepHash, json["level"]?["zeepHash"]?.Value<string>());
         Assert.Equal(expectedXxh128, XxHash(CanonicalJsonBlocks(json)));
     }
@@ -160,3 +160,4 @@ public class LegacyHashCompatibilityTests
         return builder.ToString();
     }
 }
+
