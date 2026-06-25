@@ -76,7 +76,7 @@ public static class LevelApi
 
             return levelScriptableObject.useLevelV15Data
                 ? LevelHashV2Calculator.Calculate(levelScriptableObject.GetV15LevelData(), zeepHash)
-                : LevelHashV2Calculator.CalculateOldCsv(levelScriptableObject.GetOldLevelData(), zeepHash);
+                : LevelHashV2Calculator.CalculateCsv(levelScriptableObject.LevelData, zeepHash);
         }
         catch (Exception e)
         {
@@ -121,7 +121,7 @@ public static class LevelApi
             }
             else
             {
-                csvZeepLevel = CsvZeepLevelParser.Parse(levelScriptableObject.GetOldLevelData());
+                csvZeepLevel = CsvZeepLevelParser.Parse(levelScriptableObject.LevelData);
             }
 
             if (csvZeepLevel != null && (levelScriptableObject.UseAvonturenLevel || levelScriptableObject.IsAdventureLevel))
@@ -138,5 +138,4 @@ public static class LevelApi
     }
 
 }
-
 

@@ -25,12 +25,12 @@ internal static class LevelHashV2Calculator
         return CalculateCsv(levelData, zeepHash);
     }
 
-    internal static LevelHashV2 CalculateOldCsv(IEnumerable<string> lines, string zeepHash)
+    internal static LevelHashV2 CalculateCsv(IEnumerable<string> csvLevelData, string zeepHash)
     {
-        if (lines == null || string.IsNullOrEmpty(zeepHash))
+        if (csvLevelData == null || string.IsNullOrEmpty(zeepHash))
             return null;
 
-        CsvZeepLevel csvZeepLevel = CsvZeepLevelParser.Parse(lines.ToArray());
+        CsvZeepLevel csvZeepLevel = CsvZeepLevelParser.Parse(csvLevelData.ToArray());
         return new LevelHashV2 { Hash = csvZeepLevel?.CalculateXxHash(), ZeepHash = zeepHash };
     }
 
@@ -144,3 +144,4 @@ internal static class LevelHashV2Calculator
         return hashBuilder.ToString();
     }
 }
+
