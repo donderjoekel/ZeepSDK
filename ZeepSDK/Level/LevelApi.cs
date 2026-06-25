@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.IO.Hashing;
 using System.Linq;
 using System.Text;
 using BepInEx.Logging;
@@ -11,7 +10,6 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ZeepSDK.Level.Patches;
 using ZeepSDK.Scripting.Attributes;
-using ZeepSDK.Scripting.Functions;
 using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Level;
@@ -148,7 +146,7 @@ public static class LevelApi
 
             if (csvZeepLevel != null && (levelScriptableObject.UseAvonturenLevel || levelScriptableObject.IsAdventureLevel))
                 return levelScriptableObject.UID;
-        
+
             return csvZeepLevel?.CalculateHash();
         }
         catch (Exception e)
@@ -243,4 +241,3 @@ public static class LevelApi
         return hashBuilder.ToString();
     }
 }
-

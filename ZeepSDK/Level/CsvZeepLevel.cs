@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.IO.Hashing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -17,7 +16,7 @@ internal class CsvZeepLevel
     private static readonly Vector3Comparer _vector3Comparer = new();
     private static readonly IntComparer _intSequenceComparer = new();
     private static readonly FloatComparer _floatSequenceComparer = new();
-    
+
     internal CsvZeepLevel()
     {
         Blocks = new List<CsvZeepBlock>();
@@ -47,7 +46,7 @@ internal class CsvZeepLevel
     {
         return XxHash(this);
     }
-    
+
     internal static string Hash(CsvZeepLevel zeepLevel)
     {
         if (zeepLevel == null)
@@ -108,4 +107,3 @@ internal class CsvZeepLevel
         return hashBuilder.ToString();
     }
 }
-
