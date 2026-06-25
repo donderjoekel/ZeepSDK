@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace ZeepSDK.Level;
+namespace ZeepSDK.Utilities;
 
 internal static class XxHash128Reflection
 {
