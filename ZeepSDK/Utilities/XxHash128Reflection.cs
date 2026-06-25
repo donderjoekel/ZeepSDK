@@ -3,6 +3,12 @@ using System.Reflection;
 
 namespace ZeepSDK.Utilities;
 
+/// <summary>
+/// Calls System.IO.Hashing.XxHash128 without referencing Span-based APIs at compile time.
+/// ZeepSDK targets .NET Framework for Unity/BepInEx; direct System.IO.Hashing calls pull in
+/// System.Memory compile-time types that conflict with Unity profile assemblies. Reflection keeps
+/// the dependency runtime-only while preserving identical XXH128 output.
+/// </summary>
 internal static class XxHash128Reflection
 {
     private static readonly Func<byte[], byte[]> HashFunction = ResolveHashFunction();
@@ -21,3 +27,4 @@ internal static class XxHash128Reflection
         return (Func<byte[], byte[]>)Delegate.CreateDelegate(typeof(Func<byte[], byte[]>), hashMethod);
     }
 }
+
