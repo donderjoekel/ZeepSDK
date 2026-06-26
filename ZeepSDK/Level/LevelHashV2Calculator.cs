@@ -14,6 +14,7 @@ internal static class LevelHashV2Calculator
 {
     private const string WinSeparator = "\r\n";
     private const string UnixSeparator = "\n";
+    private const int PresentBlockId = 2264;
 
     internal static LevelHashV2 Calculate(string levelData, string zeepHash)
     {
@@ -66,6 +67,7 @@ internal static class LevelHashV2Calculator
     {
         JArray blocks = (JArray)root["blox"];
         IEnumerable<string> orderedBlocks = blocks
+            .Where(block => block["i"]?.Value<int>() != PresentBlockId)
             .Select((block, index) => new { Canonical = CanonicalJson(block), Index = index })
             .OrderBy(block => block.Canonical, StringComparer.Ordinal)
             .ThenBy(block => block.Index)
@@ -145,4 +147,3 @@ internal static class LevelHashV2Calculator
         return hashBuilder.ToString();
     }
 }
-

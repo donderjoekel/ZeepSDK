@@ -71,8 +71,14 @@ public class LegacyHashCompatibilityTests
         Assert.Equal(expectedXxh128, hash.Hash);
     }
 
+    [Fact]
+    public void JsonPresentBlocksDoNotAffectXxHash()
+    {
+        string content = @"{""level"":{""UID"":""uid-json"",""zeepHash"":""legacy-json-hash""},""author"":{""name"":""Author"",""StmID"":""76561198000000000""},""medals"":{""author"":10,""gold"":11,""silver"":12,""bronze"":13},""enviro"":{""skybox"":2,""groundMat"":-1},""blox"":[{""z"":1,""i"":1609,""d"":{""n"":{""ch5"":1}}}]}";
+        string withPresentBlock = @"{""level"":{""UID"":""uid-json"",""zeepHash"":""legacy-json-hash""},""author"":{""name"":""Author"",""StmID"":""76561198000000000""},""medals"":{""author"":10,""gold"":11,""silver"":12,""bronze"":13},""enviro"":{""skybox"":2,""groundMat"":-1},""blox"":[{""z"":1,""i"":1609,""d"":{""n"":{""ch5"":1}}},{""i"":2264,""u"":""present"",""z"":999}]}]}";
+
+        Assert.Equal(
+            LevelHashV2Calculator.Calculate(content, "legacy-json-hash").Hash,
+            LevelHashV2Calculator.Calculate(withPresentBlock, "legacy-json-hash").Hash);
+    }
 }
-
-
-
-
