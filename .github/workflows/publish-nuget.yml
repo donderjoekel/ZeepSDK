@@ -7,6 +7,8 @@ on:
 
 jobs:
   publish:
+    permissions:
+      id-token: write
     runs-on: ubuntu-latest
 
     steps:
@@ -22,5 +24,11 @@ jobs:
     - name: Build, Test, and Pack
       run: dotnet build --configuration Release && dotnet test --configuration Release --no-build && dotnet pack --configuration Release --no-build --output ./nuget
 
+    - name: NuGet login (OIDC → temp API key)
+      uses: NuGet/login@v1
+      id: login
+      with:
+        user: donderjoekel
+
     - name: Publish NuGet package
-      run: dotnet nuget push ./nuget/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push ./nuget/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{steps.login.outputs.NUGET_API_KEY}}
