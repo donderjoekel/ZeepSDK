@@ -73,8 +73,11 @@ public static class LevelApi
                 return null;
 
             levelScriptableObject.ForceCheckIfOldOrNewData();
+            bool useV15LevelData = levelScriptableObject.useLevelV15Data ||
+                                   levelScriptableObject.UseAvonturenLevel ||
+                                   levelScriptableObject.IsAdventureLevel;
 
-            return levelScriptableObject.useLevelV15Data
+            return useV15LevelData
                 ? LevelHashV2Calculator.Calculate(levelScriptableObject.GetV15LevelData(), zeepHash)
                 : LevelHashV2Calculator.CalculateCsv(levelScriptableObject.GetOldLevelData(), zeepHash);
         }
