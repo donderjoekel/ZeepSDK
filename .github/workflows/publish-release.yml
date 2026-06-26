@@ -4,7 +4,14 @@ on:
   release:
     types: [published]
   workflow_dispatch:
-  
+    inputs:
+      version:
+        description: Version to build (e.g. 2.3.0 or v2.3.0). Required for manual runs.
+        required: true
+      dry_run:
+        description: Skip mod.io upload and attach the zip as a workflow artifact instead
+        type: boolean
+        default: true
 
 env:
   GAME_ID: 3213
@@ -15,9 +22,16 @@ jobs:
     runs-on: windows-2025
     steps:
       - name: Extract version (trim leading v)
+        shell: pwsh
         run: |
           $raw = "${{ github.event.release.tag_name }}"
+          if ([string]::IsNullOrWhiteSpace($raw)) {
+            $raw = "${{ github.event.inputs.version }}"
+          }
           $version = $raw -replace '^v',''
+          if ([string]::IsNullOrWhiteSpace($version)) {
+            throw "No version found. Provide a release tag or the workflow_dispatch version input."
+          }
           "VERSION=$version" >> $env:GITHUB_ENV
 
       - name: Checkout
@@ -39,17 +53,38 @@ jobs:
           version: ${{ env.VERSION }}
 
       - name: Publish
-        run: dotnet publish --artifacts-path "C:\out" /p:BugsnagKey="${{ secrets.BUGSNAG_KEY }}"
+        run: dotnet publish "${{ steps.csproj.outputs.csproj_path }}" -c Release --artifacts-path "C:\out" /p:BugsnagKey="${{ secrets.BUGSNAG_KEY }}"
+
+      - name: Verify publish output
+        shell: pwsh
+        run: |
+          $src = "C:\out\publish\${{ steps.csproj.outputs.csproj_name }}\release"
+          if (-not (Test-Path $src)) {
+            throw "Publish output not found: $src"
+          }
+          Get-ChildItem $src | Format-Table Name, Length
+          $dll = Join-Path $src "${{ steps.csproj.outputs.csproj_name }}.dll"
+          $pdb = Join-Path $src "${{ steps.csproj.outputs.csproj_name }}.pdb"
+          if (-not (Test-Path $dll)) { throw "DLL not found: $dll" }
+          if (-not (Test-Path $pdb)) { throw "Portable PDB not found: $pdb" }
 
       - name: Zip build
         shell: pwsh
         run: |
-          $src = "C:\out\publish\${{ steps.csproj.outputs.csproj_name }}\debug"
+          $src = "C:\out\publish\${{ steps.csproj.outputs.csproj_name }}\release"
           $dst = "C:\out\build-${{ env.VERSION }}.zip"
           if (Test-Path $dst) { Remove-Item $dst -Force }
           Compress-Archive -Path "$src\*" -DestinationPath $dst -Force
 
+      - name: Upload build artifact (dry run)
+        if: github.event_name == 'workflow_dispatch' && inputs.dry_run
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-${{ env.VERSION }}
+          path: C:\out\build-${{ env.VERSION }}.zip
+
       - name: Upload mod to mod.io
+        if: github.event_name == 'release' || !inputs.dry_run
         uses: Thundernerd/upload-mod-to-modio@v1.0.0
         with:
           bearer-token: ${{ secrets.MODIO_BEARER }}
