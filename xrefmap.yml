@@ -7642,6 +7642,19 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Level.LevelApi.CurrentHash
   nameWithType: LevelApi.CurrentHash
+- uid: ZeepSDK.Level.LevelApi.CurrentHashV2
+  name: CurrentHashV2
+  href: api/ZeepSDK.Level.LevelApi.html#ZeepSDK_Level_LevelApi_CurrentHashV2
+  commentId: P:ZeepSDK.Level.LevelApi.CurrentHashV2
+  fullName: ZeepSDK.Level.LevelApi.CurrentHashV2
+  nameWithType: LevelApi.CurrentHashV2
+- uid: ZeepSDK.Level.LevelApi.CurrentHashV2*
+  name: CurrentHashV2
+  href: api/ZeepSDK.Level.LevelApi.html#ZeepSDK_Level_LevelApi_CurrentHashV2_
+  commentId: Overload:ZeepSDK.Level.LevelApi.CurrentHashV2
+  isSpec: "True"
+  fullName: ZeepSDK.Level.LevelApi.CurrentHashV2
+  nameWithType: LevelApi.CurrentHashV2
 - uid: ZeepSDK.Level.LevelApi.CurrentLevel
   name: CurrentLevel
   href: api/ZeepSDK.Level.LevelApi.html#ZeepSDK_Level_LevelApi_CurrentLevel
@@ -7668,6 +7681,51 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Level.LevelApi.GetLevelHash
   nameWithType: LevelApi.GetLevelHash
+- uid: ZeepSDK.Level.LevelApi.GetLevelHashV2(LevelScriptableObject)
+  name: GetLevelHashV2(LevelScriptableObject)
+  href: api/ZeepSDK.Level.LevelApi.html#ZeepSDK_Level_LevelApi_GetLevelHashV2_LevelScriptableObject_
+  commentId: M:ZeepSDK.Level.LevelApi.GetLevelHashV2(LevelScriptableObject)
+  fullName: ZeepSDK.Level.LevelApi.GetLevelHashV2(LevelScriptableObject)
+  nameWithType: LevelApi.GetLevelHashV2(LevelScriptableObject)
+- uid: ZeepSDK.Level.LevelApi.GetLevelHashV2*
+  name: GetLevelHashV2
+  href: api/ZeepSDK.Level.LevelApi.html#ZeepSDK_Level_LevelApi_GetLevelHashV2_
+  commentId: Overload:ZeepSDK.Level.LevelApi.GetLevelHashV2
+  isSpec: "True"
+  fullName: ZeepSDK.Level.LevelApi.GetLevelHashV2
+  nameWithType: LevelApi.GetLevelHashV2
+- uid: ZeepSDK.Level.LevelHashV2
+  name: LevelHashV2
+  href: api/ZeepSDK.Level.LevelHashV2.html
+  commentId: T:ZeepSDK.Level.LevelHashV2
+  fullName: ZeepSDK.Level.LevelHashV2
+  nameWithType: LevelHashV2
+- uid: ZeepSDK.Level.LevelHashV2.Hash
+  name: Hash
+  href: api/ZeepSDK.Level.LevelHashV2.html#ZeepSDK_Level_LevelHashV2_Hash
+  commentId: P:ZeepSDK.Level.LevelHashV2.Hash
+  fullName: ZeepSDK.Level.LevelHashV2.Hash
+  nameWithType: LevelHashV2.Hash
+- uid: ZeepSDK.Level.LevelHashV2.Hash*
+  name: Hash
+  href: api/ZeepSDK.Level.LevelHashV2.html#ZeepSDK_Level_LevelHashV2_Hash_
+  commentId: Overload:ZeepSDK.Level.LevelHashV2.Hash
+  isSpec: "True"
+  fullName: ZeepSDK.Level.LevelHashV2.Hash
+  nameWithType: LevelHashV2.Hash
+- uid: ZeepSDK.Level.LevelHashV2.ZeepHash
+  name: ZeepHash
+  href: api/ZeepSDK.Level.LevelHashV2.html#ZeepSDK_Level_LevelHashV2_ZeepHash
+  commentId: P:ZeepSDK.Level.LevelHashV2.ZeepHash
+  fullName: ZeepSDK.Level.LevelHashV2.ZeepHash
+  nameWithType: LevelHashV2.ZeepHash
+- uid: ZeepSDK.Level.LevelHashV2.ZeepHash*
+  name: ZeepHash
+  href: api/ZeepSDK.Level.LevelHashV2.html#ZeepSDK_Level_LevelHashV2_ZeepHash_
+  commentId: Overload:ZeepSDK.Level.LevelHashV2.ZeepHash
+  isSpec: "True"
+  fullName: ZeepSDK.Level.LevelHashV2.ZeepHash
+  nameWithType: LevelHashV2.ZeepHash
 - uid: ZeepSDK.LevelEditor
   name: ZeepSDK.LevelEditor
   href: api/ZeepSDK.LevelEditor.html

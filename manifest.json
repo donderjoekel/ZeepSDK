@@ -1474,6 +1474,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Level.LevelHashV2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Level.LevelHashV2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Level.LevelHashV2",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Level.LevelHashV2.yml\" sourcestartlinenumber=\"1\">Represents the version 2 of a level hash.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Level.yml",
       "output": {
         ".html": {
