@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -16,7 +16,7 @@ internal class CsvZeepLevel
     private static readonly Vector3Comparer _vector3Comparer = new();
     private static readonly IntComparer _intSequenceComparer = new();
     private static readonly FloatComparer _floatSequenceComparer = new();
-    
+
     internal CsvZeepLevel()
     {
         Blocks = new List<CsvZeepBlock>();
@@ -41,7 +41,12 @@ internal class CsvZeepLevel
     {
         return Hash(this);
     }
-    
+
+    public string CalculateXxHash()
+    {
+        return XxHash(this);
+    }
+
     internal static string Hash(CsvZeepLevel zeepLevel)
     {
         if (zeepLevel == null)
@@ -50,6 +55,24 @@ internal class CsvZeepLevel
             return null;
         }
 
+        byte[] hash = SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(CanonicalContent(zeepLevel)));
+        return ToUpperHex(hash);
+    }
+
+    internal static string XxHash(CsvZeepLevel zeepLevel)
+    {
+        if (zeepLevel == null)
+        {
+            logger.LogWarning("Trying to hash a null level");
+            return null;
+        }
+
+        byte[] hash = XxHash128Reflection.Hash(Encoding.UTF8.GetBytes(CanonicalContent(zeepLevel)));
+        return ToUpperHex(hash);
+    }
+
+    internal static string CanonicalContent(CsvZeepLevel zeepLevel)
+    {
         StringBuilder inputBuilder = new();
         inputBuilder.AppendCLRF(zeepLevel.Skybox.ToString());
         inputBuilder.AppendCLRF(zeepLevel.Ground.ToString());
@@ -69,7 +92,11 @@ internal class CsvZeepLevel
             inputBuilder.AppendCLRF(block.ToString());
         }
 
-        byte[] hash = SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(inputBuilder.ToString()));
+        return inputBuilder.ToString();
+    }
+
+    private static string ToUpperHex(byte[] hash)
+    {
         StringBuilder hashBuilder = new(hash.Length * 2);
 
         foreach (byte b in hash)

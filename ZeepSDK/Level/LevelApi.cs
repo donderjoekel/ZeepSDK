@@ -1,11 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using BepInEx.Logging;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
 using ZeepSDK.Level.Patches;
 using ZeepSDK.Scripting.Attributes;
-using ZeepSDK.Scripting.Functions;
 using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Level;
@@ -26,6 +25,12 @@ public static class LevelApi
     public static string CurrentHash { get; private set; }
 
     /// <summary>
+    /// The trusted V2 hash of the current level
+    /// </summary>
+    [GenerateProperty]
+    public static LevelHashV2 CurrentHashV2 { get; private set; }
+
+    /// <summary>
     /// Gets the current level that is being played
     /// </summary>
     [GenerateProperty]
@@ -39,6 +44,7 @@ public static class LevelApi
     private static void FinishLoading(SetupGame instance)
     {
         CurrentHash = GetLevelHash(instance.GlobalLevel);
+        CurrentHashV2 = GetLevelHashV2(instance.GlobalLevel);
     }
 
     private static LevelScriptableObject GetLevelFromLoader()
@@ -51,6 +57,33 @@ public static class LevelApi
             return null;
 
         return PlayerManager.Instance.loader.GlobalLevel;
+    }
+
+    /// <summary>
+    /// Creates a trusted content hash and legacy zeepHash for this level
+    /// </summary>
+    /// <param name="levelScriptableObject">The level to hash</param>
+    [GenerateFunction]
+    public static LevelHashV2 GetLevelHashV2(LevelScriptableObject levelScriptableObject)
+    {
+        try
+        {
+            string zeepHash = GetLevelHash(levelScriptableObject);
+            if (string.IsNullOrEmpty(zeepHash))
+                return null;
+
+            levelScriptableObject.ForceCheckIfOldOrNewData();
+
+            return levelScriptableObject.useLevelV15Data
+                ? LevelHashV2Calculator.Calculate(levelScriptableObject.GetV15LevelData(), zeepHash)
+                : LevelHashV2Calculator.CalculateCsv(levelScriptableObject.GetOldLevelData(), zeepHash);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError("Failed to calculate level hash V2");
+            _logger.LogError(e);
+            return null;
+        }
     }
 
     /// <summary>
@@ -93,7 +126,7 @@ public static class LevelApi
 
             if (csvZeepLevel != null && (levelScriptableObject.UseAvonturenLevel || levelScriptableObject.IsAdventureLevel))
                 return levelScriptableObject.UID;
-        
+
             return csvZeepLevel?.CalculateHash();
         }
         catch (Exception e)
@@ -103,4 +136,5 @@ public static class LevelApi
             return null;
         }
     }
+
 }

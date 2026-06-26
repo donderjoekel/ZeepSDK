@@ -10,7 +10,7 @@ namespace ZeepSDK.Tests;
 
 /**
  * LegacyHashCompatibilityTests is an unbreakable contract between ZeepSDK and
- * the ZeepCentraal API for legacy SHA1 hash generation for CSV levels.
+ * the ZeepCentraal API for legacy SHA1/zeepHash and XXH128 hash generation.
  *
  * NEVER modify recorded hashes in `vectors.csv`.
  *
@@ -33,16 +33,22 @@ public class LegacyHashCompatibilityTests
             .Select(line =>
             {
                 string[] values = line.Split(',');
-                return new object[] { values[0], values[1], values[2] };
+                return new object[] { values[0], values[1], values[2], values[3], values[4] };
             });
     }
 
     [Theory]
     [MemberData(nameof(Vectors))]
-    public void CsvHashMatchesGoldenVector(string fileName, string expectedSha1, string expectedSha256)
+    public void HashesMatchGoldenVector(
+        string fileName,
+        string format,
+        string expectedZeepHash,
+        string expectedSha256,
+        string expectedXxh128)
     {
         string path = Path.Combine(FixtureDirectory, fileName);
         byte[] bytes = File.ReadAllBytes(path);
+        string content = File.ReadAllText(path);
 
         string actualSha256;
         using (SHA256 sha256 = SHA256.Create())
@@ -50,10 +56,29 @@ public class LegacyHashCompatibilityTests
             actualSha256 = string.Concat(sha256.ComputeHash(bytes).Select(value => value.ToString("X2")));
         }
 
-        CsvZeepLevel level = CsvZeepLevelParser.Parse(File.ReadAllLines(path));
-
-        Assert.NotNull(level);
         Assert.Equal(expectedSha256, actualSha256);
-        Assert.Equal(expectedSha1, level.CalculateHash());
+
+        if (format == "csv")
+        {
+            CsvZeepLevel level = CsvZeepLevelParser.Parse(File.ReadAllLines(path));
+            Assert.NotNull(level);
+            Assert.Equal(expectedZeepHash, level.CalculateHash());
+            Assert.Equal(expectedXxh128, level.CalculateXxHash());
+            return;
+        }
+        LevelHashV2 hash = LevelHashV2Calculator.Calculate(content, expectedZeepHash);
+        Assert.Equal(expectedZeepHash, hash.ZeepHash);
+        Assert.Equal(expectedXxh128, hash.Hash);
+    }
+
+    [Fact]
+    public void JsonPresentBlocksDoNotAffectXxHash()
+    {
+        string content = @"{""level"":{""UID"":""uid-json"",""zeepHash"":""legacy-json-hash""},""author"":{""name"":""Author"",""StmID"":""76561198000000000""},""medals"":{""author"":10,""gold"":11,""silver"":12,""bronze"":13},""enviro"":{""skybox"":2,""groundMat"":-1},""blox"":[{""z"":1,""i"":1609,""d"":{""n"":{""ch5"":1}}}]}";
+        string withPresentBlock = @"{""level"":{""UID"":""uid-json"",""zeepHash"":""legacy-json-hash""},""author"":{""name"":""Author"",""StmID"":""76561198000000000""},""medals"":{""author"":10,""gold"":11,""silver"":12,""bronze"":13},""enviro"":{""skybox"":2,""groundMat"":-1},""blox"":[{""z"":1,""i"":1609,""d"":{""n"":{""ch5"":1}}},{""i"":2264,""u"":""present"",""z"":999}]}]}";
+
+        Assert.Equal(
+            LevelHashV2Calculator.Calculate(content, "legacy-json-hash").Hash,
+            LevelHashV2Calculator.Calculate(withPresentBlock, "legacy-json-hash").Hash);
     }
 }
