@@ -3,6 +3,8 @@ name: Release
 on:
   release:
     types: [published]
+  workflow_dispatch:
+  
 
 env:
   GAME_ID: 3213
@@ -38,24 +40,6 @@ jobs:
 
       - name: Publish
         run: dotnet publish --artifacts-path "C:\out" /p:BugsnagKey="${{ secrets.BUGSNAG_KEY }}"
-
-      - name: Get AssemblyName
-        id: asm
-        uses: ./.github/actions/get-assembly-name
-        with:
-          csproj: ${{ steps.csproj.outputs.csproj_path }}
-
-      - name: Remove msstore source
-        run: winget source remove msstore
-
-      - name: Install Mono
-        run: winget install -e --id Mono.Mono --accept-package-agreements --accept-source-agreements --disable-interactivity
-
-      - name: PDB2MDB
-        shell: cmd
-        run: >
-          "C:\Program Files\Mono\bin\pdb2mdb.bat"
-          "C:\out\publish\${{ steps.csproj.outputs.csproj_name }}\debug\${{ steps.asm.outputs.assembly_name }}.dll"
 
       - name: Zip build
         shell: pwsh
