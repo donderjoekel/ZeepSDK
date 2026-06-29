@@ -9,6 +9,7 @@ using Imui.Core;
 using Imui.Rendering;
 using UnityEngine;
 using ZeepSDK.Controls;
+using ZeepSDK.LevelEditor;
 using ZeepSDK.UI;
 
 namespace ZeepSDK.Settings;
@@ -75,12 +76,18 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
     {
         _open = false;
         _openKeyPopup = false;
+        UpdateMouseInputBlock();
     }
 
     public void OnZeepGUI(ImGui gui)
     {
         const int windowHeight = 720;
-        if (gui.BeginWindow("Zeep Settings", ref _open, ref _mouse, (1280, windowHeight)))
+        if (gui.BeginWindow("Zeep Settings", ref _open, ref _mouse,
+                windowOpened: null,
+                windowClosed: () => UpdateMouseInputBlock(),
+                mouseEntered: () => UpdateMouseInputBlock(mouseOver: true),
+                mouseExited: () => UpdateMouseInputBlock(mouseOver: false),
+                size: (1280, windowHeight)))
         {
             var maxHeight = gui.GetLayoutHeight();
             using (gui.Horizontal())
@@ -182,9 +189,23 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
         }
     }
 
+    private void BlockMouseInput() => LevelEditorApi.BlockMouseInput(this);
+
+    private void UnblockMouseInput() => LevelEditorApi.UnblockMouseInput(this);
+
+    private void UpdateMouseInputBlock(bool? mouseOver = null)
+    {
+        bool mouse = mouseOver ?? _mouse;
+        if ((_open && mouse) || _openKeyPopup)
+            BlockMouseInput();
+        else
+            UnblockMouseInput();
+    }
+
     private void OpenKeyPopup(ConfigEntryBase entry)
     {
         _openKeyPopup = true;
+        UpdateMouseInputBlock();
         _keyCodeCountdown = 10;
         _currentKeyCodeEntry = entry;
         _currentKeyCode = (KeyCode)_currentKeyCodeEntry.BoxedValue;
@@ -193,6 +214,7 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
     private void CloseKeyPopup(bool save)
     {
         _openKeyPopup = false;
+        UpdateMouseInputBlock();
         if (!save)
             return;
 
