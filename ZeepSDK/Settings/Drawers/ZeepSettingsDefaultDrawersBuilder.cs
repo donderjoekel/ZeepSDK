@@ -12,8 +12,10 @@ internal static class ZeepSettingsDefaultDrawersBuilder
     /// Builds the default drawer list: section header, entry, separator, and section spacing.
     /// </summary>
     /// <param name="entriesBySection">Config entries grouped by section name.</param>
+    /// <param name="customLabels">Optional custom labels keyed by config definition.</param>
     public static IEnumerable<IZeepSettingsDrawer> Build(
-        IReadOnlyDictionary<string, IReadOnlyList<ConfigEntryBase>> entriesBySection)
+        IReadOnlyDictionary<string, IReadOnlyList<ConfigEntryBase>> entriesBySection,
+        IReadOnlyDictionary<ConfigDefinition, string> customLabels = null)
     {
         foreach ((string section, IReadOnlyList<ConfigEntryBase> sectionEntries) in entriesBySection)
         {
@@ -26,7 +28,10 @@ internal static class ZeepSettingsDefaultDrawersBuilder
                     continue;
 
                 anyVisible = true;
-                yield return new ZeepSettingsEntryDrawer(entry);
+
+                string label = null;
+                customLabels?.TryGetValue(entry.Definition, out label);
+                yield return new ZeepSettingsEntryDrawer(entry, label);
                 yield return new ZeepSettingsSeparatorDrawer();
             }
 

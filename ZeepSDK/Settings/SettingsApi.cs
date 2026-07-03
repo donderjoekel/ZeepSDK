@@ -1,7 +1,10 @@
 ﻿using BepInEx;
+using BepInEx.Configuration;
+using BepInEx.Logging;
 using JetBrains.Annotations;
 using ZeepkistClient;
 using ZeepSDK.UI;
+using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Settings;
 
@@ -11,6 +14,8 @@ namespace ZeepSDK.Settings;
 [PublicAPI]
 public static class SettingsApi
 {
+    private static readonly ManualLogSource Logger = LoggerFactory.GetLogger(typeof(SettingsApi));
+
     /// <summary>
     /// Invoked whenever the mod settings window opens.
     /// </summary>
@@ -66,6 +71,50 @@ public static class SettingsApi
     public static void RegisterModSettingsDrawers(string pluginGuid, ModSettingsDrawersDelegate provider)
         => ZeepSettingsDrawerRegistry.Register(pluginGuid, provider);
 
+    /// <summary>
+    /// Sets a custom display label for a config entry when using the default settings layout.
+    /// </summary>
+    /// <param name="plugin">The mod plugin instance that owns the config entry.</param>
+    /// <param name="entry">The config entry to label.</param>
+    /// <param name="label">The label to display in the settings panel.</param>
+    public static void SetConfigEntryLabel(BaseUnityPlugin plugin, ConfigEntryBase entry, string label)
+    {
+        if (!TryValidateConfigEntry(plugin, entry))
+            return;
+
+        SetConfigEntryLabel(plugin.Info.Metadata.GUID, entry, label);
+    }
+
+    /// <summary>
+    /// Sets a custom display label for a config entry when using the default settings layout.
+    /// </summary>
+    /// <param name="pluginGuid">The BepInEx GUID of the mod that owns the config entry.</param>
+    /// <param name="entry">The config entry to label.</param>
+    /// <param name="label">The label to display in the settings panel.</param>
+    public static void SetConfigEntryLabel(string pluginGuid, ConfigEntryBase entry, string label)
+        => ZeepSettingsEntryLabelRegistry.SetLabel(pluginGuid, entry.Definition, label);
+
+    /// <summary>
+    /// Removes a custom display label for a config entry, restoring the default config key label.
+    /// </summary>
+    /// <param name="plugin">The mod plugin instance that owns the config entry.</param>
+    /// <param name="entry">The config entry to clear the label for.</param>
+    public static void ClearConfigEntryLabel(BaseUnityPlugin plugin, ConfigEntryBase entry)
+    {
+        if (!TryValidateConfigEntry(plugin, entry))
+            return;
+
+        ClearConfigEntryLabel(plugin.Info.Metadata.GUID, entry);
+    }
+
+    /// <summary>
+    /// Removes a custom display label for a config entry, restoring the default config key label.
+    /// </summary>
+    /// <param name="pluginGuid">The BepInEx GUID of the mod that owns the config entry.</param>
+    /// <param name="entry">The config entry to clear the label for.</param>
+    public static void ClearConfigEntryLabel(string pluginGuid, ConfigEntryBase entry)
+        => ZeepSettingsEntryLabelRegistry.ClearLabel(pluginGuid, entry.Definition);
+
     internal static void DispatchWindowOpened()
     {
         ModSettingsWindowOpened?.Invoke();
@@ -74,5 +123,18 @@ public static class SettingsApi
     internal static void DispatchWindowClosed()
     {
         ModSettingsWindowClosed?.Invoke();
+    }
+
+    private static bool TryValidateConfigEntry(BaseUnityPlugin plugin, ConfigEntryBase entry)
+    {
+        foreach ((_, ConfigEntryBase configEntry) in plugin.Config)
+        {
+            if (configEntry == entry)
+                return true;
+        }
+
+        Logger.LogWarning(
+            $"Config entry '{entry.Definition.Section}.{entry.Definition.Key}' does not belong to plugin '{plugin.Info.Metadata.GUID}'. Label was not registered.");
+        return false;
     }
 }

@@ -33,5 +33,7 @@ public sealed class ModSettingsDrawerBuildContext
     /// </summary>
     /// <returns>A sequence of drawers that render the plugin's config entries using the default layout.</returns>
     public IEnumerable<IZeepSettingsDrawer> CreateDefaultDrawers()
-        => ZeepSettingsDefaultDrawersBuilder.Build(EntriesBySection);
+        => ZeepSettingsDefaultDrawersBuilder.Build(
+            EntriesBySection,
+            ZeepSettingsEntryLabelRegistry.GetLabels(Plugin.Metadata.GUID));
 }
