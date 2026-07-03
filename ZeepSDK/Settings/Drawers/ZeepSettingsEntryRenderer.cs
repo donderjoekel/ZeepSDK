@@ -130,7 +130,7 @@ internal static class ZeepSettingsEntryRenderer
 
     private static void DrawStringEntry(ImGui gui, ConfigEntry<string> entry, ImSize size)
     {
-        if (!DrawAcceptableValues(gui, entry, size))
+        if (!TryDrawAcceptableValueList(gui, entry, size))
         {
             var current = entry.Value;
             var value = gui.TextEdit(current, size);
@@ -141,7 +141,7 @@ internal static class ZeepSettingsEntryRenderer
 
     private static void DrawBoolEntry(ImGui gui, ConfigEntry<bool> entry, ImSize size)
     {
-        if (!DrawAcceptableValues(gui, entry, size))
+        if (!TryDrawAcceptableValueList(gui, entry, size))
         {
             var current = entry.Value;
             if (gui.Checkbox(ref current, string.Empty, size))
@@ -151,37 +151,46 @@ internal static class ZeepSettingsEntryRenderer
 
     private static void DrawIntEntry(ImGui gui, ConfigEntry<int> entry, ImSize size)
     {
-        if (!DrawAcceptableValues(gui, entry, size))
-        {
-            var current = entry.Value;
-            if (gui.NumericEdit(ref current, size))
-                entry.Value = current;
-        }
+        if (TryDrawAcceptableValueRange(gui, entry, size))
+            return;
+
+        if (TryDrawAcceptableValueList(gui, entry, size))
+            return;
+
+        var current = entry.Value;
+        if (gui.NumericEdit(ref current, size))
+            entry.Value = current;
     }
 
     private static void DrawFloatEntry(ImGui gui, ConfigEntry<float> entry, ImSize size)
     {
-        if (!DrawAcceptableValues(gui, entry, size))
-        {
-            var current = entry.Value;
-            if (gui.NumericEdit(ref current, size))
-                entry.Value = current;
-        }
+        if (TryDrawAcceptableValueRange(gui, entry, size))
+            return;
+
+        if (TryDrawAcceptableValueList(gui, entry, size))
+            return;
+
+        var current = entry.Value;
+        if (gui.NumericEdit(ref current, size))
+            entry.Value = current;
     }
 
     private static void DrawDoubleEntry(ImGui gui, ConfigEntry<double> entry, ImSize size)
     {
-        if (!DrawAcceptableValues(gui, entry, size))
-        {
-            var current = entry.Value;
-            if (gui.NumericEdit(ref current, size))
-                entry.Value = current;
-        }
+        if (TryDrawAcceptableValueRange(gui, entry, size))
+            return;
+
+        if (TryDrawAcceptableValueList(gui, entry, size))
+            return;
+
+        var current = entry.Value;
+        if (gui.NumericEdit(ref current, size))
+            entry.Value = current;
     }
 
     private static void DrawVector2Entry(ImGui gui, ConfigEntry<Vector2> entry, ImSize size)
     {
-        if (!DrawAcceptableValues(gui, entry, size))
+        if (!TryDrawAcceptableValueList(gui, entry, size))
         {
             var current = entry.Value;
             if (gui.Vector(ref current, size))
@@ -191,7 +200,7 @@ internal static class ZeepSettingsEntryRenderer
 
     private static void DrawVector3Entry(ImGui gui, ConfigEntry<Vector3> entry, ImSize size)
     {
-        if (!DrawAcceptableValues(gui, entry, size))
+        if (!TryDrawAcceptableValueList(gui, entry, size))
         {
             var current = entry.Value;
             if (gui.Vector(ref current, size))
@@ -201,7 +210,7 @@ internal static class ZeepSettingsEntryRenderer
 
     private static void DrawVector4Entry(ImGui gui, ConfigEntry<Vector4> entry, ImSize size)
     {
-        if (!DrawAcceptableValues(gui, entry, size))
+        if (!TryDrawAcceptableValueList(gui, entry, size))
         {
             var current = entry.Value;
             if (gui.Vector(ref current, size))
@@ -211,7 +220,7 @@ internal static class ZeepSettingsEntryRenderer
 
     private static void DrawColorEntry(ImGui gui, ConfigEntry<Color> entry, ImSize size)
     {
-        if (!DrawAcceptableValues(gui, entry, size))
+        if (!TryDrawAcceptableValueList(gui, entry, size))
         {
             var current = entry.Value;
             if (gui.ColorEdit(ref current, size))
@@ -219,7 +228,43 @@ internal static class ZeepSettingsEntryRenderer
         }
     }
 
-    private static bool DrawAcceptableValues<T>(ImGui gui, ConfigEntry<T> entry, ImSize size)
+    private static bool TryDrawAcceptableValueRange(ImGui gui, ConfigEntry<int> entry, ImSize size)
+    {
+        if (entry.Description.AcceptableValues is not AcceptableValueRange<int> range)
+            return false;
+
+        var current = entry.Value;
+        if (gui.NumericEdit(ref current, size, min: range.MinValue, max: range.MaxValue, flags: ImNumericEditFlag.Slider))
+            entry.Value = current;
+
+        return true;
+    }
+
+    private static bool TryDrawAcceptableValueRange(ImGui gui, ConfigEntry<float> entry, ImSize size)
+    {
+        if (entry.Description.AcceptableValues is not AcceptableValueRange<float> range)
+            return false;
+
+        var current = entry.Value;
+        if (gui.NumericEdit(ref current, size, min: range.MinValue, max: range.MaxValue, flags: ImNumericEditFlag.Slider))
+            entry.Value = current;
+
+        return true;
+    }
+
+    private static bool TryDrawAcceptableValueRange(ImGui gui, ConfigEntry<double> entry, ImSize size)
+    {
+        if (entry.Description.AcceptableValues is not AcceptableValueRange<double> range)
+            return false;
+
+        var current = entry.Value;
+        if (gui.NumericEdit(ref current, size, min: range.MinValue, max: range.MaxValue, flags: ImNumericEditFlag.Slider))
+            entry.Value = current;
+
+        return true;
+    }
+
+    private static bool TryDrawAcceptableValueList<T>(ImGui gui, ConfigEntry<T> entry, ImSize size)
         where T : IEquatable<T>
     {
         if (entry.Description.AcceptableValues is not AcceptableValueList<T> acceptableValues)
