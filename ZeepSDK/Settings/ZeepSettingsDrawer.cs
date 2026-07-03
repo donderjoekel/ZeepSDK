@@ -126,7 +126,7 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
                 {
                     using (gui.Scrollable())
                     {
-                        DrawSelectedPlugin(gui);
+                        DrawSelectedPluginWithPadding(gui);
                     }
                 }
             }
@@ -146,6 +146,30 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
             {
                 _selectedPluginInfo = new SelectedPluginInfo(plugin);
             }
+        }
+    }
+
+    private void DrawSelectedPluginWithPadding(ImGui gui)
+    {
+        var padding = gui.Style.Window.ContentPadding;
+        var contentWidth = Mathf.Max(0, gui.GetLayoutWidth() - padding.Left - padding.Right);
+
+        using (gui.Horizontal(gui.GetLayoutWidth()))
+        {
+            gui.AddSpacing(padding.Left);
+
+            using (gui.Vertical(contentWidth))
+            {
+                if (padding.Top > 0)
+                    gui.AddSpacing(padding.Top);
+
+                DrawSelectedPlugin(gui);
+
+                if (padding.Bottom > 0)
+                    gui.AddSpacing(padding.Bottom);
+            }
+
+            gui.AddSpacing(padding.Right);
         }
     }
 
