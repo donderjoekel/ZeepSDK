@@ -8,3 +8,7 @@
   href: zeep-gui-drawer.md
 - name: Using IZeepToolbarDrawer
   href: zeep-toolbar-drawer.md
+- name: Mod Settings
+  href: mod-settings.md
+- name: Custom Mod Settings Layout
+  href: custom-mod-settings-layout.md

@@ -8,6 +8,7 @@ These articles cover practical topics to help you build powerful mods for Zeepki
 
 - **Chat Commands** - Learn how to create local and remote chat commands for your mods
 - **UI Development** - Learn how to create custom GUI elements and windows
+- **Mod Settings** - Learn how to customize the built-in mod settings window
 - **More tutorials coming soon** - Additional guides will be added as the SDK evolves
 
 ## Available Tutorials
@@ -21,6 +22,11 @@ These articles cover practical topics to help you build powerful mods for Zeepki
 
 - **[Using IZeepGUIDrawer](zeep-gui-drawer.md)** - Learn how to create custom GUI elements, windows, and overlays using the ImGui system.
 - **[Using IZeepToolbarDrawer](zeep-toolbar-drawer.md)** - Learn how to add custom menu items to the Zeep toolbar menu bar.
+
+### Mod Settings
+
+- **[Mod Settings](mod-settings.md)** - Learn how the built-in settings window renders BepInEx config entries and how to customize labels, individual entries, and value types.
+- **[Custom Mod Settings Layout](custom-mod-settings-layout.md)** - Learn how to build a custom settings layout with the `IZeepSettingsDrawer` pipeline.
 
 ## Prerequisites
 
