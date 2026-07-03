@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using BepInEx.Configuration;
-using ZeepSDK.Settings;
 
 namespace ZeepSDK.Settings.Drawers;
 
@@ -37,6 +36,8 @@ internal static class ZeepSettingsDefaultDrawersBuilder
 
                 if (customDrawers != null && customDrawers.TryGetValue(entry.Definition, out var drawer))
                     yield return new ZeepSettingsCustomConfigEntryDrawer(entry, label, drawer);
+                else if (ZeepSettingsConfigEntryTypeDrawerRegistry.TryCreateDrawer(entry, label, out var typeDrawer))
+                    yield return typeDrawer;
                 else
                     yield return new ZeepSettingsEntryDrawer(entry, label);
 

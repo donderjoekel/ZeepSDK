@@ -1,8 +1,10 @@
-﻿using BepInEx;
+﻿using System;
+using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Logging;
 using JetBrains.Annotations;
 using ZeepkistClient;
+using ZeepSDK.Settings.Drawers;
 using ZeepSDK.UI;
 using ZeepSDK.Utilities;
 
@@ -158,6 +160,60 @@ public static class SettingsApi
     /// <param name="entry">The config entry to clear the drawer for.</param>
     public static void ClearConfigEntryDrawer(string pluginGuid, ConfigEntryBase entry)
         => ZeepSettingsEntryDrawerRegistry.ClearDrawer(pluginGuid, entry.Definition);
+
+    /// <summary>
+    /// Registers a global drawer factory for config entries with the given setting type.
+    /// Any plugin's config entry with a matching <see cref="ConfigEntryBase.SettingType"/> uses this drawer in the default layout.
+    /// </summary>
+    /// <typeparam name="T">The config entry value type.</typeparam>
+    /// <param name="factory">Creates a drawer for each config entry of this type.</param>
+    public static void RegisterConfigEntryTypeDrawer<T>(Func<ConfigEntry<T>, string, IZeepSettingsDrawer> factory)
+    {
+        if (factory == null)
+            throw new ArgumentNullException(nameof(factory));
+
+        RegisterConfigEntryTypeDrawer(typeof(T), (entry, label) => factory((ConfigEntry<T>)entry, label));
+    }
+
+    /// <summary>
+    /// Registers a global drawer factory for config entries with the given setting type.
+    /// </summary>
+    /// <param name="settingType">The config entry value type.</param>
+    /// <param name="factory">Creates a drawer for each config entry of this type.</param>
+    public static void RegisterConfigEntryTypeDrawer(Type settingType, ModSettingsConfigEntryTypeDrawerFactory factory)
+    {
+        if (settingType == null)
+            throw new ArgumentNullException(nameof(settingType));
+
+        if (factory == null)
+            throw new ArgumentNullException(nameof(factory));
+
+        if (ZeepSettingsConfigEntryTypeDrawerRegistry.IsRegistered(settingType))
+        {
+            Logger.LogWarning(
+                $"Replacing an existing config entry type drawer for '{settingType.FullName}'.");
+        }
+
+        ZeepSettingsConfigEntryTypeDrawerRegistry.Register(settingType, factory);
+    }
+
+    /// <summary>
+    /// Removes the global drawer factory for the given setting type.
+    /// </summary>
+    /// <typeparam name="T">The config entry value type.</typeparam>
+    public static void ClearConfigEntryTypeDrawer<T>() => ClearConfigEntryTypeDrawer(typeof(T));
+
+    /// <summary>
+    /// Removes the global drawer factory for the given setting type.
+    /// </summary>
+    /// <param name="settingType">The config entry value type.</param>
+    public static void ClearConfigEntryTypeDrawer(Type settingType)
+    {
+        if (settingType == null)
+            throw new ArgumentNullException(nameof(settingType));
+
+        ZeepSettingsConfigEntryTypeDrawerRegistry.Clear(settingType);
+    }
 
     internal static void DispatchWindowOpened()
     {

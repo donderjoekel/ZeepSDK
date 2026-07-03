@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using BepInEx.Configuration;
 using Imui.Core;
 using ZeepSDK.Settings.Drawers;
 
@@ -31,3 +32,13 @@ public delegate void ModSettingsConfigEntryDrawDelegate(
     ImGui gui,
     ZeepSettingsDrawContext context,
     ModSettingsConfigEntryDrawContext entryContext);
+
+/// <summary>
+/// Creates a settings drawer for a config entry of a registered setting type.
+/// </summary>
+/// <param name="entry">The config entry to create a drawer for.</param>
+/// <param name="label">The resolved display label, or null to use the config key.</param>
+/// <returns>The drawer instance used to render this config entry row.</returns>
+public delegate IZeepSettingsDrawer ModSettingsConfigEntryTypeDrawerFactory(
+    ConfigEntryBase entry,
+    string label);
