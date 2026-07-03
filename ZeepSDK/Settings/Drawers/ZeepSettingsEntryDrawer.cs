@@ -6,12 +6,12 @@ namespace ZeepSDK.Settings.Drawers;
 /// <summary>
 /// Draws a BepInEx config entry in the mod settings panel.
 /// </summary>
-public readonly struct ZeepSettingsEntryDrawer : IZeepSettingsDrawer
+public class ZeepSettingsEntryDrawer : IZeepSettingsDrawer
 {
     /// <summary>
     /// The config entry to draw.
     /// </summary>
-    public readonly ConfigEntryBase ConfigEntry;
+    public ConfigEntryBase ConfigEntry { get; }
 
     /// <summary>
     /// Creates a new config entry drawer.

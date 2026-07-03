@@ -6,12 +6,12 @@ namespace ZeepSDK.Settings.Drawers;
 /// <summary>
 /// Draws a section header in the mod settings panel.
 /// </summary>
-public readonly struct ZeepSettingsHeaderDrawer : IZeepSettingsDrawer
+public class ZeepSettingsHeaderDrawer : IZeepSettingsDrawer
 {
     /// <summary>
     /// The header text to display.
     /// </summary>
-    public readonly string Header;
+    public string Header { get; }
 
     /// <summary>
     /// Creates a new section header drawer.

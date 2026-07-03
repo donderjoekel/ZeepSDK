@@ -6,7 +6,7 @@ namespace ZeepSDK.Settings.Drawers;
 /// <summary>
 /// Draws a horizontal separator between settings entries.
 /// </summary>
-public readonly struct ZeepSettingsSeparatorDrawer : IZeepSettingsDrawer
+public class ZeepSettingsSeparatorDrawer : IZeepSettingsDrawer
 {
     /// <inheritdoc />
     public void Draw(ImGui gui, ZeepSettingsDrawContext context)
