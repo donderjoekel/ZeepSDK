@@ -19,9 +19,10 @@ internal static class ZeepSettingsEntryRenderer
     /// <param name="gui">The ImGui instance to draw with.</param>
     /// <param name="entry">The config entry to draw.</param>
     /// <param name="context">Shared services available while drawing settings.</param>
-    public static void Draw(ImGui gui, ConfigEntryBase entry, ZeepSettingsDrawContext context)
+    /// <param name="label">Optional display label. Uses the config key when omitted.</param>
+    public static void Draw(ImGui gui, ConfigEntryBase entry, ZeepSettingsDrawContext context, string label = null)
     {
-        DrawEntryValue(gui, entry, entry.Definition.Key, context);
+        DrawEntryValue(gui, entry, label ?? entry.Definition.Key, context);
     }
 
     private static void DrawEntryValue(ImGui gui, ConfigEntryBase entry, string key, ZeepSettingsDrawContext context)

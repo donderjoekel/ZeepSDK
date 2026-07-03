@@ -14,12 +14,19 @@ public class ZeepSettingsEntryDrawer : IZeepSettingsDrawer
     public ConfigEntryBase ConfigEntry { get; }
 
     /// <summary>
+    /// The label shown for this entry. Defaults to the config key when not specified.
+    /// </summary>
+    public string Label { get; }
+
+    /// <summary>
     /// Creates a new config entry drawer.
     /// </summary>
     /// <param name="configEntry">The config entry to draw.</param>
-    public ZeepSettingsEntryDrawer(ConfigEntryBase configEntry)
+    /// <param name="label">Optional display label. Uses the config key when omitted.</param>
+    public ZeepSettingsEntryDrawer(ConfigEntryBase configEntry, string label = null)
     {
         ConfigEntry = configEntry;
+        Label = label ?? configEntry.Definition.Key;
     }
 
     /// <inheritdoc />
@@ -27,7 +34,7 @@ public class ZeepSettingsEntryDrawer : IZeepSettingsDrawer
     {
         using (gui.Indent())
         {
-            ZeepSettingsEntryRenderer.Draw(gui, ConfigEntry, context);
+            ZeepSettingsEntryRenderer.Draw(gui, ConfigEntry, context, Label);
         }
     }
 }
