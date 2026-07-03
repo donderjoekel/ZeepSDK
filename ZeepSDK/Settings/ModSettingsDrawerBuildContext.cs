@@ -35,5 +35,6 @@ public sealed class ModSettingsDrawerBuildContext
     public IEnumerable<IZeepSettingsDrawer> CreateDefaultDrawers()
         => ZeepSettingsDefaultDrawersBuilder.Build(
             EntriesBySection,
-            ZeepSettingsEntryLabelRegistry.GetLabels(Plugin.Metadata.GUID));
+            ZeepSettingsEntryLabelRegistry.GetLabels(Plugin.Metadata.GUID),
+            ZeepSettingsEntryDrawerRegistry.GetDrawers(Plugin.Metadata.GUID));
 }

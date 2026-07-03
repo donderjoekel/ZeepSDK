@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using BepInEx.Configuration;
+using ZeepSDK.Settings;
 
 namespace ZeepSDK.Settings.Drawers;
 
@@ -13,9 +14,11 @@ internal static class ZeepSettingsDefaultDrawersBuilder
     /// </summary>
     /// <param name="entriesBySection">Config entries grouped by section name.</param>
     /// <param name="customLabels">Optional custom labels keyed by config definition.</param>
+    /// <param name="customDrawers">Optional custom draw callbacks keyed by config definition.</param>
     public static IEnumerable<IZeepSettingsDrawer> Build(
         IReadOnlyDictionary<string, IReadOnlyList<ConfigEntryBase>> entriesBySection,
-        IReadOnlyDictionary<ConfigDefinition, string> customLabels = null)
+        IReadOnlyDictionary<ConfigDefinition, string> customLabels = null,
+        IReadOnlyDictionary<ConfigDefinition, ModSettingsConfigEntryDrawDelegate> customDrawers = null)
     {
         foreach ((string section, IReadOnlyList<ConfigEntryBase> sectionEntries) in entriesBySection)
         {
@@ -31,7 +34,12 @@ internal static class ZeepSettingsDefaultDrawersBuilder
 
                 string label = null;
                 customLabels?.TryGetValue(entry.Definition, out label);
-                yield return new ZeepSettingsEntryDrawer(entry, label);
+
+                if (customDrawers != null && customDrawers.TryGetValue(entry.Definition, out var drawer))
+                    yield return new ZeepSettingsCustomConfigEntryDrawer(entry, label, drawer);
+                else
+                    yield return new ZeepSettingsEntryDrawer(entry, label);
+
                 yield return new ZeepSettingsSeparatorDrawer();
             }
 

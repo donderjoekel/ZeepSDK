@@ -115,6 +115,50 @@ public static class SettingsApi
     public static void ClearConfigEntryLabel(string pluginGuid, ConfigEntryBase entry)
         => ZeepSettingsEntryLabelRegistry.ClearLabel(pluginGuid, entry.Definition);
 
+    /// <summary>
+    /// Sets a custom draw callback for a config entry when using the default settings layout.
+    /// </summary>
+    /// <param name="plugin">The mod plugin instance that owns the config entry.</param>
+    /// <param name="entry">The config entry to draw.</param>
+    /// <param name="drawer">The callback invoked to draw this config entry.</param>
+    public static void SetConfigEntryDrawer(BaseUnityPlugin plugin, ConfigEntryBase entry, ModSettingsConfigEntryDrawDelegate drawer)
+    {
+        if (!TryValidateConfigEntry(plugin, entry))
+            return;
+
+        SetConfigEntryDrawer(plugin.Info.Metadata.GUID, entry, drawer);
+    }
+
+    /// <summary>
+    /// Sets a custom draw callback for a config entry when using the default settings layout.
+    /// </summary>
+    /// <param name="pluginGuid">The BepInEx GUID of the mod that owns the config entry.</param>
+    /// <param name="entry">The config entry to draw.</param>
+    /// <param name="drawer">The callback invoked to draw this config entry.</param>
+    public static void SetConfigEntryDrawer(string pluginGuid, ConfigEntryBase entry, ModSettingsConfigEntryDrawDelegate drawer)
+        => ZeepSettingsEntryDrawerRegistry.SetDrawer(pluginGuid, entry.Definition, drawer);
+
+    /// <summary>
+    /// Removes a custom draw callback for a config entry, restoring the default row renderer.
+    /// </summary>
+    /// <param name="plugin">The mod plugin instance that owns the config entry.</param>
+    /// <param name="entry">The config entry to clear the drawer for.</param>
+    public static void ClearConfigEntryDrawer(BaseUnityPlugin plugin, ConfigEntryBase entry)
+    {
+        if (!TryValidateConfigEntry(plugin, entry))
+            return;
+
+        ClearConfigEntryDrawer(plugin.Info.Metadata.GUID, entry);
+    }
+
+    /// <summary>
+    /// Removes a custom draw callback for a config entry, restoring the default row renderer.
+    /// </summary>
+    /// <param name="pluginGuid">The BepInEx GUID of the mod that owns the config entry.</param>
+    /// <param name="entry">The config entry to clear the drawer for.</param>
+    public static void ClearConfigEntryDrawer(string pluginGuid, ConfigEntryBase entry)
+        => ZeepSettingsEntryDrawerRegistry.ClearDrawer(pluginGuid, entry.Definition);
+
     internal static void DispatchWindowOpened()
     {
         ModSettingsWindowOpened?.Invoke();
@@ -134,7 +178,7 @@ public static class SettingsApi
         }
 
         Logger.LogWarning(
-            $"Config entry '{entry.Definition.Section}.{entry.Definition.Key}' does not belong to plugin '{plugin.Info.Metadata.GUID}'. Label was not registered.");
+            $"Config entry '{entry.Definition.Section}.{entry.Definition.Key}' does not belong to plugin '{plugin.Info.Metadata.GUID}'. Registration was skipped.");
         return false;
     }
 }
