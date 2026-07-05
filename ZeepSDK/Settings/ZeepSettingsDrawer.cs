@@ -5,6 +5,7 @@ using BepInEx.Bootstrap;
 using BepInEx.Configuration;
 using Imui.Controls;
 using Imui.Core;
+using Imui.IO.Events;
 using Imui.Rendering;
 using UnityEngine;
 using ZeepSDK.Controls;
@@ -213,17 +214,7 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
             {
                 gui.Text($"Closing in {_keyCodeCountdown:00.00} seconds...", new ImTextSettings(12, 0.5f));
 
-                if (gui.Input.KeyboardEventsCount > 0)
-                {
-                    var keyId = gui.Input.KeyboardEventsCount - 1;
-                    var evt = gui.Input.GetKeyboardEvent(keyId);
-                    if (evt.Key != KeyCode.None)
-                    {
-                        _currentKeyCode = evt.Key;
-                    }
-
-                    gui.Input.UseKeyboardEvent(keyId);
-                }
+                TryCaptureKeyCode(gui, ref _currentKeyCode);
 
                 gui.Text("The current key is: " + _currentKeyCode, new ImTextSettings(26, 0.5f, 0.5f, true));
 
@@ -291,5 +282,55 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
         }
 
         _currentKeyCodeEntry.Value = _currentKeyCode;
+    }
+
+    private const int PrimaryMouseButtonCount = 3;
+
+    private static void TryCaptureKeyCode(ImGui gui, ref KeyCode keyCode)
+    {
+        if (gui.Input.KeyboardEventsCount > 0)
+        {
+            var keyId = gui.Input.KeyboardEventsCount - 1;
+            var evt = gui.Input.GetKeyboardEvent(keyId);
+            if (evt.Key != KeyCode.None && !IsPrimaryMouseButton(evt.Key))
+            {
+                keyCode = evt.Key;
+            }
+
+            gui.Input.UseKeyboardEvent(keyId);
+            return;
+        }
+
+        ref readonly var mouseEvt = ref gui.Input.MouseEvent;
+        if (mouseEvt.Type != ImMouseEventType.Down ||
+            mouseEvt.Device != ImMouseDevice.Mouse ||
+            mouseEvt.Button < PrimaryMouseButtonCount)
+        {
+            return;
+        }
+
+        var mouseKeyCode = MouseButtonToKeyCode(mouseEvt.Button);
+        if (mouseKeyCode == KeyCode.None)
+        {
+            return;
+        }
+
+        keyCode = mouseKeyCode;
+        gui.Input.UseMouseEvent();
+    }
+
+    private static bool IsPrimaryMouseButton(KeyCode keyCode)
+    {
+        return keyCode is KeyCode.Mouse0 or KeyCode.Mouse1 or KeyCode.Mouse2;
+    }
+
+    private static KeyCode MouseButtonToKeyCode(int button)
+    {
+        if (button is < 0 or > 6)
+        {
+            return KeyCode.None;
+        }
+
+        return (KeyCode)((int)KeyCode.Mouse0 + button);
     }
 }
