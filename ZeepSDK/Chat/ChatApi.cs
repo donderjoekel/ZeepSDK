@@ -18,6 +18,8 @@ public static class ChatApi
 {
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(ChatApi));
 
+    internal static Action<string> LocalMessageRedirect { get; set; }
+
     private static OnlineChatUI OnlineChatUI => ComponentCache.Get<OnlineChatUI>();
 
     /// <summary>
@@ -70,6 +72,12 @@ public static class ChatApi
     {
         try
         {
+            if (LocalMessageRedirect != null)
+            {
+                LocalMessageRedirect(message);
+                return;
+            }
+
             OnlineChatUI onlineChatUi = OnlineChatUI;
             if (onlineChatUi != null)
             {
