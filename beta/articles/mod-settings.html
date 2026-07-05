@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Mod Settings | ZeepSDK (Beta) </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Mod Settings | ZeepSDK (Beta) ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="mod-settings">Mod Settings</h1>
+
+<p>ZeepSDK provides a built-in mod settings window that automatically renders your BepInEx config entries. You can use the default layout as-is, customize individual entries, or take full control of the layout when you need something more advanced.</p>
+<h2 id="overview">Overview</h2>
+<p>When a player opens the mod settings window, ZeepSDK lists every loaded plugin and draws that plugin's config entries grouped by BepInEx section. Each entry is rendered as a row with a label, an editor control, and a <strong>Reset</strong> button that restores the default value.</p>
+<p>You do not need to register anything for basic config entries to appear. If your mod defines config entries through BepInEx's <code>ConfigFile</code>, they show up automatically when the mod is selected in the settings window.</p>
+<h3 id="opening-and-closing-the-window">Opening and Closing the Window</h3>
+<p>Use <code>SettingsApi</code> to control the settings window programmatically:</p>
+<pre><code class="lang-csharp">using ZeepSDK.Settings;
+
+// Open the mod settings window
+SettingsApi.OpenModSettings();
+
+// Close the mod settings window
+SettingsApi.CloseModSettings();
+</code></pre>
+<p>You can also subscribe to window lifecycle events:</p>
+<pre><code class="lang-csharp">SettingsApi.ModSettingsWindowOpened += OnSettingsOpened;
+SettingsApi.ModSettingsWindowClosed += OnSettingsClosed;
+</code></pre>
+<p>The settings window closes automatically when the lobby game state changes.</p>
+<h2 id="default-rendering">Default Rendering</h2>
+<p>The default renderer supports common BepInEx config value types:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bool</code></td>
+<td>Checkbox</td>
+</tr>
+<tr>
+<td><code>int</code>, <code>float</code>, <code>double</code></td>
+<td>Numeric input, or slider when an <code>AcceptableValueRange&lt;T&gt;</code> is set</td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td>Text input</td>
+</tr>
+<tr>
+<td><code>KeyCode</code></td>
+<td>Button that opens a key capture popup</td>
+</tr>
+<tr>
+<td>Enums (except <code>KeyCode</code>)</td>
+<td>Dropdown</td>
+</tr>
+<tr>
+<td><code>Vector2</code>, <code>Vector3</code>, <code>Vector4</code></td>
+<td>Multi-field numeric input</td>
+</tr>
+<tr>
+<td><code>Color</code></td>
+<td>Color picker</td>
+</tr>
+</tbody>
+</table>
+<h3 id="range-sliders">Range Sliders</h3>
+<p>When you define a config entry with an <code>AcceptableValueRange&lt;int&gt;</code>, <code>AcceptableValueRange&lt;float&gt;</code>, or <code>AcceptableValueRange&lt;double&gt;</code>, the settings UI renders a slider instead of a plain numeric field:</p>
+<pre><code class="lang-csharp">_volume = Config.Bind(
+    &quot;Audio&quot;,
+    &quot;Volume&quot;,
+    0.75f,
+    new ConfigDescription(
+        &quot;Master volume&quot;,
+        new AcceptableValueRange&lt;float&gt;(0f, 1f)));
+</code></pre>
+<h3 id="description-metadata">Description Metadata</h3>
+<p>You can influence how an entry appears using prefixes in the config entry's description string:</p>
+<table>
+<thead>
+<tr>
+<th>Description prefix</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[hide]</code> or <code>[hidden]</code></td>
+<td>Entry is not shown in the settings UI</td>
+</tr>
+<tr>
+<td><code>[button]</code> (bool entries only)</td>
+<td>Renders an <strong>Execute</strong> button instead of a checkbox</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-csharp">// Hidden internal setting
+_internalFlag = Config.Bind(&quot;Debug&quot;, &quot;InternalFlag&quot;, false, &quot;[hide] Internal use only&quot;);
+
+// Action button
+_rebuildCache = Config.Bind(&quot;Tools&quot;, &quot;RebuildCache&quot;, false, &quot;[button] Rebuild the local cache&quot;);
+</code></pre>
+<p>The text after the prefix is still used as the tooltip shown when hovering the entry row.</p>
+<h2 id="customizing-the-default-layout">Customizing the Default Layout</h2>
+<p>For most mods, the default layout is enough. ZeepSDK provides three levels of customization that work together without replacing the entire settings panel.</p>
+<h3 id="custom-labels">Custom Labels</h3>
+<p>Use <code>SetConfigEntryLabel</code> to show a friendly name instead of the raw config key:</p>
+<pre><code class="lang-csharp">using BepInEx;
+using BepInEx.Configuration;
+using ZeepSDK.Settings;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private ConfigEntry&lt;float&gt; _volume;
+
+    private void Awake()
+    {
+        _volume = Config.Bind(&quot;Audio&quot;, &quot;Volume&quot;, 0.75f);
+
+        SettingsApi.SetConfigEntryLabel(this, _volume, &quot;Master Volume&quot;);
+    }
+}
+</code></pre>
+<p>Call <code>ClearConfigEntryLabel</code> to restore the default label.</p>
+<h3 id="custom-per-entry-ui">Custom Per-Entry UI</h3>
+<p>Use <code>SetConfigEntryDrawer</code> when one specific entry needs custom controls while keeping the rest of the default layout:</p>
+<pre><code class="lang-csharp">SettingsApi.SetConfigEntryDrawer(this, _volume, (gui, context, entryContext) =&gt;
+{
+    gui.Text(entryContext.Label);
+
+    var entry = (ConfigEntry&lt;float&gt;)entryContext.Entry;
+    var value = entry.Value;
+
+    if (gui.NumericEdit(ref value, (200, gui.GetRowHeight())))
+        entry.Value = value;
+});
+</code></pre>
+<p>The <code>entryContext</code> passed to your callback provides:</p>
+<ul>
+<li><code>Entry</code> — the <code>ConfigEntryBase</code> being drawn</li>
+<li><code>Label</code> — the resolved label, including any override from <code>SetConfigEntryLabel</code></li>
+<li><code>DrawDefault(gui, context)</code> — draws the built-in row renderer for that entry</li>
+</ul>
+<p>Mix custom and default rendering in the same callback:</p>
+<pre><code class="lang-csharp">SettingsApi.SetConfigEntryDrawer(this, _volume, (gui, context, entryContext) =&gt;
+{
+    gui.Text(&quot;Adjust volume with the slider below:&quot;);
+    entryContext.DrawDefault(gui, context);
+});
+</code></pre>
+<p>Call <code>ClearConfigEntryDrawer</code> to restore the default row renderer.</p>
+<h3 id="custom-type-drawers">Custom Type Drawers</h3>
+<p>Use <code>RegisterConfigEntryTypeDrawer</code> when you want every config entry of a given value type to use custom UI across all mods. This is useful for shared types such as custom structs or wrapper types used by a library:</p>
+<pre><code class="lang-csharp">using ZeepSDK.Settings;
+using ZeepSDK.Settings.Drawers;
+
+SettingsApi.RegisterConfigEntryTypeDrawer&lt;MyCustomType&gt;((entry, label) =&gt;
+    new MyCustomTypeEntryDrawer(entry, label));
+</code></pre>
+<p>Your factory receives the <code>ConfigEntryBase</code> and the resolved label (if any) and returns an <code>IZeepSettingsDrawer</code> instance.</p>
+<p>Call <code>ClearConfigEntryTypeDrawer&lt;MyCustomType&gt;()</code> to remove the registration.</p>
+<h3 id="resolution-order">Resolution Order</h3>
+<p>When the default layout builds a row for a config entry, ZeepSDK resolves the drawer in this order:</p>
+<ol>
+<li><strong>Per-entry callback</strong> — registered with <code>SetConfigEntryDrawer</code></li>
+<li><strong>Per-type factory</strong> — registered with <code>RegisterConfigEntryTypeDrawer</code></li>
+<li><strong>Default row renderer</strong> — built-in control for the entry's value type</li>
+</ol>
+<p>Per-entry customization always takes priority over type-based customization.</p>
+<h2 id="basic-plugin-example">Basic Plugin Example</h2>
+<pre><code class="lang-csharp">using BepInEx;
+using BepInEx.Configuration;
+using UnityEngine;
+using ZeepSDK.Settings;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private ConfigEntry&lt;bool&gt; _enabled;
+    private ConfigEntry&lt;float&gt; _volume;
+    private ConfigEntry&lt;KeyCode&gt; _hotkey;
+
+    private void Awake()
+    {
+        _enabled = Config.Bind(&quot;General&quot;, &quot;Enabled&quot;, true, &quot;Enable the mod&quot;);
+        _volume = Config.Bind(
+            &quot;General&quot;,
+            &quot;Volume&quot;,
+            0.75f,
+            new ConfigDescription(
+                &quot;Output volume&quot;,
+                new AcceptableValueRange&lt;float&gt;(0f, 1f)));
+        _hotkey = Config.Bind(&quot;General&quot;, &quot;Hotkey&quot;, KeyCode.F6, &quot;Toggle overlay&quot;);
+
+        SettingsApi.SetConfigEntryLabel(this, _enabled, &quot;Enable Mod&quot;);
+        SettingsApi.SetConfigEntryLabel(this, _hotkey, &quot;Toggle Overlay&quot;);
+    }
+}
+</code></pre>
+<p>No additional registration is required. Open the mod settings window in-game and select your plugin to edit these values.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>If you need to reorder sections, insert custom content between entries, or replace the layout entirely, see <strong><a href="custom-mod-settings-layout.html">Custom Mod Settings Layout</a></strong>.</p>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>BepInEx config entries appear automatically in the mod settings window</li>
+<li>Common value types are rendered with appropriate controls out of the box</li>
+<li><code>AcceptableValueRange&lt;T&gt;</code> values render as sliders</li>
+<li>Use description prefixes <code>[hide]</code>, <code>[hidden]</code>, and <code>[button]</code> to control visibility and behavior</li>
+<li>Customize labels with <code>SetConfigEntryLabel</code></li>
+<li>Customize individual entries with <code>SetConfigEntryDrawer</code> and <code>DrawDefault()</code></li>
+<li>Customize all entries of a type with <code>RegisterConfigEntryTypeDrawer</code></li>
+<li>Per-entry customization overrides type-based customization</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.4.0-beta.1/docs/articles/mod-settings.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

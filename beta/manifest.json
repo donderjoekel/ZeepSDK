@@ -1,0 +1,3178 @@
+{
+  "source_base_path": "/home/runner/work/ZeepSDK/ZeepSDK/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagNetworking.BugsnagUnityWebRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagNetworking.BugsnagUnityWebRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagNetworking.BugsnagUnityWebRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagNetworking.RequestEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagNetworking.RequestEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagNetworking.RequestEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagNetworking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagNetworking.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagNetworking",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Bugsnag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Bugsnag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Bugsnag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.BugsnagAutoInit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.BugsnagAutoInit.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.BugsnagAutoInit",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.BugsnagCoroutineRunner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.BugsnagCoroutineRunner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.BugsnagCoroutineRunner",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.BugsnagSettingsObject.EditorBreadcrumbTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.BugsnagSettingsObject.EditorBreadcrumbTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.BugsnagSettingsObject.EditorBreadcrumbTypes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.BugsnagSettingsObject.EditorLogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.BugsnagSettingsObject.EditorLogLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.BugsnagSettingsObject.EditorLogLevel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.BugsnagSettingsObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.BugsnagSettingsObject.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.BugsnagSettingsObject",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Configuration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Configuration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.EnabledErrorTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.EnabledErrorTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.EnabledErrorTypes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.EndpointConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.EndpointConfiguration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.EndpointConfiguration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.IBreadcrumbs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.IBreadcrumbs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.IBreadcrumbs",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.ICacheManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.ICacheManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.ICacheManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.IDevice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.IDevice.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.IDevice",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.IEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.IEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.IEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.IFeatureFlagStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.IFeatureFlagStore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.IFeatureFlagStore",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.IMetadataEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.IMetadataEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.IMetadataEditor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.ISession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.ISession.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.ISession",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.ISessionTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.ISessionTracker.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.ISessionTracker",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.IUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.IUser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.IUser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.IUserEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.IUserEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.IUserEditor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.LastRunInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.LastRunInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.LastRunInfo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.LogTypeSeverityMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.LogTypeSeverityMapping.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.LogTypeSeverityMapping",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.MainThreadDispatchBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.MainThreadDispatchBehaviour.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.MainThreadDispatchBehaviour",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.MaximumLogTypeCounter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.MaximumLogTypeCounter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.MaximumLogTypeCounter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.App.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.App",
+      "Summary": "<p sourcefile=\"api/BugsnagUnity.Payload.App.yml\" sourcestartlinenumber=\"1\">Represents the &quot;app&quot; key in the error report payload.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.AppWithState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.AppWithState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.AppWithState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Breadcrumb.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Breadcrumb.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Breadcrumb",
+      "Summary": "<p sourcefile=\"api/BugsnagUnity.Payload.Breadcrumb.yml\" sourcestartlinenumber=\"1\">Represents an individual breadcrumb in the error report payload.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.BreadcrumbType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.BreadcrumbType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.BreadcrumbType",
+      "Summary": "<p sourcefile=\"api/BugsnagUnity.Payload.BreadcrumbType.yml\" sourcestartlinenumber=\"1\">Represents all of the possible breadcrumb types that the Bugsnag API supports.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Correlation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Correlation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Correlation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Device.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Device.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Device",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.DeviceWithState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.DeviceWithState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.DeviceWithState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Error.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Error.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Error",
+      "Summary": "<p sourcefile=\"api/BugsnagUnity.Payload.Error.yml\" sourcestartlinenumber=\"1\">Represents an individual error in the Bugsnag payload.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Event.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Event.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Event",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.FeatureFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.FeatureFlag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.FeatureFlag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IApp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IApp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IApp",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IAppWithState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IAppWithState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IAppWithState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IBreadcrumb.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IBreadcrumb.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IBreadcrumb",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IDeviceWithState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IDeviceWithState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IDeviceWithState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IError",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IPayload.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IPayload.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IPayload",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IStackframe.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IStackframe.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IStackframe",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.IThread.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.IThread.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.IThread",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Metadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Metadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Metadata",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.PayloadContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.PayloadContainer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.PayloadContainer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.PayloadType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.PayloadType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.PayloadType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Report.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Report.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Report",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.Session.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.Session.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.Session",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.StackTraceLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.StackTraceLine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.StackTraceLine",
+      "Summary": "<p sourcefile=\"api/BugsnagUnity.Payload.StackTraceLine.yml\" sourcestartlinenumber=\"1\">Represents an individual stack trace line in the Bugsnag payload.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.User.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload.User",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Payload.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Payload.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Payload",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.PayloadManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.PayloadManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.PayloadManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.PostProcessBuild.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.PostProcessBuild.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.PostProcessBuild",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.Severity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.Severity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.Severity",
+      "Summary": "<p sourcefile=\"api/BugsnagUnity.Severity.yml\" sourcestartlinenumber=\"1\">The Bugsnag API defines these three severities</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.SwitchCacheType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.SwitchCacheType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.SwitchCacheType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.TelemetryType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.TelemetryType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.TelemetryType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.ThreadSendPolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.ThreadSendPolicy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.ThreadSendPolicy",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.UniqueLogThrottle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.UniqueLogThrottle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.UniqueLogThrottle",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.UnityLogMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.UnityLogMessage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity.UnityLogMessage",
+      "Summary": "<p sourcefile=\"api/BugsnagUnity.UnityLogMessage.yml\" sourcestartlinenumber=\"1\">Represents a log message received from Unity</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BugsnagUnity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BugsnagUnity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BugsnagUnity",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Imui.Controls.ImGuiWindowExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Imui.Controls.ImGuiWindowExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Imui.Controls.ImGuiWindowExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Imui.Controls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Imui.Controls.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Imui.Controls",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Chat.ChatApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Chat.ChatApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Chat.ChatApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Chat.ChatApi.yml\" sourcestartlinenumber=\"1\">An API that allows you to send and receive chat messages</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Chat.ChatMessageReceivedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Chat.ChatMessageReceivedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Chat.ChatMessageReceivedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Chat.ServerMessageReceivedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Chat.ServerMessageReceivedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Chat.ServerMessageReceivedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Chat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Chat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Chat",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.ChatCommandApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.ChatCommandApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.ChatCommandApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.ChatCommandApi.yml\" sourcestartlinenumber=\"1\">An API that allows you to register chat commands</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.ChatCommandRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.ChatCommandRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.ChatCommandRegistry",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.ChatCommandRegistry.yml\" sourcestartlinenumber=\"1\">Stores the registered local and remote chat commands.\nUse <xref href=\"ZeepSDK.ChatCommands.ChatCommandApi\" data-throw-if-not-resolved=\"false\"></xref> to register or unregister commands.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.IChatCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.IChatCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.IChatCommand",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.IChatCommand.yml\" sourcestartlinenumber=\"1\">The base interface for all chat commands</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.ILocalChatCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.ILocalChatCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.ILocalChatCommand",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.ILocalChatCommand.yml\" sourcestartlinenumber=\"1\">The interface to use for local chat commands</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.ILocalChatCommandAlias.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.ILocalChatCommandAlias.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.ILocalChatCommandAlias",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.ILocalChatCommandAlias.yml\" sourcestartlinenumber=\"1\">A local chat command alias that forwards to a primary command.\nAlias entries appear in <xref href=\"ZeepSDK.ChatCommands.ChatCommandRegistry.LocalChatCommands\" data-throw-if-not-resolved=\"false\"></xref> alongside primary commands.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.IMixedChatCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.IMixedChatCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.IMixedChatCommand",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.IMixedChatCommand.yml\" sourcestartlinenumber=\"1\">The interface to use for a mixed chat command</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.IRemoteChatCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.IRemoteChatCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.IRemoteChatCommand",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.IRemoteChatCommand.yml\" sourcestartlinenumber=\"1\">The interface to use for remote chat commands</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.LocalChatCommandCallbackDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.MixedChatCommandBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.MixedChatCommandBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.MixedChatCommandBase",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.MixedChatCommandBase.yml\" sourcestartlinenumber=\"1\">A base class that can be used for implementing a mixed chat command</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.MixedChatCommandCallbackDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.RemoteChatCommandCallbackDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Communication.CommunicationApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Communication.CommunicationApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Communication.CommunicationApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Communication.CommunicationApi.yml\" sourcestartlinenumber=\"1\">An api that enables communication between mods</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Communication.IComReceiver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Communication.IComReceiver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Communication.IComReceiver",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Communication.IComReceiver.yml\" sourcestartlinenumber=\"1\">A receiver that can listen for messages from senders</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Communication.IComSender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Communication.IComSender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Communication.IComSender",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Communication.IComSender.yml\" sourcestartlinenumber=\"1\">A sender that can broadcast messages to all listening receivers</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Communication.MessageReceivedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Communication.MessageReceivedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Communication.MessageReceivedDelegate",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Communication.MessageReceivedDelegate.yml\" sourcestartlinenumber=\"1\">The delegate for when a message is received</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Communication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Communication.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Communication",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Controls.ControlsApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Controls.ControlsApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Controls.ControlsApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Controls.ControlsApi.yml\" sourcestartlinenumber=\"1\">Provides APIs for controlling input and event system states across different game contexts.\nAllows mods to override input maps and the Unity EventSystem for various game modes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Controls.InputOverrideStack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Controls.InputOverrideStack.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Controls.InputOverrideStack",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Controls.InputOverrideStack.yml\" sourcestartlinenumber=\"1\">Represents an override stack for managing input map states.\nAllows multiple layers of overrides to control whether input maps in a specific category are enabled or disabled.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Controls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Controls.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Controls",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Cosmetics.CosmeticsApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Cosmetics.CosmeticsApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Cosmetics.CosmeticsApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Cosmetics.CosmeticsApi.yml\" sourcestartlinenumber=\"1\">An api that allows you to get cosmetics</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Cosmetics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Cosmetics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Cosmetics",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Crashlytics.CrashlyticsApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Crashlytics.CrashlyticsApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Crashlytics.CrashlyticsApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Crashlytics.CrashlyticsApi.yml\" sourcestartlinenumber=\"1\">An API for dealing with crashlytics</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Crashlytics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Crashlytics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Crashlytics",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Extensions.EventExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Extensions.EventExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Extensions.EventExtensions",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Extensions.EventExtensions.yml\" sourcestartlinenumber=\"1\">Provides extension methods for Unity's <xref href=\"UnityEngine.Event\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Extensions.ListExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Extensions.ListExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Extensions.ListExtensions",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Extensions.ListExtensions.yml\" sourcestartlinenumber=\"1\">Extensions for lists</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Extensions.ResultExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Extensions.ResultExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Extensions.ResultExtensions",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Extensions.ResultExtensions.yml\" sourcestartlinenumber=\"1\">Contains extensions for Result</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Extensions.StringBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Extensions.StringBuilderExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Extensions.StringBuilderExtensions",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Extensions.StringBuilderExtensions.yml\" sourcestartlinenumber=\"1\">Provides extension methods for <xref href=\"System.Text.StringBuilder\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Extensions.TransformExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Extensions.TransformExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Extensions.TransformExtensions",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Extensions.TransformExtensions.yml\" sourcestartlinenumber=\"1\">A class containing extensions for <xref href=\"UnityEngine.Transform\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Extensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Extensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.ILeaderboardTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.ILeaderboardTab.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.ILeaderboardTab",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.ILeaderboardTab.yml\" sourcestartlinenumber=\"1\">Either <xref href=\"ZeepSDK.Leaderboard.IMultiplayerLeaderboardTab\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"ZeepSDK.Leaderboard.ISingleplayerLeaderboardTab\" data-throw-if-not-resolved=\"false\"></xref> should be implemented</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.IMultiplayerLeaderboardTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.IMultiplayerLeaderboardTab.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.IMultiplayerLeaderboardTab",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.IMultiplayerLeaderboardTab.yml\" sourcestartlinenumber=\"1\">The interface to implement if you want to create a custom tab for the multiplayer leaderboard</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.ISingleplayerLeaderboardTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.ISingleplayerLeaderboardTab.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.ISingleplayerLeaderboardTab",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.ISingleplayerLeaderboardTab.yml\" sourcestartlinenumber=\"1\">The interface to implement if you want to create a custom tab for the singleplayer leaderboard</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.LeaderboardApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.LeaderboardApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.LeaderboardApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.LeaderboardApi.yml\" sourcestartlinenumber=\"1\">An API that allows you to add custom tabs to the leaderboard</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.yml\" sourcestartlinenumber=\"1\">A base implementation that can be used for creating a custom tab for the leaderboard\n<remarks>This is a replacement for BaseLeaderboardTab to keep backward compatibility</remarks></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseMultiplayerLeaderboardTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseMultiplayerLeaderboardTab.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.Pages.BaseMultiplayerLeaderboardTab",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.Pages.BaseMultiplayerLeaderboardTab.yml\" sourcestartlinenumber=\"1\">A base implementation that can be used for creating a custom multiplayer tab for the leaderboard</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseSingleplayerLeaderboardTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.Pages.BaseSingleplayerLeaderboardTab.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.Pages.BaseSingleplayerLeaderboardTab",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.Pages.BaseSingleplayerLeaderboardTab.yml\" sourcestartlinenumber=\"1\">A base implementation that can be used for creating a custom singleplayer tab for the leaderboard</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.Pages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.Pages.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard.Pages",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Leaderboard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Leaderboard.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Leaderboard",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Level.LevelApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Level.LevelApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Level.LevelApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Level.LevelApi.yml\" sourcestartlinenumber=\"1\">An API for interacting with levels</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Level.LevelHashV2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Level.LevelHashV2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Level.LevelHashV2",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Level.LevelHashV2.yml\" sourcestartlinenumber=\"1\">Represents the version 2 of a level hash.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Level.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Level.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Level",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.EnteredLevelEditorDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.EnteredLevelEditorDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.EnteredLevelEditorDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.EnteredTestModeDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.EnteredTestModeDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.EnteredTestModeDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.ExitedLevelEditorDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.ExitedLevelEditorDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.ExitedLevelEditorDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.ICustomBlockBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.ICustomBlockBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.ICustomBlockBuilder",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.LevelEditor.ICustomBlockBuilder.yml\" sourcestartlinenumber=\"1\">A builder that is used to define a custom block</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.ICustomFolderBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.ICustomFolderBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.ICustomFolderBuilder",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.LevelEditor.ICustomFolderBuilder.yml\" sourcestartlinenumber=\"1\">A builder that is used to define a custom folder</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.LevelEditorApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.LevelEditorApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.LevelEditorApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.LevelEditor.LevelEditorApi.yml\" sourcestartlinenumber=\"1\">An API for interacting with the level editor</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.LevelLoadedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.LevelLoadedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.LevelLoadedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.LevelSavedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.LevelSavedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.LevelSavedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.SelectionChangedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.SelectionChangedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor.SelectionChangedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.LevelEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.LevelEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.LevelEditor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Messaging.ITaggedMessenger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Messaging.ITaggedMessenger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Messaging.ITaggedMessenger",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Messaging.ITaggedMessenger.yml\" sourcestartlinenumber=\"1\">A messenger that shows a tag when logging a message</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Messaging.MessengerApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Messaging.MessengerApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Messaging.MessengerApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Messaging.MessengerApi.yml\" sourcestartlinenumber=\"1\">Show the user a message using the game's messenger</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Messaging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Messaging.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Messaging",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.ConnectedToGameDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.ConnectedToGameDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.ConnectedToGameDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.CreatedRoomDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.CreatedRoomDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.CreatedRoomDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.DisconnectedFromGameDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.DisconnectedFromGameDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.DisconnectedFromGameDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.JoinedRoomDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.JoinedRoomDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.JoinedRoomDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.MultiplayerApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.MultiplayerApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.MultiplayerApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Multiplayer.MultiplayerApi.yml\" sourcestartlinenumber=\"1\">An API for interacting with the multiplayer side of Zeepkist</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.PlayerJoinedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.PlayerJoinedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.PlayerJoinedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.PlayerLeftDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.PlayerLeftDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.PlayerLeftDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.PlaylistItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.PlaylistItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer.PlaylistItem",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Multiplayer.PlaylistItem.yml\" sourcestartlinenumber=\"1\">An item describing a level in a playlist</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Multiplayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Multiplayer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Multiplayer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.MyPluginInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.MyPluginInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.MyPluginInfo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Numerics.Vector2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Numerics.Vector2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Numerics.Vector2",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Numerics.Vector2.yml\" sourcestartlinenumber=\"1\">A decimal backed vector2</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Numerics.Vector3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Numerics.Vector3.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Numerics.Vector3",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Numerics.Vector3.yml\" sourcestartlinenumber=\"1\">A decimal backed vector3</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Numerics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Numerics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Numerics",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.PhotoMode.PhotoModeApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.PhotoMode.PhotoModeApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.PhotoMode.PhotoModeApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.PhotoMode.PhotoModeApi.yml\" sourcestartlinenumber=\"1\">An API for interacting with Photo Mode</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.PhotoMode.PhotoModeEnteredDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.PhotoMode.PhotoModeEnteredDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.PhotoMode.PhotoModeEnteredDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.PhotoMode.PhotoModeExitedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.PhotoMode.PhotoModeExitedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.PhotoMode.PhotoModeExitedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.PhotoMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.PhotoMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.PhotoMode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Playlist.IPlaylistEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Playlist.IPlaylistEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Playlist.IPlaylistEditor",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Playlist.IPlaylistEditor.yml\" sourcestartlinenumber=\"1\">An editor for a playlist</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Playlist.PlaylistApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Playlist.PlaylistApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Playlist.PlaylistApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Playlist.PlaylistApi.yml\" sourcestartlinenumber=\"1\">An API for interacting with playlists</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Playlist.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Playlist.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Playlist",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.CrashReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.CrashReason.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.CrashReason",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Racing.CrashReason.yml\" sourcestartlinenumber=\"1\">The reason why a player crashed</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.CrashedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.CrashedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.CrashedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.CrossedFinishLineDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.CrossedFinishLineDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.CrossedFinishLineDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.EnteredFirstPersonDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.EnteredFirstPersonDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.EnteredFirstPersonDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.EnteredThirdPersonDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.EnteredThirdPersonDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.EnteredThirdPersonDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.LevelLoadedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.LevelLoadedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.LevelLoadedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.PassedCheckpointDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.PassedCheckpointDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.PassedCheckpointDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.PlayerSpawnedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.PlayerSpawnedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.PlayerSpawnedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.QuickResetDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.QuickResetDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.QuickResetDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.QuitDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.QuitDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.QuitDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.RacingApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.RacingApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.RacingApi",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.RoundEndedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.RoundEndedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.RoundEndedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.RoundStartedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.RoundStartedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.RoundStartedDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.WheelBrokenDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.WheelBrokenDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing.WheelBrokenDelegate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Racing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Racing.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Racing",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Scripting.ScriptingApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Scripting.ScriptingApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Scripting.ScriptingApi",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Scripting.ZUA.ILuaEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Scripting.ZUA.ILuaEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Scripting.ZUA.ILuaEvent",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Scripting.ZUA.ILuaEvent.yml\" sourcestartlinenumber=\"1\">Represents a Lua event that can be subscribed to or unsubscribed from.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Scripting.ZUA.ILuaFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Scripting.ZUA.ILuaFunction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Scripting.ZUA.ILuaFunction",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Scripting.ZUA.ILuaFunction.yml\" sourcestartlinenumber=\"1\">Represents a Lua function definition that includes a namespace, name, and a delegate to invoke the function.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Scripting.ZUA.Zua.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Scripting.ZUA.Zua.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Scripting.ZUA.Zua",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Scripting.ZUA.Zua.yml\" sourcestartlinenumber=\"1\">A wrapper around a Lua script</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Scripting.ZUA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Scripting.ZUA.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Scripting.ZUA",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Scripting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Scripting.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Scripting",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.Drawers.IZeepSettingsDrawer",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.yml\" sourcestartlinenumber=\"1\">Draws a single element in the mod settings panel.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.yml\" sourcestartlinenumber=\"1\">Shared services available to settings drawers while drawing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.yml\" sourcestartlinenumber=\"1\">Draws a BepInEx config entry in the mod settings panel.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.yml\" sourcestartlinenumber=\"1\">Draws a section header in the mod settings panel.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.yml\" sourcestartlinenumber=\"1\">Draws a horizontal separator between settings entries.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.Drawers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.Drawers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.Drawers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsConfigEntryDrawContext",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.yml\" sourcestartlinenumber=\"1\">Context passed to custom config entry draw callbacks.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate.yml\" sourcestartlinenumber=\"1\">Draws a custom settings row for a specific config entry.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory.yml\" sourcestartlinenumber=\"1\">Creates a settings drawer for a config entry of a registered setting type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsDrawerBuildContext",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.yml\" sourcestartlinenumber=\"1\">Context passed to mod settings drawer providers when building a drawer list.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsDrawersDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsDrawersDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsDrawersDelegate",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsDrawersDelegate.yml\" sourcestartlinenumber=\"1\">Builds the list of settings drawers to render for a mod.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsWindowClosedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsWindowClosedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsWindowClosedDelegate",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsWindowClosedDelegate.yml\" sourcestartlinenumber=\"1\">Represents a method that is called when the mod settings window is closed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsWindowOpenedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsWindowOpenedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsWindowOpenedDelegate",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsWindowOpenedDelegate.yml\" sourcestartlinenumber=\"1\">Represents a method that is called when the mod settings window is opened.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.SettingsApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.SettingsApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.SettingsApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.SettingsApi.yml\" sourcestartlinenumber=\"1\">Provides APIs for managing the mod settings window.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Storage.IModStorage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Storage.IModStorage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Storage.IModStorage",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Storage.IModStorage.yml\" sourcestartlinenumber=\"1\">A storage object that allows you to save and load data to a directory for your mod</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Storage.StorageApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Storage.StorageApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Storage.StorageApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Storage.StorageApi.yml\" sourcestartlinenumber=\"1\">An API for creating storage objects for your mod</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Storage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Storage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Storage",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.IZeepGUIDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.IZeepGUIDrawer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.IZeepGUIDrawer",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.IZeepGUIDrawer.yml\" sourcestartlinenumber=\"1\">Interface for drawers that render custom GUI elements in the Zeep GUI system</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.IZeepToolbarDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.IZeepToolbarDrawer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.IZeepToolbarDrawer",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.IZeepToolbarDrawer.yml\" sourcestartlinenumber=\"1\">Interface for drawers that add menu items to the Zeep toolbar</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.IZeepTooltip.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.IZeepTooltip.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.IZeepTooltip",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.IZeepTooltip.yml\" sourcestartlinenumber=\"1\">Interface for tooltip providers that supply tooltip information</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.ColumnExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.ColumnExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.ColumnExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.CutFromExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.CutFromExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.CutFromExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.GridExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.GridExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.GridExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.Internal.IEnumerableExtension",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.Internal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.Internal",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.MiscellaniousExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.MoveToExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.MoveToExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.MoveToExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.RowExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.RowExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx.RowExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.RectEx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.RectEx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.RectEx",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.UIApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.UIApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI.UIApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.UIApi.yml\" sourcestartlinenumber=\"1\">An API related to the UI of the game</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.UI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.UI",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.ColorDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.ColorDefinition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.ColorDefinition",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.ColorDefinition.yml\" sourcestartlinenumber=\"1\">A definition of a color with a name and a value</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.ColorUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.ColorUtility.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.ColorUtility",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.ColorUtility.yml\" sourcestartlinenumber=\"1\">A class containing utilities that are related to <xref href=\"UnityEngine.Color\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.ComponentCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.ComponentCache.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.ComponentCache",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.ComponentCache.yml\" sourcestartlinenumber=\"1\">A cache for components that live somewhere in the project.\nIt uses Object.FindObjectOfType to find the component so this is not particularly efficient.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.DisposableBag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.DisposableBag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.DisposableBag",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.DisposableBag.yml\" sourcestartlinenumber=\"1\">A container that holds multiple <xref href=\"System.IDisposable\" data-throw-if-not-resolved=\"false\"></xref> objects and disposes them all when disposed.\nUseful for managing multiple disposable resources that should be cleaned up together.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.ListUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.ListUtility.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.ListUtility",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.ListUtility.yml\" sourcestartlinenumber=\"1\">A class containing utility methods for lists</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.LoggerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.LoggerFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.LoggerFactory",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.ConditionTickType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.ConditionTickType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override.ConditionTickType",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.Override.ConditionTickType.yml\" sourcestartlinenumber=\"1\">Specifies when a condition should be evaluated in the Unity lifecycle.\nUsed by <xref href=\"ZeepSDK.Utilities.Override.ConditionalOverrideLayer%601\" data-throw-if-not-resolved=\"false\"></xref> to determine when to check its condition.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.ConditionTicker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.ConditionTicker.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override.ConditionTicker",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.Override.ConditionTicker.yml\" sourcestartlinenumber=\"1\">A singleton MonoBehaviour that manages and ticks <xref href=\"ZeepSDK.Utilities.Override.IConditionTickable\" data-throw-if-not-resolved=\"false\"></xref> objects\naccording to their specified <xref href=\"ZeepSDK.Utilities.Override.ConditionTickType\" data-throw-if-not-resolved=\"false\"></xref>.\nTicks are performed during Unity's Update, FixedUpdate, LateUpdate, or OnGUI lifecycle methods.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override.ConditionalOverrideLayer<T>",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.Override.ConditionalOverrideLayer-1.yml\" sourcestartlinenumber=\"1\">Represents an override layer that is conditionally active based on a boolean condition.\nThe condition is evaluated periodically according to the specified <xref href=\"ZeepSDK.Utilities.Override.ConditionTickType\" data-throw-if-not-resolved=\"false\"></xref>,\nand the override is automatically added or removed from the stack when the condition changes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.IConditionTickable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.IConditionTickable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override.IConditionTickable",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.Override.IConditionTickable.yml\" sourcestartlinenumber=\"1\">Represents an object that can be ticked by the <xref href=\"ZeepSDK.Utilities.Override.ConditionTicker\" data-throw-if-not-resolved=\"false\"></xref> at regular intervals.\nImplementations specify when they should be ticked via the <xref href=\"ZeepSDK.Utilities.Override.IConditionTickable.TickType\" data-throw-if-not-resolved=\"false\"></xref> property.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.IOverrideLayer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.IOverrideLayer-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override.IOverrideLayer<T>",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.Override.IOverrideLayer-1.yml\" sourcestartlinenumber=\"1\">Represents a layer in an override stack that can apply a value override.\nImplementations include <xref href=\"ZeepSDK.Utilities.Override.OverrideLayer%601\" data-throw-if-not-resolved=\"false\"></xref> for immediate overrides\nand <xref href=\"ZeepSDK.Utilities.Override.ConditionalOverrideLayer%601\" data-throw-if-not-resolved=\"false\"></xref> for conditionally active overrides.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.OverrideLayer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.OverrideLayer-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override.OverrideLayer<T>",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.Override.OverrideLayer-1.yml\" sourcestartlinenumber=\"1\">Represents a simple override layer that is immediately active when created.\nUnlike <xref href=\"ZeepSDK.Utilities.Override.ConditionalOverrideLayer%601\" data-throw-if-not-resolved=\"false\"></xref>, this override is always active until disposed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.OverrideStack-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.OverrideStack-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override.OverrideStack<T>",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.Override.OverrideStack-1.yml\" sourcestartlinenumber=\"1\">Manages a stack of override layers that can modify a value.\nOverride layers are applied in a stack-based manner, with the most recent active layer taking precedence.\nSupports both immediate overrides and conditionally active overrides.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.Override.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.Override.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.Override",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.SpriteUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.SpriteUtility.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.SpriteUtility",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.SpriteUtility.yml\" sourcestartlinenumber=\"1\">A class containing utilities that are related to <xref href=\"UnityEngine.Sprite\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.UnityFolders.PluginsFolder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.UnityFolders.PluginsFolder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.UnityFolders.PluginsFolder",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.UnityFolders.PluginsFolder.yml\" sourcestartlinenumber=\"1\">An interface for accessing the game's Plugins folder (not the BepInEx one).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.UnityFolders.StreamingAssetsFolder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.UnityFolders.StreamingAssetsFolder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.UnityFolders.StreamingAssetsFolder",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Utilities.UnityFolders.StreamingAssetsFolder.yml\" sourcestartlinenumber=\"1\">An interface for accessing the game's StreamingAssets folder.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.UnityFolders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.UnityFolders.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities.UnityFolders",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Utilities.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Utilities",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Workshop.WorkshopApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Workshop.WorkshopApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Workshop.WorkshopApi",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Workshop.WorkshopApi.yml\" sourcestartlinenumber=\"1\">An API for interacting with the workshop</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Workshop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Workshop.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Workshop",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK",
+      "Summary": null
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/custom-mod-settings-layout.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/custom-mod-settings-layout.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/local-chat-commands.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/local-chat-commands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/mod-settings.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/mod-settings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/remote-chat-commands.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/remote-chat-commands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/zeep-gui-drawer.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/zeep-gui-drawer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/zeep-toolbar-drawer.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/zeep-toolbar-drawer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
