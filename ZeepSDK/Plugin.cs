@@ -23,6 +23,7 @@ using ZeepSDK.Racing;
 using ZeepSDK.Scripting;
 using ZeepSDK.Settings;
 using ZeepSDK.Storage;
+using ZeepSDK.Terminal;
 using ZeepSDK.UI;
 using ZeepSDK.Versioning;
 
@@ -77,6 +78,7 @@ namespace ZeepSDK
             ScriptingApi.Initialize();
             ControlsApi.Initialize();
             SettingsApi.Initialize();
+            TerminalApi.Initialize(gameObject);
 
             // Plugin startup logic
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");

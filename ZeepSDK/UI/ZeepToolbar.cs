@@ -3,6 +3,7 @@ using Imui.Controls;
 using Imui.Core;
 using UnityEngine;
 using ZeepSDK.Settings;
+using ZeepSDK.Terminal;
 
 namespace ZeepSDK.UI;
 
@@ -35,6 +36,11 @@ internal class ZeepToolbar : IZeepGUIDrawer
             if (gui.Menu("Settings"))
             {
                 SettingsApi.OpenModSettings();
+            }
+
+            if (gui.Menu("Terminal"))
+            {
+                TerminalApi.Toggle();
             }
 
             gui.Separator();
