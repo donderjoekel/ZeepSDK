@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using ZeepSDK.Chat;
 using ZeepSDK.Extensions;
 
@@ -13,7 +14,9 @@ internal class HelpLocalChatCommand : ILocalChatCommand
 
     public void Handle(string arguments)
     {
-        List<IEnumerable<ILocalChatCommand>> chunks = ChatCommandRegistry.LocalChatCommands.Chunk(5).ToList();
+        List<IEnumerable<ILocalChatCommand>> chunks = ChatCommandRegistry.GetPrimaryLocalChatCommands()
+            .Chunk(5)
+            .ToList();
 
         ChatApi.AddLocalMessage("Available commands:");
 
@@ -38,9 +41,33 @@ internal class HelpLocalChatCommand : ILocalChatCommand
         foreach (ILocalChatCommand localChatCommand in chunk)
         {
             ChatApi.AddLocalMessage(
-                $"- {localChatCommand.Prefix}{localChatCommand.Command} - {localChatCommand.Description}");
+                $"- {FormatCommandLine(localChatCommand)} - {localChatCommand.Description}");
         }
 
         ChatApi.AddLocalMessage($"Page {page + 1}/{chunks.Count}");
+    }
+
+    private static string FormatCommandLine(ILocalChatCommand command)
+    {
+        var line = new StringBuilder();
+        line.Append(command.Prefix);
+        line.Append(command.Command);
+
+        List<ILocalChatCommandAlias> aliases = ChatCommandRegistry.GetAliasesFor(command).ToList();
+        if (aliases.Count == 0)
+            return line.ToString();
+
+        line.Append(" (");
+        for (var i = 0; i < aliases.Count; i++)
+        {
+            if (i > 0)
+                line.Append(", ");
+
+            line.Append(aliases[i].Prefix);
+            line.Append(aliases[i].Command);
+        }
+
+        line.Append(')');
+        return line.ToString();
     }
 }
