@@ -4,10 +4,10 @@ This guide describes how to publish stable and beta releases of ZeepSDK.
 
 ## Overview
 
-| Release type | GitHub pre-release | NuGet | mod.io | Docs |
-|--------------|-------------------|-------|--------|------|
-| **Stable** | unchecked | stable version | uploaded | site root |
-| **Beta** | checked | prerelease version | skipped | `/beta/` subpath |
+| Release type | GitHub pre-release | NuGet | mod.io | GitHub release asset | Docs |
+|--------------|-------------------|-------|--------|---------------------|------|
+| **Stable** | unchecked | stable version | uploaded | — | site root |
+| **Beta** | checked | prerelease version | skipped | zip attached | `/beta/` subpath |
 
 Beta releases are published to NuGet with a semver prerelease label (for example `2.4.0-beta.1`). They do **not** become the default package version when someone runs `dotnet add package ZeepSDK` without specifying a version.
 
