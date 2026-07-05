@@ -46,6 +46,19 @@ ZeepSDK provides APIs for a wide range of functionality:
 Comprehensive API documentation is available at:  
 **https://donderjoekel.github.io/ZeepSDK/api/index.html**
 
+### Beta releases
+
+Pre-release documentation and packages are published separately from stable releases:
+
+- **Beta docs**: https://donderjoekel.github.io/ZeepSDK/beta/
+- **Beta NuGet package**:
+
+```bash
+dotnet add package ZeepSDK --version 2.4.0-beta.1
+```
+
+Beta packages are prerelease versions on NuGet and are not installed by default. Beta builds are not uploaded to mod.io. See [RELEASE.md](RELEASE.md) for the maintainer release process.
+
 ## Built-in Features
 
 ### Chat Commands

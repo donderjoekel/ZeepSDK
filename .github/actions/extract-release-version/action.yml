@@ -1,0 +1,35 @@
+name: Extract release version
+description: Trim leading v from a release tag or workflow_dispatch version input.
+
+inputs:
+  tag_name:
+    description: Release tag name from github.event.release.tag_name
+    required: false
+    default: ''
+  version_input:
+    description: Manual version from workflow_dispatch inputs.version
+    required: false
+    default: ''
+
+outputs:
+  version:
+    description: Normalized version without leading v
+    value: ${{ steps.extract.outputs.version }}
+
+runs:
+  using: composite
+  steps:
+    - name: Extract version
+      id: extract
+      shell: pwsh
+      run: |
+        $raw = "${{ inputs.tag_name }}"
+        if ([string]::IsNullOrWhiteSpace($raw)) {
+          $raw = "${{ inputs.version_input }}"
+        }
+        $version = $raw -replace '^v',''
+        if ([string]::IsNullOrWhiteSpace($version)) {
+          throw "No version found. Provide a release tag or the workflow_dispatch version input."
+        }
+        "version=$version" >> $env:GITHUB_OUTPUT
+        "VERSION=$version" >> $env:GITHUB_ENV

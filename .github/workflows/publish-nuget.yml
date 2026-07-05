@@ -4,31 +4,54 @@ on:
   release:
     types: [published]
   workflow_dispatch:
+    inputs:
+      version:
+        description: Version to publish (e.g. 2.4.0-beta.1 or v2.4.0-beta.1). Required for manual runs.
+        required: true
 
 jobs:
   publish:
     permissions:
       id-token: write
+      contents: read
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up .NET
-      uses: actions/setup-dotnet@v3
+      - name: Extract version
+        uses: ./.github/actions/extract-release-version
+        with:
+          tag_name: ${{ github.event.release.tag_name }}
+          version_input: ${{ github.event.inputs.version }}
 
-    - name: Restore dependencies
-      run: dotnet restore
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
 
-    - name: Build, Test, and Pack
-      run: dotnet build --configuration Release && dotnet test --configuration Release --no-build && dotnet pack --configuration Release --no-build --output ./nuget
+      - name: Detect csproj
+        id: csproj
+        uses: ./.github/actions/detect-csproj
 
-    - name: NuGet login (OIDC → temp API key)
-      uses: NuGet/login@v1
-      id: login
-      with:
-        user: Thundernerd
+      - name: Set CSProj Version
+        uses: KageKirin/set-csproj-version@v1.0.0
+        with:
+          file: ${{ steps.csproj.outputs.csproj_path }}
+          version: ${{ env.VERSION }}
 
-    - name: Publish NuGet package
-      run: dotnet nuget push ./nuget/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{steps.login.outputs.NUGET_API_KEY}}
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build, Test, and Pack
+        run: dotnet build --configuration Release && dotnet test --configuration Release --no-build && dotnet pack --configuration Release --no-build --output ./nuget
+
+      - name: NuGet login (OIDC → temp API key)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: Thundernerd
+
+      - name: Publish NuGet package
+        run: dotnet nuget push ./nuget/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ steps.login.outputs.NUGET_API_KEY }}

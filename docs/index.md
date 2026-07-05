@@ -62,6 +62,7 @@ When creating plugins, we recommend using the `ZeepSDK` NuGet package instead of
 
 - Check out the [Articles](articles/) section for tutorials and guides
 - Browse the [API Documentation](api/) for detailed reference on all available APIs
+- Pre-release documentation: [beta docs](beta/index.html)
 - Explore the codebase to see examples of how other developers use ZeepSDK
 
 ## Built-in Features

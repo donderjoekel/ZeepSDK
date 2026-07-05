@@ -6,12 +6,15 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: Version to build (e.g. 2.3.0 or v2.3.0). Required for manual runs.
+        description: Version to build (e.g. 2.3.0 or v2.3.0-beta.1). Required for manual runs.
         required: true
       dry_run:
         description: Skip mod.io upload and attach the zip as a workflow artifact instead
         type: boolean
         default: true
+
+permissions:
+  contents: write
 
 env:
   GAME_ID: 3213
@@ -21,21 +24,14 @@ jobs:
   build:
     runs-on: windows-2025
     steps:
-      - name: Extract version (trim leading v)
-        shell: pwsh
-        run: |
-          $raw = "${{ github.event.release.tag_name }}"
-          if ([string]::IsNullOrWhiteSpace($raw)) {
-            $raw = "${{ github.event.inputs.version }}"
-          }
-          $version = $raw -replace '^v',''
-          if ([string]::IsNullOrWhiteSpace($version)) {
-            throw "No version found. Provide a release tag or the workflow_dispatch version input."
-          }
-          "VERSION=$version" >> $env:GITHUB_ENV
-
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Extract version
+        uses: ./.github/actions/extract-release-version
+        with:
+          tag_name: ${{ github.event.release.tag_name }}
+          version_input: ${{ github.event.inputs.version }}
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -83,8 +79,16 @@ jobs:
           name: build-${{ env.VERSION }}
           path: C:\out\build-${{ env.VERSION }}.zip
 
+      - name: Upload zip to pre-release
+        if: github.event_name == 'release' && github.event.release.prerelease
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload "${{ github.event.release.tag_name }}" "C:\out\build-${{ env.VERSION }}.zip" --clobber
+
       - name: Upload mod to mod.io
-        if: github.event_name == 'release' || !inputs.dry_run
+        if: (github.event_name == 'workflow_dispatch' && !inputs.dry_run) || (github.event_name == 'release' && !github.event.release.prerelease)
         uses: Thundernerd/upload-mod-to-modio@v1.0.0
         with:
           bearer-token: ${{ secrets.MODIO_BEARER }}

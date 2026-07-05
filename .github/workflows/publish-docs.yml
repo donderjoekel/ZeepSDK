@@ -4,23 +4,90 @@ on:
   release:
     types: [published]
   workflow_dispatch:
+    inputs:
+      version:
+        description: Documentation version label for beta banner (e.g. 2.4.0-beta.1). Required when prerelease is true.
+        required: false
+      prerelease:
+        description: Deploy to the beta docs path instead of the stable site root
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
 
 jobs:
   publish-docs:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: Dotnet Setup
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 8.x
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - run: dotnet tool update -g docfx
-    - run: docfx docs/docfx.json
+      - name: Determine docs channel
+        id: channel
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "release" ] && [ "${{ github.event.release.prerelease }}" = "true" ]; then
+            echo "beta=true" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.prerelease }}" = "true" ]; then
+            echo "beta=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "beta=false" >> "$GITHUB_OUTPUT"
+          fi
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs/_site
+      - name: Extract version
+        id: version
+        if: github.event_name == 'release' || github.event.inputs.version != ''
+        uses: ./.github/actions/extract-release-version
+        with:
+          tag_name: ${{ github.event.release.tag_name }}
+          version_input: ${{ github.event.inputs.version }}
+
+      - name: Resolve docs version label
+        id: docs_version
+        shell: bash
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          if [ -z "$VERSION" ] && [ -n "${{ github.event.release.tag_name }}" ]; then
+            VERSION="${{ github.event.release.tag_name }}"
+            VERSION="${VERSION#v}"
+          fi
+          if [ -z "$VERSION" ]; then
+            VERSION="pre-release"
+          fi
+          echo "label=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Dotnet Setup
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Prepare beta docs
+        if: steps.channel.outputs.beta == 'true'
+        shell: bash
+        run: |
+          BANNER="> **Beta documentation** for version ${{ steps.docs_version.outputs.label }} — You are viewing docs for a pre-release version. [Stable documentation](../index.html)"
+          echo -e "${BANNER}\n" | cat - docs/index.md > docs/index.md.tmp
+          mv docs/index.md.tmp docs/index.md
+          jq '.build.globalMetadata._appTitle = "ZeepSDK (Beta)"' docs/docfx.json > docs/docfx.json.tmp
+          mv docs/docfx.json.tmp docs/docfx.json
+
+      - run: dotnet tool update -g docfx
+      - run: docfx docs/docfx.json
+
+      - name: Deploy stable docs
+        if: steps.channel.outputs.beta != 'true'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_site
+          keep_files: true
+
+      - name: Deploy beta docs
+        if: steps.channel.outputs.beta == 'true'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_site
+          destination_dir: beta
+          keep_files: true
