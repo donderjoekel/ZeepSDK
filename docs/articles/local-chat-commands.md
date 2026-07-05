@@ -313,6 +313,68 @@ public class MyMod : BaseUnityPlugin
 }
 ```
 
+## Command Aliases
+
+You can register alternative keywords for an existing local command. Aliases use the same prefix as the primary command and invoke the same handler.
+
+### Registering Aliases
+
+```csharp
+// Class-based command
+ChatCommandApi.RegisterLocalChatCommand<MyTeleportCommand>();
+ChatCommandApi.RegisterLocalChatCommandAlias<MyTeleportCommand>("tp");
+ChatCommandApi.RegisterLocalChatCommandAliases<MyTeleportCommand>("tp", "goto");
+
+// Callback-based command (no instance reference needed)
+ChatCommandApi.RegisterLocalChatCommand("/", "teleport", "Teleports to coordinates", OnTeleport);
+ChatCommandApi.RegisterLocalChatCommandAlias("/", "teleport", "tp");
+
+// Instance-based command
+ChatCommandApi.RegisterLocalChatCommand(myCommand);
+ChatCommandApi.RegisterLocalChatCommandAlias(myCommand, "h");
+```
+
+Aliases appear inline in the built-in `/help` output:
+
+```
+- /teleport (/tp, /goto) - Teleports to coordinates
+```
+
+When a primary command is unregistered, all of its aliases are removed automatically.
+
+### Discovering Aliases
+
+Alias entries live in the same registry as primary commands. Use `ILocalChatCommandAlias` and the registry helpers to build custom command listings in your mod:
+
+```csharp
+using System.Linq;
+using ZeepSDK.ChatCommands;
+
+// Primary commands only
+foreach (ILocalChatCommand command in ChatCommandRegistry.GetPrimaryLocalChatCommands())
+{
+    string primary = $"{command.Prefix}{command.Command}";
+    string[] aliases = ChatCommandRegistry.GetAliasesFor(command)
+        .Select(alias => $"{alias.Prefix}{alias.Command}")
+        .ToArray();
+}
+
+// Or inspect the full registry directly
+foreach (ILocalChatCommand entry in ChatCommandRegistry.LocalChatCommands)
+{
+    if (entry is ILocalChatCommandAlias alias)
+    {
+        // alias.Command is the alias keyword
+        // alias.Target is the primary command
+    }
+}
+```
+
+Other registry helpers:
+
+- `ChatCommandRegistry.IsAlias(command)` — returns whether an entry is an alias
+- `ChatCommandRegistry.ResolvePrimaryCommand(command)` — returns the primary command for an alias entry
+
 ## Unregistering Commands
 
 If you need to unregister a command (e.g., when your plugin is disabled), you can use the unregister method:
@@ -336,6 +398,7 @@ private void OnDestroy()
 
 - **Callback Delegate Method**: Best for simple, one-off commands
 - **Interface Implementation Method**: Best for complex commands, reusable logic, or when you need to maintain state
+- **Aliases**: Register alternative keywords with `RegisterLocalChatCommandAlias`; aliases are stored in `ChatCommandRegistry.LocalChatCommands` and discoverable via `ILocalChatCommandAlias`
 - Always provide clear descriptions and validate user input
 - Use appropriate prefixes (typically `/`)
 - Handle errors gracefully and provide helpful usage messages
