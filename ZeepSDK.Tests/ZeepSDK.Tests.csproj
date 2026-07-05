@@ -30,6 +30,9 @@
         <Compile Include="..\ZeepSDK\Utilities\SequenceComparer.cs" Link="Source\SequenceComparer.cs" />
         <Compile Include="..\ZeepSDK\Utilities\Vector3Comparer.cs" Link="Source\Vector3Comparer.cs" />
         <Compile Include="..\ZeepSDK\Utilities\XxHash128Reflection.cs" Link="Source\XxHash128Reflection.cs" />
+        <Compile Include="..\ZeepSDK\Terminal\Parsing\ShellLexer.cs" Link="Source\ShellLexer.cs" />
+        <Compile Include="..\ZeepSDK\Terminal\Parsing\ShellLineParser.cs" Link="Source\ShellLineParser.cs" />
+        <Compile Include="..\ZeepSDK\Terminal\Parsing\ParsedCommandLine.cs" Link="Source\ParsedCommandLine.cs" />
     </ItemGroup>
 
     <ItemGroup>
