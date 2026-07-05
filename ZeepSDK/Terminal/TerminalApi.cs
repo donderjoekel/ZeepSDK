@@ -43,7 +43,6 @@ public static class TerminalApi
     public static event TerminalClosedDelegate TerminalClosed;
 
     private static ZeepTerminalDrawer terminalDrawer;
-    private static ConfigEntry<KeyCode> toggleTerminalKey;
     private static ConfigEntry<bool> legacyChatCommandsEnabled;
 
     /// <summary>
@@ -58,12 +57,6 @@ public static class TerminalApi
 
     internal static void Initialize(GameObject gameObject)
     {
-        toggleTerminalKey = Plugin.Instance.Config.Bind(
-            "General",
-            "Toggle Terminal Key",
-            KeyCode.BackQuote,
-            "The key to toggle the terminal window");
-
         legacyChatCommandsEnabled = Plugin.Instance.Config.Bind(
             "General",
             "Terminal Legacy Chat Commands",
@@ -73,7 +66,7 @@ public static class TerminalApi
         RegisterTerminalCommand<HelpTerminalCommand>();
         RegisterTerminalCommand<ClearTerminalCommand>();
 
-        terminalDrawer = new ZeepTerminalDrawer(toggleTerminalKey);
+        terminalDrawer = new ZeepTerminalDrawer(Plugin.Instance.ToggleTerminalKey);
         UIApi.AddZeepGUIDrawer(terminalDrawer);
     }
 

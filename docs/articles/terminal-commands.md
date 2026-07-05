@@ -4,7 +4,7 @@ ZeepSDK provides a local terminal window for prefix-free commands with shell-sty
 
 ## Opening the terminal
 
-- Press the backtick key (`` ` ``) by default
+- Press the backtick key (`` ` ``) by default, or rebind it under **Zeep SDK → General → Toggle Terminal Key** in the mod settings window
 - Use **File → Terminal** in the Zeep toolbar
 - Call `TerminalApi.Open()`, `TerminalApi.Close()`, or `TerminalApi.Toggle()` from code
 
