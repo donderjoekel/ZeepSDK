@@ -1,4 +1,4 @@
-﻿using System.Text.RegularExpressions;
+﻿using ZeepSDK.Utilities;
 
 namespace ZeepSDK.ChatCommands;
 
@@ -6,16 +6,14 @@ internal static class ChatCommandUtilities
 {
     public static bool MatchesCommand(string input, IChatCommand chatCommand)
     {
-        if (chatCommand == null) return false;
-        string escapedPrefix = Regex.Escape(chatCommand.Prefix);
-        string escapedCommand = Regex.Escape(chatCommand.Command);
-        string pattern = $"^{escapedPrefix}{escapedCommand}(\\W|$).*";
-        return Regex.IsMatch(input, pattern, RegexOptions.IgnoreCase);
+        if (chatCommand == null)
+            return false;
+
+        return CommandLineMatching.MatchesCommand(input, chatCommand.Prefix, chatCommand.Command);
     }
 
     public static string GetArguments(string input, IChatCommand chatCommand)
     {
-        string args = input[chatCommand.Prefix.Length..];
-        return args[chatCommand.Command.Length..].Trim();
+        return CommandLineMatching.GetArguments(input, chatCommand.Prefix, chatCommand.Command);
     }
 }
