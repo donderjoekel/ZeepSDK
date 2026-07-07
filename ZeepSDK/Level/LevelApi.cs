@@ -111,7 +111,8 @@ public static class LevelApi
 
                 if (v15LevelData.StartsWith("{"))
                 {
-                    v15LevelJSON v15LevelJson = JsonConvert.DeserializeObject<v15LevelJSON>(v15LevelData);
+                    v15LevelJSON v15LevelJson = JsonConvert.DeserializeObject<v15LevelJSON>(
+                        LevelHashV2Calculator.NormalizeNonFiniteJsonNumbers(v15LevelData));
                     if (v15LevelJson != null && (levelScriptableObject.UseAvonturenLevel || levelScriptableObject.IsAdventureLevel))
                         return levelScriptableObject.UID;
                     return v15LevelJson.level.zeepHash;

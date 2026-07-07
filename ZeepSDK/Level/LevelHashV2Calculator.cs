@@ -108,12 +108,84 @@ internal static class LevelHashV2Calculator
 
     private static JObject ParseCanonicalJson(string content)
     {
-        using StringReader stringReader = new(content);
+        using StringReader stringReader = new(NormalizeNonFiniteJsonNumbers(content));
         using JsonTextReader jsonReader = new(stringReader)
         {
             FloatParseHandling = FloatParseHandling.Decimal
         };
         return JObject.Load(jsonReader);
+    }
+
+    internal static string NormalizeNonFiniteJsonNumbers(string content)
+    {
+        StringBuilder builder = new(content.Length);
+        bool inString = false;
+        bool escaped = false;
+
+        for (int index = 0; index < content.Length; index++)
+        {
+            char character = content[index];
+            if (inString)
+            {
+                builder.Append(character);
+                if (escaped)
+                    escaped = false;
+                else if (character == '\\')
+                    escaped = true;
+                else if (character == '"')
+                    inString = false;
+                continue;
+            }
+
+            if (character == '"')
+            {
+                inString = true;
+                builder.Append(character);
+                continue;
+            }
+
+            string replacement = ReplaceBareToken(content, index, "-Infinity")
+                                 ?? ReplaceBareToken(content, index, "Infinity")
+                                 ?? ReplaceBareToken(content, index, "NaN");
+            if (replacement != null)
+            {
+                int tokenLength = content.AsSpan(index).StartsWith("-Infinity")
+                    ? "-Infinity".Length
+                    : content.AsSpan(index).StartsWith("Infinity")
+                        ? "Infinity".Length
+                        : "NaN".Length;
+                builder.Append(replacement);
+                index += tokenLength - 1;
+                continue;
+            }
+
+            builder.Append(character);
+        }
+
+        return builder.ToString();
+    }
+
+    private static string ReplaceBareToken(string content, int index, string token)
+    {
+        if (!content.AsSpan(index).StartsWith(token))
+            return null;
+
+        if (IsJsonIdentifierCharacter(index > 0 ? content[index - 1] : null)
+            || IsJsonIdentifierCharacter(index + token.Length < content.Length
+                ? content[index + token.Length]
+                : null))
+            return null;
+
+        return "0";
+    }
+
+    private static bool IsJsonIdentifierCharacter(char? character)
+    {
+        return character is >= 'A' and <= 'Z'
+               or >= 'a' and <= 'z'
+               or >= '0' and <= '9'
+               or '_'
+               or '$';
     }
 
     private static string CanonicalJsonNumber(JValue value)

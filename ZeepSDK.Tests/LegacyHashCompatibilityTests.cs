@@ -81,4 +81,113 @@ public class LegacyHashCompatibilityTests
             LevelHashV2Calculator.Calculate(content, "legacy-json-hash").Hash,
             LevelHashV2Calculator.Calculate(withPresentBlock, "legacy-json-hash").Hash);
     }
+
+    [Fact]
+    public void CsvNaNBlockIdsHashAsZero()
+    {
+        string zeroBlock = "0,1,2,3,4,5,6,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0";
+        string nanBlock = zeroBlock.Replace("0,1,2", "NaN,1,2");
+        string zeroContent = string.Join(
+            "\n",
+            "LevelEditor2,Author,uid-zero",
+            "0,0,0,0,0,0,0,0",
+            "1,2,3,4,1,-1",
+            zeroBlock);
+        string nanContent = zeroContent.Replace(zeroBlock, nanBlock);
+
+        CsvZeepLevel nanLevel = CsvZeepLevelParser.Parse(nanContent.Split('\n'));
+        CsvZeepLevel zeroLevel = CsvZeepLevelParser.Parse(zeroContent.Split('\n'));
+
+        Assert.Equal(0, nanLevel.Blocks.Last().Id);
+        Assert.Equal(zeroLevel.CalculateHash(), nanLevel.CalculateHash());
+        Assert.Equal(zeroLevel.CalculateXxHash(), nanLevel.CalculateXxHash());
+    }
+
+    [Fact]
+    public void CsvExtraColumnsStayInCanonicalHash()
+    {
+        string block = "1,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0";
+        string longBlock = $"{block},1,2,3,4,5,6";
+        string trimmedContent = string.Join(
+            "\n",
+            "LevelEditor2,Author,uid-extra",
+            "0,0,0,0,0,0,0,0",
+            "1,2,3,4,1,-1",
+            block);
+        string longContent = trimmedContent.Replace(block, longBlock);
+
+        CsvZeepLevel trimmedLevel = CsvZeepLevelParser.Parse(trimmedContent.Split('\n'));
+        CsvZeepLevel longLevel = CsvZeepLevelParser.Parse(longContent.Split('\n'));
+
+        Assert.Equal(17, longLevel.Blocks.Last().Options.Count);
+        Assert.NotEqual(trimmedLevel.CalculateHash(), longLevel.CalculateHash());
+        Assert.NotEqual(trimmedLevel.CalculateXxHash(), longLevel.CalculateXxHash());
+    }
+
+    [Fact]
+    public void CsvMetadataRowsWithExtraColumnsUseThirdColumnAsUid()
+    {
+        string content = string.Join(
+            "\n",
+            "LevelEditor2,Test, Level,discarded",
+            "0,0,0,0,0,0,0,0",
+            "1,2,3,4,1,-1");
+
+        CsvZeepLevel level = CsvZeepLevelParser.Parse(content.Split('\n'));
+
+        Assert.Equal("Test", level.PlayerName);
+        Assert.Equal(" Level", level.UniqueId);
+    }
+
+    [Fact]
+    public void CsvBlockShapedValidationRowDefaultsValidationAndKeepsFirstBlock()
+    {
+        string block = "22,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0";
+        string content = string.Join(
+            "\n",
+            "LevelEditor2,Author,uid-block-validation",
+            "0,0,0,0,0,0,0,0",
+            block);
+
+        CsvZeepLevel level = CsvZeepLevelParser.Parse(content.Split('\n'));
+
+        Assert.Equal(0, level.ValidationTime);
+        Assert.Equal(0, level.GoldTime);
+        Assert.Equal(0, level.SilverTime);
+        Assert.Equal(0, level.BronzeTime);
+        Assert.Equal(0, level.Skybox);
+        Assert.Equal(0, level.Ground);
+        Assert.Single(level.Blocks);
+        Assert.Equal(22, level.Blocks[0].Id);
+    }
+
+    [Fact]
+    public void CsvShortValidationRowsPadMissingGround()
+    {
+        string content = string.Join(
+            "\n",
+            "LevelEditor2,Author,uid-short-validation",
+            "0,0,0,0,0,0,0,0",
+            "12.5,20,25,30,1");
+
+        CsvZeepLevel level = CsvZeepLevelParser.Parse(content.Split('\n'));
+
+        Assert.Equal(12.5f, level.ValidationTime);
+        Assert.Equal(20, level.GoldTime);
+        Assert.Equal(25, level.SilverTime);
+        Assert.Equal(30, level.BronzeTime);
+        Assert.Equal(1, level.Skybox);
+        Assert.Equal(0, level.Ground);
+    }
+
+    [Fact]
+    public void JsonBareNaNMedalsHashAsZero()
+    {
+        string nonFiniteContent = @"{""level"":{""UID"":""uid-json"",""zeepHash"":""legacy-json-hash""},""author"":{""name"":""Author"",""StmID"":""1""},""medals"":{""author"":NaN,""gold"":Infinity,""silver"":-Infinity,""bronze"":10},""enviro"":{""skybox"":1,""groundMat"":-1},""blox"":[]}";
+        string zeroContent = @"{""level"":{""UID"":""uid-json"",""zeepHash"":""legacy-json-hash""},""author"":{""name"":""Author"",""StmID"":""1""},""medals"":{""author"":0,""gold"":0,""silver"":0,""bronze"":10},""enviro"":{""skybox"":1,""groundMat"":-1},""blox"":[]}";
+
+        Assert.Equal(
+            LevelHashV2Calculator.Calculate(zeroContent, "legacy-json-hash").Hash,
+            LevelHashV2Calculator.Calculate(nonFiniteContent, "legacy-json-hash").Hash);
+    }
 }
