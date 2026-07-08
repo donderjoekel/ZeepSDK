@@ -22,16 +22,17 @@ internal static class CsvZeepLevelParser
         }
 
         CsvZeepLevel level = new();
-        if (!ParseFirstLine(lines[0], level))
+        if (!ParseFirstLine(lines.ElementAtOrDefault(0) ?? string.Empty, level))
             return null;
 
-        if (!ParseCameraLine(lines[1], level))
+        if (!ParseCameraLine(lines.ElementAtOrDefault(1) ?? string.Empty, level))
             return null;
 
-        if (!ParseValidationLine(lines[2], level))
+        if (!ParseValidationLine(lines.ElementAtOrDefault(2) ?? string.Empty, level, out bool validationIsBlock))
             return null;
 
-        if (!ParseBlocks(lines[3..], level))
+        int blockStartIndex = validationIsBlock ? 2 : 3;
+        if (!ParseBlocks(lines.Length > blockStartIndex ? lines[blockStartIndex..] : Array.Empty<string>(), level))
             return null;
 
         return level;
@@ -43,7 +44,7 @@ internal static class CsvZeepLevelParser
         {
             string[] splits = line.Split(',');
 
-            if (splits.Length != 3)
+            if (splits.Length < 3)
             {
                 _logger.LogWarning("First line has invalid amount of splits");
                 return false;
@@ -67,27 +68,21 @@ internal static class CsvZeepLevelParser
     {
         try
         {
-            string[] splits = line.Split(',');
-
-            if (splits.Length != 8)
-            {
-                _logger.LogWarning("Camera line has invalid amount of splits");
-                return false;
-            }
+            string[] splits = NormalizeRowValues(line.Split(','), 8);
 
             level.CameraPosition = new Vector3(
-                decimal.Parse(splits[0], NumberStyles.Any, _culture),
-                decimal.Parse(splits[1], NumberStyles.Any, _culture),
-                decimal.Parse(splits[2], NumberStyles.Any, _culture));
+                ParseDecimalOrDefault(splits[0]),
+                ParseDecimalOrDefault(splits[1]),
+                ParseDecimalOrDefault(splits[2]));
 
             level.CameraEuler = new Vector3(
-                decimal.Parse(splits[3], NumberStyles.Any, _culture),
-                decimal.Parse(splits[4], NumberStyles.Any, _culture),
-                decimal.Parse(splits[5], NumberStyles.Any, _culture));
+                ParseDecimalOrDefault(splits[3]),
+                ParseDecimalOrDefault(splits[4]),
+                ParseDecimalOrDefault(splits[5]));
 
             level.CameraRotation = new Vector2(
-                decimal.Parse(splits[6], NumberStyles.Any, _culture),
-                decimal.Parse(splits[7], NumberStyles.Any, _culture));
+                ParseDecimalOrDefault(splits[6]),
+                ParseDecimalOrDefault(splits[7]));
 
             return true;
         }
@@ -99,39 +94,38 @@ internal static class CsvZeepLevelParser
         }
     }
 
-    private static bool ParseValidationLine(string line, CsvZeepLevel level)
+    private static bool ParseValidationLine(string line, CsvZeepLevel level, out bool validationIsBlock)
     {
         try
         {
-            string[] splits = line.Split(',');
+            string[] rawSplits = line.Split(',');
+            validationIsBlock = rawSplits.Length >= 10;
+            string[] splits = validationIsBlock
+                ? new[] { "0", "0", "0", "0", "0", "0" }
+                : NormalizeRowValues(rawSplits, 6);
 
-            if (splits.Length != 6)
-            {
-                _logger.LogWarning("Validation line has invalid amount of splits");
-                return false;
-            }
-
-            if (float.TryParse(splits[0], NumberStyles.Any, _culture, out float validationTime))
+            if (IsFiniteFloat(splits[0]))
             {
                 level.IsValidated = true;
-                level.ValidationTime = validationTime;
+                level.ValidationTime = ParseFloatOrDefault(splits[0]);
             }
             else
             {
                 level.IsValidated = false;
             }
 
-            level.GoldTime = float.Parse(splits[1], NumberStyles.Any, _culture);
-            level.SilverTime = float.Parse(splits[2], NumberStyles.Any, _culture);
-            level.BronzeTime = float.Parse(splits[3], NumberStyles.Any, _culture);
+            level.GoldTime = ParseFloatOrDefault(splits[1]);
+            level.SilverTime = ParseFloatOrDefault(splits[2]);
+            level.BronzeTime = ParseFloatOrDefault(splits[3]);
 
-            level.Skybox = int.Parse(splits[4], NumberStyles.Any, _culture);
-            level.Ground = int.Parse(splits[5], NumberStyles.Any, _culture);
+            level.Skybox = ParseIntOrDefault(splits[4]);
+            level.Ground = ParseIntOrDefault(splits[5]);
 
             return true;
         }
         catch (Exception e)
         {
+            validationIsBlock = false;
             _logger.LogError("Error while parsing validation line");
             _logger.LogError(e);
             return false;
@@ -149,45 +143,39 @@ internal static class CsvZeepLevelParser
 
             try
             {
-                string[] splits = line.Split(',');
-                if (splits.Length != 38)
-                {
-                    _logger.LogError(
-                        $"Unable to parse block line, got {splits.Length} splits, expected 38. UID: '{level.UniqueId}'. Line: '{line}'");
-                    return false;
-                }
+                string[] splits = NormalizeBlockValues(line.Split(','));
 
                 CsvZeepBlock block = new();
 
-                block.Id = int.Parse(splits[0], NumberStyles.Any, _culture);
+                block.Id = ParseIntOrDefault(splits[0]);
 
                 block.Position = new Vector3(
-                    decimal.Parse(splits[1], NumberStyles.Any, _culture),
-                    decimal.Parse(splits[2], NumberStyles.Any, _culture),
-                    decimal.Parse(splits[3], NumberStyles.Any, _culture));
+                    ParseDecimalOrDefault(splits[1]),
+                    ParseDecimalOrDefault(splits[2]),
+                    ParseDecimalOrDefault(splits[3]));
 
                 block.Euler = new Vector3(
-                    decimal.Parse(splits[4], NumberStyles.Any, _culture),
-                    decimal.Parse(splits[5], NumberStyles.Any, _culture),
-                    decimal.Parse(splits[6], NumberStyles.Any, _culture));
+                    ParseDecimalOrDefault(splits[4]),
+                    ParseDecimalOrDefault(splits[5]),
+                    ParseDecimalOrDefault(splits[6]));
 
                 block.Scale = new Vector3(
-                    decimal.Parse(splits[7], NumberStyles.Any, _culture),
-                    decimal.Parse(splits[8], NumberStyles.Any, _culture),
-                    decimal.Parse(splits[9], NumberStyles.Any, _culture));
+                    ParseDecimalOrDefault(splits[7]),
+                    ParseDecimalOrDefault(splits[8]),
+                    ParseDecimalOrDefault(splits[9]));
 
                 // Hackfix for the note block
                 if (block.Id == 2279)
                 {
                     splits[10..27].ToList()
-                        .ForEach(x => block.Paints.Add((int)float.Parse(x, NumberStyles.Any, _culture)));
+                        .ForEach(x => block.Paints.Add((int)ParseFloatOrDefault(x)));
                 }
                 else
                 {
-                    splits[10..27].ToList().ForEach(x => block.Paints.Add(int.Parse(x, NumberStyles.Any, _culture)));
+                    splits[10..27].ToList().ForEach(x => block.Paints.Add(ParseIntOrDefault(x)));
                 }
 
-                splits[27..38].ToList().ForEach(x => block.Options.Add(float.Parse(x, NumberStyles.Any, _culture)));
+                splits[27..].ToList().ForEach(x => block.Options.Add(ParseFloatOrDefault(x)));
 
                 blocks.Add(block);
             }
@@ -201,5 +189,50 @@ internal static class CsvZeepLevelParser
 
         level.Blocks = blocks;
         return true;
+    }
+
+    private static string[] NormalizeBlockValues(string[] values)
+    {
+        if (values.Length >= 38)
+            return values;
+
+        return NormalizeRowValues(values, 38);
+    }
+
+    private static string[] NormalizeRowValues(string[] values, int length)
+    {
+        if (values.Length >= length)
+            return values[..length];
+
+        string[] normalized = new string[length];
+        Array.Copy(values, normalized, values.Length);
+        for (int index = values.Length; index < normalized.Length; index++)
+            normalized[index] = "0";
+        return normalized;
+    }
+
+    private static decimal ParseDecimalOrDefault(string value)
+    {
+        return decimal.TryParse(value, NumberStyles.Any, _culture, out decimal parsed) ? parsed : 0m;
+    }
+
+    private static float ParseFloatOrDefault(string value)
+    {
+        if (!float.TryParse(value, NumberStyles.Any, _culture, out float parsed))
+            return 0f;
+
+        return float.IsNaN(parsed) || float.IsInfinity(parsed) ? 0f : parsed;
+    }
+
+    private static bool IsFiniteFloat(string value)
+    {
+        return float.TryParse(value, NumberStyles.Any, _culture, out float parsed)
+               && !float.IsNaN(parsed)
+               && !float.IsInfinity(parsed);
+    }
+
+    private static int ParseIntOrDefault(string value)
+    {
+        return (int)ParseDecimalOrDefault(value);
     }
 }
