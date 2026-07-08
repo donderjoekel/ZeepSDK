@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Custom Mod Settings Layout </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Custom Mod Settings Layout ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="custom-mod-settings-layout">Custom Mod Settings Layout</h1>
+
+<p>When the default settings layout is not enough, ZeepSDK lets you build a custom drawer pipeline for your mod. Each element in the pipeline implements <code>IZeepSettingsDrawer</code> and draws one piece of the settings panel.</p>
+<h2 id="overview">Overview</h2>
+<p>The mod settings window renders a list of drawers for the selected plugin. By default, ZeepSDK builds that list automatically from your config entries: section header, entry row, separator, and trailing section spacing.</p>
+<p>Register a custom provider with <code>RegisterModSettingsDrawers</code> to replace or extend that list. Your provider receives a <code>ModSettingsDrawerBuildContext</code> and returns the drawers to render.</p>
+<h3 id="when-to-use-a-custom-layout">When to Use a Custom Layout</h3>
+<p>Use a custom layout when you need to:</p>
+<ul>
+<li>Insert non-config UI between settings rows</li>
+<li>Reorder or omit sections</li>
+<li>Group entries differently from BepInEx sections</li>
+<li>Add headers, help text, or action buttons that are not config entries</li>
+<li>Compose the default layout with additional custom drawers</li>
+</ul>
+<p>For simpler changes — custom labels, one-off entry UI, or shared type renderers — see <strong><a href="mod-settings.html">Mod Settings</a></strong> first.</p>
+<h2 id="basic-implementation">Basic Implementation</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using BepInEx;
+using ZeepSDK.Settings;
+using ZeepSDK.Settings.Drawers;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private void Awake()
+    {
+        SettingsApi.RegisterModSettingsDrawers(this, BuildSettingsDrawers);
+    }
+
+    private IEnumerable&lt;IZeepSettingsDrawer&gt; BuildSettingsDrawers(ModSettingsDrawerBuildContext context)
+    {
+        // Use the default layout unchanged
+        return context.CreateDefaultDrawers();
+    }
+}
+</code></pre>
+<p>Call <code>RegisterModSettingsDrawers</code> once during plugin startup, typically in <code>Awake</code>.</p>
+<h2 id="modsettingsdrawerbuildcontext">ModSettingsDrawerBuildContext</h2>
+<p>The build context gives your provider access to the plugin being drawn and its config entries:</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Plugin</code></td>
+<td>The <code>PluginInfo</code> for the mod being rendered</td>
+</tr>
+<tr>
+<td><code>EntriesBySection</code></td>
+<td>Config entries grouped by BepInEx section name</td>
+</tr>
+<tr>
+<td><code>CreateDefaultDrawers()</code></td>
+<td>Builds the default drawer sequence, including any labels and per-entry callbacks you registered</td>
+</tr>
+</tbody>
+</table>
+<p><code>CreateDefaultDrawers()</code> automatically includes:</p>
+<ul>
+<li>Custom labels from <code>SetConfigEntryLabel</code></li>
+<li>Per-entry callbacks from <code>SetConfigEntryDrawer</code></li>
+<li>Type-based drawers from <code>RegisterConfigEntryTypeDrawer</code></li>
+</ul>
+<p>So you can register incremental customizations and still call <code>CreateDefaultDrawers()</code> inside a custom layout provider.</p>
+<h2 id="built-in-drawer-types">Built-in Drawer Types</h2>
+<p>These public drawer classes are available in the <code>ZeepSDK.Settings.Drawers</code> namespace:</p>
+<h3 id="zeepsettingsheaderdrawer"><code>ZeepSettingsHeaderDrawer</code></h3>
+<p>Draws a section header:</p>
+<pre><code class="lang-csharp">yield return new ZeepSettingsHeaderDrawer(&quot;Audio&quot;);
+</code></pre>
+<h3 id="zeepsettingsentrydrawer"><code>ZeepSettingsEntryDrawer</code></h3>
+<p>Draws a single config entry using the built-in row renderer:</p>
+<pre><code class="lang-csharp">yield return new ZeepSettingsEntryDrawer(myConfigEntry, &quot;Friendly Label&quot;);
+</code></pre>
+<p>When <code>label</code> is omitted, the config key is used.</p>
+<h3 id="zeepsettingsseparatordrawer"><code>ZeepSettingsSeparatorDrawer</code></h3>
+<p>Draws a horizontal separator between entries:</p>
+<pre><code class="lang-csharp">yield return new ZeepSettingsSeparatorDrawer();
+</code></pre>
+<p>The default layout inserts a separator after every visible entry.</p>
+<h2 id="composing-layouts">Composing Layouts</h2>
+<h3 id="default-layout-plus-custom-content">Default Layout Plus Custom Content</h3>
+<p>Add content before or after the default drawers:</p>
+<pre><code class="lang-csharp">private IEnumerable&lt;IZeepSettingsDrawer&gt; BuildSettingsDrawers(ModSettingsDrawerBuildContext context)
+{
+    yield return new ZeepSettingsHeaderDrawer(&quot;About&quot;);
+
+    foreach (var drawer in context.CreateDefaultDrawers())
+        yield return drawer;
+}
+</code></pre>
+<h3 id="manual-layout">Manual Layout</h3>
+<p>Build the drawer list yourself when you need full control:</p>
+<pre><code class="lang-csharp">private IEnumerable&lt;IZeepSettingsDrawer&gt; BuildSettingsDrawers(ModSettingsDrawerBuildContext context)
+{
+    yield return new ZeepSettingsHeaderDrawer(&quot;General&quot;);
+
+    foreach (var entry in context.EntriesBySection[&quot;General&quot;])
+    {
+        yield return new ZeepSettingsEntryDrawer(entry);
+        yield return new ZeepSettingsSeparatorDrawer();
+    }
+}
+</code></pre>
+<p>Hidden entries (<code>[hide]</code> / <code>[hidden]</code> in the description) are filtered automatically only when using <code>CreateDefaultDrawers()</code>. When building manually, skip those entries yourself if needed.</p>
+<h2 id="custom-drawer-types">Custom Drawer Types</h2>
+<p>Implement <code>IZeepSettingsDrawer</code> to draw arbitrary content:</p>
+<pre><code class="lang-csharp">using Imui.Core;
+using ZeepSDK.Settings.Drawers;
+
+public class HelpTextDrawer : IZeepSettingsDrawer
+{
+    private readonly string _text;
+
+    public HelpTextDrawer(string text) =&gt; _text = text;
+
+    public void Draw(ImGui gui, ZeepSettingsDrawContext context)
+    {
+        using (gui.Indent())
+            gui.Text(_text);
+    }
+}
+</code></pre>
+<p>Use it in your provider:</p>
+<pre><code class="lang-csharp">yield return new HelpTextDrawer(&quot;Adjust these settings while in the main menu.&quot;);
+yield return new ZeepSettingsSeparatorDrawer();
+
+foreach (var drawer in context.CreateDefaultDrawers())
+    yield return drawer;
+</code></pre>
+<p>Return your custom drawer from a type factory when registering with <code>RegisterConfigEntryTypeDrawer</code>:</p>
+<pre><code class="lang-csharp">public class MyCustomTypeEntryDrawer : IZeepSettingsDrawer
+{
+    private readonly ConfigEntry&lt;MyCustomType&gt; _entry;
+    private readonly string _label;
+
+    public MyCustomTypeEntryDrawer(ConfigEntryBase entry, string label)
+    {
+        _entry = (ConfigEntry&lt;MyCustomType&gt;)entry;
+        _label = label ?? entry.Definition.Key;
+    }
+
+    public void Draw(ImGui gui, ZeepSettingsDrawContext context)
+    {
+        using (gui.Indent())
+        {
+            gui.Text(_label);
+            // Draw custom controls for _entry.Value
+        }
+    }
+}
+
+SettingsApi.RegisterConfigEntryTypeDrawer&lt;MyCustomType&gt;(
+    (entry, label) =&gt; new MyCustomTypeEntryDrawer(entry, label));
+</code></pre>
+<h2 id="zeepsettingsdrawcontext">ZeepSettingsDrawContext</h2>
+<p>While drawing, shared services are available through <code>ZeepSettingsDrawContext</code>:</p>
+<pre><code class="lang-csharp">public void Draw(ImGui gui, ZeepSettingsDrawContext context)
+{
+    // For KeyCode config entries
+    context.OpenKeyCodePopup(myKeyCodeEntry);
+}
+</code></pre>
+<p>Use this when building custom KeyCode UI so the standard key capture popup is used.</p>
+<h2 id="per-entry-callbacks-in-custom-layouts">Per-Entry Callbacks in Custom Layouts</h2>
+<p><code>SetConfigEntryDrawer</code> integrates with <code>CreateDefaultDrawers()</code>. When you call <code>CreateDefaultDrawers()</code>, any per-entry callbacks you registered are applied automatically.</p>
+<p>If you build the layout manually with <code>ZeepSettingsEntryDrawer</code>, those callbacks are <strong>not</strong> used — manual drawers always render the built-in row renderer. For manual layouts, either:</p>
+<ul>
+<li>Draw the entry yourself inside a custom <code>IZeepSettingsDrawer</code>, or</li>
+<li>Prefer <code>CreateDefaultDrawers()</code> and use <code>SetConfigEntryDrawer</code> for entries that need custom UI</li>
+</ul>
+<h2 id="complete-example">Complete Example</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using BepInEx;
+using BepInEx.Configuration;
+using UnityEngine;
+using ZeepSDK.Settings;
+using ZeepSDK.Settings.Drawers;
+
+[BepInPlugin(&quot;com.example.mymod&quot;, &quot;My Mod&quot;, &quot;1.0.0&quot;)]
+public class MyMod : BaseUnityPlugin
+{
+    private ConfigEntry&lt;bool&gt; _enabled;
+    private ConfigEntry&lt;float&gt; _volume;
+
+    private void Awake()
+    {
+        _enabled = Config.Bind(&quot;General&quot;, &quot;Enabled&quot;, true);
+        _volume = Config.Bind(
+            &quot;General&quot;,
+            &quot;Volume&quot;,
+            0.75f,
+            new ConfigDescription(
+                &quot;Output volume&quot;,
+                new AcceptableValueRange&lt;float&gt;(0f, 1f)));
+
+        SettingsApi.SetConfigEntryLabel(this, _volume, &quot;Master Volume&quot;);
+
+        SettingsApi.RegisterModSettingsDrawers(this, context =&gt;
+        {
+            yield return new ZeepSettingsHeaderDrawer(&quot;Quick Start&quot;);
+            yield return new HelpTextDrawer(&quot;Enable the mod, then adjust volume below.&quot;);
+            yield return new ZeepSettingsSeparatorDrawer();
+
+            foreach (var drawer in context.CreateDefaultDrawers())
+                yield return drawer;
+        });
+    }
+}
+
+public class HelpTextDrawer : IZeepSettingsDrawer
+{
+    private readonly string _text;
+
+    public HelpTextDrawer(string text) =&gt; _text = text;
+
+    public void Draw(ImGui gui, ZeepSettingsDrawContext context)
+    {
+        using (gui.Indent())
+            gui.Text(_text);
+    }
+}
+</code></pre>
+<p>Note: <code>HelpTextDrawer</code> is defined above as a reusable <code>IZeepSettingsDrawer</code> implementation.</p>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="prefer-incremental-customization">Prefer Incremental Customization</h3>
+<p>Start with the default layout and add only what you need:</p>
+<ul>
+<li>Custom labels → <code>SetConfigEntryLabel</code></li>
+<li>One special entry → <code>SetConfigEntryDrawer</code></li>
+<li>Shared custom type → <code>RegisterConfigEntryTypeDrawer</code></li>
+<li>Full layout control → <code>RegisterModSettingsDrawers</code></li>
+</ul>
+<h3 id="use-createdefaultdrawers-when-possible">Use <code>CreateDefaultDrawers()</code> When Possible</h3>
+<p>Calling <code>CreateDefaultDrawers()</code> keeps your layout aligned with ZeepSDK defaults — hidden entry filtering, label overrides, per-entry callbacks, type drawers, separators, and section spacing.</p>
+<h3 id="match-existing-indentation">Match Existing Indentation</h3>
+<p>Built-in drawers wrap content in <code>gui.Indent()</code>. Do the same in custom drawers so rows align with the default layout.</p>
+<h3 id="register-once">Register Once</h3>
+<p>Register your layout provider once during plugin initialization. The drawer list is rebuilt when the settings window needs it; your provider is called at that time.</p>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>Register a layout provider with <code>RegisterModSettingsDrawers</code></li>
+<li>Return <code>IEnumerable&lt;IZeepSettingsDrawer&gt;</code> from your provider callback</li>
+<li>Use <code>ModSettingsDrawerBuildContext.CreateDefaultDrawers()</code> to compose with the default layout</li>
+<li>Use <code>ZeepSettingsHeaderDrawer</code>, <code>ZeepSettingsEntryDrawer</code>, and <code>ZeepSettingsSeparatorDrawer</code> to build layouts manually</li>
+<li>Implement <code>IZeepSettingsDrawer</code> for fully custom content</li>
+<li>Use <code>ZeepSettingsDrawContext.OpenKeyCodePopup</code> for KeyCode editing in custom UI</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.4.0/docs/articles/custom-mod-settings-layout.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -6267,6 +6267,74 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand
   nameWithType: ChatCommandApi.RegisterLocalChatCommand
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias(System.String,System.String,System.String)
+  name: RegisterLocalChatCommandAlias(string, string, string)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterLocalChatCommandAlias_System_String_System_String_System_String_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias(System.String,System.String,System.String)
+  name.vb: RegisterLocalChatCommandAlias(String, String, String)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias(string, string, string)
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias(String, String, String)
+  nameWithType: ChatCommandApi.RegisterLocalChatCommandAlias(string, string, string)
+  nameWithType.vb: ChatCommandApi.RegisterLocalChatCommandAlias(String, String, String)
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias(ZeepSDK.ChatCommands.ILocalChatCommand,System.String)
+  name: RegisterLocalChatCommandAlias(ILocalChatCommand, string)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterLocalChatCommandAlias_ZeepSDK_ChatCommands_ILocalChatCommand_System_String_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias(ZeepSDK.ChatCommands.ILocalChatCommand,System.String)
+  name.vb: RegisterLocalChatCommandAlias(ILocalChatCommand, String)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias(ZeepSDK.ChatCommands.ILocalChatCommand, string)
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias(ZeepSDK.ChatCommands.ILocalChatCommand, String)
+  nameWithType: ChatCommandApi.RegisterLocalChatCommandAlias(ILocalChatCommand, string)
+  nameWithType.vb: ChatCommandApi.RegisterLocalChatCommandAlias(ILocalChatCommand, String)
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias*
+  name: RegisterLocalChatCommandAlias
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterLocalChatCommandAlias_
+  commentId: Overload:ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias
+  nameWithType: ChatCommandApi.RegisterLocalChatCommandAlias
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias``1(System.String)
+  name: RegisterLocalChatCommandAlias<TCommand>(string)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterLocalChatCommandAlias__1_System_String_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias``1(System.String)
+  name.vb: RegisterLocalChatCommandAlias(Of TCommand)(String)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias<TCommand>(string)
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAlias(Of TCommand)(String)
+  nameWithType: ChatCommandApi.RegisterLocalChatCommandAlias<TCommand>(string)
+  nameWithType.vb: ChatCommandApi.RegisterLocalChatCommandAlias(Of TCommand)(String)
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases(System.String,System.String,System.String[])
+  name: RegisterLocalChatCommandAliases(string, string, params string[])
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterLocalChatCommandAliases_System_String_System_String_System_String___
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases(System.String,System.String,System.String[])
+  name.vb: RegisterLocalChatCommandAliases(String, String, ParamArray String())
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases(string, string, params string[])
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases(String, String, ParamArray String())
+  nameWithType: ChatCommandApi.RegisterLocalChatCommandAliases(string, string, params string[])
+  nameWithType.vb: ChatCommandApi.RegisterLocalChatCommandAliases(String, String, ParamArray String())
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases(ZeepSDK.ChatCommands.ILocalChatCommand,System.String[])
+  name: RegisterLocalChatCommandAliases(ILocalChatCommand, params string[])
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterLocalChatCommandAliases_ZeepSDK_ChatCommands_ILocalChatCommand_System_String___
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases(ZeepSDK.ChatCommands.ILocalChatCommand,System.String[])
+  name.vb: RegisterLocalChatCommandAliases(ILocalChatCommand, ParamArray String())
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases(ZeepSDK.ChatCommands.ILocalChatCommand, params string[])
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases(ZeepSDK.ChatCommands.ILocalChatCommand, ParamArray String())
+  nameWithType: ChatCommandApi.RegisterLocalChatCommandAliases(ILocalChatCommand, params string[])
+  nameWithType.vb: ChatCommandApi.RegisterLocalChatCommandAliases(ILocalChatCommand, ParamArray String())
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases*
+  name: RegisterLocalChatCommandAliases
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterLocalChatCommandAliases_
+  commentId: Overload:ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases
+  nameWithType: ChatCommandApi.RegisterLocalChatCommandAliases
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases``1(System.String[])
+  name: RegisterLocalChatCommandAliases<TCommand>(params string[])
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterLocalChatCommandAliases__1_System_String___
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases``1(System.String[])
+  name.vb: RegisterLocalChatCommandAliases(Of TCommand)(ParamArray String())
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases<TCommand>(params string[])
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommandAliases(Of TCommand)(ParamArray String())
+  nameWithType: ChatCommandApi.RegisterLocalChatCommandAliases<TCommand>(params string[])
+  nameWithType.vb: ChatCommandApi.RegisterLocalChatCommandAliases(Of TCommand)(ParamArray String())
 - uid: ZeepSDK.ChatCommands.ChatCommandApi.RegisterLocalChatCommand``1
   name: RegisterLocalChatCommand<TChatCommand>()
   href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_RegisterLocalChatCommand__1
@@ -6366,6 +6434,31 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommand
   nameWithType: ChatCommandApi.UnregisterLocalChatCommand
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommandAlias(System.String,System.String,System.String)
+  name: UnregisterLocalChatCommandAlias(string, string, string)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_UnregisterLocalChatCommandAlias_System_String_System_String_System_String_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommandAlias(System.String,System.String,System.String)
+  name.vb: UnregisterLocalChatCommandAlias(String, String, String)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommandAlias(string, string, string)
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommandAlias(String, String, String)
+  nameWithType: ChatCommandApi.UnregisterLocalChatCommandAlias(string, string, string)
+  nameWithType.vb: ChatCommandApi.UnregisterLocalChatCommandAlias(String, String, String)
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommandAlias(ZeepSDK.ChatCommands.ILocalChatCommand,System.String)
+  name: UnregisterLocalChatCommandAlias(ILocalChatCommand, string)
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_UnregisterLocalChatCommandAlias_ZeepSDK_ChatCommands_ILocalChatCommand_System_String_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommandAlias(ZeepSDK.ChatCommands.ILocalChatCommand,System.String)
+  name.vb: UnregisterLocalChatCommandAlias(ILocalChatCommand, String)
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommandAlias(ZeepSDK.ChatCommands.ILocalChatCommand, string)
+  fullName.vb: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommandAlias(ZeepSDK.ChatCommands.ILocalChatCommand, String)
+  nameWithType: ChatCommandApi.UnregisterLocalChatCommandAlias(ILocalChatCommand, string)
+  nameWithType.vb: ChatCommandApi.UnregisterLocalChatCommandAlias(ILocalChatCommand, String)
+- uid: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommandAlias*
+  name: UnregisterLocalChatCommandAlias
+  href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_UnregisterLocalChatCommandAlias_
+  commentId: Overload:ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommandAlias
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterLocalChatCommandAlias
+  nameWithType: ChatCommandApi.UnregisterLocalChatCommandAlias
 - uid: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterMixedChatCommand(ZeepSDK.ChatCommands.IMixedChatCommand)
   name: UnregisterMixedChatCommand(IMixedChatCommand)
   href: api/ZeepSDK.ChatCommands.ChatCommandApi.html#ZeepSDK_ChatCommands_ChatCommandApi_UnregisterMixedChatCommand_ZeepSDK_ChatCommands_IMixedChatCommand_
@@ -6392,6 +6485,90 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.ChatCommands.ChatCommandApi.UnregisterRemoteChatCommand
   nameWithType: ChatCommandApi.UnregisterRemoteChatCommand
+- uid: ZeepSDK.ChatCommands.ChatCommandRegistry
+  name: ChatCommandRegistry
+  href: api/ZeepSDK.ChatCommands.ChatCommandRegistry.html
+  commentId: T:ZeepSDK.ChatCommands.ChatCommandRegistry
+  fullName: ZeepSDK.ChatCommands.ChatCommandRegistry
+  nameWithType: ChatCommandRegistry
+- uid: ZeepSDK.ChatCommands.ChatCommandRegistry.GetAliasesFor(ZeepSDK.ChatCommands.ILocalChatCommand)
+  name: GetAliasesFor(ILocalChatCommand)
+  href: api/ZeepSDK.ChatCommands.ChatCommandRegistry.html#ZeepSDK_ChatCommands_ChatCommandRegistry_GetAliasesFor_ZeepSDK_ChatCommands_ILocalChatCommand_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandRegistry.GetAliasesFor(ZeepSDK.ChatCommands.ILocalChatCommand)
+  fullName: ZeepSDK.ChatCommands.ChatCommandRegistry.GetAliasesFor(ZeepSDK.ChatCommands.ILocalChatCommand)
+  nameWithType: ChatCommandRegistry.GetAliasesFor(ILocalChatCommand)
+- uid: ZeepSDK.ChatCommands.ChatCommandRegistry.GetAliasesFor*
+  name: GetAliasesFor
+  href: api/ZeepSDK.ChatCommands.ChatCommandRegistry.html#ZeepSDK_ChatCommands_ChatCommandRegistry_GetAliasesFor_
+  commentId: Overload:ZeepSDK.ChatCommands.ChatCommandRegistry.GetAliasesFor
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.ChatCommandRegistry.GetAliasesFor
+  nameWithType: ChatCommandRegistry.GetAliasesFor
+- uid: ZeepSDK.ChatCommands.ChatCommandRegistry.GetPrimaryLocalChatCommands
+  name: GetPrimaryLocalChatCommands()
+  href: api/ZeepSDK.ChatCommands.ChatCommandRegistry.html#ZeepSDK_ChatCommands_ChatCommandRegistry_GetPrimaryLocalChatCommands
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandRegistry.GetPrimaryLocalChatCommands
+  fullName: ZeepSDK.ChatCommands.ChatCommandRegistry.GetPrimaryLocalChatCommands()
+  nameWithType: ChatCommandRegistry.GetPrimaryLocalChatCommands()
+- uid: ZeepSDK.ChatCommands.ChatCommandRegistry.GetPrimaryLocalChatCommands*
+  name: GetPrimaryLocalChatCommands
+  href: api/ZeepSDK.ChatCommands.ChatCommandRegistry.html#ZeepSDK_ChatCommands_ChatCommandRegistry_GetPrimaryLocalChatCommands_
+  commentId: Overload:ZeepSDK.ChatCommands.ChatCommandRegistry.GetPrimaryLocalChatCommands
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.ChatCommandRegistry.GetPrimaryLocalChatCommands
+  nameWithType: ChatCommandRegistry.GetPrimaryLocalChatCommands
+- uid: ZeepSDK.ChatCommands.ChatCommandRegistry.IsAlias(ZeepSDK.ChatCommands.ILocalChatCommand)
+  name: IsAlias(ILocalChatCommand)
+  href: api/ZeepSDK.ChatCommands.ChatCommandRegistry.html#ZeepSDK_ChatCommands_ChatCommandRegistry_IsAlias_ZeepSDK_ChatCommands_ILocalChatCommand_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandRegistry.IsAlias(ZeepSDK.ChatCommands.ILocalChatCommand)
+  fullName: ZeepSDK.ChatCommands.ChatCommandRegistry.IsAlias(ZeepSDK.ChatCommands.ILocalChatCommand)
+  nameWithType: ChatCommandRegistry.IsAlias(ILocalChatCommand)
+- uid: ZeepSDK.ChatCommands.ChatCommandRegistry.IsAlias*
+  name: IsAlias
+  href: api/ZeepSDK.ChatCommands.ChatCommandRegistry.html#ZeepSDK_ChatCommands_ChatCommandRegistry_IsAlias_
+  commentId: Overload:ZeepSDK.ChatCommands.ChatCommandRegistry.IsAlias
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.ChatCommandRegistry.IsAlias
+  nameWithType: ChatCommandRegistry.IsAlias
+- uid: ZeepSDK.ChatCommands.ChatCommandRegistry.LocalChatCommands
+  name: LocalChatCommands
+  href: api/ZeepSDK.ChatCommands.ChatCommandRegistry.html#ZeepSDK_ChatCommands_ChatCommandRegistry_LocalChatCommands
+  commentId: P:ZeepSDK.ChatCommands.ChatCommandRegistry.LocalChatCommands
+  fullName: ZeepSDK.ChatCommands.ChatCommandRegistry.LocalChatCommands
+  nameWithType: ChatCommandRegistry.LocalChatCommands
+- uid: ZeepSDK.ChatCommands.ChatCommandRegistry.LocalChatCommands*
+  name: LocalChatCommands
+  href: api/ZeepSDK.ChatCommands.ChatCommandRegistry.html#ZeepSDK_ChatCommands_ChatCommandRegistry_LocalChatCommands_
+  commentId: Overload:ZeepSDK.ChatCommands.ChatCommandRegistry.LocalChatCommands
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.ChatCommandRegistry.LocalChatCommands
+  nameWithType: ChatCommandRegistry.LocalChatCommands
+- uid: ZeepSDK.ChatCommands.ChatCommandRegistry.RemoteChatCommands
+  name: RemoteChatCommands
+  href: api/ZeepSDK.ChatCommands.ChatCommandRegistry.html#ZeepSDK_ChatCommands_ChatCommandRegistry_RemoteChatCommands
+  commentId: P:ZeepSDK.ChatCommands.ChatCommandRegistry.RemoteChatCommands
+  fullName: ZeepSDK.ChatCommands.ChatCommandRegistry.RemoteChatCommands
+  nameWithType: ChatCommandRegistry.RemoteChatCommands
+- uid: ZeepSDK.ChatCommands.ChatCommandRegistry.RemoteChatCommands*
+  name: RemoteChatCommands
+  href: api/ZeepSDK.ChatCommands.ChatCommandRegistry.html#ZeepSDK_ChatCommands_ChatCommandRegistry_RemoteChatCommands_
+  commentId: Overload:ZeepSDK.ChatCommands.ChatCommandRegistry.RemoteChatCommands
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.ChatCommandRegistry.RemoteChatCommands
+  nameWithType: ChatCommandRegistry.RemoteChatCommands
+- uid: ZeepSDK.ChatCommands.ChatCommandRegistry.ResolvePrimaryCommand(ZeepSDK.ChatCommands.ILocalChatCommand)
+  name: ResolvePrimaryCommand(ILocalChatCommand)
+  href: api/ZeepSDK.ChatCommands.ChatCommandRegistry.html#ZeepSDK_ChatCommands_ChatCommandRegistry_ResolvePrimaryCommand_ZeepSDK_ChatCommands_ILocalChatCommand_
+  commentId: M:ZeepSDK.ChatCommands.ChatCommandRegistry.ResolvePrimaryCommand(ZeepSDK.ChatCommands.ILocalChatCommand)
+  fullName: ZeepSDK.ChatCommands.ChatCommandRegistry.ResolvePrimaryCommand(ZeepSDK.ChatCommands.ILocalChatCommand)
+  nameWithType: ChatCommandRegistry.ResolvePrimaryCommand(ILocalChatCommand)
+- uid: ZeepSDK.ChatCommands.ChatCommandRegistry.ResolvePrimaryCommand*
+  name: ResolvePrimaryCommand
+  href: api/ZeepSDK.ChatCommands.ChatCommandRegistry.html#ZeepSDK_ChatCommands_ChatCommandRegistry_ResolvePrimaryCommand_
+  commentId: Overload:ZeepSDK.ChatCommands.ChatCommandRegistry.ResolvePrimaryCommand
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.ChatCommandRegistry.ResolvePrimaryCommand
+  nameWithType: ChatCommandRegistry.ResolvePrimaryCommand
 - uid: ZeepSDK.ChatCommands.IChatCommand
   name: IChatCommand
   href: api/ZeepSDK.ChatCommands.IChatCommand.html
@@ -6459,6 +6636,25 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.ChatCommands.ILocalChatCommand.Handle
   nameWithType: ILocalChatCommand.Handle
+- uid: ZeepSDK.ChatCommands.ILocalChatCommandAlias
+  name: ILocalChatCommandAlias
+  href: api/ZeepSDK.ChatCommands.ILocalChatCommandAlias.html
+  commentId: T:ZeepSDK.ChatCommands.ILocalChatCommandAlias
+  fullName: ZeepSDK.ChatCommands.ILocalChatCommandAlias
+  nameWithType: ILocalChatCommandAlias
+- uid: ZeepSDK.ChatCommands.ILocalChatCommandAlias.Target
+  name: Target
+  href: api/ZeepSDK.ChatCommands.ILocalChatCommandAlias.html#ZeepSDK_ChatCommands_ILocalChatCommandAlias_Target
+  commentId: P:ZeepSDK.ChatCommands.ILocalChatCommandAlias.Target
+  fullName: ZeepSDK.ChatCommands.ILocalChatCommandAlias.Target
+  nameWithType: ILocalChatCommandAlias.Target
+- uid: ZeepSDK.ChatCommands.ILocalChatCommandAlias.Target*
+  name: Target
+  href: api/ZeepSDK.ChatCommands.ILocalChatCommandAlias.html#ZeepSDK_ChatCommands_ILocalChatCommandAlias_Target_
+  commentId: Overload:ZeepSDK.ChatCommands.ILocalChatCommandAlias.Target
+  isSpec: "True"
+  fullName: ZeepSDK.ChatCommands.ILocalChatCommandAlias.Target
+  nameWithType: ILocalChatCommandAlias.Target
 - uid: ZeepSDK.ChatCommands.IMixedChatCommand
   name: IMixedChatCommand
   href: api/ZeepSDK.ChatCommands.IMixedChatCommand.html
@@ -9568,6 +9764,295 @@ references:
   commentId: N:ZeepSDK.Settings
   fullName: ZeepSDK.Settings
   nameWithType: ZeepSDK.Settings
+- uid: ZeepSDK.Settings.Drawers
+  name: ZeepSDK.Settings.Drawers
+  href: api/ZeepSDK.Settings.Drawers.html
+  commentId: N:ZeepSDK.Settings.Drawers
+  fullName: ZeepSDK.Settings.Drawers
+  nameWithType: ZeepSDK.Settings.Drawers
+- uid: ZeepSDK.Settings.Drawers.IZeepSettingsDrawer
+  name: IZeepSettingsDrawer
+  href: api/ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.html
+  commentId: T:ZeepSDK.Settings.Drawers.IZeepSettingsDrawer
+  fullName: ZeepSDK.Settings.Drawers.IZeepSettingsDrawer
+  nameWithType: IZeepSettingsDrawer
+- uid: ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.Draw(Imui.Core.ImGui,ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  name: Draw(ImGui, ZeepSettingsDrawContext)
+  href: api/ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.html#ZeepSDK_Settings_Drawers_IZeepSettingsDrawer_Draw_Imui_Core_ImGui_ZeepSDK_Settings_Drawers_ZeepSettingsDrawContext_
+  commentId: M:ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.Draw(Imui.Core.ImGui,ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  fullName: ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.Draw(Imui.Core.ImGui, ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  nameWithType: IZeepSettingsDrawer.Draw(ImGui, ZeepSettingsDrawContext)
+- uid: ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.Draw*
+  name: Draw
+  href: api/ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.html#ZeepSDK_Settings_Drawers_IZeepSettingsDrawer_Draw_
+  commentId: Overload:ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.Draw
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.Draw
+  nameWithType: IZeepSettingsDrawer.Draw
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext
+  name: ZeepSettingsDrawContext
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.html
+  commentId: T:ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext
+  nameWithType: ZeepSettingsDrawContext
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.OpenKeyCodePopup(BepInEx.Configuration.ConfigEntry{UnityEngine.KeyCode})
+  name: OpenKeyCodePopup(ConfigEntry<KeyCode>)
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.html#ZeepSDK_Settings_Drawers_ZeepSettingsDrawContext_OpenKeyCodePopup_BepInEx_Configuration_ConfigEntry_UnityEngine_KeyCode__
+  commentId: M:ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.OpenKeyCodePopup(BepInEx.Configuration.ConfigEntry{UnityEngine.KeyCode})
+  name.vb: OpenKeyCodePopup(ConfigEntry(Of KeyCode))
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.OpenKeyCodePopup(BepInEx.Configuration.ConfigEntry<UnityEngine.KeyCode>)
+  fullName.vb: ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.OpenKeyCodePopup(BepInEx.Configuration.ConfigEntry(Of UnityEngine.KeyCode))
+  nameWithType: ZeepSettingsDrawContext.OpenKeyCodePopup(ConfigEntry<KeyCode>)
+  nameWithType.vb: ZeepSettingsDrawContext.OpenKeyCodePopup(ConfigEntry(Of KeyCode))
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.OpenKeyCodePopup*
+  name: OpenKeyCodePopup
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.html#ZeepSDK_Settings_Drawers_ZeepSettingsDrawContext_OpenKeyCodePopup_
+  commentId: Overload:ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.OpenKeyCodePopup
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.OpenKeyCodePopup
+  nameWithType: ZeepSettingsDrawContext.OpenKeyCodePopup
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer
+  name: ZeepSettingsEntryDrawer
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.html
+  commentId: T:ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer
+  nameWithType: ZeepSettingsEntryDrawer
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.#ctor(BepInEx.Configuration.ConfigEntryBase,System.String)
+  name: ZeepSettingsEntryDrawer(ConfigEntryBase, string)
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer__ctor_BepInEx_Configuration_ConfigEntryBase_System_String_
+  commentId: M:ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.#ctor(BepInEx.Configuration.ConfigEntryBase,System.String)
+  name.vb: New(ConfigEntryBase, String)
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.ZeepSettingsEntryDrawer(BepInEx.Configuration.ConfigEntryBase, string)
+  fullName.vb: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.New(BepInEx.Configuration.ConfigEntryBase, String)
+  nameWithType: ZeepSettingsEntryDrawer.ZeepSettingsEntryDrawer(ConfigEntryBase, string)
+  nameWithType.vb: ZeepSettingsEntryDrawer.New(ConfigEntryBase, String)
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.#ctor*
+  name: ZeepSettingsEntryDrawer
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer__ctor_
+  commentId: Overload:ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.ZeepSettingsEntryDrawer
+  fullName.vb: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.New
+  nameWithType: ZeepSettingsEntryDrawer.ZeepSettingsEntryDrawer
+  nameWithType.vb: ZeepSettingsEntryDrawer.New
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.ConfigEntry
+  name: ConfigEntry
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_ConfigEntry
+  commentId: P:ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.ConfigEntry
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.ConfigEntry
+  nameWithType: ZeepSettingsEntryDrawer.ConfigEntry
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.ConfigEntry*
+  name: ConfigEntry
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_ConfigEntry_
+  commentId: Overload:ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.ConfigEntry
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.ConfigEntry
+  nameWithType: ZeepSettingsEntryDrawer.ConfigEntry
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Draw(Imui.Core.ImGui,ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  name: Draw(ImGui, ZeepSettingsDrawContext)
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_Draw_Imui_Core_ImGui_ZeepSDK_Settings_Drawers_ZeepSettingsDrawContext_
+  commentId: M:ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Draw(Imui.Core.ImGui,ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Draw(Imui.Core.ImGui, ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  nameWithType: ZeepSettingsEntryDrawer.Draw(ImGui, ZeepSettingsDrawContext)
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Draw*
+  name: Draw
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_Draw_
+  commentId: Overload:ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Draw
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Draw
+  nameWithType: ZeepSettingsEntryDrawer.Draw
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Label
+  name: Label
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_Label
+  commentId: P:ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Label
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Label
+  nameWithType: ZeepSettingsEntryDrawer.Label
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Label*
+  name: Label
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_Label_
+  commentId: Overload:ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Label
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Label
+  nameWithType: ZeepSettingsEntryDrawer.Label
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer
+  name: ZeepSettingsHeaderDrawer
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.html
+  commentId: T:ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer
+  nameWithType: ZeepSettingsHeaderDrawer
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.#ctor(System.String)
+  name: ZeepSettingsHeaderDrawer(string)
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsHeaderDrawer__ctor_System_String_
+  commentId: M:ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.#ctor(System.String)
+  name.vb: New(String)
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.ZeepSettingsHeaderDrawer(string)
+  fullName.vb: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.New(String)
+  nameWithType: ZeepSettingsHeaderDrawer.ZeepSettingsHeaderDrawer(string)
+  nameWithType.vb: ZeepSettingsHeaderDrawer.New(String)
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.#ctor*
+  name: ZeepSettingsHeaderDrawer
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsHeaderDrawer__ctor_
+  commentId: Overload:ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.ZeepSettingsHeaderDrawer
+  fullName.vb: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.New
+  nameWithType: ZeepSettingsHeaderDrawer.ZeepSettingsHeaderDrawer
+  nameWithType.vb: ZeepSettingsHeaderDrawer.New
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.Draw(Imui.Core.ImGui,ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  name: Draw(ImGui, ZeepSettingsDrawContext)
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsHeaderDrawer_Draw_Imui_Core_ImGui_ZeepSDK_Settings_Drawers_ZeepSettingsDrawContext_
+  commentId: M:ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.Draw(Imui.Core.ImGui,ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.Draw(Imui.Core.ImGui, ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  nameWithType: ZeepSettingsHeaderDrawer.Draw(ImGui, ZeepSettingsDrawContext)
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.Draw*
+  name: Draw
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsHeaderDrawer_Draw_
+  commentId: Overload:ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.Draw
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.Draw
+  nameWithType: ZeepSettingsHeaderDrawer.Draw
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.Header
+  name: Header
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsHeaderDrawer_Header
+  commentId: P:ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.Header
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.Header
+  nameWithType: ZeepSettingsHeaderDrawer.Header
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.Header*
+  name: Header
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsHeaderDrawer_Header_
+  commentId: Overload:ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.Header
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.Header
+  nameWithType: ZeepSettingsHeaderDrawer.Header
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer
+  name: ZeepSettingsSeparatorDrawer
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.html
+  commentId: T:ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer
+  nameWithType: ZeepSettingsSeparatorDrawer
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.Draw(Imui.Core.ImGui,ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  name: Draw(ImGui, ZeepSettingsDrawContext)
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsSeparatorDrawer_Draw_Imui_Core_ImGui_ZeepSDK_Settings_Drawers_ZeepSettingsDrawContext_
+  commentId: M:ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.Draw(Imui.Core.ImGui,ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.Draw(Imui.Core.ImGui, ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  nameWithType: ZeepSettingsSeparatorDrawer.Draw(ImGui, ZeepSettingsDrawContext)
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.Draw*
+  name: Draw
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsSeparatorDrawer_Draw_
+  commentId: Overload:ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.Draw
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.Draw
+  nameWithType: ZeepSettingsSeparatorDrawer.Draw
+- uid: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext
+  name: ModSettingsConfigEntryDrawContext
+  href: api/ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.html
+  commentId: T:ZeepSDK.Settings.ModSettingsConfigEntryDrawContext
+  fullName: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext
+  nameWithType: ModSettingsConfigEntryDrawContext
+- uid: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.DrawDefault(Imui.Core.ImGui,ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  name: DrawDefault(ImGui, ZeepSettingsDrawContext)
+  href: api/ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.html#ZeepSDK_Settings_ModSettingsConfigEntryDrawContext_DrawDefault_Imui_Core_ImGui_ZeepSDK_Settings_Drawers_ZeepSettingsDrawContext_
+  commentId: M:ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.DrawDefault(Imui.Core.ImGui,ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  fullName: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.DrawDefault(Imui.Core.ImGui, ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  nameWithType: ModSettingsConfigEntryDrawContext.DrawDefault(ImGui, ZeepSettingsDrawContext)
+- uid: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.DrawDefault*
+  name: DrawDefault
+  href: api/ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.html#ZeepSDK_Settings_ModSettingsConfigEntryDrawContext_DrawDefault_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.DrawDefault
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.DrawDefault
+  nameWithType: ModSettingsConfigEntryDrawContext.DrawDefault
+- uid: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.Entry
+  name: Entry
+  href: api/ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.html#ZeepSDK_Settings_ModSettingsConfigEntryDrawContext_Entry
+  commentId: P:ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.Entry
+  fullName: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.Entry
+  nameWithType: ModSettingsConfigEntryDrawContext.Entry
+- uid: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.Entry*
+  name: Entry
+  href: api/ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.html#ZeepSDK_Settings_ModSettingsConfigEntryDrawContext_Entry_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.Entry
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.Entry
+  nameWithType: ModSettingsConfigEntryDrawContext.Entry
+- uid: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.Label
+  name: Label
+  href: api/ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.html#ZeepSDK_Settings_ModSettingsConfigEntryDrawContext_Label
+  commentId: P:ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.Label
+  fullName: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.Label
+  nameWithType: ModSettingsConfigEntryDrawContext.Label
+- uid: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.Label*
+  name: Label
+  href: api/ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.html#ZeepSDK_Settings_ModSettingsConfigEntryDrawContext_Label_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.Label
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.Label
+  nameWithType: ModSettingsConfigEntryDrawContext.Label
+- uid: ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate
+  name: ModSettingsConfigEntryDrawDelegate
+  href: api/ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate.html
+  commentId: T:ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate
+  fullName: ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate
+  nameWithType: ModSettingsConfigEntryDrawDelegate
+- uid: ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory
+  name: ModSettingsConfigEntryTypeDrawerFactory
+  href: api/ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory.html
+  commentId: T:ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory
+  fullName: ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory
+  nameWithType: ModSettingsConfigEntryTypeDrawerFactory
+- uid: ZeepSDK.Settings.ModSettingsDrawerBuildContext
+  name: ModSettingsDrawerBuildContext
+  href: api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html
+  commentId: T:ZeepSDK.Settings.ModSettingsDrawerBuildContext
+  fullName: ZeepSDK.Settings.ModSettingsDrawerBuildContext
+  nameWithType: ModSettingsDrawerBuildContext
+- uid: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateDefaultDrawers
+  name: CreateDefaultDrawers()
+  href: api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html#ZeepSDK_Settings_ModSettingsDrawerBuildContext_CreateDefaultDrawers
+  commentId: M:ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateDefaultDrawers
+  fullName: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateDefaultDrawers()
+  nameWithType: ModSettingsDrawerBuildContext.CreateDefaultDrawers()
+- uid: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateDefaultDrawers*
+  name: CreateDefaultDrawers
+  href: api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html#ZeepSDK_Settings_ModSettingsDrawerBuildContext_CreateDefaultDrawers_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateDefaultDrawers
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateDefaultDrawers
+  nameWithType: ModSettingsDrawerBuildContext.CreateDefaultDrawers
+- uid: ZeepSDK.Settings.ModSettingsDrawerBuildContext.EntriesBySection
+  name: EntriesBySection
+  href: api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html#ZeepSDK_Settings_ModSettingsDrawerBuildContext_EntriesBySection
+  commentId: P:ZeepSDK.Settings.ModSettingsDrawerBuildContext.EntriesBySection
+  fullName: ZeepSDK.Settings.ModSettingsDrawerBuildContext.EntriesBySection
+  nameWithType: ModSettingsDrawerBuildContext.EntriesBySection
+- uid: ZeepSDK.Settings.ModSettingsDrawerBuildContext.EntriesBySection*
+  name: EntriesBySection
+  href: api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html#ZeepSDK_Settings_ModSettingsDrawerBuildContext_EntriesBySection_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsDrawerBuildContext.EntriesBySection
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsDrawerBuildContext.EntriesBySection
+  nameWithType: ModSettingsDrawerBuildContext.EntriesBySection
+- uid: ZeepSDK.Settings.ModSettingsDrawerBuildContext.Plugin
+  name: Plugin
+  href: api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html#ZeepSDK_Settings_ModSettingsDrawerBuildContext_Plugin
+  commentId: P:ZeepSDK.Settings.ModSettingsDrawerBuildContext.Plugin
+  fullName: ZeepSDK.Settings.ModSettingsDrawerBuildContext.Plugin
+  nameWithType: ModSettingsDrawerBuildContext.Plugin
+- uid: ZeepSDK.Settings.ModSettingsDrawerBuildContext.Plugin*
+  name: Plugin
+  href: api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html#ZeepSDK_Settings_ModSettingsDrawerBuildContext_Plugin_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsDrawerBuildContext.Plugin
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsDrawerBuildContext.Plugin
+  nameWithType: ModSettingsDrawerBuildContext.Plugin
+- uid: ZeepSDK.Settings.ModSettingsDrawersDelegate
+  name: ModSettingsDrawersDelegate
+  href: api/ZeepSDK.Settings.ModSettingsDrawersDelegate.html
+  commentId: T:ZeepSDK.Settings.ModSettingsDrawersDelegate
+  fullName: ZeepSDK.Settings.ModSettingsDrawersDelegate
+  nameWithType: ModSettingsDrawersDelegate
 - uid: ZeepSDK.Settings.ModSettingsWindowClosedDelegate
   name: ModSettingsWindowClosedDelegate
   href: api/ZeepSDK.Settings.ModSettingsWindowClosedDelegate.html
@@ -9586,6 +10071,72 @@ references:
   commentId: T:ZeepSDK.Settings.SettingsApi
   fullName: ZeepSDK.Settings.SettingsApi
   nameWithType: SettingsApi
+- uid: ZeepSDK.Settings.SettingsApi.ClearConfigEntryDrawer(BepInEx.BaseUnityPlugin,BepInEx.Configuration.ConfigEntryBase)
+  name: ClearConfigEntryDrawer(BaseUnityPlugin, ConfigEntryBase)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ClearConfigEntryDrawer_BepInEx_BaseUnityPlugin_BepInEx_Configuration_ConfigEntryBase_
+  commentId: M:ZeepSDK.Settings.SettingsApi.ClearConfigEntryDrawer(BepInEx.BaseUnityPlugin,BepInEx.Configuration.ConfigEntryBase)
+  fullName: ZeepSDK.Settings.SettingsApi.ClearConfigEntryDrawer(BepInEx.BaseUnityPlugin, BepInEx.Configuration.ConfigEntryBase)
+  nameWithType: SettingsApi.ClearConfigEntryDrawer(BaseUnityPlugin, ConfigEntryBase)
+- uid: ZeepSDK.Settings.SettingsApi.ClearConfigEntryDrawer(System.String,BepInEx.Configuration.ConfigEntryBase)
+  name: ClearConfigEntryDrawer(string, ConfigEntryBase)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ClearConfigEntryDrawer_System_String_BepInEx_Configuration_ConfigEntryBase_
+  commentId: M:ZeepSDK.Settings.SettingsApi.ClearConfigEntryDrawer(System.String,BepInEx.Configuration.ConfigEntryBase)
+  name.vb: ClearConfigEntryDrawer(String, ConfigEntryBase)
+  fullName: ZeepSDK.Settings.SettingsApi.ClearConfigEntryDrawer(string, BepInEx.Configuration.ConfigEntryBase)
+  fullName.vb: ZeepSDK.Settings.SettingsApi.ClearConfigEntryDrawer(String, BepInEx.Configuration.ConfigEntryBase)
+  nameWithType: SettingsApi.ClearConfigEntryDrawer(string, ConfigEntryBase)
+  nameWithType.vb: SettingsApi.ClearConfigEntryDrawer(String, ConfigEntryBase)
+- uid: ZeepSDK.Settings.SettingsApi.ClearConfigEntryDrawer*
+  name: ClearConfigEntryDrawer
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ClearConfigEntryDrawer_
+  commentId: Overload:ZeepSDK.Settings.SettingsApi.ClearConfigEntryDrawer
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.SettingsApi.ClearConfigEntryDrawer
+  nameWithType: SettingsApi.ClearConfigEntryDrawer
+- uid: ZeepSDK.Settings.SettingsApi.ClearConfigEntryLabel(BepInEx.BaseUnityPlugin,BepInEx.Configuration.ConfigEntryBase)
+  name: ClearConfigEntryLabel(BaseUnityPlugin, ConfigEntryBase)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ClearConfigEntryLabel_BepInEx_BaseUnityPlugin_BepInEx_Configuration_ConfigEntryBase_
+  commentId: M:ZeepSDK.Settings.SettingsApi.ClearConfigEntryLabel(BepInEx.BaseUnityPlugin,BepInEx.Configuration.ConfigEntryBase)
+  fullName: ZeepSDK.Settings.SettingsApi.ClearConfigEntryLabel(BepInEx.BaseUnityPlugin, BepInEx.Configuration.ConfigEntryBase)
+  nameWithType: SettingsApi.ClearConfigEntryLabel(BaseUnityPlugin, ConfigEntryBase)
+- uid: ZeepSDK.Settings.SettingsApi.ClearConfigEntryLabel(System.String,BepInEx.Configuration.ConfigEntryBase)
+  name: ClearConfigEntryLabel(string, ConfigEntryBase)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ClearConfigEntryLabel_System_String_BepInEx_Configuration_ConfigEntryBase_
+  commentId: M:ZeepSDK.Settings.SettingsApi.ClearConfigEntryLabel(System.String,BepInEx.Configuration.ConfigEntryBase)
+  name.vb: ClearConfigEntryLabel(String, ConfigEntryBase)
+  fullName: ZeepSDK.Settings.SettingsApi.ClearConfigEntryLabel(string, BepInEx.Configuration.ConfigEntryBase)
+  fullName.vb: ZeepSDK.Settings.SettingsApi.ClearConfigEntryLabel(String, BepInEx.Configuration.ConfigEntryBase)
+  nameWithType: SettingsApi.ClearConfigEntryLabel(string, ConfigEntryBase)
+  nameWithType.vb: SettingsApi.ClearConfigEntryLabel(String, ConfigEntryBase)
+- uid: ZeepSDK.Settings.SettingsApi.ClearConfigEntryLabel*
+  name: ClearConfigEntryLabel
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ClearConfigEntryLabel_
+  commentId: Overload:ZeepSDK.Settings.SettingsApi.ClearConfigEntryLabel
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.SettingsApi.ClearConfigEntryLabel
+  nameWithType: SettingsApi.ClearConfigEntryLabel
+- uid: ZeepSDK.Settings.SettingsApi.ClearConfigEntryTypeDrawer(System.Type)
+  name: ClearConfigEntryTypeDrawer(Type)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ClearConfigEntryTypeDrawer_System_Type_
+  commentId: M:ZeepSDK.Settings.SettingsApi.ClearConfigEntryTypeDrawer(System.Type)
+  fullName: ZeepSDK.Settings.SettingsApi.ClearConfigEntryTypeDrawer(System.Type)
+  nameWithType: SettingsApi.ClearConfigEntryTypeDrawer(Type)
+- uid: ZeepSDK.Settings.SettingsApi.ClearConfigEntryTypeDrawer*
+  name: ClearConfigEntryTypeDrawer
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ClearConfigEntryTypeDrawer_
+  commentId: Overload:ZeepSDK.Settings.SettingsApi.ClearConfigEntryTypeDrawer
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.SettingsApi.ClearConfigEntryTypeDrawer
+  nameWithType: SettingsApi.ClearConfigEntryTypeDrawer
+- uid: ZeepSDK.Settings.SettingsApi.ClearConfigEntryTypeDrawer``1
+  name: ClearConfigEntryTypeDrawer<T>()
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ClearConfigEntryTypeDrawer__1
+  commentId: M:ZeepSDK.Settings.SettingsApi.ClearConfigEntryTypeDrawer``1
+  name.vb: ClearConfigEntryTypeDrawer(Of T)()
+  fullName: ZeepSDK.Settings.SettingsApi.ClearConfigEntryTypeDrawer<T>()
+  fullName.vb: ZeepSDK.Settings.SettingsApi.ClearConfigEntryTypeDrawer(Of T)()
+  nameWithType: SettingsApi.ClearConfigEntryTypeDrawer<T>()
+  nameWithType.vb: SettingsApi.ClearConfigEntryTypeDrawer(Of T)()
 - uid: ZeepSDK.Settings.SettingsApi.CloseModSettings
   name: CloseModSettings()
   href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_CloseModSettings
@@ -9624,6 +10175,97 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Settings.SettingsApi.OpenModSettings
   nameWithType: SettingsApi.OpenModSettings
+- uid: ZeepSDK.Settings.SettingsApi.RegisterConfigEntryTypeDrawer(System.Type,ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory)
+  name: RegisterConfigEntryTypeDrawer(Type, ModSettingsConfigEntryTypeDrawerFactory)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_RegisterConfigEntryTypeDrawer_System_Type_ZeepSDK_Settings_ModSettingsConfigEntryTypeDrawerFactory_
+  commentId: M:ZeepSDK.Settings.SettingsApi.RegisterConfigEntryTypeDrawer(System.Type,ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory)
+  fullName: ZeepSDK.Settings.SettingsApi.RegisterConfigEntryTypeDrawer(System.Type, ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory)
+  nameWithType: SettingsApi.RegisterConfigEntryTypeDrawer(Type, ModSettingsConfigEntryTypeDrawerFactory)
+- uid: ZeepSDK.Settings.SettingsApi.RegisterConfigEntryTypeDrawer*
+  name: RegisterConfigEntryTypeDrawer
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_RegisterConfigEntryTypeDrawer_
+  commentId: Overload:ZeepSDK.Settings.SettingsApi.RegisterConfigEntryTypeDrawer
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.SettingsApi.RegisterConfigEntryTypeDrawer
+  nameWithType: SettingsApi.RegisterConfigEntryTypeDrawer
+- uid: ZeepSDK.Settings.SettingsApi.RegisterConfigEntryTypeDrawer``1(System.Func{BepInEx.Configuration.ConfigEntry{``0},System.String,ZeepSDK.Settings.Drawers.IZeepSettingsDrawer})
+  name: RegisterConfigEntryTypeDrawer<T>(Func<ConfigEntry<T>, string, IZeepSettingsDrawer>)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_RegisterConfigEntryTypeDrawer__1_System_Func_BepInEx_Configuration_ConfigEntry___0__System_String_ZeepSDK_Settings_Drawers_IZeepSettingsDrawer__
+  commentId: M:ZeepSDK.Settings.SettingsApi.RegisterConfigEntryTypeDrawer``1(System.Func{BepInEx.Configuration.ConfigEntry{``0},System.String,ZeepSDK.Settings.Drawers.IZeepSettingsDrawer})
+  name.vb: RegisterConfigEntryTypeDrawer(Of T)(Func(Of ConfigEntry(Of T), String, IZeepSettingsDrawer))
+  fullName: ZeepSDK.Settings.SettingsApi.RegisterConfigEntryTypeDrawer<T>(System.Func<BepInEx.Configuration.ConfigEntry<T>, string, ZeepSDK.Settings.Drawers.IZeepSettingsDrawer>)
+  fullName.vb: ZeepSDK.Settings.SettingsApi.RegisterConfigEntryTypeDrawer(Of T)(System.Func(Of BepInEx.Configuration.ConfigEntry(Of T), String, ZeepSDK.Settings.Drawers.IZeepSettingsDrawer))
+  nameWithType: SettingsApi.RegisterConfigEntryTypeDrawer<T>(Func<ConfigEntry<T>, string, IZeepSettingsDrawer>)
+  nameWithType.vb: SettingsApi.RegisterConfigEntryTypeDrawer(Of T)(Func(Of ConfigEntry(Of T), String, IZeepSettingsDrawer))
+- uid: ZeepSDK.Settings.SettingsApi.RegisterModSettingsDrawers(BepInEx.BaseUnityPlugin,ZeepSDK.Settings.ModSettingsDrawersDelegate)
+  name: RegisterModSettingsDrawers(BaseUnityPlugin, ModSettingsDrawersDelegate)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_RegisterModSettingsDrawers_BepInEx_BaseUnityPlugin_ZeepSDK_Settings_ModSettingsDrawersDelegate_
+  commentId: M:ZeepSDK.Settings.SettingsApi.RegisterModSettingsDrawers(BepInEx.BaseUnityPlugin,ZeepSDK.Settings.ModSettingsDrawersDelegate)
+  fullName: ZeepSDK.Settings.SettingsApi.RegisterModSettingsDrawers(BepInEx.BaseUnityPlugin, ZeepSDK.Settings.ModSettingsDrawersDelegate)
+  nameWithType: SettingsApi.RegisterModSettingsDrawers(BaseUnityPlugin, ModSettingsDrawersDelegate)
+- uid: ZeepSDK.Settings.SettingsApi.RegisterModSettingsDrawers(System.String,ZeepSDK.Settings.ModSettingsDrawersDelegate)
+  name: RegisterModSettingsDrawers(string, ModSettingsDrawersDelegate)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_RegisterModSettingsDrawers_System_String_ZeepSDK_Settings_ModSettingsDrawersDelegate_
+  commentId: M:ZeepSDK.Settings.SettingsApi.RegisterModSettingsDrawers(System.String,ZeepSDK.Settings.ModSettingsDrawersDelegate)
+  name.vb: RegisterModSettingsDrawers(String, ModSettingsDrawersDelegate)
+  fullName: ZeepSDK.Settings.SettingsApi.RegisterModSettingsDrawers(string, ZeepSDK.Settings.ModSettingsDrawersDelegate)
+  fullName.vb: ZeepSDK.Settings.SettingsApi.RegisterModSettingsDrawers(String, ZeepSDK.Settings.ModSettingsDrawersDelegate)
+  nameWithType: SettingsApi.RegisterModSettingsDrawers(string, ModSettingsDrawersDelegate)
+  nameWithType.vb: SettingsApi.RegisterModSettingsDrawers(String, ModSettingsDrawersDelegate)
+- uid: ZeepSDK.Settings.SettingsApi.RegisterModSettingsDrawers*
+  name: RegisterModSettingsDrawers
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_RegisterModSettingsDrawers_
+  commentId: Overload:ZeepSDK.Settings.SettingsApi.RegisterModSettingsDrawers
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.SettingsApi.RegisterModSettingsDrawers
+  nameWithType: SettingsApi.RegisterModSettingsDrawers
+- uid: ZeepSDK.Settings.SettingsApi.SetConfigEntryDrawer(BepInEx.BaseUnityPlugin,BepInEx.Configuration.ConfigEntryBase,ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate)
+  name: SetConfigEntryDrawer(BaseUnityPlugin, ConfigEntryBase, ModSettingsConfigEntryDrawDelegate)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_SetConfigEntryDrawer_BepInEx_BaseUnityPlugin_BepInEx_Configuration_ConfigEntryBase_ZeepSDK_Settings_ModSettingsConfigEntryDrawDelegate_
+  commentId: M:ZeepSDK.Settings.SettingsApi.SetConfigEntryDrawer(BepInEx.BaseUnityPlugin,BepInEx.Configuration.ConfigEntryBase,ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate)
+  fullName: ZeepSDK.Settings.SettingsApi.SetConfigEntryDrawer(BepInEx.BaseUnityPlugin, BepInEx.Configuration.ConfigEntryBase, ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate)
+  nameWithType: SettingsApi.SetConfigEntryDrawer(BaseUnityPlugin, ConfigEntryBase, ModSettingsConfigEntryDrawDelegate)
+- uid: ZeepSDK.Settings.SettingsApi.SetConfigEntryDrawer(System.String,BepInEx.Configuration.ConfigEntryBase,ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate)
+  name: SetConfigEntryDrawer(string, ConfigEntryBase, ModSettingsConfigEntryDrawDelegate)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_SetConfigEntryDrawer_System_String_BepInEx_Configuration_ConfigEntryBase_ZeepSDK_Settings_ModSettingsConfigEntryDrawDelegate_
+  commentId: M:ZeepSDK.Settings.SettingsApi.SetConfigEntryDrawer(System.String,BepInEx.Configuration.ConfigEntryBase,ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate)
+  name.vb: SetConfigEntryDrawer(String, ConfigEntryBase, ModSettingsConfigEntryDrawDelegate)
+  fullName: ZeepSDK.Settings.SettingsApi.SetConfigEntryDrawer(string, BepInEx.Configuration.ConfigEntryBase, ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate)
+  fullName.vb: ZeepSDK.Settings.SettingsApi.SetConfigEntryDrawer(String, BepInEx.Configuration.ConfigEntryBase, ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate)
+  nameWithType: SettingsApi.SetConfigEntryDrawer(string, ConfigEntryBase, ModSettingsConfigEntryDrawDelegate)
+  nameWithType.vb: SettingsApi.SetConfigEntryDrawer(String, ConfigEntryBase, ModSettingsConfigEntryDrawDelegate)
+- uid: ZeepSDK.Settings.SettingsApi.SetConfigEntryDrawer*
+  name: SetConfigEntryDrawer
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_SetConfigEntryDrawer_
+  commentId: Overload:ZeepSDK.Settings.SettingsApi.SetConfigEntryDrawer
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.SettingsApi.SetConfigEntryDrawer
+  nameWithType: SettingsApi.SetConfigEntryDrawer
+- uid: ZeepSDK.Settings.SettingsApi.SetConfigEntryLabel(BepInEx.BaseUnityPlugin,BepInEx.Configuration.ConfigEntryBase,System.String)
+  name: SetConfigEntryLabel(BaseUnityPlugin, ConfigEntryBase, string)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_SetConfigEntryLabel_BepInEx_BaseUnityPlugin_BepInEx_Configuration_ConfigEntryBase_System_String_
+  commentId: M:ZeepSDK.Settings.SettingsApi.SetConfigEntryLabel(BepInEx.BaseUnityPlugin,BepInEx.Configuration.ConfigEntryBase,System.String)
+  name.vb: SetConfigEntryLabel(BaseUnityPlugin, ConfigEntryBase, String)
+  fullName: ZeepSDK.Settings.SettingsApi.SetConfigEntryLabel(BepInEx.BaseUnityPlugin, BepInEx.Configuration.ConfigEntryBase, string)
+  fullName.vb: ZeepSDK.Settings.SettingsApi.SetConfigEntryLabel(BepInEx.BaseUnityPlugin, BepInEx.Configuration.ConfigEntryBase, String)
+  nameWithType: SettingsApi.SetConfigEntryLabel(BaseUnityPlugin, ConfigEntryBase, string)
+  nameWithType.vb: SettingsApi.SetConfigEntryLabel(BaseUnityPlugin, ConfigEntryBase, String)
+- uid: ZeepSDK.Settings.SettingsApi.SetConfigEntryLabel(System.String,BepInEx.Configuration.ConfigEntryBase,System.String)
+  name: SetConfigEntryLabel(string, ConfigEntryBase, string)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_SetConfigEntryLabel_System_String_BepInEx_Configuration_ConfigEntryBase_System_String_
+  commentId: M:ZeepSDK.Settings.SettingsApi.SetConfigEntryLabel(System.String,BepInEx.Configuration.ConfigEntryBase,System.String)
+  name.vb: SetConfigEntryLabel(String, ConfigEntryBase, String)
+  fullName: ZeepSDK.Settings.SettingsApi.SetConfigEntryLabel(string, BepInEx.Configuration.ConfigEntryBase, string)
+  fullName.vb: ZeepSDK.Settings.SettingsApi.SetConfigEntryLabel(String, BepInEx.Configuration.ConfigEntryBase, String)
+  nameWithType: SettingsApi.SetConfigEntryLabel(string, ConfigEntryBase, string)
+  nameWithType.vb: SettingsApi.SetConfigEntryLabel(String, ConfigEntryBase, String)
+- uid: ZeepSDK.Settings.SettingsApi.SetConfigEntryLabel*
+  name: SetConfigEntryLabel
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_SetConfigEntryLabel_
+  commentId: Overload:ZeepSDK.Settings.SettingsApi.SetConfigEntryLabel
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.SettingsApi.SetConfigEntryLabel
+  nameWithType: SettingsApi.SetConfigEntryLabel
 - uid: ZeepSDK.Storage
   name: ZeepSDK.Storage
   href: api/ZeepSDK.Storage.html

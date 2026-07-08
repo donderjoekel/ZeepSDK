@@ -956,6 +956,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.ChatCommandRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.ChatCommandRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.ChatCommandRegistry",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.ChatCommandRegistry.yml\" sourcestartlinenumber=\"1\">Stores the registered local and remote chat commands.\nUse <xref href=\"ZeepSDK.ChatCommands.ChatCommandApi\" data-throw-if-not-resolved=\"false\"></xref> to register or unregister commands.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.ChatCommands.IChatCommand.yml",
       "output": {
         ".html": {
@@ -981,6 +995,20 @@
       "IsMRef": true,
       "Title": "ZeepSDK.ChatCommands.ILocalChatCommand",
       "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.ILocalChatCommand.yml\" sourcestartlinenumber=\"1\">The interface to use for local chat commands</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.ChatCommands.ILocalChatCommandAlias.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.ChatCommands.ILocalChatCommandAlias.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.ChatCommands.ILocalChatCommandAlias",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.ChatCommands.ILocalChatCommandAlias.yml\" sourcestartlinenumber=\"1\">A local chat command alias that forwards to a primary command.\nAlias entries appear in <xref href=\"ZeepSDK.ChatCommands.ChatCommandRegistry.LocalChatCommands\" data-throw-if-not-resolved=\"false\"></xref> alongside primary commands.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2258,6 +2286,160 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.Drawers.IZeepSettingsDrawer",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.yml\" sourcestartlinenumber=\"1\">Draws a single element in the mod settings panel.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.yml\" sourcestartlinenumber=\"1\">Shared services available to settings drawers while drawing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.yml\" sourcestartlinenumber=\"1\">Draws a BepInEx config entry in the mod settings panel.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.Drawers.ZeepSettingsHeaderDrawer.yml\" sourcestartlinenumber=\"1\">Draws a section header in the mod settings panel.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.yml\" sourcestartlinenumber=\"1\">Draws a horizontal separator between settings entries.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.Drawers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.Drawers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.Drawers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsConfigEntryDrawContext",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.yml\" sourcestartlinenumber=\"1\">Context passed to custom config entry draw callbacks.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsConfigEntryDrawDelegate.yml\" sourcestartlinenumber=\"1\">Draws a custom settings row for a specific config entry.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsConfigEntryTypeDrawerFactory.yml\" sourcestartlinenumber=\"1\">Creates a settings drawer for a config entry of a registered setting type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsDrawerBuildContext",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.yml\" sourcestartlinenumber=\"1\">Context passed to mod settings drawer providers when building a drawer list.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsDrawersDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsDrawersDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsDrawersDelegate",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsDrawersDelegate.yml\" sourcestartlinenumber=\"1\">Builds the list of settings drawers to render for a mod.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Settings.ModSettingsWindowClosedDelegate.yml",
       "output": {
         ".html": {
@@ -2883,6 +3065,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/custom-mod-settings-layout.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/custom-mod-settings-layout.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/intro.md",
       "output": {
         ".html": {
@@ -2897,6 +3089,16 @@
       "output": {
         ".html": {
           "relative_path": "articles/local-chat-commands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/mod-settings.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/mod-settings.html"
         }
       },
       "version": ""

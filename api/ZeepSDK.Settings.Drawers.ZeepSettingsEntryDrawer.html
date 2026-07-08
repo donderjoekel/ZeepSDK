@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class ZeepSettingsEntryDrawer </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class ZeepSettingsEntryDrawer ">
+    
+    <meta name="description" content="Draws a BepInEx config entry in the mod settings panel.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer">
+
+
+
+  <h1 id="ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer" data-uid="ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer" class="text-break">Class ZeepSettingsEntryDrawer</h1>
+  <div class="markdown level0 summary"><p>Draws a BepInEx config entry in the mod settings panel.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">ZeepSettingsEntryDrawer</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.html">IZeepSettingsDrawer</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ZeepSDK.html">ZeepSDK</a>.<a class="xref" href="ZeepSDK.Settings.html">Settings</a>.<a class="xref" href="ZeepSDK.Settings.Drawers.html">Drawers</a></h6>
+  <h6><strong>Assembly</strong>: ZeepSDK.dll</h6>
+  <h5 id="ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ZeepSettingsEntryDrawer : IZeepSettingsDrawer</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/2.4.0/apiSpec/new?filename=ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer__ctor_BepInEx_Configuration_ConfigEntryBase_System_String_.md&amp;value=---%0Auid%3A%20ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.%23ctor(BepInEx.Configuration.ConfigEntryBase%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.4.0/ZeepSDK/Settings/Drawers/ZeepSettingsEntryDrawer.cs/#L26">View Source</a>
+  </span>
+  <a id="ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer__ctor_" data-uid="ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.#ctor*"></a>
+  <h4 id="ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer__ctor_BepInEx_Configuration_ConfigEntryBase_System_String_" data-uid="ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.#ctor(BepInEx.Configuration.ConfigEntryBase,System.String)">ZeepSettingsEntryDrawer(ConfigEntryBase, string)</h4>
+  <div class="markdown level1 summary"><p>Creates a new config entry drawer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ZeepSettingsEntryDrawer(ConfigEntryBase configEntry, string label = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConfigEntryBase</span></td>
+        <td><span class="parametername">configEntry</span></td>
+        <td><p>The config entry to draw.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">label</span></td>
+        <td><p>Optional display label. Uses the config key when omitted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/2.4.0/apiSpec/new?filename=ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_ConfigEntry.md&amp;value=---%0Auid%3A%20ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.ConfigEntry%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.4.0/ZeepSDK/Settings/Drawers/ZeepSettingsEntryDrawer.cs/#L14">View Source</a>
+  </span>
+  <a id="ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_ConfigEntry_" data-uid="ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.ConfigEntry*"></a>
+  <h4 id="ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_ConfigEntry" data-uid="ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.ConfigEntry">ConfigEntry</h4>
+  <div class="markdown level1 summary"><p>The config entry to draw.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConfigEntryBase ConfigEntry { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConfigEntryBase</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/2.4.0/apiSpec/new?filename=ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_Label.md&amp;value=---%0Auid%3A%20ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Label%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.4.0/ZeepSDK/Settings/Drawers/ZeepSettingsEntryDrawer.cs/#L19">View Source</a>
+  </span>
+  <a id="ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_Label_" data-uid="ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Label*"></a>
+  <h4 id="ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_Label" data-uid="ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Label">Label</h4>
+  <div class="markdown level1 summary"><p>The label shown for this entry. Defaults to the config key when not specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Label { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/donderjoekel/ZeepSDK/new/2.4.0/apiSpec/new?filename=ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_Draw_Imui_Core_ImGui_ZeepSDK_Settings_Drawers_ZeepSettingsDrawContext_.md&amp;value=---%0Auid%3A%20ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Draw(Imui.Core.ImGui%2CZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.4.0/ZeepSDK/Settings/Drawers/ZeepSettingsEntryDrawer.cs/#L33">View Source</a>
+  </span>
+  <a id="ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_Draw_" data-uid="ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Draw*"></a>
+  <h4 id="ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer_Draw_Imui_Core_ImGui_ZeepSDK_Settings_Drawers_ZeepSettingsDrawContext_" data-uid="ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer.Draw(Imui.Core.ImGui,ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)">Draw(ImGui, ZeepSettingsDrawContext)</h4>
+  <div class="markdown level1 summary"><p>Draws this settings element using the given ImGui instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Draw(ImGui gui, ZeepSettingsDrawContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ImGui</span></td>
+        <td><span class="parametername">gui</span></td>
+        <td><p>The ImGui instance to draw with.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext.html">ZeepSettingsDrawContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>Shared services available while drawing settings.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="ZeepSDK.Settings.Drawers.IZeepSettingsDrawer.html">IZeepSettingsDrawer</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/new/2.4.0/apiSpec/new?filename=ZeepSDK_Settings_Drawers_ZeepSettingsEntryDrawer.md&amp;value=---%0Auid%3A%20ZeepSDK.Settings.Drawers.ZeepSettingsEntryDrawer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.4.0/ZeepSDK/Settings/Drawers/ZeepSettingsEntryDrawer.cs/#L9" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

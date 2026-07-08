@@ -78,6 +78,10 @@ Classes
       <h4><a class="xref" href="ZeepSDK.ChatCommands.ChatCommandApi.html">ChatCommandApi</a></h4>
       <section><p>An API that allows you to register chat commands</p>
 </section>
+      <h4><a class="xref" href="ZeepSDK.ChatCommands.ChatCommandRegistry.html">ChatCommandRegistry</a></h4>
+      <section><p>Stores the registered local and remote chat commands.
+Use <a class="xref" href="ZeepSDK.ChatCommands.ChatCommandApi.html">ChatCommandApi</a> to register or unregister commands.</p>
+</section>
       <h4><a class="xref" href="ZeepSDK.ChatCommands.MixedChatCommandBase.html">MixedChatCommandBase</a></h4>
       <section><p>A base class that can be used for implementing a mixed chat command</p>
 </section>
@@ -89,6 +93,10 @@ Interfaces
 </section>
       <h4><a class="xref" href="ZeepSDK.ChatCommands.ILocalChatCommand.html">ILocalChatCommand</a></h4>
       <section><p>The interface to use for local chat commands</p>
+</section>
+      <h4><a class="xref" href="ZeepSDK.ChatCommands.ILocalChatCommandAlias.html">ILocalChatCommandAlias</a></h4>
+      <section><p>A local chat command alias that forwards to a primary command.
+Alias entries appear in <a class="xref" href="ZeepSDK.ChatCommands.ChatCommandRegistry.html#ZeepSDK_ChatCommands_ChatCommandRegistry_LocalChatCommands">LocalChatCommands</a> alongside primary commands.</p>
 </section>
       <h4><a class="xref" href="ZeepSDK.ChatCommands.IMixedChatCommand.html">IMixedChatCommand</a></h4>
       <section><p>The interface to use for a mixed chat command</p>

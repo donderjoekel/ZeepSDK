@@ -331,6 +331,55 @@ public class MyMod : BaseUnityPlugin
     }
 }
 </code></pre>
+<h2 id="command-aliases">Command Aliases</h2>
+<p>You can register alternative keywords for an existing local command. Aliases use the same prefix as the primary command and invoke the same handler.</p>
+<h3 id="registering-aliases">Registering Aliases</h3>
+<pre><code class="lang-csharp">// Class-based command
+ChatCommandApi.RegisterLocalChatCommand&lt;MyTeleportCommand&gt;();
+ChatCommandApi.RegisterLocalChatCommandAlias&lt;MyTeleportCommand&gt;(&quot;tp&quot;);
+ChatCommandApi.RegisterLocalChatCommandAliases&lt;MyTeleportCommand&gt;(&quot;tp&quot;, &quot;goto&quot;);
+
+// Callback-based command (no instance reference needed)
+ChatCommandApi.RegisterLocalChatCommand(&quot;/&quot;, &quot;teleport&quot;, &quot;Teleports to coordinates&quot;, OnTeleport);
+ChatCommandApi.RegisterLocalChatCommandAlias(&quot;/&quot;, &quot;teleport&quot;, &quot;tp&quot;);
+
+// Instance-based command
+ChatCommandApi.RegisterLocalChatCommand(myCommand);
+ChatCommandApi.RegisterLocalChatCommandAlias(myCommand, &quot;h&quot;);
+</code></pre>
+<p>Aliases appear inline in the built-in <code>/help</code> output:</p>
+<pre><code>- /teleport (/tp, /goto) - Teleports to coordinates
+</code></pre>
+<p>When a primary command is unregistered, all of its aliases are removed automatically.</p>
+<h3 id="discovering-aliases">Discovering Aliases</h3>
+<p>Alias entries live in the same registry as primary commands. Use <code>ILocalChatCommandAlias</code> and the registry helpers to build custom command listings in your mod:</p>
+<pre><code class="lang-csharp">using System.Linq;
+using ZeepSDK.ChatCommands;
+
+// Primary commands only
+foreach (ILocalChatCommand command in ChatCommandRegistry.GetPrimaryLocalChatCommands())
+{
+    string primary = $&quot;{command.Prefix}{command.Command}&quot;;
+    string[] aliases = ChatCommandRegistry.GetAliasesFor(command)
+        .Select(alias =&gt; $&quot;{alias.Prefix}{alias.Command}&quot;)
+        .ToArray();
+}
+
+// Or inspect the full registry directly
+foreach (ILocalChatCommand entry in ChatCommandRegistry.LocalChatCommands)
+{
+    if (entry is ILocalChatCommandAlias alias)
+    {
+        // alias.Command is the alias keyword
+        // alias.Target is the primary command
+    }
+}
+</code></pre>
+<p>Other registry helpers:</p>
+<ul>
+<li><code>ChatCommandRegistry.IsAlias(command)</code> — returns whether an entry is an alias</li>
+<li><code>ChatCommandRegistry.ResolvePrimaryCommand(command)</code> — returns the primary command for an alias entry</li>
+</ul>
 <h2 id="unregistering-commands">Unregistering Commands</h2>
 <p>If you need to unregister a command (e.g., when your plugin is disabled), you can use the unregister method:</p>
 <pre><code class="lang-csharp">private ILocalChatCommand myCommand;
@@ -350,6 +399,7 @@ private void OnDestroy()
 <ul>
 <li><strong>Callback Delegate Method</strong>: Best for simple, one-off commands</li>
 <li><strong>Interface Implementation Method</strong>: Best for complex commands, reusable logic, or when you need to maintain state</li>
+<li><strong>Aliases</strong>: Register alternative keywords with <code>RegisterLocalChatCommandAlias</code>; aliases are stored in <code>ChatCommandRegistry.LocalChatCommands</code> and discoverable via <code>ILocalChatCommandAlias</code></li>
 <li>Always provide clear descriptions and validate user input</li>
 <li>Use appropriate prefixes (typically <code>/</code>)</li>
 <li>Handle errors gracefully and provide helpful usage messages</li>
@@ -364,7 +414,7 @@ private void OnDestroy()
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.3.2/docs/articles/local-chat-commands.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.4.0/docs/articles/local-chat-commands.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
