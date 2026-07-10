@@ -97,6 +97,7 @@ namespace ZeepSDK
             SettingsApi.Shutdown();
             ControlsApi.Shutdown();
             ScriptingApi.Shutdown();
+            CrashlyticsApi.Shutdown();
             UIApi.Shutdown();
             PhotoModeApi.Shutdown();
             MultiplayerApi.Shutdown();
@@ -104,7 +105,6 @@ namespace ZeepSDK
             LevelEditorApi.Shutdown();
             LevelApi.Shutdown();
             LeaderboardApi.Shutdown();
-            CrashlyticsApi.Shutdown();
             ChatCommandApi.Shutdown();
             ChatApi.Shutdown();
             harmony?.UnpatchSelf();

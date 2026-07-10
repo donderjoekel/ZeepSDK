@@ -7,15 +7,13 @@ using BepInEx.Logging;
 using BugsnagUnity;
 using BugsnagUnity.Payload;
 using JetBrains.Annotations;
-using Rewired;
 using Steamworks;
-using TMPro;
 using UnityEngine;
 using ZeepSDK.BugReporting.Patches;
 using ZeepSDK.External.Cysharp.Threading.Tasks;
 using ZeepSDK.External.Cysharp.Threading.Tasks.Triggers;
+using ZeepSDK.UI;
 using ZeepSDK.Utilities;
-using Object = UnityEngine.Object;
 
 namespace ZeepSDK.Crashlytics;
 
@@ -28,11 +26,14 @@ public static class CrashlyticsApi
     private const string ExplicitConsentKey = "ZeepSDK.HasExplicitCrashlyticsConsent";
     private const string NoticeSeenKey = "ZeepSDK.HasSeenCrashlyticsNotice";
     private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(CrashlyticsApi));
+    private static CrashlyticsConsentDrawer _consentDrawer;
     private static bool _canInitialize;
+    private static bool _initialized;
     
     internal static void Initialize()
     {
         Shutdown();
+        _initialized = true;
         OpenUIOnStart_Start.Postfixed += OnPostfix;
         Plugin.Instance.ConsentToCrashlytics.SettingChanged += OnConsentSettingChanged;
     }
@@ -44,7 +45,15 @@ public static class CrashlyticsApi
         if (Plugin.Instance?.ConsentToCrashlytics != null)
             Plugin.Instance.ConsentToCrashlytics.SettingChanged -= OnConsentSettingChanged;
 
+        _initialized = false;
         _canInitialize = false;
+        if (_consentDrawer != null)
+        {
+            UIApi.RemoveZeepGUIDrawer(_consentDrawer);
+            _consentDrawer.Dispose();
+            _consentDrawer = null;
+        }
+
         if (Bugsnag.IsStarted())
             Bugsnag.PauseSession();
     }
@@ -79,7 +88,8 @@ public static class CrashlyticsApi
 
         if (instance.hasMod && PlayerPrefs.GetInt(NoticeSeenKey, 0) == 0)
         {
-            ShowCrashlyticsNotice(instance).Forget();
+            ShowCrashlyticsConsent(instance).Forget(exception =>
+                _logger.LogError($"Failed to show crash reporting consent dialog: {exception}"));
         }
 
         if (HasConsent())
@@ -103,6 +113,21 @@ public static class CrashlyticsApi
         {
             Bugsnag.PauseSession();
         }
+    }
+
+    private static void ApplyConsentDecision(bool accepted)
+    {
+        PlayerPrefs.SetInt(NoticeSeenKey, 1);
+        PlayerPrefs.SetInt(ExplicitConsentKey, accepted ? 1 : 0);
+        PlayerPrefs.Save();
+
+        bool settingChanged = Plugin.Instance.ConsentToCrashlytics.Value != accepted;
+        Plugin.Instance.ConsentToCrashlytics.Value = accepted;
+
+        if (accepted && !settingChanged && _canInitialize)
+            InitializeBugsnag();
+        else if (!accepted && Bugsnag.IsStarted())
+            Bugsnag.PauseSession();
     }
 
     private static bool HasConsent()
@@ -202,29 +227,20 @@ public static class CrashlyticsApi
         return true;
     }
 
-    private static async UniTaskVoid ShowCrashlyticsNotice(OpenUIOnStart instance)
+    private static async UniTask ShowCrashlyticsConsent(OpenUIOnStart instance)
     {
         await instance.modPanel.GetAsyncDisableTrigger().OnDisableAsync();
 
-        GameObject newModPanel = Object.Instantiate(instance.modPanel, instance.modPanel.transform.parent);
-        instance.UI.gameObject.SetActive(false);
-        newModPanel.gameObject.SetActive(true);
+        if (!_initialized || PlayerPrefs.GetInt(NoticeSeenKey, 0) != 0)
+            return;
 
-        Transform child = newModPanel.transform.Find("You Have Mods Installed");
-        TextMeshProUGUI tmp = child.GetComponent<TextMeshProUGUI>();
-        tmp.text = "Crash reporting is disabled by default.<br>" +
-                   "<br>" +
-                   "You can opt in from ZeepSettings. Reports include your Steam identity, installed mod names and versions, and exception details.<br>" +
-                   "<br>" +
-                   "Leave the setting disabled if you do not want this data sent to Bugsnag.<br>";
+        if (_consentDrawer != null)
+        {
+            UIApi.RemoveZeepGUIDrawer(_consentDrawer);
+            _consentDrawer.Dispose();
+        }
 
-        await UniTask.NextFrame(PlayerLoopTiming.Update);
-        await UniTask.WaitUntil(() => ReInput.controllers.GetAnyButtonDown());
-
-        instance.UI.gameObject.SetActive(true);
-        Object.Destroy(newModPanel);
-
-        PlayerPrefs.SetInt(NoticeSeenKey, 1);
-        PlayerPrefs.Save();
+        _consentDrawer = new CrashlyticsConsentDrawer(ApplyConsentDecision);
+        UIApi.AddZeepGUIDrawer(_consentDrawer);
     }
 }
