@@ -1,0 +1,172 @@
+using System;
+using System.Collections.Generic;
+using Xunit;
+using ZeepSDK.ChatCommands;
+
+namespace ZeepSDK.Tests;
+
+public class ChatCommandRegistryTests
+{
+    [Fact]
+    public void ExposesStableReadOnlySnapshots()
+    {
+        TestRemoteCommand first = NewCommand();
+        TestRemoteCommand second = NewCommand();
+
+        try
+        {
+            ChatCommandRegistry.RegisterRemoteChatCommand(first);
+            IReadOnlyList<IRemoteChatCommand> snapshot = ChatCommandRegistry.RemoteChatCommands;
+            int originalCount = snapshot.Count;
+
+            ChatCommandRegistry.RegisterRemoteChatCommand(second);
+
+            Assert.Equal(originalCount, snapshot.Count);
+            Assert.False(snapshot is List<IRemoteChatCommand>);
+            Assert.Throws<NotSupportedException>(() =>
+                ((IList<IRemoteChatCommand>)snapshot).Add(NewCommand()));
+        }
+        finally
+        {
+            ChatCommandRegistry.UnregisterRemoteChatCommand(first);
+            ChatCommandRegistry.UnregisterRemoteChatCommand(second);
+        }
+    }
+
+    [Fact]
+    public void RejectsCaseInsensitiveDuplicateCommands()
+    {
+        string keyword = $"unique{Guid.NewGuid():N}";
+        TestRemoteCommand first = new("!", keyword, "first");
+        TestRemoteCommand duplicate = new("!", keyword.ToUpperInvariant(), "second");
+
+        try
+        {
+            ChatCommandRegistry.RegisterRemoteChatCommand(first);
+
+            Assert.Throws<InvalidOperationException>(() =>
+                ChatCommandRegistry.RegisterRemoteChatCommand(duplicate));
+        }
+        finally
+        {
+            ChatCommandRegistry.UnregisterRemoteChatCommand(first);
+            ChatCommandRegistry.UnregisterRemoteChatCommand(duplicate);
+        }
+    }
+
+    [Theory]
+    [InlineData("", "")]
+    [InlineData("!", " leading")]
+    [InlineData("!", "trailing ")]
+    [InlineData("!", "two\twords")]
+    [InlineData("!", "two\nwords")]
+    public void RejectsInvalidCommandNames(string prefix, string keyword)
+    {
+        TestRemoteCommand command = new(prefix, keyword, "description");
+
+        Assert.Throws<ArgumentException>(() =>
+            ChatCommandRegistry.RegisterRemoteChatCommand(command));
+    }
+
+    [Theory]
+    [InlineData("+")]
+    [InlineData("++")]
+    [InlineData("+-")]
+    [InlineData("-+")]
+    [InlineData("--")]
+    [InlineData("-")]
+    public void AcceptsCommandsWithoutPrefix(string commandText)
+    {
+        TestRemoteCommand command = new(string.Empty, commandText, "description");
+
+        try
+        {
+            ChatCommandRegistry.RegisterRemoteChatCommand(command);
+
+            Assert.Contains(command, ChatCommandRegistry.RemoteChatCommands);
+        }
+        finally
+        {
+            ChatCommandRegistry.UnregisterRemoteChatCommand(command);
+        }
+    }
+
+    [Fact]
+    public void ValidationErrorIdentifiesCommandAndEscapesControlCharacters()
+    {
+        TestRemoteCommand command = new("!", "bad\tcommand", "description");
+
+        ArgumentException exception = Assert.Throws<ArgumentException>(() =>
+            ChatCommandRegistry.RegisterRemoteChatCommand(command));
+
+        Assert.Contains(typeof(TestRemoteCommand).FullName, exception.Message);
+        Assert.Contains("prefix='!'", exception.Message);
+        Assert.Contains("command='bad\\tcommand'", exception.Message);
+        Assert.DoesNotContain("bad\tcommand", exception.Message);
+    }
+
+    [Fact]
+    public void AcceptsMultiWordCommandsUsedByScriptingApi()
+    {
+        TestRemoteCommand command = new("/", "zua load", "description");
+
+        try
+        {
+            ChatCommandRegistry.RegisterRemoteChatCommand(command);
+
+            Assert.Contains(command, ChatCommandRegistry.RemoteChatCommands);
+        }
+        finally
+        {
+            ChatCommandRegistry.UnregisterRemoteChatCommand(command);
+        }
+    }
+
+    [Theory]
+    [InlineData("+")]
+    [InlineData("++")]
+    [InlineData("+-")]
+    [InlineData("-+")]
+    [InlineData("--")]
+    [InlineData("-")]
+    public void AcceptsPrefixOnlyOperatorCommands(string prefix)
+    {
+        TestRemoteCommand command = new(prefix, string.Empty, "description");
+
+        try
+        {
+            ChatCommandRegistry.RegisterRemoteChatCommand(command);
+
+            Assert.Contains(command, ChatCommandRegistry.RemoteChatCommands);
+        }
+        finally
+        {
+            ChatCommandRegistry.UnregisterRemoteChatCommand(command);
+        }
+    }
+
+    [Fact]
+    public void RejectsNullWrapperCallbacks()
+    {
+        Assert.Throws<ArgumentNullException>(() =>
+            new RemoteChatCommandWrapper("!", "command", "description", null));
+    }
+
+    private static TestRemoteCommand NewCommand()
+        => new("!", $"unique{Guid.NewGuid():N}", "description");
+
+    private sealed class TestRemoteCommand : IRemoteChatCommand
+    {
+        public TestRemoteCommand(string prefix, string command, string description)
+        {
+            Prefix = prefix;
+            Command = command;
+            Description = description;
+        }
+
+        public string Prefix { get; }
+        public string Command { get; }
+        public string Description { get; }
+        public void Handle(ulong playerId, string arguments) { }
+    }
+}

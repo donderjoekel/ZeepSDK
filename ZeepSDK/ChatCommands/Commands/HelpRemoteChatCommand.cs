@@ -10,12 +10,6 @@ internal class HelpRemoteChatCommand : IRemoteChatCommand
 
     public void Handle(ulong playerId, string arguments)
     {
-        ChatApi.SendMessage("Available commands:");
-
-        foreach (IRemoteChatCommand remoteChatCommand in ChatCommandRegistry.RemoteChatCommands)
-        {
-            ChatApi.SendMessage(
-                $"- {remoteChatCommand.Prefix}{remoteChatCommand.Command} - {remoteChatCommand.Description}");
-        }
+        ChatApi.SendMessage(ChatHelpFormatter.Format(ChatCommandRegistry.RemoteChatCommands));
     }
 }

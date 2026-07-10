@@ -1,7 +1,8 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
+using System.Threading;
 using BepInEx;
 using BepInEx.Logging;
 using Newtonsoft.Json;
@@ -18,11 +19,25 @@ namespace ZeepSDK.Versioning;
 
 internal class VersionChecker
 {
+    private const int MaximumResponseBytes = 2 * 1024 * 1024;
+    private const int MaximumModPages = 100;
+    private const int MaximumMods = 10_000;
+    private const int ModPageSize = 100;
+    private const string ModsUrl =
+        "https://g-3213.modapi.io/v1/games/3213/mods?api_key=188efbb7446e6d527b0991c3672b3e31&tags-in=Plugin";
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(VersionChecker));
-
-    public static async UniTaskVoid CheckVersions()
+    private static readonly HttpClient httpClient = new()
     {
-        Result<int> result = await CalculateOutdatedMods();
+        Timeout = TimeSpan.FromSeconds(15)
+    };
+    private static LevelLoadedDelegate outdatedModsChatHandler;
+
+    public static async UniTask CheckVersions(CancellationToken cancellationToken)
+    {
+        Result<int> result = await CalculateOutdatedMods(cancellationToken);
+
+        if (cancellationToken.IsCancellationRequested)
+            return;
 
         if (result.IsFailed)
         {
@@ -43,66 +58,86 @@ internal class VersionChecker
                 : $"{workSprite} <color=red>You have {outdatedMods} outdated mods</color> {workSprite}");
         }
 
-        RacingApi.LevelLoaded += LogOutdatedModsToChat;
+        Shutdown();
+        outdatedModsChatHandler = LogOutdatedModsToChat;
+        RacingApi.LevelLoaded += outdatedModsChatHandler;
 
-        await WaitForScene();
+        try
+        {
+            await WaitForScene(cancellationToken);
+        }
+        catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+        {
+            return;
+        }
 
         MessengerApi.LogWarning(outdatedMods == 1
             ? "You have 1 outdated mod"
             : $"You have {outdatedMods} outdated mods");
     }
 
-    private static async UniTask WaitForScene()
+    internal static void Shutdown()
+    {
+        if (outdatedModsChatHandler != null)
+            RacingApi.LevelLoaded -= outdatedModsChatHandler;
+        outdatedModsChatHandler = null;
+    }
+
+    private static async UniTask WaitForScene(CancellationToken cancellationToken)
     {
         const string sceneName = "IntroScene";
 
-        bool hasLoadedScene = false;
-
         if (!string.Equals(sceneName, SceneManager.GetActiveScene().name))
         {
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            UniTaskCompletionSource sceneLoaded = new();
 
-            while (!hasLoadedScene)
+            void OnSceneLoaded(Scene scene, LoadSceneMode mode)
             {
-                await UniTask.Yield();
+                if (scene.name == sceneName)
+                    sceneLoaded.TrySetResult();
             }
 
-            SceneManager.sceneLoaded -= OnSceneLoaded;
-
-            await UniTask.Yield();
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            using CancellationTokenRegistration registration = cancellationToken.Register(
+                () => sceneLoaded.TrySetCanceled(cancellationToken));
+            try
+            {
+                await sceneLoaded.Task;
+                await UniTask.Yield(cancellationToken);
+            }
+            finally
+            {
+                SceneManager.sceneLoaded -= OnSceneLoaded;
+            }
         }
         else
         {
-            await UniTask.Delay(TimeSpan.FromSeconds(1));
-        }
-
-        return;
-
-        void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-        {
-            if (scene.name == sceneName)
-                hasLoadedScene = true;
+            await UniTask.Delay(TimeSpan.FromSeconds(1), cancellationToken: cancellationToken);
         }
     }
 
-    private static async UniTask<Result<int>> CalculateOutdatedMods()
+    private static async UniTask<Result<int>> CalculateOutdatedMods(CancellationToken cancellationToken)
     {
-        Result<ModioResponse<ModResponseData>> result = await GetData<ModioResponse<ModResponseData>>(
-            "https://g-3213.modapi.io/v1/games/3213/mods?api_key=188efbb7446e6d527b0991c3672b3e31&tags-in=Plugin");
+        Result<List<ModResponseData>> result = await GetAllModData(cancellationToken);
 
         if (result.IsFailed)
             return result.ToResult();
 
-        string[] directories = Directory.GetDirectories(Paths.PluginPath, "*", SearchOption.TopDirectoryOnly);
+        Dictionary<int, string> directoriesByModId = new();
+        foreach (string directory in Directory.EnumerateDirectories(Paths.PluginPath, "*", SearchOption.TopDirectoryOnly))
+        {
+            string name = Path.GetFileName(directory);
+            int separator = name.IndexOf('_');
+            if (separator > 0 && int.TryParse(name[..separator], out int modId))
+                directoriesByModId.TryAdd(modId, directory);
+        }
 
         int outdatedMods = 0;
 
-        foreach (ModResponseData modResponseData in result.Value.Data)
+        foreach (ModResponseData modResponseData in result.Value)
         {
-            string existingModPath = directories
-                .FirstOrDefault(x => Path.GetFileNameWithoutExtension(x)!.StartsWith(modResponseData.Id + "_"));
-
-            if (string.IsNullOrEmpty(existingModPath))
+            if (modResponseData?.ModFile == null ||
+                !directoriesByModId.TryGetValue(modResponseData.Id, out string existingModPath))
                 continue;
 
             string directoryName = Path.GetFileNameWithoutExtension(existingModPath);
@@ -118,39 +153,69 @@ internal class VersionChecker
         return outdatedMods;
     }
 
-    private static async UniTask<Result<TData>> GetData<TData>(string url)
+    private static async UniTask<Result<List<ModResponseData>>> GetAllModData(
+        CancellationToken cancellationToken)
     {
-        HttpClient httpClient = new();
+        List<ModResponseData> mods = new();
+        int offset = 0;
 
-        HttpResponseMessage result = await httpClient.GetAsync(url);
+        for (int pageNumber = 0; pageNumber < MaximumModPages; pageNumber++)
+        {
+            string url = $"{ModsUrl}&_offset={offset}&_limit={ModPageSize}";
+            Result<ModioResponse<ModResponseData>> result =
+                await GetData<ModioResponse<ModResponseData>>(url, cancellationToken);
+            if (result.IsFailed)
+                return result.ToResult();
 
+            if (!ModioPagination.TryGetNextOffset(
+                    result.Value,
+                    offset,
+                    MaximumMods,
+                    out int nextOffset,
+                    out bool complete,
+                    out string error))
+                return Result.Fail<List<ModResponseData>>(error);
+
+            mods.AddRange(result.Value.Data);
+            if (complete)
+                return mods;
+
+            offset = nextOffset;
+        }
+
+        return Result.Fail<List<ModResponseData>>($"mod.io exceeded the {MaximumModPages}-page limit");
+    }
+
+    private static async UniTask<Result<TData>> GetData<TData>(string url, CancellationToken cancellationToken)
+    {
         try
         {
-            result.EnsureSuccessStatusCode();
+            using HttpResponseMessage response = await httpClient.GetAsync(
+                url,
+                HttpCompletionOption.ResponseHeadersRead,
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+
+            string json = await BoundedHttpContent.ReadAsUtf8StringAsync(
+                response.Content,
+                MaximumResponseBytes,
+                cancellationToken);
+            TData data = JsonConvert.DeserializeObject<TData>(json, new JsonSerializerSettings
+            {
+                MaxDepth = 64
+            });
+
+            return data == null
+                ? Result.Fail<TData>("HTTP response contained no JSON value")
+                : data;
+        }
+        catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+        {
+            return Result.Fail<TData>("Version check was cancelled");
         }
         catch (Exception e)
         {
-            return Result.Fail(new ExceptionalError(e));
-        }
-
-        string json;
-
-        try
-        {
-            json = await result.Content.ReadAsStringAsync();
-        }
-        catch (Exception e)
-        {
-            return Result.Fail(new ExceptionalError(e));
-        }
-
-        try
-        {
-            return JsonConvert.DeserializeObject<TData>(json);
-        }
-        catch (Exception e)
-        {
-            return Result.Fail(new ExceptionalError(e));
+            return Result.Fail<TData>(new ExceptionalError(e));
         }
     }
 }

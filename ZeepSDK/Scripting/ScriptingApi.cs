@@ -20,7 +20,9 @@ namespace ZeepSDK.Scripting;
 public static class ScriptingApi
 {
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(Zua));
-    private static readonly Dictionary<string, Zua> loadedScripts = new();
+    private static readonly Dictionary<string, Zua> loadedScripts =
+        new(StringComparer.OrdinalIgnoreCase);
+    private static LuaScriptIndex scriptIndex;
 
     internal static void Initialize()
     {
@@ -38,6 +40,14 @@ public static class ScriptingApi
                     return result;
                 throw new InvalidCastException($"Cannot convert string to ulong; {value.String}");
             });
+    }
+
+    internal static void Shutdown()
+    {
+        foreach (Zua zua in loadedScripts.Values.ToArray())
+            zua.Unload();
+        loadedScripts.Clear();
+        scriptIndex = null;
     }
 
     /// <summary>
@@ -111,16 +121,27 @@ public static class ScriptingApi
     /// <returns>Zua instance if successful, null if either already loaded, or an error occured</returns>
     public static Zua LoadLuaByPath(string filePath)
     {
-        if (loadedScripts.ContainsKey(filePath))
+        string canonicalPath;
+        try
         {
-            logger.LogError($"This script has already been loaded '{filePath}'");
+            canonicalPath = LuaScriptIndex.CanonicalizePath(filePath);
+        }
+        catch (Exception ex)
+        {
+            logger.LogError($"Invalid Lua script path: {ex.Message}");
+            return null;
+        }
+
+        if (loadedScripts.ContainsKey(canonicalPath))
+        {
+            logger.LogError($"This script has already been loaded '{canonicalPath}'");
             return null;
         }
 
         try
         {
-            Zua zua = Zua.LoadLuaByPath(filePath);
-            loadedScripts.Add(filePath, zua);
+            Zua zua = Zua.LoadLuaByPath(canonicalPath);
+            loadedScripts.Add(canonicalPath, zua);
             return zua;
         }
         catch (SyntaxErrorException ex)
@@ -143,22 +164,13 @@ public static class ScriptingApi
     /// <returns>Zua instance if successful, null if either already loaded, or an error occured</returns>
     public static Zua LoadLuaByName(string name)
     {
-        string[] files = Directory.GetFiles(Paths.PluginPath, $"{name}.lua", SearchOption.AllDirectories);
-        if (files.Length == 1)
-            return LoadLuaByPath(files[0]);
-        if (files.Length == 0)
-        {
-            // TODO: Log
+        EnsureScriptIndex();
+        if (scriptIndex == null)
             return null;
-        }
+        if (scriptIndex.TryResolve(name, out string path, out string error))
+            return LoadLuaByPath(path);
 
-        if (files.Length > 1)
-        {
-            // TODO: Log
-            return null;
-        }
-
-        // This will be caught by if-statements above
+        logger.LogError(error);
         return null;
     }
 
@@ -168,7 +180,18 @@ public static class ScriptingApi
     /// <param name="path">The absolute path to the lua script</param>
     public static bool UnloadLuaByPath(string path)
     {
-        if (loadedScripts.TryGetValue(path, out Zua zua))
+        string canonicalPath;
+        try
+        {
+            canonicalPath = LuaScriptIndex.CanonicalizePath(path);
+        }
+        catch (Exception ex)
+        {
+            logger.LogError($"Invalid Lua script path: {ex.Message}");
+            return false;
+        }
+
+        if (loadedScripts.TryGetValue(canonicalPath, out Zua zua))
         {
             zua.Unload();
             return true;
@@ -183,8 +206,40 @@ public static class ScriptingApi
     /// <param name="name">The name of the file to search for, excluding the extension</param>
     public static bool UnloadLuaByName(string name)
     {
-        string[] files = Directory.GetFiles(Paths.PluginPath, $"{name}.lua", SearchOption.AllDirectories);
-        return files.Length == 1 && UnloadLuaByPath(files[0]);
+        EnsureScriptIndex();
+        if (scriptIndex == null)
+            return false;
+        if (scriptIndex.TryResolve(name, out string path, out string error))
+            return UnloadLuaByPath(path);
+
+        logger.LogError(error);
+        return false;
+    }
+
+    /// <summary>
+    /// Rebuilds the cached index used by name-based Lua load and unload operations.
+    /// Call this after adding, removing, or renaming Lua files at runtime.
+    /// </summary>
+    public static void RefreshLuaScriptIndex()
+    {
+        try
+        {
+            scriptIndex ??= new LuaScriptIndex(Paths.PluginPath);
+            scriptIndex.Refresh();
+        }
+        catch (Exception ex)
+        {
+            scriptIndex = null;
+            logger.LogError($"Failed to refresh Lua script index: {ex}");
+        }
+    }
+
+    private static void EnsureScriptIndex()
+    {
+        if (scriptIndex != null)
+            return;
+
+        RefreshLuaScriptIndex();
     }
 
     internal static void UnloadZua(Zua zua)

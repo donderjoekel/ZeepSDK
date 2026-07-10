@@ -23,13 +23,14 @@ internal class ModStorage : IModStorage
 {
     private static ManualLogSource _logger = LoggerFactory.GetLogger<ModStorage>();
     private readonly List<char> _invalidCharacters;
-    private readonly BaseUnityPlugin _plugin;
     private readonly JsonSerializerSettings _settings;
     private readonly string _directoryPath;
+    private readonly object _settingsLock = new();
 
     public ModStorage(BaseUnityPlugin plugin)
     {
-        _plugin = plugin;
+        if (plugin == null)
+            throw new ArgumentNullException(nameof(plugin));
         _settings = new JsonSerializerSettings
         {
             ContractResolver = new UnityTypeContractResolver(),
@@ -71,15 +72,20 @@ internal class ModStorage : IModStorage
             plugin.Info.Metadata.GUID);
     }
 
-    private string CreatePath(string name, string extension)
+    private string ResolvePath(string name, string extension)
     {
-        string filePath = Path.Combine(_directoryPath, SanitizePath(name)) + extension;
+        if (name == null)
+            throw new ArgumentNullException(nameof(name));
 
+        return Path.Combine(_directoryPath, SanitizePath(name)) + extension;
+    }
+
+    private string EnsureWritePath(string name, string extension)
+    {
+        string filePath = ResolvePath(name, extension);
         string directoryName = Path.GetDirectoryName(filePath);
-        if (!string.IsNullOrEmpty(directoryName) && !Directory.Exists(directoryName))
-        {
+        if (!string.IsNullOrEmpty(directoryName))
             Directory.CreateDirectory(directoryName);
-        }
 
         return filePath;
     }
@@ -101,19 +107,27 @@ internal class ModStorage : IModStorage
 
     public void AddConverter(JsonConverter converter)
     {
-        _settings.Converters.Add(converter);
+        if (converter == null)
+            throw new ArgumentNullException(nameof(converter));
+
+        lock (_settingsLock)
+            _settings.Converters.Add(converter);
     }
 
     public void RemoveConverter(JsonConverter converter)
     {
-        _settings.Converters.Remove(converter);
+        if (converter == null)
+            return;
+
+        lock (_settingsLock)
+            _settings.Converters.Remove(converter);
     }
 
     public bool JsonFileExists(string name)
     {
         try
         {
-            return File.Exists(CreatePath(name, ".json"));
+            return File.Exists(ResolvePath(name, ".json"));
         }
         catch (Exception e)
         {
@@ -128,8 +142,10 @@ internal class ModStorage : IModStorage
     {
         try
         {
-            string json = JsonConvert.SerializeObject(data, _settings);
-            File.WriteAllText(CreatePath(name, ".json"), json);
+            string json;
+            lock (_settingsLock)
+                json = JsonConvert.SerializeObject(data, _settings);
+            AtomicFile.WriteAllText(EnsureWritePath(name, ".json"), json);
         }
         catch (Exception e)
         {
@@ -143,8 +159,9 @@ internal class ModStorage : IModStorage
     {
         try
         {
-            string json = File.ReadAllText(CreatePath(name, ".json"));
-            return JsonConvert.DeserializeObject(json, _settings);
+            string json = File.ReadAllText(ResolvePath(name, ".json"));
+            lock (_settingsLock)
+                return JsonConvert.DeserializeObject(json, _settings);
         }
         catch (Exception e)
         {
@@ -159,8 +176,9 @@ internal class ModStorage : IModStorage
     {
         try
         {
-            string json = File.ReadAllText(CreatePath(name, ".json"));
-            return JsonConvert.DeserializeObject(json, type, _settings);
+            string json = File.ReadAllText(ResolvePath(name, ".json"));
+            lock (_settingsLock)
+                return JsonConvert.DeserializeObject(json, type, _settings);
         }
         catch (Exception e)
         {
@@ -173,17 +191,27 @@ internal class ModStorage : IModStorage
 
     public TData LoadFromJson<TData>(string name)
     {
+        StorageResult<TData> result = TryLoadFromJson<TData>(name);
+        if (result.IsSuccess)
+            return result.Value;
+
+        ReportFailure(result.Error, result.Exception);
+        return default;
+    }
+
+    public StorageResult<TData> TryLoadFromJson<TData>(string name)
+    {
         try
         {
-            string json = File.ReadAllText(CreatePath(name, ".json"));
-            return JsonConvert.DeserializeObject<TData>(json, _settings);
+            string json = File.ReadAllText(ResolvePath(name, ".json"));
+            TData value;
+            lock (_settingsLock)
+                value = JsonConvert.DeserializeObject<TData>(json, _settings);
+            return StorageResult<TData>.FromValue(value);
         }
-        catch (Exception e)
+        catch (Exception exception)
         {
-            _logger.LogError("Failed to load to json");
-            _logger.LogError(e);
-            CrashlyticsApi.Notify(e);
-            return default;
+            return StorageResult<TData>.FromValueFailure("Failed to load JSON.", exception);
         }
     }
 
@@ -191,7 +219,7 @@ internal class ModStorage : IModStorage
     {
         try
         {
-            string path = CreatePath(name, ".json");
+            string path = ResolvePath(name, ".json");
             if (File.Exists(path))
                 File.Delete(path);
         }
@@ -207,7 +235,7 @@ internal class ModStorage : IModStorage
     {
         try
         {
-            string path = CreatePath(name, ".json");
+            string path = ResolvePath(name, ".json");
             if (File.Exists(path))
                 File.Delete(path);
         }
@@ -223,7 +251,7 @@ internal class ModStorage : IModStorage
     {
         try
         {
-            return File.Exists(CreatePath(name, ".blob"));
+            return File.Exists(ResolvePath(name, ".blob"));
         }
         catch (Exception e)
         {
@@ -236,38 +264,53 @@ internal class ModStorage : IModStorage
 
     public void WriteBlob(string name, byte[] data)
     {
-        try
-        {
-            File.WriteAllBytes(CreatePath(name, ".blob"), data);
-        }
-        catch (Exception e)
-        {
-            _logger.LogError("Failed to write blob");
-            _logger.LogError(e);
-            CrashlyticsApi.Notify(e);
-        }
+        StorageResult result = TryWriteBlob(name, data);
+        if (!result.IsSuccess)
+            ReportFailure(result.Error, result.Exception);
+    }
+
+    public System.Threading.Tasks.Task<StorageResult> WriteBlobAsync(
+        string name,
+        byte[] data,
+        System.Threading.CancellationToken cancellationToken = default)
+    {
+        return System.Threading.Tasks.Task.Run(() => TryWriteBlob(name, data), cancellationToken);
     }
 
     public byte[] ReadBlob(string name)
     {
+        StorageResult<byte[]> result = TryReadBlob(name);
+        if (result.IsSuccess)
+            return result.Value;
+
+        ReportFailure(result.Error, result.Exception);
+        return null;
+    }
+
+    public StorageResult<byte[]> TryReadBlob(string name)
+    {
         try
         {
-            return File.ReadAllBytes(CreatePath(name, ".blob"));
+            return StorageResult<byte[]>.FromValue(File.ReadAllBytes(ResolvePath(name, ".blob")));
         }
-        catch (Exception e)
+        catch (Exception exception)
         {
-            _logger.LogError("Failed to read blob");
-            _logger.LogError(e);
-            CrashlyticsApi.Notify(e);
-            return null;
+            return StorageResult<byte[]>.FromValueFailure("Failed to read blob.", exception);
         }
+    }
+
+    public System.Threading.Tasks.Task<StorageResult<byte[]>> ReadBlobAsync(
+        string name,
+        System.Threading.CancellationToken cancellationToken = default)
+    {
+        return System.Threading.Tasks.Task.Run(() => TryReadBlob(name), cancellationToken);
     }
 
     public void DeleteBlob(string name)
     {
         try
         {
-            string path = CreatePath(name, ".blob");
+            string path = ResolvePath(name, ".blob");
             if (File.Exists(path))
                 File.Delete(path);
         }
@@ -283,8 +326,8 @@ internal class ModStorage : IModStorage
     {
         try
         {
-            string path = CreatePath(filename, string.Empty);
-            File.WriteAllBytes(path, data);
+            string path = EnsureWritePath(filename, string.Empty);
+            AtomicFile.WriteAllBytes(path, data);
         }
         catch (Exception e)
         {
@@ -292,5 +335,30 @@ internal class ModStorage : IModStorage
             _logger.LogError(e);
             CrashlyticsApi.Notify(e);
         }
+    }
+
+    private StorageResult TryWriteBlob(string name, byte[] data)
+    {
+        try
+        {
+            if (data == null)
+                throw new ArgumentNullException(nameof(data));
+            AtomicFile.WriteAllBytes(EnsureWritePath(name, ".blob"), data);
+            return StorageResult.FromSuccess();
+        }
+        catch (Exception exception)
+        {
+            return StorageResult.FromFailure("Failed to write blob.", exception);
+        }
+    }
+
+    private static void ReportFailure(string message, Exception exception)
+    {
+        _logger.LogError(message);
+        if (exception == null)
+            return;
+
+        _logger.LogError(exception);
+        CrashlyticsApi.Notify(exception);
     }
 }

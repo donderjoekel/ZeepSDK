@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 
 namespace ZeepSDK.UI.RectEx.Internal {
+    /// <summary>Provides paired enumerable projection helpers.</summary>
     public static class IEnumerableExtension {
+        /// <summary>Merges corresponding elements until either sequence ends.</summary>
         public static IEnumerable<TResult> Merge<TFirst, TSecond, TResult> (this IEnumerable<TFirst> first,
                                                                             IEnumerable<TSecond> second,
                                                                             Func<TFirst, TSecond, TResult> selector){

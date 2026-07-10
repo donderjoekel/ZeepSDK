@@ -18,7 +18,7 @@ internal class RemoteChatCommandWrapper : IRemoteChatCommand
         Prefix = prefix;
         Command = command;
         Description = description;
-        this.callback = callback;
+        this.callback = callback ?? throw new System.ArgumentNullException(nameof(callback));
     }
 
     public void Handle(ulong playerId, string arguments)

@@ -9,6 +9,7 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+        <PackageReference Include="MoonSharp" Version="2.0.0" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
         <PackageReference Include="System.IO.Hashing" Version="10.0.0" />
         <PackageReference Include="xunit" Version="2.9.3" />
@@ -19,6 +20,20 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Compile Include="..\ZeepSDK\ChatCommands\ChatCommandUtilities.cs" Link="Source\ChatCommandUtilities.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\ChatHelpFormatter.cs" Link="Source\ChatHelpFormatter.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\IChatCommand.cs" Link="Source\IChatCommand.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\ILocalChatCommand.cs" Link="Source\ILocalChatCommand.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\ILocalChatCommandAlias.cs" Link="Source\ILocalChatCommandAlias.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\IMixedChatCommand.cs" Link="Source\IMixedChatCommand.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\IRemoteChatCommand.cs" Link="Source\IRemoteChatCommand.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\LocalChatCommandAlias.cs" Link="Source\LocalChatCommandAlias.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\ChatCommandRegistry.cs" Link="Source\ChatCommandRegistry.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\Delegates.cs" Link="Source\ChatCommandDelegates.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\RemoteChatCommandWrapper.cs" Link="Source\RemoteChatCommandWrapper.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\RemoteCommandRateLimiter.cs" Link="Source\RemoteCommandRateLimiter.cs" />
+        <Compile Include="..\ZeepSDK\Communication\ComReceiver.cs" Link="Source\ComReceiver.cs" />
+        <Compile Include="..\ZeepSDK\Communication\IComReceiver.cs" Link="Source\IComReceiver.cs" />
         <Compile Include="..\ZeepSDK\Extensions\StringBuilderExtensions.cs" Link="Source\StringBuilderExtensions.cs" />
         <Compile Include="..\ZeepSDK\Level\CsvZeepBlock.cs" Link="Source\CsvZeepBlock.cs" />
         <Compile Include="..\ZeepSDK\Level\CsvZeepLevel.cs" Link="Source\CsvZeepLevel.cs" />
@@ -27,10 +42,25 @@
         <Compile Include="..\ZeepSDK\Level\LevelHashV2Calculator.cs" Link="Source\LevelHashV2Calculator.cs" />
         <Compile Include="..\ZeepSDK\Numerics\Vector2.cs" Link="Source\Vector2.cs" />
         <Compile Include="..\ZeepSDK\Numerics\Vector3.cs" Link="Source\Vector3.cs" />
+        <Compile Include="..\ZeepSDK\Playlist\PlaylistPath.cs" Link="Source\PlaylistPath.cs" />
+        <Compile Include="..\ZeepSDK\Scripting\ZUA\LuaExecutionBudget.cs" Link="Source\LuaExecutionBudget.cs" />
+        <Compile Include="..\ZeepSDK\Scripting\ZUA\ILuaEvent.cs" Link="Source\ILuaEvent.cs" />
+        <Compile Include="..\ZeepSDK\Scripting\ZUA\ILuaFunction.cs" Link="Source\ILuaFunction.cs" />
+        <Compile Include="..\ZeepSDK\Scripting\ZUA\LuaApiDescriptorCache.cs" Link="Source\LuaApiDescriptorCache.cs" />
+        <Compile Include="..\ZeepSDK\Scripting\LuaScriptIndex.cs" Link="Source\LuaScriptIndex.cs" />
+        <Compile Include="..\ZeepSDK\Utilities\AtomicFile.cs" Link="Source\AtomicFile.cs" />
+        <Compile Include="..\ZeepSDK\Utilities\Override\ConditionTickType.cs" Link="Source\ConditionTickType.cs" />
+        <Compile Include="..\ZeepSDK\Utilities\Override\IConditionTickable.cs" Link="Source\IConditionTickable.cs" />
+        <Compile Include="..\ZeepSDK\Utilities\Override\ConditionTickScheduler.cs" Link="Source\ConditionTickScheduler.cs" />
+        <Compile Include="..\ZeepSDK\Storage\StorageResult.cs" Link="Source\StorageResult.cs" />
         <Compile Include="..\ZeepSDK\Utilities\NaturalStringComparer.cs" Link="Source\NaturalStringComparer.cs" />
         <Compile Include="..\ZeepSDK\Utilities\SequenceComparer.cs" Link="Source\SequenceComparer.cs" />
+        <Compile Include="..\ZeepSDK\Utilities\UnityFolders\UnityFolder.cs" Link="Source\UnityFolder.cs" />
         <Compile Include="..\ZeepSDK\Utilities\Vector3Comparer.cs" Link="Source\Vector3Comparer.cs" />
         <Compile Include="..\ZeepSDK\Utilities\XxHash128Reflection.cs" Link="Source\XxHash128Reflection.cs" />
+        <Compile Include="..\ZeepSDK\Versioning\BoundedHttpContent.cs" Link="Source\BoundedHttpContent.cs" />
+        <Compile Include="..\ZeepSDK\Versioning\ModioPagination.cs" Link="Source\ModioPagination.cs" />
+        <Compile Include="..\ZeepSDK\Versioning\ModioResponse.cs" Link="Source\ModioResponse.cs" />
     </ItemGroup>
 
     <ItemGroup>
