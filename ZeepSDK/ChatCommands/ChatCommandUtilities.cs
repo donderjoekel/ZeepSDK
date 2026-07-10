@@ -1,4 +1,4 @@
-﻿using System.Text.RegularExpressions;
+using System;
 
 namespace ZeepSDK.ChatCommands;
 
@@ -6,11 +6,19 @@ internal static class ChatCommandUtilities
 {
     public static bool MatchesCommand(string input, IChatCommand chatCommand)
     {
-        if (chatCommand == null) return false;
-        string escapedPrefix = Regex.Escape(chatCommand.Prefix);
-        string escapedCommand = Regex.Escape(chatCommand.Command);
-        string pattern = $"^{escapedPrefix}{escapedCommand}(\\W|$).*";
-        return Regex.IsMatch(input, pattern, RegexOptions.IgnoreCase);
+        if (string.IsNullOrEmpty(input) || chatCommand == null ||
+            string.IsNullOrEmpty(chatCommand.Prefix) || string.IsNullOrEmpty(chatCommand.Command))
+            return false;
+
+        int commandLength = chatCommand.Prefix.Length + chatCommand.Command.Length;
+        if (input.Length < commandLength ||
+            string.Compare(input, 0, chatCommand.Prefix, 0, chatCommand.Prefix.Length,
+                StringComparison.OrdinalIgnoreCase) != 0 ||
+            string.Compare(input, chatCommand.Prefix.Length, chatCommand.Command, 0, chatCommand.Command.Length,
+                StringComparison.OrdinalIgnoreCase) != 0)
+            return false;
+
+        return input.Length == commandLength || char.IsWhiteSpace(input[commandLength]);
     }
 
     public static string GetArguments(string input, IChatCommand chatCommand)

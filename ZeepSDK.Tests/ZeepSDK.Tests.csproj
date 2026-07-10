@@ -19,6 +19,8 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Compile Include="..\ZeepSDK\ChatCommands\ChatCommandUtilities.cs" Link="Source\ChatCommandUtilities.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\IChatCommand.cs" Link="Source\IChatCommand.cs" />
         <Compile Include="..\ZeepSDK\Extensions\StringBuilderExtensions.cs" Link="Source\StringBuilderExtensions.cs" />
         <Compile Include="..\ZeepSDK\Level\CsvZeepBlock.cs" Link="Source\CsvZeepBlock.cs" />
         <Compile Include="..\ZeepSDK\Level\CsvZeepLevel.cs" Link="Source\CsvZeepLevel.cs" />
