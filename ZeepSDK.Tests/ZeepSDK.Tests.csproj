@@ -44,6 +44,9 @@
         <Compile Include="..\ZeepSDK\Numerics\Vector3.cs" Link="Source\Vector3.cs" />
         <Compile Include="..\ZeepSDK\Playlist\PlaylistPath.cs" Link="Source\PlaylistPath.cs" />
         <Compile Include="..\ZeepSDK\Scripting\ZUA\LuaExecutionBudget.cs" Link="Source\LuaExecutionBudget.cs" />
+        <Compile Include="..\ZeepSDK\Scripting\ZUA\ILuaEvent.cs" Link="Source\ILuaEvent.cs" />
+        <Compile Include="..\ZeepSDK\Scripting\ZUA\ILuaFunction.cs" Link="Source\ILuaFunction.cs" />
+        <Compile Include="..\ZeepSDK\Scripting\ZUA\LuaApiDescriptorCache.cs" Link="Source\LuaApiDescriptorCache.cs" />
         <Compile Include="..\ZeepSDK\Scripting\LuaScriptIndex.cs" Link="Source\LuaScriptIndex.cs" />
         <Compile Include="..\ZeepSDK\Utilities\AtomicFile.cs" Link="Source\AtomicFile.cs" />
         <Compile Include="..\ZeepSDK\Utilities\SequenceComparer.cs" Link="Source\SequenceComparer.cs" />

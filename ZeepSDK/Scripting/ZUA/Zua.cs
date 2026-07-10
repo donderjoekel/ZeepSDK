@@ -152,23 +152,21 @@ public class Zua
     public void RegisterEvent<TEvent>()
         where TEvent : ILuaEvent, new()
     {
-        TEvent luaEvent = new TEvent();
-        BindEvent(luaEvent);
-        if (registeredEvents.Any(e => e.Name == luaEvent.Name)) return;
-        registeredEvents.Add(luaEvent);
+        RegisterEvent(new TEvent());
     }
 
     private void RegisterAllFunctionsInCurrentAssembly()
     {
-        List<Type> types = typeof(Zua).Assembly.GetTypes()
-            .Where(x => !x.IsAbstract && x.IsClass)
-            .Where(x => typeof(ILuaFunction).IsAssignableFrom(x))
-            .Where(x => x.GetConstructors().Any(x => x.GetParameters().Length == 0))
-            .ToList();
-
-        foreach (Type type in types)
+        foreach (LuaApiDescriptor<ILuaFunction> descriptor in LuaApiDescriptorCache.Functions)
         {
-            RegisterFunction(type);
+            try
+            {
+                RegisterFunction(descriptor.Create());
+            }
+            catch (Exception exception)
+            {
+                Logger.LogError($"Failed to register Lua function '{descriptor.Type.FullName}': {exception}");
+            }
         }
     }
 
@@ -186,6 +184,9 @@ public class Zua
 
     private void RegisterFunction(ILuaFunction function)
     {
+        if (function == null)
+            throw new ArgumentNullException(nameof(function));
+
         Table namespaceTable = script.Globals.Get(function.Namespace).Table;
         if (namespaceTable == null)
         {
@@ -213,24 +214,9 @@ public class Zua
         if (!typeof(ILuaEvent).IsAssignableFrom(eventType))
             throw new ArgumentException($"{eventType.FullName} is not a valid event type");
         
-        ILuaEvent luaEvent = Activator.CreateInstance(eventType) as ILuaEvent;
-        if (luaEvent == null)
-        {
-            // TODO: Log
-            return;
-        }
-
-        BindEvent(luaEvent);
-
-        if (registeredEvents.Any(x => x.Name == luaEvent.Name))
-        {
-            Logger.LogWarning($"Skipped event '{eventType.FullName}' (already exists)");
-        }
-        else
-        {
-            registeredEvents.Add(luaEvent);
-            Logger.LogInfo($"Registered event '{eventType.FullName}'.");
-        }
+        ILuaEvent luaEvent = Activator.CreateInstance(eventType) as ILuaEvent
+                             ?? throw new InvalidOperationException($"Could not create event '{eventType.FullName}'");
+        RegisterEvent(luaEvent);
     }
 
     private void BindEvent(ILuaEvent luaEvent)
@@ -241,13 +227,33 @@ public class Zua
 
     private void RegisterAllEventsInCurrentAssembly()
     {
-        IEnumerable<Type> eventTypes = typeof(Zua).Assembly.GetTypes()
-            .Where(t => typeof(ILuaEvent).IsAssignableFrom(t) && !t.IsAbstract);
-
-        foreach (Type type in eventTypes)
+        foreach (LuaApiDescriptor<ILuaEvent> descriptor in LuaApiDescriptorCache.Events)
         {
-            RegisterEvent(type);
+            try
+            {
+                RegisterEvent(descriptor.Create());
+            }
+            catch (Exception exception)
+            {
+                Logger.LogError($"Failed to register Lua event '{descriptor.Type.FullName}': {exception}");
+            }
         }
+    }
+
+    private void RegisterEvent(ILuaEvent luaEvent)
+    {
+        if (luaEvent == null)
+            throw new ArgumentNullException(nameof(luaEvent));
+
+        BindEvent(luaEvent);
+        if (registeredEvents.Any(existing => existing.Name == luaEvent.Name))
+        {
+            Logger.LogWarning($"Skipped event '{luaEvent.GetType().FullName}' (already exists)");
+            return;
+        }
+
+        registeredEvents.Add(luaEvent);
+        Logger.LogInfo($"Registered event '{luaEvent.GetType().FullName}'.");
     }
 
     private void Unsubscribe()
