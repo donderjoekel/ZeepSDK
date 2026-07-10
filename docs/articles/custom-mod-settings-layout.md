@@ -55,6 +55,9 @@ The build context gives your provider access to the plugin being drawn and its c
 | `Plugin` | The `PluginInfo` for the mod being rendered |
 | `EntriesBySection` | Config entries grouped by BepInEx section name |
 | `CreateDefaultDrawers()` | Builds the default drawer sequence, including any labels and per-entry callbacks you registered |
+| `CreateSectionDrawers(section)` | Builds drawers for a single BepInEx section |
+| `CreateFlatSectionDrawers(excludeTabbedSections)` | Builds flat section drawers, optionally omitting sections assigned to configured tabs |
+| `CreateTabbedSectionsDrawer(configure)` | Builds a tabbed drawer from a `ModSettingsTabsBuilder` callback |
 
 `CreateDefaultDrawers()` automatically includes:
 
@@ -95,6 +98,58 @@ yield return new ZeepSettingsSeparatorDrawer();
 ```
 
 The default layout inserts a separator after every visible entry.
+
+### `ZeepSettingsTabbedSectionsDrawer`
+
+Draws grouped settings content in a tabbed layout. Usually created via `ConfigureModSettingsTabs` or `CreateTabbedSectionsDrawer` rather than constructed directly.
+
+## Tabbed Layouts
+
+### Declarative Tabs
+
+Use `ConfigureModSettingsTabs` when you only need to group sections into tabs:
+
+```csharp
+SettingsApi.ConfigureModSettingsTabs(this, tabs =>
+{
+    tabs.Tab("Gameplay", "General", "Combat");
+    tabs.Tab("Audio", "Sound");
+});
+```
+
+Sections not assigned to any tab render flat below the tab bar. Each tab label is author-provided; merged sections still show their normal headers inside the tab.
+
+Add individual entries or custom drawers to a tab:
+
+```csharp
+tabs.Tab("Tools")
+    .Entry(_rebuildCache)
+    .Drawer(new HelpTextDrawer("Rebuilds on next load."))
+    .Drawer(new ZeepSettingsSeparatorDrawer());
+```
+
+Call `ClearModSettingsTabs` to restore the default flat layout.
+
+### Tabs in a Custom Provider
+
+Compose tabbed and flat content inside `RegisterModSettingsDrawers`:
+
+```csharp
+SettingsApi.RegisterModSettingsDrawers(this, context =>
+{
+    yield return context.CreateTabbedSectionsDrawer(tabs =>
+    {
+        tabs.Tab("Gameplay", "General", "Combat");
+        tabs.Tab("Audio", "Sound");
+        tabs.Tab("About").Drawer(new HelpTextDrawer("Adjust these settings in the main menu."));
+    });
+
+    foreach (var drawer in context.CreateFlatSectionDrawers(excludeTabbedSections: true))
+        yield return drawer;
+});
+```
+
+`CreateDefaultDrawers()` also honors tab configuration registered via `ConfigureModSettingsTabs`.
 
 ## Composing Layouts
 
@@ -280,6 +335,7 @@ Start with the default layout and add only what you need:
 - Custom labels → `SetConfigEntryLabel`
 - One special entry → `SetConfigEntryDrawer`
 - Shared custom type → `RegisterConfigEntryTypeDrawer`
+- Tabbed section grouping → `ConfigureModSettingsTabs`
 - Full layout control → `RegisterModSettingsDrawers`
 
 ### Use `CreateDefaultDrawers()` When Possible
@@ -299,6 +355,7 @@ Register your layout provider once during plugin initialization. The drawer list
 - Register a layout provider with `RegisterModSettingsDrawers`
 - Return `IEnumerable<IZeepSettingsDrawer>` from your provider callback
 - Use `ModSettingsDrawerBuildContext.CreateDefaultDrawers()` to compose with the default layout
+- Group sections into tabs with `ConfigureModSettingsTabs` or `CreateTabbedSectionsDrawer`
 - Use `ZeepSettingsHeaderDrawer`, `ZeepSettingsEntryDrawer`, and `ZeepSettingsSeparatorDrawer` to build layouts manually
 - Implement `IZeepSettingsDrawer` for fully custom content
 - Use `ZeepSettingsDrawContext.OpenKeyCodePopup` for KeyCode editing in custom UI
