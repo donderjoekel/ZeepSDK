@@ -170,6 +170,35 @@ When the default layout builds a row for a config entry, ZeepSDK resolves the dr
 
 Per-entry customization always takes priority over type-based customization.
 
+### Tabbed Sections
+
+Use `ConfigureModSettingsTabs` to group BepInEx sections into tabs without writing a custom layout provider. Tab labels are author-provided; section headers inside a tab are unchanged.
+
+```csharp
+SettingsApi.ConfigureModSettingsTabs(this, tabs =>
+{
+    tabs.Tab("Gameplay", "General", "Combat");
+    tabs.Tab("Audio", "Sound");
+});
+```
+
+Sections not assigned to any tab render as normal flat sections below the tab bar. Call `ClearModSettingsTabs` to restore the default flat layout.
+
+You can also add individual config entries or custom drawers to a tab:
+
+```csharp
+SettingsApi.ConfigureModSettingsTabs(this, tabs =>
+{
+    tabs.Tab("Gameplay", "General", "Combat");
+
+    tabs.Tab("Tools")
+        .Entry(_rebuildCache)
+        .Drawer(new HelpTextDrawer("Rebuilds on next load."));
+});
+```
+
+For full layout control with tabs, see **[Custom Mod Settings Layout](custom-mod-settings-layout.md)**.
+
 ## Basic Plugin Example
 
 ```csharp
@@ -219,3 +248,4 @@ If you need to reorder sections, insert custom content between entries, or repla
 - Customize individual entries with `SetConfigEntryDrawer` and `DrawDefault()`
 - Customize all entries of a type with `RegisterConfigEntryTypeDrawer`
 - Per-entry customization overrides type-based customization
+- Group sections into tabs with `ConfigureModSettingsTabs`
