@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Linq;
 using BepInEx.Logging;
+using UnityEngine;
 using ZeepkistClient;
 using ZeepSDK.Chat;
 using ZeepSDK.Utilities;
@@ -9,7 +9,9 @@ namespace ZeepSDK.ChatCommands;
 
 internal class RemoteChatMessageHandler : MonoBehaviourWithLogging
 {
+    private const int MaximumMessageLength = 1024;
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger<RemoteChatMessageHandler>();
+    private readonly RemoteCommandRateLimiter rateLimiter = new();
 
     private void Start()
     {
@@ -34,6 +36,9 @@ internal class RemoteChatMessageHandler : MonoBehaviourWithLogging
                 return;
             }
 
+            if (message.Length > MaximumMessageLength)
+                return;
+
             message = message
                 .Replace("<noparse>", string.Empty)
                 .Replace("</noparse>", string.Empty)
@@ -44,7 +49,15 @@ internal class RemoteChatMessageHandler : MonoBehaviourWithLogging
 
             foreach (IRemoteChatCommand remoteChatCommand in ChatCommandRegistry.RemoteChatCommands)
             {
+                if (remoteChatCommand == null ||
+                    !ChatCommandUtilities.MatchesCommand(message, remoteChatCommand))
+                    continue;
+
+                if (!rateLimiter.TryConsume(playerId, Time.realtimeSinceStartup))
+                    return;
+
                 ProcessRemoteChatCommand(remoteChatCommand, playerId, message);
+                return;
             }
         }
         catch (Exception e)
@@ -55,12 +68,6 @@ internal class RemoteChatMessageHandler : MonoBehaviourWithLogging
 
     private static void ProcessRemoteChatCommand(IRemoteChatCommand remoteChatCommand, ulong playerId, string message)
     {
-        if (remoteChatCommand == null)
-            return;
-
-        if (!ChatCommandUtilities.MatchesCommand(message, remoteChatCommand))
-            return;
-
         string arguments = ChatCommandUtilities.GetArguments(message, remoteChatCommand);
 
         try
