@@ -101,9 +101,10 @@ using JetBrains.Annotations;
 namespace ZeepSDK.Scripting.Events;
 
 [UsedImplicitly]
-internal class {className} : ZeepSDK.Scripting.ZUA.ILuaEvent
+internal class {className} : ZeepSDK.Scripting.ZUA.ILuaEvent, ZeepSDK.Scripting.ZUA.IZuaBoundEvent
 {{
     private readonly {delegateFullName} @delegate;
+    private ZeepSDK.Scripting.ZUA.Zua zua;
     
     public string Name => ""{symbol.ContainingType.Name}_On{eventName}"";
 
@@ -111,9 +112,14 @@ internal class {className} : ZeepSDK.Scripting.ZUA.ILuaEvent
     {{
         @delegate = ({delegateParameters}) =>
         {{
-            ScriptingApi.CallFunction({callFunctionParameters});
+            zua?.CallFunction({callFunctionParameters});
         }};
         {typeRegistrations}
+    }}
+
+    public void Bind(ZeepSDK.Scripting.ZUA.Zua owner)
+    {{
+        zua = owner;
     }}
     
     public void Subscribe()

@@ -128,6 +128,7 @@ public class Zua
         where TEvent : ILuaEvent, new()
     {
         TEvent luaEvent = new TEvent();
+        BindEvent(luaEvent);
         if (registeredEvents.Any(e => e.Name == luaEvent.Name)) return;
         registeredEvents.Add(luaEvent);
     }
@@ -194,6 +195,8 @@ public class Zua
             return;
         }
 
+        BindEvent(luaEvent);
+
         if (registeredEvents.Any(x => x.Name == luaEvent.Name))
         {
             Logger.LogWarning($"Skipped event '{eventType.FullName}' (already exists)");
@@ -203,6 +206,12 @@ public class Zua
             registeredEvents.Add(luaEvent);
             Logger.LogInfo($"Registered event '{eventType.FullName}'.");
         }
+    }
+
+    private void BindEvent(ILuaEvent luaEvent)
+    {
+        if (luaEvent is IZuaBoundEvent boundEvent)
+            boundEvent.Bind(this);
     }
 
     private void RegisterAllEventsInCurrentAssembly()
