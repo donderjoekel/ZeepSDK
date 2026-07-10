@@ -23,7 +23,14 @@
         <Compile Include="..\ZeepSDK\ChatCommands\ChatCommandUtilities.cs" Link="Source\ChatCommandUtilities.cs" />
         <Compile Include="..\ZeepSDK\ChatCommands\ChatHelpFormatter.cs" Link="Source\ChatHelpFormatter.cs" />
         <Compile Include="..\ZeepSDK\ChatCommands\IChatCommand.cs" Link="Source\IChatCommand.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\ILocalChatCommand.cs" Link="Source\ILocalChatCommand.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\ILocalChatCommandAlias.cs" Link="Source\ILocalChatCommandAlias.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\IMixedChatCommand.cs" Link="Source\IMixedChatCommand.cs" />
         <Compile Include="..\ZeepSDK\ChatCommands\IRemoteChatCommand.cs" Link="Source\IRemoteChatCommand.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\LocalChatCommandAlias.cs" Link="Source\LocalChatCommandAlias.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\ChatCommandRegistry.cs" Link="Source\ChatCommandRegistry.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\Delegates.cs" Link="Source\ChatCommandDelegates.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\RemoteChatCommandWrapper.cs" Link="Source\RemoteChatCommandWrapper.cs" />
         <Compile Include="..\ZeepSDK\ChatCommands\RemoteCommandRateLimiter.cs" Link="Source\RemoteCommandRateLimiter.cs" />
         <Compile Include="..\ZeepSDK\Communication\ComReceiver.cs" Link="Source\ComReceiver.cs" />
         <Compile Include="..\ZeepSDK\Communication\IComReceiver.cs" Link="Source\IComReceiver.cs" />

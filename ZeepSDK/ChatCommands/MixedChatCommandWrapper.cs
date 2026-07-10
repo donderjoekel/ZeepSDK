@@ -20,7 +20,7 @@ internal class MixedChatCommandWrapper : MixedChatCommandBase
         Prefix = prefix;
         Command = command;
         Description = description;
-        this.callback = callback;
+        this.callback = callback ?? throw new System.ArgumentNullException(nameof(callback));
     }
 
     protected override void Handle(bool isLocal, ulong playerId, string arguments)
