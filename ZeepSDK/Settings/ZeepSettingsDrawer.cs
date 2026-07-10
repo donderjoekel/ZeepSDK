@@ -132,7 +132,8 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
     private void DrawSelectedPluginWithPadding(ImGui gui)
     {
         var padding = gui.Style.Window.ContentPadding;
-        var contentWidth = Mathf.Max(0, gui.GetLayoutWidth() - padding.Left - padding.Right);
+        var rightPadding = padding.Right + gui.Style.Layout.Spacing;
+        var contentWidth = Mathf.Max(0, gui.GetLayoutWidth() - padding.Left - rightPadding);
 
         using (gui.Horizontal(gui.GetLayoutWidth()))
         {
@@ -149,7 +150,7 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
                     gui.AddSpacing(padding.Bottom);
             }
 
-            gui.AddSpacing(padding.Right);
+            gui.AddSpacing(rightPadding);
         }
     }
 
