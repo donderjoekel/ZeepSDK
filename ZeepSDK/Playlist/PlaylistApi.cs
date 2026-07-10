@@ -15,6 +15,8 @@ namespace ZeepSDK.Playlist;
 [PublicAPI]
 public class PlaylistApi
 {
+    private const int MaximumPlaylistFiles = 1000;
+    private const long MaximumPlaylistBytes = 2 * 1024 * 1024;
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(PlaylistApi));
 
     /// <summary>
@@ -28,13 +30,17 @@ public class PlaylistApi
             return Array.Empty<PlaylistSaveJSON>();
 
         List<PlaylistSaveJSON> playlists = new();
-        string[] paths = Directory.GetFiles(playlistsPath, "*.zeeplist");
-
-        foreach (string path in paths)
+        foreach (string path in Directory.EnumerateFiles(playlistsPath, "*.zeeplist").Take(MaximumPlaylistFiles))
         {
             string contents;
             try
             {
+                if (new FileInfo(path).Length > MaximumPlaylistBytes)
+                {
+                    logger.LogWarning($"Skipping oversized playlist at {path}");
+                    continue;
+                }
+
                 contents = File.ReadAllText(path);
             }
             catch (Exception e)
@@ -45,8 +51,11 @@ public class PlaylistApi
 
             try
             {
-                PlaylistSaveJSON playlistSaveJson = JsonConvert.DeserializeObject<PlaylistSaveJSON>(contents);
-                playlists.Add(playlistSaveJson);
+                PlaylistSaveJSON playlistSaveJson = JsonConvert.DeserializeObject<PlaylistSaveJSON>(
+                    contents,
+                    new JsonSerializerSettings { MaxDepth = 64 });
+                if (playlistSaveJson != null)
+                    playlists.Add(playlistSaveJson);
             }
             catch (Exception e)
             {
