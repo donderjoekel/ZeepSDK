@@ -9,11 +9,6 @@ namespace ZeepSDK.Settings.Drawers;
 /// </summary>
 public sealed class ZeepSettingsDrawContext
 {
-    /// <summary>
-    /// Available height for tabbed settings content. Set by the settings window before drawing tabbed layouts.
-    /// </summary>
-    public float AvailableContentHeight { get; internal set; }
-
     internal Action<ConfigEntry<KeyCode>> OpenKeyCodePopupInternal { get; init; }
 
     /// <summary>
