@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Text.RegularExpressions;
 using BepInEx.Logging;
 using ZeepSDK.Numerics;
 using ZeepSDK.Utilities;
@@ -153,16 +154,31 @@ internal static class CsvZeepLevelParser
                     ParseDecimalOrDefault(splits[1]),
                     ParseDecimalOrDefault(splits[2]),
                     ParseDecimalOrDefault(splits[3]));
+                block.PositionSort = new CsvSortVector(
+                    ParseDoubleOrDefault(splits[1]),
+                    ParseDoubleOrDefault(splits[2]),
+                    ParseDoubleOrDefault(splits[3]));
+                block.RawPosition = FormatVectorParts(splits, 1);
 
                 block.Euler = new Vector3(
                     ParseDecimalOrDefault(splits[4]),
                     ParseDecimalOrDefault(splits[5]),
                     ParseDecimalOrDefault(splits[6]));
+                block.EulerSort = new CsvSortVector(
+                    ParseDoubleOrDefault(splits[4]),
+                    ParseDoubleOrDefault(splits[5]),
+                    ParseDoubleOrDefault(splits[6]));
+                block.RawEuler = FormatVectorParts(splits, 4);
 
                 block.Scale = new Vector3(
                     ParseDecimalOrDefault(splits[7]),
                     ParseDecimalOrDefault(splits[8]),
                     ParseDecimalOrDefault(splits[9]));
+                block.ScaleSort = new CsvSortVector(
+                    ParseDoubleOrDefault(splits[7]),
+                    ParseDoubleOrDefault(splits[8]),
+                    ParseDoubleOrDefault(splits[9]));
+                block.RawScale = FormatVectorParts(splits, 7);
 
                 // Hackfix for the note block
                 if (block.Id == 2279)
@@ -175,7 +191,7 @@ internal static class CsvZeepLevelParser
                     splits[10..27].ToList().ForEach(x => block.Paints.Add(ParseIntOrDefault(x)));
                 }
 
-                splits[27..].ToList().ForEach(x => block.Options.Add(ParseFloatOrDefault(x)));
+                splits[27..].ToList().ForEach(x => block.Options.Add(ParseOptionFloatOrDefault(x)));
 
                 blocks.Add(block);
             }
@@ -224,6 +240,22 @@ internal static class CsvZeepLevelParser
         return float.IsNaN(parsed) || float.IsInfinity(parsed) ? 0f : parsed;
     }
 
+    private static float ParseOptionFloatOrDefault(string value)
+    {
+        if (!double.TryParse(value, NumberStyles.Any, _culture, out double parsed))
+            return 0f;
+
+        return double.IsNaN(parsed) || double.IsInfinity(parsed) ? 0f : (float)parsed;
+    }
+
+    private static double ParseDoubleOrDefault(string value)
+    {
+        if (!double.TryParse(value, NumberStyles.Any, _culture, out double parsed))
+            return 0d;
+
+        return double.IsNaN(parsed) || double.IsInfinity(parsed) ? 0d : parsed;
+    }
+
     private static bool IsFiniteFloat(string value)
     {
         return float.TryParse(value, NumberStyles.Any, _culture, out float parsed)
@@ -234,5 +266,56 @@ internal static class CsvZeepLevelParser
     private static int ParseIntOrDefault(string value)
     {
         return (int)ParseDecimalOrDefault(value);
+    }
+
+    private static string[] FormatVectorParts(string[] values, int offset)
+    {
+        return new[]
+        {
+            FormatDecimal(values[offset]),
+            FormatDecimal(values[offset + 1]),
+            FormatDecimal(values[offset + 2])
+        };
+    }
+
+    private static string FormatDecimal(string value)
+    {
+        Match match = Regex.Match(
+            value.Trim(),
+            @"^([+-]?)(\d+)(?:\.(\d*))?(?:[eE]([+-]?\d+))?$",
+            RegexOptions.CultureInvariant);
+        if (!match.Success)
+            return "0";
+
+        string sign = match.Groups[1].Value == "-" ? "-" : string.Empty;
+        string integer = match.Groups[2].Value;
+        string fraction = match.Groups[3].Success ? match.Groups[3].Value : string.Empty;
+        int exponent = match.Groups[4].Success ? int.Parse(match.Groups[4].Value, _culture) : 0;
+        string digits = integer + fraction;
+        int decimalIndex = integer.Length + exponent;
+
+        string expanded;
+        if (decimalIndex <= 0)
+        {
+            expanded = "0." + new string('0', -decimalIndex) + digits;
+        }
+        else if (decimalIndex >= digits.Length)
+        {
+            expanded = digits + new string('0', decimalIndex - digits.Length);
+        }
+        else
+        {
+            expanded = digits[..decimalIndex] + "." + digits[decimalIndex..];
+        }
+
+        string[] parts = expanded.Split('.');
+        string expandedInteger = parts[0].TrimStart('0');
+        if (expandedInteger.Length == 0)
+            expandedInteger = "0";
+
+        string normalized = parts.Length == 1 ? expandedInteger : expandedInteger + "." + parts[1];
+        return Regex.IsMatch(normalized, @"^0(?:\.0*)?$", RegexOptions.CultureInvariant)
+            ? normalized
+            : sign + normalized;
     }
 }

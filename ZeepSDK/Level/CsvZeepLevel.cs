@@ -13,7 +13,7 @@ internal class CsvZeepLevel
 {
     private const int PresentBlockID = 2264;
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(CsvZeepLevel));
-    private static readonly Vector3Comparer _vector3Comparer = new();
+    private static readonly CsvSortVectorComparer _csvSortVectorComparer = new();
     private static readonly IntComparer _intSequenceComparer = new();
     private static readonly FloatComparer _floatSequenceComparer = new();
 
@@ -80,9 +80,9 @@ internal class CsvZeepLevel
         List<CsvZeepBlock> orderedBlocks = zeepLevel.Blocks
             .Where(x => x.Id != PresentBlockID)
             .OrderBy(x => x.Id)
-            .ThenBy(x => x.Position, _vector3Comparer)
-            .ThenBy(x => x.Euler, _vector3Comparer)
-            .ThenBy(x => x.Scale, _vector3Comparer)
+            .ThenBy(x => x.PositionSort, _csvSortVectorComparer)
+            .ThenBy(x => x.EulerSort, _csvSortVectorComparer)
+            .ThenBy(x => x.ScaleSort, _csvSortVectorComparer)
             .ThenBy(x => x.Paints, _intSequenceComparer)
             .ThenBy(x => x.Options, _floatSequenceComparer)
             .ToList();

@@ -111,7 +111,7 @@ internal static class LevelHashV2Calculator
         using StringReader stringReader = new(NormalizeNonFiniteJsonNumbers(content));
         using JsonTextReader jsonReader = new(stringReader)
         {
-            FloatParseHandling = FloatParseHandling.Decimal
+            FloatParseHandling = FloatParseHandling.Double
         };
         return JObject.Load(jsonReader);
     }
@@ -190,25 +190,67 @@ internal static class LevelHashV2Calculator
 
     private static string CanonicalJsonNumber(JValue value)
     {
-        decimal number = Convert.ToDecimal(value.Value, CultureInfo.InvariantCulture);
-        if (number == decimal.Truncate(number))
-            return number.ToString("0", CultureInfo.InvariantCulture);
+        double number = Convert.ToDouble(value.Value, CultureInfo.InvariantCulture);
+        if (number == 0)
+            return "0";
 
-        decimal absolute = Math.Abs(number);
-        if (absolute != 0 && absolute < 0.000001m)
+        string shortest = ToShortestRoundTrip(number);
+        double absolute = Math.Abs(number);
+        if (absolute >= 0.000001d && absolute < 1e21d)
+            return ToFixedNotation(shortest);
+
+        return NormalizeExponent(shortest);
+    }
+
+    private static string ToShortestRoundTrip(double number)
+    {
+        for (int precision = 15; precision <= 17; precision++)
         {
-            string fixedText = number.ToString("0.#############################", CultureInfo.InvariantCulture);
-            bool negative = fixedText.StartsWith("-");
-            string digits = fixedText.TrimStart('-').Replace("0.", string.Empty);
-            int leadingZeroes = digits.TakeWhile(character => character == '0').Count();
-            string significant = digits[leadingZeroes..].TrimEnd('0');
-            string mantissa = significant.Length == 1
-                ? significant
-                : $"{significant[0]}.{significant[1..]}";
-            return $"{(negative ? "-" : string.Empty)}{mantissa}e-{leadingZeroes + 1}";
+            string candidate = number.ToString($"G{precision}", CultureInfo.InvariantCulture);
+            if (double.TryParse(
+                    candidate,
+                    NumberStyles.Float,
+                    CultureInfo.InvariantCulture,
+                    out double parsed)
+                && parsed.Equals(number))
+                return candidate;
         }
 
-        return number.ToString("0.#############################", CultureInfo.InvariantCulture);
+        return number.ToString("R", CultureInfo.InvariantCulture);
+    }
+
+    private static string ToFixedNotation(string text)
+    {
+        int exponentIndex = text.IndexOfAny(new[] { 'E', 'e' });
+        if (exponentIndex < 0)
+            return text;
+
+        bool negative = text[0] == '-';
+        string mantissa = text[..exponentIndex].TrimStart('-');
+        int exponent = int.Parse(text[(exponentIndex + 1)..], CultureInfo.InvariantCulture);
+        int dotIndex = mantissa.IndexOf('.');
+        int fractionalDigits = dotIndex < 0 ? 0 : mantissa.Length - dotIndex - 1;
+        string digits = mantissa.Replace(".", string.Empty);
+        int point = digits.Length - fractionalDigits + exponent;
+        string result = point <= 0
+            ? $"0.{new string('0', -point)}{digits}"
+            : point >= digits.Length
+                ? $"{digits}{new string('0', point - digits.Length)}"
+                : $"{digits[..point]}.{digits[point..]}";
+        if (result.Contains("."))
+            result = result.TrimEnd('0').TrimEnd('.');
+        return negative ? $"-{result}" : result;
+    }
+
+    private static string NormalizeExponent(string text)
+    {
+        int exponentIndex = text.IndexOfAny(new[] { 'E', 'e' });
+        if (exponentIndex < 0)
+            return text;
+
+        string mantissa = text[..exponentIndex].ToLowerInvariant();
+        int exponent = int.Parse(text[(exponentIndex + 1)..], CultureInfo.InvariantCulture);
+        return $"{mantissa}e{(exponent >= 0 ? "+" : string.Empty)}{exponent.ToString(CultureInfo.InvariantCulture)}";
     }
 
     private static string ToUpperHex(byte[] hash)
