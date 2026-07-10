@@ -1,6 +1,6 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
 using BepInEx;
 using BepInEx.Logging;
@@ -18,7 +18,12 @@ namespace ZeepSDK.Versioning;
 
 internal class VersionChecker
 {
+    private const int MaximumResponseBytes = 2 * 1024 * 1024;
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(VersionChecker));
+    private static readonly HttpClient httpClient = new()
+    {
+        Timeout = TimeSpan.FromSeconds(15)
+    };
 
     public static async UniTaskVoid CheckVersions()
     {
@@ -92,17 +97,24 @@ internal class VersionChecker
 
         if (result.IsFailed)
             return result.ToResult();
+        if (result.Value?.Data == null)
+            return Result.Fail<int>("mod.io returned no mod data");
 
-        string[] directories = Directory.GetDirectories(Paths.PluginPath, "*", SearchOption.TopDirectoryOnly);
+        Dictionary<int, string> directoriesByModId = new();
+        foreach (string directory in Directory.EnumerateDirectories(Paths.PluginPath, "*", SearchOption.TopDirectoryOnly))
+        {
+            string name = Path.GetFileName(directory);
+            int separator = name.IndexOf('_');
+            if (separator > 0 && int.TryParse(name[..separator], out int modId))
+                directoriesByModId.TryAdd(modId, directory);
+        }
 
         int outdatedMods = 0;
 
         foreach (ModResponseData modResponseData in result.Value.Data)
         {
-            string existingModPath = directories
-                .FirstOrDefault(x => Path.GetFileNameWithoutExtension(x)!.StartsWith(modResponseData.Id + "_"));
-
-            if (string.IsNullOrEmpty(existingModPath))
+            if (modResponseData?.ModFile == null ||
+                !directoriesByModId.TryGetValue(modResponseData.Id, out string existingModPath))
                 continue;
 
             string directoryName = Path.GetFileNameWithoutExtension(existingModPath);
@@ -120,37 +132,28 @@ internal class VersionChecker
 
     private static async UniTask<Result<TData>> GetData<TData>(string url)
     {
-        HttpClient httpClient = new();
-
-        HttpResponseMessage result = await httpClient.GetAsync(url);
-
         try
         {
-            result.EnsureSuccessStatusCode();
+            using HttpResponseMessage response = await httpClient.GetAsync(
+                url,
+                HttpCompletionOption.ResponseHeadersRead);
+            response.EnsureSuccessStatusCode();
+
+            string json = await BoundedHttpContent.ReadAsUtf8StringAsync(
+                response.Content,
+                MaximumResponseBytes);
+            TData data = JsonConvert.DeserializeObject<TData>(json, new JsonSerializerSettings
+            {
+                MaxDepth = 64
+            });
+
+            return data == null
+                ? Result.Fail<TData>("HTTP response contained no JSON value")
+                : data;
         }
         catch (Exception e)
         {
-            return Result.Fail(new ExceptionalError(e));
-        }
-
-        string json;
-
-        try
-        {
-            json = await result.Content.ReadAsStringAsync();
-        }
-        catch (Exception e)
-        {
-            return Result.Fail(new ExceptionalError(e));
-        }
-
-        try
-        {
-            return JsonConvert.DeserializeObject<TData>(json);
-        }
-        catch (Exception e)
-        {
-            return Result.Fail(new ExceptionalError(e));
+            return Result.Fail<TData>(new ExceptionalError(e));
         }
     }
 }
