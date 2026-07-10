@@ -2,13 +2,17 @@ using System;
 using System.IO;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ZeepSDK.Versioning;
 
 internal static class BoundedHttpContent
 {
-    public static async Task<string> ReadAsUtf8StringAsync(HttpContent content, int maximumBytes)
+    public static async Task<string> ReadAsUtf8StringAsync(
+        HttpContent content,
+        int maximumBytes,
+        CancellationToken cancellationToken = default)
     {
         if (content == null)
             throw new ArgumentNullException(nameof(content));
@@ -24,7 +28,7 @@ internal static class BoundedHttpContent
 
         while (true)
         {
-            int bytesRead = await source.ReadAsync(buffer, 0, buffer.Length);
+            int bytesRead = await source.ReadAsync(buffer, 0, buffer.Length, cancellationToken);
             if (bytesRead == 0)
                 break;
 

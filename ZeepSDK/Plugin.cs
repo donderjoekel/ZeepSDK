@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using BepInEx;
 using BepInEx.Bootstrap;
 using BepInEx.Configuration;
@@ -35,6 +36,7 @@ namespace ZeepSDK
         public static IModStorage Storage { get; private set; }
 
         private Harmony harmony;
+        private CancellationTokenSource shutdownCancellation;
 
         public ConfigEntry<KeyCode> ToggleMenuBarKey { get; private set; }
         public ConfigEntry<bool> ConsentToCrashlytics { get; private set; }
@@ -43,6 +45,7 @@ namespace ZeepSDK
         private void Awake()
         {
             Instance = this;
+            shutdownCancellation = new CancellationTokenSource();
 
             harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
             harmony.PatchAll();
@@ -81,11 +84,15 @@ namespace ZeepSDK
             // Plugin startup logic
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
 
-            VersionChecker.CheckVersions().Forget();
+            VersionChecker.CheckVersions(shutdownCancellation.Token).Forget(exception =>
+                Logger.LogError($"Version check failed: {exception}"));
         }
 
         private void OnDestroy()
         {
+            shutdownCancellation?.Cancel();
+            shutdownCancellation?.Dispose();
+            shutdownCancellation = null;
             CrashlyticsApi.Shutdown();
             harmony?.UnpatchSelf();
             harmony = null;
