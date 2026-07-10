@@ -247,11 +247,6 @@ public class Zua
         foreach (Type type in eventTypes)
         {
             RegisterEvent(type);
-            // ILuaEvent luaEvent = Activator.CreateInstance(type) as ILuaEvent;
-            // if (luaEvent != null && registeredEvents.All(e => e.Name != luaEvent.Name))
-            // {
-            //     registeredEvents.Add(luaEvent);
-            // }
         }
     }
 
