@@ -14,6 +14,7 @@ public class FunctionGenerator : IIncrementalGenerator
 
 namespace ZeepSDK.Scripting.Attributes
 {
+    /// <summary>Marks a method for Lua binding generation.</summary>
     [System.AttributeUsage(System.AttributeTargets.Method)]
     public class GenerateFunctionAttribute : System.Attribute
     {

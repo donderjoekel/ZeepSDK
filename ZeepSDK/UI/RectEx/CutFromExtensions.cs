@@ -3,10 +3,12 @@ using Imui.Core;
 
 namespace ZeepSDK.UI.RectEx;
 
+/// <summary>Provides helpers that cut fixed-size regions from rectangles.</summary>
 public static class CutFromExtensions
 {
     private const float SPACE = 2;
 
+    /// <summary>Cuts a fixed-width region from the right edge.</summary>
     public static ImRect[] CutFromRight(this ImRect rect, float width, float space = SPACE)
     {
         ImRect second = RectExUtils.MinMaxRect(
@@ -25,6 +27,7 @@ public static class CutFromExtensions
         return [first, second];
     }
 
+    /// <summary>Cuts a fixed-height region from the bottom edge.</summary>
     public static ImRect[] CutFromBottom(this ImRect rect, float height, float space = SPACE)
     {
         ImRect second = RectExUtils.MinMaxRect(
@@ -43,6 +46,7 @@ public static class CutFromExtensions
         return [first, second];
     }
 
+    /// <summary>Cuts a fixed-width region from the left edge.</summary>
     public static ImRect[] CutFromLeft(this ImRect rect, float width, float space = SPACE)
     {
         ImRect first = RectExUtils.MinMaxRect(
@@ -61,6 +65,7 @@ public static class CutFromExtensions
         return [first, second];
     }
 
+    /// <summary>Cuts a fixed-height region from the top edge.</summary>
     public static ImRect[] CutFromTop(this ImRect rect, float height, float space = SPACE)
     {
         ImRect first = RectExUtils.MinMaxRect(

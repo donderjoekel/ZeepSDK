@@ -14,6 +14,7 @@ public class EventGenerator : IIncrementalGenerator
 
 namespace ZeepSDK.Scripting.Attributes
 {
+    /// <summary>Marks an event for Lua binding generation.</summary>
     [System.AttributeUsage(System.AttributeTargets.Event)]
     public class GenerateEventAttribute : System.Attribute
     {

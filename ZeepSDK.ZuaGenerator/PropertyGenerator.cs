@@ -15,6 +15,7 @@ public class PropertyGenerator : IIncrementalGenerator
 
 namespace ZeepSDK.Scripting.Attributes
 {
+    /// <summary>Marks a property for Lua binding generation.</summary>
     [System.AttributeUsage(System.AttributeTargets.Property)]
     public class GeneratePropertyAttribute : System.Attribute
     {

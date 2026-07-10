@@ -21,6 +21,9 @@ public static class UIApi
     private static ZeepToolbar _zeepToolbar;
     private static ZeepTooltip _zeepTooltip;
 
+    /// <summary>
+    /// Default title used by file-selection windows.
+    /// </summary>
     public const string FileTitle = "File";
 
     internal static void Initialize(GameObject gameObject)
