@@ -1,7 +1,7 @@
 using System;
 using Imui.Controls;
 using Imui.Core;
-using Imui.Rendering;
+using Imui.Style;
 using UnityEngine;
 using ZeepSDK.Controls;
 using ZeepSDK.UI;
@@ -31,7 +31,7 @@ internal sealed class CrashlyticsConsentDrawer : IZeepGUIDrawer, IDisposable
         try
         {
             gui.BeginPopup();
-            ImRect rect = ImWindow.GetInitialWindowRect(gui, new ImSize(760, 430));
+            ImRect rect = ImWindow.GetInitialWindowRect(gui, new ImSize(820, 460));
 
             gui.Canvas.PushClipRect(rect);
             gui.Canvas.PushRectMask(rect, 0);
@@ -41,24 +41,35 @@ internal sealed class CrashlyticsConsentDrawer : IZeepGUIDrawer, IDisposable
             gui.Layout.Push(ImAxis.Vertical, rect.WithPadding(24));
 
             gui.Text("Crash reporting", new ImTextSettings(36, 0.5f));
+            gui.AddSpacing(8);
+            gui.Text(
+                "Help ZeepSDK and other mod developers fix crashes faster by sharing crash reports. " +
+                "Good reports make bugs much easier to reproduce and make mod developers' lives easier.",
+                new ImTextSettings(18, 0f, 0f, true));
             gui.AddSpacing(12);
             gui.Text(
-                "ZeepSDK crash reporting is disabled by default. If enabled, reports sent to Bugsnag include " +
-                "your Steam identity, installed mod names and versions, and exception details.",
-                new ImTextSettings(18, 0.5f, 0.5f, true));
-            gui.AddSpacing(18);
-            gui.Text(
-                "Choose Accept to enable crash reporting or Decline to keep it disabled. " +
-                "You can change this later in Zeep Settings.",
-                new ImTextSettings(18, 0.5f, 0.5f, true));
+                "Reports are sent to Bugsnag only after you accept. They include your Steam identity, " +
+                "installed mod names and versions, and exception details. You can change this choice later " +
+                "in Zeep Settings.",
+                new ImTextSettings(18, 0f, 0f, true));
 
-            gui.AddSpacing(gui.GetLayoutHeight() - gui.GetRowsHeightWithSpacing(2));
+            const float buttonWidth = 220;
+            const float buttonHeight = 52;
+            const float buttonSpacing = 12;
+            gui.AddSpacing(Mathf.Max(12, gui.GetLayoutHeight() - buttonHeight));
 
-            if (gui.Button("Accept (default)"))
-                Decide(true);
+            using (gui.Horizontal(gui.GetLayoutWidth(), buttonHeight))
+            {
+                gui.AddSpacing(Mathf.Max(0, gui.GetLayoutWidth() - buttonWidth * 2 - buttonSpacing));
 
-            if (_active && gui.Button("Decline"))
-                Decide(false);
+                if (gui.Button("Decline", new ImSize(buttonWidth, buttonHeight)))
+                    Decide(false);
+
+                gui.AddSpacing(buttonSpacing);
+
+                if (_active && DrawAcceptButton(gui, buttonWidth, buttonHeight))
+                    Decide(true);
+            }
 
             if (_acceptDefaultArmed)
                 TryAcceptDefault(gui);
@@ -73,6 +84,28 @@ internal sealed class CrashlyticsConsentDrawer : IZeepGUIDrawer, IDisposable
         finally
         {
             gui.PopId();
+        }
+    }
+
+    private static bool DrawAcceptButton(ImGui gui, float width, float height)
+    {
+        ImStyleButton original = gui.Style.Button;
+        ImStyleButton highlighted = gui.Style.AccentButton;
+        highlighted.Normal.BackColor = new Color32(38, 150, 76, 255);
+        highlighted.Normal.FrontColor = new Color32(255, 255, 255, 255);
+        highlighted.Hovered.BackColor = new Color32(48, 180, 92, 255);
+        highlighted.Hovered.FrontColor = new Color32(255, 255, 255, 255);
+        highlighted.Pressed.BackColor = new Color32(30, 120, 60, 255);
+        highlighted.Pressed.FrontColor = new Color32(255, 255, 255, 255);
+
+        gui.Style.Button = highlighted;
+        try
+        {
+            return gui.Button("Accept", new ImSize(width, height));
+        }
+        finally
+        {
+            gui.Style.Button = original;
         }
     }
 
