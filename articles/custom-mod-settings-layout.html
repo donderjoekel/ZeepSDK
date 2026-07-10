@@ -127,6 +127,18 @@ public class MyMod : BaseUnityPlugin
 <td><code>CreateDefaultDrawers()</code></td>
 <td>Builds the default drawer sequence, including any labels and per-entry callbacks you registered</td>
 </tr>
+<tr>
+<td><code>CreateSectionDrawers(section)</code></td>
+<td>Builds drawers for a single BepInEx section</td>
+</tr>
+<tr>
+<td><code>CreateFlatSectionDrawers(excludeTabbedSections)</code></td>
+<td>Builds flat section drawers, optionally omitting sections assigned to configured tabs</td>
+</tr>
+<tr>
+<td><code>CreateTabbedSectionsDrawer(configure)</code></td>
+<td>Builds a tabbed drawer from a <code>ModSettingsTabsBuilder</code> callback</td>
+</tr>
 </tbody>
 </table>
 <p><code>CreateDefaultDrawers()</code> automatically includes:</p>
@@ -152,6 +164,41 @@ public class MyMod : BaseUnityPlugin
 <pre><code class="lang-csharp">yield return new ZeepSettingsSeparatorDrawer();
 </code></pre>
 <p>The default layout inserts a separator after every visible entry.</p>
+<h3 id="zeepsettingstabbedsectionsdrawer"><code>ZeepSettingsTabbedSectionsDrawer</code></h3>
+<p>Draws grouped settings content in a tabbed layout. Usually created via <code>ConfigureModSettingsTabs</code> or <code>CreateTabbedSectionsDrawer</code> rather than constructed directly.</p>
+<h2 id="tabbed-layouts">Tabbed Layouts</h2>
+<h3 id="declarative-tabs">Declarative Tabs</h3>
+<p>Use <code>ConfigureModSettingsTabs</code> when you only need to group sections into tabs:</p>
+<pre><code class="lang-csharp">SettingsApi.ConfigureModSettingsTabs(this, tabs =&gt;
+{
+    tabs.Tab(&quot;Gameplay&quot;, &quot;General&quot;, &quot;Combat&quot;);
+    tabs.Tab(&quot;Audio&quot;, &quot;Sound&quot;);
+});
+</code></pre>
+<p>Sections not assigned to any tab render flat below the tab bar. Each tab label is author-provided; merged sections still show their normal headers inside the tab.</p>
+<p>Add individual entries or custom drawers to a tab:</p>
+<pre><code class="lang-csharp">tabs.Tab(&quot;Tools&quot;)
+    .Entry(_rebuildCache)
+    .Drawer(new HelpTextDrawer(&quot;Rebuilds on next load.&quot;))
+    .Drawer(new ZeepSettingsSeparatorDrawer());
+</code></pre>
+<p>Call <code>ClearModSettingsTabs</code> to restore the default flat layout.</p>
+<h3 id="tabs-in-a-custom-provider">Tabs in a Custom Provider</h3>
+<p>Compose tabbed and flat content inside <code>RegisterModSettingsDrawers</code>:</p>
+<pre><code class="lang-csharp">SettingsApi.RegisterModSettingsDrawers(this, context =&gt;
+{
+    yield return context.CreateTabbedSectionsDrawer(tabs =&gt;
+    {
+        tabs.Tab(&quot;Gameplay&quot;, &quot;General&quot;, &quot;Combat&quot;);
+        tabs.Tab(&quot;Audio&quot;, &quot;Sound&quot;);
+        tabs.Tab(&quot;About&quot;).Drawer(new HelpTextDrawer(&quot;Adjust these settings in the main menu.&quot;));
+    });
+
+    foreach (var drawer in context.CreateFlatSectionDrawers(excludeTabbedSections: true))
+        yield return drawer;
+});
+</code></pre>
+<p><code>CreateDefaultDrawers()</code> also honors tab configuration registered via <code>ConfigureModSettingsTabs</code>.</p>
 <h2 id="composing-layouts">Composing Layouts</h2>
 <h3 id="default-layout-plus-custom-content">Default Layout Plus Custom Content</h3>
 <p>Add content before or after the default drawers:</p>
@@ -303,6 +350,7 @@ public class HelpTextDrawer : IZeepSettingsDrawer
 <li>Custom labels → <code>SetConfigEntryLabel</code></li>
 <li>One special entry → <code>SetConfigEntryDrawer</code></li>
 <li>Shared custom type → <code>RegisterConfigEntryTypeDrawer</code></li>
+<li>Tabbed section grouping → <code>ConfigureModSettingsTabs</code></li>
 <li>Full layout control → <code>RegisterModSettingsDrawers</code></li>
 </ul>
 <h3 id="use-createdefaultdrawers-when-possible">Use <code>CreateDefaultDrawers()</code> When Possible</h3>
@@ -316,6 +364,7 @@ public class HelpTextDrawer : IZeepSettingsDrawer
 <li>Register a layout provider with <code>RegisterModSettingsDrawers</code></li>
 <li>Return <code>IEnumerable&lt;IZeepSettingsDrawer&gt;</code> from your provider callback</li>
 <li>Use <code>ModSettingsDrawerBuildContext.CreateDefaultDrawers()</code> to compose with the default layout</li>
+<li>Group sections into tabs with <code>ConfigureModSettingsTabs</code> or <code>CreateTabbedSectionsDrawer</code></li>
 <li>Use <code>ZeepSettingsHeaderDrawer</code>, <code>ZeepSettingsEntryDrawer</code>, and <code>ZeepSettingsSeparatorDrawer</code> to build layouts manually</li>
 <li>Implement <code>IZeepSettingsDrawer</code> for fully custom content</li>
 <li>Use <code>ZeepSettingsDrawContext.OpenKeyCodePopup</code> for KeyCode editing in custom UI</li>
@@ -329,7 +378,7 @@ public class HelpTextDrawer : IZeepSettingsDrawer
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.5.1/docs/articles/custom-mod-settings-layout.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.6.0/docs/articles/custom-mod-settings-layout.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

@@ -9945,6 +9945,25 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Settings.Drawers.ZeepSettingsSeparatorDrawer.Draw
   nameWithType: ZeepSettingsSeparatorDrawer.Draw
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer
+  name: ZeepSettingsTabbedSectionsDrawer
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer.html
+  commentId: T:ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer
+  nameWithType: ZeepSettingsTabbedSectionsDrawer
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer.Draw(Imui.Core.ImGui,ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  name: Draw(ImGui, ZeepSettingsDrawContext)
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsTabbedSectionsDrawer_Draw_Imui_Core_ImGui_ZeepSDK_Settings_Drawers_ZeepSettingsDrawContext_
+  commentId: M:ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer.Draw(Imui.Core.ImGui,ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer.Draw(Imui.Core.ImGui, ZeepSDK.Settings.Drawers.ZeepSettingsDrawContext)
+  nameWithType: ZeepSettingsTabbedSectionsDrawer.Draw(ImGui, ZeepSettingsDrawContext)
+- uid: ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer.Draw*
+  name: Draw
+  href: api/ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer.html#ZeepSDK_Settings_Drawers_ZeepSettingsTabbedSectionsDrawer_Draw_
+  commentId: Overload:ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer.Draw
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer.Draw
+  nameWithType: ZeepSettingsTabbedSectionsDrawer.Draw
 - uid: ZeepSDK.Settings.ModSettingsConfigEntryDrawContext
   name: ModSettingsConfigEntryDrawContext
   href: api/ZeepSDK.Settings.ModSettingsConfigEntryDrawContext.html
@@ -10021,6 +10040,54 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateDefaultDrawers
   nameWithType: ModSettingsDrawerBuildContext.CreateDefaultDrawers
+- uid: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateFlatSectionDrawers(System.Boolean)
+  name: CreateFlatSectionDrawers(bool)
+  href: api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html#ZeepSDK_Settings_ModSettingsDrawerBuildContext_CreateFlatSectionDrawers_System_Boolean_
+  commentId: M:ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateFlatSectionDrawers(System.Boolean)
+  name.vb: CreateFlatSectionDrawers(Boolean)
+  fullName: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateFlatSectionDrawers(bool)
+  fullName.vb: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateFlatSectionDrawers(Boolean)
+  nameWithType: ModSettingsDrawerBuildContext.CreateFlatSectionDrawers(bool)
+  nameWithType.vb: ModSettingsDrawerBuildContext.CreateFlatSectionDrawers(Boolean)
+- uid: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateFlatSectionDrawers*
+  name: CreateFlatSectionDrawers
+  href: api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html#ZeepSDK_Settings_ModSettingsDrawerBuildContext_CreateFlatSectionDrawers_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateFlatSectionDrawers
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateFlatSectionDrawers
+  nameWithType: ModSettingsDrawerBuildContext.CreateFlatSectionDrawers
+- uid: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateSectionDrawers(System.String)
+  name: CreateSectionDrawers(string)
+  href: api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html#ZeepSDK_Settings_ModSettingsDrawerBuildContext_CreateSectionDrawers_System_String_
+  commentId: M:ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateSectionDrawers(System.String)
+  name.vb: CreateSectionDrawers(String)
+  fullName: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateSectionDrawers(string)
+  fullName.vb: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateSectionDrawers(String)
+  nameWithType: ModSettingsDrawerBuildContext.CreateSectionDrawers(string)
+  nameWithType.vb: ModSettingsDrawerBuildContext.CreateSectionDrawers(String)
+- uid: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateSectionDrawers*
+  name: CreateSectionDrawers
+  href: api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html#ZeepSDK_Settings_ModSettingsDrawerBuildContext_CreateSectionDrawers_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateSectionDrawers
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateSectionDrawers
+  nameWithType: ModSettingsDrawerBuildContext.CreateSectionDrawers
+- uid: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateTabbedSectionsDrawer(System.Action{ZeepSDK.Settings.ModSettingsTabsBuilder})
+  name: CreateTabbedSectionsDrawer(Action<ModSettingsTabsBuilder>)
+  href: api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html#ZeepSDK_Settings_ModSettingsDrawerBuildContext_CreateTabbedSectionsDrawer_System_Action_ZeepSDK_Settings_ModSettingsTabsBuilder__
+  commentId: M:ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateTabbedSectionsDrawer(System.Action{ZeepSDK.Settings.ModSettingsTabsBuilder})
+  name.vb: CreateTabbedSectionsDrawer(Action(Of ModSettingsTabsBuilder))
+  fullName: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateTabbedSectionsDrawer(System.Action<ZeepSDK.Settings.ModSettingsTabsBuilder>)
+  fullName.vb: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateTabbedSectionsDrawer(System.Action(Of ZeepSDK.Settings.ModSettingsTabsBuilder))
+  nameWithType: ModSettingsDrawerBuildContext.CreateTabbedSectionsDrawer(Action<ModSettingsTabsBuilder>)
+  nameWithType.vb: ModSettingsDrawerBuildContext.CreateTabbedSectionsDrawer(Action(Of ModSettingsTabsBuilder))
+- uid: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateTabbedSectionsDrawer*
+  name: CreateTabbedSectionsDrawer
+  href: api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html#ZeepSDK_Settings_ModSettingsDrawerBuildContext_CreateTabbedSectionsDrawer_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateTabbedSectionsDrawer
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsDrawerBuildContext.CreateTabbedSectionsDrawer
+  nameWithType: ModSettingsDrawerBuildContext.CreateTabbedSectionsDrawer
 - uid: ZeepSDK.Settings.ModSettingsDrawerBuildContext.EntriesBySection
   name: EntriesBySection
   href: api/ZeepSDK.Settings.ModSettingsDrawerBuildContext.html#ZeepSDK_Settings_ModSettingsDrawerBuildContext_EntriesBySection
@@ -10053,6 +10120,203 @@ references:
   commentId: T:ZeepSDK.Settings.ModSettingsDrawersDelegate
   fullName: ZeepSDK.Settings.ModSettingsDrawersDelegate
   nameWithType: ModSettingsDrawersDelegate
+- uid: ZeepSDK.Settings.ModSettingsTabBuilder
+  name: ModSettingsTabBuilder
+  href: api/ZeepSDK.Settings.ModSettingsTabBuilder.html
+  commentId: T:ZeepSDK.Settings.ModSettingsTabBuilder
+  fullName: ZeepSDK.Settings.ModSettingsTabBuilder
+  nameWithType: ModSettingsTabBuilder
+- uid: ZeepSDK.Settings.ModSettingsTabBuilder.Drawer(ZeepSDK.Settings.Drawers.IZeepSettingsDrawer)
+  name: Drawer(IZeepSettingsDrawer)
+  href: api/ZeepSDK.Settings.ModSettingsTabBuilder.html#ZeepSDK_Settings_ModSettingsTabBuilder_Drawer_ZeepSDK_Settings_Drawers_IZeepSettingsDrawer_
+  commentId: M:ZeepSDK.Settings.ModSettingsTabBuilder.Drawer(ZeepSDK.Settings.Drawers.IZeepSettingsDrawer)
+  fullName: ZeepSDK.Settings.ModSettingsTabBuilder.Drawer(ZeepSDK.Settings.Drawers.IZeepSettingsDrawer)
+  nameWithType: ModSettingsTabBuilder.Drawer(IZeepSettingsDrawer)
+- uid: ZeepSDK.Settings.ModSettingsTabBuilder.Drawer*
+  name: Drawer
+  href: api/ZeepSDK.Settings.ModSettingsTabBuilder.html#ZeepSDK_Settings_ModSettingsTabBuilder_Drawer_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsTabBuilder.Drawer
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsTabBuilder.Drawer
+  nameWithType: ModSettingsTabBuilder.Drawer
+- uid: ZeepSDK.Settings.ModSettingsTabBuilder.Entry(BepInEx.Configuration.ConfigEntryBase,System.String)
+  name: Entry(ConfigEntryBase, string)
+  href: api/ZeepSDK.Settings.ModSettingsTabBuilder.html#ZeepSDK_Settings_ModSettingsTabBuilder_Entry_BepInEx_Configuration_ConfigEntryBase_System_String_
+  commentId: M:ZeepSDK.Settings.ModSettingsTabBuilder.Entry(BepInEx.Configuration.ConfigEntryBase,System.String)
+  name.vb: Entry(ConfigEntryBase, String)
+  fullName: ZeepSDK.Settings.ModSettingsTabBuilder.Entry(BepInEx.Configuration.ConfigEntryBase, string)
+  fullName.vb: ZeepSDK.Settings.ModSettingsTabBuilder.Entry(BepInEx.Configuration.ConfigEntryBase, String)
+  nameWithType: ModSettingsTabBuilder.Entry(ConfigEntryBase, string)
+  nameWithType.vb: ModSettingsTabBuilder.Entry(ConfigEntryBase, String)
+- uid: ZeepSDK.Settings.ModSettingsTabBuilder.Entry*
+  name: Entry
+  href: api/ZeepSDK.Settings.ModSettingsTabBuilder.html#ZeepSDK_Settings_ModSettingsTabBuilder_Entry_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsTabBuilder.Entry
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsTabBuilder.Entry
+  nameWithType: ModSettingsTabBuilder.Entry
+- uid: ZeepSDK.Settings.ModSettingsTabBuilder.Section(System.String)
+  name: Section(string)
+  href: api/ZeepSDK.Settings.ModSettingsTabBuilder.html#ZeepSDK_Settings_ModSettingsTabBuilder_Section_System_String_
+  commentId: M:ZeepSDK.Settings.ModSettingsTabBuilder.Section(System.String)
+  name.vb: Section(String)
+  fullName: ZeepSDK.Settings.ModSettingsTabBuilder.Section(string)
+  fullName.vb: ZeepSDK.Settings.ModSettingsTabBuilder.Section(String)
+  nameWithType: ModSettingsTabBuilder.Section(string)
+  nameWithType.vb: ModSettingsTabBuilder.Section(String)
+- uid: ZeepSDK.Settings.ModSettingsTabBuilder.Section*
+  name: Section
+  href: api/ZeepSDK.Settings.ModSettingsTabBuilder.html#ZeepSDK_Settings_ModSettingsTabBuilder_Section_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsTabBuilder.Section
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsTabBuilder.Section
+  nameWithType: ModSettingsTabBuilder.Section
+- uid: ZeepSDK.Settings.ModSettingsTabBuilder.Sections(System.String[])
+  name: Sections(params string[])
+  href: api/ZeepSDK.Settings.ModSettingsTabBuilder.html#ZeepSDK_Settings_ModSettingsTabBuilder_Sections_System_String___
+  commentId: M:ZeepSDK.Settings.ModSettingsTabBuilder.Sections(System.String[])
+  name.vb: Sections(ParamArray String())
+  fullName: ZeepSDK.Settings.ModSettingsTabBuilder.Sections(params string[])
+  fullName.vb: ZeepSDK.Settings.ModSettingsTabBuilder.Sections(ParamArray String())
+  nameWithType: ModSettingsTabBuilder.Sections(params string[])
+  nameWithType.vb: ModSettingsTabBuilder.Sections(ParamArray String())
+- uid: ZeepSDK.Settings.ModSettingsTabBuilder.Sections*
+  name: Sections
+  href: api/ZeepSDK.Settings.ModSettingsTabBuilder.html#ZeepSDK_Settings_ModSettingsTabBuilder_Sections_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsTabBuilder.Sections
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsTabBuilder.Sections
+  nameWithType: ModSettingsTabBuilder.Sections
+- uid: ZeepSDK.Settings.ModSettingsTabDefinition
+  name: ModSettingsTabDefinition
+  href: api/ZeepSDK.Settings.ModSettingsTabDefinition.html
+  commentId: T:ZeepSDK.Settings.ModSettingsTabDefinition
+  fullName: ZeepSDK.Settings.ModSettingsTabDefinition
+  nameWithType: ModSettingsTabDefinition
+- uid: ZeepSDK.Settings.ModSettingsTabDefinition.Items
+  name: Items
+  href: api/ZeepSDK.Settings.ModSettingsTabDefinition.html#ZeepSDK_Settings_ModSettingsTabDefinition_Items
+  commentId: P:ZeepSDK.Settings.ModSettingsTabDefinition.Items
+  fullName: ZeepSDK.Settings.ModSettingsTabDefinition.Items
+  nameWithType: ModSettingsTabDefinition.Items
+- uid: ZeepSDK.Settings.ModSettingsTabDefinition.Items*
+  name: Items
+  href: api/ZeepSDK.Settings.ModSettingsTabDefinition.html#ZeepSDK_Settings_ModSettingsTabDefinition_Items_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsTabDefinition.Items
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsTabDefinition.Items
+  nameWithType: ModSettingsTabDefinition.Items
+- uid: ZeepSDK.Settings.ModSettingsTabDefinition.Label
+  name: Label
+  href: api/ZeepSDK.Settings.ModSettingsTabDefinition.html#ZeepSDK_Settings_ModSettingsTabDefinition_Label
+  commentId: P:ZeepSDK.Settings.ModSettingsTabDefinition.Label
+  fullName: ZeepSDK.Settings.ModSettingsTabDefinition.Label
+  nameWithType: ModSettingsTabDefinition.Label
+- uid: ZeepSDK.Settings.ModSettingsTabDefinition.Label*
+  name: Label
+  href: api/ZeepSDK.Settings.ModSettingsTabDefinition.html#ZeepSDK_Settings_ModSettingsTabDefinition_Label_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsTabDefinition.Label
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsTabDefinition.Label
+  nameWithType: ModSettingsTabDefinition.Label
+- uid: ZeepSDK.Settings.ModSettingsTabDrawerItem
+  name: ModSettingsTabDrawerItem
+  href: api/ZeepSDK.Settings.ModSettingsTabDrawerItem.html
+  commentId: T:ZeepSDK.Settings.ModSettingsTabDrawerItem
+  fullName: ZeepSDK.Settings.ModSettingsTabDrawerItem
+  nameWithType: ModSettingsTabDrawerItem
+- uid: ZeepSDK.Settings.ModSettingsTabDrawerItem.Drawer
+  name: Drawer
+  href: api/ZeepSDK.Settings.ModSettingsTabDrawerItem.html#ZeepSDK_Settings_ModSettingsTabDrawerItem_Drawer
+  commentId: P:ZeepSDK.Settings.ModSettingsTabDrawerItem.Drawer
+  fullName: ZeepSDK.Settings.ModSettingsTabDrawerItem.Drawer
+  nameWithType: ModSettingsTabDrawerItem.Drawer
+- uid: ZeepSDK.Settings.ModSettingsTabDrawerItem.Drawer*
+  name: Drawer
+  href: api/ZeepSDK.Settings.ModSettingsTabDrawerItem.html#ZeepSDK_Settings_ModSettingsTabDrawerItem_Drawer_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsTabDrawerItem.Drawer
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsTabDrawerItem.Drawer
+  nameWithType: ModSettingsTabDrawerItem.Drawer
+- uid: ZeepSDK.Settings.ModSettingsTabEntryItem
+  name: ModSettingsTabEntryItem
+  href: api/ZeepSDK.Settings.ModSettingsTabEntryItem.html
+  commentId: T:ZeepSDK.Settings.ModSettingsTabEntryItem
+  fullName: ZeepSDK.Settings.ModSettingsTabEntryItem
+  nameWithType: ModSettingsTabEntryItem
+- uid: ZeepSDK.Settings.ModSettingsTabEntryItem.Entry
+  name: Entry
+  href: api/ZeepSDK.Settings.ModSettingsTabEntryItem.html#ZeepSDK_Settings_ModSettingsTabEntryItem_Entry
+  commentId: P:ZeepSDK.Settings.ModSettingsTabEntryItem.Entry
+  fullName: ZeepSDK.Settings.ModSettingsTabEntryItem.Entry
+  nameWithType: ModSettingsTabEntryItem.Entry
+- uid: ZeepSDK.Settings.ModSettingsTabEntryItem.Entry*
+  name: Entry
+  href: api/ZeepSDK.Settings.ModSettingsTabEntryItem.html#ZeepSDK_Settings_ModSettingsTabEntryItem_Entry_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsTabEntryItem.Entry
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsTabEntryItem.Entry
+  nameWithType: ModSettingsTabEntryItem.Entry
+- uid: ZeepSDK.Settings.ModSettingsTabEntryItem.Label
+  name: Label
+  href: api/ZeepSDK.Settings.ModSettingsTabEntryItem.html#ZeepSDK_Settings_ModSettingsTabEntryItem_Label
+  commentId: P:ZeepSDK.Settings.ModSettingsTabEntryItem.Label
+  fullName: ZeepSDK.Settings.ModSettingsTabEntryItem.Label
+  nameWithType: ModSettingsTabEntryItem.Label
+- uid: ZeepSDK.Settings.ModSettingsTabEntryItem.Label*
+  name: Label
+  href: api/ZeepSDK.Settings.ModSettingsTabEntryItem.html#ZeepSDK_Settings_ModSettingsTabEntryItem_Label_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsTabEntryItem.Label
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsTabEntryItem.Label
+  nameWithType: ModSettingsTabEntryItem.Label
+- uid: ZeepSDK.Settings.ModSettingsTabItem
+  name: ModSettingsTabItem
+  href: api/ZeepSDK.Settings.ModSettingsTabItem.html
+  commentId: T:ZeepSDK.Settings.ModSettingsTabItem
+  fullName: ZeepSDK.Settings.ModSettingsTabItem
+  nameWithType: ModSettingsTabItem
+- uid: ZeepSDK.Settings.ModSettingsTabSectionItem
+  name: ModSettingsTabSectionItem
+  href: api/ZeepSDK.Settings.ModSettingsTabSectionItem.html
+  commentId: T:ZeepSDK.Settings.ModSettingsTabSectionItem
+  fullName: ZeepSDK.Settings.ModSettingsTabSectionItem
+  nameWithType: ModSettingsTabSectionItem
+- uid: ZeepSDK.Settings.ModSettingsTabSectionItem.SectionName
+  name: SectionName
+  href: api/ZeepSDK.Settings.ModSettingsTabSectionItem.html#ZeepSDK_Settings_ModSettingsTabSectionItem_SectionName
+  commentId: P:ZeepSDK.Settings.ModSettingsTabSectionItem.SectionName
+  fullName: ZeepSDK.Settings.ModSettingsTabSectionItem.SectionName
+  nameWithType: ModSettingsTabSectionItem.SectionName
+- uid: ZeepSDK.Settings.ModSettingsTabSectionItem.SectionName*
+  name: SectionName
+  href: api/ZeepSDK.Settings.ModSettingsTabSectionItem.html#ZeepSDK_Settings_ModSettingsTabSectionItem_SectionName_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsTabSectionItem.SectionName
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsTabSectionItem.SectionName
+  nameWithType: ModSettingsTabSectionItem.SectionName
+- uid: ZeepSDK.Settings.ModSettingsTabsBuilder
+  name: ModSettingsTabsBuilder
+  href: api/ZeepSDK.Settings.ModSettingsTabsBuilder.html
+  commentId: T:ZeepSDK.Settings.ModSettingsTabsBuilder
+  fullName: ZeepSDK.Settings.ModSettingsTabsBuilder
+  nameWithType: ModSettingsTabsBuilder
+- uid: ZeepSDK.Settings.ModSettingsTabsBuilder.Tab(System.String,System.String[])
+  name: Tab(string, params string[])
+  href: api/ZeepSDK.Settings.ModSettingsTabsBuilder.html#ZeepSDK_Settings_ModSettingsTabsBuilder_Tab_System_String_System_String___
+  commentId: M:ZeepSDK.Settings.ModSettingsTabsBuilder.Tab(System.String,System.String[])
+  name.vb: Tab(String, ParamArray String())
+  fullName: ZeepSDK.Settings.ModSettingsTabsBuilder.Tab(string, params string[])
+  fullName.vb: ZeepSDK.Settings.ModSettingsTabsBuilder.Tab(String, ParamArray String())
+  nameWithType: ModSettingsTabsBuilder.Tab(string, params string[])
+  nameWithType.vb: ModSettingsTabsBuilder.Tab(String, ParamArray String())
+- uid: ZeepSDK.Settings.ModSettingsTabsBuilder.Tab*
+  name: Tab
+  href: api/ZeepSDK.Settings.ModSettingsTabsBuilder.html#ZeepSDK_Settings_ModSettingsTabsBuilder_Tab_
+  commentId: Overload:ZeepSDK.Settings.ModSettingsTabsBuilder.Tab
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.ModSettingsTabsBuilder.Tab
+  nameWithType: ModSettingsTabsBuilder.Tab
 - uid: ZeepSDK.Settings.ModSettingsWindowClosedDelegate
   name: ModSettingsWindowClosedDelegate
   href: api/ZeepSDK.Settings.ModSettingsWindowClosedDelegate.html
@@ -10137,6 +10401,28 @@ references:
   fullName.vb: ZeepSDK.Settings.SettingsApi.ClearConfigEntryTypeDrawer(Of T)()
   nameWithType: SettingsApi.ClearConfigEntryTypeDrawer<T>()
   nameWithType.vb: SettingsApi.ClearConfigEntryTypeDrawer(Of T)()
+- uid: ZeepSDK.Settings.SettingsApi.ClearModSettingsTabs(BepInEx.BaseUnityPlugin)
+  name: ClearModSettingsTabs(BaseUnityPlugin)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ClearModSettingsTabs_BepInEx_BaseUnityPlugin_
+  commentId: M:ZeepSDK.Settings.SettingsApi.ClearModSettingsTabs(BepInEx.BaseUnityPlugin)
+  fullName: ZeepSDK.Settings.SettingsApi.ClearModSettingsTabs(BepInEx.BaseUnityPlugin)
+  nameWithType: SettingsApi.ClearModSettingsTabs(BaseUnityPlugin)
+- uid: ZeepSDK.Settings.SettingsApi.ClearModSettingsTabs(System.String)
+  name: ClearModSettingsTabs(string)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ClearModSettingsTabs_System_String_
+  commentId: M:ZeepSDK.Settings.SettingsApi.ClearModSettingsTabs(System.String)
+  name.vb: ClearModSettingsTabs(String)
+  fullName: ZeepSDK.Settings.SettingsApi.ClearModSettingsTabs(string)
+  fullName.vb: ZeepSDK.Settings.SettingsApi.ClearModSettingsTabs(String)
+  nameWithType: SettingsApi.ClearModSettingsTabs(string)
+  nameWithType.vb: SettingsApi.ClearModSettingsTabs(String)
+- uid: ZeepSDK.Settings.SettingsApi.ClearModSettingsTabs*
+  name: ClearModSettingsTabs
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ClearModSettingsTabs_
+  commentId: Overload:ZeepSDK.Settings.SettingsApi.ClearModSettingsTabs
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.SettingsApi.ClearModSettingsTabs
+  nameWithType: SettingsApi.ClearModSettingsTabs
 - uid: ZeepSDK.Settings.SettingsApi.CloseModSettings
   name: CloseModSettings()
   href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_CloseModSettings
@@ -10150,6 +10436,31 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Settings.SettingsApi.CloseModSettings
   nameWithType: SettingsApi.CloseModSettings
+- uid: ZeepSDK.Settings.SettingsApi.ConfigureModSettingsTabs(BepInEx.BaseUnityPlugin,System.Action{ZeepSDK.Settings.ModSettingsTabsBuilder})
+  name: ConfigureModSettingsTabs(BaseUnityPlugin, Action<ModSettingsTabsBuilder>)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ConfigureModSettingsTabs_BepInEx_BaseUnityPlugin_System_Action_ZeepSDK_Settings_ModSettingsTabsBuilder__
+  commentId: M:ZeepSDK.Settings.SettingsApi.ConfigureModSettingsTabs(BepInEx.BaseUnityPlugin,System.Action{ZeepSDK.Settings.ModSettingsTabsBuilder})
+  name.vb: ConfigureModSettingsTabs(BaseUnityPlugin, Action(Of ModSettingsTabsBuilder))
+  fullName: ZeepSDK.Settings.SettingsApi.ConfigureModSettingsTabs(BepInEx.BaseUnityPlugin, System.Action<ZeepSDK.Settings.ModSettingsTabsBuilder>)
+  fullName.vb: ZeepSDK.Settings.SettingsApi.ConfigureModSettingsTabs(BepInEx.BaseUnityPlugin, System.Action(Of ZeepSDK.Settings.ModSettingsTabsBuilder))
+  nameWithType: SettingsApi.ConfigureModSettingsTabs(BaseUnityPlugin, Action<ModSettingsTabsBuilder>)
+  nameWithType.vb: SettingsApi.ConfigureModSettingsTabs(BaseUnityPlugin, Action(Of ModSettingsTabsBuilder))
+- uid: ZeepSDK.Settings.SettingsApi.ConfigureModSettingsTabs(System.String,System.Action{ZeepSDK.Settings.ModSettingsTabsBuilder})
+  name: ConfigureModSettingsTabs(string, Action<ModSettingsTabsBuilder>)
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ConfigureModSettingsTabs_System_String_System_Action_ZeepSDK_Settings_ModSettingsTabsBuilder__
+  commentId: M:ZeepSDK.Settings.SettingsApi.ConfigureModSettingsTabs(System.String,System.Action{ZeepSDK.Settings.ModSettingsTabsBuilder})
+  name.vb: ConfigureModSettingsTabs(String, Action(Of ModSettingsTabsBuilder))
+  fullName: ZeepSDK.Settings.SettingsApi.ConfigureModSettingsTabs(string, System.Action<ZeepSDK.Settings.ModSettingsTabsBuilder>)
+  fullName.vb: ZeepSDK.Settings.SettingsApi.ConfigureModSettingsTabs(String, System.Action(Of ZeepSDK.Settings.ModSettingsTabsBuilder))
+  nameWithType: SettingsApi.ConfigureModSettingsTabs(string, Action<ModSettingsTabsBuilder>)
+  nameWithType.vb: SettingsApi.ConfigureModSettingsTabs(String, Action(Of ModSettingsTabsBuilder))
+- uid: ZeepSDK.Settings.SettingsApi.ConfigureModSettingsTabs*
+  name: ConfigureModSettingsTabs
+  href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ConfigureModSettingsTabs_
+  commentId: Overload:ZeepSDK.Settings.SettingsApi.ConfigureModSettingsTabs
+  isSpec: "True"
+  fullName: ZeepSDK.Settings.SettingsApi.ConfigureModSettingsTabs
+  nameWithType: SettingsApi.ConfigureModSettingsTabs
 - uid: ZeepSDK.Settings.SettingsApi.ModSettingsWindowClosed
   name: ModSettingsWindowClosed
   href: api/ZeepSDK.Settings.SettingsApi.html#ZeepSDK_Settings_SettingsApi_ModSettingsWindowClosed

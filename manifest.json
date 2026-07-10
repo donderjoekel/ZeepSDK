@@ -2356,6 +2356,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.Drawers.ZeepSettingsTabbedSectionsDrawer.yml\" sourcestartlinenumber=\"1\">Draws grouped mod settings content in a tabbed layout.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Settings.Drawers.yml",
       "output": {
         ".html": {
@@ -2437,6 +2451,104 @@
       "IsMRef": true,
       "Title": "ZeepSDK.Settings.ModSettingsDrawersDelegate",
       "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsDrawersDelegate.yml\" sourcestartlinenumber=\"1\">Builds the list of settings drawers to render for a mod.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsTabBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsTabBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsTabBuilder",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsTabBuilder.yml\" sourcestartlinenumber=\"1\">Builds the content of a single mod settings tab.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsTabDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsTabDefinition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsTabDefinition",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsTabDefinition.yml\" sourcestartlinenumber=\"1\">Defines a single tab in the mod settings panel.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsTabDrawerItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsTabDrawerItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsTabDrawerItem",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsTabDrawerItem.yml\" sourcestartlinenumber=\"1\">Includes a custom settings drawer in a tab.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsTabEntryItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsTabEntryItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsTabEntryItem",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsTabEntryItem.yml\" sourcestartlinenumber=\"1\">Includes a single config entry in a tab.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsTabItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsTabItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsTabItem",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsTabItem.yml\" sourcestartlinenumber=\"1\">A single item within a mod settings tab.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsTabSectionItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsTabSectionItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsTabSectionItem",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsTabSectionItem.yml\" sourcestartlinenumber=\"1\">Includes all visible config entries from a BepInEx section in a tab.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.ModSettingsTabsBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.ModSettingsTabsBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.ModSettingsTabsBuilder",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.ModSettingsTabsBuilder.yml\" sourcestartlinenumber=\"1\">Builds tab definitions for the mod settings panel.</p>\n"
     },
     {
       "type": "ManagedReference",

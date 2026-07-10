@@ -233,6 +233,26 @@ SettingsApi.RegisterConfigEntryTypeDrawer&lt;MyCustomType&gt;((entry, label) =&g
 <li><strong>Default row renderer</strong> — built-in control for the entry's value type</li>
 </ol>
 <p>Per-entry customization always takes priority over type-based customization.</p>
+<h3 id="tabbed-sections">Tabbed Sections</h3>
+<p>Use <code>ConfigureModSettingsTabs</code> to group BepInEx sections into tabs without writing a custom layout provider. Tab labels are author-provided; section headers inside a tab are unchanged.</p>
+<pre><code class="lang-csharp">SettingsApi.ConfigureModSettingsTabs(this, tabs =&gt;
+{
+    tabs.Tab(&quot;Gameplay&quot;, &quot;General&quot;, &quot;Combat&quot;);
+    tabs.Tab(&quot;Audio&quot;, &quot;Sound&quot;);
+});
+</code></pre>
+<p>Sections not assigned to any tab render as normal flat sections below the tab bar. Call <code>ClearModSettingsTabs</code> to restore the default flat layout.</p>
+<p>You can also add individual config entries or custom drawers to a tab:</p>
+<pre><code class="lang-csharp">SettingsApi.ConfigureModSettingsTabs(this, tabs =&gt;
+{
+    tabs.Tab(&quot;Gameplay&quot;, &quot;General&quot;, &quot;Combat&quot;);
+
+    tabs.Tab(&quot;Tools&quot;)
+        .Entry(_rebuildCache)
+        .Drawer(new HelpTextDrawer(&quot;Rebuilds on next load.&quot;));
+});
+</code></pre>
+<p>For full layout control with tabs, see <strong><a href="custom-mod-settings-layout.html">Custom Mod Settings Layout</a></strong>.</p>
 <h2 id="basic-plugin-example">Basic Plugin Example</h2>
 <pre><code class="lang-csharp">using BepInEx;
 using BepInEx.Configuration;
@@ -276,6 +296,7 @@ public class MyMod : BaseUnityPlugin
 <li>Customize individual entries with <code>SetConfigEntryDrawer</code> and <code>DrawDefault()</code></li>
 <li>Customize all entries of a type with <code>RegisterConfigEntryTypeDrawer</code></li>
 <li>Per-entry customization overrides type-based customization</li>
+<li>Group sections into tabs with <code>ConfigureModSettingsTabs</code></li>
 </ul>
 
 </article>
@@ -286,7 +307,7 @@ public class MyMod : BaseUnityPlugin
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.5.1/docs/articles/mod-settings.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/donderjoekel/ZeepSDK/blob/2.6.0/docs/articles/mod-settings.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
