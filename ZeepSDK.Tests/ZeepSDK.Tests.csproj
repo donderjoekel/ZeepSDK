@@ -49,6 +49,7 @@
         <Compile Include="..\ZeepSDK\Scripting\ZUA\LuaApiDescriptorCache.cs" Link="Source\LuaApiDescriptorCache.cs" />
         <Compile Include="..\ZeepSDK\Scripting\LuaScriptIndex.cs" Link="Source\LuaScriptIndex.cs" />
         <Compile Include="..\ZeepSDK\Utilities\AtomicFile.cs" Link="Source\AtomicFile.cs" />
+        <Compile Include="..\ZeepSDK\Storage\StorageResult.cs" Link="Source\StorageResult.cs" />
         <Compile Include="..\ZeepSDK\Utilities\SequenceComparer.cs" Link="Source\SequenceComparer.cs" />
         <Compile Include="..\ZeepSDK\Utilities\UnityFolders\UnityFolder.cs" Link="Source\UnityFolder.cs" />
         <Compile Include="..\ZeepSDK\Utilities\Vector3Comparer.cs" Link="Source\Vector3Comparer.cs" />

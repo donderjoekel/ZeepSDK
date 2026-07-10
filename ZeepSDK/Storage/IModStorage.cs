@@ -57,6 +57,9 @@ public interface IModStorage
     /// <returns></returns>
     TData LoadFromJson<TData>(string name);
 
+    /// <summary>Loads typed JSON while preserving error details.</summary>
+    StorageResult<TData> TryLoadFromJson<TData>(string name);
+
     /// <summary>
     /// Deletes a file
     /// </summary>
@@ -84,12 +87,26 @@ public interface IModStorage
     /// <param name="data">The data to save</param>
     void WriteBlob(string name, byte[] data);
 
+    /// <summary>Writes a blob on a worker thread.</summary>
+    System.Threading.Tasks.Task<StorageResult> WriteBlobAsync(
+        string name,
+        byte[] data,
+        System.Threading.CancellationToken cancellationToken = default);
+
     /// <summary>
     /// Loads data from a binary file
     /// </summary>
     /// <param name="name">The name of the file without extension</param>
     /// <returns></returns>
     byte[] ReadBlob(string name);
+
+    /// <summary>Reads a blob while preserving error details.</summary>
+    StorageResult<byte[]> TryReadBlob(string name);
+
+    /// <summary>Reads a blob on a worker thread.</summary>
+    System.Threading.Tasks.Task<StorageResult<byte[]>> ReadBlobAsync(
+        string name,
+        System.Threading.CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Deletes a binary file
