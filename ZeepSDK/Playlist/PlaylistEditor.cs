@@ -92,7 +92,7 @@ internal class PlaylistEditor : IPlaylistEditor
             string playlistPath = PlaylistPath.Resolve(playlist.name);
 
             Directory.CreateDirectory(PlaylistPath.DirectoryPath);
-            File.WriteAllText(playlistPath, json);
+            AtomicFile.WriteAllText(playlistPath, json);
         }
         catch (Exception e)
         {

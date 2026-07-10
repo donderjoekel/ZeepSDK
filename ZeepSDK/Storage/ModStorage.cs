@@ -129,7 +129,7 @@ internal class ModStorage : IModStorage
         try
         {
             string json = JsonConvert.SerializeObject(data, _settings);
-            File.WriteAllText(CreatePath(name, ".json"), json);
+            AtomicFile.WriteAllText(CreatePath(name, ".json"), json);
         }
         catch (Exception e)
         {
@@ -238,7 +238,7 @@ internal class ModStorage : IModStorage
     {
         try
         {
-            File.WriteAllBytes(CreatePath(name, ".blob"), data);
+            AtomicFile.WriteAllBytes(CreatePath(name, ".blob"), data);
         }
         catch (Exception e)
         {
@@ -284,7 +284,7 @@ internal class ModStorage : IModStorage
         try
         {
             string path = CreatePath(filename, string.Empty);
-            File.WriteAllBytes(path, data);
+            AtomicFile.WriteAllBytes(path, data);
         }
         catch (Exception e)
         {
