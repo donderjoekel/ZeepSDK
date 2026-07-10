@@ -21,7 +21,9 @@
 
     <ItemGroup>
         <Compile Include="..\ZeepSDK\ChatCommands\ChatCommandUtilities.cs" Link="Source\ChatCommandUtilities.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\ChatHelpFormatter.cs" Link="Source\ChatHelpFormatter.cs" />
         <Compile Include="..\ZeepSDK\ChatCommands\IChatCommand.cs" Link="Source\IChatCommand.cs" />
+        <Compile Include="..\ZeepSDK\ChatCommands\IRemoteChatCommand.cs" Link="Source\IRemoteChatCommand.cs" />
         <Compile Include="..\ZeepSDK\ChatCommands\RemoteCommandRateLimiter.cs" Link="Source\RemoteCommandRateLimiter.cs" />
         <Compile Include="..\ZeepSDK\Communication\ComReceiver.cs" Link="Source\ComReceiver.cs" />
         <Compile Include="..\ZeepSDK\Communication\IComReceiver.cs" Link="Source\IComReceiver.cs" />
