@@ -22,7 +22,17 @@ namespace ZeepSDK.Utilities
         {
             return new ManualLogSource();
         }
+
+        public static ManualLogSource GetLogger<T>()
+        {
+            return GetLogger(typeof(T));
+        }
     }
+}
+
+namespace ZeepSDK.Communication
+{
+    public delegate void MessageReceivedDelegate(IComReceiver receiver, string message);
 }
 
 namespace JetBrains.Annotations
