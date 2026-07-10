@@ -66,7 +66,8 @@ public sealed class ModSettingsDrawerBuildContext
     /// Creates flat section drawers for sections not assigned to a configured tab layout.
     /// </summary>
     /// <param name="excludeTabbedSections">
-    /// When <see langword="true"/>, sections assigned via <see cref="SettingsApi.ConfigureModSettingsTabs"/> are omitted.
+    /// When <see langword="true"/>, sections assigned via
+    /// <see cref="SettingsApi.ConfigureModSettingsTabs(BaseUnityPlugin, Action{ModSettingsTabsBuilder})"/> are omitted.
     /// </param>
     /// <returns>Flat section drawers for the remaining sections.</returns>
     public IEnumerable<IZeepSettingsDrawer> CreateFlatSectionDrawers(bool excludeTabbedSections)
