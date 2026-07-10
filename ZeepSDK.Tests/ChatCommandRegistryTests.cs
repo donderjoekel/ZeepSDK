@@ -57,13 +57,33 @@ public class ChatCommandRegistryTests
     [Theory]
     [InlineData("", "command")]
     [InlineData("!", "")]
-    [InlineData("!", "two words")]
+    [InlineData("!", " leading")]
+    [InlineData("!", "trailing ")]
+    [InlineData("!", "two\twords")]
+    [InlineData("!", "two\nwords")]
     public void RejectsInvalidCommandNames(string prefix, string keyword)
     {
         TestRemoteCommand command = new(prefix, keyword, "description");
 
         Assert.Throws<ArgumentException>(() =>
             ChatCommandRegistry.RegisterRemoteChatCommand(command));
+    }
+
+    [Fact]
+    public void AcceptsMultiWordCommandsUsedByScriptingApi()
+    {
+        TestRemoteCommand command = new("/", "zua load", "description");
+
+        try
+        {
+            ChatCommandRegistry.RegisterRemoteChatCommand(command);
+
+            Assert.Contains(command, ChatCommandRegistry.RemoteChatCommands);
+        }
+        finally
+        {
+            ChatCommandRegistry.UnregisterRemoteChatCommand(command);
+        }
     }
 
     [Fact]

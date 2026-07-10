@@ -237,8 +237,10 @@ public static class ChatCommandRegistry
             throw new ArgumentNullException(nameof(command));
         if (!IsValidPrefix(command.Prefix))
             throw new ArgumentException("Command prefix must be 1-16 non-whitespace characters.", nameof(command));
-        if (!IsValidKeyword(command.Command))
-            throw new ArgumentException("Command keyword must be 1-64 non-whitespace characters.", nameof(command));
+        if (!IsValidCommandText(command.Command))
+            throw new ArgumentException(
+                "Command text must be 1-64 characters, may contain internal spaces, and cannot contain edge whitespace or control characters.",
+                nameof(command));
         if (command.Description == null)
             throw new ArgumentException("Command description cannot be null.", nameof(command));
         if (command.Description.Length > 512)
@@ -250,6 +252,18 @@ public static class ChatCommandRegistry
 
     private static bool IsValidKeyword(string keyword)
         => !string.IsNullOrWhiteSpace(keyword) && keyword.Length <= 64 && !keyword.Any(char.IsWhiteSpace);
+
+    private static bool IsValidCommandText(string command)
+    {
+        if (string.IsNullOrWhiteSpace(command) || command.Length > 64 ||
+            command[0] == ' ' || command[^1] == ' ')
+        {
+            return false;
+        }
+
+        return command.All(character => character == ' ' ||
+            (!char.IsWhiteSpace(character) && !char.IsControl(character)));
+    }
 
     private static void EnsureNoLocalConflict(string prefix, string keyword)
     {
