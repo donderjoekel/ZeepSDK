@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "components": [
+    {
+      "name": "UniTask",
+      "path": "ZeepSDK/External/UniTask",
+      "repository": "https://github.com/Cysharp/UniTask.git",
+      "version": "2.3.3",
+      "revision": "b992a061fbf68ff1eb475d0837065b0549ed31ba",
+      "localImportCommit": "56071e40a0a33c6639113708a9d0a6646de5cee7",
+      "license": "MIT",
+      "treeSha256": "f382ee7c397dc3905068617027b75cddf76597828892916fc69769a9557b326f"
+    },
+    {
+      "name": "FluentResults",
+      "path": "ZeepSDK/External/FluentResults",
+      "repository": "https://github.com/altmann/FluentResults.git",
+      "version": "3.15.2",
+      "revision": "8b675de7e8b6e4c0921e95138c99e15fd52cde40",
+      "localImportCommit": "36154e067d5e1ab0ec667967e1f82fb676a96842",
+      "license": "MIT",
+      "treeSha256": "ea89208f11013d0882c9db381b800d15b10d90ea7038335ec55f556f213d6a3c"
+    },
+    {
+      "name": "Newtonsoft.Json for Unity Converters",
+      "path": "ZeepSDK/External/UnityConverters",
+      "repository": "https://github.com/applejag/Newtonsoft.Json-for-Unity.Converters.git",
+      "version": "1.5.1",
+      "revision": "024301ccea513156fcf89c8ce2be21b4137b4028",
+      "localImportCommit": "c9de299",
+      "license": "MIT",
+      "treeSha256": "bba067cafd59c1bb8b9a0fc8e1b64ff3f02cc5f99bcd0aa59952def5a2144f23"
+    },
+    {
+      "name": "Bugsnag Unity",
+      "path": "ZeepSDK/External/BugSnag",
+      "repository": "https://github.com/bugsnag/bugsnag-unity.git",
+      "version": "8.5.2",
+      "revision": "26497bb8d921e820efa8af04ac4e093c01c680d0",
+      "localImportCommit": "9ec26c0",
+      "license": "MIT",
+      "treeSha256": "9b3381636a335bef0e43e52d6cfe8e073cff948c1c9cd19fdea55db8e5195ee2"
+    }
+  ]
+}
