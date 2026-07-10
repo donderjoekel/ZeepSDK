@@ -33,75 +33,90 @@ Scope: security, correctness, performance, dead code, and code smells
 | 15 | Low | Generator symbol fields declared impossible non-null state and produced nullable warnings. | Preserve symbol nullability until initialization checks complete. | `a4ee1a1` |
 | 16 | Informational | Large obsolete commented blocks obscured active behavior and increased maintenance cost. | Remove dead commented implementation. | `7977d82` |
 
-## Remaining findings, ranked
+## Remediated follow-up findings, ranked
 
-### 1. Version-check lifecycle has no cancellation
+| Rank | Finding | Fix commit |
+|---:|---|---|
+| 1 | Version-check lifecycle cancellation | `737b693` |
+| 2 | mod.io pagination traversal and bounds | `aa957fb` |
+| 3 | Bounded help response | `65d085d` |
+| 4 | Subsystem event teardown | `06be7e0` |
+| 5 | Chat registry invariants and snapshots | `738e966` |
+| 6 | Canonical Lua script index | `a985845` |
+| 7 | Cached Lua API descriptors | `5975a60` |
+| 8 | Side-effect-free storage reads and typed results | `a485f16` |
+| 9 | Indexed playlists and atomic rename | `bed41bb` |
+| 10 | Mutation-safe condition ticks | `5e57249` |
+| 11 | Vendored source provenance and drift checks | `2bd7938` |
+| 12 | Zero-warning build enforcement | `abb379d` |
+
+### 1. Version-check lifecycle had no cancellation
 
 `VersionChecker.CheckVersions` is fire-and-forget, while `WaitForScene` polls and temporarily subscribes to `SceneManager.sceneLoaded`. Plugin unload or a scene that never appears can retain work and handlers.
 
 Fix: pass plugin-destruction `CancellationToken`; replace polling with cancellation-aware scene await; unsubscribe in `finally`; return `UniTask` so caller can observe failures.
 
-### 2. mod.io response model exposes pagination but caller does not traverse it
+### 2. mod.io response model exposed pagination but caller did not traverse it
 
 Only one response page is considered. Installed mods beyond first page can be missed, producing incomplete version results.
 
 Fix: follow `offset`, `limit`, `result_count`, and `result_total`; enforce page/item caps; stop on repeated or empty pages; test multi-page and malformed metadata.
 
-### 3. Help command amplifies one request into many network messages
+### 3. Help command amplified one request into many network messages
 
 `HelpRemoteChatCommand` sends header plus one message per command. Rate limiting bounds invocations but not responses per accepted invocation.
 
 Fix: build one length-capped response, paginate only when protocol requires it, and impose maximum advertised command count.
 
-### 4. Static event ownership remains inconsistent
+### 4. Static event ownership was inconsistent
 
 Several APIs subscribe static or long-lived handlers without a uniform shutdown contract. BepInEx reloads can retain objects or duplicate callbacks.
 
 Fix: make each subsystem `IDisposable`; centralize registration in plugin startup; dispose in reverse order from `OnDestroy`; add reload tests checking one callback per event.
 
-### 5. Chat registry exposes mutable storage and accepts weak registrations
+### 5. Chat registry exposed mutable storage and accepted weak registrations
 
 An `IReadOnlyList` backed by `List<T>` remains downcastable. Duplicate names, null commands, and invalid names can make dispatch ambiguous.
 
 Fix: validate command/name/callback; enforce ordinal unique names; expose `ReadOnlyCollection<T>` or immutable snapshot; defer mutation during dispatch.
 
-### 6. Script name lookup recursively scans plugin tree
+### 6. Script name lookup recursively scanned plugin tree
 
 `ScriptingApi` uses `Directory.GetFiles(..., SearchOption.AllDirectories)` for load and unload. Each call allocates full result arrays, applies wildcard semantics, and can load same physical file through differently cased paths.
 
 Fix: index scripts once with canonical paths and `OrdinalIgnoreCase`; use literal filenames; invalidate index on explicit refresh; stop enumeration after ambiguity detected.
 
-### 7. Lua API discovery repeats whole-assembly reflection
+### 7. Lua API discovery repeated whole-assembly reflection
 
 Each script scans `typeof(Zua).Assembly.GetTypes()` multiple times and uses reflection/activation for event and API discovery.
 
 Fix: build immutable descriptor cache once; preferably generate registry at compile time; surface activation errors per API without rescanning.
 
-### 8. Storage reads create directories and perform blocking I/O
+### 8. Storage reads created directories and performed blocking I/O
 
 `ModStorage.CreatePath` creates directories even for exists/read/delete operations. APIs perform synchronous disk I/O on caller, commonly Unity main thread, and convert failures to broad fallback values.
 
 Fix: split pure `ResolvePath` from write-only `EnsureDirectory`; add async or scheduled APIs for large blobs; return typed result/error details; lock converter registration or freeze it after startup.
 
-### 9. Playlist queries repeatedly rescan and expose mutable state
+### 9. Playlist queries repeatedly rescanned and exposed mutable state
 
 `Exists` and `GetPlaylist` repeatedly search loaded playlists. Mutable level collections and rename/save behavior can drift from disk state.
 
 Fix: maintain ordinal dictionary keyed by validated name; expose read-only collections; define rename as atomic new-write plus old-delete; derive counts from collection.
 
-### 10. `ConditionTicker` is vulnerable to mutation during iteration
+### 10. `ConditionTicker` was vulnerable to mutation during iteration
 
 Tick callbacks can add/remove tickables while `foreach` is active. One callback exception can abort remaining tickables for that phase.
 
 Fix: queue mutations until phase completes or iterate stable snapshots; isolate and log callback exceptions; document ordering.
 
-### 11. Vendored source has weak provenance controls
+### 11. Vendored source had weak provenance controls
 
 `ZeepSDK/External` contains 299 tracked source files. Package audit cannot verify copied source origin or detect upstream security releases.
 
 Fix: record upstream project, version/commit, license, and local patch set; automate upstream comparison; prefer pinned package references where Unity compatibility permits.
 
-### 12. Warning volume hides new defects
+### 12. Warning volume hid new defects
 
 Full build succeeds but emits 53 warnings, mostly missing XML documentation and vendored/generated code. Persistent noise reduces signal from new warnings.
 
@@ -115,3 +130,8 @@ Fix: suppress documentation warnings only for vendor/generated scopes; fix first
 - `git diff --check`
 
 Package audit found no known vulnerable direct or transitive NuGet packages in configured sources. This does not cover copied source under `ZeepSDK/External`.
+
+Follow-up verification after remediation: 84 tests pass and full solution build
+completes with zero warnings. `Directory.Build.props` treats future compiler
+warnings as errors. Vendored source is covered separately by
+`scripts/Verify-VendoredSources.ps1` and `vendor-manifest.json`.
