@@ -23,13 +23,13 @@ namespace ZeepSDK.Crashlytics;
 [PublicAPI]
 public static class CrashlyticsApi
 {
-    private const string ExplicitConsentKey = "ZeepSDK.HasExplicitCrashlyticsConsent";
-    private const string NoticeSeenKey = "ZeepSDK.HasSeenCrashlyticsNotice";
+    private const string ExplicitConsentKey = "ZeepSDK.HasExplicitCrashlyticsConsent2";
+    private const string NoticeSeenKey = "ZeepSDK.HasSeenCrashlyticsNotice2";
     private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(CrashlyticsApi));
     private static CrashlyticsConsentDrawer _consentDrawer;
     private static bool _canInitialize;
     private static bool _initialized;
-    
+
     internal static void Initialize()
     {
         Shutdown();
@@ -155,7 +155,7 @@ public static class CrashlyticsApi
         if (!SteamClient.IsValid || !SteamClient.IsLoggedOn)
         {
             _logger.LogWarning("Steam isn't valid");
-            return;   
+            return;
         }
 
         try
