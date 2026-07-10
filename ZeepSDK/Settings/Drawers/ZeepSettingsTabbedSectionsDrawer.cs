@@ -40,21 +40,25 @@ public sealed class ZeepSettingsTabbedSectionsDrawer : IZeepSettingsDrawer
 
         using (gui.Indent())
         {
-            using (gui.Horizontal(gui.GetLayoutWidth()))
+            gui.PushId("tabs");
             {
-                for (var i = 0; i < _tabs.Count; i++)
+                using (gui.Horizontal(gui.GetLayoutWidth()))
                 {
-                    var tab = _tabs[i];
-                    gui.PushId((uint)i);
+                    for (var i = 0; i < _tabs.Count; i++)
                     {
-                        var controlId = gui.GetNextControlId();
-                        var rect = ImTabsPane.AddButtonRect(gui, tab.Label, default);
-                        if (ImTabsPane.TabBarButton(gui, controlId, _selectedTabIndex == i, tab.Label, rect))
-                            _selectedTabIndex = i;
+                        var tab = _tabs[i];
+                        gui.PushId((uint)i);
+                        {
+                            var controlId = gui.GetNextControlId();
+                            var rect = ImTabsPane.AddButtonRect(gui, tab.Label, default);
+                            if (ImTabsPane.TabBarButton(gui, controlId, _selectedTabIndex == i, tab.Label, rect))
+                                _selectedTabIndex = i;
+                        }
+                        gui.PopId();
                     }
-                    gui.PopId();
                 }
             }
+            gui.PopId();
 
             if (gui.Style.Tabs.SeparatorThickness > 0f)
             {
@@ -64,10 +68,14 @@ public sealed class ZeepSettingsTabbedSectionsDrawer : IZeepSettingsDrawer
 
             gui.AddSpacing(gui.Style.Layout.Spacing);
 
-            gui.PushId((uint)_selectedTabIndex);
+            gui.PushId("content");
             {
-                foreach (var drawer in _tabs[_selectedTabIndex].Drawers)
-                    drawer.Draw(gui, context);
+                gui.PushId((uint)_selectedTabIndex);
+                {
+                    foreach (var drawer in _tabs[_selectedTabIndex].Drawers)
+                        drawer.Draw(gui, context);
+                }
+                gui.PopId();
             }
             gui.PopId();
         }
