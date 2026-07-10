@@ -21,6 +21,7 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
     {
         public PluginInfo Plugin { get; }
         public IReadOnlyList<IZeepSettingsDrawer> Drawers { get; }
+        public bool UsesTabbedLayout { get; }
 
         public SelectedPluginInfo(PluginInfo plugin)
         {
@@ -29,34 +30,18 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
             if (plugin == null)
             {
                 Drawers = [];
+                UsesTabbedLayout = false;
                 return;
             }
 
-            var entriesBySection = BuildEntriesBySection(plugin);
+            var entriesBySection = ModSettingsDrawerBuildContext.BuildEntriesBySection(plugin);
             var buildContext = new ModSettingsDrawerBuildContext(plugin, entriesBySection);
 
             Drawers = ZeepSettingsDrawerRegistry.TryGetProvider(plugin.Metadata.GUID, out var provider)
                 ? provider(buildContext).ToList()
                 : buildContext.CreateDefaultDrawers().ToList();
-        }
 
-        private static Dictionary<string, IReadOnlyList<ConfigEntryBase>> BuildEntriesBySection(PluginInfo plugin)
-        {
-            var sections = new Dictionary<string, SortedList<string, ConfigEntryBase>>();
-
-            foreach ((ConfigDefinition definition, ConfigEntryBase entry) in plugin.Instance.Config)
-            {
-                if (!sections.TryGetValue(definition.Section, out var entries))
-                {
-                    sections.Add(definition.Section, entries = []);
-                }
-
-                entries.Add(definition.Key, entry);
-            }
-
-            return sections.ToDictionary(
-                x => x.Key,
-                x => (IReadOnlyList<ConfigEntryBase>)[.. x.Value.Values]);
+            UsesTabbedLayout = Drawers.Any(d => d is ZeepSettingsTabbedSectionsDrawer);
         }
     }
 
@@ -70,6 +55,9 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
     private ConfigEntry<KeyCode> _currentKeyCodeEntry;
     private KeyCode _currentKeyCode;
     private float _keyCodeCountdown = 10f;
+
+    private const float TabbedFlatTailFraction = 0.3f;
+    private const float MinTabContentHeight = 300f;
 
     public ZeepSettingsDrawer()
     {
@@ -125,9 +113,12 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
 
                 using (gui.Vertical(gui.GetLayoutWidth(), maxHeight))
                 {
-                    using (gui.Scrollable())
+                    if (_selectedPluginInfo?.UsesTabbedLayout == true)
+                        DrawSelectedPluginWithPadding(gui, maxHeight);
+                    else
                     {
-                        DrawSelectedPluginWithPadding(gui);
+                        using (gui.Scrollable())
+                            DrawSelectedPluginWithPadding(gui);
                     }
                 }
             }
@@ -150,7 +141,7 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
         }
     }
 
-    private void DrawSelectedPluginWithPadding(ImGui gui)
+    private void DrawSelectedPluginWithPadding(ImGui gui, float maxContentHeight = 0f)
     {
         var padding = gui.Style.Window.ContentPadding;
         var contentWidth = Mathf.Max(0, gui.GetLayoutWidth() - padding.Left - padding.Right);
@@ -164,7 +155,7 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
                 if (padding.Top > 0)
                     gui.AddSpacing(padding.Top);
 
-                DrawSelectedPlugin(gui);
+                DrawSelectedPlugin(gui, maxContentHeight);
 
                 if (padding.Bottom > 0)
                     gui.AddSpacing(padding.Bottom);
@@ -174,18 +165,74 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
         }
     }
 
-    private void DrawSelectedPlugin(ImGui gui)
+    private void DrawSelectedPlugin(ImGui gui, float maxContentHeight = 0f)
     {
         if (_selectedPluginInfo?.Plugin == null)
-        {
             return;
-        }
 
         gui.Text(_selectedPluginInfo.Plugin.Metadata.Name, new ImTextSettings(48, 0.5f));
 
-        foreach (var drawer in _selectedPluginInfo.Drawers)
+        if (!_selectedPluginInfo.UsesTabbedLayout)
         {
-            drawer.Draw(gui, _drawContext);
+            foreach (var drawer in _selectedPluginInfo.Drawers)
+                drawer.Draw(gui, _drawContext);
+
+            return;
+        }
+
+        var drawers = _selectedPluginInfo.Drawers;
+        var tabDrawerIndex = -1;
+        for (var i = 0; i < drawers.Count; i++)
+        {
+            if (drawers[i] is ZeepSettingsTabbedSectionsDrawer)
+            {
+                tabDrawerIndex = i;
+                break;
+            }
+        }
+
+        if (tabDrawerIndex < 0)
+        {
+            foreach (var drawer in drawers)
+                drawer.Draw(gui, _drawContext);
+
+            return;
+        }
+
+        var remainingHeight = maxContentHeight > 0f
+            ? Mathf.Max(0f, maxContentHeight - gui.GetRowsHeightWithSpacing(1))
+            : 0f;
+
+        var flatDrawerCount = drawers.Count - tabDrawerIndex - 1;
+        if (remainingHeight > 0f)
+        {
+            _drawContext.AvailableContentHeight = flatDrawerCount > 0
+                ? Mathf.Max(MinTabContentHeight, remainingHeight * (1f - TabbedFlatTailFraction))
+                : remainingHeight;
+        }
+        else
+        {
+            _drawContext.AvailableContentHeight = 0f;
+        }
+
+        drawers[tabDrawerIndex].Draw(gui, _drawContext);
+        _drawContext.AvailableContentHeight = 0f;
+
+        if (flatDrawerCount <= 0)
+            return;
+
+        if (remainingHeight > 0f)
+        {
+            using (gui.Scrollable())
+            {
+                for (var i = tabDrawerIndex + 1; i < drawers.Count; i++)
+                    drawers[i].Draw(gui, _drawContext);
+            }
+        }
+        else
+        {
+            for (var i = tabDrawerIndex + 1; i < drawers.Count; i++)
+                drawers[i].Draw(gui, _drawContext);
         }
     }
 
@@ -232,7 +279,7 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
             }
 
             gui.Layout.Pop();
-            gui.Canvas.PopRectMask();
+            gui.Canvas.PopClipRect();
             gui.Canvas.PopClipRect();
             gui.EndPopup();
         }
