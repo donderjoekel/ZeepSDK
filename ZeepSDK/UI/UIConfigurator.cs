@@ -67,7 +67,7 @@ internal class UIConfigurator : MonoBehaviour
     private RectTransform moveHandleRect;
     private RectTransform scaleHandleRect;
     private RectTransform resetHandleRect;
-    private Vector3[] corners = new Vector3[4];
+    private readonly Vector3[] corners = new Vector3[4];
 
     private int currentRectIndex;
     private RectTransform currentRect;
@@ -192,7 +192,6 @@ internal class UIConfigurator : MonoBehaviour
 
     private void DrawCurrentRectBorder()
     {
-        Vector3[] corners = new Vector3[4];
         currentRect.GetWorldCorners(corners);
 
         Canvas canvas = currentRect.GetComponentInParent<Canvas>();
