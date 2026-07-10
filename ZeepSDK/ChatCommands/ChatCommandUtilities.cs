@@ -7,7 +7,7 @@ internal static class ChatCommandUtilities
     public static bool MatchesCommand(string input, IChatCommand chatCommand)
     {
         if (string.IsNullOrEmpty(input) || chatCommand == null ||
-            string.IsNullOrEmpty(chatCommand.Prefix) || string.IsNullOrEmpty(chatCommand.Command))
+            string.IsNullOrEmpty(chatCommand.Prefix) || chatCommand.Command == null)
             return false;
 
         int commandLength = chatCommand.Prefix.Length + chatCommand.Command.Length;

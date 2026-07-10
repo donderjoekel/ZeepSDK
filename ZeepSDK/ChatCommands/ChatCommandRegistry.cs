@@ -239,7 +239,7 @@ public static class ChatCommandRegistry
             throw new ArgumentException("Command prefix must be 1-16 non-whitespace characters.", nameof(command));
         if (!IsValidCommandText(command.Command))
             throw new ArgumentException(
-                "Command text must be 1-64 characters, may contain internal spaces, and cannot contain edge whitespace or control characters.",
+                "Command text must be empty or 1-64 characters, may contain internal spaces, and cannot contain edge whitespace or control characters.",
                 nameof(command));
         if (command.Description == null)
             throw new ArgumentException("Command description cannot be null.", nameof(command));
@@ -255,7 +255,13 @@ public static class ChatCommandRegistry
 
     private static bool IsValidCommandText(string command)
     {
-        if (string.IsNullOrWhiteSpace(command) || command.Length > 64 ||
+        if (command == null || command.Length > 64)
+            return false;
+
+        if (command.Length == 0)
+            return true;
+
+        if (string.IsNullOrWhiteSpace(command) ||
             command[0] == ' ' || command[^1] == ' ')
         {
             return false;

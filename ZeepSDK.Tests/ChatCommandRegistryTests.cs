@@ -56,7 +56,6 @@ public class ChatCommandRegistryTests
 
     [Theory]
     [InlineData("", "command")]
-    [InlineData("!", "")]
     [InlineData("!", " leading")]
     [InlineData("!", "trailing ")]
     [InlineData("!", "two\twords")]
@@ -73,6 +72,29 @@ public class ChatCommandRegistryTests
     public void AcceptsMultiWordCommandsUsedByScriptingApi()
     {
         TestRemoteCommand command = new("/", "zua load", "description");
+
+        try
+        {
+            ChatCommandRegistry.RegisterRemoteChatCommand(command);
+
+            Assert.Contains(command, ChatCommandRegistry.RemoteChatCommands);
+        }
+        finally
+        {
+            ChatCommandRegistry.UnregisterRemoteChatCommand(command);
+        }
+    }
+
+    [Theory]
+    [InlineData("+")]
+    [InlineData("++")]
+    [InlineData("+-")]
+    [InlineData("-+")]
+    [InlineData("--")]
+    [InlineData("-")]
+    public void AcceptsPrefixOnlyOperatorCommands(string prefix)
+    {
+        TestRemoteCommand command = new(prefix, string.Empty, "description");
 
         try
         {

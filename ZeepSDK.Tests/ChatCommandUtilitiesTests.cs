@@ -33,6 +33,23 @@ public class ChatCommandUtilitiesTests
         Assert.Equal("player reason", ChatCommandUtilities.GetArguments("!kick  player reason ", Command));
     }
 
+    [Theory]
+    [InlineData("+")]
+    [InlineData("++")]
+    [InlineData("+-")]
+    [InlineData("-+")]
+    [InlineData("--")]
+    [InlineData("-")]
+    public void MatchesPrefixOnlyOperatorCommands(string trigger)
+    {
+        TestCommand command = new(trigger, string.Empty);
+
+        Assert.True(ChatCommandUtilities.MatchesCommand(trigger, command));
+        Assert.True(ChatCommandUtilities.MatchesCommand(trigger + " argument", command));
+        Assert.Equal("argument", ChatCommandUtilities.GetArguments(trigger + " argument", command));
+        Assert.False(ChatCommandUtilities.MatchesCommand(trigger + "+", command));
+    }
+
     private sealed class TestCommand(string prefix, string command) : IChatCommand
     {
         public string Prefix { get; } = prefix;
