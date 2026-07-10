@@ -22,9 +22,7 @@ public class PlaylistApi
     /// </summary>
     public static IReadOnlyList<PlaylistSaveJSON> GetPlaylists()
     {
-        string playlistsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-            "Zeepkist",
-            "Playlists");
+        string playlistsPath = PlaylistPath.DirectoryPath;
 
         if (!Directory.Exists(playlistsPath))
             return Array.Empty<PlaylistSaveJSON>();
@@ -85,6 +83,7 @@ public class PlaylistApi
     /// <returns>A new playlist or an existing playlist if one is found on disk</returns>
     public static PlaylistSaveJSON CreatePlaylist(string name)
     {
+        PlaylistPath.Resolve(name);
         PlaylistSaveJSON existingPlaylist = GetPlaylist(name);
 
         if (existingPlaylist != null)

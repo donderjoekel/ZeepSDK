@@ -89,11 +89,9 @@ internal class PlaylistEditor : IPlaylistEditor
 
         try
         {
-            string playlistPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                "Zeepkist",
-                "Playlists",
-                playlist.name + ".zeeplist");
+            string playlistPath = PlaylistPath.Resolve(playlist.name);
 
+            Directory.CreateDirectory(PlaylistPath.DirectoryPath);
             File.WriteAllText(playlistPath, json);
         }
         catch (Exception e)
