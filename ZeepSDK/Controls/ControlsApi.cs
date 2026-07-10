@@ -86,6 +86,7 @@ public static class ControlsApi
 
     internal static void Initialize()
     {
+        Shutdown();
         DefaultInputOverride.UpdateBaseValue(true);
         AdventureInputOverride.UpdateBaseValue(true);
         GameplayInputOverride.UpdateBaseValue(true);
@@ -95,55 +96,54 @@ public static class ControlsApi
         SpectateInputOverride.UpdateBaseValue(true);
         EventSystemOverride.UpdateBaseValue(true);
 
-        Input_DisableAllInput.Invoked += () =>
-        {
-            DefaultInputOverride.UpdateBaseValue(false);
-            MenuInputOverride.UpdateBaseValue(false);
-            OnlineInputOverride.UpdateBaseValue(false);
-        };
-        Input_EnableAllInput.Invoked += () =>
-        {
-            DefaultInputOverride.UpdateBaseValue(true);
-            MenuInputOverride.UpdateBaseValue(true);
-            OnlineInputOverride.UpdateBaseValue(true);
-        };
-        
-        Input_DisableAdventureInput.Invoked += () =>
-        {
-            AdventureInputOverride.UpdateBaseValue(false);
-        };
-        Input_EnableAdventureInput.Invoked += () =>
-        {
-            AdventureInputOverride.UpdateBaseValue(true);
-        };
-        
-        Input_DisableGameplayInput.Invoked += () =>
-        {
-            GameplayInputOverride.UpdateBaseValue(false);
-        };
-        Input_EnableGameplayInput.Invoked += () =>
-        {
-            GameplayInputOverride.UpdateBaseValue(true);
-        };
-        
-        Input_DisableLevelEditorInput.Invoked += () =>
-        {
-            LevelEditorInputOverride.UpdateBaseValue(false);
-        };
-        Input_EnableLevelEditorInput.Invoked += () =>
-        {
-            LevelEditorInputOverride.UpdateBaseValue(true);
-        };
-        
-        Input_DisableSpectateInput.Invoked += () =>
-        {
-            SpectateInputOverride.UpdateBaseValue(false);
-        };
-        Input_EnableSpectateInput.Invoked += () =>
-        {
-            SpectateInputOverride.UpdateBaseValue(true);
-        };
+        Input_DisableAllInput.Invoked += OnDisableAllInput;
+        Input_EnableAllInput.Invoked += OnEnableAllInput;
+        Input_DisableAdventureInput.Invoked += OnDisableAdventureInput;
+        Input_EnableAdventureInput.Invoked += OnEnableAdventureInput;
+        Input_DisableGameplayInput.Invoked += OnDisableGameplayInput;
+        Input_EnableGameplayInput.Invoked += OnEnableGameplayInput;
+        Input_DisableLevelEditorInput.Invoked += OnDisableLevelEditorInput;
+        Input_EnableLevelEditorInput.Invoked += OnEnableLevelEditorInput;
+        Input_DisableSpectateInput.Invoked += OnDisableSpectateInput;
+        Input_EnableSpectateInput.Invoked += OnEnableSpectateInput;
     }
+
+    internal static void Shutdown()
+    {
+        Input_DisableAllInput.Invoked -= OnDisableAllInput;
+        Input_EnableAllInput.Invoked -= OnEnableAllInput;
+        Input_DisableAdventureInput.Invoked -= OnDisableAdventureInput;
+        Input_EnableAdventureInput.Invoked -= OnEnableAdventureInput;
+        Input_DisableGameplayInput.Invoked -= OnDisableGameplayInput;
+        Input_EnableGameplayInput.Invoked -= OnEnableGameplayInput;
+        Input_DisableLevelEditorInput.Invoked -= OnDisableLevelEditorInput;
+        Input_EnableLevelEditorInput.Invoked -= OnEnableLevelEditorInput;
+        Input_DisableSpectateInput.Invoked -= OnDisableSpectateInput;
+        Input_EnableSpectateInput.Invoked -= OnEnableSpectateInput;
+    }
+
+    private static void OnDisableAllInput()
+    {
+        DefaultInputOverride.UpdateBaseValue(false);
+        MenuInputOverride.UpdateBaseValue(false);
+        OnlineInputOverride.UpdateBaseValue(false);
+    }
+
+    private static void OnEnableAllInput()
+    {
+        DefaultInputOverride.UpdateBaseValue(true);
+        MenuInputOverride.UpdateBaseValue(true);
+        OnlineInputOverride.UpdateBaseValue(true);
+    }
+
+    private static void OnDisableAdventureInput() => AdventureInputOverride.UpdateBaseValue(false);
+    private static void OnEnableAdventureInput() => AdventureInputOverride.UpdateBaseValue(true);
+    private static void OnDisableGameplayInput() => GameplayInputOverride.UpdateBaseValue(false);
+    private static void OnEnableGameplayInput() => GameplayInputOverride.UpdateBaseValue(true);
+    private static void OnDisableLevelEditorInput() => LevelEditorInputOverride.UpdateBaseValue(false);
+    private static void OnEnableLevelEditorInput() => LevelEditorInputOverride.UpdateBaseValue(true);
+    private static void OnDisableSpectateInput() => SpectateInputOverride.UpdateBaseValue(false);
+    private static void OnEnableSpectateInput() => SpectateInputOverride.UpdateBaseValue(true);
 
     /// <summary>
     /// Disables all input maps and the EventSystem.

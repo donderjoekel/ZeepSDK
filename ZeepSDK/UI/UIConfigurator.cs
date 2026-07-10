@@ -80,7 +80,7 @@ internal class UIConfigurator : MonoBehaviour
         RegisterConfig();
         LoadSaveData();
 
-        SceneManager_LoadScene.BeforeLoadScene += () => DisableEditMode();
+        SceneManager_LoadScene.BeforeLoadScene += OnBeforeLoadScene;
     }
 
     private void RegisterConfig()
@@ -123,10 +123,26 @@ internal class UIConfigurator : MonoBehaviour
                 "Selected UI element color",
                 new AcceptableValueList<string>(ColorUtility.ColorDefinitions.Select(x => x.Name).ToArray())));
 
-        configResetAllButton.SettingChanged += (sender, args) => ResetAll();
-        configBorderColor.SettingChanged += (sender, args) => SetColor(configBorderColor.Value);
+        configResetAllButton.SettingChanged += OnResetAllSettingChanged;
+        configBorderColor.SettingChanged += OnBorderColorSettingChanged;
         SetColor(configBorderColor.Value);
     }
+
+    private void OnDestroy()
+    {
+        SceneManager_LoadScene.BeforeLoadScene -= OnBeforeLoadScene;
+        if (configResetAllButton != null)
+            configResetAllButton.SettingChanged -= OnResetAllSettingChanged;
+        if (configBorderColor != null)
+            configBorderColor.SettingChanged -= OnBorderColorSettingChanged;
+    }
+
+    private void OnResetAllSettingChanged(object sender, EventArgs args) => ResetAll();
+
+    private void OnBeforeLoadScene() => DisableEditMode();
+
+    private void OnBorderColorSettingChanged(object sender, EventArgs args)
+        => SetColor(configBorderColor.Value);
 
     private void SetColor(string colorName)
     {

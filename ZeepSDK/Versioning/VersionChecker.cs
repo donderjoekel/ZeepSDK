@@ -30,6 +30,7 @@ internal class VersionChecker
     {
         Timeout = TimeSpan.FromSeconds(15)
     };
+    private static LevelLoadedDelegate outdatedModsChatHandler;
 
     public static async UniTask CheckVersions(CancellationToken cancellationToken)
     {
@@ -57,7 +58,9 @@ internal class VersionChecker
                 : $"{workSprite} <color=red>You have {outdatedMods} outdated mods</color> {workSprite}");
         }
 
-        RacingApi.LevelLoaded += LogOutdatedModsToChat;
+        Shutdown();
+        outdatedModsChatHandler = LogOutdatedModsToChat;
+        RacingApi.LevelLoaded += outdatedModsChatHandler;
 
         try
         {
@@ -71,6 +74,13 @@ internal class VersionChecker
         MessengerApi.LogWarning(outdatedMods == 1
             ? "You have 1 outdated mod"
             : $"You have {outdatedMods} outdated mods");
+    }
+
+    internal static void Shutdown()
+    {
+        if (outdatedModsChatHandler != null)
+            RacingApi.LevelLoaded -= outdatedModsChatHandler;
+        outdatedModsChatHandler = null;
     }
 
     private static async UniTask WaitForScene(CancellationToken cancellationToken)

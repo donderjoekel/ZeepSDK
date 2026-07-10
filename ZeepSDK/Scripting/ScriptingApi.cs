@@ -40,6 +40,13 @@ public static class ScriptingApi
             });
     }
 
+    internal static void Shutdown()
+    {
+        foreach (Zua zua in loadedScripts.Values.ToArray())
+            zua.Unload();
+        loadedScripts.Clear();
+    }
+
     /// <summary>
     /// Calls a Lua function by name with the specified arguments on all loaded scripts
     /// </summary>

@@ -7,19 +7,26 @@ using ZeepSDK.Utilities;
 
 namespace ZeepSDK.ChatCommands;
 
-internal class RemoteChatMessageHandler : MonoBehaviourWithLogging
+internal class RemoteChatMessageHandler : MonoBehaviourWithLogging, IDisposable
 {
     private const int MaximumMessageLength = 1024;
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger<RemoteChatMessageHandler>();
     private readonly RemoteCommandRateLimiter rateLimiter = new();
+    private bool disposed;
 
     private void Start()
     {
         ChatApi.ChatMessageReceived += OnChatMessageReceived;
     }
 
-    private void OnDestroy()
+    private void OnDestroy() => Dispose();
+
+    public void Dispose()
     {
+        if (disposed)
+            return;
+
+        disposed = true;
         ChatApi.ChatMessageReceived -= OnChatMessageReceived;
     }
 

@@ -25,6 +25,7 @@ public static class UIApi
 
     internal static void Initialize(GameObject gameObject)
     {
+        Shutdown();
         _uiConfigurator = gameObject.AddComponent<UIConfigurator>();
         _zeepGUI = gameObject.AddComponent<ZeepGUI>();
         _zeepToolbar = new ZeepToolbar();
@@ -36,6 +37,18 @@ public static class UIApi
         OnlineGameplayUI_Awake.Awake += OnOnlineGameplayUIAwake;
         PlayerScreensUI_Awake.Awake += OnPlayerScreensUIAwake;
         SpectatorCameraUI_Awake.Awake += OnSpectatorCameraUIAwake;
+    }
+
+    internal static void Shutdown()
+    {
+        OnlineChatUI_Awake.Awake -= OnOnlineChatUIAwake;
+        OnlineGameplayUI_Awake.Awake -= OnOnlineGameplayUIAwake;
+        PlayerScreensUI_Awake.Awake -= OnPlayerScreensUIAwake;
+        SpectatorCameraUI_Awake.Awake -= OnSpectatorCameraUIAwake;
+        _zeepTooltip = null;
+        _zeepToolbar = null;
+        _zeepGUI = null;
+        _uiConfigurator = null;
     }
 
     private static void OnOnlineChatUIAwake(OnlineChatUI instance)

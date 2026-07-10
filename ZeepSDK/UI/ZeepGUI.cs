@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Imui.Core;
+using Imui.IO.UGUI;
 using Imui.Style;
 using UnityEngine;
 using ZeepSDK.UI.Patches;
@@ -14,13 +15,21 @@ internal class ZeepGUI : MonoBehaviour
     
     private void Awake()
     {
-        ImuiUnityGUIBackend_Awake.Awake += backend =>
-        {
-            _gui = new ImGui(backend, backend);
-            OnThemeChanged(null, null);
-        };
-        
+        ImuiUnityGUIBackend_Awake.Awake += OnBackendAwake;
         Plugin.Instance.Theme.SettingChanged += OnThemeChanged;
+    }
+
+    private void OnDestroy()
+    {
+        ImuiUnityGUIBackend_Awake.Awake -= OnBackendAwake;
+        if (Plugin.Instance?.Theme != null)
+            Plugin.Instance.Theme.SettingChanged -= OnThemeChanged;
+    }
+
+    private void OnBackendAwake(ImuiUnityGUIBackend backend)
+    {
+        _gui = new ImGui(backend, backend);
+        OnThemeChanged(null, null);
     }
 
     private void OnThemeChanged(object sender, EventArgs e)

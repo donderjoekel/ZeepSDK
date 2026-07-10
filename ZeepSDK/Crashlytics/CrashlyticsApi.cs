@@ -32,6 +32,7 @@ public static class CrashlyticsApi
     
     internal static void Initialize()
     {
+        Shutdown();
         OpenUIOnStart_Start.Postfixed += OnPostfix;
         Plugin.Instance.ConsentToCrashlytics.SettingChanged += OnConsentSettingChanged;
     }

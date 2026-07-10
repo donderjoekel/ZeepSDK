@@ -93,7 +93,20 @@ namespace ZeepSDK
             shutdownCancellation?.Cancel();
             shutdownCancellation?.Dispose();
             shutdownCancellation = null;
+            VersionChecker.Shutdown();
+            SettingsApi.Shutdown();
+            ControlsApi.Shutdown();
+            ScriptingApi.Shutdown();
+            UIApi.Shutdown();
+            PhotoModeApi.Shutdown();
+            MultiplayerApi.Shutdown();
+            RacingApi.Shutdown();
+            LevelEditorApi.Shutdown();
+            LevelApi.Shutdown();
+            LeaderboardApi.Shutdown();
             CrashlyticsApi.Shutdown();
+            ChatCommandApi.Shutdown();
+            ChatApi.Shutdown();
             harmony?.UnpatchSelf();
             harmony = null;
         }

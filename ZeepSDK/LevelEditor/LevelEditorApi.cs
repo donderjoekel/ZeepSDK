@@ -29,6 +29,7 @@ public static class LevelEditorApi
 
     private static GameObject gameObject;
     private static LEV_Inspector inspector;
+    private static LEV_Selection selection;
 
     /// <summary>
     /// An event that is fired when the user enters test mode
@@ -88,46 +89,78 @@ public static class LevelEditorApi
 
     internal static void Initialize(GameObject gameObject)
     {
+        Shutdown();
         LevelEditorApi.gameObject = gameObject;
 
-        SceneManager.sceneLoaded += (scene, mode) =>
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        LEV_Inspector_Awake.Awake += OnInspectorAwake;
+        LEV_LevelEditorCentral_OnDestroy.PostfixEvent += OnLevelEditorDestroyed;
+        LEV_SaveLoad_ExternalLoad.PostfixEvent += OnLevelLoaded;
+        LEV_SaveLoad_ExternalSaveFile.PostfixEvent += OnLevelSaved;
+    }
+
+    internal static void Shutdown()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        LEV_Inspector_Awake.Awake -= OnInspectorAwake;
+        LEV_LevelEditorCentral_OnDestroy.PostfixEvent -= OnLevelEditorDestroyed;
+        LEV_SaveLoad_ExternalLoad.PostfixEvent -= OnLevelLoaded;
+        LEV_SaveLoad_ExternalSaveFile.PostfixEvent -= OnLevelSaved;
+        DetachSelectionListeners();
+        inspector = null;
+        gameObject = null;
+        IsInLevelEditor = false;
+        IsTestingLevel = false;
+    }
+
+    private static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name != "GameScene" || ZeepkistNetwork.IsConnectedToGame)
+            return;
+
+        if (SetupGame.GlobalLevel.IsTestLevel)
         {
-            if (scene.name != "GameScene")
-                return;
+            EnteredTestMode.InvokeSafe();
+            IsTestingLevel = true;
+        }
+    }
 
-            if (ZeepkistNetwork.IsConnectedToGame)
-                return;
-
-            if (SetupGame.GlobalLevel.IsTestLevel)
-            {
-                EnteredTestMode.InvokeSafe();
-                IsTestingLevel = true;
-            }
-        };
-
-        LEV_Inspector_Awake.Awake += inspector =>
+    private static void OnInspectorAwake(LEV_Inspector newInspector)
+    {
+        if (inspector != newInspector)
         {
-            if (LevelEditorApi.inspector != inspector)
-            {
-                LevelEditorApi.inspector = inspector;
-                AddScheduledCustomFolders();
-            }
+            inspector = newInspector;
+            AddScheduledCustomFolders();
+        }
 
-            ComponentCache.Get<LEV_Selection>().ThingsJustGotSelected.AddListener(HandleThingsJustGotSelected);
-            ComponentCache.Get<LEV_Selection>().ThingsJustGotDeselected.AddListener(HandleThingsJustGotDeselected);
+        DetachSelectionListeners();
+        selection = ComponentCache.Get<LEV_Selection>();
+        selection.ThingsJustGotSelected.AddListener(HandleThingsJustGotSelected);
+        selection.ThingsJustGotDeselected.AddListener(HandleThingsJustGotDeselected);
 
-            EnteredLevelEditor.InvokeSafe();
-            IsInLevelEditor = true;
-            IsTestingLevel = false;
-        };
+        EnteredLevelEditor.InvokeSafe();
+        IsInLevelEditor = true;
+        IsTestingLevel = false;
+    }
 
-        LEV_LevelEditorCentral_OnDestroy.PostfixEvent += () =>
-        {
-            ExitedLevelEditor.InvokeSafe();
-            IsInLevelEditor = false;
-        };
-        LEV_SaveLoad_ExternalLoad.PostfixEvent += () => LevelLoaded.InvokeSafe();
-        LEV_SaveLoad_ExternalSaveFile.PostfixEvent += () => LevelSaved.InvokeSafe();
+    private static void OnLevelEditorDestroyed()
+    {
+        DetachSelectionListeners();
+        ExitedLevelEditor.InvokeSafe();
+        IsInLevelEditor = false;
+    }
+
+    private static void OnLevelLoaded() => LevelLoaded.InvokeSafe();
+    private static void OnLevelSaved() => LevelSaved.InvokeSafe();
+
+    private static void DetachSelectionListeners()
+    {
+        if (selection == null)
+            return;
+
+        selection.ThingsJustGotSelected.RemoveListener(HandleThingsJustGotSelected);
+        selection.ThingsJustGotDeselected.RemoveListener(HandleThingsJustGotDeselected);
+        selection = null;
     }
 
     private static void HandleThingsJustGotSelected()
