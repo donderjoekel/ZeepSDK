@@ -43,15 +43,22 @@ internal sealed class CrashlyticsConsentDrawer : IZeepGUIDrawer, IDisposable
             gui.Text("Crash reporting", new ImTextSettings(36, 0.5f));
             gui.AddSpacing(8);
             gui.Text(
-                "Help ZeepSDK and other mod developers fix crashes faster by sharing crash reports. " +
-                "Good reports make bugs much easier to reproduce and make mod developers' lives easier.",
+                "Help ZeepSDK and other mod developers fix crashes faster by sharing crash reports.",
                 new ImTextSettings(18, 0f, 0f, true));
-            gui.AddSpacing(12);
+            gui.AddSpacing(8);
+            gui.Text(
+                "Automatic crash reports make bugs much easier to reproduce and make mod developers' lives easier.",
+                new ImTextSettings(18, 0f, 0f, true));
+            gui.AddSpacing(8);
             gui.Text(
                 "Reports are sent to Bugsnag only after you accept. They include your Steam identity, " +
-                "installed mod names and versions, and exception details. You can change this choice later " +
-                "in Zeep Settings.",
+                "installed mod names/versions and exception details.",
                 new ImTextSettings(18, 0f, 0f, true));
+            gui.AddSpacing(8);
+            gui.Text(
+                "You can change this choice later in Settings > Mods > Zeep SDK > General ",
+                new ImTextSettings(18, 0f, 0f, true));
+            gui.AddSpacing(8);
 
             const float buttonWidth = 220;
             const float buttonHeight = 52;

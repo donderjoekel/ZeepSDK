@@ -54,7 +54,7 @@ namespace ZeepSDK
                 Config.Bind("General", "Toggle Menu Bar Key", KeyCode.None, "The key to toggle the menu bar");
             ConsentToCrashlytics = Config.Bind("General", "Crashlytics Enabled", false,
                 "Opt in to sending crash reports, Steam identity, and installed mod versions to Bugsnag");
-            Theme = Config.Bind("General", "Theme", ZeepStyle.Light, "The theme to use for displaying UI like these");
+            Theme = Config.Bind("General", "Theme", ZeepStyle.Orange, "The theme to use for displaying UI like these");
 
             Config.SaveOnConfigSet = true;
 
