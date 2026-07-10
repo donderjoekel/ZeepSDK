@@ -69,6 +69,20 @@ public class ChatCommandRegistryTests
     }
 
     [Fact]
+    public void ValidationErrorIdentifiesCommandAndEscapesControlCharacters()
+    {
+        TestRemoteCommand command = new("!", "bad\tcommand", "description");
+
+        ArgumentException exception = Assert.Throws<ArgumentException>(() =>
+            ChatCommandRegistry.RegisterRemoteChatCommand(command));
+
+        Assert.Contains(typeof(TestRemoteCommand).FullName, exception.Message);
+        Assert.Contains("prefix='!'", exception.Message);
+        Assert.Contains("command='bad\\tcommand'", exception.Message);
+        Assert.DoesNotContain("bad\tcommand", exception.Message);
+    }
+
+    [Fact]
     public void AcceptsMultiWordCommandsUsedByScriptingApi()
     {
         TestRemoteCommand command = new("/", "zua load", "description");

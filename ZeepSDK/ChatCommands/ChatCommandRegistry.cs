@@ -235,16 +235,45 @@ public static class ChatCommandRegistry
     {
         if (command == null)
             throw new ArgumentNullException(nameof(command));
+
+        string commandIdentity = DescribeCommand(command);
         if (!IsValidPrefix(command.Prefix))
-            throw new ArgumentException("Command prefix must be 1-16 non-whitespace characters.", nameof(command));
+            throw new ArgumentException(
+                $"Cannot register {commandIdentity}: prefix must be 1-16 non-whitespace characters.",
+                nameof(command));
         if (!IsValidCommandText(command.Command))
             throw new ArgumentException(
-                "Command text must be empty or 1-64 characters, may contain internal spaces, and cannot contain edge whitespace or control characters.",
+                $"Cannot register {commandIdentity}: command text must be empty or 1-64 characters, may contain internal spaces, and cannot contain edge whitespace or control characters.",
                 nameof(command));
         if (command.Description == null)
-            throw new ArgumentException("Command description cannot be null.", nameof(command));
+            throw new ArgumentException(
+                $"Cannot register {commandIdentity}: description cannot be null.",
+                nameof(command));
         if (command.Description.Length > 512)
-            throw new ArgumentException("Command description cannot exceed 512 characters.", nameof(command));
+            throw new ArgumentException(
+                $"Cannot register {commandIdentity}: description cannot exceed 512 characters.",
+                nameof(command));
+    }
+
+    private static string DescribeCommand(IChatCommand command)
+        => $"command type '{command.GetType().FullName}' " +
+           $"(prefix='{EscapeForLog(command.Prefix)}', command='{EscapeForLog(command.Command)}')";
+
+    private static string EscapeForLog(string value)
+    {
+        if (value == null)
+            return "<null>";
+
+        const int maximumLength = 80;
+        string escaped = value
+            .Replace("\\", "\\\\")
+            .Replace("\r", "\\r")
+            .Replace("\n", "\\n")
+            .Replace("\t", "\\t");
+
+        return escaped.Length <= maximumLength
+            ? escaped
+            : escaped[..maximumLength] + "...";
     }
 
     private static bool IsValidPrefix(string prefix)
