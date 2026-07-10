@@ -17,6 +17,7 @@ public class Zua
 
     private Script script;
     private bool loaded;
+    private bool unloading;
     private readonly List<ILuaEvent> registeredEvents = [];
     private readonly List<ILuaEvent> subscribedEvents = [];
 
@@ -32,9 +33,18 @@ public class Zua
         RegisterAllEventsInCurrentAssembly();
         ZuaFunctionCache.RegisterCachedFunctions(this);
         ZuaEventCache.RegisterCachedEvents(this);
-        script.DoString(luaContent);
-        loaded = true;
-        CallFunction("OnLoad");
+        try
+        {
+            script.DoString(luaContent);
+            loaded = true;
+            CallFunction("OnLoad");
+        }
+        catch
+        {
+            Unsubscribe();
+            script = null;
+            throw;
+        }
     }
 
     /// <summary>
@@ -42,10 +52,21 @@ public class Zua
     /// </summary>
     public void Unload()
     {
-        CallFunction("OnUnload");
-        Unsubscribe();
-        loaded = false;
-        ScriptingApi.UnloadZua(this);
+        if (!loaded || unloading)
+            return;
+
+        unloading = true;
+        try
+        {
+            CallFunction("OnUnload");
+        }
+        finally
+        {
+            Unsubscribe();
+            loaded = false;
+            unloading = false;
+            ScriptingApi.UnloadZua(this);
+        }
     }
 
     /// <summary>
@@ -87,6 +108,9 @@ public class Zua
     /// <param name="args">The arguments to pass to the Lua function.</param>
     public void CallFunction(string name, params object[] args)
     {
+        if (!loaded && !unloading)
+            return;
+
         try
         {
             DynValue function = script.Globals.Get(name);
