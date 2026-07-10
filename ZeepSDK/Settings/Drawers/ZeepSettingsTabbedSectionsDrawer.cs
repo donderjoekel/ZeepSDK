@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Imui.Controls;
 using Imui.Core;
+using UnityEngine;
 
 namespace ZeepSDK.Settings.Drawers;
 
@@ -22,14 +23,11 @@ public sealed class ZeepSettingsTabbedSectionsDrawer : IZeepSettingsDrawer
     }
 
     private readonly IReadOnlyList<TabContent> _tabs;
-    private readonly float _defaultHeight;
+    private int _selectedTabIndex;
 
-    internal ZeepSettingsTabbedSectionsDrawer(
-        IReadOnlyList<TabContent> tabs,
-        float defaultHeight = 560f)
+    internal ZeepSettingsTabbedSectionsDrawer(IReadOnlyList<TabContent> tabs)
     {
         _tabs = tabs;
-        _defaultHeight = defaultHeight;
     }
 
     /// <inheritdoc />
@@ -38,25 +36,40 @@ public sealed class ZeepSettingsTabbedSectionsDrawer : IZeepSettingsDrawer
         if (_tabs == null || _tabs.Count == 0)
             return;
 
-        var height = context.AvailableContentHeight > 0f
-            ? context.AvailableContentHeight
-            : _defaultHeight;
+        _selectedTabIndex = Mathf.Clamp(_selectedTabIndex, 0, _tabs.Count - 1);
 
         using (gui.Indent())
         {
-            gui.BeginTabsPane(gui.AddLayoutRect(gui.GetLayoutWidth(), height));
-            foreach (var tab in _tabs)
+            using (gui.Horizontal(gui.GetLayoutWidth()))
             {
-                if (gui.BeginTab(tab.Label))
+                for (var i = 0; i < _tabs.Count; i++)
                 {
-                    foreach (var drawer in tab.Drawers)
-                        drawer.Draw(gui, context);
-
-                    gui.EndTab();
+                    var tab = _tabs[i];
+                    gui.PushId((uint)i);
+                    {
+                        var controlId = gui.GetNextControlId();
+                        var rect = ImTabsPane.AddButtonRect(gui, tab.Label, default);
+                        if (ImTabsPane.TabBarButton(gui, controlId, _selectedTabIndex == i, tab.Label, rect))
+                            _selectedTabIndex = i;
+                    }
+                    gui.PopId();
                 }
             }
 
-            gui.EndTabsPane();
+            if (gui.Style.Tabs.SeparatorThickness > 0f)
+            {
+                var sepRect = gui.AddLayoutRect(gui.GetLayoutWidth(), gui.Style.Tabs.SeparatorThickness);
+                gui.Canvas.Rect(sepRect, gui.Style.Tabs.SeparatorColor);
+            }
+
+            gui.AddSpacing(gui.Style.Layout.Spacing);
+
+            gui.PushId((uint)_selectedTabIndex);
+            {
+                foreach (var drawer in _tabs[_selectedTabIndex].Drawers)
+                    drawer.Draw(gui, context);
+            }
+            gui.PopId();
         }
     }
 }

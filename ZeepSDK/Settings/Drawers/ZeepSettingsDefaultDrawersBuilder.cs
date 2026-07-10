@@ -9,8 +9,6 @@ namespace ZeepSDK.Settings.Drawers;
 /// </summary>
 internal static class ZeepSettingsDefaultDrawersBuilder
 {
-    private const float DefaultTabContentHeight = 560f;
-
     /// <summary>
     /// Builds the default drawer list: section header, entry, separator, and section spacing.
     /// When tab configuration exists for the plugin, tabbed sections are rendered first and
@@ -135,6 +133,6 @@ internal static class ZeepSettingsDefaultDrawersBuilder
                 tabs.Add(new ZeepSettingsTabbedSectionsDrawer.TabContent(tab.Label, tabDrawers));
         }
 
-        return new ZeepSettingsTabbedSectionsDrawer(tabs, DefaultTabContentHeight);
+        return new ZeepSettingsTabbedSectionsDrawer(tabs);
     }
 }
