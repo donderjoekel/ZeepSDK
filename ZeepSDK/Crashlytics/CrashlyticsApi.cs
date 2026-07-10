@@ -25,11 +25,27 @@ namespace ZeepSDK.Crashlytics;
 [PublicAPI]
 public static class CrashlyticsApi
 {
+    private const string ExplicitConsentKey = "ZeepSDK.HasExplicitCrashlyticsConsent";
+    private const string NoticeSeenKey = "ZeepSDK.HasSeenCrashlyticsNotice";
     private static readonly ManualLogSource _logger = LoggerFactory.GetLogger(typeof(CrashlyticsApi));
+    private static bool _canInitialize;
     
-    internal static void Initialize(GameObject gameObject)
+    internal static void Initialize()
     {
         OpenUIOnStart_Start.Postfixed += OnPostfix;
+        Plugin.Instance.ConsentToCrashlytics.SettingChanged += OnConsentSettingChanged;
+    }
+
+    internal static void Shutdown()
+    {
+        OpenUIOnStart_Start.Postfixed -= OnPostfix;
+
+        if (Plugin.Instance?.ConsentToCrashlytics != null)
+            Plugin.Instance.ConsentToCrashlytics.SettingChanged -= OnConsentSettingChanged;
+
+        _canInitialize = false;
+        if (Bugsnag.IsStarted())
+            Bugsnag.PauseSession();
     }
 
     /// <summary>
@@ -39,7 +55,8 @@ public static class CrashlyticsApi
     /// <param name="metadata"></param>
     public static void LeaveBreadcrumb(string message, Dictionary<string,object> metadata = null)
     {
-        Bugsnag.LeaveBreadcrumb(message, metadata, BreadcrumbType.Manual);
+        if (CanSend())
+            Bugsnag.LeaveBreadcrumb(message, metadata, BreadcrumbType.Manual);
     }
 
     /// <summary>
@@ -48,25 +65,67 @@ public static class CrashlyticsApi
     /// <param name="exception"></param>
     public static void Notify(Exception exception)
     {
-        Bugsnag.Notify(exception);
+        if (CanSend())
+            Bugsnag.Notify(exception);
     }
 
     private static void OnPostfix(OpenUIOnStart instance)
     {
-        if (instance.hasMod && PlayerPrefs.GetInt("ZeepSDK.HasGivenConsent", 0) == 0)
+        _canInitialize = true;
+
+        if (PlayerPrefs.GetInt(ExplicitConsentKey, 0) != 1 && Plugin.Instance.ConsentToCrashlytics.Value)
+            Plugin.Instance.ConsentToCrashlytics.Value = false;
+
+        if (instance.hasMod && PlayerPrefs.GetInt(NoticeSeenKey, 0) == 0)
         {
-            WaitForDestroy(instance).Forget();    
+            ShowCrashlyticsNotice(instance).Forget();
         }
 
-        if (Plugin.Instance.ConsentToCrashlytics.Value)
+        if (HasConsent())
         {
             _logger.LogInfo("Initializing bugsnag");
             InitializeBugsnag();
         }
     }
 
+    private static void OnConsentSettingChanged(object sender, EventArgs args)
+    {
+        if (Plugin.Instance.ConsentToCrashlytics.Value)
+        {
+            PlayerPrefs.SetInt(ExplicitConsentKey, 1);
+            PlayerPrefs.Save();
+
+            if (_canInitialize)
+                InitializeBugsnag();
+        }
+        else if (Bugsnag.IsStarted())
+        {
+            Bugsnag.PauseSession();
+        }
+    }
+
+    private static bool HasConsent()
+    {
+        return Plugin.Instance?.ConsentToCrashlytics?.Value == true &&
+               PlayerPrefs.GetInt(ExplicitConsentKey, 0) == 1;
+    }
+
+    private static bool CanSend()
+    {
+        return HasConsent() && Bugsnag.IsStarted();
+    }
+
     private static void InitializeBugsnag()
     {
+        if (!HasConsent())
+            return;
+
+        if (Bugsnag.IsStarted())
+        {
+            Bugsnag.ResumeSession();
+            return;
+        }
+
         if (!SteamClient.IsValid || !SteamClient.IsLoggedOn)
         {
             _logger.LogWarning("Steam isn't valid");
@@ -83,11 +142,12 @@ public static class CrashlyticsApi
                 configuration.AddOnSendError(AddOnSend);
 
                 Dictionary<string, object> modVersions = Chainloader.PluginInfos.ToDictionary(
-                    x => x.Value.Metadata.Name,
-                    object (y) => y.Value.Metadata.Version.ToString());
+                    x => x.Value.Metadata.GUID,
+                    object (y) => $"{y.Value.Metadata.Name} {y.Value.Metadata.Version}");
                 configuration.AddMetadata("Mods", modVersions);
             });
 
+            Bugsnag.SetUser(SteamClient.SteamId.Value.ToString(), null, SteamClient.Name);
             _logger.LogInfo("Bugsnag initialized");
         }
         catch (Exception e)
@@ -96,11 +156,13 @@ public static class CrashlyticsApi
             _logger.LogFatal(e);
         }
 
-        Bugsnag.SetUser(SteamClient.SteamId.Value.ToString(), null, SteamClient.Name);
     }
 
     private static bool AddOnSend(IEvent evt)
     {
+        if (!HasConsent())
+            return false;
+
         HashSet<Assembly> assemblies = [];
 
         try
@@ -109,7 +171,12 @@ public static class CrashlyticsApi
             {
                 foreach (IStackframe frame in error.Stacktrace)
                 {
-                    string sub = frame.Method[..frame.Method.LastIndexOf('(')];
+                    string method = frame.Method;
+                    if (string.IsNullOrEmpty(method))
+                        continue;
+
+                    int parameterListIndex = method.LastIndexOf('(');
+                    string sub = parameterListIndex > 0 ? method[..parameterListIndex] : method;
                     int index;
                     while ((index = sub.LastIndexOf('.')) != -1)
                     {
@@ -134,7 +201,7 @@ public static class CrashlyticsApi
         return true;
     }
 
-    private static async UniTaskVoid WaitForDestroy(OpenUIOnStart instance)
+    private static async UniTaskVoid ShowCrashlyticsNotice(OpenUIOnStart instance)
     {
         await instance.modPanel.GetAsyncDisableTrigger().OnDisableAsync();
 
@@ -144,19 +211,19 @@ public static class CrashlyticsApi
 
         Transform child = newModPanel.transform.Find("You Have Mods Installed");
         TextMeshProUGUI tmp = child.GetComponent<TextMeshProUGUI>();
-        tmp.text = "Wait, hol'up!<br>" +
+        tmp.text = "Crash reporting is disabled by default.<br>" +
                    "<br>" +
-                   "Because making mods is tough and it is hard to figure things out when they go wrong, ZeepSDK now comes with an automatic exception/crash information collector.<br>" +
+                   "You can opt in from ZeepSettings. Reports include your Steam identity, installed mod names and versions, and exception details.<br>" +
                    "<br>" +
-                   "If you do NOT want this then you can disable this from within ZeepSettings!<br>";
+                   "Leave the setting disabled if you do not want this data sent to Bugsnag.<br>";
 
         await UniTask.NextFrame(PlayerLoopTiming.Update);
         await UniTask.WaitUntil(() => ReInput.controllers.GetAnyButtonDown());
 
         instance.UI.gameObject.SetActive(true);
-        newModPanel.gameObject.SetActive(false);
+        Object.Destroy(newModPanel);
 
-        PlayerPrefs.SetInt("ZeepSDK.HasGivenConsent", 1);
+        PlayerPrefs.SetInt(NoticeSeenKey, 1);
         PlayerPrefs.Save();
     }
 }

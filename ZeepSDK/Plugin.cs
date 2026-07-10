@@ -49,8 +49,8 @@ namespace ZeepSDK
 
             ToggleMenuBarKey =
                 Config.Bind("General", "Toggle Menu Bar Key", KeyCode.None, "The key to toggle the menu bar");
-            ConsentToCrashlytics = Config.Bind("General", "Crashlytics Enabled", true,
-                "Can ZeepSDK send crashlytics in order to help us fix bugs");
+            ConsentToCrashlytics = Config.Bind("General", "Crashlytics Enabled", false,
+                "Opt in to sending crash reports, Steam identity, and installed mod versions to Bugsnag");
             Theme = Config.Bind("General", "Theme", ZeepStyle.Light, "The theme to use for displaying UI like these");
 
             Config.SaveOnConfigSet = true;
@@ -66,7 +66,7 @@ namespace ZeepSDK
 
             ChatApi.Initialize(gameObject);
             ChatCommandApi.Initialize(gameObject);
-            CrashlyticsApi.Initialize(gameObject);
+            CrashlyticsApi.Initialize();
             LeaderboardApi.Initialize(gameObject);
             LevelApi.Initialize();
             LevelEditorApi.Initialize(gameObject);
@@ -86,6 +86,7 @@ namespace ZeepSDK
 
         private void OnDestroy()
         {
+            CrashlyticsApi.Shutdown();
             harmony?.UnpatchSelf();
             harmony = null;
         }
