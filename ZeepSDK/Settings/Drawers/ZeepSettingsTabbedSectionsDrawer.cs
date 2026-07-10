@@ -47,7 +47,7 @@ public sealed class ZeepSettingsTabbedSectionsDrawer : IZeepSettingsDrawer
                     for (var i = 0; i < _tabs.Count; i++)
                     {
                         var tab = _tabs[i];
-                        gui.PushId((uint)i);
+                        gui.PushId(gui.GetControlId((uint)i));
                         {
                             var controlId = gui.GetNextControlId();
                             var rect = ImTabsPane.AddButtonRect(gui, tab.Label, default);
@@ -70,7 +70,7 @@ public sealed class ZeepSettingsTabbedSectionsDrawer : IZeepSettingsDrawer
 
             gui.PushId("content");
             {
-                gui.PushId((uint)_selectedTabIndex);
+                gui.PushId(gui.GetControlId((uint)_selectedTabIndex));
                 {
                     foreach (var drawer in _tabs[_selectedTabIndex].Drawers)
                         drawer.Draw(gui, context);
