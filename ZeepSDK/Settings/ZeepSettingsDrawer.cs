@@ -32,31 +32,12 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
                 return;
             }
 
-            var entriesBySection = BuildEntriesBySection(plugin);
+            var entriesBySection = ModSettingsDrawerBuildContext.BuildEntriesBySection(plugin);
             var buildContext = new ModSettingsDrawerBuildContext(plugin, entriesBySection);
 
             Drawers = ZeepSettingsDrawerRegistry.TryGetProvider(plugin.Metadata.GUID, out var provider)
                 ? provider(buildContext).ToList()
                 : buildContext.CreateDefaultDrawers().ToList();
-        }
-
-        private static Dictionary<string, IReadOnlyList<ConfigEntryBase>> BuildEntriesBySection(PluginInfo plugin)
-        {
-            var sections = new Dictionary<string, SortedList<string, ConfigEntryBase>>();
-
-            foreach ((ConfigDefinition definition, ConfigEntryBase entry) in plugin.Instance.Config)
-            {
-                if (!sections.TryGetValue(definition.Section, out var entries))
-                {
-                    sections.Add(definition.Section, entries = []);
-                }
-
-                entries.Add(definition.Key, entry);
-            }
-
-            return sections.ToDictionary(
-                x => x.Key,
-                x => (IReadOnlyList<ConfigEntryBase>)[.. x.Value.Values]);
         }
     }
 
@@ -126,9 +107,7 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
                 using (gui.Vertical(gui.GetLayoutWidth(), maxHeight))
                 {
                     using (gui.Scrollable())
-                    {
                         DrawSelectedPluginWithPadding(gui);
-                    }
                 }
             }
 
@@ -153,7 +132,8 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
     private void DrawSelectedPluginWithPadding(ImGui gui)
     {
         var padding = gui.Style.Window.ContentPadding;
-        var contentWidth = Mathf.Max(0, gui.GetLayoutWidth() - padding.Left - padding.Right);
+        var rightPadding = padding.Right + gui.Style.Layout.Spacing;
+        var contentWidth = Mathf.Max(0, gui.GetLayoutWidth() - padding.Left - rightPadding);
 
         using (gui.Horizontal(gui.GetLayoutWidth()))
         {
@@ -170,23 +150,19 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
                     gui.AddSpacing(padding.Bottom);
             }
 
-            gui.AddSpacing(padding.Right);
+            gui.AddSpacing(rightPadding);
         }
     }
 
     private void DrawSelectedPlugin(ImGui gui)
     {
         if (_selectedPluginInfo?.Plugin == null)
-        {
             return;
-        }
 
         gui.Text(_selectedPluginInfo.Plugin.Metadata.Name, new ImTextSettings(48, 0.5f));
 
         foreach (var drawer in _selectedPluginInfo.Drawers)
-        {
             drawer.Draw(gui, _drawContext);
-        }
     }
 
     private void DrawKeyPopup(ImGui gui)
@@ -232,7 +208,7 @@ internal class ZeepSettingsDrawer : IZeepGUIDrawer
             }
 
             gui.Layout.Pop();
-            gui.Canvas.PopRectMask();
+            gui.Canvas.PopClipRect();
             gui.Canvas.PopClipRect();
             gui.EndPopup();
         }

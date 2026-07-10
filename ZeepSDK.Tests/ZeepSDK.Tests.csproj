@@ -53,6 +53,7 @@
         <Compile Include="..\ZeepSDK\Utilities\Override\IConditionTickable.cs" Link="Source\IConditionTickable.cs" />
         <Compile Include="..\ZeepSDK\Utilities\Override\ConditionTickScheduler.cs" Link="Source\ConditionTickScheduler.cs" />
         <Compile Include="..\ZeepSDK\Storage\StorageResult.cs" Link="Source\StorageResult.cs" />
+        <Compile Include="..\ZeepSDK\Utilities\NaturalStringComparer.cs" Link="Source\NaturalStringComparer.cs" />
         <Compile Include="..\ZeepSDK\Utilities\SequenceComparer.cs" Link="Source\SequenceComparer.cs" />
         <Compile Include="..\ZeepSDK\Utilities\UnityFolders\UnityFolder.cs" Link="Source\UnityFolder.cs" />
         <Compile Include="..\ZeepSDK\Utilities\Vector3Comparer.cs" Link="Source\Vector3Comparer.cs" />

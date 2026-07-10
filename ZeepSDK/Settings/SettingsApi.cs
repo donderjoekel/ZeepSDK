@@ -1,5 +1,6 @@
 ﻿using System;
 using BepInEx;
+using BepInEx.Bootstrap;
 using BepInEx.Configuration;
 using BepInEx.Logging;
 using JetBrains.Annotations;
@@ -81,6 +82,63 @@ public static class SettingsApi
     /// <param name="provider">The callback that builds the drawer list for this mod.</param>
     public static void RegisterModSettingsDrawers(string pluginGuid, ModSettingsDrawersDelegate provider)
         => ZeepSettingsDrawerRegistry.Register(pluginGuid, provider);
+
+    /// <summary>
+    /// Configures a tabbed layout for the given mod's default settings panel.
+    /// Sections assigned to tabs are merged into those tabs; unassigned sections render flat below the tab bar.
+    /// </summary>
+    /// <param name="plugin">The mod plugin instance to configure tabs for.</param>
+    /// <param name="configure">Builds the tab layout.</param>
+    public static void ConfigureModSettingsTabs(BaseUnityPlugin plugin, Action<ModSettingsTabsBuilder> configure)
+    {
+        if (plugin == null)
+            throw new ArgumentNullException(nameof(plugin));
+
+        ConfigureModSettingsTabs(plugin.Info.Metadata.GUID, configure, plugin.Info);
+    }
+
+    /// <summary>
+    /// Configures a tabbed layout for the given mod's default settings panel.
+    /// </summary>
+    /// <param name="pluginGuid">The BepInEx GUID of the mod to configure tabs for.</param>
+    /// <param name="configure">Builds the tab layout.</param>
+    public static void ConfigureModSettingsTabs(string pluginGuid, Action<ModSettingsTabsBuilder> configure)
+    {
+        if (!Chainloader.PluginInfos.TryGetValue(pluginGuid, out var pluginInfo))
+        {
+            Logger.LogWarning(
+                $"Cannot configure mod settings tabs for unknown plugin GUID '{pluginGuid}'.");
+            return;
+        }
+
+        ConfigureModSettingsTabs(pluginGuid, configure, pluginInfo);
+    }
+
+    private static void ConfigureModSettingsTabs(
+        string pluginGuid,
+        Action<ModSettingsTabsBuilder> configure,
+        PluginInfo pluginInfo)
+    {
+        if (configure == null)
+            throw new ArgumentNullException(nameof(configure));
+
+        var entriesBySection = ModSettingsDrawerBuildContext.BuildEntriesBySection(pluginInfo);
+        ZeepSettingsTabsRegistry.Configure(pluginGuid, configure, entriesBySection);
+    }
+
+    /// <summary>
+    /// Removes tab configuration for the given mod, restoring the default flat section layout.
+    /// </summary>
+    /// <param name="plugin">The mod plugin instance to clear tab configuration for.</param>
+    public static void ClearModSettingsTabs(BaseUnityPlugin plugin)
+        => ClearModSettingsTabs(plugin.Info.Metadata.GUID);
+
+    /// <summary>
+    /// Removes tab configuration for the given mod, restoring the default flat section layout.
+    /// </summary>
+    /// <param name="pluginGuid">The BepInEx GUID of the mod to clear tab configuration for.</param>
+    public static void ClearModSettingsTabs(string pluginGuid)
+        => ZeepSettingsTabsRegistry.ClearTabs(pluginGuid);
 
     /// <summary>
     /// Sets a custom display label for a config entry when using the default settings layout.
