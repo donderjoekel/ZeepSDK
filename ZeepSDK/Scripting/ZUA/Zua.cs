@@ -35,7 +35,8 @@ public class Zua
         ZuaEventCache.RegisterCachedEvents(this);
         try
         {
-            script.DoString(luaContent);
+            DynValue scriptFunction = script.LoadString(luaContent);
+            LuaExecutionBudget.Execute(script, scriptFunction);
             loaded = true;
             CallFunction("OnLoad");
         }
@@ -121,7 +122,7 @@ public class Zua
             }
 
             DynValue[] dynArgs = args.Select(arg => DynValue.FromObject(script, arg)).ToArray();
-            script.Call(function, dynArgs);
+            LuaExecutionBudget.Execute(script, function, dynArgs);
         }
         catch (ScriptRuntimeException ex)
         {
@@ -274,10 +275,15 @@ public class Zua
 
     internal static Zua LoadLuaByPath(string filePath)
     {
+        const long maximumScriptBytes = 1024 * 1024;
+
         if (!File.Exists(filePath))
         {
             throw new FileNotFoundException($"Lua file not found: {filePath}");
         }
+
+        if (new FileInfo(filePath).Length > maximumScriptBytes)
+            throw new InvalidDataException($"Lua file exceeds the {maximumScriptBytes}-byte limit: {filePath}");
 
         string luaContent = File.ReadAllText(filePath);
 

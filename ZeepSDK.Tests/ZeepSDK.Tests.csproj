@@ -9,6 +9,7 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+        <PackageReference Include="MoonSharp" Version="2.0.0" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
         <PackageReference Include="System.IO.Hashing" Version="10.0.0" />
         <PackageReference Include="xunit" Version="2.9.3" />
@@ -32,6 +33,7 @@
         <Compile Include="..\ZeepSDK\Numerics\Vector2.cs" Link="Source\Vector2.cs" />
         <Compile Include="..\ZeepSDK\Numerics\Vector3.cs" Link="Source\Vector3.cs" />
         <Compile Include="..\ZeepSDK\Playlist\PlaylistPath.cs" Link="Source\PlaylistPath.cs" />
+        <Compile Include="..\ZeepSDK\Scripting\ZUA\LuaExecutionBudget.cs" Link="Source\LuaExecutionBudget.cs" />
         <Compile Include="..\ZeepSDK\Utilities\AtomicFile.cs" Link="Source\AtomicFile.cs" />
         <Compile Include="..\ZeepSDK\Utilities\SequenceComparer.cs" Link="Source\SequenceComparer.cs" />
         <Compile Include="..\ZeepSDK\Utilities\UnityFolders\UnityFolder.cs" Link="Source\UnityFolder.cs" />
