@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using BepInEx;
 using BepInEx.Configuration;
 using ZeepSDK.Settings.Drawers;
+using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Settings;
 
@@ -113,18 +113,44 @@ public sealed class ModSettingsDrawerBuildContext
 
     internal static Dictionary<string, IReadOnlyList<ConfigEntryBase>> BuildEntriesBySection(PluginInfo plugin)
     {
-        var sections = new Dictionary<string, SortedList<string, ConfigEntryBase>>();
+        var customLabels = ZeepSettingsEntryLabelRegistry.GetLabels(plugin.Metadata.GUID);
+        var sections = new Dictionary<string, List<ConfigEntryBase>>();
 
         foreach ((ConfigDefinition definition, ConfigEntryBase entry) in plugin.Instance.Config)
         {
             if (!sections.TryGetValue(definition.Section, out var entries))
                 sections.Add(definition.Section, entries = []);
 
-            entries.Add(definition.Key, entry);
+            entries.Add(entry);
         }
 
-        return sections.ToDictionary(
-            x => x.Key,
-            x => (IReadOnlyList<ConfigEntryBase>)[.. x.Value.Values]);
+        foreach (var entries in sections.Values)
+        {
+            entries.Sort((a, b) =>
+            {
+                int cmp = NaturalStringComparer.Instance.Compare(
+                    GetEntrySortKey(a, customLabels),
+                    GetEntrySortKey(b, customLabels));
+                return cmp != 0
+                    ? cmp
+                    : string.Compare(a.Definition.Key, b.Definition.Key, StringComparison.Ordinal);
+            });
+        }
+
+        var result = new Dictionary<string, IReadOnlyList<ConfigEntryBase>>(sections.Count);
+        foreach ((string section, List<ConfigEntryBase> entries) in sections)
+            result[section] = entries;
+
+        return result;
+    }
+
+    private static string GetEntrySortKey(
+        ConfigEntryBase entry,
+        IReadOnlyDictionary<ConfigDefinition, string> customLabels)
+    {
+        if (customLabels != null && customLabels.TryGetValue(entry.Definition, out var label) && label != null)
+            return label;
+
+        return entry.Definition.Key;
     }
 }
