@@ -20,6 +20,11 @@ namespace ZeepSDK.Versioning;
 internal class VersionChecker
 {
     private const int MaximumResponseBytes = 2 * 1024 * 1024;
+    private const int MaximumModPages = 100;
+    private const int MaximumMods = 10_000;
+    private const int ModPageSize = 100;
+    private const string ModsUrl =
+        "https://g-3213.modapi.io/v1/games/3213/mods?api_key=188efbb7446e6d527b0991c3672b3e31&tags-in=Plugin";
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(VersionChecker));
     private static readonly HttpClient httpClient = new()
     {
@@ -103,14 +108,10 @@ internal class VersionChecker
 
     private static async UniTask<Result<int>> CalculateOutdatedMods(CancellationToken cancellationToken)
     {
-        Result<ModioResponse<ModResponseData>> result = await GetData<ModioResponse<ModResponseData>>(
-            "https://g-3213.modapi.io/v1/games/3213/mods?api_key=188efbb7446e6d527b0991c3672b3e31&tags-in=Plugin",
-            cancellationToken);
+        Result<List<ModResponseData>> result = await GetAllModData(cancellationToken);
 
         if (result.IsFailed)
             return result.ToResult();
-        if (result.Value?.Data == null)
-            return Result.Fail<int>("mod.io returned no mod data");
 
         Dictionary<int, string> directoriesByModId = new();
         foreach (string directory in Directory.EnumerateDirectories(Paths.PluginPath, "*", SearchOption.TopDirectoryOnly))
@@ -123,7 +124,7 @@ internal class VersionChecker
 
         int outdatedMods = 0;
 
-        foreach (ModResponseData modResponseData in result.Value.Data)
+        foreach (ModResponseData modResponseData in result.Value)
         {
             if (modResponseData?.ModFile == null ||
                 !directoriesByModId.TryGetValue(modResponseData.Id, out string existingModPath))
@@ -140,6 +141,39 @@ internal class VersionChecker
         }
 
         return outdatedMods;
+    }
+
+    private static async UniTask<Result<List<ModResponseData>>> GetAllModData(
+        CancellationToken cancellationToken)
+    {
+        List<ModResponseData> mods = new();
+        int offset = 0;
+
+        for (int pageNumber = 0; pageNumber < MaximumModPages; pageNumber++)
+        {
+            string url = $"{ModsUrl}&_offset={offset}&_limit={ModPageSize}";
+            Result<ModioResponse<ModResponseData>> result =
+                await GetData<ModioResponse<ModResponseData>>(url, cancellationToken);
+            if (result.IsFailed)
+                return result.ToResult();
+
+            if (!ModioPagination.TryGetNextOffset(
+                    result.Value,
+                    offset,
+                    MaximumMods,
+                    out int nextOffset,
+                    out bool complete,
+                    out string error))
+                return Result.Fail<List<ModResponseData>>(error);
+
+            mods.AddRange(result.Value.Data);
+            if (complete)
+                return mods;
+
+            offset = nextOffset;
+        }
+
+        return Result.Fail<List<ModResponseData>>($"mod.io exceeded the {MaximumModPages}-page limit");
     }
 
     private static async UniTask<Result<TData>> GetData<TData>(string url, CancellationToken cancellationToken)

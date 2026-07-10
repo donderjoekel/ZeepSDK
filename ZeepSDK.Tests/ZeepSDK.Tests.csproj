@@ -41,6 +41,8 @@
         <Compile Include="..\ZeepSDK\Utilities\Vector3Comparer.cs" Link="Source\Vector3Comparer.cs" />
         <Compile Include="..\ZeepSDK\Utilities\XxHash128Reflection.cs" Link="Source\XxHash128Reflection.cs" />
         <Compile Include="..\ZeepSDK\Versioning\BoundedHttpContent.cs" Link="Source\BoundedHttpContent.cs" />
+        <Compile Include="..\ZeepSDK\Versioning\ModioPagination.cs" Link="Source\ModioPagination.cs" />
+        <Compile Include="..\ZeepSDK\Versioning\ModioResponse.cs" Link="Source\ModioResponse.cs" />
     </ItemGroup>
 
     <ItemGroup>
