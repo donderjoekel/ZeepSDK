@@ -55,7 +55,7 @@ public class ChatCommandRegistryTests
     }
 
     [Theory]
-    [InlineData("", "command")]
+    [InlineData("", "")]
     [InlineData("!", " leading")]
     [InlineData("!", "trailing ")]
     [InlineData("!", "two\twords")]
@@ -66,6 +66,29 @@ public class ChatCommandRegistryTests
 
         Assert.Throws<ArgumentException>(() =>
             ChatCommandRegistry.RegisterRemoteChatCommand(command));
+    }
+
+    [Theory]
+    [InlineData("+")]
+    [InlineData("++")]
+    [InlineData("+-")]
+    [InlineData("-+")]
+    [InlineData("--")]
+    [InlineData("-")]
+    public void AcceptsCommandsWithoutPrefix(string commandText)
+    {
+        TestRemoteCommand command = new(string.Empty, commandText, "description");
+
+        try
+        {
+            ChatCommandRegistry.RegisterRemoteChatCommand(command);
+
+            Assert.Contains(command, ChatCommandRegistry.RemoteChatCommands);
+        }
+        finally
+        {
+            ChatCommandRegistry.UnregisterRemoteChatCommand(command);
+        }
     }
 
     [Fact]

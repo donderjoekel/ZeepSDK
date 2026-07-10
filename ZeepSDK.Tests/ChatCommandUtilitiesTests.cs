@@ -50,6 +50,23 @@ public class ChatCommandUtilitiesTests
         Assert.False(ChatCommandUtilities.MatchesCommand(trigger + "+", command));
     }
 
+    [Theory]
+    [InlineData("+")]
+    [InlineData("++")]
+    [InlineData("+-")]
+    [InlineData("-+")]
+    [InlineData("--")]
+    [InlineData("-")]
+    public void MatchesCommandsWithoutPrefix(string trigger)
+    {
+        TestCommand command = new(string.Empty, trigger);
+
+        Assert.True(ChatCommandUtilities.MatchesCommand(trigger, command));
+        Assert.True(ChatCommandUtilities.MatchesCommand(trigger + " argument", command));
+        Assert.Equal("argument", ChatCommandUtilities.GetArguments(trigger + " argument", command));
+        Assert.False(ChatCommandUtilities.MatchesCommand(trigger + "+", command));
+    }
+
     private sealed class TestCommand(string prefix, string command) : IChatCommand
     {
         public string Prefix { get; } = prefix;

@@ -239,11 +239,15 @@ public static class ChatCommandRegistry
         string commandIdentity = DescribeCommand(command);
         if (!IsValidPrefix(command.Prefix))
             throw new ArgumentException(
-                $"Cannot register {commandIdentity}: prefix must be 1-16 non-whitespace characters.",
+                $"Cannot register {commandIdentity}: prefix must be empty or 1-16 non-whitespace characters.",
                 nameof(command));
         if (!IsValidCommandText(command.Command))
             throw new ArgumentException(
                 $"Cannot register {commandIdentity}: command text must be empty or 1-64 characters, may contain internal spaces, and cannot contain edge whitespace or control characters.",
+                nameof(command));
+        if (command.Prefix.Length == 0 && command.Command.Length == 0)
+            throw new ArgumentException(
+                $"Cannot register {commandIdentity}: prefix and command text cannot both be empty.",
                 nameof(command));
         if (command.Description == null)
             throw new ArgumentException(
@@ -277,7 +281,7 @@ public static class ChatCommandRegistry
     }
 
     private static bool IsValidPrefix(string prefix)
-        => !string.IsNullOrWhiteSpace(prefix) && prefix.Length <= 16 && !prefix.Any(char.IsWhiteSpace);
+        => prefix != null && prefix.Length <= 16 && !prefix.Any(char.IsWhiteSpace);
 
     private static bool IsValidKeyword(string keyword)
         => !string.IsNullOrWhiteSpace(keyword) && keyword.Length <= 64 && !keyword.Any(char.IsWhiteSpace);
