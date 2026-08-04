@@ -131,6 +131,8 @@ public static class CrashlyticsApi
             }
         }
 
+        HarmonyPatchMetadata.Enrich(evt);
+
         return true;
     }
 
