@@ -1,12 +1,12 @@
 name: "Detect .csproj Name"
-description: "Finds the first *.csproj in the working directory and outputs its base name."
+description: "Finds the main *.csproj (prefers packable projects) and outputs its base name and path."
 
 outputs:
   csproj_name:
-    description: "Base name of the first *.csproj found"
+    description: "Base name of the detected *.csproj"
     value: ${{ steps.csproj.outputs.csproj_name }}
   csproj_path:
-    description: "Full path of the first *.csproj found"
+    description: "Full path of the detected *.csproj"
     value: ${{ steps.csproj.outputs.csproj_path }}
 
 runs:
@@ -16,7 +16,19 @@ runs:
       id: csproj
       shell: pwsh
       run: |
-        $item = Get-ChildItem -Filter *.csproj -Recurse | Select-Object -First 1
-        if (-not $item) { Write-Error "No .csproj found"; exit 1 }
+        $items = @(Get-ChildItem -Filter *.csproj -Recurse)
+        if ($items.Count -eq 0) { Write-Error "No .csproj found"; exit 1 }
+
+        $packable = @($items | Where-Object {
+          $content = Get-Content $_.FullName -Raw
+          $content -notmatch '<IsPackable>\s*false\s*</IsPackable>'
+        })
+
+        $candidates = if ($packable.Count -gt 0) { $packable } else { $items }
+
+        $item = $candidates | Where-Object { $_.Directory.Name -eq $_.BaseName } | Select-Object -First 1
+        if (-not $item) { $item = $candidates | Select-Object -First 1 }
+
         "csproj_name=$($item.BaseName)" >> $env:GITHUB_OUTPUT
         "csproj_path=$($item.FullName)" >> $env:GITHUB_OUTPUT
+        Write-Host "Detected csproj: $($item.FullName)"
