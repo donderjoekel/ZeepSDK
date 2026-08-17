@@ -5,7 +5,7 @@
         <AssemblyName>ZeepSDK</AssemblyName>
         <Description>ZeepSDK</Description>
         <Authors>TNRD</Authors>
-        <Version>2.6.2</Version>
+        <Version>2.6.3</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
         <Title>ZeepSDK</Title>
@@ -44,7 +44,7 @@
         <PackageReference Include="MoonSharp" Version="2.0.0" />
         <PackageReference Include="System.IO.Hashing" Version="10.0.0" />
         <PackageReference Include="System.Memory" Version="4.6.3" ExcludeAssets="compile" />
-        <PackageReference Include="Zeepkist.GameLibs" Version="17.32.1912" PrivateAssets="all" />
+        <PackageReference Include="Zeepkist.GameLibs" Version="18.0.2043" PrivateAssets="all" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
