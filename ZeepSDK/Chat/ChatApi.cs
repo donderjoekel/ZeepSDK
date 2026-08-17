@@ -34,7 +34,13 @@ public static class ChatApi
 
     internal static void Initialize(GameObject gameObject)
     {
+        ZeepkistNetwork.ChatMessageReceived -= OnChatMessageReceived;
         ZeepkistNetwork.ChatMessageReceived += OnChatMessageReceived;
+    }
+
+    internal static void Shutdown()
+    {
+        ZeepkistNetwork.ChatMessageReceived -= OnChatMessageReceived;
     }
 
     private static void OnChatMessageReceived(ZeepkistChatMessage zeepkistChatMessage)

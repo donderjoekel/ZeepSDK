@@ -4,6 +4,9 @@ using JetBrains.Annotations;
 
 namespace Imui.Controls;
 
+/// <summary>
+/// Provides state-aware window helpers for ImGui.
+/// </summary>
 public static class ImGuiWindowExtensions
 {
     /// <summary>

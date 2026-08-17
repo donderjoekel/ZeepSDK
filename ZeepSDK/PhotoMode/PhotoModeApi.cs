@@ -25,7 +25,17 @@ public static class PhotoModeApi
 
     internal static void Initialize()
     {
-        EnableFlyingCamera2_ToggleFlyingCamera.PhotoModeEntered += () => PhotoModeEntered.InvokeSafe();
-        EnableFlyingCamera2_ToggleFlyingCamera.PhotoModeExited += () => PhotoModeExited.InvokeSafe();
+        Shutdown();
+        EnableFlyingCamera2_ToggleFlyingCamera.PhotoModeEntered += OnPhotoModeEntered;
+        EnableFlyingCamera2_ToggleFlyingCamera.PhotoModeExited += OnPhotoModeExited;
     }
+
+    internal static void Shutdown()
+    {
+        EnableFlyingCamera2_ToggleFlyingCamera.PhotoModeEntered -= OnPhotoModeEntered;
+        EnableFlyingCamera2_ToggleFlyingCamera.PhotoModeExited -= OnPhotoModeExited;
+    }
+
+    private static void OnPhotoModeEntered() => PhotoModeEntered.InvokeSafe();
+    private static void OnPhotoModeExited() => PhotoModeExited.InvokeSafe();
 }

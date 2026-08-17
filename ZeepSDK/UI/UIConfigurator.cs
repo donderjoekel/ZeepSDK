@@ -67,7 +67,7 @@ internal class UIConfigurator : MonoBehaviour
     private RectTransform moveHandleRect;
     private RectTransform scaleHandleRect;
     private RectTransform resetHandleRect;
-    private Vector3[] corners = new Vector3[4];
+    private readonly Vector3[] corners = new Vector3[4];
 
     private int currentRectIndex;
     private RectTransform currentRect;
@@ -80,7 +80,7 @@ internal class UIConfigurator : MonoBehaviour
         RegisterConfig();
         LoadSaveData();
 
-        SceneManager_LoadScene.BeforeLoadScene += () => DisableEditMode();
+        SceneManager_LoadScene.BeforeLoadScene += OnBeforeLoadScene;
     }
 
     private void RegisterConfig()
@@ -123,10 +123,26 @@ internal class UIConfigurator : MonoBehaviour
                 "Selected UI element color",
                 new AcceptableValueList<string>(ColorUtility.ColorDefinitions.Select(x => x.Name).ToArray())));
 
-        configResetAllButton.SettingChanged += (sender, args) => ResetAll();
-        configBorderColor.SettingChanged += (sender, args) => SetColor(configBorderColor.Value);
+        configResetAllButton.SettingChanged += OnResetAllSettingChanged;
+        configBorderColor.SettingChanged += OnBorderColorSettingChanged;
         SetColor(configBorderColor.Value);
     }
+
+    private void OnDestroy()
+    {
+        SceneManager_LoadScene.BeforeLoadScene -= OnBeforeLoadScene;
+        if (configResetAllButton != null)
+            configResetAllButton.SettingChanged -= OnResetAllSettingChanged;
+        if (configBorderColor != null)
+            configBorderColor.SettingChanged -= OnBorderColorSettingChanged;
+    }
+
+    private void OnResetAllSettingChanged(object sender, EventArgs args) => ResetAll();
+
+    private void OnBeforeLoadScene() => DisableEditMode();
+
+    private void OnBorderColorSettingChanged(object sender, EventArgs args)
+        => SetColor(configBorderColor.Value);
 
     private void SetColor(string colorName)
     {
@@ -192,7 +208,6 @@ internal class UIConfigurator : MonoBehaviour
 
     private void DrawCurrentRectBorder()
     {
-        Vector3[] corners = new Vector3[4];
         currentRect.GetWorldCorners(corners);
 
         Canvas canvas = currentRect.GetComponentInParent<Canvas>();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace ZeepSDK.ChatCommands;
@@ -12,16 +13,18 @@ public static class ChatCommandRegistry
 {
     private static readonly List<ILocalChatCommand> localChatCommands = new();
     private static readonly List<IRemoteChatCommand> remoteChatCommands = new();
+    private static IReadOnlyList<ILocalChatCommand> localSnapshot = Array.Empty<ILocalChatCommand>();
+    private static IReadOnlyList<IRemoteChatCommand> remoteSnapshot = Array.Empty<IRemoteChatCommand>();
 
     /// <summary>
     /// All registered local chat commands, including alias entries.
     /// </summary>
-    public static IReadOnlyList<ILocalChatCommand> LocalChatCommands => localChatCommands;
+    public static IReadOnlyList<ILocalChatCommand> LocalChatCommands => localSnapshot;
 
     /// <summary>
     /// All registered remote chat commands.
     /// </summary>
-    public static IReadOnlyList<IRemoteChatCommand> RemoteChatCommands => remoteChatCommands;
+    public static IReadOnlyList<IRemoteChatCommand> RemoteChatCommands => remoteSnapshot;
 
     /// <summary>
     /// Returns whether the given command is an alias entry.
@@ -40,14 +43,14 @@ public static class ChatCommandRegistry
     /// Returns all primary local chat commands, excluding alias entries.
     /// </summary>
     public static IEnumerable<ILocalChatCommand> GetPrimaryLocalChatCommands()
-        => localChatCommands.Where(command => command is not ILocalChatCommandAlias);
+        => localSnapshot.Where(command => command is not ILocalChatCommandAlias);
 
     /// <summary>
     /// Returns all alias entries registered for the given primary command.
     /// </summary>
     /// <param name="command">The primary command to get aliases for.</param>
     public static IEnumerable<ILocalChatCommandAlias> GetAliasesFor(ILocalChatCommand command)
-        => localChatCommands
+        => localSnapshot
             .OfType<ILocalChatCommandAlias>()
             .Where(alias => alias.Target == command);
 
@@ -57,7 +60,10 @@ public static class ChatCommandRegistry
     /// <param name="chatCommand">The command to register.</param>
     internal static void RegisterLocalChatCommand(ILocalChatCommand chatCommand)
     {
+        ValidateCommand(chatCommand);
+        EnsureNoLocalConflict(chatCommand.Prefix, chatCommand.Command);
         localChatCommands.Add(chatCommand);
+        RefreshSnapshots();
     }
 
     /// <summary>
@@ -66,7 +72,10 @@ public static class ChatCommandRegistry
     /// <param name="chatCommand">The command to register.</param>
     internal static void RegisterRemoteChatCommand(IRemoteChatCommand chatCommand)
     {
+        ValidateCommand(chatCommand);
+        EnsureNoRemoteConflict(chatCommand.Prefix, chatCommand.Command);
         remoteChatCommands.Add(chatCommand);
+        RefreshSnapshots();
     }
 
     /// <summary>
@@ -75,8 +84,12 @@ public static class ChatCommandRegistry
     /// <param name="chatCommand">The command to register.</param>
     internal static void RegisterMixedChatCommand(IMixedChatCommand chatCommand)
     {
+        ValidateCommand(chatCommand);
+        EnsureNoLocalConflict(chatCommand.Prefix, chatCommand.Command);
+        EnsureNoRemoteConflict(chatCommand.Prefix, chatCommand.Command);
         localChatCommands.Add(chatCommand);
         remoteChatCommands.Add(chatCommand);
+        RefreshSnapshots();
     }
 
     /// <summary>
@@ -85,7 +98,8 @@ public static class ChatCommandRegistry
     /// <param name="chatCommand">The command to unregister.</param>
     internal static void UnregisterLocalChatCommand(ILocalChatCommand chatCommand)
     {
-        localChatCommands.Remove(chatCommand);
+        if (localChatCommands.Remove(chatCommand))
+            RefreshSnapshots();
     }
 
     /// <summary>
@@ -94,7 +108,8 @@ public static class ChatCommandRegistry
     /// <param name="chatCommand">The command to unregister.</param>
     internal static void UnregisterRemoteChatCommand(IRemoteChatCommand chatCommand)
     {
-        remoteChatCommands.Remove(chatCommand);
+        if (remoteChatCommands.Remove(chatCommand))
+            RefreshSnapshots();
     }
 
     /// <summary>
@@ -103,8 +118,10 @@ public static class ChatCommandRegistry
     /// <param name="chatCommand">The command to unregister.</param>
     internal static void UnregisterMixedChatCommand(IMixedChatCommand chatCommand)
     {
-        localChatCommands.Remove(chatCommand);
-        remoteChatCommands.Remove(chatCommand);
+        bool changed = localChatCommands.Remove(chatCommand);
+        changed |= remoteChatCommands.Remove(chatCommand);
+        if (changed)
+            RefreshSnapshots();
     }
 
     internal static bool TryFindPrimaryLocalCommand(string prefix, string command, out ILocalChatCommand target)
@@ -128,6 +145,12 @@ public static class ChatCommandRegistry
         if (string.IsNullOrWhiteSpace(alias))
         {
             error = "Alias cannot be null or whitespace.";
+            return false;
+        }
+
+        if (!IsValidKeyword(alias))
+        {
+            error = "Alias must be 1-64 non-whitespace characters.";
             return false;
         }
 
@@ -156,17 +179,25 @@ public static class ChatCommandRegistry
         }
 
         localChatCommands.Add(new LocalChatCommandAlias(target, alias));
+        RefreshSnapshots();
         error = null;
         return true;
     }
 
     internal static void UnregisterAliasesFor(ILocalChatCommand target)
     {
+        bool changed = false;
         for (var i = localChatCommands.Count - 1; i >= 0; i--)
         {
             if (localChatCommands[i] is ILocalChatCommandAlias alias && alias.Target == target)
+            {
                 localChatCommands.RemoveAt(i);
+                changed = true;
+            }
         }
+
+        if (changed)
+            RefreshSnapshots();
     }
 
     internal static bool UnregisterAlias(ILocalChatCommand target, string alias)
@@ -178,6 +209,7 @@ public static class ChatCommandRegistry
                 string.Equals(entry.Command, alias, StringComparison.OrdinalIgnoreCase))
             {
                 localChatCommands.RemoveAt(i);
+                RefreshSnapshots();
                 return true;
             }
         }
@@ -197,5 +229,98 @@ public static class ChatCommandRegistry
         }
 
         return false;
+    }
+
+    private static void ValidateCommand(IChatCommand command)
+    {
+        if (command == null)
+            throw new ArgumentNullException(nameof(command));
+
+        string commandIdentity = DescribeCommand(command);
+        if (!IsValidPrefix(command.Prefix))
+            throw new ArgumentException(
+                $"Cannot register {commandIdentity}: prefix must be empty or 1-16 non-whitespace characters.",
+                nameof(command));
+        if (!IsValidCommandText(command.Command))
+            throw new ArgumentException(
+                $"Cannot register {commandIdentity}: command text must be empty or 1-64 characters, may contain internal spaces, and cannot contain edge whitespace or control characters.",
+                nameof(command));
+        if (command.Prefix.Length == 0 && command.Command.Length == 0)
+            throw new ArgumentException(
+                $"Cannot register {commandIdentity}: prefix and command text cannot both be empty.",
+                nameof(command));
+        if (command.Description == null)
+            throw new ArgumentException(
+                $"Cannot register {commandIdentity}: description cannot be null.",
+                nameof(command));
+        if (command.Description.Length > 512)
+            throw new ArgumentException(
+                $"Cannot register {commandIdentity}: description cannot exceed 512 characters.",
+                nameof(command));
+    }
+
+    private static string DescribeCommand(IChatCommand command)
+        => $"command type '{command.GetType().FullName}' " +
+           $"(prefix='{EscapeForLog(command.Prefix)}', command='{EscapeForLog(command.Command)}')";
+
+    private static string EscapeForLog(string value)
+    {
+        if (value == null)
+            return "<null>";
+
+        const int maximumLength = 80;
+        string escaped = value
+            .Replace("\\", "\\\\")
+            .Replace("\r", "\\r")
+            .Replace("\n", "\\n")
+            .Replace("\t", "\\t");
+
+        return escaped.Length <= maximumLength
+            ? escaped
+            : escaped[..maximumLength] + "...";
+    }
+
+    private static bool IsValidPrefix(string prefix)
+        => prefix != null && prefix.Length <= 16 && !prefix.Any(char.IsWhiteSpace);
+
+    private static bool IsValidKeyword(string keyword)
+        => !string.IsNullOrWhiteSpace(keyword) && keyword.Length <= 64 && !keyword.Any(char.IsWhiteSpace);
+
+    private static bool IsValidCommandText(string command)
+    {
+        if (command == null || command.Length > 64)
+            return false;
+
+        if (command.Length == 0)
+            return true;
+
+        if (string.IsNullOrWhiteSpace(command) ||
+            command[0] == ' ' || command[^1] == ' ')
+        {
+            return false;
+        }
+
+        return command.All(character => character == ' ' ||
+            (!char.IsWhiteSpace(character) && !char.IsControl(character)));
+    }
+
+    private static void EnsureNoLocalConflict(string prefix, string keyword)
+    {
+        if (HasConflictingKeyword(prefix, keyword))
+            throw new InvalidOperationException($"Local command '{prefix}{keyword}' is already registered.");
+    }
+
+    private static void EnsureNoRemoteConflict(string prefix, string keyword)
+    {
+        if (remoteChatCommands.Any(entry =>
+                string.Equals(entry.Prefix, prefix, StringComparison.OrdinalIgnoreCase) &&
+                string.Equals(entry.Command, keyword, StringComparison.OrdinalIgnoreCase)))
+            throw new InvalidOperationException($"Remote command '{prefix}{keyword}' is already registered.");
+    }
+
+    private static void RefreshSnapshots()
+    {
+        localSnapshot = new ReadOnlyCollection<ILocalChatCommand>(localChatCommands.ToArray());
+        remoteSnapshot = new ReadOnlyCollection<IRemoteChatCommand>(remoteChatCommands.ToArray());
     }
 }

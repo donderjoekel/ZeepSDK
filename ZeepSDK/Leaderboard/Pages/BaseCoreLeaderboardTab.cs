@@ -8,7 +8,7 @@ namespace ZeepSDK.Leaderboard.Pages;
 
 /// <summary>
 /// A base implementation that can be used for creating a custom tab for the leaderboard
-/// <remarks>This is a replacement for <see cref="BaseLeaderboardTab"/> to keep backward compatibility</remarks>
+/// <remarks>This replaces the legacy leaderboard tab base to preserve backward compatibility.</remarks>
 /// </summary>
 [PublicAPI]
 public abstract class BaseCoreLeaderboardTab : ILeaderboardTab

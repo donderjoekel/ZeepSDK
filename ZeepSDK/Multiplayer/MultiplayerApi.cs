@@ -62,13 +62,31 @@ public static class MultiplayerApi
 
     internal static void Initialize()
     {
-        PhotonZeepkist_OnConnectedToGame.ConnectedToGame += () => ConnectedToGame.InvokeSafe();
-        PhotonZeepkist_OnDisconnectedFromGame.DisconnectedFromGame += () => DisconnectedFromGame.InvokeSafe();
-        PhotonZeepkist_OnCreatedRoom.CreatedRoom += () => CreatedRoom.InvokeSafe();
-        PhotonZeepkist_OnJoinedRoom.JoinedRoom += () => JoinedRoom.InvokeSafe();
-        PhotonZeepkist_OnPlayerEnteredRoom.PlayerEnteredRoom += player => PlayerJoined.InvokeSafe(player);
-        PhotonZeepkist_OnPlayerLeftRoom.PlayerLeftRoom += player => PlayerLeft.InvokeSafe(player);
+        Shutdown();
+        PhotonZeepkist_OnConnectedToGame.ConnectedToGame += OnConnectedToGame;
+        PhotonZeepkist_OnDisconnectedFromGame.DisconnectedFromGame += OnDisconnectedFromGame;
+        PhotonZeepkist_OnCreatedRoom.CreatedRoom += OnCreatedRoom;
+        PhotonZeepkist_OnJoinedRoom.JoinedRoom += OnJoinedRoom;
+        PhotonZeepkist_OnPlayerEnteredRoom.PlayerEnteredRoom += OnPlayerEnteredRoom;
+        PhotonZeepkist_OnPlayerLeftRoom.PlayerLeftRoom += OnPlayerLeftRoom;
     }
+
+    internal static void Shutdown()
+    {
+        PhotonZeepkist_OnConnectedToGame.ConnectedToGame -= OnConnectedToGame;
+        PhotonZeepkist_OnDisconnectedFromGame.DisconnectedFromGame -= OnDisconnectedFromGame;
+        PhotonZeepkist_OnCreatedRoom.CreatedRoom -= OnCreatedRoom;
+        PhotonZeepkist_OnJoinedRoom.JoinedRoom -= OnJoinedRoom;
+        PhotonZeepkist_OnPlayerEnteredRoom.PlayerEnteredRoom -= OnPlayerEnteredRoom;
+        PhotonZeepkist_OnPlayerLeftRoom.PlayerLeftRoom -= OnPlayerLeftRoom;
+    }
+
+    private static void OnConnectedToGame() => ConnectedToGame.InvokeSafe();
+    private static void OnDisconnectedFromGame() => DisconnectedFromGame.InvokeSafe();
+    private static void OnCreatedRoom() => CreatedRoom.InvokeSafe();
+    private static void OnJoinedRoom() => JoinedRoom.InvokeSafe();
+    private static void OnPlayerEnteredRoom(ZeepkistNetworkPlayer player) => PlayerJoined.InvokeSafe(player);
+    private static void OnPlayerLeftRoom(ZeepkistNetworkPlayer player) => PlayerLeft.InvokeSafe(player);
 
     /// <summary>
     /// Adds a level to the playlist. Once you're done adding levels, call <see cref="UpdateServerPlaylist"/> to update the server

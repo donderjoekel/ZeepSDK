@@ -15,7 +15,8 @@ public sealed class ModSettingsConfigEntryDrawContext
     public ConfigEntryBase Entry { get; }
 
     /// <summary>
-    /// The resolved display label, including any label override registered via <see cref="SettingsApi.SetConfigEntryLabel"/>.
+    /// The resolved display label, including any label override registered via
+    /// <see cref="SettingsApi.SetConfigEntryLabel(BepInEx.BaseUnityPlugin, ConfigEntryBase, string)"/>.
     /// </summary>
     public string Label { get; }
 

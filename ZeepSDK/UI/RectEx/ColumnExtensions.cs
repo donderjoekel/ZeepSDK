@@ -6,10 +6,12 @@ using ZeepSDK.UI.RectEx.Internal;
 
 namespace ZeepSDK.UI.RectEx;
 
+/// <summary>Provides horizontal rectangle layout helpers.</summary>
 public static class ColumnExtensions
 {
     private const float SPACE = 2f;
 
+    /// <summary>Splits a rectangle into equally weighted columns.</summary>
     public static ImRect[] Column(this ImRect rect, int count, float space = SPACE)
     {
         rect = rect.Abs();
@@ -36,11 +38,13 @@ public static class ColumnExtensions
         }
     }
 
+    /// <summary>Splits a rectangle into weighted columns.</summary>
     public static ImRect[] Column(this ImRect rect, float[] weights, float space = SPACE)
     {
         return Column(rect, weights, null, space);
     }
 
+    /// <summary>Splits a rectangle into weighted and fixed-width columns.</summary>
     public static ImRect[] Column(this ImRect rect, float[] weights, float[] widths, float space = SPACE)
     {
         if (weights == null)

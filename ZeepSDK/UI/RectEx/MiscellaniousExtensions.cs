@@ -4,8 +4,10 @@ using Imui.Core;
 
 namespace ZeepSDK.UI.RectEx;
 
+/// <summary>Provides rectangle normalization and sizing helpers.</summary>
 public static class MiscellaniousExtensions
 {
+    /// <summary>Normalizes negative rectangle dimensions.</summary>
     public static ImRect Abs(this ImRect rect)
     {
         if (rect.W < 0)
@@ -23,6 +25,7 @@ public static class MiscellaniousExtensions
         return rect;
     }
 
+    /// <summary>Swaps horizontal and vertical rectangle dimensions.</summary>
     public static ImRect Invert(this ImRect rect)
     {
         return new ImRect(
@@ -33,6 +36,7 @@ public static class MiscellaniousExtensions
         );
     }
 
+    /// <summary>Returns bounds containing this rectangle and all supplied rectangles.</summary>
     public static ImRect Union(this ImRect rect, params ImRect[] other)
     {
         if (other == null || other.Length == 0)
@@ -57,6 +61,7 @@ public static class MiscellaniousExtensions
         );
     }
 
+    /// <summary>Insets a rectangle by a border width.</summary>
     public static ImRect Intend(this ImRect rect, float border)
     {
         rect = rect.Abs();
@@ -83,6 +88,7 @@ public static class MiscellaniousExtensions
         return result;
     }
 
+    /// <summary>Expands a rectangle by a border width.</summary>
     public static ImRect Extend(this ImRect rect, float border)
     {
         rect = rect.Abs();
@@ -94,6 +100,7 @@ public static class MiscellaniousExtensions
         );
     }
 
+    /// <summary>Returns the first horizontal line with the requested height.</summary>
     public static ImRect FirstLine(this ImRect rect, float height = 18)
     {
         rect = rect.Abs();

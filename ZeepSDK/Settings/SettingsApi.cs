@@ -33,9 +33,18 @@ public static class SettingsApi
 
     internal static void Initialize()
     {
+        Shutdown();
         ZeepkistNetwork.LobbyGameStateChanged += CloseModSettings;
         _zeepSettingsDrawer = new ZeepSettingsDrawer();
         UIApi.AddZeepGUIDrawer(_zeepSettingsDrawer);
+    }
+
+    internal static void Shutdown()
+    {
+        ZeepkistNetwork.LobbyGameStateChanged -= CloseModSettings;
+        if (_zeepSettingsDrawer != null)
+            UIApi.RemoveZeepGUIDrawer(_zeepSettingsDrawer);
+        _zeepSettingsDrawer = null;
     }
 
     /// <summary>

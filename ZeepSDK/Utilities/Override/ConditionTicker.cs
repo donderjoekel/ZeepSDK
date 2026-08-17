@@ -10,10 +10,9 @@ namespace ZeepSDK.Utilities.Override;
 /// </summary>
 public class ConditionTicker : MonoBehaviour
 {
-    private readonly List<IConditionTickable> _update = [];
-    private readonly List<IConditionTickable> _fixedUpdate = [];
-    private readonly List<IConditionTickable> _lateUpdate = [];
-    private readonly List<IConditionTickable> _onGUI = [];
+    private static readonly BepInEx.Logging.ManualLogSource logger = LoggerFactory.GetLogger<ConditionTicker>();
+    private readonly ConditionTickScheduler scheduler = new((tickable, exception) =>
+        logger.LogError($"Condition tick failed for '{tickable.GetType().FullName}': {exception}"));
     
     private static ConditionTicker _instance;
 
@@ -46,21 +45,7 @@ public class ConditionTicker : MonoBehaviour
     /// <param name="tickable">The condition tickable to add.</param>
     public void Add(IConditionTickable tickable)
     {
-        switch (tickable.TickType)
-        {
-            case ConditionTickType.Update:
-                _update.Add(tickable);
-                break;
-            case ConditionTickType.FixedUpdate:
-                _fixedUpdate.Add(tickable);
-                break;
-            case ConditionTickType.LateUpdate:
-                _lateUpdate.Add(tickable);
-                break;
-            case ConditionTickType.OnGUI:
-                _onGUI.Add(tickable);
-                break;
-        }
+        scheduler.Add(tickable);
     }
 
     /// <summary>
@@ -69,52 +54,26 @@ public class ConditionTicker : MonoBehaviour
     /// <param name="tickable">The condition tickable to remove.</param>
     public void Remove(IConditionTickable tickable)
     {
-        switch (tickable.TickType)
-        {
-            case ConditionTickType.Update:
-                _update.Remove(tickable);
-                break;
-            case ConditionTickType.FixedUpdate:
-                _fixedUpdate.Remove(tickable);
-                break;
-            case ConditionTickType.LateUpdate:
-                _lateUpdate.Remove(tickable);
-                break;
-            case ConditionTickType.OnGUI:
-                _onGUI.Remove(tickable);
-                break;
-        }
+        scheduler.Remove(tickable);
     }
 
     private void Update()
     {
-        foreach (IConditionTickable tickable in _update)
-        {
-            tickable.Tick();
-        }
+        scheduler.Tick(ConditionTickType.Update);
     }
     
     private void FixedUpdate()
     {
-        foreach (IConditionTickable tickable in _fixedUpdate)
-        {
-            tickable.Tick();
-        }
+        scheduler.Tick(ConditionTickType.FixedUpdate);
     }
     
     private void LateUpdate()
     {
-        foreach (IConditionTickable tickable in _lateUpdate)
-        {
-            tickable.Tick();
-        }
+        scheduler.Tick(ConditionTickType.LateUpdate);
     }
     
     private void OnGUI()
     {
-        foreach (IConditionTickable tickable in _onGUI)
-        {
-            tickable.Tick();
-        }
+        scheduler.Tick(ConditionTickType.OnGUI);
     }
 }

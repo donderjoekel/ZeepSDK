@@ -17,6 +17,7 @@ public class Zua
 
     private Script script;
     private bool loaded;
+    private bool unloading;
     private readonly List<ILuaEvent> registeredEvents = [];
     private readonly List<ILuaEvent> subscribedEvents = [];
 
@@ -32,9 +33,19 @@ public class Zua
         RegisterAllEventsInCurrentAssembly();
         ZuaFunctionCache.RegisterCachedFunctions(this);
         ZuaEventCache.RegisterCachedEvents(this);
-        script.DoString(luaContent);
-        loaded = true;
-        CallFunction("OnLoad");
+        try
+        {
+            DynValue scriptFunction = script.LoadString(luaContent);
+            LuaExecutionBudget.Execute(script, scriptFunction);
+            loaded = true;
+            CallFunction("OnLoad");
+        }
+        catch
+        {
+            Unsubscribe();
+            script = null;
+            throw;
+        }
     }
 
     /// <summary>
@@ -42,10 +53,21 @@ public class Zua
     /// </summary>
     public void Unload()
     {
-        CallFunction("OnUnload");
-        Unsubscribe();
-        loaded = false;
-        ScriptingApi.UnloadZua(this);
+        if (!loaded || unloading)
+            return;
+
+        unloading = true;
+        try
+        {
+            CallFunction("OnUnload");
+        }
+        finally
+        {
+            Unsubscribe();
+            loaded = false;
+            unloading = false;
+            ScriptingApi.UnloadZua(this);
+        }
     }
 
     /// <summary>
@@ -87,6 +109,9 @@ public class Zua
     /// <param name="args">The arguments to pass to the Lua function.</param>
     public void CallFunction(string name, params object[] args)
     {
+        if (!loaded && !unloading)
+            return;
+
         try
         {
             DynValue function = script.Globals.Get(name);
@@ -97,7 +122,7 @@ public class Zua
             }
 
             DynValue[] dynArgs = args.Select(arg => DynValue.FromObject(script, arg)).ToArray();
-            script.Call(function, dynArgs);
+            LuaExecutionBudget.Execute(script, function, dynArgs);
         }
         catch (ScriptRuntimeException ex)
         {
@@ -127,22 +152,21 @@ public class Zua
     public void RegisterEvent<TEvent>()
         where TEvent : ILuaEvent, new()
     {
-        TEvent luaEvent = new TEvent();
-        if (registeredEvents.Any(e => e.Name == luaEvent.Name)) return;
-        registeredEvents.Add(luaEvent);
+        RegisterEvent(new TEvent());
     }
 
     private void RegisterAllFunctionsInCurrentAssembly()
     {
-        List<Type> types = typeof(Zua).Assembly.GetTypes()
-            .Where(x => !x.IsAbstract && x.IsClass)
-            .Where(x => typeof(ILuaFunction).IsAssignableFrom(x))
-            .Where(x => x.GetConstructors().Any(x => x.GetParameters().Length == 0))
-            .ToList();
-
-        foreach (Type type in types)
+        foreach (LuaApiDescriptor<ILuaFunction> descriptor in LuaApiDescriptorCache.Functions)
         {
-            RegisterFunction(type);
+            try
+            {
+                RegisterFunction(descriptor.Create());
+            }
+            catch (Exception exception)
+            {
+                Logger.LogError($"Failed to register Lua function '{descriptor.Type.FullName}': {exception}");
+            }
         }
     }
 
@@ -160,6 +184,9 @@ public class Zua
 
     private void RegisterFunction(ILuaFunction function)
     {
+        if (function == null)
+            throw new ArgumentNullException(nameof(function));
+
         Table namespaceTable = script.Globals.Get(function.Namespace).Table;
         if (namespaceTable == null)
         {
@@ -187,38 +214,46 @@ public class Zua
         if (!typeof(ILuaEvent).IsAssignableFrom(eventType))
             throw new ArgumentException($"{eventType.FullName} is not a valid event type");
         
-        ILuaEvent luaEvent = Activator.CreateInstance(eventType) as ILuaEvent;
-        if (luaEvent == null)
-        {
-            // TODO: Log
-            return;
-        }
+        ILuaEvent luaEvent = Activator.CreateInstance(eventType) as ILuaEvent
+                             ?? throw new InvalidOperationException($"Could not create event '{eventType.FullName}'");
+        RegisterEvent(luaEvent);
+    }
 
-        if (registeredEvents.Any(x => x.Name == luaEvent.Name))
-        {
-            Logger.LogWarning($"Skipped event '{eventType.FullName}' (already exists)");
-        }
-        else
-        {
-            registeredEvents.Add(luaEvent);
-            Logger.LogInfo($"Registered event '{eventType.FullName}'.");
-        }
+    private void BindEvent(ILuaEvent luaEvent)
+    {
+        if (luaEvent is IZuaBoundEvent boundEvent)
+            boundEvent.Bind(this);
     }
 
     private void RegisterAllEventsInCurrentAssembly()
     {
-        IEnumerable<Type> eventTypes = typeof(Zua).Assembly.GetTypes()
-            .Where(t => typeof(ILuaEvent).IsAssignableFrom(t) && !t.IsAbstract);
-
-        foreach (Type type in eventTypes)
+        foreach (LuaApiDescriptor<ILuaEvent> descriptor in LuaApiDescriptorCache.Events)
         {
-            RegisterEvent(type);
-            // ILuaEvent luaEvent = Activator.CreateInstance(type) as ILuaEvent;
-            // if (luaEvent != null && registeredEvents.All(e => e.Name != luaEvent.Name))
-            // {
-            //     registeredEvents.Add(luaEvent);
-            // }
+            try
+            {
+                RegisterEvent(descriptor.Create());
+            }
+            catch (Exception exception)
+            {
+                Logger.LogError($"Failed to register Lua event '{descriptor.Type.FullName}': {exception}");
+            }
         }
+    }
+
+    private void RegisterEvent(ILuaEvent luaEvent)
+    {
+        if (luaEvent == null)
+            throw new ArgumentNullException(nameof(luaEvent));
+
+        BindEvent(luaEvent);
+        if (registeredEvents.Any(existing => existing.Name == luaEvent.Name))
+        {
+            Logger.LogWarning($"Skipped event '{luaEvent.GetType().FullName}' (already exists)");
+            return;
+        }
+
+        registeredEvents.Add(luaEvent);
+        Logger.LogInfo($"Registered event '{luaEvent.GetType().FullName}'.");
     }
 
     private void Unsubscribe()
@@ -241,10 +276,15 @@ public class Zua
 
     internal static Zua LoadLuaByPath(string filePath)
     {
+        const long maximumScriptBytes = 1024 * 1024;
+
         if (!File.Exists(filePath))
         {
             throw new FileNotFoundException($"Lua file not found: {filePath}");
         }
+
+        if (new FileInfo(filePath).Length > maximumScriptBytes)
+            throw new InvalidDataException($"Lua file exceeds the {maximumScriptBytes}-byte limit: {filePath}");
 
         string luaContent = File.ReadAllText(filePath);
 

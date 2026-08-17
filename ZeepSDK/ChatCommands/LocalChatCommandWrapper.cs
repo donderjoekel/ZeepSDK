@@ -18,7 +18,7 @@ internal class LocalChatCommandWrapper : ILocalChatCommand
         Prefix = prefix;
         Command = command;
         Description = description;
-        this.callback = callback;
+        this.callback = callback ?? throw new System.ArgumentNullException(nameof(callback));
     }
 
     public void Handle(string arguments)

@@ -8,13 +8,15 @@ using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Leaderboard;
 
-internal class LeaderboardHandler : MonoBehaviourWithLogging
+internal class LeaderboardHandler : MonoBehaviourWithLogging, IDisposable
 {
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(LeaderboardHandler));
 
     private readonly List<IMultiplayerLeaderboardTab> _multiplayerTabs = [];
     private readonly List<ISingleplayerLeaderboardTab> _singleplayerTabs = [];
     private int _currentTabIndex;
+    private bool _isOpen;
+    private bool _disposed;
 
     private int CurrentTabCount => ZeepkistNetwork.IsConnectedToGame ? _multiplayerTabs.Count : _singleplayerTabs.Count;
 
@@ -30,6 +32,22 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
         OnlineTabLeaderboardUI_OnOpen.OnOpen += OnOpen;
         OnlineTabLeaderboardUI_OnClose.OnClose += OnClose;
         OnlineTabLeaderboardUI_Update.Update += OnUpdate;
+    }
+
+    private void OnDestroy() => Dispose();
+
+    public void Dispose()
+    {
+        if (_disposed)
+            return;
+
+        _disposed = true;
+        OnlineTabLeaderboardUI_OnOpen.OnOpen -= OnOpen;
+        OnlineTabLeaderboardUI_OnClose.OnClose -= OnClose;
+        OnlineTabLeaderboardUI_Update.Update -= OnUpdate;
+        if (_isOpen && CurrentTabCount > 0)
+            CurrentLeaderboardTab.Disable();
+        _isOpen = false;
     }
 
     internal void AddTab(ILeaderboardTab tab)
@@ -72,6 +90,7 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
             sender.PauseHandler.Pause();
             _currentTabIndex = 0;
             CurrentLeaderboardTab.Enable(sender);
+            _isOpen = true;
             CurrentLeaderboardTab.Draw();
         }
         catch (Exception e)
@@ -86,6 +105,7 @@ internal class LeaderboardHandler : MonoBehaviourWithLogging
         {
             sender.PauseHandler.Unpause();
             CurrentLeaderboardTab.Disable();
+            _isOpen = false;
         }
         catch (Exception e)
         {

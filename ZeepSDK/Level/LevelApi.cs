@@ -38,7 +38,13 @@ public static class LevelApi
 
     internal static void Initialize()
     {
+        SetupGame_FinishLoading.FinishLoading -= FinishLoading;
         SetupGame_FinishLoading.FinishLoading += FinishLoading;
+    }
+
+    internal static void Shutdown()
+    {
+        SetupGame_FinishLoading.FinishLoading -= FinishLoading;
     }
 
     private static void FinishLoading(SetupGame instance)

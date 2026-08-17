@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using BepInEx.Logging;
@@ -15,28 +16,46 @@ namespace ZeepSDK.Playlist;
 [PublicAPI]
 public class PlaylistApi
 {
+    private const int MaximumPlaylistFiles = 1000;
+    private const long MaximumPlaylistBytes = 2 * 1024 * 1024;
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger(typeof(PlaylistApi));
+    private static readonly object cacheLock = new();
+    private static Dictionary<string, PlaylistSaveJSON> playlistsByName;
+    private static IReadOnlyList<PlaylistSaveJSON> playlistSnapshot = Array.Empty<PlaylistSaveJSON>();
 
     /// <summary>
     /// Gets a list of all playlists that have been saved to disk
     /// </summary>
     public static IReadOnlyList<PlaylistSaveJSON> GetPlaylists()
     {
-        string playlistsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-            "Zeepkist",
-            "Playlists");
+        EnsureCache();
+        lock (cacheLock)
+            return playlistSnapshot;
+    }
+
+    /// <summary>Reloads playlists from disk and rebuilds the name index.</summary>
+    public static void RefreshPlaylists()
+    {
+        string playlistsPath = PlaylistPath.DirectoryPath;
+        Dictionary<string, PlaylistSaveJSON> refreshed = new(StringComparer.OrdinalIgnoreCase);
 
         if (!Directory.Exists(playlistsPath))
-            return Array.Empty<PlaylistSaveJSON>();
+        {
+            ReplaceCache(refreshed);
+            return;
+        }
 
-        List<PlaylistSaveJSON> playlists = new();
-        string[] paths = Directory.GetFiles(playlistsPath, "*.zeeplist");
-
-        foreach (string path in paths)
+        foreach (string path in Directory.EnumerateFiles(playlistsPath, "*.zeeplist").Take(MaximumPlaylistFiles))
         {
             string contents;
             try
             {
+                if (new FileInfo(path).Length > MaximumPlaylistBytes)
+                {
+                    logger.LogWarning($"Skipping oversized playlist at {path}");
+                    continue;
+                }
+
                 contents = File.ReadAllText(path);
             }
             catch (Exception e)
@@ -47,8 +66,16 @@ public class PlaylistApi
 
             try
             {
-                PlaylistSaveJSON playlistSaveJson = JsonConvert.DeserializeObject<PlaylistSaveJSON>(contents);
-                playlists.Add(playlistSaveJson);
+                PlaylistSaveJSON playlistSaveJson = JsonConvert.DeserializeObject<PlaylistSaveJSON>(
+                    contents,
+                    new JsonSerializerSettings { MaxDepth = 64 });
+                if (playlistSaveJson == null || string.IsNullOrWhiteSpace(playlistSaveJson.name))
+                    continue;
+
+                playlistSaveJson.levels ??= new List<ZeepkistNetworking.OnlineZeeplevel>();
+                playlistSaveJson.amountOfLevels = playlistSaveJson.levels.Count;
+                if (!refreshed.TryAdd(playlistSaveJson.name, playlistSaveJson))
+                    logger.LogWarning($"Skipping duplicate playlist name '{playlistSaveJson.name}' at {path}");
             }
             catch (Exception e)
             {
@@ -56,7 +83,7 @@ public class PlaylistApi
             }
         }
 
-        return playlists;
+        ReplaceCache(refreshed);
     }
 
     /// <summary>
@@ -65,7 +92,10 @@ public class PlaylistApi
     /// <param name="name">The name of the playlist</param>
     public static bool Exists(string name)
     {
-        return GetPlaylists().Any(playlist => playlist.name == name);
+        PlaylistPath.Resolve(name);
+        EnsureCache();
+        lock (cacheLock)
+            return playlistsByName.ContainsKey(name);
     }
 
     /// <summary>
@@ -75,7 +105,10 @@ public class PlaylistApi
     /// <returns>A PlaylistSaveJSON or null if the playlist does not exist</returns>
     public static PlaylistSaveJSON GetPlaylist(string name)
     {
-        return GetPlaylists().FirstOrDefault(playlist => playlist.name == name);
+        PlaylistPath.Resolve(name);
+        EnsureCache();
+        lock (cacheLock)
+            return playlistsByName.TryGetValue(name, out PlaylistSaveJSON playlist) ? playlist : null;
     }
 
     /// <summary>
@@ -85,6 +118,7 @@ public class PlaylistApi
     /// <returns>A new playlist or an existing playlist if one is found on disk</returns>
     public static PlaylistSaveJSON CreatePlaylist(string name)
     {
+        PlaylistPath.Resolve(name);
         PlaylistSaveJSON existingPlaylist = GetPlaylist(name);
 
         if (existingPlaylist != null)
@@ -107,6 +141,68 @@ public class PlaylistApi
     /// <returns><see cref="IPlaylistEditor"/></returns>
     public static IPlaylistEditor CreateEditor(PlaylistSaveJSON playlist)
     {
+        if (playlist == null)
+            throw new ArgumentNullException(nameof(playlist));
         return new PlaylistEditor(playlist);
+    }
+
+    internal static bool CanSaveAs(PlaylistSaveJSON playlist, string name)
+    {
+        EnsureCache();
+        lock (cacheLock)
+            return !playlistsByName.TryGetValue(name, out PlaylistSaveJSON existing) || ReferenceEquals(existing, playlist);
+    }
+
+    internal static string GetStoredName(PlaylistSaveJSON playlist)
+    {
+        EnsureCache();
+        lock (cacheLock)
+        {
+            foreach (KeyValuePair<string, PlaylistSaveJSON> entry in playlistsByName)
+            {
+                if (ReferenceEquals(entry.Value, playlist))
+                    return entry.Key;
+            }
+        }
+
+        return playlist.name;
+    }
+
+    internal static void UpdateCacheAfterSave(PlaylistSaveJSON playlist, string previousName)
+    {
+        lock (cacheLock)
+        {
+            playlistsByName ??= new Dictionary<string, PlaylistSaveJSON>(StringComparer.OrdinalIgnoreCase);
+            if (!string.IsNullOrEmpty(previousName))
+                playlistsByName.Remove(previousName);
+            playlistsByName[playlist.name] = playlist;
+            RefreshSnapshot();
+        }
+    }
+
+    private static void EnsureCache()
+    {
+        lock (cacheLock)
+        {
+            if (playlistsByName != null)
+                return;
+        }
+
+        RefreshPlaylists();
+    }
+
+    private static void ReplaceCache(Dictionary<string, PlaylistSaveJSON> refreshed)
+    {
+        lock (cacheLock)
+        {
+            playlistsByName = refreshed;
+            RefreshSnapshot();
+        }
+    }
+
+    private static void RefreshSnapshot()
+    {
+        playlistSnapshot = new ReadOnlyCollection<PlaylistSaveJSON>(
+            playlistsByName.Values.OrderBy(playlist => playlist.name, StringComparer.OrdinalIgnoreCase).ToArray());
     }
 }

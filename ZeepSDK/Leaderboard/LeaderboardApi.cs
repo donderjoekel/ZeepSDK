@@ -17,7 +17,14 @@ public static class LeaderboardApi
 
     internal static void Initialize(GameObject gameObject)
     {
+        Shutdown();
         leaderboardHandler = gameObject.AddComponent<LeaderboardHandler>();
+    }
+
+    internal static void Shutdown()
+    {
+        leaderboardHandler?.Dispose();
+        leaderboardHandler = null;
     }
 
     /// <summary>

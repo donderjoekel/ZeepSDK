@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using BepInEx;
 using BepInEx.Bootstrap;
 using BepInEx.Configuration;
@@ -35,6 +36,7 @@ namespace ZeepSDK
         public static IModStorage Storage { get; private set; }
 
         private Harmony harmony;
+        private CancellationTokenSource shutdownCancellation;
 
         public ConfigEntry<KeyCode> ToggleMenuBarKey { get; private set; }
         public ConfigEntry<bool> ConsentToCrashlytics { get; private set; }
@@ -43,15 +45,16 @@ namespace ZeepSDK
         private void Awake()
         {
             Instance = this;
+            shutdownCancellation = new CancellationTokenSource();
 
             harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
             harmony.PatchAll();
 
             ToggleMenuBarKey =
                 Config.Bind("General", "Toggle Menu Bar Key", KeyCode.None, "The key to toggle the menu bar");
-            ConsentToCrashlytics = Config.Bind("General", "Crashlytics Enabled", true,
-                "Can ZeepSDK send crashlytics in order to help us fix bugs");
-            Theme = Config.Bind("General", "Theme", ZeepStyle.Light, "The theme to use for displaying UI like these");
+            ConsentToCrashlytics = Config.Bind("General", "Crashlytics Enabled", false,
+                "Opt in to sending crash reports, Steam identity, and installed mod versions to Bugsnag");
+            Theme = Config.Bind("General", "Theme", ZeepStyle.Orange, "The theme to use for displaying UI like these");
 
             Config.SaveOnConfigSet = true;
 
@@ -66,7 +69,7 @@ namespace ZeepSDK
 
             ChatApi.Initialize(gameObject);
             ChatCommandApi.Initialize(gameObject);
-            CrashlyticsApi.Initialize(gameObject);
+            CrashlyticsApi.Initialize();
             LeaderboardApi.Initialize(gameObject);
             LevelApi.Initialize();
             LevelEditorApi.Initialize(gameObject);
@@ -81,11 +84,29 @@ namespace ZeepSDK
             // Plugin startup logic
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
 
-            VersionChecker.CheckVersions().Forget();
+            VersionChecker.CheckVersions(shutdownCancellation.Token).Forget(exception =>
+                Logger.LogError($"Version check failed: {exception}"));
         }
 
         private void OnDestroy()
         {
+            shutdownCancellation?.Cancel();
+            shutdownCancellation?.Dispose();
+            shutdownCancellation = null;
+            VersionChecker.Shutdown();
+            SettingsApi.Shutdown();
+            ControlsApi.Shutdown();
+            ScriptingApi.Shutdown();
+            CrashlyticsApi.Shutdown();
+            UIApi.Shutdown();
+            PhotoModeApi.Shutdown();
+            MultiplayerApi.Shutdown();
+            RacingApi.Shutdown();
+            LevelEditorApi.Shutdown();
+            LevelApi.Shutdown();
+            LeaderboardApi.Shutdown();
+            ChatCommandApi.Shutdown();
+            ChatApi.Shutdown();
             harmony?.UnpatchSelf();
             harmony = null;
         }

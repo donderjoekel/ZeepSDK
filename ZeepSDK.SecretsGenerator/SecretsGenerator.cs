@@ -1,5 +1,6 @@
 using System.Text;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Text;
 
 namespace ZeepSDK.SecretsGenerator;
@@ -14,7 +15,7 @@ public class SecretsGenerator : IIncrementalGenerator
                                          {
                                              internal static class Secrets
                                              {
-                                                 internal static string Bugsnag = "%BUGSNAG%";
+                                                 internal static string Bugsnag = %BUGSNAG%;
                                              }
                                          }
                                          """;
@@ -35,6 +36,9 @@ public class SecretsGenerator : IIncrementalGenerator
 
     private void Generate(SourceProductionContext context, string envValue)
     {
-        context.AddSource("Secrets.g.cs", SourceText.From(SecretsSource.Replace("%BUGSNAG%", envValue), Encoding.UTF8));
+        string escapedValue = SymbolDisplay.FormatLiteral(envValue, quote: true);
+        context.AddSource(
+            "Secrets.g.cs",
+            SourceText.From(SecretsSource.Replace("%BUGSNAG%", escapedValue), Encoding.UTF8));
     }
 }

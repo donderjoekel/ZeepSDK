@@ -95,24 +95,52 @@ public static class RacingApi
 
     internal static void Initialize(GameObject gameObject)
     {
-        ReadyToReset_HeyYouHitATrigger.TriggerCheckpoint += time => PassedCheckpoint.InvokeSafe(time);
-        ReadyToReset_HeyYouHitATrigger.TriggerFinish += time => CrossedFinishLine.InvokeSafe(time);
-        SwitchCamera_GoToFirstPerson.EnteredFirstPerson += () => EnteredFirstPerson.InvokeSafe();
-        SwitchCamera_GoToThirdPerson.EnteredThirdPerson += () => EnteredThirdPerson.InvokeSafe();
-        DamageCharacterScript_KillCharacter.CharacterKilled += reason => Crashed.InvokeSafe(reason);
-        GameMaster_SpawnPlayers.SpawnPlayers += () => PlayerSpawned.InvokeSafe();
-        GameMaster_ReleaseTheZeepkists.Released += () => RoundStarted.InvokeSafe();
-        DamageWheel_KillWheel.KillWheel += () => WheelBroken.InvokeSafe();
-        GameMaster_StartLevelFirstTime.StartLevelFirstTime += () => LevelLoaded.InvokeSafe();
-        PauseMenuUI_OnQuit.OnQuit += () => Quit.InvokeSafe();
+        Shutdown();
+        ReadyToReset_HeyYouHitATrigger.TriggerCheckpoint += OnPassedCheckpoint;
+        ReadyToReset_HeyYouHitATrigger.TriggerFinish += OnCrossedFinishLine;
+        SwitchCamera_GoToFirstPerson.EnteredFirstPerson += OnEnteredFirstPerson;
+        SwitchCamera_GoToThirdPerson.EnteredThirdPerson += OnEnteredThirdPerson;
+        DamageCharacterScript_KillCharacter.CharacterKilled += OnCharacterKilled;
+        GameMaster_SpawnPlayers.SpawnPlayers += OnPlayerSpawned;
+        GameMaster_ReleaseTheZeepkists.Released += OnRoundStarted;
+        DamageWheel_KillWheel.KillWheel += OnWheelBroken;
+        GameMaster_StartLevelFirstTime.StartLevelFirstTime += OnLevelLoaded;
+        PauseMenuUI_OnQuit.OnQuit += OnQuit;
         GameMaster_RestartLevel.RestartLevel += OnRestartLevel;
-        ZeepkistNetwork.LobbyGameStateChanged += () =>
-        {
-            if (ZeepkistNetwork.CurrentLobby != null && ZeepkistNetwork.CurrentLobby.GameState == 1)
-            {
-                RoundEnded.InvokeSafe();
-            }
-        };
+        ZeepkistNetwork.LobbyGameStateChanged += OnLobbyGameStateChanged;
+    }
+
+    internal static void Shutdown()
+    {
+        ReadyToReset_HeyYouHitATrigger.TriggerCheckpoint -= OnPassedCheckpoint;
+        ReadyToReset_HeyYouHitATrigger.TriggerFinish -= OnCrossedFinishLine;
+        SwitchCamera_GoToFirstPerson.EnteredFirstPerson -= OnEnteredFirstPerson;
+        SwitchCamera_GoToThirdPerson.EnteredThirdPerson -= OnEnteredThirdPerson;
+        DamageCharacterScript_KillCharacter.CharacterKilled -= OnCharacterKilled;
+        GameMaster_SpawnPlayers.SpawnPlayers -= OnPlayerSpawned;
+        GameMaster_ReleaseTheZeepkists.Released -= OnRoundStarted;
+        DamageWheel_KillWheel.KillWheel -= OnWheelBroken;
+        GameMaster_StartLevelFirstTime.StartLevelFirstTime -= OnLevelLoaded;
+        PauseMenuUI_OnQuit.OnQuit -= OnQuit;
+        GameMaster_RestartLevel.RestartLevel -= OnRestartLevel;
+        ZeepkistNetwork.LobbyGameStateChanged -= OnLobbyGameStateChanged;
+    }
+
+    private static void OnPassedCheckpoint(float time) => PassedCheckpoint.InvokeSafe(time);
+    private static void OnCrossedFinishLine(float time) => CrossedFinishLine.InvokeSafe(time);
+    private static void OnEnteredFirstPerson() => EnteredFirstPerson.InvokeSafe();
+    private static void OnEnteredThirdPerson() => EnteredThirdPerson.InvokeSafe();
+    private static void OnCharacterKilled(CrashReason reason) => Crashed.InvokeSafe(reason);
+    private static void OnPlayerSpawned() => PlayerSpawned.InvokeSafe();
+    private static void OnRoundStarted() => RoundStarted.InvokeSafe();
+    private static void OnWheelBroken() => WheelBroken.InvokeSafe();
+    private static void OnLevelLoaded() => LevelLoaded.InvokeSafe();
+    private static void OnQuit() => Quit.InvokeSafe();
+
+    private static void OnLobbyGameStateChanged()
+    {
+        if (ZeepkistNetwork.CurrentLobby != null && ZeepkistNetwork.CurrentLobby.GameState == 1)
+            RoundEnded.InvokeSafe();
     }
 
     private static void OnRestartLevel()
