@@ -10,7 +10,7 @@
         <LangVersion>latest</LangVersion>
         <Title>ZeepSDK</Title>
         <PackageProjectUrl>https://github.com/donderjoekel/ZeepSDK</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/donderjoekel/ZeepSDK/blob/main/LICENSE</PackageLicenseUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/donderjoekel/ZeepSDK</RepositoryUrl>
         <PackageTags>Zeepkist;SDK</PackageTags>
         <PackageReadmeFile>README.md</PackageReadmeFile>
