@@ -868,7 +868,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Imui.Controls.ImGuiWindowExtensions",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Imui.Controls.ImGuiWindowExtensions.yml\" sourcestartlinenumber=\"1\">Provides state-aware window helpers for ImGui.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1428,7 +1428,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab",
-      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.yml\" sourcestartlinenumber=\"1\">A base implementation that can be used for creating a custom tab for the leaderboard\n<remarks>This is a replacement for BaseLeaderboardTab to keep backward compatibility</remarks></p>\n"
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Leaderboard.Pages.BaseCoreLeaderboardTab.yml\" sourcestartlinenumber=\"1\">A base implementation that can be used for creating a custom tab for the leaderboard\n<remarks>This replaces the legacy leaderboard tab base to preserve backward compatibility.</remarks></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2636,6 +2636,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Storage.StorageResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Storage.StorageResult-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Storage.StorageResult<TValue>",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Storage.StorageResult-1.yml\" sourcestartlinenumber=\"1\">Describes a storage operation that returns a value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Storage.StorageResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Storage.StorageResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Storage.StorageResult",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Storage.StorageResult.yml\" sourcestartlinenumber=\"1\">Describes whether a storage operation succeeded and preserves failure details.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Storage.yml",
       "output": {
         ".html": {
@@ -2702,7 +2730,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.UI.RectEx.ColumnExtensions",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.RectEx.ColumnExtensions.yml\" sourcestartlinenumber=\"1\">Provides horizontal rectangle layout helpers.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2716,7 +2744,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.UI.RectEx.CutFromExtensions",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.RectEx.CutFromExtensions.yml\" sourcestartlinenumber=\"1\">Provides helpers that cut fixed-size regions from rectangles.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2730,7 +2758,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.UI.RectEx.GridExtensions",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.RectEx.GridExtensions.yml\" sourcestartlinenumber=\"1\">Provides rectangular grid layout helpers.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2744,7 +2772,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.UI.RectEx.Internal.IEnumerableExtension",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.RectEx.Internal.IEnumerableExtension.yml\" sourcestartlinenumber=\"1\">Provides paired enumerable projection helpers.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2772,7 +2800,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.UI.RectEx.MiscellaniousExtensions",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.RectEx.MiscellaniousExtensions.yml\" sourcestartlinenumber=\"1\">Provides rectangle normalization and sizing helpers.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2786,7 +2814,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.UI.RectEx.MoveToExtensions",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.RectEx.MoveToExtensions.yml\" sourcestartlinenumber=\"1\">Provides rectangle translation helpers.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2800,7 +2828,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ZeepSDK.UI.RectEx.RowExtensions",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ZeepSDK.UI.RectEx.RowExtensions.yml\" sourcestartlinenumber=\"1\">Provides vertical rectangle layout helpers.</p>\n"
     },
     {
       "type": "ManagedReference",

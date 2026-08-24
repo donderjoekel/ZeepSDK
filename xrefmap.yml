@@ -9225,6 +9225,19 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Playlist.PlaylistApi.GetPlaylists
   nameWithType: PlaylistApi.GetPlaylists
+- uid: ZeepSDK.Playlist.PlaylistApi.RefreshPlaylists
+  name: RefreshPlaylists()
+  href: api/ZeepSDK.Playlist.PlaylistApi.html#ZeepSDK_Playlist_PlaylistApi_RefreshPlaylists
+  commentId: M:ZeepSDK.Playlist.PlaylistApi.RefreshPlaylists
+  fullName: ZeepSDK.Playlist.PlaylistApi.RefreshPlaylists()
+  nameWithType: PlaylistApi.RefreshPlaylists()
+- uid: ZeepSDK.Playlist.PlaylistApi.RefreshPlaylists*
+  name: RefreshPlaylists
+  href: api/ZeepSDK.Playlist.PlaylistApi.html#ZeepSDK_Playlist_PlaylistApi_RefreshPlaylists_
+  commentId: Overload:ZeepSDK.Playlist.PlaylistApi.RefreshPlaylists
+  isSpec: "True"
+  fullName: ZeepSDK.Playlist.PlaylistApi.RefreshPlaylists
+  nameWithType: PlaylistApi.RefreshPlaylists
 - uid: ZeepSDK.Racing
   name: ZeepSDK.Racing
   href: api/ZeepSDK.Racing.html
@@ -9499,6 +9512,19 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Scripting.ScriptingApi.LoadLuaByPath
   nameWithType: ScriptingApi.LoadLuaByPath
+- uid: ZeepSDK.Scripting.ScriptingApi.RefreshLuaScriptIndex
+  name: RefreshLuaScriptIndex()
+  href: api/ZeepSDK.Scripting.ScriptingApi.html#ZeepSDK_Scripting_ScriptingApi_RefreshLuaScriptIndex
+  commentId: M:ZeepSDK.Scripting.ScriptingApi.RefreshLuaScriptIndex
+  fullName: ZeepSDK.Scripting.ScriptingApi.RefreshLuaScriptIndex()
+  nameWithType: ScriptingApi.RefreshLuaScriptIndex()
+- uid: ZeepSDK.Scripting.ScriptingApi.RefreshLuaScriptIndex*
+  name: RefreshLuaScriptIndex
+  href: api/ZeepSDK.Scripting.ScriptingApi.html#ZeepSDK_Scripting_ScriptingApi_RefreshLuaScriptIndex_
+  commentId: Overload:ZeepSDK.Scripting.ScriptingApi.RefreshLuaScriptIndex
+  isSpec: "True"
+  fullName: ZeepSDK.Scripting.ScriptingApi.RefreshLuaScriptIndex
+  nameWithType: ScriptingApi.RefreshLuaScriptIndex
 - uid: ZeepSDK.Scripting.ScriptingApi.RegisterEvent*
   name: RegisterEvent
   href: api/ZeepSDK.Scripting.ScriptingApi.html#ZeepSDK_Scripting_ScriptingApi_RegisterEvent_
@@ -10732,6 +10758,22 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Storage.IModStorage.ReadBlob
   nameWithType: IModStorage.ReadBlob
+- uid: ZeepSDK.Storage.IModStorage.ReadBlobAsync(System.String,System.Threading.CancellationToken)
+  name: ReadBlobAsync(string, CancellationToken)
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_ReadBlobAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:ZeepSDK.Storage.IModStorage.ReadBlobAsync(System.String,System.Threading.CancellationToken)
+  name.vb: ReadBlobAsync(String, CancellationToken)
+  fullName: ZeepSDK.Storage.IModStorage.ReadBlobAsync(string, System.Threading.CancellationToken)
+  fullName.vb: ZeepSDK.Storage.IModStorage.ReadBlobAsync(String, System.Threading.CancellationToken)
+  nameWithType: IModStorage.ReadBlobAsync(string, CancellationToken)
+  nameWithType.vb: IModStorage.ReadBlobAsync(String, CancellationToken)
+- uid: ZeepSDK.Storage.IModStorage.ReadBlobAsync*
+  name: ReadBlobAsync
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_ReadBlobAsync_
+  commentId: Overload:ZeepSDK.Storage.IModStorage.ReadBlobAsync
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.IModStorage.ReadBlobAsync
+  nameWithType: IModStorage.ReadBlobAsync
 - uid: ZeepSDK.Storage.IModStorage.RemoveConverter(Newtonsoft.Json.JsonConverter)
   name: RemoveConverter(JsonConverter)
   href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_RemoveConverter_Newtonsoft_Json_JsonConverter_
@@ -10777,6 +10819,38 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Storage.IModStorage.SaveToJson
   nameWithType: IModStorage.SaveToJson
+- uid: ZeepSDK.Storage.IModStorage.TryLoadFromJson*
+  name: TryLoadFromJson
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_TryLoadFromJson_
+  commentId: Overload:ZeepSDK.Storage.IModStorage.TryLoadFromJson
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.IModStorage.TryLoadFromJson
+  nameWithType: IModStorage.TryLoadFromJson
+- uid: ZeepSDK.Storage.IModStorage.TryLoadFromJson``1(System.String)
+  name: TryLoadFromJson<TData>(string)
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_TryLoadFromJson__1_System_String_
+  commentId: M:ZeepSDK.Storage.IModStorage.TryLoadFromJson``1(System.String)
+  name.vb: TryLoadFromJson(Of TData)(String)
+  fullName: ZeepSDK.Storage.IModStorage.TryLoadFromJson<TData>(string)
+  fullName.vb: ZeepSDK.Storage.IModStorage.TryLoadFromJson(Of TData)(String)
+  nameWithType: IModStorage.TryLoadFromJson<TData>(string)
+  nameWithType.vb: IModStorage.TryLoadFromJson(Of TData)(String)
+- uid: ZeepSDK.Storage.IModStorage.TryReadBlob(System.String)
+  name: TryReadBlob(string)
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_TryReadBlob_System_String_
+  commentId: M:ZeepSDK.Storage.IModStorage.TryReadBlob(System.String)
+  name.vb: TryReadBlob(String)
+  fullName: ZeepSDK.Storage.IModStorage.TryReadBlob(string)
+  fullName.vb: ZeepSDK.Storage.IModStorage.TryReadBlob(String)
+  nameWithType: IModStorage.TryReadBlob(string)
+  nameWithType.vb: IModStorage.TryReadBlob(String)
+- uid: ZeepSDK.Storage.IModStorage.TryReadBlob*
+  name: TryReadBlob
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_TryReadBlob_
+  commentId: Overload:ZeepSDK.Storage.IModStorage.TryReadBlob
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.IModStorage.TryReadBlob
+  nameWithType: IModStorage.TryReadBlob
 - uid: ZeepSDK.Storage.IModStorage.WriteBlob(System.String,System.Byte[])
   name: WriteBlob(string, byte[])
   href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_WriteBlob_System_String_System_Byte___
@@ -10793,6 +10867,22 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Storage.IModStorage.WriteBlob
   nameWithType: IModStorage.WriteBlob
+- uid: ZeepSDK.Storage.IModStorage.WriteBlobAsync(System.String,System.Byte[],System.Threading.CancellationToken)
+  name: WriteBlobAsync(string, byte[], CancellationToken)
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_WriteBlobAsync_System_String_System_Byte___System_Threading_CancellationToken_
+  commentId: M:ZeepSDK.Storage.IModStorage.WriteBlobAsync(System.String,System.Byte[],System.Threading.CancellationToken)
+  name.vb: WriteBlobAsync(String, Byte(), CancellationToken)
+  fullName: ZeepSDK.Storage.IModStorage.WriteBlobAsync(string, byte[], System.Threading.CancellationToken)
+  fullName.vb: ZeepSDK.Storage.IModStorage.WriteBlobAsync(String, Byte(), System.Threading.CancellationToken)
+  nameWithType: IModStorage.WriteBlobAsync(string, byte[], CancellationToken)
+  nameWithType.vb: IModStorage.WriteBlobAsync(String, Byte(), CancellationToken)
+- uid: ZeepSDK.Storage.IModStorage.WriteBlobAsync*
+  name: WriteBlobAsync
+  href: api/ZeepSDK.Storage.IModStorage.html#ZeepSDK_Storage_IModStorage_WriteBlobAsync_
+  commentId: Overload:ZeepSDK.Storage.IModStorage.WriteBlobAsync
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.IModStorage.WriteBlobAsync
+  nameWithType: IModStorage.WriteBlobAsync
 - uid: ZeepSDK.Storage.StorageApi
   name: StorageApi
   href: api/ZeepSDK.Storage.StorageApi.html
@@ -10812,6 +10902,77 @@ references:
   isSpec: "True"
   fullName: ZeepSDK.Storage.StorageApi.CreateModStorage
   nameWithType: StorageApi.CreateModStorage
+- uid: ZeepSDK.Storage.StorageResult
+  name: StorageResult
+  href: api/ZeepSDK.Storage.StorageResult.html
+  commentId: T:ZeepSDK.Storage.StorageResult
+  fullName: ZeepSDK.Storage.StorageResult
+  nameWithType: StorageResult
+- uid: ZeepSDK.Storage.StorageResult.Error
+  name: Error
+  href: api/ZeepSDK.Storage.StorageResult.html#ZeepSDK_Storage_StorageResult_Error
+  commentId: P:ZeepSDK.Storage.StorageResult.Error
+  fullName: ZeepSDK.Storage.StorageResult.Error
+  nameWithType: StorageResult.Error
+- uid: ZeepSDK.Storage.StorageResult.Error*
+  name: Error
+  href: api/ZeepSDK.Storage.StorageResult.html#ZeepSDK_Storage_StorageResult_Error_
+  commentId: Overload:ZeepSDK.Storage.StorageResult.Error
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.StorageResult.Error
+  nameWithType: StorageResult.Error
+- uid: ZeepSDK.Storage.StorageResult.Exception
+  name: Exception
+  href: api/ZeepSDK.Storage.StorageResult.html#ZeepSDK_Storage_StorageResult_Exception
+  commentId: P:ZeepSDK.Storage.StorageResult.Exception
+  fullName: ZeepSDK.Storage.StorageResult.Exception
+  nameWithType: StorageResult.Exception
+- uid: ZeepSDK.Storage.StorageResult.Exception*
+  name: Exception
+  href: api/ZeepSDK.Storage.StorageResult.html#ZeepSDK_Storage_StorageResult_Exception_
+  commentId: Overload:ZeepSDK.Storage.StorageResult.Exception
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.StorageResult.Exception
+  nameWithType: StorageResult.Exception
+- uid: ZeepSDK.Storage.StorageResult.IsSuccess
+  name: IsSuccess
+  href: api/ZeepSDK.Storage.StorageResult.html#ZeepSDK_Storage_StorageResult_IsSuccess
+  commentId: P:ZeepSDK.Storage.StorageResult.IsSuccess
+  fullName: ZeepSDK.Storage.StorageResult.IsSuccess
+  nameWithType: StorageResult.IsSuccess
+- uid: ZeepSDK.Storage.StorageResult.IsSuccess*
+  name: IsSuccess
+  href: api/ZeepSDK.Storage.StorageResult.html#ZeepSDK_Storage_StorageResult_IsSuccess_
+  commentId: Overload:ZeepSDK.Storage.StorageResult.IsSuccess
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.StorageResult.IsSuccess
+  nameWithType: StorageResult.IsSuccess
+- uid: ZeepSDK.Storage.StorageResult`1
+  name: StorageResult<TValue>
+  href: api/ZeepSDK.Storage.StorageResult-1.html
+  commentId: T:ZeepSDK.Storage.StorageResult`1
+  name.vb: StorageResult(Of TValue)
+  fullName: ZeepSDK.Storage.StorageResult<TValue>
+  fullName.vb: ZeepSDK.Storage.StorageResult(Of TValue)
+  nameWithType: StorageResult<TValue>
+  nameWithType.vb: StorageResult(Of TValue)
+- uid: ZeepSDK.Storage.StorageResult`1.Value
+  name: Value
+  href: api/ZeepSDK.Storage.StorageResult-1.html#ZeepSDK_Storage_StorageResult_1_Value
+  commentId: P:ZeepSDK.Storage.StorageResult`1.Value
+  fullName: ZeepSDK.Storage.StorageResult<TValue>.Value
+  fullName.vb: ZeepSDK.Storage.StorageResult(Of TValue).Value
+  nameWithType: StorageResult<TValue>.Value
+  nameWithType.vb: StorageResult(Of TValue).Value
+- uid: ZeepSDK.Storage.StorageResult`1.Value*
+  name: Value
+  href: api/ZeepSDK.Storage.StorageResult-1.html#ZeepSDK_Storage_StorageResult_1_Value_
+  commentId: Overload:ZeepSDK.Storage.StorageResult`1.Value
+  isSpec: "True"
+  fullName: ZeepSDK.Storage.StorageResult<TValue>.Value
+  fullName.vb: ZeepSDK.Storage.StorageResult(Of TValue).Value
+  nameWithType: StorageResult<TValue>.Value
+  nameWithType.vb: StorageResult(Of TValue).Value
 - uid: ZeepSDK.UI
   name: ZeepSDK.UI
   href: api/ZeepSDK.UI.html
