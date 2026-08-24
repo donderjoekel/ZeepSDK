@@ -86,7 +86,7 @@ public static class CrashlyticsApi
         if (PlayerPrefs.GetInt(ExplicitConsentKey, 0) != 1 && Plugin.Instance.ConsentToCrashlytics.Value)
             Plugin.Instance.ConsentToCrashlytics.Value = false;
 
-        if (instance.hasMod && PlayerPrefs.GetInt(NoticeSeenKey, 0) == 0)
+        if (PlayerPrefs.GetInt(NoticeSeenKey, 0) == 0)
         {
             ShowCrashlyticsConsent(instance).Forget(exception =>
                 _logger.LogError($"Failed to show crash reporting consent dialog: {exception}"));
