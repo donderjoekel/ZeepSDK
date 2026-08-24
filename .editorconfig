@@ -3,3 +3,7 @@ root = true
 [**/obj/**/*.cs]
 generated_code = true
 dotnet_diagnostic.CS1591.severity = none
+
+[**/MyPluginInfo.cs]
+generated_code = true
+dotnet_diagnostic.CS1591.severity = none
