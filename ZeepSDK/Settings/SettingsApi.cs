@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Threading;
 using BepInEx;
 using BepInEx.Bootstrap;
 using BepInEx.Configuration;
 using BepInEx.Logging;
 using JetBrains.Annotations;
 using ZeepkistClient;
+using ZeepSDK.Crashlytics;
+using ZeepSDK.External.Cysharp.Threading.Tasks;
 using ZeepSDK.Settings.Drawers;
 using ZeepSDK.UI;
 using ZeepSDK.Utilities;
@@ -30,10 +33,12 @@ public static class SettingsApi
     public static event ModSettingsWindowClosedDelegate ModSettingsWindowClosed;
 
     private static ZeepSettingsDrawer _zeepSettingsDrawer;
+    private static CancellationTokenSource _lifetimeCancellation;
 
     internal static void Initialize()
     {
         Shutdown();
+        _lifetimeCancellation = new CancellationTokenSource();
         ZeepkistNetwork.LobbyGameStateChanged += CloseModSettings;
         _zeepSettingsDrawer = new ZeepSettingsDrawer();
         UIApi.AddZeepGUIDrawer(_zeepSettingsDrawer);
@@ -41,6 +46,13 @@ public static class SettingsApi
 
     internal static void Shutdown()
     {
+        if (_lifetimeCancellation != null)
+        {
+            _lifetimeCancellation.Cancel();
+            _lifetimeCancellation.Dispose();
+            _lifetimeCancellation = null;
+        }
+
         ZeepkistNetwork.LobbyGameStateChanged -= CloseModSettings;
         if (_zeepSettingsDrawer != null)
             UIApi.RemoveZeepGUIDrawer(_zeepSettingsDrawer);
@@ -87,6 +99,10 @@ public static class SettingsApi
     /// Configures a tabbed layout for the given mod's default settings panel.
     /// Sections assigned to tabs are merged into those tabs; unassigned sections render flat below the tab bar.
     /// </summary>
+    /// <remarks>
+    /// If BepInEx has not assigned the plugin instance yet (typical when called from <c>Awake</c>),
+    /// registration runs on the next frame.
+    /// </remarks>
     /// <param name="plugin">The mod plugin instance to configure tabs for.</param>
     /// <param name="configure">Builds the tab layout.</param>
     public static void ConfigureModSettingsTabs(BaseUnityPlugin plugin, Action<ModSettingsTabsBuilder> configure)
@@ -100,6 +116,10 @@ public static class SettingsApi
     /// <summary>
     /// Configures a tabbed layout for the given mod's default settings panel.
     /// </summary>
+    /// <remarks>
+    /// If BepInEx has not assigned the plugin instance yet (typical when called from <c>Awake</c>),
+    /// registration runs on the next frame.
+    /// </remarks>
     /// <param name="pluginGuid">The BepInEx GUID of the mod to configure tabs for.</param>
     /// <param name="configure">Builds the tab layout.</param>
     public static void ConfigureModSettingsTabs(string pluginGuid, Action<ModSettingsTabsBuilder> configure)
@@ -121,10 +141,42 @@ public static class SettingsApi
     {
         if (configure == null)
             throw new ArgumentNullException(nameof(configure));
-        
-        if (pluginInfo == null)
-            throw new  ArgumentNullException(nameof(pluginInfo));
 
+        if (pluginInfo == null)
+            throw new ArgumentNullException(nameof(pluginInfo));
+
+        if (pluginInfo.Instance == null || pluginInfo.Instance.Config == null)
+        {
+            ConfigureModSettingsTabsNextFrame(pluginGuid, configure, pluginInfo)
+                .Forget(ex =>
+                {
+                    if (ex is OperationCanceledException)
+                        return;
+                    Logger.LogError(
+                        $"Failed to configure mod settings tabs for '{pluginGuid}': {ex}");
+                    CrashlyticsApi.Notify(ex);
+                });
+            return;
+        }
+
+        ApplyModSettingsTabs(pluginGuid, configure, pluginInfo);
+    }
+
+    private static async UniTask ConfigureModSettingsTabsNextFrame(
+        string pluginGuid,
+        Action<ModSettingsTabsBuilder> configure,
+        PluginInfo pluginInfo)
+    {
+        CancellationToken token = _lifetimeCancellation?.Token ?? CancellationToken.None;
+        await UniTask.NextFrame(token);
+        ApplyModSettingsTabs(pluginGuid, configure, pluginInfo);
+    }
+
+    private static void ApplyModSettingsTabs(
+        string pluginGuid,
+        Action<ModSettingsTabsBuilder> configure,
+        PluginInfo pluginInfo)
+    {
         if (pluginInfo.Instance == null)
             throw new PluginInstanceNotInitializedException(pluginGuid);
 
