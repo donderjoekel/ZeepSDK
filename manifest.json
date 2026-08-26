@@ -2580,6 +2580,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.PluginConfigNotInitializedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.PluginConfigNotInitializedException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.PluginConfigNotInitializedException",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.PluginConfigNotInitializedException.yml\" sourcestartlinenumber=\"1\">Thrown when a BepInEx plugin instance has no config.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZeepSDK.Settings.PluginInstanceNotInitializedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZeepSDK.Settings.PluginInstanceNotInitializedException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ZeepSDK.Settings.PluginInstanceNotInitializedException",
+      "Summary": "<p sourcefile=\"api/ZeepSDK.Settings.PluginInstanceNotInitializedException.yml\" sourcestartlinenumber=\"1\">Thrown when a BepInEx plugin has no instance.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ZeepSDK.Settings.SettingsApi.yml",
       "output": {
         ".html": {
