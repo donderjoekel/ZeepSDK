@@ -121,6 +121,15 @@ public static class SettingsApi
     {
         if (configure == null)
             throw new ArgumentNullException(nameof(configure));
+        
+        if (pluginInfo == null)
+            throw new  ArgumentNullException(nameof(pluginInfo));
+
+        if (pluginInfo.Instance == null)
+            throw new PluginInstanceNotInitializedException(pluginGuid);
+
+        if (pluginInfo.Instance.Config == null)
+            throw new PluginConfigNotInitializedException(pluginGuid);
 
         var entriesBySection = ModSettingsDrawerBuildContext.BuildEntriesBySection(pluginInfo);
         ZeepSettingsTabsRegistry.Configure(pluginGuid, configure, entriesBySection);
