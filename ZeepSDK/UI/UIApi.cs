@@ -217,6 +217,9 @@ public static class UIApi
     /// <param name="gameObject">The game object to remove the tooltip from</param>
     public static void RemoveTooltip(GameObject gameObject)
     {
+        if (_zeepTooltip == null)
+            return;
+
         var tooltipper = gameObject.GetComponent<Tooltipper>();
         if (tooltipper != null)
         {
