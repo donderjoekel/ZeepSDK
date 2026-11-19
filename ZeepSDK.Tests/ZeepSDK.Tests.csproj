@@ -32,8 +32,12 @@
         <Compile Include="..\ZeepSDK\ChatCommands\Delegates.cs" Link="Source\ChatCommandDelegates.cs" />
         <Compile Include="..\ZeepSDK\ChatCommands\RemoteChatCommandWrapper.cs" Link="Source\RemoteChatCommandWrapper.cs" />
         <Compile Include="..\ZeepSDK\ChatCommands\RemoteCommandRateLimiter.cs" Link="Source\RemoteCommandRateLimiter.cs" />
+        <Compile Include="..\ZeepSDK\Communication\ComMessage.cs" Link="Source\ComMessage.cs" />
         <Compile Include="..\ZeepSDK\Communication\ComReceiver.cs" Link="Source\ComReceiver.cs" />
+        <Compile Include="..\ZeepSDK\Communication\ComRegistry.cs" Link="Source\ComRegistry.cs" />
+        <Compile Include="..\ZeepSDK\Communication\ComSender.cs" Link="Source\ComSender.cs" />
         <Compile Include="..\ZeepSDK\Communication\IComReceiver.cs" Link="Source\IComReceiver.cs" />
+        <Compile Include="..\ZeepSDK\Communication\IComSender.cs" Link="Source\IComSender.cs" />
         <Compile Include="..\ZeepSDK\Extensions\StringBuilderExtensions.cs" Link="Source\StringBuilderExtensions.cs" />
         <Compile Include="..\ZeepSDK\Level\CsvZeepBlock.cs" Link="Source\CsvZeepBlock.cs" />
         <Compile Include="..\ZeepSDK\Level\CsvZeepLevel.cs" Link="Source\CsvZeepLevel.cs" />
