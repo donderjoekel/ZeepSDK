@@ -4,55 +4,61 @@ using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Communication;
 
-internal class ComReceiver : IComReceiver
+internal sealed class ComReceiver : IComReceiver
 {
     private static readonly ManualLogSource logger = LoggerFactory.GetLogger<ComReceiver>();
 
-    public Guid Guid { get; }
-    public string ModIdentifier { get; }
+    private readonly ComRegistry registry;
+    private volatile bool isDisposed;
+
+    public string SourceModGuid { get; }
+    public string Topic { get; }
+    public bool IsDisposed => isDisposed;
 
     public event MessageReceivedDelegate MessageReceived;
 
-    public ComReceiver(Guid guid, string modIdentifier)
+    public ComReceiver(ComRegistry registry, string sourceModGuid, string topic)
     {
-        Guid = guid;
-        ModIdentifier = modIdentifier;
+        this.registry = registry;
+        SourceModGuid = sourceModGuid;
+        Topic = topic;
     }
 
-    public void ProcessMessage(string message)
+    internal void Dispatch(ComMessage message)
     {
-        try
+        // The sender iterates a snapshot, so a receiver disposed mid-dispatch can still show up here.
+        if (isDisposed)
+            return;
+
+        if (Topic != null && !string.Equals(Topic, message.Topic, StringComparison.Ordinal))
+            return;
+
+        MessageReceivedDelegate handlers = MessageReceived;
+        if (handlers == null)
+            return;
+
+        foreach (Delegate handler in handlers.GetInvocationList())
         {
-            MessageReceived?.Invoke(this, message);
+            try
+            {
+                ((MessageReceivedDelegate)handler).Invoke(this, message);
+            }
+            catch (Exception e)
+            {
+                logger.LogError(
+                    $"Receiver for '{SourceModGuid}' (topic '{Topic ?? "*"}') threw while handling message " +
+                    $"on topic '{message.Topic}': {e}");
+            }
         }
-        catch (Exception e)
-        {
-            logger.LogError("Error while processing message: " + e);
-        }
     }
 
-    public bool Equals(IComReceiver other)
+    public void Dispose()
     {
-        return other != null && Guid.Equals(other.Guid);
-    }
+        if (isDisposed)
+            return;
 
-    public override bool Equals(object obj)
-    {
-        return obj is IComReceiver other && Equals(other);
-    }
-
-    public override int GetHashCode()
-    {
-        return Guid.GetHashCode();
-    }
-
-    public static bool operator ==(ComReceiver left, ComReceiver right)
-    {
-        return Equals(left, right);
-    }
-
-    public static bool operator !=(ComReceiver left, ComReceiver right)
-    {
-        return !Equals(left, right);
+        isDisposed = true;
+        registry.Remove(this);
+        MessageReceived = null;
     }
 }

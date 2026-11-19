@@ -30,11 +30,6 @@ namespace ZeepSDK.Utilities
     }
 }
 
-namespace ZeepSDK.Communication
-{
-    public delegate void MessageReceivedDelegate(IComReceiver receiver, string message);
-}
-
 namespace JetBrains.Annotations
 {
     [System.AttributeUsage(System.AttributeTargets.All)]

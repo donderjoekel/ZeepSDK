@@ -1,49 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using BepInEx;
-using BepInEx.Logging;
 using Newtonsoft.Json;
-using ZeepSDK.Utilities;
 
 namespace ZeepSDK.Communication;
 
-internal class ComSender : IComSender
+internal sealed class ComSender : IComSender
 {
-    private static readonly ManualLogSource logger = LoggerFactory.GetLogger<ComSender>();
+    private readonly ComRegistry registry;
 
-    private readonly BaseUnityPlugin plugin;
+    public string ModGuid { get; }
 
-    public ComSender(BaseUnityPlugin plugin)
+    public ComSender(ComRegistry registry, string modGuid)
     {
-        this.plugin = plugin;
+        this.registry = registry;
+        ModGuid = modGuid;
     }
 
-    public void SendMessage(string message)
+    public void Send(string topic, string payload)
     {
-        List<IComReceiver> comReceivers = ReceiverRepository.GetReceivers(plugin.Info.Metadata.GUID);
+        if (string.IsNullOrEmpty(topic))
+            throw new ArgumentException("Topic cannot be null or empty", nameof(topic));
 
-        foreach (IComReceiver comReceiver in comReceivers)
+        ComMessage message = new(ModGuid, topic, payload);
+
+        foreach (ComReceiver receiver in registry.GetReceivers(ModGuid))
         {
-            try
-            {
-                if (comReceiver == null)
-                {
-                    logger.LogWarning("Skipping null receiver");
-                    continue;
-                }
-
-                comReceiver.ProcessMessage(message);
-            }
-            catch (Exception e)
-            {
-                logger.LogError("Error while sending message: " + e);
-            }
+            receiver.Dispatch(message);
         }
     }
 
-    public void SendAsJson(object obj)
+    public void SendJson<T>(string topic, T data)
     {
-        string json = JsonConvert.SerializeObject(obj);
-        SendMessage(json);
+        Send(topic, JsonConvert.SerializeObject(data));
     }
 }

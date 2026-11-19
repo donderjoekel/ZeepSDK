@@ -12,3 +12,5 @@
   href: mod-settings.md
 - name: Custom Mod Settings Layout
   href: custom-mod-settings-layout.md
+- name: Communicating Between Mods
+  href: mod-communication.md
